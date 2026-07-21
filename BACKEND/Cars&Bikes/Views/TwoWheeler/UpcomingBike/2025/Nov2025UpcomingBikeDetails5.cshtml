@@ -1,0 +1,438 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Yamaha MT-07 India: Price, Specs, & Launch";
+}
+@section MetaTags {
+    <meta name="keywords" content="Yamaha MT-07, MT-07 India, Yamaha MT-07 price, Yamaha MT-07 launch, MT-07 specifications, Yamaha MT-07 rivals, Yamaha MT-07 features, naked bike, streetfighter, CP2 engine, Kawasaki Z650, Triumph Trident 660, Honda CB650R, Yamaha India, MT-07 BS6, Hyper Naked, BikeCarHub." />
+    <meta name="description" content="Get all the details on the Yamaha MT-07's India launch, including its expected price, specifications, features, and a detailed comparison with its rivals at bikecarhub." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">Yamaha MT-07: The Dark Side of Japan Is Coming to India</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/yamaha mt07/black.webp" alt="black" title="black" loading="lazy" /></div>
+                </div>
+
+                <p>For years, Indian motorcycle enthusiasts have yearned for a true middleweight streetfighter from Yamaha, a machine that embodies the brand's 'Dark Side of Japan' philosophy. The wait is finally nearing its end. The Yamaha MT-07, a motorcycle that has captivated riders globally with its potent engine, nimble handling, and aggressive styling, is expected to make its way to Indian shores. It’s a bike that promises to be more than just a commute machine; it’s a statement, a lifestyle, and a pure adrenaline rush on two wheels. At <a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub,</a> we've been closely following the developments, and we're thrilled to bring you a comprehensive look at what to expect from this highly anticipated motorcycle.</p>
+                <h3 class="subheading">A Legacy of Torque and Agility</h3>
+                <p>The MT-07 isn't just another naked bike; it's the poster child of Yamaha's 'Hyper Naked' series. Its lineage traces back to a simple, yet brilliant idea: to deliver pure, unadulterated riding fun. The core of this philosophy is the 689cc CP2 (Crossplane) engine. This liquid-cooled, parallel-twin motor is the heart and soul of the MT-07, delivering a unique and engaging power delivery that's addictive from the very first twist of the throttle.</p>
+                <p>Unlike a typical parallel-twin, the CP2 engine utilizes a 270-degree crankshaft. This unique design gives it a firing order similar to a V-twin, resulting in a distinct exhaust note and a punchy, linear torque delivery right from the low-to-mid RPM range. This isn't a bike you have to rev to the heavens to feel the power; the torque is always available, making it incredibly responsive and easy to ride in both city traffic and on open highways. The lightweight and compact chassis, paired with a commanding riding position, further enhance its character, making it a joy to flick through corners and a breeze to handle.</p>
+                <h3 class="subheading">The MT-07: What to Expect in India</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/yamaha mt07/blue.webp" alt="blue" title="black" loading="lazy" /></div>
+                </div>
+                <p>The Indian motorcycle market has matured significantly, with a growing demand for premium, performance-oriented motorcycles. Yamaha's decision to bring the MT-07 to India is a strategic move to tap into this segment. While official details are still scarce, we can glean a lot from the latest international models and what has been showcased in India previously.</p>
+                <h3 class="subheading">Expected Specifications & Features</h3>
+                <p>The new Yamaha MT-07 is expected to be a powerhouse of features and performance, mirroring its international counterparts. Here’s a breakdown of the key specifications and features you can likely look forward to:</p>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> The heart of the machine will be the 689cc, liquid-cooled, DOHC, parallel-twin, CP2 engine. It is expected to be Euro 5+ compliant, which aligns with India's BS6 emission norms. This engine is renowned for its strong low-end torque and impressive power output.</li>
+                    <li><span class="font-weight-700">Power & Torque:</span> Expect the engine to produce around 73.4 PS of power at 8,750 rpm and 67 Nm of torque at 6,500 rpm. This power delivery is designed for a thrilling yet manageable riding experience.</li>
+                    <li> <span class="font-weight-700">Transmission: </span>A 6-speed constant mesh gearbox will handle the power, and it will likely be equipped with an assist and slipper clutch for smoother downshifts and reduced lever effort.</li>
+                    <li><span class="font-weight-700">Chassis & Suspension: </span>The bike will feature a high-strength steel diamond frame. The suspension setup is expected to be a 41mm inverted telescopic fork at the front and a link-type rear monoshock, adjustable for preload and rebound damping.</li>
+                    <li><span class="font-weight-700"> Brakes: </span>For excellent stopping power, the MT-07 will likely feature twin 298mm rotors with radially mounted calipers at the front and a single 245mm disc at the rear. A dual-channel ABS system will be standard for enhanced safety.</li>
+                    <li> <span class="font-weight-700"> Electronics & Technology: </span>This is where the new MT-07 shines. It is anticipated to come with a new 5-inch full-color TFT instrument cluster. This display will offer smartphone connectivity via the MyRide app, allowing riders to get call and message notifications. It may also feature a Y-AMT (Yamaha Automatic Manual Transmission) as an option, which would be a game-changer. Other features include a Yamaha Chip Controlled Throttle (YCC-T) with riding modes, switchable traction control, and self-cancelling turn signals.</li>
+                    <li> <span class="font-weight-700">  Design:</span> The 'Hyper Naked' design language is evident in its aggressive and minimalist styling. The new model is expected to feature a distinct minimalist LED headlight, a sculpted fuel tank, and a compact body, all contributing to its raw, muscular look.</li>
+                </ul>
+                <h3 class="subheading">Expected Price and Launch Timeline</h3>
+                <p>The pricing of the <span class="font-weight-700">MT-07 </span>in India is a critical factor for its success. While Yamaha has not made any official announcements, the industry anticipates a competitive price tag to challenge its rivals. Given the international pricing and considering it will be brought in as a completely built-up unit (CBU), the expected price for the <span class="font-weight-700">Yamaha MT-07</span> in India is likely to be in the range of <span class="font-weight-700">₹7.5 lakh to ₹8.0 lakh (ex-showroom).</span></p>
+                <p>As for the launch timeline, the MT-07 has been showcased at various events in India, and there has been a lot of positive buzz. The most plausible launch timeline, according to industry insiders and reports, is somewhere in the <span class="font-weight-700">Nov 2025.</span> It’s a wait that is sure to test the patience of many, but if the anticipation is anything to go by, it will be well worth it.</p>
+                <h3 class="subheading">A Head-to-Head with the Competition</h3>
+                <p>The middleweight naked segment is a fiercely competitive space, and the Yamaha MT-07 will face off against some formidable opponents. Its primary rivals are known for their own unique strengths, be it power, technology, or affordability.</p>
+                <h3 class="subheading">Competitors Comparison Table</h3>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature</th>
+                                <th class="font-weight-600 text-center">Yamaha MT-07 (Expected)</th>
+                                <th class="font-weight-600 text-center">Kawasaki Z650</th>
+                                <th class="font-weight-600 text-center">Triumph Trident 660</th>
+                                <th class="font-weight-600 text-center">Honda CB650R</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engine</td>
+                                <td>689cc, Parallel-Twin</td>
+                                <td>649cc, Parallel-Twin</td>
+                                <td>660cc, Inline-Triple</td>
+                                <td>649cc, Inline-Four</td>
+                            </tr>
+                            <tr>
+                                <td>Power</td>
+                                <td>73.4 PS</td>
+                                <td>68 PS</td>
+                                <td>81 PS</td>
+                                <td>70 kW</td>
+                            </tr>
+                            <tr>
+                                <td>Torque</td>
+                                <td>67 Nm</td>
+                                <td>64 Nm</td>
+                                <td>64 Nm</td>
+                                <td>63 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Expected Price (Ex-showroom)</td>
+                                <td>₹7.5 - ₹8.0 Lakh</td>
+                                <td>₹7.26 Lakh</td>
+                                <td>₹8.49 Lakh</td>
+                                <td>₹10.30 Lakh</td>
+                            </tr>
+                            <tr>
+                                <td>Transmission</td>
+                                <td>6-speed</td>
+                                <td>6-speed</td>
+                                <td>6-speed</td>
+                                <td>6-speed</td>
+                            </tr>
+                            <tr>
+                                <td>TFT Display</td>
+                                <td>Yes (5-inch)</td>
+                                <td>No (LCD)</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Traction Control</td>
+                                <td>Yes (Switchable)</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Quickshifter</td>
+                                <td>Optional</td>
+                                <td>No</td>
+                                <td>Optional</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Key Highlight</td>
+                                <td>Torque-rich CP2 engine, nimble handling</td>
+                                <td>Value for money, comfortable ride</td>
+                                <td>Premium feel, triple-cylinder engine</td>
+                                <td>Smooth inline-four, classic styling</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+                <p>As seen in the table, the MT-07 holds its own. Its CP2 engine offers a torque delivery that is simply unmatched in this class, and the addition of a comprehensive electronics package, including a TFT display and traction control, puts it on par with or even ahead of some rivals. While the Kawasaki Z650 offers a more budget-friendly entry, and the Triumph Trident 660 brings the charm of a triple-cylinder engine, the MT-07's blend of performance, technology, and 'Dark Side of Japan' attitude makes it a very compelling package.</p>
+                <h3 class="subheading">Specifications & Features Comparison Table</h3>
+                <p>To give you a clearer picture of how the Yamaha MT-07 stacks up, here is a detailed breakdown of its expected specifications and features against a couple of its closest rivals. This comparison helps you understand the nuances that differentiate each motorcycle and allows you to make an informed choice. At <span class="font-weight-700">BikeCarHub, </span>we believe in providing all the information you need to find your perfect ride.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Specification / Feature</th>
+                                <th class="font-weight-600 text-center">Yamaha MT-07 (Expected)</th>
+                                <th class="font-weight-600 text-center">Triumph Trident 660</th>
+                                <th class="font-weight-600 text-center">Kawasaki Z650</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engine Type</td>
+                                <td>Liquid-cooled, 2-cylinder, 4-stroke, DOHC, 4-valves</td>
+                                <td>Liquid-cooled, 3-cylinder, 12-valve, DOHC</td>
+                                <td>Liquid-cooled, 4-stroke, parallel twin, DOHC, 8-valve</td>
+                            </tr>
+                            <tr>
+                                <td>Displacement</td>
+                                <td>689 cc</td>
+                                <td>660 cc</td>
+                                <td>649 cc</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>73.4 PS@8750 rpm</td>
+                                <td>81 PS@10250 rpm</td>
+                                <td>68 PS@8000 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque</td>
+                                <td>67 Nm@6500 rpm</td>
+                                <td>64 Nm@6250 rpm</td>
+                                <td>64 Nm@6700 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Bore x Stroke</td>
+                                <td>80.0 mm x 68.6 mm</td>
+                                <td>74.0 mm x 51.1 mm</td>
+                                <td>83.0 mm x 60.0 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel System</td>
+                                <td>Fuel Injection</td>
+                                <td>Multi-point sequential electronic fuel injection</td>
+                                <td>Fuel Injection</td>
+                            </tr>
+                            <tr>
+                                <td>Clutch</td>
+                                <td>Wet, multi-plate Assist and Slipper Clutch</td>
+                                <td>Wet, multi-plate, Slip & Assist</td>
+                                <td>Wet, multi-plate Assist and Slipper Clutch</td>
+                            </tr>
+                            <tr>
+                                <td>Gearbox</td>
+                                <td>6-speed constant mesh</td>
+                                <td>6-speed constant mesh</td>
+                                <td>6-speed constant mesh</td>
+                            </tr>
+                            <tr>
+                                <td>Front Suspension</td>
+                                <td>41mm Inverted Telescopic Forks</td>
+                                <td>Showa 41mm inverted separate function forks</td>
+                                <td>41mm Telescopic Fork</td>
+                            </tr>
+                            <tr>
+                                <td>Rear Suspension</td>
+                                <td>Link-type monoshock, adjustable preload & rebound</td>
+                                <td>Showa monoshock RSU, adjustable preload</td>
+                                <td>Horizontal back-link with preload adjustment</td>
+                            </tr>
+                            <tr>
+                                <td>Front Brake</td>
+                                <td>Twin 298mm discs, Radially-mounted calipers</td>
+                                <td>Twin 310mm discs, Nissin 2-piston calipers</td>
+                                <td>Twin 300mm petal discs</td>
+                            </tr>
+                            <tr>
+                                <td>Rear Brake</td>
+                                <td>Single 245mm disc</td>
+                                <td>Single 255mm disc</td>
+                                <td>Single 220mm petal disc</td>
+                            </tr>
+                            <tr>
+                                <td>ABS</td>
+                                <td>Dual-channel ABS</td>
+                                <td>Dual-channel ABS</td>
+                                <td>Dual-channel ABS</td>
+                            </tr>
+                            <tr>
+                                <td>Traction Control</td>
+                                <td>Switchable Traction Control</td>
+                                <td>Switchable Traction Control</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument Cluster</td>
+                                <td>5-inch Full-Color TFT</td>
+                                <td>TFT Display</td>
+                                <td>LCD Display</td>
+                            </tr>
+                            <tr>
+                                <td>Connectivity</td>
+                                <td>Yes, via MyRide App</td>
+                                <td>Yes, via My Triumph App</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Weight (Kerb)</td>
+                                <td>184 kg</td>
+                                <td>190 kg</td>
+                                <td>188 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel Tank Capacity</td>
+                                <td>14 Litres</td>
+                                <td>14 Litres</td>
+                                <td>15 Litres</td>
+                            </tr>
+                            <tr>
+                                <td>Seat Height</td>
+                                <td>805 mm</td>
+                                <td>805 mm</td>
+                                <td>790 mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <p>The detailed comparison highlights Yamaha's competitive edge in key areas like the engine's torque delivery at lower RPMs and the inclusion of a comprehensive electronics suite. The new inverted forks and radially mounted calipers are also significant upgrades that will be appreciated by performance enthusiasts. While the Trident 660 has a higher peak power output, the MT-07's torque-focused engine makes it a more thrilling and usable machine in a variety of riding conditions, especially in the city.</p>
+                <h3 class="subheading">Conclusion: A New Chapter for Yamaha in India</h3>
+                <p>The arrival of the Yamaha MT-07 marks a new chapter for the brand in India. It's a motorcycle that is globally acclaimed for its perfect balance of performance, agility, and aggressive styling. The anticipated features like the TFT display, traction control, and the option for an automatic gearbox make it a truly modern machine, ready to take on the competition head-on.</p>
+                <p>While the exact launch date and final price are yet to be confirmed, the excitement and anticipation among riders are palpable. For those who appreciate a raw, engaging, and thrilling riding experience, the Yamaha MT-07 is a machine that’s well worth the wait. It's not just a bike; it’s a living embodiment of the 'Dark Side of Japan' ethos, and it's poised to become a legend on Indian roads.</p>
+
+                <h3 class="subheading">FAQs about the Yamaha MT-07</h3>
+
+                <div class="accordion my-4" id="mt07Accordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                1. When is the Yamaha MT-07 expected to launch in India?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#mt07Accordion">
+                            <div class="accordion-body">
+                                The Yamaha MT-07 is tentatively expected to launch in <strong>November 2025</strong>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                2. What is the expected price of the Yamaha MT-07 in India?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#mt07Accordion">
+                            <div class="accordion-body">
+                                The expected ex-showroom price is in the range of <strong>₹7.5 lakh to ₹8.0 lakh</strong>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                3. What is the engine capacity of the MT-07?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#mt07Accordion">
+                            <div class="accordion-body">
+                                The MT-07 is powered by a <strong>689cc, liquid-cooled, parallel-twin engine</strong> with a crossplane crankshaft.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                4. What are the main rivals of the Yamaha MT-07 in the Indian market?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#mt07Accordion">
+                            <div class="accordion-body">
+                                Its main competitors include the <strong>Kawasaki Z650</strong>, <strong>Triumph Trident 660</strong>, and <strong>Honda CB650R</strong>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                5. Does the Yamaha MT-07 have a slipper clutch?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#mt07Accordion">
+                            <div class="accordion-body">
+                                Yes, the latest model is expected to come with an <strong>assist and slipper clutch</strong>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                                6. Will the MT-07 come with a quickshifter?
+                            </button>
+                        </h2>
+                        <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#mt07Accordion">
+                            <div class="accordion-body">
+                                A <strong>quickshifter</strong> is expected to be an <strong>optional accessory</strong>, not a standard feature.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                                7. Does the MT-07 have traction control?
+                            </button>
+                        </h2>
+                        <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#mt07Accordion">
+                            <div class="accordion-body">
+                                Yes, the new MT-07 is expected to feature a <strong>switchable traction control system</strong>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                                8. Is the Yamaha MT-07 suitable for new riders?
+                            </button>
+                        </h2>
+                        <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#mt07Accordion">
+                            <div class="accordion-body">
+                                While it's a middleweight motorcycle, its <strong>linear power delivery</strong> and <strong>lightweight chassis</strong> make it manageable for new riders who have some experience on smaller-capacity bikes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                                9. What kind of instrument cluster does the MT-07 have?
+                            </button>
+                        </h2>
+                        <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#mt07Accordion">
+                            <div class="accordion-body">
+                                It is equipped with a modern <strong>5-inch full-color TFT display</strong> with <strong>Bluetooth connectivity</strong>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                                10. What is the unique feature of the MT-07’s engine?
+                            </button>
+                        </h2>
+                        <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#mt07Accordion">
+                            <div class="accordion-body">
+                                The unique feature is its <strong>270-degree crossplane crankshaft</strong>, which provides a <strong>V-twin-like exhaust note</strong> and a strong, linear torque delivery.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                
+
+            </div>
+
+        </div>
+
+
+
+        @await Html.PartialAsync("_AllViewComponent")
+    </div>
+</body>

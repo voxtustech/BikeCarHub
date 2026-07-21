@@ -1,0 +1,106 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "BMW M4 CS Launching in India on October 4: Specifications and Features";
+}
+@section MetaTags{
+    <meta name="keywords" content="BMW M4 CS, India launch, October 4, specifications, features, sports car, luxury coupe, automotive news" />
+    <meta name="description" content="Get ready for the launch of the BMW M4 CS in India on October 4. Discover its powerful engine, cutting-edge technology, and sporty design that redefine performance." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>BMW is gearing up for the launch of the M4 CS in India on October 4, and automotive enthusiasts are buzzing with excitement. Positioned between the M4 Competition and the M4 GTR, the M4 CS aims to deliver an unmatched performance experience, combining everyday usability with race-inspired engineering.</p>
+                <p>The M4 CS is powered by a formidable 3.0-liter inline-six twin-turbocharged engine that produces approximately 543 horsepower and 650 Nm of torque. This engine is mated to an 8-speed automatic transmission, enabling the car to accelerate from 0 to 100 km/h in just 3.7 seconds. With a top speed of 302 km/h, the M4 CS promises thrilling drives on both the road and the track.</p>
+                <p>In terms of design, the M4 CS features a more aggressive stance with enhanced aerodynamics, including a prominent front splitter and rear spoiler. The lightweight carbon fiber components not only reduce weight but also enhance rigidity. Inside, the M4 CS offers a driver-focused cockpit with high-quality materials, sport seats, and an advanced infotainment system that includes a premium sound system and connectivity options.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/bmw m4 cs set to launch in india on october 4/2.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/bmw m4 cs set to launch in india on october 4/3.webp" /></div>
+                </div>
+                <p>Safety features are top-notch, with multiple airbags, stability control, and advanced driver-assistance systems. The M4 CS is a true representation of BMW's motorsport heritage, offering a perfect blend of power, precision, and luxury that is sure to captivate Indian car enthusiasts.</p>
+                <h3 class="subheading">Specifications and Features:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Engine:</span> 3.0-liter inline-six twin-turbo</li>
+                    <li><span class="font-weight-700">Power:</span> 543 hp</li>
+                    <li><span class="font-weight-700">Torque:</span> 650 Nm</li>
+                    <li><span class="font-weight-700">Transmission:</span> 8-speed automatic</li>
+                    <li><span class="font-weight-700">0-100 km/h:</span> 3.7 seconds</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 302 km/h</li>
+                    <li><span class="font-weight-700">Body Type:</span> Coupe</li>
+                    <li><span class="font-weight-700">Weight:</span> Approximately 1,600 kg</li>
+                    <li><span class="font-weight-700">Infotainment:</span> BMW iDrive with touchscreen display</li>
+                    <li><span class="font-weight-700">Safety Features:</span> Multiple airbags, stability control, parking assist </li>
+                </ol>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

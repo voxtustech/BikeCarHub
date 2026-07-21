@@ -1,0 +1,29 @@
+﻿@model Cars_Bikes.Models.TWImageColorPrice
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <p><strong>Name:</strong> @Model.TWName</p>
+    <p><strong>Variant:</strong> @Model.Varients</p>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="TWImageColorPriceId" />
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

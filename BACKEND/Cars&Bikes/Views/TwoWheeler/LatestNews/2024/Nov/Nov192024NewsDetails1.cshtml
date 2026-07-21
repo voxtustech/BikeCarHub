@@ -1,0 +1,100 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "TVS Apache RTR 160 4V Updated: USD Forks, ₹1.40 Lakh";
+}
+@section MetaTags{
+    <meta name="keywords" content="TVS Apache RTR 160 4V, 2024 Apache updates, USD forks, ₹1.40 lakh bike, TVS Apache features, TVS SmartXonnect, new Apache colors" />
+    <meta name="description" content="Discover the refreshed TVS Apache RTR 160 4V with USD forks, SmartXonnect, and three riding modes. Prices start at ₹1.40 lakh. Book yours now!" />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <h1 class="heading">Now priced at ₹1.40 lakh, the refreshed Apache RTR 160 4V boasts enhanced hardware, fresh color options, and cutting-edge technology.</h1>
+                <p>@Model.NewsSummary</p>
+                <p>TVS Motor Company has rolled out significant upgrades for the <a class="for-link" asp-controller="TVS" asp-action="TVSApacheRTR1604V">Apache RTR 160 4V</a>, a popular choice in the 160cc segment. The key highlight is the introduction of USD front forks for improved handling and stability, a feature increasingly sought in this category. The updated model also brings an advanced SmartXonnect system, enabling Bluetooth connectivity for turn-by-turn navigation, call alerts, and ride statistics.</p>
+                <p>The 2024 iteration offers three riding modes—Urban, Rain, and Sport—allowing riders to adapt to varied road conditions. In Sport mode, the 159.7cc oil-cooled, single-cylinder engine delivers 17.55 PS of power and 14.73 Nm of torque, paired with a smooth 5-speed gearbox. The bike also features dual-channel ABS for enhanced braking performance, a fully digital instrument cluster with gear position and shift indicators, and the brand’s patented Glide Through Technology for seamless low-speed maneuverability.</p>
+                <p>In terms of aesthetics, the Apache RTR 160 4V is available in three striking colors, including the newly introduced Lightning Blue, which features sporty graphics and contrasting red accents. The design upgrades enhance the bike’s aggressive and dynamic look.</p>
+                <p>With prices ranging from ₹1.24 lakh to ₹1.40 lakh (ex-showroom), the updated Apache RTR 160 4V competes with rivals like the <a class="for-link" asp-controller="Bajaj" asp-action="BajajPulsarN160">Bajaj Pulsar N160</a>, Yamaha FZ-S Fi, and <a class="for-link" asp-controller="Hero" asp-action="HeroXtreme160R">Hero Xtreme 160R</a>. Deliveries are expected to begin soon, and bookings are already open at TVS dealerships nationwide.</p>
+                <h3 class="subheading">Specifications, Features, and Price:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Engine:</span> 159.7cc, oil-cooled, single-cylinder</li>
+                    <li><span class="font-weight-700">Power/Torque:</span> 17.55 PS / 14.73 Nm</li>
+                    <li><span class="font-weight-700">Transmission:</span> 5-speed gearbox</li>
+                    <li><span class="font-weight-700">Braking System:</span> Dual-channel ABS with 270mm front and 240mm rear petal disc brakes</li>
+                    <li><span class="font-weight-700">Mileage:</span> ~48 km/l</li>
+                    <li><span class="font-weight-700">Fuel Tank Capacity:</span> 12 liters</li>
+                    <li><span class="font-weight-700">Price:</span> ₹1.24–₹1.40 lakh (ex-showroom)</li>
+                </ol>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

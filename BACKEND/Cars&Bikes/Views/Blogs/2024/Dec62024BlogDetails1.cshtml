@@ -1,0 +1,202 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Most Expensive Motorcycles in India - 2024 Guide";
+}
+@section MetaTags{
+    <meta name="keywords" content="most expensive motorcycles India, luxury bikes India, Ducati Panigale V4 R price, Kawasaki Ninja H2R specs, BMW M 1000 RR features, top superbikes 2024" />
+    <meta name="description" content="Discover India’s top 5 most expensive motorcycles for 2024. Explore specifications, features, and prices of luxury bikes like the Kawasaki Ninja H2R & Ducati Panigale V4 R." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">1. Ducati Panigale V4 R</h3>
+                <p>The Panigale V4R stands among the fastest production motorcycles globally, delivering unmatched performance powered by cutting-edge engineering. To handle its immense power, Ducati has equipped the bike with a suite of advanced electronic aids, ensuring control and safety at high speeds. However, being a premium Ducati, it carries a hefty price tag, and its maintenance costs reflect its high-performance pedigree.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 998cc, Desmosedici Stradale 90° V4, Rotating Crankshaft,4 Desmodromically Actuated Valves Per Cylinder, Liquid Cooled
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 220 PS @@ 15,500 RPM
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 112 Nm @@ 11500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Track-ready aerodynamics, high-performance engine, lightweight chassis.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹69.99 lakh (ex-showroom).
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/indiatop5mostexpensivemotorcyclesaluxuryontwo wheels/ducati panigale v4 r.webp" alt="Ducati Panigale V4 R" title="Ducati Panigale V4 R" /></center></div>
+                </div>
+                <h3 class="subheading">2. Kawasaki Ninja H2R</h3>
+                <p>The Kawasaki Ninja H2R is a high-performance superbike, offered in a single variant and a sleek, distinctive color. Powered by a 998cc BS6-compliant engine, it delivers an extraordinary output of  310 bhp and 165 Nm of torque, making it one of the most powerful motorcycles in the world. Equipped with both front and rear disc brakes and an advanced anti-lock braking system (ABS), the Ninja H2R ensures enhanced safety and control. With a weight of 216 kg and a 17-liter fuel tank, it balances performance with practicality, catering to enthusiasts who crave speed and precision engineering.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 998cc, supercharged inline-4
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 310 PS @@ 14000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 165 Nm @@ 12500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Advanced electronics, carbon-fiber body, race-only design.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹79.90 lakh (ex-showroom).
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/indiatop5mostexpensivemotorcyclesaluxuryontwo wheels/kawasaki ninja h2r.webp" alt="Kawasaki Ninja H2R" title="Kawasaki Ninja H2R" /></center></div>
+                </div>
+                <h3 class="subheading">3. BMW M 1000 RR</h3>
+                <p>The BMW M 1000 RR is a standout in the world of high-performance motorcycles, celebrated for its exclusivity and exceptional craftsmanship. Designed with top-tier engineering, it blends unparalleled performance, advanced electronics, and striking aesthetics, making it a dream bike for enthusiasts. As a product of German precision, the M 1000 RR showcases impeccable quality and durability. However, as a Completely Built Unit (CBU) and a limited-edition motorcycle, its premium pricing places it out of reach for many, especially in the Indian market. This exclusivity, however, adds to its allure for collectors and passionate riders.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 999cc, Water/oil Cooled 4-cylinder 4-stroke in-line engine, four titanium valves per cylinder, BMW ShiftCam
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 212.10 PS @@ 14500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 113 Nm @@ 11000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Seven riding modes, premium braking system, optimized aerodynamics.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹49 lakh (ex-showroom).
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/indiatop5mostexpensivemotorcyclesaluxuryontwo wheels/bmw m 1000 rr.webp" alt="BMW M 1000 RR" title="BMW M 1000 RR" /></center></div>
+                </div>
+                <h3 class="subheading">4. Ducati Streetfighter V4 Lamborghini</h3>
+                <p>The Ducati Streetfighter V4 Lamborghini stands as a masterpiece of collaboration, featuring a custom livery and design inspired by the iconic Lamborghini Huracán STO (Super Trofeo Omologata). This motorcycle encapsulates the shared ethos of Ducati and Lamborghini: a fusion of cutting-edge technology, unparalleled performance, and distinctive Italian design. It exudes style, sportiness, and exclusivity, making it a dream machine for enthusiasts who value engineering excellence and aesthetic brilliance.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1,103cc V4
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 208 PS @@ 13,000 RPM
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 123 Nm @@ 9,500 RPM
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Lamborghini-inspired design, exclusive livery, cutting-edge technology.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹72 lakh (ex-showroom).
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/indiatop5mostexpensivemotorcyclesaluxuryontwo wheels/ducati streetfighter v4 lamborghini.webp" alt="Ducati Streetfighter V4 Lamborghini" title="Ducati Streetfighter V4 Lamborghini" /></center></div>
+                </div>
+                <h3 class="subheading">5. Indian Pursuit Dark Horse</h3>
+                <p>The Indian Pursuit Dark Horse is a quintessential cruiser, designed for riders who seek the iconic American cruiser experience. With its robust engine and thoughtfully crafted ergonomic design, it offers unparalleled comfort, making it an ideal companion for long journeys on open highways. This motorcycle seamlessly blends classic cruiser aesthetics with modern performance and features, delivering a ride that's both powerful and relaxing.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1,768cc, 6 Speed PowerPlus Liquid Cooled 108 cu in V-twin
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 178 Nm @@ 3800 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Compression Ratio:</span> 11.0:1
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Premium comfort, state-of-the-art infotainment, large storage capacity.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹46 lakh (ex-showroom).
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/indiatop5mostexpensivemotorcyclesaluxuryontwo wheels/indian pursuit dark horse.webp" alt="Indian Pursuit Dark Horse" title="Indian Pursuit Dark Horse" /></center></div>
+                </div>               
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

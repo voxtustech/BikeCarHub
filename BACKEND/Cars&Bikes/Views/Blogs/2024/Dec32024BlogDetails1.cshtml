@@ -1,0 +1,209 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Best-Selling Bajaj Motorcycles in India 2024";
+}
+@section MetaTags{
+    <meta name="keywords" content="Bajaj motorcycles, best-selling bikes 2024, Bajaj Pulsar, Bajaj Platina, Bajaj Avenger, Bajaj Dominar, commuter bikes, affordable motorcycles India, Top 5 best selling bajaj motorcycles in india, Top selling bikes in India 2024, Bajaj top selling bikes, Bajaj bikes price list 2024, Bajaj bikes Price List 2024 On-Road Price" />
+    <meta name="description" content="Explore the top 5 best-selling Bajaj motorcycles of 2024, featuring the Pulsar, Platina, and more. Discover performance, affordability, and reliability." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p>Bajaj Auto, a leader in the two-wheeler industry, has consistently delivered motorcycles that cater to the needs of a diverse audience. Here are the top five best-selling Bajaj motorcycles in 2024:</p>
+                <h3 class="subheading">1. Bajaj Pulsar Series</h3>
+                <p>The Pulsar remains the flagship range for Bajaj, with the <a class="for-link" asp-controller="Bajaj" asp-action="BajajPulsarNS200">NS200</a>, NS160, and 220F leading in sales. Known for their sporty design and performance-oriented engines, Pulsars cater to enthusiasts who want speed and style without compromising affordability.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">Specifications & Features of Pulsar NS 160</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 160.3 cc, Oil Cooled, Twin Spark, 4-Valve FI DTS-i
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 17.2 PS @@ 9000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 14.6 Nm @@ 7250 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Upside Down Forks, Suspension Rear - Nitrox Mono Shock Absorber With Canister
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 170 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bestsellingbajajmotorcyclesinindia/pulsar ns 160.webp" alt="Bajaj Pulsar Series" title="Bajaj Pulsar Series" /></center></div>
+                </div>
+                <h3 class="subheading">2. Bajaj Platina</h3>
+                <p>A budget-friendly commuter bike, the <a class="for-link" asp-controller="Bajaj" asp-action="BajajPlatina100">Platina</a> is loved for its outstanding mileage and comfort. With features like a comfortable seat and advanced suspension, it remains a top choice for daily commuters.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">Specifications & Features of Platina 100cc</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 102 cc, 4-Stroke, DTS-i, Single Cylinder
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 7.9 PS @@ 7500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 8.3 Nm @@ 5500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - 135 mm, Hydraulic, Telescopic Type, Suspension Rear - 110 mm, Spring in Spring Suspension
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 200 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bestsellingbajajmotorcyclesinindia/platina 100cc.webp" alt="Bajaj Platina" title="Bajaj Platina" /></center></div>
+                </div>
+                <h3 class="subheading">3. Bajaj CT Series</h3>
+                <p>Another popular commuter bike, the <a class="for-link" asp-controller="Bajaj" asp-action="BajajCT110X">Bajaj CT</a>, offers an economical solution for rural and urban areas alike. Its robust design and fuel efficiency make it a reliable workhorse for users.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">Specifications & Features of CT 110X</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 115.45 cc, 4-Stroke, Single Cylinder
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 8.6 PS @@ 7000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 9.81 Nm @@ 5000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Hydraulic Telescopic, 125 mm Travel, Suspension Rear - Spring-in-Spring (SNS), 100 mm Wheel Travel
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 170 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bestsellingbajajmotorcyclesinindia/ct 110x.webp" alt="Bajaj CT Series" title="Bajaj CT Series" /></center></div>
+                </div>
+                <h3 class="subheading">4. Bajaj Avenger</h3>
+                <p>For cruiser lovers, the <a class="for-link" asp-controller="Bajaj" asp-action="BajajAvenger220Street">Avenger</a> series offers a comfortable ride and stylish looks. With its relaxed ergonomics and powerful engine, it’s a top pick for long-distance riders.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">Specifications & Features Avenger 220 Street</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 220 cc, Single cylinder, Oil cooled, Twin Spark DTS-i , Fuel Injected, 4 stroke, SOHC, 2 valve
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 19.03 PS @@ 8500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 17.55 Nm @@ 7000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Telescopic with double anti friction bush, Suspension Rear - 5 step adjustable Twin shock absorber
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 169 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bestsellingbajajmotorcyclesinindia/avenger 220 street.webp" alt="Bajaj Avenger" title="Bajaj Avenger" /></center></div>
+                </div>
+                <h3 class="subheading">5. Bajaj Dominar</h3>
+                <p>Targeting the premium segment, the <a class="for-link" asp-controller="Bajaj" asp-action="BajajDominar250">Dominar 250</a> and <a class="for-link" asp-controller="Bajaj" asp-action="BajajDominar400">400</a> offer touring capabilities with powerful engines and modern features like LED lighting and digital consoles.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">Specifications & Features of Dominar 250cc</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 248.77 cc, Single Cylinder, 4 stroke, DOHC, 4 valve, Liquid Cooled, Twin Spark, FI
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 27 PS @@ 8500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 23.5 Nm @@ 6500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Telescopic, 37 mm USD Fork, 135 mm travel, Suspension Rear - Multi-step adjustable Monoshocks with Nitrox, Wheel stroke of 110 mm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 157 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bestsellingbajajmotorcyclesinindia/dominar 250cc.webp" alt="Bajaj Dominar" title="Bajaj Dominar" /></center></div>
+                </div>
+                <p>Each of these motorcycles reflects Bajaj's commitment to innovation, catering to a wide range of consumers.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,120 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Sierra EV and ICE – Sunset Promotional Banner";
+}
+@section MetaTags {
+    <meta name="keywords" content="Tata Sierra, Tata Sierra EV, Tata Sierra ICE, Tata electric car, Tata SUV, Indian SUV, EV India, ICE SUV, Tata Motors, bikecarhub car banner, automotive design, SUV launch 2025, Acti.EV platform, electric vs ICE, futuristic SUV" />
+    <meta name="description" content="A high-resolution promotional banner featuring the upcoming Tata Sierra EV and ICE variants. Captured during golden hour, the image showcases the electric Sierra in white and the internal combustion version in green, both positioned side by side against a striking sunset backdrop. This visual symbolizes the fusion of Tata’s legacy with its electric future | bikecarhub." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+			</div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+				<div class="row m-b20">					
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/may/tatasierra/tatasierra.webp" alt="bikecarhubtatasierra" title="bikecarhubtatasierra" /></div>
+				</div>
+                <h3 class="subheading">Tata Sierra EV: The Electric Renaissance</h3>
+                <h5 class="subheading">Launch & Pricing</h5>
+                    <p>Mark your calendars for August 19, 2025, when the Tata Sierra EV is expected to make its grand entrance, with a price tag estimated between ₹25–30 lakh (ex-showroom).</p>
+                <h5 class="subheading">Platform & Performance</h5>
+                <p>Built on Tata's innovative Acti.EV platform, the Sierra EV is set to offer both rear-wheel-drive (RWD) and all-wheel-drive (AWD) options. While the exact battery details are still under wraps, the EV is aiming for an impressive driving range of around 500 km on a single charge.</p>
+                <h5 class="subheading">Design & Features</h5>
+                <p>The Sierra EV boasts a sleek, modern design featuring LED daytime running lights, a panoramic sunroof, and a dual-screen dashboard. Inside, you might find options for both 4- and 5-seat configurations, focusing on comfort and spaciousness. Expect advanced features like dual-zone climate control, ventilated seats, and a Level 2 Advanced Driver Assistance System (ADAS).</p>
+                <h5 class="subheading">Safety</h5>
+                <p>Safety is a top priority, with anticipated features such as multiple airbags, ABS with EBD, electronic stability control, and a 360-degree camera system. The addition of Level 2 ADAS will further enhance the driving experience.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Tata Sierra ICE: The Classic Reimagined</h3>
+                <h5 class="subheading">Launch & Pricing</h5>
+                <p>Following the EV launch, the ICE variant of the Sierra is expected to hit the market later in 2025, starting at around ₹10.50 lakh.</p>
+                <h5 class="subheading">Engine Options</h5>
+                <p>The ICE Sierra is likely to come with two engine choices:</p>
+                <ul>
+                    <li> 1.5-litre T-GDi Turbo-Petrol: Offering about 165 HP and 280 Nm of torque.</li>
+                    <li> 2.0-litre Kryotec Diesel: Generating around 170 HP and 350 Nm of torque.</li>
+                </ul>
+                <p>You can expect both manual and automatic transmission options.</p>
+                <h5 class="subheading">Design & Features</h5>
+                <p>While keeping the Sierra's iconic shape, the ICE version might showcase some subtle design tweaks compared to the EV, like different front fascia styles and alloy wheel designs. Inside, we can expect a sleek triple-screen dashboard that combines cutting-edge technology with user-friendly interfaces.</p>
+                <h5 class="subheading">Competitors</h5>
+                <p>The Sierra ICE is set to carve out its niche right between the Tata Curvv and the Harrier, going head-to-head with popular models like the Hyundai Creta, Kia Seltos, and Mahindra Thar.</p>
+                <h3 class="subheading">Sierra EV vs. Sierra ICE: A Comparative Glance</h3>
+                <div style="overflow-x: auto;">
+                      <table class="comparison-table-content">
+                          <thead>
+                              <tr>
+                                  <th class="text-center"> Feature </th>
+                                  <th class="text-center"> Sierra EV </th>
+                                  <th class="text-center"> Sierra ICE </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr class="compare-head-text">
+                                  <td class="font-weight-600"> Launch Date </td>
+                                  <td> August 19, 2025</td>
+                                  <td> Late 2025</td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-600">Price Range</td>
+                                  <td>₹25–30 lakh</td>
+                                  <td>₹10.50 lakh onwards</td>
+                              </tr>
+                              <tr class="compare-head-text">
+                                  <td class="font-weight-600">Powertrain</td>
+                                  <td>Electric (RWD/AWD)</td>
+                                  <td>1.5L Turbo-Petrol / 2.0L Diesel</td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-600">Platform</td>
+                                  <td>Acti.EV (Dedicated EV Architecture)</td>
+                                  <td>ICE Platform</td>
+                              </tr>
+                              <tr class="compare-head-text">
+                                  <td class="font-weight-600">Interior</td>
+                                  <td>Dual-screen setup, panoramic sunroof</td>
+                                  <td>Triple-screen dashboard </td>
+                              </tr>
+                               <tr>
+                                  <td class="font-weight-600">Safety Features</td>
+                                  <td>Level 2 ADAS, multiple airbags, 360° cam</td>
+                                  <td>Multiple airbags, electronic stability control</td>
+                              </tr>
+                              <tr class="compare-head-text">
+                                  <td class="font-weight-600">Competitors</td>
+                                  <td>Mahindra BE 6, MG ZS EV, Hyundai Creta EV</td>
+                                  <td>Hyundai Creta, Kia Seltos, Mahindra Thar </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

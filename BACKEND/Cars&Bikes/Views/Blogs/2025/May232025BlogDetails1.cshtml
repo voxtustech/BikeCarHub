@@ -1,0 +1,186 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 150cc Bikes in India 2025 – Best Performance Picks";
+}
+@section MetaTags {
+    <meta name="keywords" content="Best 150cc bikes in India, 150cc bikes comparison, Top bikes under 150cc at bikecarhub, Best bikes in 150cc segment, 150cc motorcycles in India, Mileage of 150cc bikes, Top 5 bikes in 150cc segment, Best commuter 150cc bikes, Yamaha FZ, TVS Apache RTR 160, Honda Unicorn, Affordable 150cc bikes" />
+    <meta name="description" content="Explore the best 150cc bikes in India for 2025. Compare performance, mileage, and features of top models from Yamaha, Honda, Bajaj & more with bikecarhub." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">Why Choose a 150cc Bike?</h3>
+                <p>For everyday commuters, 150cc bikes offer a sweet spot between power and mileage. They're zippy enough to handle city traffic yet capable of comfortable long rides. Here’s why many prefer this segment:</p>
+                <ul>
+                    <li><span class="font-weight-700">Good fuel efficiency</span> without compromising on power.</li>
+                    <li><span class="font-weight-700">Affordable maintenance</span> and spare parts availability.</li>
+                    <li><span class="font-weight-700">Ideal for both city commuting and occasional highway rides.</span></li>
+                    <li>A wide variety of options to choose from across brands and styles.</li>
+                </ul>
+                <p>Let’s explore some of the top contenders in this segment for 2025.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Yamaha" asp-action="YamahaFZSFiVer4Point0">1. Yamaha FZ-S FI V4</a></h3>
+                <p>One of the top names when it comes to <span class="font-weight-700">best 150 cc bike with mileage,</span> the Yamaha FZ-S FI V4 combines muscular looks with practical utility. It’s known for its smooth handling and refined engine.</p>
+                <p><span class="font-weight-700">Key Specs:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 149cc, Fuel-Injected, BS6 compliant</li>
+                    <li><span class="font-weight-700">Mileage:</span> Around 46 km/l</li>
+                    <li><span class="font-weight-700">Features:</span> LED headlamp, single-channel ABS, Bluetooth connectivity</li>
+				</ul>
+                <p>The FZ-S FI is ideal for those looking for a reliable <span class="font-weight-700">bike for daily use</span> and occasional touring.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/may/bestbikesinthe150ccsegmentinindia/fzsfiv4.webp" alt="fzsfiv4" title="fzsfiv4" /></div>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="TVS" asp-action="TVSApacheRTR1604V">2. TVS Apache RTR 160 4V</a></h3>
+                <p>When it comes to <span class="font-weight-700">best 150cc bikes in India for performance,</span> the Apache RTR 160 4V stands tall. With racing DNA embedded into its design, it’s a favorite among young riders.</p>
+                <p><span class="font-weight-700">Key Specs:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 159.7cc, Oil-cooled</li>
+                    <li><span class="font-weight-700">Mileage:</span> 47.1 km/l (approx.)</li>
+                    <li><span class="font-weight-700">Power:</span>17.55 PS</li>
+                    <li><span class="font-weight-700">Features:</span>SmartXonnect Bluetooth tech, Glide Through Traffic (GTT), aggressive styling</li>
+                </ul>
+                <p>Ideal for riders looking for speed, control, and good aesthetics. It also ranks among the <span class="font-weight-700">top 150cc bikes in India 2025.</span></p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/may/bestbikesinthe150ccsegmentinindia/tvsapache.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Honda" asp-action="HondaUnicorn">3. Honda Unicorn 160</a></h3>
+                <p>The Honda Unicorn has been a trusted name in the commuter bike space for years. Known for its superior ride quality and dependable nature, it's often chosen as the <span class="font-weight-700">best 150cc bike for long distance</span> riders.</p>
+                <p><span class="font-weight-700">Key Specs:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 162.7cc, Air-cooled</li>
+                    <li><span class="font-weight-700">Mileage:</span> Upto 56 km/l</li>
+                    <li><span class="font-weight-700">Ride Comfort:</span> Telescopic front fork, mono-shock rear suspension</li>
+                </ul>
+                <p>The Unicorn stands out for those who prioritize <span class="font-weight-700">comfort and long-term reliability</span></p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/may/bestbikesinthe150ccsegmentinindia/unicorn.webp" alt="bikecarhubunicorn" title="bikecarhubunicorn" /></div>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Bajaj" asp-action="BajajPulsar150">4. Bajaj Pulsar P150</a></h3>
+                <p>The Pulsar series from Bajaj has always been synonymous with sporty appeal and performance. The newly introduced Pulsar P150 continues this legacy, making it one of the <span class="font-weight-700">best bikes under 150cc.</span></p>
+                <p><span class="font-weight-700">Key Specs:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 149.68cc, Air-cooled</li>
+                    <li><span class="font-weight-700">Mileage:</span> 50 km/l (approx.)</li>
+                    <li><span class="font-weight-700">Power:</span>14.5 PS</li>
+                    <li><span class="font-weight-700">USP:</span>Refreshed design and twin disc variant</li>
+                </ul>
+                <p>With improved ergonomics and balanced performance, it's a good pick for both city use and weekend trips.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/may/bestbikesinthe150ccsegmentinindia/BajajP150.webp" alt="bikecarhubBajajP150" title="bikecarhubBajajP150" /></div>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Suzuki" asp-action="SuzukiGixxer">5. Suzuki Gixxer 155</a></h3>
+                <p>If someone’s interested in <span class="font-weight-700">150cc bikes with best pickup,</span> the Suzuki Gixxer should be on the list. It delivers an exciting ride while maintaining control and comfort.</p>
+                <p><span class="font-weight-700">Key Specs:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 155cc, Single-cylinder</li>
+                    <li><span class="font-weight-700">Mileage:</span> 45-50 km/l</li>
+                    <li><span class="font-weight-700">Design:</span> Streetfighter styling with muscular stance</li>
+                </ul>
+                <p>This is ideal for college-goers and young professionals seeking a mix of power and flair.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/may/bestbikesinthe150ccsegmentinindia/suzukigixxersf155.webp" alt="bikecarhubsuzukigixxersf155" title="bikecarhubsuzukigixxersf155" /></div>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading">Compare Bikes: What to Look For?</h3>
+                <p>Before choosing, one must <span class="font-weight-700">compare bikes</span> based on a few important factors:</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Parameter</th>
+                                <th class="text-center">Yamaha FZ-S FI V4</th>
+                                <th class="text-center">Apache RTR 160 4V</th>
+                                <th class="text-center">Honda Unicorn</th>
+                                <th class="text-center">Pulsar P150</th>
+                                <th class="text-center">Gixxer 155</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Mileage (km/l)</td>
+                                <td>50</td>
+                                <td>45</td>
+                                <td>55</td>
+                                <td>50</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>Engine Power</td>
+                                <td>12.4 PS</td>
+                                <td>17.5 PS</td>
+                                <td>12.91 PS</td>
+                                <td>14.5 PS</td>
+                                <td>13.6 PS</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Best For</td>
+                                <td>City + Style</td>
+                                <td>Performance</td>
+                                <td>Long rides</td>
+                                <td>All-rounder</td>
+                                <td>Styling</td>
+                            </tr>
+                            <tr>
+                            <tr class="compare-head-text">
+                                <td>Price (ex-showroom)</td>
+                                <td>₹1.30 Lakh</td>
+                                <td>₹1.25 Lakh</td>
+                                <td>₹1.09 Lakh</td>
+                                <td>₹1.17 Lakh</td>
+                                <td>₹1.30 Lakh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading">Which 150cc Bike is Best for Long Drive?</h3>
+                <p>For touring and long-distance use, <span class="font-weight-700">Honda Unicorn 160</span> takes the lead due to its comfortable seating posture, superior suspension, and higher mileage. It’s followed closely by the <span class="font-weight-700">TVS Apache RTR 160 4V,</span> which offers excellent highway performance.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Best 150cc Bike for City and Office Use</h3>
+                <p>If the goal is to use a bike for daily commute or city errands, options like <span class="font-weight-700">Yamaha FZ-S</span> and <span class="font-weight-700">Pulsar P150</span> shine with their easy handling and efficiency.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">150cc Bike Price Range in India 2024</h3>
+                <p>Prices of 150cc bikes vary widely based on brand and features. On average:</p>
+                <ul>
+                    <li>Entry-level models start around ₹1.10 Lakh</li>
+                    <li>Premium 150cc bikes go up to ₹1.50 Lakh</li>
+                </ul>
+                <p>This range makes the segment accessible while offering premium touches in design and features.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

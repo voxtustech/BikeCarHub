@@ -1,0 +1,365 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @foreach (var brand in ViewBag.Tag)
+    {
+        ViewData["Title"] = @brand.TitleTag;
+    }
+}
+
+@section MetaTags {
+    @foreach (var brand in ViewBag.Tag)
+    {
+        <meta name="keywords" content="@brand.MetaKeywords" />
+        <meta name="description" content="@brand.MetaDescription" />
+    }
+}
+@foreach (var brand in ViewBag.Tag)
+{
+    <div class=" ">
+        <h1 class="latest-bike-head">@brand.BrandName Bikes</h1>
+        @*<h2 class="latest-bike-description p-b20">@brand.Discription</h2>*@
+        <div class="brand-info-container">
+            <div class="brand-info-content">
+
+                <h3>Yamaha Bikes in India 2025: Price, Mileage, Long Ride Picks & More</h3>
+
+                <p class="brand-info-short">
+                    Yamaha has long been synonymous with style, performance, and precision engineering. Originating in Japan, Yamaha Motor Company has carved out a legendary status in the global motorcycle scene — and it’s no different in India. Since entering the Indian market, Yamaha has consistently introduced bikes that appeal to both the urban commuter and the performance enthusiast.
+                    From the iconic Yamaha FZ series to the sporty R15 lineup, the brand has balanced power with practicality. Yamaha's reputation is built on refined engines, eye-catching design, and a riding experience that speaks to passion rather than just practicality. In 2025, Yamaha’s portfolio in India continues to impress, offering a mix of street bikes, sportbikes, neo-retro models, and even a few performance-oriented scooters.
+                    Here’s everything you need to know about Yamaha motorcycles in India, including the price list, mileage, best long-distance models, and why the brand continues to be a favorite among Indian riders.
+                </p>
+
+                <div class="brand-info-full" id="yamahaMoreText">
+                    <h3>Yamaha Bikes Price List 2025 in India</h3>
+
+                    <p>
+                        Here is the updated Yamaha motorcycle price and mileage list for 2025:
+                    </p>
+
+                    <div class="brand-table-wrapper">
+                        <table class="brand-info-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Ex-Showroom Price (₹)</th>
+                                    <th>Mileage (km/l)</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Yamaha FZ FI</td>
+                                    <td>₹1.17 lakh – ₹1.22 lakh</td>
+                                    <td>45–50 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Yamaha FZS FI Deluxe</td>
+                                    <td>₹1.23 lakh – ₹1.26 lakh</td>
+                                    <td>46–50 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Yamaha FZ-X</td>
+                                    <td>₹1.37 lakh – ₹1.42 lakh</td>
+                                    <td>48–52 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Yamaha MT-15 V2</td>
+                                    <td>₹1.69 lakh – ₹1.74 lakh</td>
+                                    <td>40–45 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Yamaha R15 V4</td>
+                                    <td>₹1.83 lakh – ₹1.90 lakh</td>
+                                    <td>40–45 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Yamaha R15M</td>
+                                    <td>₹1.95 lakh – ₹2.00 lakh</td>
+                                    <td>38–43 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Yamaha Aerox 155 (scooter)</td>
+                                    <td>₹1.47 lakh – ₹1.52 lakh</td>
+                                    <td>40–45 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Yamaha R3 (expected 2025)</td>
+                                    <td>₹4.20 lakh – ₹4.30 lakh</td>
+                                    <td>25–30 km/l</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <i>Note: Prices and mileage may vary depending on city, fuel type, riding conditions, and variant.</i>
+                    </p>
+                    <h3>Which Yamaha Is Best for Long Rides?</h3>
+
+                    <p>
+                        Yamaha is best known for its sporty DNA, but several models offer excellent comfort and features for long-distance travel. Whether it’s cruising down the highway or tackling a winding road trip, these bikes deliver on power, control, and comfort.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Top Yamaha Bikes for Touring in 2025:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Yamaha FZ-X</strong>
+                            <ul>
+                                <li>A neo-retro bike with relaxed ergonomics</li>
+                                <li>Upright seating posture and plush seat</li>
+                                <li>Best suited for city-to-highway transitions with smooth power delivery</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Yamaha MT-15 V2</strong>
+                            <ul>
+                                <li>Lightweight, agile, and equipped with a 155cc liquid-cooled VVA engine</li>
+                                <li>Great mid-range torque and upright stance</li>
+                                <li>Excellent for solo travelers who want fun + practicality</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Yamaha R15M</strong>
+                            <ul>
+                                <li>Sports bike lovers can enjoy long rides with its aerodynamic fairing and refined engine</li>
+                                <li>Variable Valve Actuation (VVA) helps maintain power and efficiency at all speeds</li>
+                                <li>Suitable for riders accustomed to aggressive riding posture</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Yamaha R3 (expected to launch in 2025)</strong>
+                            <ul>
+                                <li>Twin-cylinder, liquid-cooled engine</li>
+                                <li>Stable at high speeds with a comfortable seat for a sportbike</li>
+                                <li>Ideal for touring and track-day versatility</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <h3>Which Yamaha Has the Best Mileage?</h3>
+
+                    <p>
+                        While Yamaha bikes are performance-driven, they’re also surprisingly fuel-efficient. Thanks to the brand’s Blue Core engine technology, Yamaha maximizes fuel combustion while reducing mechanical friction — translating to better efficiency.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Top Fuel-Efficient Yamaha Bikes:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Yamaha FZ-X</strong>
+                            <ul>
+                                <li>Mileage: 48–52 km/l</li>
+                                <li>Perfect for urban riders who value comfort and economy</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Yamaha FZS FI Deluxe / FZ FI</strong>
+                            <ul>
+                                <li>Mileage: 45–50 km/l</li>
+                                <li>Well-balanced power and efficiency</li>
+                                <li>Comes with features like LED lighting and Bluetooth connectivity</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Yamaha Aerox 155 (Scooter)</strong>
+                            <ul>
+                                <li>Mileage: 40–45 km/l</li>
+                                <li>A performance scooter with 14-inch wheels and powerful engine</li>
+                                <li>Great for daily city runs and occasional fun rides</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        Yamaha’s mileage figures are highly competitive for the 150cc class, offering economy without compromising the riding thrill.
+                    </p>
+                    <h3>Why Is Yamaha Famous?</h3>
+
+                    <p>
+                        Yamaha’s fame goes far beyond just motorcycles — it’s a symbol of reliability, precision, and innovation. Here’s what makes Yamaha stand out in the Indian market:
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Reasons Yamaha Is So Popular:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Global Racing Heritage</strong>
+                            <ul>
+                                <li>Yamaha’s involvement in MotoGP and other racing disciplines has helped translate track technology to street bikes.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Refined Engine Performance</strong>
+                            <ul>
+                                <li>Yamaha engines are smooth, responsive, and tuned for long-term reliability.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Innovative Tech</strong>
+                            <ul>
+                                <li>Features like Variable Valve Actuation (VVA), assist & slipper clutch, Bluetooth-enabled instrument clusters (Y-Connect), and LED DRLs are now standard in many models.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Aggressive Yet Timeless Designs</strong>
+                            <ul>
+                                <li>Every Yamaha bike feels modern, sharp, and uniquely styled.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Wide Urban Appeal</strong>
+                            <ul>
+                                <li>Yamaha continues to appeal to the youth with bikes that feel sporty, easy to ride, and reliable.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Strong After-Sales Service</strong>
+                            <ul>
+                                <li>Yamaha’s extensive service network ensures riders get support and genuine parts across the country.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <h3>Final Thoughts</h3>
+
+                    <p>
+                        Yamaha’s 2025 motorcycle range in India proves that you don’t have to choose between performance and practicality. From the street-ready FZ series to the powerful and poised R15, Yamaha offers something for every type of rider.
+                        Whether you’re a student, office commuter, or touring enthusiast, Yamaha’s lineup covers all needs with bikes that are stylish, efficient, and rewarding to ride. With exciting updates and a potential R3 launch, Yamaha continues to be a brand to watch in India’s premium commuter and performance motorcycle segments.
+                    </p>
+                    <h3>Top 10 FAQs About Yamaha Bikes in India (2025)</h3>
+
+                    <div class="faq-container">
+
+                        <div class="faq-item">
+                            <h4>1. Which Yamaha bike gives the best mileage?</h4>
+                            <p>
+                                The Yamaha FZ-X delivers the best mileage at around 48–52 km/l.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>2. Is Yamaha R15M good for daily use?</h4>
+                            <p>
+                                It can be used daily, but its committed riding posture suits short rides better than long city commutes.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>3. Is Yamaha FZ a good bike for beginners?</h4>
+                            <p>
+                                Yes, Yamaha FZ FI is lightweight, easy to handle, and great for new riders.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>4. Which Yamaha is best for long-distance riding?</h4>
+                            <p>
+                                The Yamaha FZ-X and MT-15 V2 offer the most comfort and practicality for long trips.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>5. Is Yamaha MT-15 powerful enough for highways?</h4>
+                            <p>
+                                Yes, its 155cc engine with VVA performs well on highways with good mid-range torque.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>6. Does Yamaha make adventure bikes in India?</h4>
+                            <p>
+                                Currently, Yamaha doesn’t offer ADV bikes in India, but the FZ-X serves as a mild crossover.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>7. Are Yamaha bikes expensive to maintain?</h4>
+                            <p>
+                                Not really. Maintenance is affordable and service is widely available across India.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>8. Which is the best Yamaha scooter?</h4>
+                            <p>
+                                The Aerox 155 is Yamaha’s sportiest and most advanced scooter in India.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>9. What’s the expected launch date of Yamaha R3 in India?</h4>
+                            <p>
+                                Yamaha R3 is expected to launch in 2025 in India as a CKD model with updated specs.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>10. Is Yamaha better for power or mileage?</h4>
+                            <p>
+                                Yamaha strikes a solid balance — offering sporty performance without sacrificing too much fuel economy.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <button class="brand-read-btn"
+                        onclick="toggleBrandInfo('yamahaMoreText', this)">
+                    Read More
+                </button>
+            </div>
+        </div>
+        <script>function toggleBrandInfo(contentId, button) {
+
+                const content = document.getElementById(contentId);
+
+                if (content.style.display === "block") {
+
+                    content.style.display = "none";
+                    button.innerText = "Read More";
+
+                } else {
+
+                    content.style.display = "block";
+                    button.innerText = "Read Less";
+                }
+            }</script>
+    </div>
+
+}
+@await Html.PartialAsync("_BrandComponent")
+@await Html.PartialAsync("_AllComponent")

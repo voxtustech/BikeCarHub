@@ -1,0 +1,266 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Kia Sonet vs Škoda Kylaq (2025) - Compact SUVs Redefined";
+}
+@section MetaTags {
+    <meta name="keywords" content="Kia Sonet vs Škoda Kylaq, Sonet vs Kylaq 2025, best compact SUV India, Kia Sonet review, Škoda Kylaq features, Sonet vs Kylaq mileage, Sonet vs Kylaq safety, Sonet vs Kylaq price" />
+    <meta name="description" content="Compare Kia Sonet vs Škoda Kylaq for performance, safety, features, and value. Find out which 2025 compact SUV suits your needs with our detailed comparison." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 27th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Value Proposition & Positioning</h2>
+                <h3 class="subheading">Kia Sonet (2025)</h3>
+                <ul>
+                    <li>Builds on a proven platform (K2) with a mid-2024 facelift, offering refreshed design and upgraded interiors</li>
+                    <li>Official price range: <span class="font-weight-700">₹7.99--15.76 L</span> ex-showroom</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq (2025)</h3>
+                <ul>
+                    <li>Škoda's first sub-4m SUV on the MQB A0-IN platform, offering a European driving experience priced from <span class="font-weight-700">₹7.89 L</span></li>
+                    <li>Positioned as a compact SUV with safety and sophistication based on proven Volkswagen-Škoda DNA</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Engine & Powertrain</h2>
+                <p>Both vehicles offer distinct engine lineups reflecting their brand philosophies.</p>
+
+                <h3 class="subheading">Kia Sonet</h3>
+                <ul>
+                    <li><span class="font-weight-700">1.2 L NA petrol</span>: 61 kW (≈82 PS), 115 Nm, 5MT</li>
+                    <li><span class="font-weight-700">1.0 L turbo petrol (T-GDi)</span>: 88 kW (≈120 PS), 172 Nm, available with iMT or 7-speed DCT</li>
+                    <li><span class="font-weight-700">1.5 L diesel (CRDi VGT)</span>: 85 kW (≈115 PS), 250 Nm, with 6MT or first-in-segment 6-speed AT</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+                <ul>
+                    <li><span class="font-weight-700">1.0 L TSI turbo petrol</span>: 85 kW (115 PS), 178 Nm, mated to 6MT or 6-speed torque converter AT with paddle shifters</li>
+                </ul>
+                <p><span class="font-weight-700">Verdict:</span> Sonet offers more powertrain variety; Kylaq focuses on its polished 1.0 TSI unit with European finesse.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Performance & Drive Experience</h2>
+                <ul>
+                    <li><span class="font-weight-700">Sonet's turbo</span> engine accelerates briskly, with responsive midrange and selectable drive modes (Normal/Eco/Sport) and traction options in higher trims</li>
+                    <li><span class="font-weight-700">Kylaq</span> achieves 0-100 km/h in ~10.5 sec, with smooth delivery and top speed of 188 km/h</li>
+                </ul>
+                <p><span class="font-weight-700">Verdict:</span> Kylaq offers refined European road manners; Sonet delivers sharper on-road performance and sportiness, especially with dual-clutch options.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Fuel Efficiency</h2>
+                <p>ARAI-rated ranges (city/highway/combined):</p>
+
+                <h3 class="subheading">Sonet Petrol</h3>
+                <ul>
+                    <li>1.2 L: ~18.4 kmpl</li>
+                    <li>1.0 L turbo DCT: ~19.2 kmpl</li>
+                </ul>
+
+                <h3 class="subheading">Sonet Diesel</h3>
+                <ul>
+                    <li>MT: ~24.0 kmpl</li>
+                    <li>AT: ~19.0 kmpl</li>
+                </ul>
+
+                <h3 class="subheading">Kylaq</h3>
+                <ul>
+                    <li>Official numbers not cited for India, but similar 1.0 TSI petrol achieves ~20 kmpl in real-world reviews</li>
+                </ul>
+                <p><span class="font-weight-700">Verdict:</span> Sonet offers clearer efficiency data across engines; Kylaq's urban mileage is estimated around 20 kmpl.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Dimensions & Practicality</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Dimension</th>
+                                <th class="text-center">Sonet</th>
+                                <th class="text-center">Kylaq</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Length × Width × Height</td>
+                                <td>3995×1790×1610-1642 mm</td>
+                                <td>3995×1783×1619 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Wheelbase</td>
+                                <td>2500 mm</td>
+                                <td>2566 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Ground Clearance</td>
+                                <td>205 mm</td>
+                                <td>189 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Boot Space</td>
+                                <td>385 L</td>
+                                <td><span class="font-weight-700">446 L</span>; 1265 L with 60:40 down rear seats</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><span class="font-weight-700">Verdict:</span> Kylaq takes the lead in interior space and boot capacity; Sonet remains competitive for everyday usability.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Safety & Build Quality</h2>
+                <h3 class="subheading">Sonet</h3>
+                <ul>
+                    <li>Standard 6 airbags, ESC, VSM, HAC, TPMS, front sensors</li>
+                </ul>
+
+                <h3 class="subheading">Kylaq</h3>
+                <ul>
+                    <li>Class-leading safety with 5-star <span class="font-weight-700">Bharat NCAP</span>, 25+ safety features, LED lighting, ESC, ABS, airbags, hill hold</li>
+                </ul>
+                <p><span class="font-weight-700">Verdict:</span> Kylaq offers superior crash protection and a stronger safety profile; Sonet provides strong active safety standards for its class.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Interior & Technology</h2>
+                <h3 class="subheading">Sonet Features</h3>
+                <ul>
+                    <li>8″/10.25″ touchscreen, wireless Android Auto/CarPlay</li>
+                    <li>4.2″ cluster, sunroof, ventilated front seats, pure-air purifier, wireless charging, connected car tech, rear sunshade and cruise control</li>
+                </ul>
+
+                <h3 class="subheading">Kylaq Features</h3>
+                <ul>
+                    <li>Spacious cabin with ventilated seats, Climatronic auto-AC, and comfort-biased setup</li>
+                    <li>Connectivity suite (unspecified feature count but advanced)</li>
+                </ul>
+                <p><span class="font-weight-700">Verdict:</span> Sonet offers more mass-market technology; Kylaq emphasizes refinement and comfort with premium finishes.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Price & Variants</h2>
+                <h3 class="subheading">Sonet</h3>
+                <ul>
+                    <li>Prices from <span class="font-weight-700">₹7.99 L</span> to <span class="font-weight-700">₹15.76 L</span> across 30 trims</li>
+                </ul>
+
+                <h3 class="subheading">Kylaq</h3>
+                <ul>
+                    <li>Launch variants: Classic, Signature, Signature+, Prestige—all priced from <span class="font-weight-700">₹7.89 L</span></li>
+                </ul>
+                <p><span class="font-weight-700">Verdict:</span> Sonet spans a wide pricing range with strong value; Kylaq positions itself as a more focused player with European dynamics.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Ownership & Usability</h2>
+                <h3 class="subheading">Sonet</h3>
+                <ul>
+                    <li>Backed by Kia's rapid-growing service network and smart EV-ready options</li>
+                    <li>Proven on Indian roads with strong resale value</li>
+                </ul>
+
+                <h3 class="subheading">Kylaq</h3>
+                <ul>
+                    <li>Built on Euro-engineered chassis; Škoda's heritage ensures solid build reliability</li>
+                    <li>Limited dealerships but premium ownership experience</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Verdict</h2>
+                <p>Here's a quick comparison for top preferences:</p>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Priority</th>
+                                <th class="text-center">Best Pick</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">Maximum Safety & Space</span></td>
+                                <td>Škoda Kylaq</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">Tech-rich, Value-centric</span></td>
+                                <td>Kia Sonet</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">Driving Engagement & Performance</span></td>
+                                <td>Sonet Turbo DCT</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">Ride Comfort & Build</span></td>
+                                <td>Kylaq</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">Range of Engine Options</span></td>
+                                <td>Sonet</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">SUV Looks & Road Presence</span></td>
+                                <td>Kylaq</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">Final Takeaway</h3>
+                <ul>
+                    <li>Choose <span class="font-weight-700">Kia Sonet</span> if you want a versatile, tech-packed SUV with multiple options and peppy performance—especially the turbo-DCT model</li>
+                    <li>Choose <span class="font-weight-700">Škoda Kylaq</span> if you care deeply about <span class="font-weight-700">crash safety</span>, <span class="font-weight-700">interior comfort</span>, and a European-grade driving experience with robust build quality</li>
+                </ul>
+                <p>Each SUV delivers excellence in its domain. Your final choice hinges on whether you prioritize advanced safety/build (Kylaq) or performance and connected features (Sonet).</p>
+
+                <div class="div-line"></div>
+
+                <h3 class="heading">Check other brands here</h3>
+                <p>For Tata Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_1"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            
+                </div>
+            </div>
+        </div>
+
+    
+
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,423 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "TVS Apache RTX 300: Price, Specs, Launch & Rivals";
+}
+@section MetaTags {
+    <meta name="keywords" content="TVS Apache RTX 300, RTX 300 price, RTX 300 launch date, Apache RTX 300 specs, RT-XD4 engine, TVS Adventure bike, KTM 250 Adventure rival, 300cc ADV, adventure tourer India, Apache RTX features, BikeCarHub, TVS new bike, Apache RTX 300 mileage, Switchable ABS bike." />
+    <meta name="description" content="Explore the upcoming TVS Apache RTX 300 Adventure Tourer: new RT-XD4 engine, expected price (₹2.50L), late 2025 launch, specs & comparison with rivals like KTM 250 ADV." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">Taming the Trails: Everything You Need to Know About the Upcoming TVS Apache RTX 300 Adventure Tourer</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/tvs apache rtx 300/tvs apache rtx 300-1.webp"
+                             alt="TVS Apache RTX 300" title="TVS Apache RTX 300" loading="lazy" />
+                    </div>
+                </div>
+
+                <p>The adventure touring segment in India is witnessing an explosive surge in popularity. More and more riders are looking beyond the daily commute, yearning for a machine that can handle both the weekday urban sprawl and the weekend escape into the unknown. Stepping into this fiercely competitive, yet highly lucrative, space is an industry heavyweight: TVS Motor Company. With the introduction of the much-anticipated <span class="font-weight-700">TVS Apache RTX 300</span>, the brand is all set to redefine the entry-level to mid-capacity adventure motorcycle category.</p>
+                <p>As a successor to the wildly popular Apache series, the RTX 300 doesn't just promise performance; it hints at a machine engineered for comfortable, long-distance touring coupled with the rugged capability to tackle varied Indian terrain. Enthusiasts and prospective buyers have been eagerly scouring the internet for any snippet of information, and here at <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a>, we’ve gathered all the available details—from the heart of its new engine to its expected price tag and launch timeline—to give you the most comprehensive overview of this exciting new motorcycle.</p>
+                <h3 class="subheading">The Dawn of a New Adventure: A Design Philosophy</h3>
+                <p>TVS has a clear vision for the <span class="font-weight-700">Apache RTX 300</span>: a road-biased adventure tourer that prioritizes comfort, technology, and usable performance. The design language, inspired by the concept showcased at events like the Bharat Mobility Global Expo 2025, is bold, aggressive, and instantly recognizable as an Apache, yet distinctively ADV.</p>
+                <p>The motorcycle is expected to feature a prominent front 'beak' fender, a signature element of the adventure segment, paired with an aerodynamic half-fairing and a tall, functional windscreen designed to minimize wind buffeting during long highway cruises. The muscular fuel tank and the sculpted side panels contribute to a commanding road presence. Furthermore, patent images and test mule sightings suggest features tailored for touring, such as a sleek tail section with split-seats and integrated grab rails that cleverly double as a base for a luggage rack. The all-LED lighting system, including a distinctive dual headlamp setup, not only enhances visibility but also adds a modern, premium touch to the overall aesthetic.</p>
+                <p>For the chassis, TVS is likely to employ a robust steel trellis frame coupled with a separate bolt-on subframe, a setup that offers both strength and rigidity for adventure riding. The suspension duties are rumored to be handled by gold-finished Upside-Down (USD) front forks and a rear monoshock unit. While offering ample travel for rough roads, the setup is tuned more for comfortable long-distance touring rather than hardcore off-roading, cementing its identity as a versatile adventure-tourer. The choice of 19-inch front and 17-inch rear alloy wheels, shod with dual-purpose tyres, further supports this road-biased touring focus.</p>
+                <h3 class="subheading">Powering the Next-Gen Apache: Specifications</h3>
+                <p>The biggest highlight and a key talking point about the Apache RTX 300 is undoubtedly its heart—the all-new <span class="font-weight-700">RT-XD4 engine platform</span>. This powertrain marks a new chapter for TVS, moving away from the existing BMW-collaboration 312cc platform seen in the RR 310 and RTR 310.</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                            <tr>
+                                <th class="font-weight-600 text-center">Specification</th>
+                                <th class="font-weight-600 text-center">Details (Expected/Rumored)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engine Type</td>
+                                <td>299cc, Single-Cylinder, Liquid-Cooled, 4-Valve, DOHC (RT-XD4)</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>35 PS @@ 9,000 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque</td>
+                                <td>28.5 Nm @@ 7,000 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Transmission</td>
+                                <td>6-Speed Constant Mesh</td>
+                            </tr>
+                            <tr>
+                                <td>Clutch</td>
+                                <td>Assist and Slipper Clutch</td>
+                            </tr>
+                            <tr>
+                                <td>Brakes (F/R)</td>
+                                <td>Disc / Disc</td>
+                            </tr>
+                            <tr>
+                                <td>ABS</td>
+                                <td>Dual-Channel (Likely Switchable Rear ABS)</td>
+                            </tr>
+                            <tr>
+                                <td>Front Suspension</td>
+                                <td>Upside-Down (USD) Forks</td>
+                            </tr>
+                            <tr>
+                                <td>Rear Suspension</td>
+                                <td>Monoshock</td>
+                            </tr>
+                            <tr>
+                                <td>Wheel Size (F/R)</td>
+                                <td>19-inch / 17-inch (Alloy Wheels)</td>
+                            </tr>
+                            <tr>
+                                <td>Tyres</td>
+                                <td>Dual-Purpose Tubeless Tyres</td>
+                            </tr>
+                            <tr>
+                                <td>Cooling System</td>
+                                <td>Liquid-Cooled</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel System</td>
+                                <td>Fuel Injection</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The new 299cc engine, developed entirely in-house, is tuned for a blend of performance and tractability, offering smooth power delivery across the rev range. This characteristic is crucial for both highway cruising and navigating slow, tricky terrains. The inclusion of a 6-speed gearbox with an assist and slipper clutch will ensure smooth, precise gear shifts and prevent rear wheel hop during aggressive downshifting, enhancing both performance and safety.</p>
+                <h3 class="subheading">Loaded with Technology: Features Comparison Table</h3>
+                <p>TVS is known for packing its Apache models with segment-leading technology, and the RTX 300 is expected to be no exception. It is rumored to come standard with a ride-by-wire throttle system, which enables advanced features like multiple <span class="font-weight-700">Riding Modes</span> (e.g., Urban, Rain, Sport, Off-Road) that adjust power delivery, ABS intervention, and throttle response to suit different conditions.</p>
+                <p>A high-resolution <span class="font-weight-700">Full-Colour TFT Instrument Console</span> is a near certainty. This unit is expected to feature TVS’s renowned <span class="font-weight-700">SmartXonnect Bluetooth connectivity</span>, offering turn-by-turn navigation, call/SMS alerts, telemetry data, and more. Safety will also be a priority with <span class="font-weight-700">Dual-Channel ABS</span> (Anti-lock Braking System), which is highly likely to be switchable for the rear wheel, giving riders more control off-road.</p>
+                <p>The table below highlights how the RTX 300’s rumored features stack up against the competition, positioning it as a technologically superior option in the category.</p>
+                <h3 class="subheading">Specifications & Features Comparison Table</h3>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature/Specification</th>
+                                <th class="font-weight-600 text-center">TVS Apache RTX 300 (Expected)</th>
+                                <th class="font-weight-600 text-center">KTM 250 Adventure</th>
+                                <th class="font-weight-600 text-center">Suzuki V-Strom SX</th>
+                                <th class="font-weight-600 text-center">Royal Enfield Himalayan 450</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engine Displacement</td>
+                                <td>299cc</td>
+                                <td>249.07cc</td>
+                                <td>249cc</td>
+                                <td>452cc</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power (Approx.)</td>
+                                <td>35 PS</td>
+                                <td>31 PS</td>
+                                <td>26.5 PS</td>
+                                <td>40 PS</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque (Approx.)</td>
+                                <td>28.5 Nm</td>
+                                <td>25 Nm</td>
+                                <td>22.2 Nm</td>
+                                <td>40 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Cooling</td>
+                                <td>Liquid-Cooled</td>
+                                <td>Liquid-Cooled</td>
+                                <td>Oil-Cooled</td>
+                                <td>Liquid-Cooled</td>
+                            </tr>
+                            <tr>
+                                <td>Front Suspension</td>
+                                <td>USD Forks (Likely Adjustable)</td>
+                                <td>USD Forks</td>
+                                <td>Telescopic Forks</td>
+                                <td>USD Forks</td>
+                            </tr>
+                            <tr>
+                                <td>Riding Modes</td>
+                                <td>Expected (Via Ride-by-Wire)</td>
+                                <td>No (Basic ABS modes only)</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Traction Control</td>
+                                <td>Expected</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Quickshifter/Blipper</td>
+                                <td>Possible (Optional/Top Variant)</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument Console</td>
+                                <td>Full-Colour TFT with SmartXonnect</td>
+                                <td>TFT Display</td>
+                                <td>Digital with Bluetooth</td>
+                                <td>TFT with Google Maps (Tripper)</td>
+                            </tr>
+                            <tr>
+                                <td>Front Wheel Size</td>
+                                <td>19-inch (Alloy)</td>
+                                <td>19-inch (Alloy)</td>
+                                <td>19-inch (Alloy)</td>
+                                <td>21-inch (Spoke)</td>
+                            </tr>
+                            <tr>
+                                <td>Switchable ABS</td>
+                                <td>Highly Expected (Rear)</td>
+                                <td>Yes (Off-Road ABS)</td>
+                                <td>No</td>
+                                <td>Yes (Rear)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">Expected Prices and Launch Timeline</h3>
+                <p>Anticipation for the RTX 300 has reached a fever pitch, with rumors of its launch circulating for a while. Based on recent news and the bike's advanced feature set, market analysts and industry insiders have a clearer picture of when we might see it hit the showroom floors and what it might cost.</p>
+                <h5 class="subheading">Expected Launch Timeline</h5>
+                <p>The most recent and credible reports suggest that the TVS Apache RTX 300 is on track for a launch in the <span class="font-weight-700">Nov 2025</span>. The festive season in India often marks a popular time for new motorcycle launches, so a debut between <span class="font-weight-700">October 2025 and January 2026</span> seems highly probable. TVS may choose to unveil the production version at a major motorcycling event to maximize impact.</p>
+                <h5 class="subheading">Expected Ex-Showroom Prices</h5>
+                <p>The pricing strategy will be crucial for the <span class="font-weight-700">RTX 300</span>, as it needs to undercut or closely match its primary rivals while offering better features. Given the new engine platform, premium hardware (USD forks, ride-by-wire), and extensive electronics package, the pricing is expected to be aggressive but premium within the 300cc ADV space.</p>
+                <p><span class="font-weight-700">The expected Ex-Showroom Price for the TVS Apache RTX 300</span> is estimated to fall in the range of <span class="font-weight-700">₹ 2.60 Lakh to ₹ 2.90 Lakh</span>.</p>
+                <p>TVS might launch a road-biased variant first, with a more off-road focused version featuring spoke wheels and more suspension travel to follow a few months later.</p>
+                <h3 class="subheading">Competition Comparison: The Mid-Capacity Battleground</h3>
+                <p>The 250cc-450cc adventure segment is a dynamic and growing battlefield. The TVS Apache RTX 300 will face formidable competition from several established and new players, each with its own unique strengths.</p>
+                <h5 class="subheading">Competitors Comparision Table</h5>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Motorcycle Model</th>
+                                <th class="font-weight-600 text-center">Engine Displacement (cc)</th>
+                                <th class="font-weight-600 text-center">Approximate Ex-Showroom Price (INR)</th>
+                                <th class="font-weight-600 text-center">Key Strength</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TVS Apache RTX 300 (Expected)</td>
+                                <td>299</td>
+                                <td>₹ 2.60 Lakh - ₹ 2.90 Lakh</td>
+                                <td>Technology, Features, All-New Engine</td>
+                            </tr>
+                            <tr>
+                                <td>KTM 250 Adventure</td>
+                                <td>249.07</td>
+                                <td>₹ 2,40,010</td>
+                                <td>Peppy performance, Handling, Brand image</td>
+                            </tr>
+                            <tr>
+                                <td>Suzuki V-Strom SX</td>
+                                <td>249</td>
+                                <td>₹ 1,98,018</td>
+                                <td>Accessibility, Smooth Engine, Low Price Point</td>
+                            </tr>
+                            <tr>
+                                <td>Royal Enfield Himalayan 450</td>
+                                <td>452</td>
+                                <td>₹ 3,05,736 - ₹ 3,19,682</td>
+                                <td>Hardcore Off-road Capability, Brand Heritage, Big Engine Power</td>
+                            </tr>
+                            <tr>
+                                <td>Yezdi Adventure</td>
+                                <td>334</td>
+                                <td>₹ 2.18 Lakh</td>
+                                <td>Retro Styling, Torquey Motor</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The table clearly illustrates the challenge. The <span class="font-weight-700">KTM 250 Adventure</span> is a benchmark for sporty ADV handling, while the <span class="font-weight-700">Suzuki V-Strom SX</span> offers excellent value and Japanese reliability. The <span class="font-weight-700">Royal Enfield Himalayan 450</span>, although priced higher, offers a genuine, large-displacement off-road focus. The Apache RTX 300's rumored advantage lies in bridging the gap—offering a larger, more powerful engine than the 250cc rivals, and an electronics package that could arguably be superior to all its direct competitors, offering a refined, feature-rich touring experience that is perfect for the Indian customer who spends 90% of their time on tarmac or broken roads.</p>
+                <p>The "S" model is clearly aimed at the track-day enthusiast who demands the absolute best in componentry, especially with the high-performance Öhlins suspension providing superior feedback and adjustability. The weight saving from the lithium-ion battery and forged wheels further enhances the ‘S’ model’s track-focused nature.</p>
+                <h3 class="subheading">A Perfect Touring Partner</h3>
+                <p>When you consider the full picture of the Apache RTX 300, it shapes up to be an exceptionally well-rounded machine. The expected high-tech features like multiple ride modes and traction control are not mere gimmicks; they are essential safety and performance enhancements for a bike designed to traverse diverse conditions. A rider cruising on the highway will appreciate the cruise control, while one tackling a slushy mountain trail will be thankful for the Rain or Off-Road mode's adjusted power delivery and ABS settings.</p>
+                <p>TVS has a strong reputation for performance built over years with the Apache racing DNA, and the RTX 300 looks poised to carry that torch into the adventure segment. The new RT-XD4 engine is engineered for efficiency and sustained high-speed cruising, which is exactly what a modern adventure tourer needs. For the enthusiasts who frequently check in with resources like <span class="font-weight-700">BikeCarHub</span>, the Apache RTX 300 represents a serious contender that promises to deliver more 'bang for the buck' than almost anything else in its class.</p>
+                <p>The final element that ties this entire package together is the expected quality of life features. Things like a functional luggage rack, potentially adjustable levers, comfortable split seats, and decent ground clearance will make it a compelling choice for long-distance touring. The RTX 300 is not just a new model; it is TVS’s dedicated effort to capture the heart of the Indian adventure rider, offering a potent mix of power, comfort, technology, and road presence. The mid-capacity adventure segment is about to get a whole lot more exciting.</p>
+                <h3 class="subheading">Frequently Asked Questions (FAQs) about the TVS Apache RTX 300</h3>
+                <div class="accordion accordion-flush" id="accordionNmax155">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                1. What does the "RTX" in TVS Apache RTX 300 stand for?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                While TVS has not officially confirmed the full form of 'RTX', based on the brand’s history, it is widely speculated to mean <span class="font-weight-700">Race Tuned X-perience</span> or a variation thereof, in line with the Apache’s 'Race Tuned' philosophy. The 'X' often denotes an adventure or crossover model, similar to how 'ADV' is used in the segment. The engine itself is part of the new <span class="font-weight-700">RT-XD4</span> platform, where 'RT' stands for Race Tuned.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                2. Is the TVS Apache RTX 300 a completely new motorcycle or an evolution of an existing model?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                The TVS Apache RTX 300 is expected to be an all-new motorcycle, built on a newly developed platform, specifically the RT-XD4 engine. While it carries the 'Apache' family name, it is a dedicated adventure tourer, distinct from the sports-faired Apache RR 310 and the naked Apache RTR 310, sharing the new engine but featuring its own unique chassis, suspension, and bodywork.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                3. Will the RTX 300 have multiple riding modes?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                Yes, it is highly expected. Due to the rumored inclusion of a ride-by-wire throttle system, the Apache RTX 300 will likely feature multiple riding modes (such as Urban, Rain, Sport, and Off-Road). These modes will adjust engine power delivery, throttle response, and the level of ABS and Traction Control intervention to optimize performance and safety for different riding conditions.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                4. What kind of wheels will the Apache RTX 300 come with?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                The initial version of the Apache RTX 300 is expected to be a road-biased adventure tourer, featuring <span class="font-weight-700">19-inch front and 17-inch rear alloy wheels</span> shod with dual-purpose tubeless tyres. Rumors suggest that an even more off-road focused variant, potentially with spoke wheels (21-inch front and 17-inch rear), might be launched later.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                5. What are the key technological features of the new RT-XD4 engine?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                The 299cc, liquid-cooled, single-cylinder RT-XD4 engine is a modern unit featuring a 4-valve head and Dual Overhead Camshaft (DOHC) setup. This design allows for higher volumetric efficiency and better performance at high RPMs. It’s also expected to be paired with an Assist and Slipper Clutch for smoother gear transitions and a ride-by-wire throttle for precise electronic control.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                                6. Will the Apache RTX 300 be suitable for serious off-roading?
+                            </button>
+                        </h2>
+                        <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                The TVS Apache RTX 300 is primarily positioned as a <span class="font-weight-700">road-biased adventure tourer</span>. This means it is highly capable of tackling bad roads, broken patches, and long highway distances with ease and comfort. While it can handle light to moderate off-roading, its 19/17-inch alloy wheel setup and suspension travel are tuned for touring comfort rather than extreme, hardcore trail riding.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                                7. What is the expected mileage of the TVS Apache RTX 300?
+                            </button>
+                        </h2>
+                        <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                While official figures are not out, given the 299cc displacement and the expected tuning for efficiency as a tourer, the Apache RTX 300 is estimated to deliver a mileage in the range of <span class="font-weight-700">30 to 35 kmpl</span> under mixed riding conditions. This offers a good balance between performance and fuel economy.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                                8. Will the TVS Apache RTX 300 feature adjustable suspension?
+                            </button>
+                        </h2>
+                        <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                It is highly likely that the top-spec variant of the TVS Apache RTX 300 will feature <span class="font-weight-700">fully adjustable USD front forks and a fully adjustable rear monoshock</span>, similar to what is offered on the premium variants of the Apache RTR 310. This would allow riders to fine-tune the suspension according to their weight and riding terrain.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                                9. Which motorcycles will be the main competitors for the TVS Apache RTX 300?
+                            </button>
+                        </h2>
+                        <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                The TVS Apache RTX 300 will directly compete with other mid-capacity adventure tourers in the Indian market, including the <span class="font-weight-700">KTM 250 Adventure, Suzuki V-Strom SX</span>, the new <span class="font-weight-700">Royal Enfield Himalayan 450</span>, and the <span class="font-weight-700">Yezdi Adventure</span>. Its strong feature list is expected to give it a distinct advantage.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                                10. When can I book the TVS Apache RTX 300?
+                            </button>
+                        </h2>
+                        <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                Booking details will only be announced close to the official launch date. Since the expected launch window is late 2025 to early 2026, prospective buyers should look out for official announcements from TVS Motor Company in the months leading up to this period. Keep checking motoring portals like <span class="font-weight-700">BikeCarHub</span> for the latest updates!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        @await Html.PartialAsync("_AllViewComponent")
+    </div>
+</body>

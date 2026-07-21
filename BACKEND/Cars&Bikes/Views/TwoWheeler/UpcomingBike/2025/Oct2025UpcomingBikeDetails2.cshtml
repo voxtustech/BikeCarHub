@@ -1,0 +1,408 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Yezdi Streetfighter: Price, Launch & Specs";
+}
+@section MetaTags {
+    <meta name="keywords" content="Yezdi Streetfighter, Yezdi Streetfighter price, Yezdi bike, upcoming Yezdi bikes, Yezdi Streetfighter launch, Yezdi 334, Streetfighter motorcycle, BikeCarHub, Yezdi Streetfighter specs, Honda CB350RS, Royal Enfield Scram 411." />
+        <meta name="description" content="Discover the new Yezdi Streetfighter's expected price, launch date, and detailed specifications. A perfect blend of classic styling and modern performance." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">Unleash the Urban Beast: The Yezdi Streetfighter is Coming</h3>
+                <p>
+                    The name Yezdi has always been synonymous with ruggedness, a raw, no-nonsense appeal, and a legacy that runs deep in the annals of Indian motorcycling. While the brand has successfully revived its classic models, a new chapter is about to be written. Get ready for the <span class="font-weight-700">Yezdi Streetfighter</span>, a motorcycle that promises to be a modern-day interpretation of Yezdi's rebellious spirit. Blending classic design cues with a contemporary, aggressive stance, this bike is poised to make a bold statement in the competitive middleweight segment.<br /><br />
+                    For years, Yezdi riders have been known for their distinct taste and a desire for a machine with character. The Streetfighter seems to be designed to cater to this very audience, offering a powerful, agile, and stylish package. The spy shots and rumors have already created a stir, and as we at <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a> have been following its journey, the anticipation is building. This isn't just another variant; it's an entirely new proposition, a street-legal brawler ready to take on the urban jungle.
+                </p>
+                <h3 class="subheading">Launch Timeline and Expected Price</h3>
+                <p>
+                    The excitement around the Yezdi Streetfighter is palpable, and everyone wants to know when they can get their hands on it. While the brand has kept its cards close to its chest, multiple sources and industry whispers suggest a tentative launch timeline. The Yezdi Streetfighter is expected to be launched in India around October 2025. This timeline gives enthusiasts something to look forward to, and it positions the bike perfectly to enter the market during a bustling festive season.<br /><br />
+                    When it comes to pricing, Yezdi has always been known for its competitive strategy. The Streetfighter is likely to be positioned in a sweet spot to attract a wide range of buyers. The ex-showroom price is expected to be in the range of <span class="font-weight-700">₹2.30 Lakh to ₹2.40 Lakh</span>. This pricing makes it a very attractive option, offering a powerful and stylish machine at a price point that undercuts some of its key rivals. The on-road price, of course, will vary by city due to different taxes, RTO charges, and insurance costs.
+                </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/Yezdi Streetfighter/The Yezdi Streetfighter.webp"
+                             alt="Yezdi Streetfighter" title="Yezdi Streetfighter" loading="lazy" />
+                    </div>
+                </div>
+                <h3 class="subheading">Heart of a Brawler: Specifications</h3>
+                <p>
+                    At the core of the Yezdi Streetfighter is its proven engine. It is expected to be powered by the same 334cc, single-cylinder, liquid-cooled, DOHC engine that powers its siblings in the Yezdi lineup. This engine is well-regarded for its refined performance and a strong mid-range punch. The power output is expected to be in the vicinity of <span class="font-weight-700">29.36 bhp</span> and a torque figure of around <span class="font-weight-700">28.21 Nm.</span> This is a very healthy figure for a motorcycle in this segment and should provide more than enough grunt for both city commutes and spirited weekend rides.<br /><br />
+                    The power is likely to be delivered to the rear wheel via a six-speed manual gearbox, which is a standard feature on most Yezdi models. The bike is also expected to feature a smooth and light-action clutch, making gear changes effortless.<br /><br />
+                    In terms of chassis and hardware, the Streetfighter is expected to be built on a robust double-cradle frame. This should provide excellent stability and handling. The suspension system is anticipated to include telescopic front forks with gaiters and twin shock absorbers at the rear. The use of dual shock absorbers adds to the retro-modern appeal of the bike. Braking will be handled by a single disc at both the front and rear, equipped with a dual-channel ABS for enhanced safety. The bike is likely to feature spoke wheels, wrapped in dual-purpose tyres, which would contribute to its rugged, street-scrambler aesthetic.
+                </p>
+                <p>Here is a quick look at the detailed expected specifications:</p>
+                <p><span class="font-weight-700">Engine & Performance</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Engine Type: </span> 334cc, Liquid-cooled, Single Cylinder, DOHC</li>
+                    <li><span class="font-weight-700">Max Power: </span> 29.36 bhp @@ 7,300 rpm</li>
+                    <li><span class="font-weight-700">Max Torque: </span> 28.21 Nm @@ 6,500 rpm</li>
+                    <li><span class="font-weight-700">Gearbox: </span>6-speed Manual</li>
+                    <li><span class="font-weight-700">Cooling System: </span>Liquid-Cooled</li>
+                    <li><span class="font-weight-700">Clutch: </span> Wet Multi-plate</li>
+                </ul>
+                <p><span class="font-weight-700">Chassis & Suspension</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Frame: </span>Double Cradle</li>
+                    <li><span class="font-weight-700">Front Suspension: </span>Telescopic Forks with Gaiters</li>
+                    <li><span class="font-weight-700">Rear Suspension: </span>Twin Shock Absorbers</li>
+                    <li><span class="font-weight-700">Brake: </span>Single Front and Rear Disc</li>
+                    <li><span class="font-weight-700">ABS: </span>Dual-Channel ABS</li>
+                </ul>
+                <p>
+                    <span class="font-weight-700">
+                        Dimensions & Tyres
+                    </span>
+                </p>
+                <ul>
+                    <li><span class="font-weight-700">Kerb Weight: </span>184 kg</li>
+                    <li><span class="font-weight-700">Fuel Capacity: </span>13 litres</li>
+                    <li><span class="font-weight-700">Wheel Type: </span>Spoke</li>
+                    <li><span class="font-weight-700">Tyres: </span>Dual-Purpose</li>
+                </ul>
+                <h3 class="subheading">The Features that Make it a Streetfighter</h3>
+                <p>The Yezdi Streetfighter isn't just about raw power; it's also expected to be loaded with modern features that enhance the overall riding experience. The most noticeable feature will be the design itself, which is a departure from Yezdi's existing lineup. The bike will likely feature a more aggressive riding posture, with a flat handlebar and a minimalist, single-piece seat. This, along with the exposed subframe and a short, sporty tail section, gives it a true "streetfighter" look. <br /><br />
+                    The instrument cluster is expected to be a modern, digital unit, providing all the necessary information to the rider, including a speedometer, odometer, trip meters, and a fuel gauge. While some spy shots have shown a single pod, it is expected to be a fully digital unit, possibly with Bluetooth connectivity. The lighting system is expected to be all-LED, including the headlamp and tail lamp, which adds to its modern appeal. A key design element that has been a topic of discussion is the exhaust. The Streetfighter is expected to feature a unique two-into-one canister exhaust system, which will not only look great but also provide a distinct, throaty exhaust note.
+                </p>
+                <h3 class="subheading">Pitting it Against the Competition</h3>
+                <p>The sub-400cc street bike and scrambler segment is one of the most crowded in the Indian market. The Yezdi Streetfighter will be up against some very strong and established players. Its unique positioning will make it a direct competitor to a diverse range of motorcycles. Here's how it is expected to fare against its key rivals.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature</th>
+                                <th class="font-weight-600 text-center">Yezdi Streetfighter (Expected)</th>
+                                <th class="font-weight-600 text-center">Honda CB350RS</th>
+                                <th class="font-weight-600 text-center">Royal Enfield Scram 411</th>
+                                <th class="font-weight-600 text-center">KTM 390 Duke</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engine Type</td>
+                                <td>Single-Cylinder, Liquid-Cooled</td>
+                                <td>Single-Cylinder, Air-Cooled</td>
+                                <td>Single-Cylinder, Air-Cooled</td>
+                                <td>Single-Cylinder, Liquid-Cooled</td>
+                            </tr>
+                            <tr>
+                                <td>Displacement</td>
+                                <td>334cc</td>
+                                <td>348cc</td>
+                                <td>411cc</td>
+                                <td>398cc</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>29.36 bhp</td>
+                                <td>20.78 bhp</td>
+                                <td>24.3 bhp</td>
+                                <td>45.3 bhp</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque</td>
+                                <td>28.21 Nm</td>
+                                <td>30 Nm</td>
+                                <td>32 Nm</td>
+                                <td>39 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Gearbox</td>
+                                <td>6-speed</td>
+                                <td>5-speed</td>
+                                <td>5-speed</td>
+                                <td>6-speed</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>184 kg</td>
+                                <td>180 kg</td>
+                                <td>185 kg</td>
+                                <td>168 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Brakes</td>
+                                <td>Single Disc (F/R)</td>
+                                <td>Single Disc (F/R)</td>
+                                <td>Single Disc (F/R)</td>
+                                <td>Single Disc (F/R)</td>
+                            </tr>
+                            <tr>
+                                <td>Price (Ex-showroom)</td>
+                                <td>₹2.30 Lakh</td>
+                                <td>₹1.97 Lakh</td>
+                                <td>₹2.05 Lakh</td>
+                                <td>₹2.97 Lakh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The comparison table highlights the Yezdi Streetfighter's competitive position. While it may not match the raw power of the KTM 390 Duke, it offers a great balance of performance and style at a more accessible price point. Its liquid-cooled engine gives it a clear advantage over the air-cooled units of the Royal Enfield and Honda, especially in terms of heat management and high-rev performance. Its lightweight and agile nature will also be a major selling point.</p>
+                <h3 class="subheading">Specifications & Features Comparison Table</h3>
+                <p>Here is a more detailed look at how the expected features of the Yezdi Streetfighter stack up against its competitors.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature</th>
+                                <th class="font-weight-600 text-center">Yezdi Streetfighter (Expected)</th>
+                                <th class="font-weight-600 text-center">Honda CB350RS</th>
+                                <th class="font-weight-600 text-center">Royal Enfield Scram 411</th>
+                                <th class="font-weight-600 text-center">KTM 390 Duke</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Instrument Cluster</td>
+                                <td>Digital</td>
+                                <td>Semi-Digital</td>
+                                <td>Semi-Digital</td>
+                                <td>Fully Digital TFT</td>
+                            </tr>
+                            <tr>
+                                <td>Lighting</td>
+                                <td>Full-LED</td>
+                                <td>LED Headlamp, LED Taillight</td>
+                                <td>Halogen Headlamp, LED Taillight</td>
+                                <td>Full-LED</td>
+                            </tr>
+                            <tr>
+                                <td>Rider Aids</td>
+                                <td>Dual-Channel ABS</td>
+                                <td>Dual-Channel ABS, Honda Selectable Torque Control</td>
+                                <td>Dual-Channel ABS</td>
+                                <td>Dual-Channel ABS, Cornering ABS, Traction Control, Quickshifter</td>
+                            </tr>
+                            <tr>
+                                <td>Wheels</td>
+                                <td>Spoke</td>
+                                <td>Alloy</td>
+                                <td>Spoke</td>
+                                <td>Alloy</td>
+                            </tr>
+                            <tr>
+                                <td>USB Charger</td>
+                                <td>Yes (Expected)</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Ride-by-Wire</td>
+                                <td>Yes (Expected)</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Bluetooth Connectivity</td>
+                                <td>Yes (Expected)</td>
+                                <td>Yes (on DLX Pro)</td>
+                                <td>Yes (on Select Variants)</td>
+                                <td>Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>This features table further reinforces the Yezdi Streetfighter's position as a modern, well-equipped motorcycle. While it may not have all the high-end electronics of the KTM 390 Duke, it offers a very compelling package for its price. The expected inclusion of a digital console, full-LED lighting, and ride-by-wire technology gives it a significant edge over some of its retro-styled rivals. It strikes a fine balance between classic aesthetics and contemporary functionality, a combination that is sure to win over many riders. The Streetfighter is a testament to Yezdi's commitment to innovation while honoring its heritage. We at BikeCarHub believe this bike has the potential to become a bestseller.</p>
+                <h3 class="subheading">A New Chapter for an Old Legend</h3>
+                <p>The Yezdi Streetfighter is more than just a motorcycle; it's a statement. It represents a brand that is unafraid to evolve and explore new segments while staying true to its core values. The combination of a powerful liquid-cooled engine, agile handling, and a distinctive streetfighter design makes it a unique proposition in the Indian market. It offers an alternative to the mainstream, a motorcycle for those who want to stand out from the crowd. With its competitive pricing and a well-thought-out feature list, the Yezdi Streetfighter is poised to become a formidable player. We are eagerly waiting for its official launch and can't wait to see how it performs on the road.</p>
+                <h3 class="subheading">FAQs Related to the Yezdi Streetfighter</h3>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                1. When is the Yezdi Streetfighter expected to launch in India?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The Yezdi Streetfighter is tentatively expected to launch in India around October 2025.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                2. What is the expected price of the Yezdi Streetfighter?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The ex-showroom price is expected to be in the range of <strong>₹2.30 Lakh to ₹2.40 Lakh.</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                3. What is the engine displacement of the Yezdi Streetfighter?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                It will be powered by a 334cc, single-cylinder, liquid-cooled engine.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                4. What is the power and torque output of the Streetfighter?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The bike is expected to produce around 29.36 bhp of power and 28.21 Nm of torque.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                5. Does the Yezdi Streetfighter have ABS?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Yes, it is expected to come with a dual-channel ABS system as standard.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                6. What kind of suspension does the Streetfighter have?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                It is expected to feature telescopic front forks and twin shock absorbers at the rear.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                7. What are the key competitors of the Yezdi Streetfighter?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Its key competitors include the Honda CB350RS, Royal Enfield Scram 411, and KTM 390 Duke.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                                8. Will the Streetfighter have an all-digital instrument cluster?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Yes, it is expected to feature a modern, all-digital instrument cluster.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                                9. What is the expected mileage of the Yezdi Streetfighter?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The mileage is expected to be around 25-30 kmpl, although this can vary based on riding conditions and style.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                                10.	Will the Yezdi Streetfighter have a unique exhaust sound?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Yes, it is expected to feature a unique two-into-one canister exhaust system, which should provide a distinct and appealing exhaust note.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        }
+        @*
+        <!-- Bike 1 -->
+        <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+        <div class="upcoming-bikes-details-row">
+            @foreach (var allUpbike in ViewBag.allupcomingbike)
+            {
+                <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                    <div class="upcoming-bikes-details-card">
+                        <div class="upcoming-bikes-all-image">
+                            <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                        </div>
+
+                        <div class="upcoming-allbikes-details-content">
+                            <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                            <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                            <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+        *@
+        @await Html.PartialAsync("_AllViewComponent")
+    </div>
+</body>

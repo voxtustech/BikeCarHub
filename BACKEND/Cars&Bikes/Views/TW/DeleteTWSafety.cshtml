@@ -1,0 +1,36 @@
+﻿@model Cars_Bikes.Models.TWSafety
+
+@{
+    ViewData["Title"] = "Delete Two Wheeler Safety";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-lg p-4 text-center" style="width: 600px;">
+        <h2 class="text-danger mb-3">Are you sure you want to delete this safety record?</h2>
+
+        <dl class="row justify-content-center">
+            <dt class="col-sm-4">Two Wheeler</dt>
+            <dd class="col-sm-8">@Model.TWName</dd>
+
+            <dt class="col-sm-4">Variant</dt>
+            <dd class="col-sm-8">@Model.Varients</dd>
+
+            <dt class="col-sm-4">Pass Switch</dt>
+            <dd class="col-sm-8">@Model.PassSwitch</dd>
+
+            <dt class="col-sm-4">Engine Kill</dt>
+            <dd class="col-sm-8">@Model.EngineKillSwitch</dd>
+
+            <dt class="col-sm-4">Display</dt>
+            <dd class="col-sm-8">@Model.Display</dd>
+        </dl>
+
+        <form asp-action="DeleteTWSafety" method="post">
+            <input type="hidden" asp-for="TWSafetyId" />
+            <button type="submit" class="btn btn-danger px-4">Yes, Delete</button>
+            <a asp-action="ListTWSafety" class="btn btn-secondary ml-2">Cancel</a>
+        </form>
+    </div>
+</div>
+</body>

@@ -1,0 +1,101 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Bajaj Freedom 125 CNG: New Price Cut Makes It More Affordable";
+}
+@section MetaTags{
+    <meta name="keywords" content="Bajaj Freedom 125, Bajaj CNG bike, Freedom CNG price, CNG bike India, Bajaj Freedom features, eco-friendly motorcycles, dual-fuel bike, CNG mileage bike, Bajaj Freedom 125 CNG price, Bajaj Freedom 125 CNG tank capacity, Bajaj Freedom 125 CNG mileage, Bajaj Freedom 125 CNG top speed, Bajaj Freedom 125 CNG colour" />
+    <meta name="description" content="Bajaj Freedom 125 CNG bike now starts at ₹95,000. With dual-fuel capability, 102 km/kg mileage, and a 330 km range, it's eco-friendly and affordable for city rides." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.NewsHeading" title="@Model.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <p>The Bajaj Freedom 125 CNG is a dual-fuel motorcycle designed for environmental sustainability and cost-effectiveness. Equipped with a 125cc4 Stroke, Air cooled, it produces 9.5 ps at 8,000 rpm and 9.7 Nm of torque at 5,000 rpm. The bike offers an impressive CNG mileage of 102 km/kg, with a combined range of 330 km on a full tank.</p>
+                <p>This model can run on both CNG and petrol, providing flexibility for riders. The top speed is approximately 90.4 km/h on CNG, slightly higher when using petrol. The Freedom 125 features variants like Drum, Drum LED, and Disc LED, with Bluetooth connectivity available in the top variant. It boasts seven vibrant color options, including Racing Red and Caribbean Blue.</p>
+                <p>With its current price structure and a 5-year or 75,000 km warranty, the <a class="for-link" asp-controller="Brand" asp-action="Bajaj">Bajaj</a> Freedom 125 stands out as a budget-friendly, eco-conscious choice for city commuters.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                <div class="col-lg-6 col-md-6">
+                <h3 class="subheading">Specifications of Bajaj Freedom 125</h3>
+                <ol>
+                    <li><span class="font-weight-700">Engine:</span> 124.58cc, 4 Stroke, Air cooled.</li>
+                    <li><span class="font-weight-700">Fuel Capacity:</span> CNG - 2 kg + Petrol - 2 l.</li>
+                    <li><span class="font-weight-700">Body Type:</span> Commuter Bikes</li>
+                    <li><span class="font-weight-700">Braking Type:</span> Combi Brake System.</li>
+                    <li><span class="font-weight-700">Starting:</span> Self Start Only.</li>
+                    <li><span class="font-weight-700">Compression Ratio:</span> 10.5:1.</li>
+                </ol>
+                </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/latestnews/2024/dec/bajajfreedom125cngseespricedropnewaffordablepricingannounced/bajaj freedom 125.webp" alt="Bajaj Freedom 125" title="Bajaj Freedom 125" /></center></div>
+                </div>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

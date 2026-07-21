@@ -1,0 +1,225 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Adventure Bikes in India 2024: Specifications, Features, and Pricing";
+}
+@section MetaTags{
+    <meta name="keywords" content="Top adventure bikes India, best bikes 2024, adventure motorcycles, Hero Xpulse 200, Royal Enfield Himalayan, KTM 390 Adventure, BMW G 310 GS, Suzuki V-Strom 650 XT, Indian terrain motorcycles" />
+    <meta name="description" content="Explore the top 5 adventure bikes in India for 2024, featuring the Hero Xpulse 200, Royal Enfield Himalayan, KTM 390 Adventure, BMW G 310 GS, and Suzuki V-Strom 650 XT. Learn about their specs, features, and pricing." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p>Adventure motorcycling has captured the hearts of Indian riders, with enthusiasts exploring the country's varied and rugged landscapes. From high-altitude Himalayan treks to dusty desert trails, adventure bikes are designed to tackle it all. Here’s a breakdown of the top five adventure bikes for Indian terrain in 2024, with their specifications, features, and pricing.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. Hero Xpulse 200 4V</h3>
+                        <p class="font-weight-700">Price: ₹1.50 lakh (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 199.6 cc, single-cylinder, oil-cooled
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 19.1 bhp at 8,500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 17.35 Nm at 6,500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Long travel telescopic front forks, 10-step adjustable rear monoshock
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> LED headlamp, Bluetooth navigation, digital instrument cluster, dual-purpose tires
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 220 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5adventurebikesforindianterrainspecifications,features,andcostsinindia/hero xpulse 200 4v.webp" alt="Hero Xpulse 200 4V" title="Hero Xpulse 200 4V" /></center></div>
+                </div>
+                <p>Why Choose It: The Hero Xpulse 200 4V is affordable and lightweight, perfect for beginners and moderate off-road riding. It offers excellent maneuverability with its high ground clearance and long travel suspension, ideal for tackling Indian off-road trails.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. Royal Enfield Himalayan</h3>
+                        <p class="font-weight-700">Price: ₹2.16 lakh (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 411 cc, single-cylinder, air-cooled
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 24.3 bhp at 6,500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 32 Nm at 4,000-4,500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Telescopic front fork, monoshock rear with linkage
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Switchable ABS, navigation tripper, spoke wheels, long travel suspension
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 220 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5adventurebikesforindianterrainspecifications,features,andcostsinindia/royal enfield himalayan.webp" alt="Royal Enfield Himalayan" title="Royal Enfield Himalayan" /></center></div>
+                </div>
+                <p>Why Choose It: The Royal Enfield Himalayan is a proven choice for long-distance travel and rugged terrain. With its sturdy build, high ground clearance, and torquey engine, it’s perfect for conquering the most challenging paths in India, including the Himalayas.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">3. BMW G 310 GS</h3>
+                        <p class="font-weight-700">Price: ₹3.30 lakh (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 313 cc, single-cylinder, liquid-cooled
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 34 Ps at 9,500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 28 Nm at 7,500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Upside-down telescopic fork, monoshock rear
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Ride-by-wire throttle, switchable ABS, adjustable levers, LED lighting
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 220 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5adventurebikesforindianterrainspecifications,features,andcostsinindia/bmw g 310 gs.webp" alt="BMW G 310 GS" title="BMW G 310 GS" /></center></div>
+                </div>
+                <p>Why Choose It: The BMW G 310 GS offers a premium riding experience in a compact adventure bike. It’s ideal for riders seeking a balance between city commuting and occasional off-road trips, with premium build quality and advanced features.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">4. KTM 390 Adventure</h3>
+                        <p class="font-weight-700">Price: ₹3,41,877 (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 373.27 cc, single-cylinder, liquid-cooled
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 43.5 Ps at 9,000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 37 Nm at 7,500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> WP Apex upside-down front fork, WP Apex rear monoshock
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Traction control, off-road ABS, quickshifter, TFT display, slipper clutch
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 200 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5adventurebikesforindianterrainspecifications,features,andcostsinindia/ktm 390 adventure.webp" alt="KTM 390 Adventure" title="KTM 390 Adventure" /></center></div>
+                </div>
+                <p>Why Choose It: The KTM 390 Adventure is known for its high-tech features, aggressive performance, and nimble handling. It's perfect for experienced riders who want high-speed thrills both on and off the road, thanks to its powerful engine and advanced electronic aids.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">5. Suzuki V-Strom 650 XT</h3>
+                        <p class="font-weight-700">Price: ₹8.92 lakh (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 645 cc, V-twin, liquid-cooled
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 70 bhp at 8,800 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 62 Nm at 6,500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Telescopic front, rear monoshock with preload adjustability
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Traction control, adjustable windscreen, spoke wheels, ABS
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 170 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5adventurebikesforindianterrainspecifications,features,andcostsinindia/suzuki v strom 650 xt.webp" alt="Suzuki V-Strom 650 XT" title="Suzuki V-Strom 650 XT" /></center></div>
+                </div>
+                <p>Why Choose It: For seasoned riders seeking a premium adventure touring bike, the Suzuki V-Strom 650 XT is a go-to option. It offers excellent comfort for long hauls, paired with a powerful V-twin engine capable of handling diverse terrains with ease.</p>
+                <p>These bikes reflect the growing demand for adventure motorcycling in India, offering a mix of affordability, performance, and versatility. Each model is built to take on the country’s varied geography, from mountains to deserts, ensuring a reliable and thrilling riding experience.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+       @*  <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

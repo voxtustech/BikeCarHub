@@ -1,0 +1,174 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Electric Two-Wheelers Under ₹2 Lakh in India";
+}
+@section MetaTags{
+    <meta name="keywords" content="Best electric scooters under 2 lakh, Electric bikes in India 2024, Affordable EV two-wheelers, Top electric vehicles in India, Electric two-wheelers price comparison, Long-range electric scooters, EV bikes with best performance, Budget electric two-wheelers, Indian electric scooter brands, 2024 EV scooter reviews, Best e-scooters for city rides, Eco-friendly two-wheelers, Upcoming EVs under 2 lakh, High-speed electric scooters, Top EV bikes in India" />
+    <meta name="description" content="Discover the best electric scooters and bikes in India under ₹2 lakh. Explore features, performance, range, and prices of top EVs in 2024." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p><span class="font-weight-700">Ather 450X:</span> Known for its sleek design and robust performance, the Ather 450X stands out with its impressive range and cutting-edge technology. It's not just an Electric Vehicle; it's a statement of style and efficiency.</p>
+                <p><span class="font-weight-700">TVS iQube Electric:</span> TVS has long been a trusted name in Indian households, and their iQube Electric lives up to that reputation. With its smooth ride quality and smart features, it offers excellent value for money.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/topfivetwowheelerelectricvehiclesunder2lakhinindia/ather 450x.webp" alt="Ather 450X" title="Ather 450X" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/topfivetwowheelerelectricvehiclesunder2lakhinindia/tvs iqube electric.webp" alt="TVS iQube Electric" title="TVS iQube Electric" /></div>
+                </div>
+                <p><span class="font-weight-700">Bajaj Chetak Electric:</span> Reviving an iconic name with a modern twist, Bajaj Chetak Electric combines nostalgia with innovation. Its durable build and chic aesthetics make it a favorite among urban riders.</p>
+                <p><span class="font-weight-700">Ola S1 Pro:</span> Ola's entry into the EV market has been nothing short of revolutionary. The Ola S1 Pro brings high-performance capabilities at an affordable price point, making it accessible to many first-time EV buyers.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/topfivetwowheelerelectricvehiclesunder2lakhinindia/bajaj chetak electric.webp" alt="Bajaj Chetak Electric" title="Bajaj Chetak Electric" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/topfivetwowheelerelectricvehiclesunder2lakhinindia/ola s1 pro.webp" alt="Ola S1 Pro" title="Ola S1 Pro" /></div>
+                </div>
+                <p><span class="font-weight-700">Hero Electric Photon HX:</span> For those seeking reliability without compromising on features, Hero's Photon HX is a fantastic choice. It's designed for everyday use with ample range and comfort in mind.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2024/topfivetwowheelerelectricvehiclesunder2lakhinindia/hero electric photon hx.webp" alt="Hero Electric Photon HX" title="Hero Electric Photon HX" /></div>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Name</th>
+                                <th class="text-center">Price</th>
+                                <th class="text-center">Range</th>
+                                <th class="text-center">Battery Capacity</th>
+                                <th class="text-center">Charging Time</th>
+                                <th class="text-center">Suspension</th>
+                                <th class="text-center">0 - 40 km/h</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Ather 450X</td>
+                                <td>₹ 1,40,599</td>
+                                <td>111 KM/charge</td>
+                                <td>2.9 kWh </td>
+                                <td>8.36 Hr</td>
+                                <td>
+                                    Suspension Front:-   Telescopic forks ,<br />
+                                    Suspension Rear:-   Symmetrically mounted progressive monoshock
+                                </td>
+                                <td>3.3 Sec</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">TVS iQube Electric</td>
+                                <td>₹ 89,999 - ₹ 1,55,555</td>
+                                <td>75 KM/charge</td>
+                                <td>2.2 kWh </td>
+                                <td>2 Hr 45 Min</td>
+                                <td>
+                                    Suspension Front:-  Telescopic ,<br />
+                                    Suspension Rear:-  Hydraulic twin tube shock absorber
+                                </td>
+                                <td>4.2 Sec</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Bajaj Chetak Electric</td>
+                                <td>₹ 95,998 - ₹ 1,27,243</td>
+                                <td>123 KM/charge</td>
+                                <td>3.5 kWh </td>
+                                <td>4 Hr</td>
+                                <td>
+                                    Suspension Front:- Single Sided,<br />
+                                    Suspension Rear:- Mono-Shock
+                                </td>
+                                <td>3.9 Sec</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Ola S1 Pro</td>
+                                <td>₹ 1,28,999</td>
+                                <td>195 km/charge</td>
+                                <td>4 kWh</td>
+                                <td>6.5 Hr</td>
+                                <td>
+                                    Suspension Front:-   Twin Telescopic,<br />
+                                    Suspension Rear:-  Mono Shock
+                                </td>
+                                <td>2.6 Sec</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Hero Electric Photon HX</td>
+                                <td>₹ 74,240</td>
+                                <td>108 km/charge </td>
+                                <td>1.87 kWh</td>
+                                <td>5 Hr</td>
+                                <td>Suspension Front:-  Telescopic</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                <p>These top five electric vehicles not only promise substantial savings on fuel costs but also contribute to reducing carbon footprints significantly—an essential step towards a cleaner planet. Transitioning to an electric vehicle under 2 lakh isn’t just an economic decision; it's an investment in our future sustainability while enjoying all the perks of modern mobility solutions today!</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

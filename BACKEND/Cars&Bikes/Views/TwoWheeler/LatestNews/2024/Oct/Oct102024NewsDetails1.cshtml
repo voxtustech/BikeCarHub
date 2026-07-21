@@ -1,0 +1,94 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Rolls-Royce Ghost Series II Launched with Updated Design and Features";
+}
+@section MetaTags{
+    <meta name="keywords" content="Rolls-Royce Ghost Series II, luxury sedan, Rolls-Royce design, Ghost Series II features, new Rolls-Royce, luxury cars, Rolls-Royce specifications, premium cars" />
+    <meta name="description" content="The Rolls-Royce Ghost Series II debuts with a refreshed design, new color options, and enhanced luxury features. Discover the updated specs, performance, and customizations." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>The Rolls-Royce Ghost Series II has been launched, featuring a refreshed design and several enhancements that further establish its status as a pinnacle of luxury sedans. Known for its opulence and performance, the Ghost Series II comes with subtle yet effective design updates. The most notable changes include the introduction of new color options, modernized headlights, and a revised front grille that exudes sophistication.</p>
+                <p>Under the hood, the Ghost Series II retains its powerful 6.6-liter twin-turbo V12 engine, delivering 563 horsepower. This allows the car to accelerate from 0 to 100 km/h in just 4.8 seconds, an impressive feat for a vehicle of its size and luxury focus. The engine is paired with an eight-speed automatic transmission, ensuring a smooth and seamless driving experience.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/rolls royce ghost series ii launched with fresh design and enhanced features/2.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/rolls royce ghost series ii launched with fresh design and enhanced features/3.webp" /></div>
+                </div>
+                <p>The interior of the Ghost Series II is where Rolls-Royce’s craftsmanship truly shines. The cabin is adorned with the finest leather and wood finishes, offering an unparalleled sense of luxury. Enhanced features include a new infotainment system, upgraded satellite navigation, and customizable options for personal touches, such as monogrammed headrests and unique interior trims.</p>
+                <p>Additional features include Rolls-Royce's signature starlight headliner, adaptive LED headlights, and an advanced air suspension system that ensures a comfortable ride regardless of road conditions. The Ghost Series II also offers an array of cutting-edge safety technologies, such as night vision and lane-keeping assist, further enhancing the driving experience.</p>
+                <p>In conclusion, the Rolls-Royce Ghost Series II combines elegant design with modern technology, providing a luxurious and powerful ride for its discerning clientele.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

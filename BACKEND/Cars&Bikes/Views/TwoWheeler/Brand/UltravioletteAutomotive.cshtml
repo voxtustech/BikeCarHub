@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @foreach (var brand in ViewBag.Tag)
+    {
+        ViewData["Title"] = @brand.TitleTag;
+    }
+}
+
+@section MetaTags {
+    @foreach (var brand in ViewBag.Tag)
+    {
+        <meta name="keywords" content="@brand.MetaKeywords" />
+        <meta name="description" content="@brand.MetaDescription" />
+    }
+}
+@foreach (var brand in ViewBag.Tag)
+{
+    <div class=" ">
+        <h1 class="latest-bike-head">@brand.BrandName Bikes</h1>
+        <h2 class="latest-bike-description p-b20">@brand.Discription</h2>
+    </div>
+}
+@await Html.PartialAsync("_BrandComponent")
+@await Html.PartialAsync("_AllComponent")

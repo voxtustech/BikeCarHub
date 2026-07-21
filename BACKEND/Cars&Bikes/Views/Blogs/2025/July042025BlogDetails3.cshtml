@@ -1,0 +1,423 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "How to Transfer Bike Ownership Online in India - 2025 Guide";
+}
+@section MetaTags {
+
+    <meta name="keywords" content="How to transfer bike ownership online, Bike ownership transfer Parivahan 2025, Online RTO transfer of vehicle, Transfer RC online India, Two wheeler ownership change process, Inter state bike transfer in India, Parivahan ownership change, Sell used bike transfer RC, Online vehicle ownership update, Transfer bike registration online, Smart card RC new owner, BikeCarHub ownership transfer guide, Documents for transfer of bike, Used bike sale and name change, RTO transfer of ownership fees India" />
+    <meta name="description" content="Learn how to transfer bike ownership online in India. Step-by-step 2025 guide with documents, RTO process, fees, and tips. Brought to you by BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 4th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>Fortunately, the Government of India has simplified this entire process with digital services through the<span class="font-weight-700"> Parivahan Sewa</span> portal. In this 2025 step-by-step guide by<span class="font-weight-700"> BikeCarHub</span>, you’ll learn everything you need to know about <span class="font-weight-700">how to transfer bike ownership online</span>, including documents required, fees, timelines, and common pitfalls to avoid.</p>
+                <h3 class="subheading">Why Is Bike Ownership Transfer So Important?</h3>
+                <p>Transferring ownership legally ensures that the buyer becomes the official owner in the records of the Regional Transport Office (RTO). This protects both parties:</p>
+                <ul>
+                    <li>🚫 Seller won't be liable for traffic challans or insurance issues</li>
+                    <li>✅ Buyer can claim insurance and legally drive the vehicle</li>
+                    <li>💼 Required for resale, loan processing, or insurance claims</li>
+                    <li>🛡 Avoids any future disputes regarding ownership</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Situations When Bike Ownership Transfer Is Needed</h2>
+                <ol>
+                    <li><span class="font-weight-700">Sale of a used bike to another person</span></li>
+                    <li><span class="font-weight-700">Transfer within family (gift or inheritance)</span></li>
+                    <li><span class="font-weight-700">Ownership transfer due to death of registered owner</span></li>
+                    <li><span class="font-weight-700">Change of address or RTO within the same or different state</span></li>
+                    <li><span class="font-weight-700">Inter-state purchase and migration</span></li>
+                </ol>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Documents Required for Online Bike Ownership Transfer</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Document Required</th>
+                                <th class="text-center">Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Original RC (Registration Certificate)</td>
+                                <td>To verify current ownership</td>
+                            </tr>
+                            <tr>
+                                <td>Form 29 & 30</td>
+                                <td>Seller's declaration & buyer's request</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Valid Bike Insurance</td>
+                                <td>Mandatory under MV Act</td>
+                            </tr>
+                            <tr>
+                                <td>Pollution Under Control (PUC) Certificate</td>
+                                <td>Validity proof of emissions</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Address & ID Proof (Buyer & Seller)</td>
+                                <td>Aadhaar, Voter ID, PAN, etc.</td>
+                            </tr>
+                            <tr>
+                                <td>PAN Card/Form 60</td>
+                                <td>Required for road tax and financial compliance</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>No Objection Certificate (NOC)</td>
+                                <td>Needed for inter-state transfers</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Receipt/Agreement</td>
+                                <td>Optional but recommended as proof</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="bikecarhub-tip"><span class="font-weight-700">BikeCarHub Tip:</span> Scan and keep digital copies of all documents before starting the online process.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Pre-Transfer Checklist</h2>
+                <p>Before initiating the ownership transfer online, make sure the bike:</p>
+                <ul>
+                    <li>Has <span class="font-weight-700">no pending challans</span> (check via eChallan portal)</li>
+                    <li>Has a valid <span class="font-weight-700">insurance and PUC</span></li>
+                    <li>Is not under <span class="font-weight-700">loan hypothecation</span> (if so, obtain Form 35 and NOC from financier)</li>
+                    <li>Has a clean <span class="font-weight-700">sale receipt</span> and handover record</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Step-by-Step Guide to Transfer Bike Ownership Online (Same State)</h2>
+
+                
+
+                <h3 class="subheading">Step 1: Visit the Parivahan Sewa Portal</h3>
+                <ul>
+                    <li>URL: <a href="https://parivahan.gov.in/" class="for-link" target="_blank">https://parivahan.gov.in/</a></li>
+                    <li>Go to "Online Services" > "Vehicle Related Services"</li>
+                </ul>
+
+                <h3 class="subheading">Step 2: Select Your State and RTO</h3>
+                <ul>
+                    <li>Choose the state where the bike is registered</li>
+                    <li>Select the corresponding RTO</li>
+                </ul>
+
+                <h3 class="subheading">Step 3: Click on "Transfer of Ownership"</h3>
+                <ul>
+                    <li>Enter the <span class="font-weight-700">vehicle registration number</span></li>
+                    <li>Enter chassis number (last 5 digits)</li>
+                    <li>Proceed to next screen</li>
+                </ul>
+
+                <h3 class="subheading">Step 4: Fill the Application Form</h3>
+                <ul>
+                    <li>Enter buyer and seller details</li>
+                    <li>Fill sale date, address, mobile number, Aadhaar (optional)</li>
+                </ul>
+
+                <h3 class="subheading">Step 5: Upload Required Documents</h3>
+                <ul>
+                    <li>Upload scanned copies in PDF/JPEG format</li>
+                    <li>File size must comply with site requirements (usually under 200 KB)</li>
+                </ul>
+
+                <h3 class="subheading">Step 6: Pay Online Fees</h3>
+                <ul>
+                    <li>Use UPI, Net Banking, Credit/Debit Card</li>
+                    <li>You'll get a receipt with Application Number</li>
+                </ul>
+
+                <h3 class="subheading">Step 7: Book RTO Appointment (if needed)</h3>
+                <ul>
+                    <li>For some RTOs, physical verification of vehicle or documents is mandatory</li>
+                </ul>
+
+                <h3 class="subheading">Step 8: Download Application Slip</h3>
+                <ul>
+                    <li>Keep a printout or soft copy as proof</li>
+                </ul>
+
+                <p>After submission, the RTO typically processes the transfer within <span class="font-weight-700">7-15 working days</span>. A new RC (Smart Card or Digital) is issued in the buyer's name.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">How to Transfer Bike Ownership for Inter-State Transfers</h2>
+                <p>This process is slightly more complex and involves re-registration:</p>
+                <ol>
+                    <li>Obtain <span class="font-weight-700">NOC from original RTO</span> (Form 28)</li>
+                    <li>Submit documents at new RTO along with <span class="font-weight-700">Form 29, 30, 27</span> (for re-registration)</li>
+                    <li>Pay <span class="font-weight-700">road tax</span> again (may be refundable from original RTO)</li>
+                    <li>After transfer, apply for <span class="font-weight-700">road tax refund</span> (optional)</li>
+                </ol>
+                <p>For migrated vehicles, the new RC is issued with the updated RTO code.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Fees and Charges for Ownership Transfer</h2>
+                <h2><span class="font-weight-700">Fees and Charges for Ownership Transfer</span></h2>
+                <p>Here's a breakdown of the fees and charges:</p>
+
+                <p><span class="font-weight-700">❖ General Fees:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Transfer Fee:</span><span class=text-highlight> ₹30–₹35</span> (for regular bikes)</li>
+                    <li><span class="font-weight-700">Smart Card Fee:</span><span class=text-highlight> ₹200</span></li>
+                </ul>
+
+                <p><span class="font-weight-700">❖ Additional Fees in Delhi:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Transfer of Ownership:</span><span class=text-highlight> ₹300</span></li>
+                    <li><span class="font-weight-700">Smart Card Fee:</span> <span class=text-highlight>₹200</span></li>
+                    <li><span class="font-weight-700">Postal Fee:</span><span class=text-highlight> ₹50</span></li>
+                </ul>
+
+                <p><span class="font-weight-700">❖ Imported Bikes:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Transfer fee</span> can be up to<span class=text-highlight> ₹100</span></li>
+                </ul>
+              
+
+                <p>You can view exact fees during the online payment stage on Parivahan.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Online vs Offline Transfer - Quick Comparison</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Online Method</th>
+                                <th class="text-center">Offline Method</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Speed</td>
+                                <td>7-15 working days</td>
+                                <td>15-30 days</td>
+                            </tr>
+                            <tr>
+                                <td>Convenience</td>
+                                <td>Fully digital</td>
+                                <td>Requires RTO visits</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Documentation</td>
+                                <td>Upload & submit online</td>
+                                <td>Submit physical copies</td>
+                            </tr>
+                            <tr>
+                                <td>Payment</td>
+                                <td>UPI/Card/NetBanking</td>
+                                <td>Cash/DD at RTO</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Tracking</td>
+                                <td>Real-time via Parivahan</td>
+                                <td>Manual follow-up</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="bikecarhub-tip"><span class="font-weight-700">BikeCarHub Recommendation:</span> Opt for the online method if your RTO supports it. It's more transparent and hassle-free.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">How to Track Application Status</h2>
+                <ul>
+                    <li>Visit <a href="https://vahan.parivahan.gov.in/" class="for-link" target="_blank">Parivahan Vehicle Services</a></li>
+                    <li>Click on "Application Status"</li>
+                    <li>Enter <span class="font-weight-700">Application Number</span> and <span class="font-weight-700">Date of Birth</span></li>
+                    <li>Status shows: "Pending", "Under Process", "Approved", or "RC Dispatched"</li>
+                </ul>
+                <p>You may also receive SMS or email updates from the RTO portal.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs about Bike Ownership Transfer</h2>
+
+                <div class="accordion" id="faqBikeTransfer">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Can I transfer ownership without the original RC?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqBikeTransfer">
+                            <div class="accordion-body">
+                                No. You must have the original RC. If lost, apply for a duplicate RC before transferring.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. How long does it take to complete the process?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqBikeTransfer">
+                            <div class="accordion-body">
+                                Generally, 7-15 days for online transfer. It may take longer for inter-state transfers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Is physical presence of the vehicle required at the RTO?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqBikeTransfer">
+                            <div class="accordion-body">
+                                For some RTOs, yes—especially in case of address change or re-registration.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Can I transfer ownership of a bike with an active loan?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqBikeTransfer">
+                            <div class="accordion-body">
+                                No. First, clear the loan and remove hypothecation by submitting Form 35 and NOC.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Do both buyer and seller need to be present?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqBikeTransfer">
+                            <div class="accordion-body">
+                                Not always. Some RTOs accept e-signed documents or Aadhaar eKYC. Others may ask for both.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Can I transfer ownership if the bike is older than 15 years?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqBikeTransfer">
+                            <div class="accordion-body">
+                                Yes, but ensure the fitness certificate is renewed before transfer.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Is NOC required for same-state transfers?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqBikeTransfer">
+                            <div class="accordion-body">
+                                Not usually. NOC is only required when transferring between states.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Can I check ownership details online?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqBikeTransfer">
+                            <div class="accordion-body">
+                                Yes, use <a href="https://vahan.parivahan.gov.in/" class="for-link" target="_blank">vahan.parivahan.gov.in</a> to check ownership status using registration number.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. What happens if the transfer is not done?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqBikeTransfer">
+                            <div class="accordion-body">
+                                The original owner remains legally responsible for the bike, including insurance and traffic penalties.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Can I do the transfer through mParivahan app?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqBikeTransfer">
+                            <div class="accordion-body">
+                                No. The app shows details, but the actual transfer is done through the Parivahan portal.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

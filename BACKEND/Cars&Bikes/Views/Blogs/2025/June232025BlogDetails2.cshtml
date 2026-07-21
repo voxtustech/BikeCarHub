@@ -1,0 +1,427 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Honda Activa 6G vs TVS Jupiter 125 – Full Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="Honda Activa 6G vs TVS Jupiter 125, Activa 6G mileage, Jupiter 125 storage, best scooters in India 2025, Activa 6G price, Jupiter 125 features, Activa vs Jupiter comparison" />
+    <meta name="description" content="Compare Honda Activa 6G and TVS Jupiter 125 for mileage, features, storage, and comfort find the perfect 2025 family scooter with BikeCarHub’s expert guide." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+
+                <p><span class="font-weight-700">Published on:</span> 23th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>                      
+                
+                <h3 class="subheading">Quick Overview: Honda Activa 6G and TVS Jupiter 125</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">" <img src="~/images/blogs/2025/june/activavsjupiter/honda activa 6g.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <p>The <span class="font-weight-700">Honda Activa 6G</span> is a household name in India. It is known for its reliability, smooth riding experience, and excellent resale value. With its proven performance and simple design, it continues to be the go-to choice for families and daily commuters.</p>
+                <p>The <span class="font-weight-700">TVS Jupiter 125</span> is a newer, feature-rich scooter that focuses on practicality and storage. It comes with a powerful engine, premium styling, and segment-leading comfort features, making it an attractive alternative for modern riders.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/activavsjupiter/tvs-jupiter-125.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                
+                <div class="div-line"></div>
+                
+                <h3 class="subheading">Detailed Specifications Comparison</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">Honda Activa 6G</th>
+                                <th class="text-center">TVS Jupiter 125</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine Capacity</td>
+                                <td>109.51cc, Air-Cooled</td>
+                                <td>124.8cc, Air-Cooled</td>
+                            </tr>
+                            <tr>
+                                <td>Power</td>
+                                <td>7.99 PS@8000 rpm</td>
+                                <td>8.15 PS@6500 rpm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Torque</td>
+                                <td>9.05 Nm@5500 rpm</td>
+                                <td>10.5 Nm@4500 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Mileage (Approx.)</td>
+                                <td>59.5 kmpl</td>
+                                <td>57.27 kmpl</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Weight</td>
+                                <td>106 kg</td>
+                                <td>108 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel Tank Capacity</td>
+                                <td>5.3 litres</td>
+                                <td>5.1 litres</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Braking System</td>
+                                <td>CBS (Combi Brake System)</td>
+                                <td>Sync Braking System (SBS)</td>
+                            </tr>
+                            <tr>
+                                <td>Seat Height</td>
+                                <td>764 mm</td>
+                                <td>765 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Storage Capacity</td>
+                                <td>18 litres</td>
+                                <td>33 litres (Segment Best)</td>
+                            </tr>
+                         
+                        </tbody>
+                    </table>
+                </div>
+                <div class="div-line"></div>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                      
+                        <tbody>
+                        <thead>
+
+                            <tr>
+                                <th class="text-center">Honda Activa 6G Model</th>
+                                <th class="text-center">Ex-Showroom Price</th>
+                                <th class="text-center">TVS Jupiter 125 Model</th>
+                                <th class="text-center">Ex-Showroom Price</th>
+                     
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Standard</td>
+                                <td>₹ 80,977</td>
+                                <td>Drum - Alloy</td>
+                                <td>₹ 80,740</td>
+                            </tr>
+                            <tr>
+                                <td>DLX</td>
+                                <td>₹ 90,996</td>
+                                <td>Disc</td>
+                                <td>₹ 85,442</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>SMART</td>
+                                <td>₹ 94,998</td>
+                                <td>SmartXonnect</td>
+                                <td>₹ 92,001</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="div-line"></div>
+                
+                <h3 class="subheading">Design and Styling: Classic Simplicity vs Modern Practicality</h3>
+             
+                <p>The <span class="font-weight-700">Honda Activa 6G</span> continues to follow a clean, classic design language that appeals to all age groups. Its styling is familiar and practical, with subtle chrome elements and a simple body structure.</p>
+                <p>The <span class="font-weight-700">TVS Jupiter 125</span> brings a more modern and premium design. It features sharp lines, attractive color options, stylish headlamps, and larger body proportions, which make it stand out on the road.</p>
+                <p>While Activa 6G is perfect for conservative buyers who prefer simplicity, the Jupiter 125 is ideal for riders looking for modern styling and more road presence.</p>
+                
+                <div class="div-line"></div>
+                
+                <h3 class="subheading">Engine Performance and Riding Experience</h3>
+                <h5 class="subheading"><a class="for-link" asp-controller="Honda" asp-action="HondaActiva6G">Honda Activa 6G Performance</a></h5>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/activavsjupiter/honda activa 6g-1.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <p>The <span class="font-weight-700">Activa 6G's 110cc engine</span> is smooth, silent, and perfectly tuned for city commuting. It offers calm and easy throttle response, making it an excellent choice for family riders and first-time scooter users.</p>
+                
+                <h5 class="subheading"><a class="for-link" asp-controller="TVS" asp-action="TVSJupiter">TVS Jupiter 125 Performance</a></h5>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/activavsjupiter/tvs-jupiter-125-1.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <p>The <span class="font-weight-700">Jupiter 125's 125cc engine</span> offers more power and better torque, which is noticeable during quick overtakes and uphill rides. It feels peppy and offers a more confident riding experience, especially with a pillion rider.</p>
+                
+                <div class="div-line"></div>
+                
+                <h3 class="subheading">Mileage and Fuel Efficiency Comparison</h3>
+                <p>Both scooters offer impressive fuel efficiency in their segments:</p>
+                <ul>
+                    <li><span class="font-weight-700">Honda Activa 6G:</span> Real-world mileage is slightly better <span class="font-weight-700">59.5 kmpl</span>.</li>
+                    <li><span class="font-weight-700">TVS Jupiter 125:</span> Real-world mileage is around <span class="font-weight-700">57.27 kmpl</span>.</li>
+                </ul>
+                <p>Despite having a bigger engine, the Jupiter 125 maintains competitive mileage, thanks to its efficient fuel management system.</p>
+                
+                <div class="div-line"></div>
+                
+                <h3 class="subheading">Features and Technology: Trusted Basics vs Premium Package</h3>
+               
+                
+                <h5 class="subheading">Honda Activa 6G Features:</h5>
+                <ul>
+                    <li>Silent start with ACG motor</li>
+                    <li>External fuel lid for convenience</li>
+                    <li>Combi Brake System (CBS)</li>
+                    <li>Analog console & Digital console</li>
+                    <li>Engine cut-off for side stand</li>
+                </ul>
+                
+                <h5 class="subheading">TVS Jupiter 125 Features:</h5>
+                <ul>
+                    <li>LED headlamp</li>
+                    <li>Large 33-litre under-seat storage</li>
+                    <li>External fuel filling</li>
+                    <li>Digital-analog instrument cluster</li>
+                    <li>Mobile charging port</li>
+                    <li>Sync Braking System (SBS)</li>
+                </ul>
+                
+                <p>The <span class="font-weight-700">Jupiter 125 clearly wins on features</span>, offering more storage, modern lighting, and extra convenience, while the Activa 6G sticks to a tried-and-tested formula.</p>
+                
+                <div class="div-line"></div>
+                
+                <h3 class="subheading">Comfort, Ride Quality, and Storage Capacity</h3>
+                <p>The <span class="font-weight-700">Honda Activa 6G</span> is known for its soft seat, lightweight body, and city-friendly handling. It is easy to park, easy to ride, and offers just enough storage for daily needs.</p>
+                <p>The <span class="font-weight-700">TVS Jupiter 125</span> offers unmatched comfort with a wider, longer seat and segment-best <span class="font-weight-700">33-litre storage</span>, which can easily fit a full-size helmet. It also has better front suspension for handling speed breakers and bad roads.</p>
+                <p>For pillion riders, the Jupiter 125's spacious seat is more comfortable, especially for longer commutes.</p>
+                
+                <div class="div-line"></div>
+                
+                <h3 class="subheading">Price and Value for Money</h3>
+                <p>The <span class="font-weight-700">Honda Activa 6G</span> is priced between <span class="font-weight-700">₹80,977 - ₹94,998 (ex-showroom)</span>, making it a great budget option for those looking for basic reliability and lower maintenance costs.</p>
+                <p>The <span class="font-weight-700">TVS Jupiter 125</span> is priced between <span class="font-weight-700">₹80,740 - ₹92,001 (ex-showroom)</span>. The price brings premium features, more power, better storage, and a modern look.</p>
+                <p>In terms of value, the <span class="font-weight-700">Activa 6G</span> offers a trusted, affordable package, while the <span class="font-weight-700">Jupiter 125</span> gives you more features for a slightly higher investment.</p>
+                
+                <div class="div-line"></div>
+                
+                <h3 class="subheading">Pros and Cons: Honda Activa 6G vs TVS Jupiter 125</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Scooter</th>
+                                <th class="text-center">Pros</th>
+                                <th class="text-center">Cons</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Honda Activa 6G</td>
+                                <td>Affordable, reliable, high resale value</td>
+                                <td>Fewer features, simple design</td>
+                            </tr>
+                            <tr>
+                                <td>TVS Jupiter 125</td>
+                                <td>Best-in-class storage, premium features</td>
+                                <td>Slightly less mileage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="div-line"></div>
+                
+                <h3 class="subheading">Best Fit for Rider Profiles</h3>
+                
+                <h5 class="subheading">Honda Activa 6G is Ideal For:</h5>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/activavsjupiter/honda activa 6g-2.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+
+                <ul>
+                    <li>Family riders who want a proven and simple scooter</li>
+                    <li>First-time buyers looking for reliable daily commuting</li>
+                    <li>Budget-conscious users focusing on brand trust and service</li>
+                </ul>
+                
+                <h5 class="subheading">TVS Jupiter 125 is Ideal For:</h5>
+
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/activavsjupiter/tvs-jupiter-125-2.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <ul>
+                    <li>Riders who want modern features and bigger storage</li>
+                    <li>Young commuters and office goers looking for premium styling</li>
+                    <li>Families who need extra space for daily shopping and luggage</li>
+                </ul>
+                
+                <div class="div-line"></div>
+                
+                <h3 class="subheading">Final Verdict: Which Scooter Should You Buy?</h3>
+                <p>The <span class="font-weight-700">Honda Activa 6G</span> is the right choice for riders who value a simple, reliable scooter with a long history of performance and easy resale. It is light, easy to ride, and pocket-friendly.</p>
+                <p>The <span class="font-weight-700">TVS Jupiter 125</span> is the perfect pick for riders who need <span class="font-weight-700">more storage, premium features, and better power</span>. It's an excellent family scooter for those who carry more and expect extra comfort.</p>
+                <p>Both scooters are outstanding in their segments, but the final decision depends on whether the rider prioritizes affordability (Activa 6G) or modern convenience and power (Jupiter 125).</p>
+                
+                <div class="div-line"></div>
+                
+                <h3 class="subheading">FAQs: Honda Activa 6G vs TVS Jupiter 125</h3>
+                
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                Which scooter has better mileage, Activa 6G or Jupiter 125?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Activa 6G offers slightly better mileage at around 59.5 kmpl, compared to the TVS Jupiter 125's 57.27 kmpl.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                Which scooter is better for family use?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Both are family-friendly, but the Jupiter 125 offers more storage, making it better for daily grocery runs and carrying bags.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Which scooter is more affordable?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Jupiter 125 is more affordable by ₹2,000 - ₹3,000 compared to the Honda Activa 6G.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                Does TVS Jupiter 125 have more power than Activa 6G?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, the Jupiter 125 has a more powerful engine with 8.15 PS, compared to Activa's 7.99 PS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                Which scooter has better under-seat storage?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The TVS Jupiter 125 has the largest under-seat storage in the segment at 33 litres, compared to the Activa's 18 litres.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                                Which scooter is better for city traffic?
+                            </button>
+                        </h2>
+                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Both handle well in city traffic, but the Activa 6G's lighter weight gives it a slight edge for tight turns and easier parking.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                                Do both scooters have external fuel filling?
+                            </button>
+                        </h2>
+                        <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, both scooters offer external fuel filling for convenience.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                                Which scooter is better for pillion riders?
+                            </button>
+                        </h2>
+                        <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The TVS Jupiter 125 offers a wider and more comfortable seat for pillion riders.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                                Which scooter has better resale value?
+                            </button>
+                        </h2>
+                        <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Honda Activa 6G typically holds a better resale value due to its stronger market demand.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+                                Which scooter is better for beginners?
+                            </button>
+                        </h2>
+                        <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Both are beginner-friendly, but the Activa 6G's lighter frame and smooth power delivery make it slightly easier for first-time riders.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @* @await Html.PartialAsync("_AllBlogComponent") *@
+            @await Component.InvokeAsync("AllBlog")
+            @await Html.PartialAsync("_AllBrandComponent")
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

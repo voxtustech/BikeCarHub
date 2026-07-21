@@ -1,0 +1,288 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Best Bikes Under 150cc in India – Specs, Features & Price (2024)";
+}
+@section MetaTags{
+    <meta name="keywords" content="Bikes under 150cc, Best Indian bikes 2024, Top 150cc bikes India, Bajaj Pulsar 150, Honda Unicorn 160, TVS Apache RTR 160, Yamaha FZ-S FI, Hero Xtreme 160R, bike specs India, affordable bikes India, commuter bikes India" />
+    <meta name="description" content="Discover the top 5 best bikes under 150cc in India, featuring models from Bajaj, Honda, TVS, Yamaha, and Hero. Check out their specifications, key features, and prices in 2024. Ideal for city commuting with great performance and fuel efficiency." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. Bajaj Pulsar 150</h3>
+                        <p><span class="font-weight-700">Cost:</span> ₹ 1,10,419 (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 149.5 cc, single-cylinder, 4-stroke, air-cooled
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 14 PS @@ 8500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 13.25 Nm @@ 6500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Efficiency:</span> 47.5 km/l
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Transmission:</span> 5-speed gearbox
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Brakes:</span> Front disc, rear drum (optional rear disc)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Tank Capacity:</span> 15 litres
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Weight:</span> 148 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>Semi-digital instrument cluster</li>
+                            <li>LED tail lamps</li>
+                            <li>Dual-tone colour options</li>
+                            <li>Single-channel ABS</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/herearethebestindianbikesunder150ccsegments/bajaj pulsar 150.webp" alt="Bajaj Pulsar 150" title="Bajaj Pulsar 150" /></center></div>
+                </div>
+                <p>The Bajaj Pulsar 150 has been an iconic name in India’s motorcycle market for decades. Known for its muscular design, the bike offers a great balance of power and mileage, making it a go-to option for riders who want a sporty commuter.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. Honda Unicorn 160</h3>
+                        <p><span class="font-weight-700">Cost:</span> ₹ 1.11 lakh (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 162.7 cc, air-cooled, single-cylinder
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 12.9 PS @@ 7500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 14.58 Nm @@ 5500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Efficiency:</span> 60 km/l
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Transmission:</span> 5-speed gearbox
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Brakes:</span> Front disc, rear drum (single-channel ABS)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Tank Capacity:</span> 13 litres
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Weight:</span> 140 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>Analog instrument console</li>
+                            <li>HET (Honda Eco Technology) for better mileage</li>
+                            <li>Comfortable seat for long rides</li>
+                            <li>Single-channel ABS</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/herearethebestindianbikesunder150ccsegments/honda unicorn 160.webp" alt="Honda Unicorn 160" title="Honda Unicorn 160" /></center></div>
+                </div>
+                <p>The Honda Unicorn is known for its reliability and smooth engine performance. It’s ideal for those who seek comfort and fuel efficiency without compromising on power. The low-end torque makes city riding a breeze.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">3. TVS Apache RTR 160 4V</h3>
+                        <p><span class="font-weight-700">Cost:</span> ₹ 1.28 lakh (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 159.7 cc, single-cylinder, 4-valve, oil-cooled
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 17.55 PS @@ 9250 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 14.73 Nm @@ 7250 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Efficiency:</span> 45-50 km/l
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Transmission:</span> 5-speed gearbox
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Brakes:</span> Front disc, rear disc (optional), single-channel ABS
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Tank Capacity:</span> 12 litres
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Weight:</span> 146 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>Fully digital instrument cluster with lap timer</li>
+                            <li>LED headlamp and tail lamp</li>
+                            <li>Race-tuned fuel injection</li>
+                            <li>Sporty design with aggressive decals</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/herearethebestindianbikesunder150ccsegments/tvs apache rtr 160 4v.webp" alt="TVS Apache RTR 160 4V" title="TVS Apache RTR 160 4V" /></center></div>
+                </div>
+                <p>The TVS Apache RTR 160 4V stands out with its sharp performance and race-inspired design. Its powerful engine makes it one of the fastest in this segment, ideal for enthusiasts who want thrill and performance.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">4. Yamaha FZ-S FI V4</h3>
+                        <p><span class="font-weight-700">Cost:</span> ₹ 1,29,700 lakh (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 149 cc, air-cooled, fuel-injected, single-cylinder
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 12.4 PS @@ 7250 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 13.3 Nm @@ 5500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Efficiency:</span> 45-50 km/l
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Transmission:</span> 5-speed gearbox
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Brakes:</span> Front disc, rear disc (single-channel ABS)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Tank Capacity:</span> 13 litres
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Weight:</span> 136 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>Bluetooth connectivity (Yamaha Connect App)</li>
+                            <li>LED headlamp and tail light</li>
+                            <li>Monoshock rear suspension</li>
+                            <li>Side stand engine cut-off</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/herearethebestindianbikesunder150ccsegments/yamaha fz s fi v4.webp" alt="Yamaha FZ-S FI V4" title="Yamaha FZ-S FI V4" /></center></div>
+                </div>
+                <p>The Yamaha FZ-S FI is known for its muscular stance and streetfighter looks. With features like Bluetooth connectivity, it’s tech-friendly and offers a refined riding experience, especially for urban commutes.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">5. Hero Xtreme 160R</h3>
+                        <p><span class="font-weight-700">Cost:</span> ₹ 1.11 lakh (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 163.2 cc, air-cooled, single-cylinder
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 15 PS @@ 8500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 14 Nm @@ 6500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Efficiency:</span> 45-50 km/l
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Transmission:</span> 5-speed gearbox
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Brakes:</span> Front disc, rear disc (optional), single-channel ABS
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Tank Capacity:</span> 12 litres
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Weight:</span> 139.5 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>All-LED lighting (headlight, tail light, indicators)</li>
+                            <li>Full digital instrument cluster</li>
+                            <li>Auto sail technology for better low-speed control</li>
+                            <li>Lightweight frame for improved handling</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/herearethebestindianbikesunder150ccsegments/hero xtreme 160r.webp" alt="Hero Xtreme 160R" title="Hero Xtreme 160R" /></center></div>
+                </div>
+                <p>The Hero Xtreme 160R impresses with its sporty styling and aggressive looks. With quick acceleration and nimble handling, it’s great for those who enjoy zipping through city traffic. Its lightweight construction is also a big plus.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

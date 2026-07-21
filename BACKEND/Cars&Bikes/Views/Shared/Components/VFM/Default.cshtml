@@ -1,0 +1,40 @@
+﻿@model List<Cars_Bikes.Models.ValueForMoney>
+
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+
+<div class="blogs-section">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 blog-head-box">
+            <div class="blog-head">
+                <h1><a asp-controller="ValueForMoney" asp-action="Index">Value For Money</a></h1>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-10 blogs-section">
+            <button class="scroll-button left" onclick="scrollContainer('vfmContainer', -1)">&#9664;</button>
+            <div class="blogs-container" id="vfmContainer">
+                @foreach (var VFM in Model)
+                {
+                    <div class="blogs-item">
+                        <section>
+                            <a href="/@VFM.URL" style="text-decoration:none">
+                                <div class="upcoming-bike-img"><img src="@VFM.ImageURL" alt="@VFM.VFMHeading" loading="lazy" title="@VFM.VFMHeading" /></div>
+                                <div class="upcoming-bike-name">@Truncate(@VFM.VFMHeading, 56)</div>
+                                <span class="text-black">By : BikeCarHub Team</span>
+                            </a>
+
+                        </section>
+                    </div>
+                }
+            </div>
+            <button class="scroll-button right" onclick="scrollContainer('vfmContainer', 1)">&#9654;</button>
+        </div>
+    </div>
+</div>

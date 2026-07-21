@@ -1,0 +1,396 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @foreach (var brand in ViewBag.Tag)
+    {
+        ViewData["Title"] = @brand.TitleTag;
+    }
+}
+
+@section MetaTags {
+    @foreach (var brand in ViewBag.Tag)
+    {
+        <meta name="keywords" content="@brand.MetaKeywords" />
+        <meta name="description" content="@brand.MetaDescription" />
+    }
+}
+@foreach (var brand in ViewBag.Tag)
+{
+    <div class=" ">
+        <h1 class="latest-bike-head">@brand.BrandName Bikes</h1>
+            @*<h2 class="latest-bike-description p-b20">@brand.Discription</h2>*@
+        <div class="brand-info-container">
+            <div class="brand-info-content">
+
+                <h3>Honda Bikes in India (2025): Models, Price List, Mileage & More</h3>
+
+                <p class="brand-info-short">
+                    Honda is a name that resonates with reliability, performance, and innovation in the world of two-wheelers. With a rich global legacy and decades of presence in India, Honda Motorcycle & Scooter India (HMSI) has become one of the most recognized and trusted brands in the country’s automotive industry.
+
+                    From fuel-efficient commuter bikes to stylish performance motorcycles, Honda has something for everyone. Whether you're a student looking for a value-for-money daily ride or a touring enthusiast in search of refined highway machines, Honda delivers quality across the board. In 2025, Honda continues its momentum with a robust lineup of motorcycles that combine smart engineering, stylish designs, and practical features.
+
+                    In this article, we’ll walk you through the latest Honda bike models in India, their prices, mileage figures, and insights on the best Honda bikes for long rides and fuel efficiency. Plus, we’ll explore what makes Honda one of the most beloved two-wheeler brands in India.
+                </p>
+
+                <div class="brand-info-full" id="hondaMoreText">
+                    <h3>Honda Bikes Price List 2025 in India</h3>
+
+                    <p>
+                        Here is the updated price list and mileage chart for Honda motorcycles available in India as of 2025:
+                    </p>
+
+                    <div class="brand-table-wrapper">
+                        <table class="brand-info-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Ex-Showroom Price</th>
+                                    <th>Mileage</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Honda Shine 125</td>
+                                    <td>₹80,000 – ₹88,000</td>
+                                    <td>55–60 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Honda SP 125</td>
+                                    <td>₹86,000 – ₹92,000</td>
+                                    <td>60–65 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Honda CD 110 Dream</td>
+                                    <td>₹73,000 – ₹76,000</td>
+                                    <td>65–70 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Honda Unicorn</td>
+                                    <td>₹1.09 lakh – ₹1.15 lakh</td>
+                                    <td>50–55 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Honda Hornet 2.0</td>
+                                    <td>₹1.39 lakh – ₹1.45 lakh</td>
+                                    <td>45–50 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Honda XBlade</td>
+                                    <td>₹1.17 lakh – ₹1.25 lakh</td>
+                                    <td>50–55 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Honda CB200X</td>
+                                    <td>₹1.47 lakh – ₹1.52 lakh</td>
+                                    <td>40–45 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Honda H’ness CB350</td>
+                                    <td>₹2.10 lakh – ₹2.15 lakh</td>
+                                    <td>35–40 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Honda CB350RS</td>
+                                    <td>₹2.15 lakh – ₹2.20 lakh</td>
+                                    <td>35–40 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Honda CBR 650R</td>
+                                    <td>₹8.89 lakh – ₹8.99 lakh</td>
+                                    <td>20–25 km/l</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <i>
+                            Note: Pricing and mileage are approximate and may vary depending on region,
+                            variant, riding style, and road conditions.
+                        </i>
+                    </p>
+                    <h3>Which Honda Is Best for Long Rides?</h3>
+
+                    <p>
+                        Honda offers several motorcycles that are ideal for highway touring
+                        and comfortable long-distance travel. These bikes are known for their
+                        refined engines, comfortable ergonomics, smooth ride quality,
+                        and excellent reliability.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Top Honda Bikes for Long Rides:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Honda H’ness CB350</strong>
+                            <ul>
+                                <li>Classic cruiser-inspired styling with a refined modern engine</li>
+                                <li>Comfortable upright riding posture and smooth power delivery</li>
+                                <li>Features Honda Selectable Torque Control (HSTC) and Bluetooth connectivity</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Honda CB350RS</strong>
+                            <ul>
+                                <li>Sportier and more dynamic version of the H’ness CB350</li>
+                                <li>Suitable for riders preferring a slightly aggressive touring posture</li>
+                                <li>Comfortable seating, refined engine, and responsive handling</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Honda CB200X</strong>
+                            <ul>
+                                <li>Adventure-styled touring commuter motorcycle</li>
+                                <li>Offers light off-road capability with strong highway comfort</li>
+                                <li>Features upright ergonomics, windscreen protection, and good ground clearance</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Honda CBR 650R</strong>
+                            <ul>
+                                <li>Ideal for experienced riders seeking performance with touring comfort</li>
+                                <li>Fully-faired sports tourer powered by a refined inline-4 engine</li>
+                                <li>Equipped with dual-channel ABS, slipper clutch, and aggressive styling</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        These motorcycles strike an excellent balance between performance,
+                        comfort, refinement, and highway capability, making them suitable
+                        for long-distance rides across cities, highways, and mountain roads.
+                    </p>
+                    <h3>Which Honda Has the Best Mileage?</h3>
+
+                    <p>
+                        When it comes to mileage, Honda has long been a favorite among commuters. Its engines are known for being highly fuel-efficient while offering smooth performance.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Best Mileage Honda Bikes in 2025:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Honda CD 110 Dream</strong>
+                            <ul>
+                                <li>Mileage: 65–70 km/l</li>
+                                <li>Honda's most budget-friendly commuter bike</li>
+                                <li>Reliable and ideal for rural or daily urban commutes</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Honda SP 125</strong>
+                            <ul>
+                                <li>Mileage: 60–65 km/l</li>
+                                <li>Stylish commuter with LED headlamp and digital instrument cluster</li>
+                                <li>Offers modern features with great mileage</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Honda Shine 125</strong>
+                            <ul>
+                                <li>Mileage: 55–60 km/l</li>
+                                <li>Long-standing bestseller in the 125cc segment</li>
+                                <li>Balanced in performance, comfort, and fuel efficiency</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        These bikes also feature Honda’s eSP (Enhanced Smart Power) and HET (Honda Eco Technology) which optimize fuel combustion and reduce friction—ensuring better efficiency.
+                    </p>
+                    <h3>Why Is Honda Famous?</h3>
+
+                    <p>
+                        Honda enjoys a loyal customer base in India and globally, and its success can be attributed to several standout qualities:
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Key Reasons Behind Honda’s Popularity:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Legendary Engine Reliability</strong>
+                            <ul>
+                                <li>Honda engines are well-known for their refinement, durability, and smoothness.</li>
+                                <li>They start easily, run quietly, and require low maintenance.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Wide Range of Products</strong>
+                            <ul>
+                                <li>From budget commuters like the CD 110 Dream to premium motorcycles like the CBR 650R, Honda serves every segment.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Smart Features and Innovation</strong>
+                            <ul>
+                                <li>CBS (Combi-Brake System)</li>
+                                <li>HSTC (Honda Selectable Torque Control)</li>
+                                <li>Fully digital consoles and Bluetooth connectivity</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Strong Service Network</strong>
+                            <ul>
+                                <li>With thousands of service centers across India, Honda ensures easy access to maintenance, even in tier-2 and tier-3 cities.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Brand Trust & Global Reach</strong>
+                            <ul>
+                                <li>Honda is a Japanese giant with a global footprint in over 130 countries.</li>
+                                <li>In India, it has built a reputation of trust, longevity, and performance.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Comfort-Oriented Designs</strong>
+                            <ul>
+                                <li>Whether it’s the posture, seat cushioning, or clutch feel, Honda bikes are built for rider comfort and control.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <h3>Final Thoughts</h3>
+
+                    <p>
+                        Honda continues to set the benchmark for what Indian riders expect from their two-wheelers—reliability, fuel efficiency, and value for money. With its evolving 2025 lineup, the brand remains strong in the commuter segment while also gaining popularity in the premium motorcycle space.
+                    </p>
+
+                    <p>
+                        Whether you’re looking for a cost-effective 110cc commuter or a powerful 650cc sport tourer, Honda has something to match your lifestyle and budget. With innovation at its core and rider satisfaction as its mission, Honda remains a top pick for Indian motorcyclists.
+                    </p>
+                    <h3>Top 10 FAQs About Honda Bikes in India (2025)</h3>
+
+                    <div class="faq-container">
+
+                        <div class="faq-item">
+                            <h4>1. Which Honda bike is best for daily commuting?</h4>
+                            <p>
+                                The Honda SP 125 and Shine 125 are excellent options for daily commutes due to their mileage and low maintenance.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>2. Which Honda bike is ideal for highway touring?</h4>
+                            <p>
+                                The H’ness CB350 and CB350RS are great for long-distance rides, offering comfort and performance.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>3. What is the highest mileage Honda bike?</h4>
+                            <p>
+                                The CD 110 Dream delivers the highest mileage—up to 70 km/l.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>4. Are Honda bikes high on maintenance?</h4>
+                            <p>
+                                No. Honda bikes are known for being low-maintenance and reliable.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>5. Does Honda have electric bikes or scooters?</h4>
+                            <p>
+                                Honda is expected to launch electric two-wheelers in India soon, but as of 2025, no major e-bike is available.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>6. Is Honda suitable for beginners?</h4>
+                            <p>
+                                Yes. Honda bikes like the SP 125 and Unicorn are easy to ride, smooth, and beginner-friendly.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>7. What is the price range of Honda bikes in 2025?</h4>
+                            <p>
+                                Honda motorcycles range from ₹73,000 to ₹9 lakh (ex-showroom), depending on the model.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>8. Which is Honda’s best bike under ₹1 lakh?</h4>
+                            <p>
+                                The Honda SP 125 is considered one of the best options under ₹1 lakh for its style and features.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>9. Are Honda engines really that smooth?</h4>
+                            <p>
+                                Yes. Honda engines are widely praised for their refined performance and smooth throttle response.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>10. Which Honda bike is best for city and weekend use?</h4>
+                            <p>
+                                The CB200X is great for daily use as well as occasional weekend getaways.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <button class="brand-read-btn"
+                        onclick="toggleBrandInfo('hondaMoreText', this)">
+                    Read More
+                </button>
+            </div>
+        </div>
+        <script>function toggleBrandInfo(contentId, button) {
+
+                const content = document.getElementById(contentId);
+
+                if (content.style.display === "block") {
+
+                    content.style.display = "none";
+                    button.innerText = "Read More";
+
+                } else {
+
+                    content.style.display = "block";
+                    button.innerText = "Read Less";
+                }
+            }</script>
+    </div>
+}
+@await Html.PartialAsync("_BrandComponent")
+@await Html.PartialAsync("_AllComponent")

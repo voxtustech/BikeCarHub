@@ -1,0 +1,20 @@
+# Frontend
+frontend/node_modules
+frontend/dist
+frontend/build
+
+# Backend
+backend/bin
+backend/obj
+
+# Visual Studio
+.vs
+
+# VS Code
+.vscode
+
+# macOS
+.DS_Store
+
+# Logs
+*.log

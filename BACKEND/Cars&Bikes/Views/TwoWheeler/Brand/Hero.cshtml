@@ -1,0 +1,369 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @foreach (var brand in ViewBag.Tag)
+    {
+        ViewData["Title"] = @brand.TitleTag;
+    }
+}
+
+@section MetaTags {
+    @foreach (var brand in ViewBag.Tag)
+    {
+        <meta name="keywords" content="@brand.MetaKeywords" />
+        <meta name="description" content="@brand.MetaDescription" />
+    }
+}
+@foreach (var brand in ViewBag.Tag)
+{
+    <div class=" ">
+        <h1 class="latest-bike-head">@brand.BrandName Bikes</h1>
+        @*<h2 class="latest-bike-description p-b20">@brand.Discription</h2>*@
+        <div class="brand-info-container">
+            <div class="brand-info-content">
+
+                <h3>Hero Bikes in India 2025: Price List, Mileage, Best Models & More </h3>
+
+                <p class="brand-info-short">
+                    Hero MotoCorp isn’t just a name — it’s an emotion for millions of Indian riders. With a legacy built on trust, mileage, and affordability, Hero has become the world’s largest two-wheeler manufacturer in terms of volume. From bustling city streets to remote village roads, chances are you’ll spot a Hero bike cruising confidently in every corner of India.
+                    Hero MotoCorp is widely celebrated for producing some of the most fuel-efficient and low-maintenance motorcycles. Its iconic models like the Splendor, Passion, and HF Deluxe have achieved cult status over the years. As we step into 2025, Hero continues to innovate with fresh designs, enhanced features, and new-age performance offerings — all while staying rooted in its commitment to affordability and practicality.
+                    Let’s take a look at the latest Hero bike lineup, their prices, mileage, and find out which models are best for long rides and daily commutes.
+                </p>
+
+                <div class="brand-info-full" id="heroMoreText">
+                    <h3>Hero Bikes Price List 2025 in India</h3>
+
+                    <p>
+                        Here is an updated list of Hero motorcycles, along with their ex-showroom prices and real-world mileage estimates:
+                    </p>
+
+                    <div class="brand-table-wrapper">
+                        <table class="brand-info-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Ex-Showroom Price</th>
+                                    <th>Mileage</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Hero HF Deluxe</td>
+                                    <td>₹60,000 – ₹67,000</td>
+                                    <td>70–75 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Hero Splendor Plus</td>
+                                    <td>₹73,000 – ₹78,000</td>
+                                    <td>65–70 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Hero Passion XTEC</td>
+                                    <td>₹79,000 – ₹85,000</td>
+                                    <td>60–65 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Hero Super Splendor</td>
+                                    <td>₹82,000 – ₹89,000</td>
+                                    <td>60–65 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Hero Glamour XTEC</td>
+                                    <td>₹89,000 – ₹95,000</td>
+                                    <td>55–60 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Hero Xtreme 125R</td>
+                                    <td>₹95,000 – ₹1.05 lakh</td>
+                                    <td>55–60 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Hero Xtreme 160R</td>
+                                    <td>₹1.20 lakh – ₹1.30 lakh</td>
+                                    <td>45–50 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Hero XPulse 200 4V</td>
+                                    <td>₹1.46 lakh – ₹1.55 lakh</td>
+                                    <td>35–40 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Hero Karizma XMR 210</td>
+                                    <td>₹1.72 lakh – ₹1.82 lakh</td>
+                                    <td>32–38 km/l</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <i>Note: Prices and mileage are approximate and may vary by region, variant, and riding conditions.</i>
+                    </p>
+                    <h3>Which Hero Is Best for Long Rides?</h3>
+
+                    <p>
+                        While Hero is mostly known for its commuter motorcycles, the company also offers a few great long-distance performers. These bikes are built with better suspension, improved ergonomics, and more powerful engines — perfect for highway cruising and adventure travel.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Best Hero Bikes for Long Rides:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Hero XPulse 200 4V</strong>
+                            <ul>
+                                <li>Dual-purpose ADV bike</li>
+                                <li>Long travel suspension, upright ergonomics, and high ground clearance</li>
+                                <li>Great for rough roads, weekend trips, and even moderate trails</li>
+                                <li>4-valve engine offers better high-speed performance</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Hero Karizma XMR 210</strong>
+                            <ul>
+                                <li>Fully faired sports-tourer</li>
+                                <li>Liquid-cooled 210cc engine with 6-speed gearbox</li>
+                                <li>Aggressive design with adjustable windshield and full LED lighting</li>
+                                <li>Suitable for highways and spirited long-distance rides</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Hero Xtreme 160R</strong>
+                            <ul>
+                                <li>Naked street bike with excellent handling and agility</li>
+                                <li>Ideal for city use with occasional highway trips</li>
+                                <li>Comfortable upright seating and strong mid-range torque</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        All three offer reliable engines, strong road presence, and reasonable comfort, making them excellent picks for long rides under budget.
+                    </p>
+                    <h3>Which Hero Has the Best Mileage?</h3>
+
+                    <p>
+                        Mileage has always been Hero MotoCorp’s strong suit. Their commuter bikes dominate this space with class-leading fuel efficiency, ideal for budget-conscious users and daily riders.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Top Mileage Heroes:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Hero HF Deluxe</strong>
+                            <ul>
+                                <li>Claimed mileage: 70–75 km/l</li>
+                                <li>Lightweight and highly efficient</li>
+                                <li>Low maintenance and extremely popular in rural markets</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Hero Splendor Plus</strong>
+                            <ul>
+                                <li>Claimed mileage: 65–70 km/l</li>
+                                <li>India’s all-time best-selling motorcycle</li>
+                                <li>Iconic design with practical utility</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Hero Passion XTEC</strong>
+                            <ul>
+                                <li>Mileage: 60–65 km/l</li>
+                                <li>Comes with a digital meter, LED DRLs, and i3S tech</li>
+                                <li>Stylish yet economical</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        These models use Hero’s XSens technology and i3S (idle start-stop system) to conserve fuel intelligently, especially in traffic-heavy urban environments.
+                    </p>
+                    <h3>Why Is Hero Famous?</h3>
+
+                    <p>
+                        Hero's popularity across India stems from a unique combination of brand trust, consistent quality, and affordability. For decades, Hero has been the go-to choice for everyday riders who want uncomplicated, efficient, and reliable machines.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Key Reasons Behind Hero’s Fame:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Unmatched Mileage</strong>
+                            <ul>
+                                <li>Hero bikes consistently lead in fuel efficiency, saving riders thousands annually.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Low Maintenance Costs</strong>
+                            <ul>
+                                <li>Parts are affordable and easily available across the country, making upkeep stress-free.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Widespread Dealer Network</strong>
+                            <ul>
+                                <li>Hero has over 6,000+ touchpoints across India — from metros to remote villages.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Iconic Models</strong>
+                            <ul>
+                                <li>Bikes like Splendor and Passion have become household names and multi-generation favorites.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Technology at Affordable Prices</strong>
+                            <ul>
+                                <li>Features like i3S, LED lights, digital consoles, and Bluetooth connectivity are now available even on budget models.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Rider-Centric Design</strong>
+                            <ul>
+                                <li>Hero bikes are lightweight, practical, and easy to handle — perfect for daily use and first-time riders.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <h3>Final Thoughts</h3>
+
+                    <p>
+                        Hero MotoCorp continues to be the backbone of India’s two-wheeler ecosystem. In 2025, the company balances its legendary commuter segment with bold forays into touring, sporty, and even electric categories.
+                        Whether you're looking for the highest mileage bike in India, a reliable city commuter, or a versatile long-distance performer, Hero has a bike for you. Its unbeatable after-sales service, strong resale value, and nationwide support make it a trusted partner for daily and long-distance riders alike.
+                    </p>
+
+                    <p>
+                        For riders who want more from less — Hero remains a true hero on the roads.
+                    </p>
+                    <h3>Top 10 FAQs About Hero Bikes in 2025</h3>
+
+                    <div class="faq-container">
+
+                        <div class="faq-item">
+                            <h4>1. Which Hero bike gives the best mileage in 2025?</h4>
+                            <p>
+                                Hero HF Deluxe leads with an impressive 70–75 km/l mileage.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>2. Is the Hero Splendor still a good bike in 2025?</h4>
+                            <p>
+                                Absolutely! It remains one of India’s most trusted and economical bikes.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>3. What is the best Hero bike for highway rides?</h4>
+                            <p>
+                                The XPulse 200 4V and Karizma XMR 210 are ideal for long-distance travel.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>4. Which is the most affordable Hero bike in 2025?</h4>
+                            <p>
+                                Hero HF Deluxe, starting around ₹60,000, is the most budget-friendly option.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>5. Is Hero a good brand for beginners?</h4>
+                            <p>
+                                Yes. Most Hero bikes are lightweight, easy to ride, and require minimal upkeep.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>6. Does Hero have a sports bike?</h4>
+                            <p>
+                                Yes. The Hero Karizma XMR is a fully-faired 210cc sports-tourer.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>7. Is Hero planning to launch electric bikes?</h4>
+                            <p>
+                                Hero is investing in EVs under its brand VIDA, with more models expected soon.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>8. Are Hero bikes durable?</h4>
+                            <p>
+                                Yes. With proper maintenance, they can last over a decade without major issues.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>9. What is i3S in Hero bikes?</h4>
+                            <p>
+                                It’s Hero’s patented Idle Stop-Start System to improve fuel efficiency in traffic.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>10. Which Hero bike is good for both city and highway use?</h4>
+                            <p>
+                                The Hero Xtreme 160R is an excellent all-rounder for mixed riding conditions.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="brand-read-btn"
+                        onclick="toggleBrandInfo('heroMoreText', this)">
+                    Read More
+                </button>
+            </div>
+        </div>
+        <script>function toggleBrandInfo(contentId, button) {
+
+                const content = document.getElementById(contentId);
+
+                if (content.style.display === "block") {
+
+                    content.style.display = "none";
+                    button.innerText = "Read More";
+
+                } else {
+
+                    content.style.display = "block";
+                    button.innerText = "Read Less";
+                }
+            }</script>
+    </div>
+}
+@await Html.PartialAsync("_BrandComponent")
+@await Html.PartialAsync("_AllComponent")

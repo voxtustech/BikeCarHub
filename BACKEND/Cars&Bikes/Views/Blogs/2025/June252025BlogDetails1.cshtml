@@ -1,0 +1,300 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Maruti Brezza vs Škoda Kylaq: Which Sub-4m SUV is Best for You in 2025?";
+}
+@section MetaTags {
+    <meta name="keywords" content="Maruti Brezza vs Škoda Kylaq, best compact SUV India 2025, Brezza vs Kylaq comparison, sub-4m SUV comparison, Maruti Brezza 2025 review, Škoda Kylaq features, budget SUV with premium features, family SUV under 15 lakh, European vs Japanese SUVs, BikeCarHub SUV comparison" />
+    <meta name="description" content="Detailed comparison of Maruti Brezza vs Škoda Kylaq - engine performance, mileage, features, safety & pricing. Find out which compact SUV is best for your needs in 2025." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 24th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                               <h2 class="subheading">Model Overview & Positioning</h2>
+                
+                <h3 class="subheading"><a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1">Maruti Brezza</a></h3>
+               
+                <p>Launched mid-2022, the second-generation Brezza (K15C petrol) continues the success of its predecessor. Built on a proven platform, it combines urban-friendly size, mild-hybrid efficiency, and a strong value proposition backed by Maruti's widespread service network.</p>
+
+                <h3 class="subheading"><a class="for-link" asp-controller="ValueForMoney" asp-action="SkodaKylaq1">Škoda Kylaq</a></h3>
+                
+                <p>Unveiled November 2024, bookings began in December, and it crossed 10,000 bookings within 10 days. As Škoda's most compact MQB A0-based SUV, the Kylaq brings European platform and drivetrain prowess—borrowed from the Kushaq and Slavia lineage—into a sub-4m footprint.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">2.Engine & Performance</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Spec</th>
+                                <th class="text-center">Brezza (K15C 1.5L)</th>
+                                <th class="text-center">Kylaq (1.0L TSI turbo)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine</td>
+                                <td>1,462cc K15C, 4-cyl, mild-hybrid</td>
+                                <td>999cc I3 turbo TSI, 114PS, 178Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Power</td>
+                                <td>~100 bhp@6,000 rpm</td>
+                                <td>114 PS ≈113 bhp@5,000-5,500 rpm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Torque</td>
+                                <td>~136.8 Nm@4,400 rpm</td>
+                                <td>178 Nm@1,750-4,500 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Transmission</td>
+                                <td>5-speed MT, 6-speed AT</td>
+                                <td>6-speed MT, 6-speed torque converter AT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><span class="font-weight-700">Takeaway:</span> While Brezza's larger engine delivers more raw power and mild-hybrid torque fill, the Kylaq's turbo delivers strong low-end torque and punchy mid-range, ideal for spirited drives.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">3.Fuel Efficiency</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza ARAI:</span> Up to 19.8 kmpl</li>
+                    <li><span class="font-weight-700">Kylaq ARAI:</span> Unofficially expected ~19-20 kmpl similar to Kushaq (19.76 kmpl M, 18-19 kmpl AT)</li>
+                </ul>
+                <p><span class="font-weight-700">Takeaway:</span> Both SUVs offer comparable fuel efficiency. Kylaq's turbo engine competes well with Brezza's mild-hybrid, especially with manual gearbox.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">4.Dimensions & Space</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Metric</th>
+                                <th class="text-center">Brezza</th>
+                                <th class="text-center">Kylaq</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Length</td>
+                                <td>3,995 mm</td>
+                                <td>~3995 mm (sub-4m)</td>
+                            </tr>
+                            <tr>
+                                <td>Width</td>
+                                <td>1,790 mm</td>
+                                <td>~1,783 mm (similar to platform cousins)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Height</td>
+                                <td>1,685 mm</td>
+                                <td>~1,619 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Wheelbase</td>
+                                <td>2,500 mm</td>
+                                <td>~2,566 mm (platform MQB-A0 adjust)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Ground Clearance</td>
+                                <td>198 mm</td>
+                                <td>189 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Boot Space</td>
+                                <td>328 L</td>
+                                <td>446 liters (expandable to 1265 liters with rear seats down)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><span class="font-weight-700">Takeaway:</span> Brezza offers a taller stance and slightly more boot space, while Kylaq gives a compact but European-proportioned design and likely a lower ride height.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">5.Safety & Ratings</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza:</span> Includes dual front airbags, ABS with EBD, ESP, hill-hold, six airbags in top trim. Not yet NCAP-tested.</li>
+                    <li><span class="font-weight-700">Kylaq:</span> As part of Škoda's MQB A0 family, expects ESC, 6 airbags, ISOFIX, TPMS, hill-hold. Built on strong Euro structure; Kushaq scored 5★ in GNCAP.</li>
+                </ul>
+                <p><span class="font-weight-700">Takeaway:</span> Kylaq likely mirrors Kushaq's 5-star build safety. Brezza provides solid safety for the segment, but lacks formal rating.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">6.Features & Comfort</h2>
+                
+                <h3 class="subheading">Maruti Brezza</h3>
+                
+                <ul>
+                    <li>9in touchscreen infotainment, sunroof, wireless charging, rear AC vents</li>
+                    <li>Cooled seats on higher trims, ambient lighting, heads-up display, 360° camera</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+               
+                <ul>
+                    <li>Expected 10in infotainment, connected car tech, wireless charging</li>
+                    <li>Ventilated seats, sunroof, ambient lighting, 6-speaker sound system</li>
+                </ul>
+                <p><span class="font-weight-700">Takeaway:</span> Both boast upmarket cabins in top trims, but Kylaq might edge ahead with better material quality and refined European design.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">7.Ride & Handling</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza:</span> Designed for Indian roads, higher seat height, softer suspension, urban comfort.</li>
+                    <li><span class="font-weight-700">Kylaq:</span> European-derived chassis promises taut handling, firmer ride, more engaging feedback.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">8.Real-World Ownership Feedback</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza:</span> Users confirm fuel averages around 14 kmpl city, 17-18 kmpl highway, despite ARAI claims.</li>
+                    <li><span class="font-weight-700">Kylaq:</span> Early reports show city figures as low as 9-10 kmpl, but highway around 15-18 kmpl; engine praised for driving dynamics, though some owners reported QC issues like key-fob problems and gearbox/expenses concerns.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">9.Price & Value</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza:</span> ₹8.69-13.98L ex-showroom</li>
+                    <li><span class="font-weight-700">Kylaq:</span> ₹8.25-13.99L ex-showroom</li>
+                </ul>
+                <p>Both SUVs are similarly priced, making the choice more about priorities than budget.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">So, Which Should You Choose?</h2>
+                
+                <h3 class="subheading">Choose Maruti Brezza if you prioritize:</h3>
+                <ul>
+                    <li>Soft and comfortable ride over rough city roads</li>
+                    <li>Higher ground clearance (198mm)</li>
+                    <li>Larger boot space (328L)</li>
+                    <li>Proven after-sales network and lower running costs</li>
+                    <li>Practical fuel economy in real driving</li>
+                </ul>
+
+                <h3 class="subheading">Choose Škoda Kylaq if you prefer:</h3>
+                <ul>
+                    <li>European build quality and driving dynamics</li>
+                    <li>Turbo torque and polished cabin feel</li>
+                    <li>Likely stronger crash safety (5-star potential)</li>
+                    <li>Premium features and better interior materials</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Quick Comparison Table</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Brezza</th>
+                                <th class="text-center">Kylaq</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine</td>
+                                <td>1.5L mild-hybrid, 103 bhp</td>
+                                <td>1.0L TSI, 115PS, 175Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Transmission</td>
+                                <td>5MT, 6AT</td>
+                                <td>6MT, 6AT</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Mileage (ARAI)</td>
+                                <td>19.8 kmpl</td>
+                                <td>~19-20 kmpl (expected)</td>
+                            </tr>
+                            <tr>
+                                <td>Ground Clearance</td>
+                                <td>198 mm</td>
+                                <td>~188 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Boot Space</td>
+                                <td>328 L</td>
+                                <td>~300-350 L</td>
+                            </tr>
+                            <tr>
+                                <td>Safety Features</td>
+                                <td>6 airbags, ESP, hill-hold</td>
+                                <td>6 airbags, ESC, ISOFIX, 5-star build</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Touchscreen</td>
+                                <td>9in</td>
+                                <td>~10in</td>
+                            </tr>
+                            <tr>
+                                <td>Ride Character</td>
+                                <td>Soft, road-friendly</td>
+                                <td>Firm, European-tuned</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Price (ex-showroom)</td>
+                                <td>₹8.69-13.98L</td>
+                                <td>~₹8.25-13.99L</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Word</h2>
+                <ul>
+                    <li><span class="font-weight-700">Maruti Brezza</span> is an ideal all-rounder—practical, comfortable, spacious, and cost-effective, especially for Indian city families.</li>
+                    <li>The <span class="font-weight-700">Škoda Kylaq</span>, on the other hand, attracts buyers who seek European driving flair, premium feel, and potentially class-leading safety in a compact size.</li>
+                </ul>
+                <p>Ultimately, your choice hinges on priorities: <span class="font-weight-700">comfort and reliability</span> (Brezza) vs. <span class="font-weight-700">driving dynamics and premium build</span> (Kylaq).</p>
+
+                <div class="div-line"></div>
+          
+
+                <div class="div-line"></div>
+                <p>For more updates, comparisons, and in-depth SUV reviews, keep visiting <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a>—your trusted source for all things bikes and cars!</p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

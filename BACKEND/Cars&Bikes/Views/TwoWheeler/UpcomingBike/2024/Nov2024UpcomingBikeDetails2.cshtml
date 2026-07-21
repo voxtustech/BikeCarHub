@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Oben Rorr EZ Electric Bike Launches in India at ₹89,999";
+}
+@section MetaTags{
+    <meta name="keywords" content="Oben Rorr EZ electric bike, Rorr EZ price India, Oben electric bike launch, Electric commuter bike India, Oben Rorr EZ features" />
+    <meta name="description" content="The new Oben Rorr EZ electric bike launches in India with prices starting at ₹89,999, offering 175 km range, 95 km/h speed, and three battery options." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="overlay-black-middle" style=" background:linear-gradient(#475372, #78829A, #9EA3AD, #fff); margin:0;">
+    <img src="~/images/background/banner.png" />
+</div> *@
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" /></div> *@
+<!-- Breadcrumb row END -->
+@* <div class="car-details-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="nav">
+                    <ul>
+                        <li><a></a></li>
+                        <li class="active"><a href="car-details-overview.html">Overview</a></li>
+                        <li><a href="car-detail-specifications.html">Specifications</a></li>
+                        <li><a href="car-detail-price.html">Price</a></li>
+                        <li><a href="car-detail-compare.html">Compare</a></li>
+                        <li><a href="car-detail-pictures.html">Pictures</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+<body>
+    <div class=" ">
+    <h1 class="latest-bike-head">Upcoming Bikes</h1>
+    <div class="TWupcoming-container">
+        <div class="upcoming-bikes-details-image">
+            <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+            <div class="upcoming-bikes-details-text">
+                <h2>@Model.UpcomingBikeName</h2>
+                <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+            </div>
+        </div>
+
+        <div class="upcoming-bikes-details-content">
+            <h2>About @Model.UpcomingBikeName</h2>
+            @* <p>@Html.Raw(@Upbike.UpcomingBikeDetails.Replace("\n", "<br>"))</p> *@
+            <h3 class="subheading">Newly Launched Oben Rorr EZ Electric Bike in India</h3>
+            <p>The Oben Rorr EZ, a new electric bike aimed at urban commuters, was launched in India with a starting price of ₹89,999. This entry-level model offers three battery options with a range of up to 175 km per charge, a top speed of 95 km/h, and multiple color choices.</p>
+            <h3 class="subheading">Details on the Oben Rorr EZ Electric Bike</h3>
+            <p>Oben Electric, a Bengaluru-based electric vehicle company, has introduced the Rorr EZ electric bike to the Indian market as an affordable option for city riders. Starting at an introductory price of ₹89,999 (ex-showroom), the Rorr EZ is available with three battery capacities—<span class="font-weight-700">2.6 kWh, 3.4 kWh, and 4.4 kWh</span>. The Rorr EZ achieves a top speed of 95 km/h and offers three <span class="font-weight-700">driving modes (Eco, City, Havoc)</span>, tailored for varied riding styles.</p>
+            <p>With the 4.4 kWh battery, the Rorr EZ can achieve a maximum range of 140 km in Eco mode, 110 km in City mode, and 90 km in Havoc mode. The charging time depends on the battery variant; the standard charger takes 4 to 7 hours, while a fast charger can restore up to 80% charge within 45 minutes to 2 hours.</p>
+            <p>The bike also includes modern features such as geo-fencing, anti-theft systems, and a comprehensive LED dashboard. Design-wise, it closely resembles its sibling, the standard Oben Rorr, and is available in multiple colors, including Flux Grey, Surge Cyan, and Photon White. Oben Electric offers a warranty of 3 years/50,000 km, extendable to 5 years/75,000 km.</p>
+            <p>The Rorr EZ will go up against similar commuter focused electric bikes in the market such as the Revolt RV1.</p>
+            <h3 class="subheading">Specifications:</h3>
+            <p class="font-weight-700">Price: ₹89,999 - ₹1,09,999 (ex-showroom, India)</p>
+            <ol>
+                <li>
+                    <span class="font-weight-700">Battery options:</span> 2.6 kWh, 3.4 kWh, 4.4 kWh
+                </li>
+                <li>
+                    <span class="font-weight-700">Range:</span> Up to 140 km (Eco mode)
+                </li>
+                <li>
+                    <span class="font-weight-700">Top Speed:</span> 95 km/h
+                </li>
+                <li>
+                    <span class="font-weight-700">Charging Time:</span> 4 to 7 hours (standard), 45 minutes to 2 hours (fast charger)
+                </li>
+                <li>
+                    <span class="font-weight-700">Motor Power:</span> 7.5 kW, 52 Nm torque
+                </li>
+             </ol>
+        </div>
+    </div>
+    }
+    <!-- Bike 1 -->
+    <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allUpbike in ViewBag.allupcomingbike)
+        {
+            <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                <div class="upcoming-bikes-details-card">
+                    <div class="upcoming-bikes-all-image">
+                        <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                    </div>
+
+                    <div class="upcoming-allbikes-details-content">
+                        <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                        <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                        <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+    </div>
+</body>

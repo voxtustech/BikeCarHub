@@ -1,0 +1,104 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "CFMoto 450MT: Launch Date, Specs & Best Price in India";
+}
+@section MetaTags {
+    <meta name="keywords" content="CFMoto 450MT India, CFMoto 450MT launch date, CFMoto 450MT price, 450MT specifications, best adventure bike India, off-road motorcycles, CFMoto 450MT top speed, CFMoto adventure bike, upcoming bikes in India at bikecarhub, CFMoto 450MT mileage, adventure touring bike, best ADV bike India, CFMoto 450MT features, dual-sport motorcycles, long-distance touring bikes" />
+    <meta name="description" content="Discover the CFMoto 450MT launch date, specifications, features, and best price at bikecarhub. Explore its engine, performance, and off-road capabilities before buying." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">CFMoto 450MT Expected Launch Date in India</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/april/cfmoto450mt/cfmot450mt2.webp" alt="bikecarhubcfmot450mt2" title="bikecarhubcfmot450mt2" /></div>
+                </div>
+                <p>The <span class="font-weight-700">CFMoto 450MT </span>is expected to launch in <span class="font-weight-700">mid-2025, </span>with reports suggesting a <span class="font-weight-700">June-July release.</span> The bike has already debuted in international markets, and Indian riders are eagerly waiting for its arrival. Once launched, it will compete with bikes like the <span class="font-weight-700">KTM 390 Adventure and Royal Enfield Himalayan 450.</span></p>
+                <h3 class="subheading">CFMoto 450MT Engine & Performance</h3>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 449.5cc, Liquid-Cooled, DOHC</li>
+                    <li><span class="font-weight-700">Power Output:</span> 44.18 PS@8500 rpm</li>
+                    <li><span class="font-weight-700">Torque:</span> 44 Nm@6250 rpm</li>
+                    <li><span class="font-weight-700">Transmission:</span> 6-Speed Gearbox with Slipper Clutch</li>
+                    <li><span class="font-weight-700">Fuel Tank Capacity:</span> 17.5 L</li>
+                </ul>
+                <p>The <span class="font-weight-700">450MT</span> is powered by a <span class="font-weight-700">449.5cc liquid-cooled parallel-twin engine, </span>delivering around <span class="font-weight-700">44.18 PS and 44 Nm of torque.</span> This makes it a <span class="font-weight-700">perfect ADV bike</span> for both <span class="font-weight-700">city rides and high-altitude touring.</span> The <span class="font-weight-700">6-speed gearbox </span>ensures smooth gear shifts, while the <span class="font-weight-700">slipper clutch</span> adds better control during aggressive downshifts.</p>
+                <h3 class="subheading">CFMoto 450MT Key Features & Specifications</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/april/cfmoto450mt/CF450MT3.webp" alt="bikecarhubcfmot450mt3" title="bikecarhubcfmot450mt3" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Adjustable Front & Rear Suspension:</span> High ground clearance for rough terrains</li>
+                    <li><span class="font-weight-700"> Dual-Purpose Tires:</span> Better grip on highways & trails</li>
+                    <li><span class="font-weight-700">Advanced Digital Instrument Cluster: </span>Displays speed, gear position, fuel, & trip info</li>
+                    <li><span class="font-weight-700">ABS & Traction Control: </span>Enhanced safety on slippery surfaces</li>
+                    <li><span class="font-weight-700">Full LED Lighting:</span> Stylish & bright headlamps for night rides</li>
+                </ul>
+                <p>The <span class="font-weight-700">CFMoto 450MT</span> is designed to handle <span class="font-weight-700">tough terrains,</span> featuring <span class="font-weight-700">long-travel suspension, dual-purpose tires, and a lightweight ADV frame. </span>Its <span class="font-weight-700">high seat height and tall stance</span> make it a true off-road machine.</p>
+                <h3 class="subheading">CFMoto 450MT Best Price in India (Expected)</h3>
+                <p>The <span class="font-weight-700">expected price of the CFMoto 450MT in India </span>will be around <span class="font-weight-700">₹4.5 - ₹5 lakh (ex-showroom).</span> It will be competitively priced against<span class="font-weight-700"> KTM 390 Adventure, Royal Enfield Himalayan 450, and BMW G310 GS.</span></p>
+                <h4 class="subheading">CFMoto 450MT Price Comparison (Expected)</h4>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Expected Price (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            KTM 390 Adventure
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">CFMoto 450MT</td>
+                                <td>₹4.5 - ₹5 Lakh</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">KTM 390 Adventure</td>
+                                <td>₹3.80 - ₹4 Lakh</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Royal Enfield Himalayan 450</td>
+                                <td>₹2.85 - ₹3.20 Lakh</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">BMW G310 GS</td>
+                                <td>₹3.30 - ₹3.50 Lakh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">Final Verdict: Should You Wait for the CFMoto 450MT?</h3>
+                <p>If you're looking for a <span class="font-weight-700">powerful, feature-packed adventure bike</span>with a <span class="font-weight-700">parallel-twin engine,</span>the <span class="font-weight-700">CFMoto 450MT </span>is a promising choice. With <span class="font-weight-700">off-road capabilities, premium suspension, and touring-friendly ergonomics,</span> this bike will be ideal for adventure seekers.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

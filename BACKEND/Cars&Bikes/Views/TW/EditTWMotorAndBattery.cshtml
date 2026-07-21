@@ -1,0 +1,67 @@
+﻿@model Cars_Bikes.Models.TWMotorAndBattery
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="@ViewData["Action"]">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="TWName"></label>
+        <input asp-for="TWName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Varients"></label>
+        <input asp-for="Varients" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PeakPower"></label>
+        <input asp-for="PeakPower" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DriveType"></label>
+        <input asp-for="DriveType" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Transmission"></label>
+        <input asp-for="Transmission" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="BatteryCapacity"></label>
+        <input asp-for="BatteryCapacity" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TwoWheelerId"></label>
+        <select asp-for="TwoWheelerId" class="form-control" asp-items="ViewBag.TwoWheelerId"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TWVarientId"></label>
+        <select asp-for="TWVarientId" class="form-control" asp-items="ViewBag.TWVarientId"></select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

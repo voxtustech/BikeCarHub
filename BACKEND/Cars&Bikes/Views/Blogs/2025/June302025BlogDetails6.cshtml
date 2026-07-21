@@ -1,0 +1,424 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 10 Mileage (Fuel-Efficient) Cars in India for 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="top mileage cars India 2025, most fuel efficient cars India, best mileage cars, hybrid cars India, Maruti Grand Vitara mileage, Honda City Hybrid, Maruti Celerio, Tata Altroz CNG, fuel efficient SUVs, high mileage hatchbacks" />
+    <meta name="description" content="Discover the top 10 most fuel-efficient cars in India for 2025 with ARAI-certified mileage figures. Compare hybrids, petrol, diesel and CNG options from Maruti, Hyundai, Honda and Tata" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 1th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Top 10 Mileage Cars in India 2025</h2>
+
+                <h3 class="subheading">1. Maruti Grand Vitara / Toyota Urban Cruiser Hyryder (Hybrid SUV)</h3>
+              
+                <ul>
+                    <li><span class="font-weight-700">Combined ARAI mileage:</span> 27.97 kmpl (petrol-hybrid)</li>
+                    <li><span class="font-weight-700">Overview:</span> A B-segment compact SUV offered in India by both Maruti Suzuki and Toyota. Both models share a 1.5L petrol engine with hybrid technology and e-CVT transmission.</li>
+                    <li><span class="font-weight-700">Strengths:</span> Class-leading fuel efficiency, smooth EV-driven city commutes, competitive pricing (₹11.42–19.99L).</li>
+                    <li><span class="font-weight-700">Considerations:</span> Slightly higher initial cost and hybrid-specific maintenance.</li>
+                </ul>
+
+                <h3 class="subheading">2. Honda City Hybrid (Compact Hybrid Sedan)</h3>
+               
+                <ul>
+                    <li><span class="font-weight-700">ARAI mileage:</span> 26.5 kmpl</li>
+                    <li><span class="font-weight-700">Overview:</span> The only hybrid sedan in its class, powered by a 1.5L petrol engine and hybrid drivetrain with e-CVT. Price ~₹20.75L.</li>
+                    <li><span class="font-weight-700">Strengths:</span> Comfortable family sedan with hybrid fuel benefits.</li>
+                    <li><span class="font-weight-700">Drawbacks:</span> Higher cost; lacks high-performance perks of non-hybrid models.</li>
+                </ul>
+
+                <h3 class="subheading">3. Maruti Celerio (Petrol Hatchback)</h3>
+               
+                <ul>
+                    <li><span class="font-weight-700">Mileage:</span> Up to 26 kmpl (AMT), ~25 kmpl (manual)</li>
+                    <li><span class="font-weight-700">Overview:</span> A 1.0L petrol hatchback with manual and AMT options, priced very attractively (₹5.64–7.37L).</li>
+                    <li><span class="font-weight-700">Strengths:</span> Excellent fuel efficiency, low running costs, built-in factory CNG variant.</li>
+                    <li><span class="font-weight-700">Cons:</span> Basic features; not ideal for highway cruising.</li>
+                </ul>
+
+                <h3 class="subheading">4. Maruti Swift (Petrol Hatchback)</h3>
+                
+                <ul>
+                    <li><span class="font-weight-700">Mileage:</span> ~25.75 kmpl (AMT), ~24.8 kmpl (manual)</li>
+                    <li><span class="font-weight-700">Overview:</span> A 1.2L three-cylinder hatchback with sporty design, manual and AMT options.</li>
+                    <li><span class="font-weight-700">Strengths:</span> Balanced performance with efficiency, strong resale values.</li>
+                    <li><span class="font-weight-700">Drawbacks:</span> Slightly lower fuel efficiency than smaller models.</li>
+                </ul>
+
+                <h3 class="subheading">5. Maruti Dzire (Petrol Sedan)</h3>
+             
+                <ul>
+                    <li><span class="font-weight-700">Mileage:</span> ~25.71 kmpl (AMT), ~24.79 kmpl (manual)</li>
+                    <li><span class="font-weight-700">Overview:</span> The sedan sibling of Swift, featuring a 1.2L petrol engine in manual and AMT trims.</li>
+                    <li><span class="font-weight-700">Strengths:</span> Sedan comfort, competitive mileage, attractively priced (₹6.84–10.19L).</li>
+                    <li><span class="font-weight-700">Note:</span> The latest fourth-generation launched in Nov 2024.</li>
+                </ul>
+
+                <h3 class="subheading">6. Maruti S‑Presso (Petrol Hatchback)</h3>
+              
+                <ul>
+                    <li><span class="font-weight-700">Mileage:</span> ~25.3 kmpl (AMT); manual variant slightly less</li>
+                    <li><span class="font-weight-700">Overview:</span> Tallboy hatchback with a 1.0L petrol engine, manual and AMT transmissions, priced economically (₹4.26–6.12L).</li>
+                    <li><span class="font-weight-700">Strengths:</span> Tall seating, compact form, excellent efficiency.</li>
+                    <li><span class="font-weight-700">Drawbacks:</span> Basic interiors, less suited for long drives.</li>
+                </ul>
+
+                <h3 class="subheading">7. Maruti Wagon R (Petrol Hatchback)</h3>
+             
+                <ul>
+                    <li><span class="font-weight-700">Mileage:</span> ~25.19 kmpl (1L AMT), ~24.35 kmpl (1L manual); ~24.46 kmpl (1.2L AMT), ~23.56 kmpl (1.2L manual)</li>
+                    <li><span class="font-weight-700">Overview:</span> Versatile hatchback with two engine sizes and manual/AMT options, priced ₹5.79–7.62L.</li>
+                    <li><span class="font-weight-700">Strengths:</span> Spacious, practical, dependable.</li>
+                    <li><span class="font-weight-700">Drawbacks:</span> Slightly modest mileage compared to sister models.</li>
+                </ul>
+
+                <h3 class="subheading">8. Maruti Alto K10 (Petrol Hatchback)</h3>
+                
+                <ul>
+                    <li><span class="font-weight-700">Mileage:</span> ~24.9 kmpl (AMT), ~24.4 kmpl (manual)</li>
+                    <li><span class="font-weight-700">Overview:</span> Iconic entry-level hatchback with 1.0L petrol engine and AMT option, priced ₹4.23–6.21L. Factory-fitted CNG available.</li>
+                    <li><span class="font-weight-700">Strengths:</span> Low cost, solid efficiency, highly affordable CNG.</li>
+                    <li><span class="font-weight-700">Cons:</span> Very basic, minimal features and power.</li>
+                </ul>
+
+                <h3 class="subheading">9. Hyundai Grand i10 Nios (Petrol Hatchback)</h3>
+                
+                <ul>
+                    <li><span class="font-weight-700">Mileage:</span> ~20 kmpl (1.2L petrol), ~20 kmpl (1.2L diesel variant)</li>
+                    <li><span class="font-weight-700">Overview:</span> Premium A-segment hatchback with good cabin features.</li>
+                    <li><span class="font-weight-700">Strengths:</span> Feature-rich, practical, balanced mileage.</li>
+                    <li><span class="font-weight-700">Drawbacks:</span> Slightly less efficient and pricier than sub-4m competitors.</li>
+                </ul>
+
+                <h3 class="subheading">10. Tata Altroz CNG & Diesel (Subcompact Premium Hatchback)</h3>
+               
+                <ul>
+                    <li><span class="font-weight-700">Mileage:</span> CNG ~26.9 km/kg; diesel ~23.6 kmpl ● Petrol ~25 kmpl</li>
+                    <li><span class="font-weight-700">Overview:</span> Premium European-styled hatchback with petrol, diesel, and CNG variants. Price: ₹6.89L onwards.</li>
+                    <li><span class="font-weight-700">Strengths:</span> Robust build, multiple fuel choices, class-leading CNG mileage.</li>
+                    <li><span class="font-weight-700">Cons:</span> Diesel only offered with manual; petrol mileage unverified; CNG tank reduces boot space.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Mileage Comparison Table</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Rank</th>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Fuel Type</th>
+                                <th class="text-center">Claimed Mileage</th>
+                                <th class="text-center">Price (₹ Lakh Ex-Show)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>1</td>
+                                <td>Grand Vitara / Hyryder (Hybrid)</td>
+                                <td>Petrol Hybrid</td>
+                                <td>27.97 kmpl</td>
+                                <td>11.42–20.19</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Honda City Hybrid</td>
+                                <td>Petrol Hybrid</td>
+                                <td>26.5 kmpl</td>
+                                <td>~20.75</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>3</td>
+                                <td>Maruti Celerio</td>
+                                <td>Petrol</td>
+                                <td>26 kmpl (AMT)</td>
+                                <td>5.64–7.37</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Maruti Swift</td>
+                                <td>Petrol</td>
+                                <td>25.75 kmpl (AMT)</td>
+                                <td>6.49–9.64</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>5</td>
+                                <td>Maruti Dzire</td>
+                                <td>Petrol</td>
+                                <td>25.71 kmpl (AMT)</td>
+                                <td>6.84–10.19</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Maruti S‑Presso</td>
+                                <td>Petrol</td>
+                                <td>25.3 kmpl (AMT)</td>
+                                <td>4.26–6.12</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>7</td>
+                                <td>Maruti Wagon R</td>
+                                <td>Petrol</td>
+                                <td>25.19 kmpl (1L AMT)</td>
+                                <td>5.79–7.62</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Alto K10</td>
+                                <td>Petrol</td>
+                                <td>24.9 kmpl (AMT)</td>
+                                <td>4.23–6.21</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>9</td>
+                                <td>Grand i10 Nios</td>
+                                <td>Petrol/Diesel</td>
+                                <td>20 kmpl</td>
+                                <td>5.92–8.25</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Tata Altroz (CNG, Diesel)</td>
+                                <td>CNG/Diesel</td>
+                                <td>26.9 km/kg / 23.6 kmpl</td>
+                                <td>6.89+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Key Insights & Observations</h2>
+                <ol>
+                    <li><span class="font-weight-700">Hybrids lead in efficiency:</span> SUVs and sedans with hybrid systems (Grand Vitara/Hyryder & City Hybrid) top the list with ~27–28 kmpl.</li>
+                    <li><span class="font-weight-700">Entry-level petrol efficiency remains strong:</span> Maruti's lineup with small petrol engines and AMT shines in mileage among sub-₹10L cars.</li>
+                    <li><span class="font-weight-700">Multiple fuel options expand choice:</span> Models like Altroz and Celerio offer petrol, diesel, and CNG, giving buyers flexibility.</li>
+                    <li><span class="font-weight-700">SUVs catching up:</span> After hybrids, compact SUVs like Grand Vitara and Hyryder combine added comfort with high mileage.</li>
+                </ol>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Pros & Cons of High-Mileage Cars</h2>
+
+                <p><span class="font-weight-700">Pros:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Major savings on running costs,</span> especially for long-term ownership.</li>
+                    <li><span class="font-weight-700">Low emissions</span> contribute positively to environmental goals.</li>
+                    <li><span class="font-weight-700">Better resale value</span> when fuel prices are high.</li>
+                </ul>
+
+                <p><span class="font-weight-700">Cons:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Higher price tag</span> for hybrid variants.</li>
+                    <li><span class="font-weight-700">Potentially higher maintenance costs</span> for complex hybrid systems.</li>
+                    <li><span class="font-weight-700">Compromises:</span> Mild driving experience, smaller engine power, limited cargo in CNG models.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Things to Consider Before You Buy</h2>
+                <ol>
+                    <li><span class="font-weight-700">City vs. Highway Use:</span> Hybrids save more in city conditions due to frequent EV-assisted drive.</li>
+                    <li><span class="font-weight-700">Fuel Prices & Preferences:</span> Compare petrol, diesel, or CNG costs in your region.</li>
+                    <li><span class="font-weight-700">Resale & Maintenance:</span> Maruti's service network is robust; hybrids and Tata models may have varying coverage.</li>
+                    <li><span class="font-weight-700">Feature Expectations:</span> Maruti models are basic on features; Altroz, Grand Vitara, and Hyryder are more premium.</li>
+                    <li><span class="font-weight-700">Space & Utility Needs:</span> Sedans/SUVs offer more comfort but at slightly lower mileage than hatchbacks.</li>
+                </ol>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Honorable Mentions</h2>
+                <ul>
+                    <li><span class="font-weight-700">Maruti Fronx / Toyota Taisor:</span> Compact SUV ~22.8 kmpl</li>
+                    <li><span class="font-weight-700">Hyundai Creta Diesel:</span> SUV ~21.8 kmpl</li>
+                    <li><span class="font-weight-700">Renault Kiger:</span> Compact SUV petrol ~20–20.5 kmpl</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Conclusion</h2>
+                <p>The <span class="font-weight-700">2025 mileage battle</span> in India is being won by hybrids, but <span class="font-weight-700">entry-level petrol hatchbacks</span> still offer excellent value, efficiency, and affordability. For those prioritizing green credentials and economy, the <span class="font-weight-700">Grand Vitara/Hyryder hybrid</span> and <span class="font-weight-700">City hybrid</span> lead the charge. Budget-conscious buyers will find a reliable mix of mileage and cost-effectiveness in <span class="font-weight-700">Maruti's AMT line-up</span>. Ultimately, decide based on your usage—urban vs. highway, fuel type preferences, passenger needs—to choose the car that best fits your driving needs and pocket.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs: Top Mileage Cars in India 2025</h2>
+
+                <div class="accordion" id="faqMileageCars">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which car has the highest mileage in India 2025?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqMileageCars">
+                            <div class="accordion-body">
+                                The Maruti Grand Vitara/Toyota Urban Cruiser Hyryder hybrid leads with 27.97 kmpl ARAI-certified mileage.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Are hybrid cars worth the extra cost?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqMileageCars">
+                            <div class="accordion-body">
+                                Hybrids make financial sense if you drive mostly in city conditions and keep the car long-term (5+ years) to offset the higher initial cost with fuel savings.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Which budget car gives the best mileage?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqMileageCars">
+                            <div class="accordion-body">
+                                The Maruti Celerio offers excellent mileage (26 kmpl) at the most affordable price (starting ₹5.64L).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Is CNG better than petrol for mileage?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqMileageCars">
+                            <div class="accordion-body">
+                                CNG offers better running costs (₹/km) due to lower fuel prices, though petrol hybrids now match CNG's efficiency in kmpl terms.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which premium hatchback has good mileage?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqMileageCars">
+                            <div class="accordion-body">
+                                The Tata Altroz CNG offers excellent mileage (26.9 km/kg) while being premium, though the Hyundai Grand i10 Nios is more feature-rich.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Do automatic cars give less mileage?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqMileageCars">
+                            <div class="accordion-body">
+                                Modern AMTs and hybrids (like the Grand Vitara) often match or exceed manual transmission mileage due to optimized gear shifts.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which SUV has good mileage?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqMileageCars">
+                            <div class="accordion-body">
+                                The Maruti Grand Vitara/Toyota Hyryder hybrid (27.97 kmpl) leads, followed by the Maruti Fronx (22.8 kmpl) among conventional SUVs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. How accurate are ARAI mileage figures?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqMileageCars">
+                            <div class="accordion-body">
+                                ARAI tests are conducted in controlled lab conditions. Real-world mileage is typically 10-20% lower depending on driving conditions.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Which diesel car has good mileage?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqMileageCars">
+                            <div class="accordion-body">
+                                The Tata Altroz diesel (23.6 kmpl) leads among hatchbacks, while the Hyundai Creta diesel (21.8 kmpl) is efficient among SUVs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Should I buy hybrid or CNG for mileage?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqMileageCars">
+                            <div class="accordion-body">
+                                Hybrids offer better driving experience and similar efficiency, while CNG has lower running costs but compromises boot space and performance.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>For Skoda Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="SkodaKylaq1"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

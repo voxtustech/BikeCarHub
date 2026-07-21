@@ -1,0 +1,221 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Altroz Facelift 2025: Features & Updates";
+}
+@section MetaTags {
+    <meta name="keywords" content="Tata Altroz Facelift 2025, Tata Altroz new features, Altroz 2025 price and specs, Tata Altroz sunroof, Altroz diesel 2025, Premium hatchbacks in India 2025, Tata Altroz turbo petrol, Altroz facelift launch date, Tata Altroz iRA features, Altroz vs i20 vs Baleno" />
+    <meta name="description" content="Discover all the updates in the 2025 Tata Altroz facelift – new design, features, engine options, and pricing. Here’s what’s changed!" />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                
+                @* <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p> *@
+                <p>
+                    Tata Motors is back in the spotlight with the unveiling of the much-anticipated <span class="font-weight-700">Altroz Facelift 2025</span>, a stylish upgrade to its premium hatchback offering. Launched at a starting price of <span class="font-weight-700">₹6.89 lakh (ex-showroom)</span>, the updated Altroz brings sharper aesthetics, smarter technology, and improved safety—setting a new benchmark in the competitive Indian hatchback segment. With rivals like the Hyundai i20 and Maruti Baleno constantly raising the bar, this facelift positions the Altroz as a serious contender. But what exactly has changed? Let’s take a detailed look at what’s new in the 2025 Tata Altroz.
+                </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataaltrozfacelift2025/2025-Tata-Altroz-Facelift.webp" alt="tataaltrozfacelift2025" title="tataaltrozfacelift2025" /></div>
+                </div>
+                <h3 class="subheading">Design and Exterior Updates</h3>
+                <p>The <span class="font-weight-700">2025 Altroz facelift</span> has been thoroughly refreshed on the outside, giving it a more mature and premium appearance while retaining its sporty hatchback proportions. </p>
+                <h3 class="subheading">LED Projector Headlamps with DRLs</h3>
+                <p>Tata has equipped the Altroz with <span class="font-weight-700">sleek LED projector headlamps</span> paired with <span class="font-weight-700">eyebrow-style daytime running lights</span>, creating a bold and aggressive front profile. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataaltrozfacelift2025/ledheadlampsanddrls.webp" alt="ledheadlampsanddrls" title="ledheadlampsanddrls" /></div>
+                </div>
+                <h3 class="subheading">Flush-Type Door Handles</h3>
+                <p>A segment-first addition, the Altroz now features <span class="font-weight-700">flush door handles</span>—similar to those seen on the Nexon EV and Tata Curvv concepts. These not only elevate the car's styling but also improve aerodynamics. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataaltrozfacelift2025/flushdoorhandles.webp" alt="flushdoorhandles" title="flushdoorhandles" /></div>
+                </div>
+                <h3 class="subheading">Connected LED Tail Lamps</h3>
+                <p>At the rear, the <span class="font-weight-700">new connected LED tail lamps</span> add a sense of width and modernity, tying together the rear fascia beautifully. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataaltrozfacelift2025/newtaillamp.webp" alt="newtaillamp" title="newtaillamp" /></div>
+                </div>
+                <h3 class="subheading">New Alloy Wheels</h3>
+                <p>The facelifted Altroz rolls on <span class="font-weight-700">freshly designed alloy wheels</span>, enhancing its stance and sporty appeal across variants. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataaltrozfacelift2025/alloywheels.webp" alt="alloywheels" title="alloywheels" /></div>
+                </div>
+                <h3 class="subheading">New Color Options</h3>
+                <p>Although not officially confirmed, Tata is likely to introduce <span class="font-weight-700">new exterior shades</span> to keep the lineup vibrant and youthful. </p>
+                <h3 class="subheading">Interior and Cabin Enhancements</h3>
+                <p>Step inside, and the updates become even more impressive. Tata has modernized the cabin to meet evolving customer expectations.</p>
+                <h3 class="subheading">Dual 10.25-inch Displays</h3>
+                <p>One of the biggest upgrades comes in the form of <span class="font-weight-700">dual 10.25-inch displays</span>—a touchscreen infotainment system and a fully digital instrument cluster. This setup is intuitive, crisp, and a major leap forward in cabin tech. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataaltrozfacelift2025/altrozinfotaiment.webp" alt="altrozinfotaiment" title="altrozinfotaiment" /></div>
+                </div>
+                <h3 class="subheading">Two-Spoke Steering Wheel</h3>
+                <p>Inspired by the new Nexon and the upcoming Curvv SUV, the facelift features a <span class="font-weight-700">two-spoke steering wheel with an illuminated Tata logo</span>, adding a luxurious flair to the driving experience. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataaltrozfacelift2025/altrozsteering.webp" alt="altrozsteering" title="altrozsteering" /></div>
+                </div>
+                <h3 class="subheading">Ventilated Front Seats</h3>
+                <p>Upper trims now offer <span class="font-weight-700">ventilated front seats</span>, a much-appreciated feature in Indian summers—boosting comfort during long drives.</p>
+                <h3 class="subheading">Voice-Activated Sunroof</h3>
+                <p>The Altroz facelift includes a <span class="font-weight-700">single-pane electric sunroof</span> that supports <span class="font-weight-700">voice commands</span>, bringing both convenience and a touch of flair to the drive. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataaltrozfacelift2025/sunroof.webp" alt="sunroof" title="sunroof" /></div>
+                </div>
+                <h3 class="subheading">Features and Technology Additions </h3>
+                <p>Tata hasn’t held back when it comes to packing the Altroz facelift with premium, segment-leading features. </p>
+                <ul>
+                    <li><span class="font-weight-700">360-Degree Camera:</span> Assists in low-speed maneuvering and tight parking spaces.</li>
+                    <li><span class="font-weight-700">6 Airbags Standard on Higher Trims:</span> Improved occupant protection across variants.</li>
+                    <li><span class="font-weight-700">Electronic Stability Control (ESC):</span> Ensures better grip and control during sudden direction changes. </li>
+                    <li><span class="font-weight-700">ISOFIX Child Seat Anchors:</span> Standard in higher variants, offering secure child seat integration. </li>
+                    <li><span class="font-weight-700">Wireless Android Auto & Apple CarPlay:</span> Combined with OTA updates for seamless connectivity.</li>
+                </ul>
+                <p>These features make the Altroz not just smarter, but also a much safer and more user-friendly hatchback. </p>
+                 <h3 class="subheading">Engine Options and Performance</h3>
+                <p>Under the hood, Tata offers a wide range of powertrain choices to meet every driving preference, from fuel efficiency to turbocharged fun. </p>
+                <h3 class="subheading">1.2L Naturally Aspirated Petrol </h3>
+                <ul>
+                    <li><span class="font-weight-700">Power:</span> 88 PS </li>
+                    <li><span class="font-weight-700">Transmission:</span> 5-speed Manual or 6-speed DCT</li>
+                    <li>Ideal for urban users looking for low-cost, hassle-free ownership. </li>
+                </ul>
+                <h3 class="subheading">1.2L Turbocharged Petrol</h3>
+                <ul>
+                    <li><span class="font-weight-700">Power:</span> 120 PS </li>
+                    <li><span class="font-weight-700">Transmission:</span> 6-speed Manual</li>
+                    <li>Appeals to performance enthusiasts who want more from their hatchback. </li>
+                </ul>
+                <h3 class="subheading">1.5L Diesel</h3>
+                <ul>
+                    <li><span class="font-weight-700">Power:</span> 90 PS</li>
+                    <li><span class="font-weight-700">Transmission:</span> 5-speed Manual </li>
+                    <li>One of the few diesel options still available in this segment.</li>
+                </ul>
+                <h3 class="subheading">1.2L CNG</h3>
+                <ul>
+                    <li><span class="font-weight-700">Power:</span> 73.5 PS</li>
+                    <li><span class="font-weight-700">Transmission:</span> 5-speed Manual </li>
+                    <li>A great pick for fuel-conscious users, especially in metro cities. </li>
+                </ul>
+                <p>With four distinct engine choices, the Altroz offers unparalleled flexibility in its class. </p>
+                <h3 class="subheading">Variants and Pricing</h3>
+                <p>The Altroz facelift continues with Tata’s familiar variant structure—<span class="font-weight-700">XE, XM, XT, XZ, and XZ+</span>, while adding new trims like <span class="font-weight-700">XZ Lux</span> and <span class="font-weight-700">XZ+ S</span> with added features. </p>
+                <ul>
+                    <li><span class="font-weight-700">Starting Price:</span> ₹6.89 lakh (Ex-showroom) </li>
+                    <li><span class="font-weight-700">Top-end trims (turbo petrol/DCT)</span> could go beyond ₹10 lakh </li>
+                </ul>
+                <p>The value proposition remains strong across the range, with even the mid-level variants offering premium features. </p>
+                <h3 class="subheading">How It Stacks Up Against Rivals</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature </th>
+                                <th class="text-center">Tata Altroz 2025 </th>
+                                <th class="text-center">Hyundai i20 </th>
+                                <th class="text-center">Maruti Baleno</th>
+                                <th class="text-center">Toyota Glanza</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Sunroof </td>
+                                <td>Yes (voice-activated) </td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>6 Airbags</td>
+                                <td>Yes </td>
+                                <td>Yes </td>
+                                <td>Yes </td>
+                                <td>Yes </td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Turbo Engine Option</td>
+                                <td>Yes </td>
+                                <td>Yes </td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Diesel Option </td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Infotainment Size </td>
+                                <td>10.25"</td>
+                                <td>10.25"</td>
+                                <td>9"</td>
+                                <td>9"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The Altroz stands tall with a broader powertrain lineup and unique safety features that many competitors miss. </p>
+                <h3 class="subheading">Launch Timeline and Availability</h3>
+                <p>The <span class="font-weight-700">Tata Altroz Facelift 2025</span> is now officially launched and expected to be <span class="font-weight-700">available across Tata dealerships nationwide</span> starting mid-2025. Bookings are already open on Tata's official website and authorized outlets. </p>
+                <h3 class="subheading">Final Thoughts</h3>
+                <p>The <span class="font-weight-700">2025 Tata Altroz Facelift</span> has successfully elevated the premium hatchback game. With thoughtful upgrades in design, tech, and comfort, it appeals to both young buyers and families looking for a smart, safe, and stylish daily driver. </p>
+                <p class="font-weight-700">Whether you're a first-time buyer or upgrading from an older hatchback, the new Altroz deserves a serious look. </p>
+                <h3 class="subheading">Frequently Asked Questions (FAQs)</h3>
+                <p class="font-weight-700">1. What is the starting price of the Tata Altroz 2025 facelift?</p>
+                <p>The new Altroz facelift starts at ₹6.89 lakh (ex-showroom). </p>
+                <p class="font-weight-700">2. Does the Altroz facelift come with a sunroof?</p>
+                <p>Yes, it features a single-pane electric sunroof with voice activation in top variants. </p>
+                <p class="font-weight-700">3. How many airbags are available in the Altroz facelift?</p>
+                <p>Up to 6 airbags are offered in higher variants for enhanced safety.</p>
+                <p class="font-weight-700">4. Is the diesel engine still available in the Altroz 2025?</p>
+                <p>Yes, Tata continues to offer a 1.5L diesel option with a manual transmission.</p>
+                <p class="font-weight-700">5. What’s new in the interior of the Altroz facelift?</p>
+                <p>Highlights include dual 10.25-inch displays, ventilated seats, and a two-spoke steering wheel. </p>
+                <p class="font-weight-700">6. Which engine is best for performance in the Altroz?</p>
+                <p>The 1.2L turbo petrol with 120 PS is the best choice for performance-focused buyers.</p>
+                <p class="font-weight-700">7. Does it support wireless Android Auto and Apple CarPlay?</p>
+                <p>Yes, wireless connectivity is available along with OTA updates.</p>
+                <p class="font-weight-700">8. Are flush door handles standard across all variants?</p>
+                <p>No, they are likely limited to higher trims.</p>
+                <p class="font-weight-700">9. Does the Altroz come with a CNG variant?</p>
+                <p>Yes, the 1.2L CNG option is available with a 5-speed manual transmission. </p>
+                <p class="font-weight-700">10. When will deliveries for the facelift model begin?</p>
+                <p>Deliveries for the Tata Altroz facelift are expected to begin soon after bookings,which started on June 2, 2025</p>
+                <div class="div-line"></div>
+                <p class="font-weight-700">If you want to know about Tata Altroz Facelift : The Value-for-Money Variant  <a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_1">click here</a></p>
+                <p class="font-weight-700">If you want to know about  Feature and Specifications of Tata Altroz Facelift  <a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_2">click here</a> </p>
+@*                 <p class="font-weight-700">If you want to know more about Tata Altroz Facelift 2025  <a class="for-link" asp-controller="Blogs" asp-action="June042025BlogDetails2">click here</a></p> *@
+            </div>
+            @await Html.PartialAsync("_AllBrandComponent")
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

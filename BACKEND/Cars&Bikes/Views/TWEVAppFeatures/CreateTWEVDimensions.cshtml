@@ -1,0 +1,38 @@
+﻿@model Cars_Bikes.Models.TWDimensionsAndCapacity
+@{
+    ViewData["Title"] = "Add Dimensions and Capacity";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <form asp-action="CreateTWEVDimensions" method="post">
+                        <select asp-for="TwoWheelerId" asp-items="ViewBag.TwoWheelers" class="form-control"></select>
+                        <select asp-for="TWVarientId" asp-items="ViewBag.TWVarients" class="form-control"></select>
+                        <input asp-for="TWName" class="form-control" placeholder="TW Name" />
+                        <input asp-for="Varients" class="form-control" placeholder="Varients" />
+                        <input asp-for="Width" class="form-control" placeholder="Width" />
+                        <input asp-for="Length" class="form-control" placeholder="Length" />
+                        <input asp-for="Height" class="form-control" placeholder="Height" />
+                        <input asp-for="FuelCapacity" class="form-control" placeholder="Fuel Capacity" />
+                        <input asp-for="GroundClearance" class="form-control" placeholder="Ground Clearance" />
+                        <input asp-for="Wheelbase" class="form-control" placeholder="Wheelbase" />
+                        <input asp-for="KerbWeight" class="form-control" placeholder="Kerb Weight" />
+                        <input asp-for="FuelReserve" class="form-control" placeholder="Fuel Reserve" />
+                        <input asp-for="SaddleHeight" class="form-control" placeholder="Saddle Height" />
+                        <button type="submit" class="btn btn-primary mt-2">Save</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

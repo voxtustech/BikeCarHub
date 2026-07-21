@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Kawasaki Versys-X 300: Milage, Performance & Specs";
+}
+@section MetaTags{
+    <meta name="keywords" content="Kawasaki Versys-X 300, Versys-X 300 specs, Kawasaki Versys-X price, Versys-X 300 features, Kawasaki adventure bike, Versys 300 review, compact adventure motorcycles" />
+    <meta name="description" content="Discover the Kawasaki Versys-X 300, designed for versatile adventure with its 296cc engine, nimble handling, and rugged features. Check out specs and pricing." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="overlay-black-middle" style=" background:linear-gradient(#475372, #78829A, #9EA3AD, #fff); margin:0;">
+    <img src="~/images/background/banner.png" />
+</div> *@
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" /></div> *@
+<!-- Breadcrumb row END -->
+@* <div class="car-details-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="nav">
+                    <ul>
+                        <li><a></a></li>
+                        <li class="active"><a href="car-details-overview.html">Overview</a></li>
+                        <li><a href="car-detail-specifications.html">Specifications</a></li>
+                        <li><a href="car-detail-price.html">Price</a></li>
+                        <li><a href="car-detail-compare.html">Compare</a></li>
+                        <li><a href="car-detail-pictures.html">Pictures</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+<body>
+    <div class=" ">
+    <h1 class="latest-bike-head">Upcoming Bikes</h1>
+    <div class="TWupcoming-container">
+        <div class="upcoming-bikes-details-image">
+            <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+            <div class="upcoming-bikes-details-text">
+                <h2>@Model.UpcomingBikeName</h2>
+                <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+            </div>
+        </div>
+
+        <div class="upcoming-bikes-details-content">
+            <h2>About @Model.UpcomingBikeName</h2>
+            @* <p>@Html.Raw(@Upbike.UpcomingBikeDetails.Replace("\n", "<br>"))</p> *@
+            <p>Kawasaki Versys-X 300 is expected to launch in India in September 2024 in the expected price range of ₹ 4,80,000 to ₹ 5,20,000. Currently available bikes which are similar to Versys-X 300 are Honda NX500, Benelli TRK 502 & Moto Morini X-Cape. Another bike similar to Versys-X 300 is Honda CRF300L which is launching in October 2024 in India.</p>
+            <p>Kawasaki Versys X-300 is an adventure tourer motorcycle from the Japanese manufacturer. The motorcycle is yet to receive a BS6 upgrade. The old model, for reference, used a 296cc parallel-twin motor that produced 38.5bhp and 27Nm of torque. Do note that the Versys X-300 shares its engine with the Ninja 300, and the latter has already received the necessary changes to comply with the newest emission norms.</p>
+            <p>In terms of design, the Versys X-300 will feature a single-pod headlight at the front, a semi-fairing, a tall windscreen, a step-up saddle, and a side-slung exhaust. Being an off-road focussed motorcycle, the Versys X-300 used wire-spoke wheels that were wrapped in tube-type tyres. The feature list on the motorcycle includes a halogen headlight at the front and a semi-digital instrument cluster.</p>
+            <p>The hardware on the motorcycle comprises telescopic front forks and a rear mono-shock to handle the suspension tasks. The braking tasks are handled by single discs on both wheels while the safety net includes a dual-channel ABS.</p>
+        </div>
+    </div>
+    }
+    <!-- Bike 1 -->
+    <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allUpbike in ViewBag.allupcomingbike)
+        {
+            <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                <div class="upcoming-bikes-details-card">
+                    <div class="upcoming-bikes-all-image">
+                        <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                    </div>
+
+                    <div class="upcoming-allbikes-details-content">
+                        <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                        <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                        <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+    </div>
+</body>

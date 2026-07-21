@@ -1,0 +1,514 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Interceptor 650 vs Continental GT 650 - Full Review";
+}
+@section MetaTags {
+    <meta name="keywords" content="Royal Enfield 650 comparison, Interceptor 650 vs GT 650, Royal Enfield twin specs, Interceptor 650 mileage, Continental GT features, Best 650cc bikes in India, Retro bikes under 4 lakhs, BikeCarHub Royal Enfield guide, GT 650 top speed, Royal Enfield twin torque,bikecarhub" />
+    <meta name="description" content="Compare Royal Enfield Interceptor 650 vs Continental GT 650 at bikecarhub Specs, comfort, features & verdict based on official brochures. From BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 11th August 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                @* <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p> *@
+
+                <p>The mid-size motorcycle market in India has never been this exciting, and at the forefront of this surge are two iconic machines from  <a class="for-link" asp-controller="Honda" asp-action="HondaShine125">Royal Enfield</a>—<span class="font-weight-700"> Interceptor 650 </span>and <span class="font-weight-700"> Continental GT 650. </span>While they share the same DNA, these siblings couldn’t be more different in personality.</p>
+                <p>This comprehensive comparison by <span class="font-weight-700"> BikeCarHub</span> dives deep into the specs, comfort, design, features, and performance—using verified information from Royal Enfield—to help you choose your perfect 650cc twin.</p>
+
+                <h3 class="subheading">1. Design Heritage: Classic Roadster vs Retro Racer</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/InterceptorVsContinentalgt/continental gt650.avif" alt=" continental gt650" title=" continental gt650" /></div>
+                </div>
+
+                <h5 class="subheading">Interceptor 650</h5>
+                <p>Inspired by the Interceptor 750 of the 1960s, the Interceptor 650 blends vintage charm with everyday versatility. Its upright stance, teardrop tank, and wide handlebars scream California cruiser.</p>
+                <p><span class="font-weight-700"> Price Range: Rs.3,09,551-Rs.3,39,158 </span>(Based on the colour) </p>
+                <h5 class="subheading">Continental GT 650</h5>
+                <p>Born as a modern reincarnation of the café racer culture, the GT 650 is sleek, aggressive, and unmistakably sporty. The sculpted fuel tank, clip-on handlebars, and rear-set footpegs reflect its performance-oriented DNA.</p>
+                <p><span class="font-weight-700">Price Range: Rs.3,25,897-Rs.3,52,459</span> (Based on the colour)</p>
+                <p><span class="font-weight-700">Verdict:</span></p>
+                <ul>
+                    <li>Interceptor is for those who love retro with comfort. </li>
+                    <li>Continental GT is for those who love retro with racing spirit.</li>
+                </ul>
+
+                <h3 class="subheading">2. Engine and Performance (Identical Twins)</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/InterceptorVsContinentalgt/gt.avif" alt="gt" title="gt" /></div>
+                </div>
+
+                <p>Both motorcycles are powered by the same air/oil-cooled 648cc parallel-twin engine.</p>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Spec</th>
+                                <th class="text-center font-weight-600">Interceptor 650</th>
+                                <th class="text-center font-weight-600">Continental GT 650</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Engine Type</td>
+                                <td>4-stroke, SOHC</td>
+                                <td>4-stroke, SOHC</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Power Output</td>
+                                <td>34.9 kW@7250RPM</td>
+                                <td>34.9 kW@7250RPM</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Torque</td>
+                                <td>52.3 Nm@5150 RPM</td>
+                                <td>52.3 Nm@5150 RPM</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Gearbox</td>
+                                <td>6-speed with slipper clutch</td>
+                                <td>6-speed with slipper clutch</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Fuel System</td>
+                                <td>EFI</td>
+                                <td>EFI</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>While the specs are identical, the <span class="font-weight-700"> GT 650 feels sharper, </span>thanks to its sporty riding triangle, while the <span class="font-weight-700"> Interceptor feels more forgiving </span>for daily use.</p>
+
+                <h3 class="subheading">3. Ergonomics & Ride Comfort</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/InterceptorVsContinentalgt/gt1.avif" alt="gt1" title="gt1" /></div>
+                </div>
+
+                <h5 class="subheading">Interceptor 650</h5>
+                <ul>
+                    <li>Upright handlebar</li>
+                    <li>Low seat height (comfortable for most riders) </li>
+                    <li>Neutral footpeg position</li>
+                    <li>Ideal for long rides and commuting</li>
+                </ul>
+                <h5 class="subheading">Continental GT 650</h5>
+                <ul>
+                    <li>Clip-on handlebars</li>
+                    <li>Sporty, forward-leaning posture</li>
+                    <li>Rear-set footpegs</li>
+                    <li>Better cornering feel, less comfortable for city riding</li>
+                </ul>
+                <p><span class="font-weight-700"> Verdict:</span></p>
+                <p>Choose the <span class="font-weight-700"> GT 650</span> if you like a committed riding posture; go with the <span class="font-weight-700"> Interceptor </span>for all-day comfort and casual fun.</p>
+
+                <h3 class="subheading">4. Chassis and Handling</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/InterceptorVsContinentalgt/interceptor 650.avif" alt="interceptor 650" title="interceptor 650" /></div>
+                </div>
+
+                <p>Both motorcycles are built on a <span class="font-weight-700"> steel tubular double cradle frame, </span> developed in collaboration with <span class="font-weight-700"> Harris Performance. </span></p>
+                <ul>
+                    <li><span class="font-weight-700">Suspension (Front): </span> 41mm telescopic forks</li>
+                    <li><span class="font-weight-700">Suspension (Rear): </span> Twin gas-charged shock absorbers with adjustable preload</li>
+                    <li><span class="font-weight-700">Wheelbase: </span> 1398 mm (same for both) </li>
+                    <li><span class="font-weight-700">Ground Clearance: </span> 174 mm</li>
+                </ul>
+                <p>The GT 650 gets slightly stiffer rear damping, offering better feedback while cornering, while the Interceptor’s softer tuning enhances comfort on bumpy roads.</p>
+
+                <h3 class="subheading">5. Dimensions & Weight Comparison</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/InterceptorVsContinentalgt/interceptor.avif" alt="interceptor" title="interceptor" /></div>
+                </div>
+
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Feature</th>
+                                <th class="text-center font-weight-600">Interceptor 650</th>
+                                <th class="text-center font-weight-600">Continental GT 650</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Length</td>
+                                <td>2119 mm</td>
+                                <td>2119 mm</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Width</td>
+                                <td>835 mm</td>
+                                <td>780 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Height</td>
+                                <td>1067 mm</td>
+                                <td>1067 mm</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Fuel Tank</td>
+                                <td>13.7 litres</td>
+                                <td>12.5 litres</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Kerb Weight</td>
+                                <td>218 kg</td>
+                                <td>214 kg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><span class="font-weight-700">Interceptor is heavier but offers more fuel capacity,</span> perfect for long touring. GT is lighter and more agile, ideal for city bursts or corner carving.</p>
+
+                <h3 class="subheading">6. Brakes, Tyres & Electricals</h3>
+                <p>Both motorcycles share the same safety and electrical kit:</p>
+                <ul>
+                    <li><span class="font-weight-700">Front Brake:</span> 320mm disc with ABS</li>
+                    <li><span class="font-weight-700">Rear Brake: </span> 240mm disc with ABS</li>
+                    <li><span class="font-weight-700">Tyres: </span> 100/90-18 (F), 130/70-R18 (R) </li>
+                    <li><span class="font-weight-700">Tyres Type: </span> Tubeless (in alloy wheel variants) </li>
+                    <li><span class="font-weight-700">Battery: </span> 12V - 12Ah VRLA</li>
+                    <li><span class="font-weight-700">Headlamp: </span> LED (FPL 1.55W) </li>
+                    <li><span class="font-weight-700">Tail lamp: </span>  Halogen</li>
+                    <li><span class="font-weight-700">USB Port: </span> Yes</li>
+                </ul>
+
+                <h3 class="subheading">7. Features & Customization Options</h3>
+                <p>Royal Enfield's <span class="font-weight-700">Make It Yours (MiY)</span> program allows extensive customization from Day one:</p>
+                <p><span class="font-weight-700">Shared Features: </span></p>
+                <ul>
+                    <li>Adjustable clutch and brake levers</li>
+                    <li>USB charger</li>
+                    <li>Tubeless cast alloy wheels (on Black variants) </li>
+                    <li>LED headlamp</li>
+                    <li>High-quality switch cubes</li>
+                </ul>
+
+                <p><span class="font-weight-700">Exclusive GT 650 Add-ons: </span></p>
+                <ul>
+                    <li>Bar-end mirrors</li>
+                    <li>Seat cowls (dual and single) </li>
+                    <li>Sport screens and clip-ons</li>
+                </ul>
+                <p><span class="font-weight-700">Exclusive Interceptor Add-ons:</span></p>
+                <ul>
+                    <li>Touring seats</li>
+                    <li>Brace pads and wider grips</li>
+                    <li>Chrome engine guards</li>
+                </ul>
+                <p>Visit<span class="font-weight-700"> BikeCarHub</span> for full accessory listings and recommendations for long-distance touring setups.</p>
+
+                <h3 class="subheading">8. Pricing & Value</h3>
+                <p>Though prices may vary slightly by variant and city, both models are competitively priced in the ₹3.03–₹3.39 lakh (ex-showroom) range.</p>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Model</th>
+                                <th class="text-center font-weight-600">Estimated Ex-Showroom Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Interceptor 650</td>
+                                <td><span class="font-weight-700"> ₹3,09,551-₹3,39,158</span> (Based on the colour)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Continental GT 650</td>
+                                <td><span class="font-weight-700"> ₹3,25,897-₹3,52,459 </span>(Based on the colour)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">9. Summary: Which One Should You Pick?</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Criteria</th>
+                                <th class="text-center font-weight-600">Best Pick</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">City Comfort</td>
+                                <td>Interceptor 650</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Corner Carving</td>
+                                <td>Continental GT 650</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Long Distance Riding</td>
+                                <td>Interceptor 650</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Style & Retro Racing</td>
+                                <td>Continental GT 650</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Beginner-Friendly</td>
+                                <td>Interceptor 650</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">Specifications Comparison Table</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Feature</th>
+                                <th class="text-center font-weight-600">Interceptor 650</th>
+                                <th class="text-center font-weight-600">Continental GT 650</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Engine</td>
+                                <td>648cc, Parallel-Twin</td>
+                                <td>648cc, Parallel-Twin</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Max Power</td>
+                                <td>34.9 kW@7250 RPM</td>
+                                <td>34.9 kW@7250 RPM</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Max Torque</td>
+                                <td>52.3 Nm@5150 RPM</td>
+                                <td>52.3 Nm@5150 RPM</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Transmission</td>
+                                <td>6-speed, Slipper Clutch</td>
+                                <td>6-speed, Slipper Clutch</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Fuel Tank</td>
+                                <td>13.7 litres</td>
+                                <td>12.5 litres</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Kerb Weight</td>
+                                <td>218 kg</td>
+                                <td>214 kg</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Riding Posture</td>
+                                <td>Upright</td>
+                                <td>Sporty</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Handlebar</td>
+                                <td>Wide Bar</td>
+                                <td>Clip-ons</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Footpegs</td>
+                                <td>Mid-mounted</td>
+                                <td>Rear-set</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">ABS</td>
+                                <td>Dual-Channel</td>
+                                <td>Dual-Channel</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <h3 class="subheading">Conclusion</h3>
+                <p>In the battle of the 650 twins, it’s less about specs and more about soul. If comfort, cruising, and everyday usability matter—go with the <a class="for-link" asp-controller="RoyalEnfield" asp-action="REInterceptor650"> Interceptor 650.</a> If you’re drawn to corner carving, café racer nostalgia, and sharp styling, the <a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Continental GT 650 </a>will speak your language.</p>
+                <p>Both are authentic, mechanically identical, and customizable—so either way, you're riding a modern classic with a lot of heart.</p>
+                <p>For more riding guides and real-world reviews, stay tuned with <a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub.</a></p>
+
+
+                <h3 class="subheading">FAQs About Interceptor 650 vs Continental GT 650</h3>
+
+                <div class="accordion" id="faqTeslaModelY">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Are the engines on both bikes the same?
+                            </button>
+                        </h3>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Yes, both share the same 648cc parallel-twin engine with identical power and torque figures.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Which bike is more comfortable for daily commuting?
+                            </button>
+                        </h3>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The Interceptor 650, thanks to its upright ergonomics and softer seat.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+
+                                3. Which model is better for long touring?
+                            </button>
+                        </h3>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The Interceptor, with a larger fuel tank and relaxed riding position.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Can I fit a rear seat on the GT 650?
+                            </button>
+                        </h3>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Yes, but some café-style variants come with a single-seat cowl by default.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Do both bikes come with dual-channel ABS?
+                            </button>
+                        </h3>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Absolutely, safety is standard across both.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Which is lighter: GT 650 or Interceptor?
+                            </button>
+                        </h3>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The Continental GT 650 is slightly lighter at 214 kg.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Do both offer LED headlamps?
+                            </button>
+                        </h3>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+
+
+                                Yes, especially in the blacked-out variants.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Are they suitable for beginners?
+                            </button>
+                        </h3>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+
+                                The Interceptor is more beginner-friendly due to its upright stance.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Which one offers better cornering performance?
+                            </button>
+                        </h3>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+
+                                The GT 650, thanks to its aggressive café racer ergonomics.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Where can I compare accessories and customization?
+                            </button>
+                        </h3>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Head over to BikeCarHub for a complete breakdown of available options.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* @await Component.InvokeAsync("AllBlog") *@
+    @* @await Html.PartialAsync("_AllBrandComponent") *@
+    @await Html.PartialAsync("_AllViewComponent")
+
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

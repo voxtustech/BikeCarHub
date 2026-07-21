@@ -1,0 +1,298 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Hyundai Creta EV vs. Maruti Suzuki e-Vitara: Comprehensive Comparison of India’s Leading Electric SUVs";
+}
+@section MetaTags {
+    <meta name="keywords" content="Hyundai Creta EV, Maruti Suzuki e-Vitara, electric SUVs India, Creta EV specifications, e-Vitara features, Hyundai EV vs Maruti EV, compact electric SUVs, affordable EVs India, Creta EV range, e-Vitara price" />
+    <meta name="description" content="Explore the Hyundai Creta EV and Maruti Suzuki e-Vitara in this detailed comparison. Discover their key specifications, features, pricing, and which electric SUV suits your needs best." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Hyundai Creta EV: Overview</h3>
+                <p>The Hyundai Creta EV builds upon the success of the popular ICE (Internal Combustion Engine) Creta, now transitioning into the electric age.</p>
+                <h5 class="subheading">Key Specifications:</h5>
+                <ul>
+                    <li>
+                        <span class="font-weight-700">Battery Pack:</span> 60 kWh Lithium-ion battery
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Driving Range:</span> ~450 km (ARAI-certified)
+                    </li>
+                    <li>
+                        <span class="font-weight-700"> Motor Power:</span> 150 kW (201 hp)
+                    </li>
+
+                    <li>
+                        <span class="font-weight-700">
+                            Charging Time:
+                        </span>
+                        <ul>
+                            <li>DC Fast Charger: ~1 hour (10-80%)</li>
+                            <li>AC Home Charger: ~7 hours (0-100%)</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span class="font-weight-700">Top Speed:</span> 165 km/h
+                    </li>
+
+                    <li>
+                        <span class="font-weight-700">Acceleration:</span> 0-100 km/h in ~8.5 seconds
+                    </li>
+                </ul>
+
+				<h5 class="subheading">Key Features:</h5>
+                <div class="row m-b20">
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2025/jan/cretavsevitara/creta/cretaevsmall2.jpg" alt="cretacharger" title="cretacharger" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2025/jan/cretavsevitara/creta/rear1.jpg" alt="cretarear" title="cretarear" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2025/jan/cretavsevitara/creta/infotainmentandcluster.jpg" alt="cretadisplay" title="cretadisplay" /></div>
+                </div>
+                <ul>
+                    <li>
+                      	Advanced driver-assistance systems (ADAS) including adaptive cruise control, lane-keeping assist, and blind-spot monitoring.
+                    </li>
+                    
+                    <li>
+                        10.25-inch touchscreen infotainment system with wireless Android Auto and Apple CarPlay.
+                    </li>
+                    
+                    <li>
+                        Over-the-air (OTA) software updates.
+                    </li>
+
+                    <li>
+                        Premium interiors with ventilated seats and an electronic sunroof.
+                    </li>
+
+                    <li>
+                        Vehicle-to-Load (V2L) feature for powering external devices.
+                    </li>
+                </ul>
+                <h5 class="subheading">Price (Expected):</h5>
+                <p>₹19-23 lakhs (ex-showroom)</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Maruti Suzuki e-Vitara: Overview</h3>
+                <p>Maruti Suzuki enters the EV space with the e-Vitara, designed to cater to India’s growing demand for sustainable mobility while ensuring affordability.</p>
+                <h5 class="subheading">Key Specifications:</h5>
+                <ul>
+                    <li>
+                        <span class="font-weight-700">Battery Pack:</span> 48 kWh Lithium-ion battery
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Driving Range:</span> ~400 km (ARAI-certified)
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Motor Power:</span>  130 kW (174 hp)
+                    </li>
+                    <li>
+                        <span class="font-weight-700">
+                            Charging Time:</span>
+                        <ul>
+                            <li>DC Fast Charger:  ~50 minutes (10-80%)</li>
+                            <li>AC Home Charger: ~6.5 hours (0-100%)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Top Speed:</span> 150 km/h
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Acceleration</span>: 0-100 km/h in ~9.2 seconds
+                    </li>
+                </ul>
+                <h5 class="subheading">Key Features:</h5>
+                <div class="row m-b20">
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2025/jan/cretavsevitara/evitara/digital.webp" alt="evitaradigital" title="evitaradigital" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2025/jan/cretavsevitara/evitara/display.webp" alt="evitaradisplay" title="evitaradisplay" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2025/jan/cretavsevitara/evitara/wirelesscharger.webp" alt="evitaracharger" title="evitaracharger" /></div>
+                </div>
+                <ul>
+                    <li>
+                        Smart Hybrid Technology for improved energy management.
+                    </li>
+                    <li>
+                        9-inch infotainment system with SmartPlay Pro+ and voice commands..
+                    </li>
+                    <li>
+                        Connected car features including remote locking, geo-fencing, and live tracking.
+                    </li>
+                    <li>
+                        Dual-zone climate control.
+                    </li>
+                    <li>
+                        Strong safety suite with 6 airbags, ABS with EBD, and ESP.
+                    </li>
+                </ul>
+                <h5 class="subheading">Price (Expected):</h5>
+                <p>₹16-20 lakhs (ex-showroom)</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Hyundai Creta EV vs. Maruti Suzuki e-Vitara: Key Comparisons</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Hyundai Creta EV</th>
+                                <th class="text-center">Maruti Suzuki e-Vitara</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Battery Capacity</td>
+                                <td>60 kWh</td>
+                                <td>48 kWh</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Range</td>
+                                <td>~450 km</td>
+                                <td>~400 km</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Motor Power</td>
+                                <td>150 kW (201 hp)</td>
+                                <td>130 kW (174 hp)</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Charging (DC)</td>
+                                <td>~1 hour (10-80%)</td>
+                                <td>~50 minutes (10-80%)</td>
+                            </tr>
+
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Infotainment System</td>
+                                <td>10.25-inch</td>
+                                <td>9-inch</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">ADAS Features</td>
+                                <td>Advanced (Level 2)</td>
+                                <td>Basic</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Price Range</td>
+                                <td>₹19-23 lakhs</td>
+                                <td>₹16-20 lakhs</td>
+                            </tr>
+                        </tbody>
+					</table>
+                    </div>
+                    <div class="div-line"></div>
+                    <h3 class="subheading">Performance and Driving Experience</h3>  
+                    <p>The Hyundai Creta EV’s higher motor power ensures quicker acceleration and better highway performance, while the e-Vitara focuses on a balanced drive with its Smart Hybrid Technology. The Creta EV’s extended range is an advantage for long-distance travelers, but the e-Vitara’s slightly quicker charging time may appeal to city commuters.</p>
+                    <div class="div-line"></div>
+					<h3 class="subheading">Interior and Comfort</h3>
+                    <div class="row m-b20">
+                        <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2025/jan/cretavsevitara/creta/interior.jpg"  alt="cretainterior" title="cretainterior" /></div>
+                        <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2025/jan/cretavsevitara/evitara/interior.webp"  alt="evitarainterior" title="evitarainterior" /></div>
+                    </div>
+                    <p>Hyundai has packed the Creta EV with premium features such as ventilated seats, a panoramic sunroof, and a larger touchscreen. The Maruti e-Vitara, while more affordable, offers practical features like dual-zone climate control and connected car technology. Both vehicles ensure spacious cabins and top-notch safety features.</p>
+                    <div class="div-line"></div>
+                    <h3 class="subheading">Final Verdict</h3>
+                    <p>The choice between the Hyundai Creta EV and the Maruti Suzuki e-Vitara depends largely on your budget and driving priorities. If you seek a premium electric SUV with advanced features and a longer range, the Hyundai Creta EV is a better fit. On the other hand, if affordability and practicality are your main concerns, the Maruti Suzuki e-Vitara offers excellent value for money.</p>
+                    <p>Choosing between the Hyundai Creta EV and the Maruti Suzuki e-Vitara depends on your priorities, as both vehicles cater to slightly different needs. Here's a breakdown of which one might suit you better:</p>
+                    <h3 class="subheading">Choose the Hyundai Creta EV if:</h3>
+                    <h5 class="subheading">1.	You prioritize performance and features: </h5>
+                    <ul>
+                        <li>With a more powerful motor (150 kW vs. 130 kW) and faster acceleration (0-100 km/h in ~8.5 seconds), the Creta EV delivers better highway and overtaking performance.</li>
+                        <li>Premium features like ventilated seats, a larger infotainment system, ADAS (Level 2), and vehicle-to-load (V2L) functionality make it feel more luxurious.</li>
+                    </ul>
+                    <h5 class="subheading">2.	You need a longer range: </h5>
+                    <ul>
+                        <li>The ~450 km range gives it an edge for long-distance travel, reducing the need for frequent charging on road trips.</li>
+                    </ul>
+                    <h5 class="subheading">3.	You want a premium, tech-rich experience: </h5>
+                    <ul>
+                        <li>The Creta EV has a higher focus on advanced technology, making it suitable for buyers seeking cutting-edge convenience.</li>
+                    </ul>
+                    <h3 class="subheading">Choose the Maruti Suzuki e-Vitara if:</h3>
+                    <h5 class="subheading">1.	Affordability matters most: </h5>
+                    <ul>
+                        <li>With a lower expected price (\u20b916-20 lakhs vs. \u20b919-23 lakhs), the e-Vitara is the more budget-friendly option while still offering great value.</li>
+                    </ul>
+                    <h5 class="subheading"> 2.	You're looking for practicality:</h5>
+                    <ul>
+                        <li>While it has slightly less range (~400 km), the faster DC charging (~50 minutes vs. ~1 hour) is a practical advantage for daily city use and shorter charging stops.</li>
+                    </ul>
+                    <h5 class="subheading"> 3.	You want reliability and proven service: </h5>
+                    <ul>
+                        <li>Maruti Suzuki’s extensive service network and reputation for affordable maintenance might appeal to cost-conscious buyers.</li>
+                    </ul>
+                    <ul>
+                        <li>Hyundai Creta EV: Ideal for buyers seeking a premium EV experience with advanced features, longer range, and powerful performance.</li>
+                        <li>Maruti Suzuki e-Vitara: Perfect for budget-conscious buyers who want a practical, reliable, and affordable electric SUV.</li>
+                    </ul>
+                    <p>If budget isn't a constraint, the Creta EV is the better option overall. However, for a balance between cost and functionality, the e-Vitara wins.</p>
+                   
+                </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

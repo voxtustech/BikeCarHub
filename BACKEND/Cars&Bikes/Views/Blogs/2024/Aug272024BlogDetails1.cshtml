@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="Header Image" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">MG Car Discounts:Gloster</h3>
+                <p>MG Motor is expected to launch the Gloster facelift in India by the end of the year. In anticipation of the new model’s arrival, the automaker is offering attractive benefits worth up to ₹6 lakh at the dealer level on the current Gloster model. The MG Gloster is a feature-rich SUV that boasts a premium cabin. Despite offering more equipment than the Toyota Fortuner, it has not been a top contender in its segment. To clear existing stock before the facelift arrives, MG is offering its biggest discount yet. The MG Gloster is currently priced between ₹47 lakh and ₹53.30 lakh (on-road, Mumbai).</p>
+                <h3 class="subheading">MG Hector: Up to ₹3 Lakh Off</h3>
+                <p>The MG Hector, along with the Hector Plus, is being offered with benefits of up to ₹3 lakh. The new MG Hector is available with a 2.0-litre diesel or 1.5-litre turbo petrol engine. The MG Hector competes directly with the Tata Harrier/Safari, Hyundai Alcazar, and Mahindra XUV700 in India. The MG Hector is currently priced from ₹16.56 lakh (on-road, Mumbai), with the Hector Plus starting at ₹20.99 lakh (on-road, Mumbai) before discounts. </p>
+                <h3 class="subheading">MG Astor: ₹2 Lakh Off</h3>
+                <p>The MG Astor, due for an update in the international market soon, is available with discounts of up to ₹2 lakh this month. Despite its competitive pricing, the Hyundai Creta rival has seen slow sales. The MG Astor is powered by a 1.5-litre naturally aspirated petrol engine or a 1.3-litre turbo petrol engine, with options for a 5-speed manual transmission, CVT, or 6-speed automatic gearbox. The MG Astor is currently priced between ₹11.68 lakh and ₹21.36 lakh (on-road, Mumbai), before the discounts. </p>
+                <h3 class="subheading">MG ZS EV: ₹2.2 Lakh Off</h3>
+                <p>The MG ZS EV, the electric version of the Astor, is currently offered with benefits worth up to ₹2.2 lakh. The ZS EV is equipped with a 50.3 kWh battery pack, delivering a claimed range of 461 km. This feature-loaded electric SUV is currently priced between ₹20.26 lakh and ₹27.01 lakh (on-road, Mumbai) before discounts.</p>
+                <h3 class="subheading">MG Comet EV: ₹90,000 Off</h3>
+                <p>The MG Comet EV, MG's entry-level electric vehicle, is offered with discounts of up to ₹90,000 before the launch of the new Windsor EV. The Comet EV comes with a 17.3 kWh battery pack, offering a claimed range of 230 km. The MG Comet EV directly competes with the Tata Tiago EV and is currently priced between ₹7.52 lakh and ₹10.17 lakh (on-road, Mumbai) before any discounts. --- You can use various tools such as Grammarly, Turnitin, or Copyscape to verify the uniqueness of the text.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+       @*  <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

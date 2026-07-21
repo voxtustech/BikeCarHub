@@ -1,0 +1,411 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "TVS Jupiter vs Honda Activa: 2025 Scooter Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="TVS Jupiter vs Honda Activa comparison 2025, Honda Activa mileage 2025, TVS Jupiter features 2025, Best scooters in India 2025, Activa vs Jupiter which is better, TVS Jupiter comfort review 2025, Honda Activa resale value 2025, Top commuter scooters 2025 India, TVS Jupiter mileage comparison, Honda Activa vs Jupiter specifications, Scooters with external fuel fill India, TVS Jupiter vs Activa maintenance cost, Best scooter for daily use 2025, Honda Activa 2025 features and price, TVS Jupiter service and performance review" />
+    <meta name="description" content="Compare TVS Jupiter vs Honda Activa in this 2025 guide. Get detailed specs, features, mileage, and expert recommendations to choose your ideal scooter." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 1th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+        
+               
+                <div class="div-line"></div>
+                <h2 class="subheading">TVS Jupiter: Overview</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/tvs jupiter vs honda activa/tvs jupiter.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <p>The <span class="font-weight-700">TVS Jupiter</span> is one of India's most trusted scooters, known for its comfort, practicality, and fuel efficiency. TVS has carefully positioned the Jupiter as a family-friendly, feature-packed scooter that offers excellent value for money.</p>
+                <p>In 2025, the TVS Jupiter comes with:</p>
+                <ul>
+                    <li>Refined engine</li>
+                    <li>Updated design</li>
+                    <li>Convenient features like external fuel fill and USB charging</li>
+                </ul>
+                <p><span class="font-weight-700">BikeCarHub</span> notes that the Jupiter's comfort-focused suspension and larger wheels give it a slight edge in ride quality over some rivals.</p>
+
+                <h2 class="subheading">Honda Activa: Overview</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/tvs jupiter vs honda activa/honda activa.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <p>The <span class="font-weight-700">Honda Activa</span> is India's all-time bestselling scooter. With decades of market leadership, the Activa has become synonymous with reliability and resale value.</p>
+                <p>In its 2025 avatar, the Activa continues to offer:</p>
+                <ul>
+                    <li>Smooth and refined engine</li>
+                    <li>Proven build quality</li>
+                    <li>Simple, user-friendly design</li>
+                </ul>
+                <p><span class="font-weight-700">BikeCarHub</span> finds that the Activa's wide service network and excellent resale value make it a favorite among first-time scooter buyers.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Detailed Specifications & Features Comparison</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Features</th>
+                                <th class="text-center">TVS Jupiter (Base Model)</th>
+                                <th class="text-center">Honda Activa (Base Model)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine</td>
+                                <td>109.7cc, single-cylinder, air-cooled engine</td>
+                                <td>109.51cc, single-cylinder, air-cooled engine</td>
+                            </tr>
+                            <tr>
+                                <td>Power</td>
+                                <td>8.02 PS</td>
+                                <td>7.8 bhp (7.99 PS) of power at 8,000 rpm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Torque</td>
+                                <td>9.2 Nm at 5000 rpm</td>
+                                <td>9.05 Nm at 5,500 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Mileage</td>
+                                <td>62 kmpl</td>
+                                <td>50 kmpl</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Fuel Tank Capacity</td>
+                                <td>5.1 litres</td>
+                                <td>5.3 litres</td>
+                            </tr>
+                            <tr>
+                                <td>Brakes</td>
+                                <td>Drum (CBS)</td>
+                                <td>Drum (CBS)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Suspension</td>
+                                <td>Telescopic front, adjustable rear</td>
+                                <td>Telescopic front, spring-loaded rear</td>
+                            </tr>
+                            <tr>
+                                <td>Features</td>
+                                <td>External fuel fill, USB charging, LED headlamp</td>
+                                <td>Silent start, fuel injection, LED headlamp</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Weight</td>
+                                <td>106 kg</td>
+                                <td>106 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Price Range (2025)</td>
+                                <td><strong>₹77,291(Base Model) -- ₹90,441(Top Model) (Ex-showroom)</strong></td>
+                                <td><strong>₹80,977(Base Model) -- ₹94,998(Top Model) (Ex-showroom)</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Design and Styling</h2>
+                <h3 class="subheading">TVS Jupiter</h3>
+                <p>The TVS Jupiter has a more <span class="font-weight-700">premium and slightly muscular look</span> compared to the Activa. With sharp lines, chrome elements, and attractive color options, it appeals to both young and family buyers.</p>
+
+                <h3 class="subheading">Honda Activa</h3>
+                <p>The Honda Activa sticks to a <span class="font-weight-700">simple and elegant design</span>, which has remained consistent over the years. It's not flashy, but it's universally accepted and loved by all age groups.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Performance and Riding Experience</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/tvs jupiter vs honda activa/tvs jupiter-1.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <h3 class="subheading">TVS Jupiter</h3>
+                <p><span class="font-weight-700">BikeCarHub's assessment</span> finds the Jupiter's engine smooth and punchy enough for city rides. Thanks to its telescopic front suspension and larger 12-inch wheels, it feels more stable and offers a comfortable ride over potholes and speed breakers.</p>
+
+                <h3 class="subheading">Honda Activa</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/tvs jupiter vs honda activa/honda activa-1.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <p>The Activa's engine is equally refined with <span class="font-weight-700">good throttle response for stop-and-go traffic.</span> Its spring-loaded suspension is decent, but on rough patches, it feels slightly less composed than Jupiter.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Mileage and Fuel Efficiency</h2>
+                <p>TVS Jupiter offers better <span class="font-weight-700">mileage of 62 kmpl</span> whereas Honda Activa offers <span class="font-weight-700">mileage of 50 kmpl</span> in real-world riding. Honda's fuel-injection technology offers a slight edge in engine smoothness, while TVS Jupiter's external fuel fill provides added convenience for daily users.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Comfort and Practicality</h2>
+                <h3 class="subheading">TVS Jupiter</h3>
+                <ul>
+                    <li>External fuel fill makes refueling easy without opening the seat.</li>
+                    <li>Telescopic suspension offers a cushioned ride.</li>
+                    <li>Spacious footboard and comfortable seat.</li>
+                </ul>
+
+                <h3 class="subheading">Honda Activa</h3>
+                <ul>
+                    <li>Silent start system is user-friendly and vibration-free.</li>
+                    <li>Slightly lighter, making it easy for elderly riders.</li>
+                    <li>Seat is wide and comfortable for both rider and pillion.</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub recommends</span> the TVS Jupiter for those who prioritize comfort and practicality.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Features and Technology</h2>
+                <h3 class="subheading">TVS Jupiter</h3>
+                <ul>
+                    <li>USB charging port</li>
+                    <li>LED headlamp</li>
+                    <li>External fuel fill</li>
+                    <li>Larger front wheel for added stability</li>
+                </ul>
+
+                <h3 class="subheading">Honda Activa</h3>
+                <ul>
+                    <li>Silent start with ACG motor</li>
+                    <li>Fuel-injected engine for better throttle response</li>
+                    <li>LED headlamp</li>
+                    <li>Side stand engine cut-off (in higher variants)</li>
+                </ul>
+
+                <p>Both scooters now offer <span class="font-weight-700">modern safety features like CBS (Combined Braking System)</span>, but the Jupiter offers more practical convenience features.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Safety Features</h2>
+                <p>Both scooters come with:</p>
+                <ul>
+                    <li>CBS braking</li>
+                    <li>Telescopic front suspension for improved braking stability</li>
+                </ul>
+                <p>However, <span class="font-weight-700">TVS Jupiter's larger wheels provide a slightly safer and more stable ride over bad roads.</span></p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Maintenance and After-Sales Service</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/tvs jupiter vs honda activa/honda activa-2.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <h3 class="subheading">Honda Activa</h3>
+                <ul>
+                    <li>Exceptional service network across India</li>
+                    <li>High resale value</li>
+                    <li>Lower service intervals but slightly higher maintenance cost</li>
+                </ul>
+
+                <h3 class="subheading">TVS Jupiter</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/tvs jupiter vs honda activa/tvs jupiter-2.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <ul>
+                    <li>Expanding service network</li>
+                    <li>Affordable maintenance costs</li>
+                    <li>Slightly lower resale value compared to Activa</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub's observation:</span> The Honda Activa's strong after-sales reputation gives it an advantage for long-term ownership.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">BikeCarHub's Recommendation: Which Scooter Should You Buy?</h2>
+                <ul>
+                    <li><span class="font-weight-700">For Comfort & Features:</span> TVS Jupiter</li>
+                    <li><span class="font-weight-700">For Resale Value & Service:</span> Honda Activa</li>
+                    <li><span class="font-weight-700">For Long City Commutes:</span> TVS Jupiter</li>
+                    <li><span class="font-weight-700">For Simplicity & Brand Trust:</span> Honda Activa</li>
+                </ul>
+
+                <p>
+                    If you prioritize features like external fuel fill, USB charging, and better ride comfort, <span class="font-weight-700">BikeCarHub recommends the TVS Jupiter.</span><br>
+                    If you want a no-nonsense scooter with outstanding resale value and wider service reach, the <span class="font-weight-700">Honda Activa is the best pick.</span>
+                </p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Conclusion</h2>
+                <p>
+                    Both the <span class="font-weight-700">TVS Jupiter and Honda Activa are fantastic scooters</span> that offer reliability, fuel efficiency, and everyday convenience.<br>
+                    The final decision should depend on <span class="font-weight-700">your priorities: comfort and features (Jupiter) or proven brand trust and resale value (Activa).</span>
+                </p>
+
+                <p>For more two-wheeler comparisons, reviews, and buying guides, visit <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></span> regularly to stay updated.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs: TVS Jupiter vs Honda Activa</h2>
+
+                <div class="accordion" id="faqJupiterActiva">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which scooter gives better mileage, TVS Jupiter or Honda Activa?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqJupiterActiva">
+                            <div class="accordion-body">
+                                TVS Jupiter offers better mileage of 62 kmpl whereas Honda Activa offers mileage of 50 kmpl in real-world riding.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Which scooter is better for comfort?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqJupiterActiva">
+                            <div class="accordion-body">
+                                TVS Jupiter offers slightly better comfort due to its telescopic suspension and larger 12-inch wheels.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Which scooter has a better resale value?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqJupiterActiva">
+                            <div class="accordion-body">
+                                The Honda Activa generally holds a stronger resale value in the Indian market.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Does TVS Jupiter have better features than Activa?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqJupiterActiva">
+                            <div class="accordion-body">
+                                Yes, TVS Jupiter offers features like external fuel fill, USB charging, and a more comfortable seat setup.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which is more suitable for elderly riders?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqJupiterActiva">
+                            <div class="accordion-body">
+                                Honda Activa is lighter and has a silent start feature, making it very easy to handle for elderly riders.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Which scooter has lower maintenance cost?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqJupiterActiva">
+                            <div class="accordion-body">
+                                TVS Jupiter typically offers slightly lower maintenance costs compared to Honda Activa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Do both scooters come with tubeless tyres?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqJupiterActiva">
+                            <div class="accordion-body">
+                                Yes, both TVS Jupiter and Honda Activa come with tubeless tyres as standard.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Which scooter is better for city traffic?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqJupiterActiva">
+                            <div class="accordion-body">
+                                Both are excellent in city traffic, but TVS Jupiter's larger wheels provide better stability on uneven roads.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Are both scooters available with disc brakes?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqJupiterActiva">
+                            <div class="accordion-body">
+                                Both scooters come with drum brakes and CBS as standard. Some variants offer front disc options.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Which scooter is better for long rides?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqJupiterActiva">
+                            <div class="accordion-body">
+                                TVS Jupiter is generally more comfortable for longer rides thanks to its soft suspension and spacious seat.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>For TVS Motors<a class="for-link" asp-controller="TVS" asp-action="TVSJupiter125"> Click Here!</a></p>
+                <p>For Honda Motors<a class="for-link" asp-controller="Honda" asp-action="HondaActiva6G"> Click Here!</a></p>
+                
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

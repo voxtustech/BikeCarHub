@@ -1,0 +1,240 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Affordable Sunroof Cars in India Under ₹10 Lakh";
+}
+@section MetaTags {
+    <meta name="keywords" content="Affordable cars with sunroof, Cars with sunroof under 10 lakh, Best sunroof cars in India 2024, Tata Punch sunroof variant, Hyundai Exter SX sunroof, Cheapest sunroof car in India, Kia Sonet HTK+ features, i20 Sportz sunroof, Budget cars with premium features, Sunroof SUV under 10 lakh" />
+    <meta name="description" content="Explore India’s top 5 budget-friendly cars with sunroofs under ₹10 lakh. Stylish, practical, and feature-loaded picks for value-conscious buyers." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">                
+                <h3 class="subheading">Introduction</h3>
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p>If you're on a budget but don’t want to miss out on the luxury of a sunroof, this list brings you the <span class="font-weight-700">top 5 most affordable cars in India that come equipped with a factory-fitted sunroof</span>. Let’s explore the best picks under ₹10 lakh that give you both style and value.</p>
+                <h3 class="subheading">Why Sunroofs Are Gaining Popularity in India</h3>
+                <p>Sunroofs are more than just a fancy panel on the roof. Here’s why Indian buyers are loving them:</p>
+                <ul>
+                    <li><span class="font-weight-700">Aesthetic Appeal:</span> Makes even compact cars feel more premium.</li>
+                    <li><span class="font-weight-700">Enhanced Cabin Experience:</span> Allows more natural light and ventilation.</li>
+                    <li><span class="font-weight-700">Influence of Social Media:</span> Perfect for travel vlogs, selfies, and lifestyle content.</li>
+                    <li><span class="font-weight-700">Urban Aspirations:</span> Today’s buyers want comfort, tech, and style without spending a fortune.</li>
+                </ul>
+                <div class="div-line"></div>
+                <h3 class="subheading">Selection Criteria for This List</h3>
+                <p>For this article, we’ve selected cars that:</p>
+                <ul>
+                    <li>Are <span class="font-weight-700">priced around ₹10 lakh or below</span> (ex-showroom).</li>
+                    <li>Come with <span class="font-weight-700">sunroof variants</span>—either standard or optional.</li>
+                    <li>Offer a <span class="font-weight-700">balance of features, mileage, and practicality</span>.</li>
+                    <li>Are widely available across India with good brand support.</li>
+                </ul>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                <h3 class="subheading">1. Tata Punch Adventure Sunroof Variant</h3>
+                <h4 class="subheading">Price: ₹7.17 lakh (ex-showroom)</h4>
+                <p>Tata Punch, India’s micro-SUV, is now available with a <span class="font-weight-700">factory-fitted electric sunroof</span> in its Adventure and above trims. It combines SUV styling with hatchback convenience.</p>
+                <h4 class="subheading">Key Highlights:</h4>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 1.2L Revotron Petrol</li>
+                    <li><span class="font-weight-700">Mileage:</span> 20.09 km/l</li>
+                    <li><span class="font-weight-700">Transmission:</span> Manual / AMT</li>
+                    <li><span class="font-weight-700">Features:</span> 7-inch infotainment system, dual airbags, rear parking sensors, ABS with EBD</li>
+                </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center image-height"><center><img src="~/images/blogs/2025/june/top5budgetfriendlycarswithsunroofsinindia/tata-punch-adventure.webp" alt="Tata Punch Adventure Sunroof Variant" title="Tata Punch Adventure Sunroof Variant" /></center></div>
+                </div>
+                <p><span class="font-weight-700">Why Buy?</span> It’s compact yet bold, and now comes with a sunroof without breaking the bank.</p>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                <h3 class="subheading">2. Hyundai Exter SX and Above</h3>
+                <h4 class="subheading">Price: ₹8.31 lakh (ex-showroom)</h4>
+                <p>The <span class="font-weight-700">Hyundai Exter</span> is one of the most feature-rich micro SUVs under ₹10 lakh and comes with an <span class="font-weight-700">electric sunroof as standard</span> from the SX variant upwards.</p>
+                <h4 class="subheading">Key Highlights:</h4>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 1.2L Kappa Petrol / CNG</li>
+                    <li><span class="font-weight-700">Mileage:</span> 19.4–27.1 km/kg (CNG)</li>
+                    <li><span class="font-weight-700">Transmission:</span> Manual / AMT</li>
+                    <li><span class="font-weight-700">Features:</span> 8-inch touchscreen, 6 airbags, TPMS, wireless Android Auto & Apple CarPlay</li>
+                </ul>
+                </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center image-height"><center><img src="~/images/blogs/2025/june/top5budgetfriendlycarswithsunroofsinindia/exter sx.webp" alt="Hyundai Exter SX and Above" title="Hyundai Exter SX and Above" /></center></div>
+                 </div>
+                <p><span class="font-weight-700">Why Buy?</span> It's loaded with segment-first features and has a youthful, modern design.</p>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6"><h3 class="subheading">3. Kia Sonet HTK+ (Petrol and Diesel)</h3>
+                <h4 class="subheading">Price: ₹9.24 lakh – ₹10.49 lakh (ex-showroom)</h4>
+                <p>The <span class="font-weight-700">Kia Sonet</span> offers a sunroof from its <span class="font-weight-700">HTK+ variant</span>, making it one of the most affordable compact SUVs with this premium feature.</p>
+                <h4 class="subheading">Key Highlights:</h4>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> Smartstream G1.2</li>
+                    <li><span class="font-weight-700">Mileage:</span> 18.4 km/l (Petrol), 24.1 km/l (Diesel)</li>
+                    <li><span class="font-weight-700">Transmission:</span> Manual / iMT / Automatic</li>
+                    <li><span class="font-weight-700">Features:</span> Semi-digital instrument cluster, 8-inch infotainment, rear AC vents</li>
+                </ul>
+                </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center image-height"><center><img src="~/images/blogs/2025/june/top5budgetfriendlycarswithsunroofsinindia/kia-sonet-htk-plus.webp" alt="Kia Sonet HTK+" title="Kia Sonet HTK+" /></center></div>
+                 </div>
+                <p><span class="font-weight-700">Why Buy?</span> Stylish design, great road presence, and reliable performance in a premium-feel package.</p>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6"><h3 class="subheading">4. Hyundai i20 Sportz Sunroof Variant</h3>
+                <h4 class="subheading">Price: ₹8.42 lakh – ₹9.09 lakh (ex-showroom)</h4>
+                <p>The <span class="font-weight-700">Hyundai i20</span> brings a sunroof to the <span class="font-weight-700">Sportz variant</span>, giving hatchback lovers a chance to experience open-sky drives.</p>
+                <h4 class="subheading">Key Highlights:</h4>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 1.2L Kappa Petrol</li>
+                    <li><span class="font-weight-700">Mileage:</span> 16 km/l</li>
+                    <li><span class="font-weight-700">Transmission:</span> Manual / IVT</li>
+                    <li><span class="font-weight-700">Features:</span> Touchscreen infotainment, reverse camera, auto climate control</li>
+                </ul>
+                </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center image-height"><center><img src="~/images/blogs/2025/june/top5budgetfriendlycarswithsunroofsinindia/hyundai i20 sportz.webp" alt="Hyundai i20 Sportz Sunroof Variant" title="Hyundai i20 Sportz Sunroof Variant" /></center></div>
+                 </div>
+                <p><span class="font-weight-700">Why Buy?</span> A feature-loaded hatchback with sporty looks and premium feel at an affordable price.</p>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6"><h3 class="subheading">5. Mahindra XUV300 W6 Sunroof Variant</h3>
+                <h4 class="subheading">Price: ₹10 lakh (ex-showroom)</h4>
+                <p>Mahindra’s <span class="font-weight-700">XUV300 W6 variant</span> comes with a factory-fitted electric sunroof and is known for its <span class="font-weight-700">class-leading safety</span> and powerful performance.</p>
+                <h4 class="subheading">Key Highlights:</h4>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 1.2L Turbo Petrol / 1.5L Diesel</li>
+                    <li><span class="font-weight-700">Mileage:</span> 17–20 km/l</li>
+                    <li><span class="font-weight-700">Transmission:</span> Manual / AMT</li>
+                    <li><span class="font-weight-700">Features:</span> Touchscreen system, dual-zone climate control, best-in-class safety rating</li>
+                </ul>
+                </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center image-height"><center><img src="~/images/blogs/2025/june/top5budgetfriendlycarswithsunroofsinindia/mahindra xuv 300 w6.webp" alt="Mahindra XUV300 W6" title="Mahindra XUV300 W6" /></center></div>
+                </div>
+                <p><span class="font-weight-700">Why Buy?</span> It’s the safest and one of the most spacious options in this budget with a sunroof.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Comparison Table</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Sunroof Variant</th>
+                                <th class="text-center">Price (₹, Ex-showroom)</th>
+                                <th class="text-center">Engine</th>
+                                <th class="text-center">Mileage</th>
+                                <th class="text-center">Fuel Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Tata Punch</td>
+                                <td>Adventure / Above</td>
+                                <td>₹7.17 Lakh</td>
+                                <td>1.2L Petrol</td>
+                                <td>20.09 km/l</td>
+                                <td>Petrol</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Hyundai Exter</td>
+                                <td>SX / SX(O)</td>
+                                <td>₹8.34 Lakh</td>
+                                <td>1.2L / CNG</td>
+                                <td>19.4–27 km/l</td>
+                                <td>Petrol/CNG</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Kia Sonet</td>
+                                <td>HTK+</td>
+                                <td>₹9.24 Lakh – ₹10.49 Lakh</td>
+                                <td>1.2L / 1.5L</td>
+                                <td>18.4–24 km/l</td>
+                                <td>Petrol/Diesel</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Hyundai i20</td>
+                                <td>Sportz</td>
+                                <td>₹8.42Lakh – ₹9.09Lakh</td>
+                                <td>1.2L Petrol</td>
+                                <td>16 km/l</td>
+                                <td>Petrol</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Mahindra XUV300</td>
+                                <td>W6</td>
+                                <td>₹10 Lakh</td>
+                                <td>1.2L / 1.5L</td>
+                                <td>17–20 km/l</td>
+                                <td>Petrol/Diesel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading">Tips Before Buying a Car with Sunroof</h3>
+                <ul>
+                    <li><span class="font-weight-700">Sunroof Maintenance:</span> Clean the tracks regularly to avoid jamming or leakage.</li>
+                    <li><span class="font-weight-700">Avoid Overuse in Extreme Heat:</span> Using a sunroof in peak summer may heat the cabin faster.</li>
+                    <li><span class="font-weight-700">Safety:</span> Avoid standing or putting your head outside while the vehicle is in motion.</li>
+                    <li><span class="font-weight-700">Manual vs. Electric Sunroofs:</span> Most budget models now offer electric sunroofs, which are easier to operate.</li>
+                    <li><span class="font-weight-700">Insurance:</span> Sunroofs may slightly increase your premium due to higher part costs in repairs.</li>
+                </ul>
+                <div class="div-line"></div>
+                <h3 class="subheading">Conclusion</h3>
+                <p>Sunroofs are no longer a luxury limited to high-end cars. Today, even budget-conscious buyers can enjoy this feature in <span class="font-weight-700">stylish, fuel-efficient, and well-equipped vehicles under ₹10 lakh.</span> Whether you're looking for an SUV, hatchback, or a mix of both, there’s a sunroof-equipped car waiting for you.</p>
+                <p>From the tech-savvy Hyundai Exter to the rugged Mahindra XUV300, these five cars strike the perfect balance between <span class="font-weight-700">affordability, features, and premium feel</span>. Choose based on your preferences, but rest assured—you no longer need to break the bank for a bit of sky in your drive.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">FAQs About Affordable Cars with Sunroofs in India</h3>
+                <p class="font-weight-700">1. What is the cheapest car with a sunroof in India?</p>
+                <p>Tata Punch Adventure and Hyundai Exter SX are among the most affordable cars with sunroofs, priced under ₹8 lakh.</p></<br /><br />
+                <p class="font-weight-700">2. Are sunroofs safe in Indian road conditions?</p>
+                <p>Yes, factory-fitted sunroofs are safe when used responsibly. Avoid opening them in high-traffic or extreme weather.</p></<br /><br />
+                <p class="font-weight-700">3. Does a sunroof affect fuel economy?</p>
+                <p>Marginally. When used open, it may reduce aerodynamics slightly, but it doesn’t significantly impact mileage.</p></<br /><br />
+                <p class="font-weight-700">4. Which hatchback offers a sunroof under ₹10 lakh?</p>
+                <p>The Hyundai i20 Sportz variant offers a sunroof in the hatchback segment under ₹10 lakh.</p></<br /><br />
+                <p class="font-weight-700">5. Can I install an aftermarket sunroof in a car?</p>
+                <p>It’s possible but not recommended due to structural safety concerns and warranty voiding.</p></<br /><br />
+                <p class="font-weight-700">6. Which SUV under ₹10 lakh comes with a sunroof?</p>
+                <p>Hyundai Exter, Tata Punch, Kia Sonet, and Mahindra XUV300 offer sunroofs in this price range.</p></<br /><br />
+                <p class="font-weight-700">Are sunroofs available in CNG cars?</p>
+                <p>Yes, Hyundai Exter offers a CNG variant with a sunroof.</p></<br /><br />
+                <p class="font-weight-700">8. Do all variants of a model come with sunroofs?</p>
+                <p>No. Sunroofs are usually available in mid to top-spec variants.</p></<br /><br />
+                <p class="font-weight-700">9. How much does a sunroof add to the cost of a car?</p>
+                <p>Typically, a variant with a sunroof costs ₹50,000–₹1 lakh more than the base model.</p></<br /><br />
+                <p class="font-weight-700">10. Is the sunroof covered under warranty?</p>
+                <p>Yes, if it is a factory-fitted sunroof. Aftermarket units may not be.</p></<br /><br />
+                <p>If you want you can also Know about <a class="for-link" asp-controller="Blogs" asp-action="May122025BlogDetails1">Tata Sierra EV vs. Tata Sierra ICE</a>, <a class="for-link" asp-controller="Blogs" asp-action="Jan222025BlogDetails1">Hyundai Creta EV vs. Maruti Suzuki e-Vitara: A Comprehensive Comparison</a>, <a class="for-link" asp-controller="Blogs" asp-action="June042025BlogDetails1">Tata Altroz Facelift 2025</a></p>
+            </div>
+            @await Html.PartialAsync("_AllBrandComponent")
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,19 @@
+﻿@model Cars_Bikes.Models.TWSpec
+<div style="border: 2px dashed red; padding: 10px;">
+<h1>Bikes</h1>
+@if (Model != null)
+{
+    <div>
+        <h1>Specifications</h1>
+        <p><strong>Milage:</strong> @Model.Milage</p>
+        <p><strong>Front Brake:</strong> @Model.FrontBrake</p>
+       
+        <a href="@Url.Action("Edit", "TWSpec", new { id = Model.TWSpecId })" class="btn btn-sm btn-warning">Update</a>
+        <a href="@Url.Action("Delete", "TWSpec", new { id = Model.TWSpecId })" class="btn btn-sm btn-danger">Delete</a>
+    </div>
+}
+else
+{
+    <p>No specification found for this variant.</p>
+}
+</div>

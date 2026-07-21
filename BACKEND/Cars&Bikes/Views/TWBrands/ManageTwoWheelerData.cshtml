@@ -1,0 +1,182 @@
+﻿@{
+    ViewData["Title"] = "Manage Two-Wheeler Data";
+}
+<style>
+    /* .tab-pane { */
+    /*     display: none; */
+    /* } */
+
+        .tab-pane.active.show {
+            display: block !important;
+        }
+</style>
+
+<h4>Filter by Brand and Variant</h4>
+
+<div class="row mb-3  ">
+    <div class="col-md-3">
+        <label>Select Two-Wheeler</label>
+        <select id="brandDropdown" class="form-select">
+            <option value="">-- Select Brand --</option>
+            @foreach (var item in ViewBag.BrandList)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+
+    <div class="col-md-3">
+        <label>Select Variant</label>
+        <select id="variantDropdown" class="form-select">
+            <option value="">-- Select Variant --</option>
+        </select>
+    </div>
+</div>
+
+
+
+<div id="tabsSection">
+    @* <div class="col-lg-3 mb-3"> *@
+    @*     <a id="specContent" class="btn btn-info px-4">Update TW Specification</a> *@
+    @* </div> *@
+    <ul class="nav nav-tabs" id="dataTabs" role="tablist">
+       
+        <li class="nav-item">
+            <a class="nav-link active" id="spec-tab" data-bs-toggle="tab" data-bs-target="#specTab" role="tab">Specification</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#featureTab">Features</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#performanceTab">Performance</a></li>
+    </ul>
+    <div id="specContent" class="mt-3 border p-3">Specification will load here...</div>
+    
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#brandDropdown').change(function () {
+                var brandId = $(this).val();
+                $('#variantDropdown').empty().append('<option value="">Loading...</option>');
+                $('#tabsSection').hide();
+
+                if (brandId) {
+                    $.get('/TWBrands/GetVariants', { twoWheelerId: brandId }, function (data) {
+                     console.log("Returned variants:", data);
+                        $('#variantDropdown').empty().append('<option value="">-- Select Variant --</option>');
+                        $.each(data, function (i, item) {
+                        console.log("item:", item);
+                            // $('#variantDropdown').append(`<option value="${item.TWVarientId}">${item.varients}</option>`);
+                         $('#variantDropdown').append(`<option value="${item.tWVarientId}">${item.varients}</option>`);
+
+                        });
+                    });
+                }
+            });
+/*
+       $(document).on('change', '#variantDropdown', function () {
+                let variantId = $(this).val();
+            console.log("Dropdown changed: " + variantId);
+                if (variantId) {
+                    $('#tabsSection').show();
+
+                    // Load Specification
+                $('#specContent').load(`/TWBrands/GetByVariant/${variantId}`, function (response, status, xhr) {
+                console.log("Spec Load Status:", status);
+                if (status === "error") {
+                    console.error("Spec Load Error:", xhr.status, xhr.statusText);
+                }
+                else {
+                         $('#tabsSection').show();
+                         let specTab = new bootstrap.Tab(document.querySelector('#dataTabs a[href="#specTab"]'));
+                         specTab.show();
+                }
+            });
+                }
+            });
+                */
+        });
+        
+    </script>
+
+<script>
+    /*
+    $(document).ready(function () {
+        $('#variantDropdown').on('change', function () {
+            const variantId = $(this).val();
+            console.log("Dropdown changed: " + variantId);
+
+            if (variantId) {
+                $.get(`/TWBrands/GetByVariant/${variantId}`, function (data) {
+                    $('#specContent').html(data);
+                    $('#tabsSection').show();     
+                    //$('#specTab').addClass("show active");
+                    //$('#dataTabs a[href="#specTab"]').addClass("active");
+                    const specTab = new bootstrap.Tab(document.querySelector('#spec-tab'));
+                    specTab.show();
+                });
+            }
+        });
+    });
+    */
+</script>
+<script>
+    /*
+    $(document).ready(function () {
+        $('#variantDropdown').on('change', function () {
+            const variantId = $(this).val();
+            console.log("Dropdown changed: " + variantId);
+
+            if (variantId) {
+                // Show a loading indicator in the specContent area
+                $('#specContent').html('Loading specification...');
+                $('#tabsSection').show(); // Ensure tabs section is visible
+
+                $.get(`/TWBrands/GetByVariant/${variantId}`, function (data) {
+                    $('#specContent').html(data); // Inject the loaded content
+
+                  
+                    const specTabElement = document.getElementById('spec-tab');
+                    if (specTabElement) {
+                        const specTab = new bootstrap.Tab(specTabElement);
+                        specTab.show();
+                    } else {
+                        console.error("Specification tab element not found!");
+                    }
+                }).fail(function() {
+                    $('#specContent').html('<p>Error loading specification data.</p>');
+                    console.error("AJAX call failed for GetByVariant.");
+                });
+            } else {
+                // If no variant is selected, clear content and hide tabs section
+                $('#specContent').empty();
+                $('#tabsSection').hide();
+            }
+        });
+
+        // Initial state: hide tabs section if no variant is pre-selected
+        if (!$('#variantDropdown').val()) {
+            $('#tabsSection').hide();
+        }
+    });
+    */
+</script>
+<script>
+    $(document).ready(function () {
+        $('#variantDropdown').on('change', function () {
+            const variantId = $(this).val();
+            if (variantId) {
+                console.log("Variant ID Selected: ", variantId);
+                  $('#tabsSection').show();
+                $('#specContent').load(`/TWBrands/GetByVariant/${variantId}`, function (response, status, xhr) {
+                    console.log("Spec Load Status:", status);
+                    // $('a[href="#specTab"]').tab('show');
+                    $('#spec-tab').tab('show');
+
+                    if (status === "error") {
+                        console.error("Error loading spec:", xhr.statusText);
+                    }else {
+                        console.log("Spec Loaded");
+                    }
+                });
+            }
+        });
+    });
+</script>

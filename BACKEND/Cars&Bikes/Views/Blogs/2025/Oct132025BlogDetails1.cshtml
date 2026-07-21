@@ -1,0 +1,443 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Choosing the Right Bike Insurance Coverage & Policy";
+}
+@section MetaTags {
+    <meta name="keywords" content="bike insurance, two-wheeler insurance, comprehensive policy, third-party cover, Own Damage, IDV, NCB, Zero Depreciation, bike insurance policy, add-ons" />
+    <meta name="description" content="Master bike insurance! Learn the difference between TPL, OD, and Comprehensive policies, and find out what to look for in IDV, NCB, and add-ons for the best coverage." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 13th October 2025</p>
+
+                <div class="div-line"></div>
+                <p>The roar of an engine, the feeling of the open road, and the pure freedom that comes with riding a two-wheeler are experiences few can match. For millions of riders, a bike is more than just transportation; it is a passion, a companion, and a crucial part of their daily life. However, with this freedom comes responsibility, particularly the responsibility of financial preparedness for the unforeseen. This is where bike insurance steps in, acting as an essential safety net that protects both the rider's finances and their precious machine. </p>
+                <p>Navigating the world of bike insurance can often feel complex, filled with jargon and seemingly endless choices. The challenge for any rider is not just purchasing a policy, but purchasing the <span class="font-weight-700">right policy</span>—one that offers comprehensive protection without breaking the bank. This detailed guide breaks down the different types of coverage available and highlights the crucial factors a person must look for when choosing a policy, ensuring they make an informed decision for long-term peace of mind. </p>
+                <h3 class="subheading">The Three Pillars of Bike Insurance Coverage</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/choosing the right bike insurance/header image1.webp" alt="Bike Insurance Coverage" title="Bike Insurance Coverage" loading="lazy" /></div>
+                </div>
+                <p>The foundation of any motorcycle or scooter insurance decision lies in understanding the core types of policies available. In most jurisdictions, these policies are categorized based on the extent of protection they provide.</p>
+                <h5 class="subheading">1. Third-Party Liability Cover: The Legal Mandate </h5>
+                <p>The most fundamental type of bike insurance, the <span class="font-weight-700">Third-Party Liability (TPL) cover</span>, is the absolute minimum legal requirement for any vehicle plying public roads. The government mandates this policy to ensure that any financial liability arising from an accident caused by the insured bike towards a third party is covered.</p>
+                <h5 class="subheading">What Third-Party Liability Covers:</h5>
+                <ul>
+                    <li><span class="font-weight-700">Bodily Injury or Death of a Third Party:</span> If the rider is at fault in an accident that causes injury or death to a pedestrian, another driver, or a pillion rider on another vehicle, this policy covers the resultant legal and medical costs. Liability for injury or death is typically unlimited under the law.</li>
+                    <li><span class="font-weight-700">Damage to Third-Party Property:</span> If the insured bike damages another person's vehicle, fence, or other property, the TPL policy covers the repair or replacement costs up to a specified limit, which is typically fixed by the regulator. </li>
+                </ul>
+                <h5 class="subheading">What Third-Party Liability Does NOT Cover: </h5>
+                <p>Crucially, TPL offers absolutely no financial protection to the owner-driver or the insured bike itself. If the bike is damaged, stolen, or totaled in the accident, the owner must bear all costs out of their own pocket. This is why, while mandatory and essential for legal compliance, TPL is often considered insufficient for comprehensive financial security. </p>
+                <h5 class="subheading">2. Standalone Own Damage (OD) Cover: Protecting Your Asset </h5>
+                <p>The <span class="font-weight-700">Standalone Own Damage (OD)</span> policy is specifically designed to cover damage or loss sustained by the insured vehicle. It cannot be purchased alone and must always be paired with a mandatory Third-Party Liability policy. It fills the major gap left by the <span class="font-weight-700">TPL policy</span>, making it a critical choice for those with existing TPL coverage or those looking for a hybrid insurance solution.</p>
+                <h5 class="subheading">What Own Damage Cover Protects Against:</h5>
+                <ul>
+                    <li><span class="font-weight-700">Accidents:</span> Damage to the bike resulting from a collision or accident.</li>
+                    <li><span class="font-weight-700">Theft:</span> Financial loss if the bike is stolen.</li>
+                    <li><span class="font-weight-700">Fire:</span> Damage caused by explosion, fire, or self-ignition.</li>
+                    <li><span class="font-weight-700">Natural Disasters:</span> Losses due to earthquakes, floods, cyclones, landslides, and other acts of nature.</li>
+                    <li><span class="font-weight-700">Man-made Disasters:</span> Damage due to riots, strikes, malicious acts, or terrorist activities.</li>
+                </ul>
+                <p>By securing an <span class="font-weight-700">OD policy</span>, the owner ensures that, regardless of whether the damage is caused by them or an outside event, the costs associated with repairing or replacing their bike are covered up to the <span class="font-weight-700">Insured Declared Value (IDV).</span></p>
+                <h5 class="subheading">3. Comprehensive Two-Wheeler Insurance: The All-in-One Shield</h5>
+                <p>
+                    For most riders, the Comprehensive Policy is the most recommended choice. As the name suggests, it provides the most extensive level of protection by bundling both the mandatory <span class="font-weight-700">Third-Party Liability</span> cover and the <span class="font-weight-700">Own Damage</span> cover into a single policy.
+                    <br /><br />
+                    A comprehensive plan offers a complete shield, protecting the rider from liabilities to others as well as covering damages to their own bike. Furthermore, it is the platform onto which a person can add various customization options, known as add-on covers or riders, to tailor the policy to their specific needs.
+                </p>
+                <h5 class="subheading">Additional Mandatory Cover: Personal Accident (PA) Cover</h5>
+                <p>It is important to note that regardless of the policy type chosen, a <span class="font-weight-700">Personal Accident (PA) Cover</span> for the <span class="font-weight-700">Owner-Driver</span> is also legally required. This cover provides financial compensation (up to an amount fixed by the regulator) in case the owner-driver suffers death or permanent total disability in an accident involving the insured vehicle. A rider only needs to hold this cover once, even if they own multiple vehicles. </p>
+                <h5 class="subheading">Comparison Table: Policy Types at a Glance </h5>
+                <p>To help simplify the choice, here is a quick comparison of the three primary types of two-wheeler insurance policies:</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Feature</th>
+                                <th class="text-center font-weight-600">Third-Party Liability Cover</th>
+                                <th class="text-center font-weight-600">Standalone Own Damage Cover</th>
+                                <th class="text-center font-weight-600">Comprehensive Policy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Coverage Scope </td>
+                                <td>Very Narrow</td>
+                                <td>Narrow to Moderate</td>
+                                <td>Broadest</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Legal Status</td>
+                                <td>Mandatory</td>
+                                <td>Optional (Must be paired with TPL)</td>
+                                <td>Optional (Highly Recommended)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Own Bike Damage</td>
+                                <td>Not Covered</td>
+                                <td>Covered</td>
+                                <td>Covered</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Third-Party Damage/Injury</td>
+                                <td>Covered</td>
+                                <td>Not Covered </td>
+                                <td>Covered</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Theft/Fire Protection</td>
+                                <td>Not Covered </td>
+                                <td>Covered</td>
+                                <td>Covered</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Add-On Options</td>
+                                <td>Not Available</td>
+                                <td>Available</td>
+                                <td>Widely Available</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Premium Cost</td>
+                                <td>Lowest</td>
+                                <td>Moderate (Depends on IDV)</td>
+                                <td>Highest (Most Value)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Best Suited For</td>
+                                <td>Meeting legal compliance only.</td>
+                                <td>Riders with existing TPL needing OD.</td>
+                                <td>All riders seeking complete financial protection.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">Decoding Key Components of Your Policy</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/choosing the right bike insurance/Header Image.webp" alt="Bike Insurance Coverage" title="Bike Insurance Coverage" loading="lazy" /></div>
+                </div>
+                <p>Once a person decides on a Comprehensive Policy, they need to understand the variables that determine the premium and the final payout during a claim. These elements are critical for comparing different quotes and tailoring the coverage.</p>
+                <h5 class="subheading">1. Insured Declared Value (IDV)</h5>
+                <p>
+                    The <span class="font-weight-700">Insured Declared Value (IDV)</span> is arguably the most crucial figure in a bike insurance policy, particularly for Own Damage and Comprehensive plans. <span class="font-weight-700">The IDV represents the current market value of the bike and is the maximum amount the insurer will pay out in the event of a total loss (damage beyond repair) or theft.</span>
+                    <br /><br />
+                    The <span class="font-weight-700">IDV is calculated based on the manufacturer’s listed selling price</span> of the bike (when new) minus depreciation based on the bike's age. When choosing or renewing a policy, a person may have a slight flexibility to adjust the IDV. While a lower IDV results in a lower premium, it also means a lower payout in case of <span class="font-weight-700">theft or total loss.</span> It is almost always recommended to maintain an accurate IDV to ensure adequate financial recovery.
+                </p>
+                <p>The depreciation schedule used to calculate IDV is generally standardized:</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Age of the Vehicle</th>
+                                <th class="text-center font-weight-600">% of Depreciation for Fixing IDV</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Not exceeding 6 months</td>
+                                <td class="font-weight-600">5%</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Exceeding 6 months but not exceeding 1 year</td>
+                                <td class="font-weight-600">15%</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Exceeding 1 year but not exceeding 2 years</td>
+                                <td class="font-weight-600">20% </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Exceeding 2 years but not exceeding 3 years </td>
+                                <td class="font-weight-600">30% </td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Exceeding 3 years but not exceeding 4 years</td>
+                                <td class="font-weight-600">40% </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Exceeding 4 years but not exceeding 5 years </td>
+                                <td class="font-weight-600">50% </td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Beyond 5 years </td>
+                                <td class="font-weight-600">Mutually agreed upon between insurer and insured. </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h5 class="subheading">No Claim Bonus (NCB): Your Reward for Safe Riding</h5>
+                <p>The <span class="font-weight-700">No Claim Bonus (NCB)</span> is a reward mechanism that insurers offer to policyholders for not raising any claims during the policy period. It is offered as a discount on the <span class="font-weight-700">Own Damage</span> portion of the premium upon renewal. This benefit is transferable when switching insurers or even when buying a new bike, provided the person sells the old one and buys a new one within a certain time frame.</p>
+                <p>The NCB accumulates incrementally, rewarding long periods of claim-free riding. Once the maximum is reached, it can lead to significant savings on the renewal premium. </p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Claim-Free Consecutive Years</th>
+                                <th class="text-center font-weight-600">NCB Discount on OD Premium</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">1st claim-free year</td>
+                                <td class="font-weight-600">20%</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">2 consecutive claim-free years</td>
+                                <td class="font-weight-600">25%</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">3 consecutive claim-free years</td>
+                                <td class="font-weight-600">35%</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">4 consecutive claim-free years</td>
+                                <td class="font-weight-600">45%</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">5 consecutive claim-free years</td>
+                                <td class="font-weight-600">50% (Maximum)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The key takeaway here is that one single claim, even a small one, will reset the accumulated NCB back to zero, making it vital to weigh the cost of a small repair against the loss of a significant discount. </p>
+                <h5 class="subheading">3. Deductibles: Sharing the Burden</h5>
+                <p>A deductible is the mandatory amount an insured person must pay out of pocket during a claim before the insurer pays the rest. There are two types: </p>
+                <ul>
+                    <li>Compulsory Deductible: This amount is fixed by the regulator based on the bike's engine capacity and must be paid by the owner in every claim.</li>
+                    <li>Voluntary Deductible: This is an additional amount the owner chooses to pay on top of the compulsory deductible. By opting for a higher voluntary deductible, the owner signals to the insurer that they are willing to take on more risk for minor damages, which results in a lower annual premium. However, the rider must be prepared to pay that higher amount during a major claim. It is a balancing act between lower premium and higher out-of-pocket costs at the time of an accident.</li>
+                </ul>
+                <h5 class="subheading">Customizing Your Protection with Add-Ons (Riders) </h5>
+                <p>The standard Comprehensive policy is excellent, but it still has certain exclusions. Add-on covers or "riders" are specialized options that can be purchased for an extra premium to fill these gaps, providing truly holistic coverage. Riders are highly recommended, especially for new or high-value bikes. </p>
+                <h5 class="subheading">1. Zero Depreciation Cover (or Bumper-to-Bumper)</h5>
+                <p>This is perhaps the most popular and important add-on. Under a standard OD policy, the insurer deducts depreciation <span class="font-weight-700">(wear and tear value)</span> from the <span class="font-weight-700">cost of plastic, fiber, and metal parts</span> during a claim payout. This can leave the owner paying a significant portion of the repair bill. The <span class="font-weight-700">Zero Depreciation</span> rider waives this depreciation deduction, ensuring the full cost of replacing parts is covered by the insurer. It is essential for new bikes (usually available for bikes up to five years old) and significantly boosts the claim amount received.</p>
+                <h5 class="subheading">2. Roadside Assistance (RSA) Cover</h5>
+                <p>Getting stranded on the side of the road with a flat tire, a mechanical failure, or an empty fuel tank can be stressful. The <span class="font-weight-700">RSA cover</span> is a practical add-on that offers 24/7 assistance services, including:</p>
+                <ul>
+                    <li>Towing to the nearest network garage.</li>
+                    <li>Minor on-site repairs.</li>
+                    <li>Emergency fuel delivery (cost of fuel borne by the owner).</li>
+                    <li>Battery jump-start services.</li>
+                </ul>
+                <h5 class="subheading">3. Engine and Gearbox Protection Cover</h5>
+                <p>The standard policy covers engine damage caused by an accident. However, it typically excludes damage caused by water ingress <span class="font-weight-700">(hydrostatic lock)</span> during floods or oil leakage due to riding in a waterlogged area. Since engine replacement can be one of the most expensive repair jobs, this add-on is critical for riders living in flood-prone regions. It offers coverage against non-accidental damage to the engine and gearbox internals.</p>
+                <h5 class="subheading">4. Return to Invoice (RTI) Cover</h5>
+                <p>For brand-new bikes, the difference between the IDV and the original <span class="font-weight-700">on-road price (invoice value, including registration and taxes)</span> can be substantial. In the event of total loss or theft, the standard policy pays the IDV. The RTI cover bridges this gap. With this rider, the owner receives the full invoice price of the bike, ensuring they have enough money to buy the exact same new model without any financial loss. This rider is invaluable for the first few years of a new bike's life. </p>
+                <h5 class="subheading">5. Consumables Cover</h5>
+                <p>During repairs after an accident, many small, single-use items like engine oil, nuts, bolts, washers, grease, and fluids are consumed and replaced. While individually inexpensive, their cumulative cost can be surprisingly high. The standard policy often excludes these consumable items. The Consumables Cover ensures the cost of these necessary items is covered by the insurer during a claim settlement.</p>
+                <h5 class="subheading">6. Key Loss Cover</h5>
+                <p>Modern bikes often come with smart keys or specialized key fobs that are expensive to replace. If a person loses their key or it gets stolen, the Key Loss Cover helps cover the high cost of replacement and, often, the cost of re-keying the bike's locks for security.</p>
+                <h3 class="subheading">What to Look for in a Bike Insurance Policy (Beyond the Price)</h3>
+                <p>While the types of coverage are important, the choice of insurer and the quality of their service are equally critical. A low-cost policy is useless if the claim process is a nightmare. When comparing providers, especially on comparison platforms like <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub,</a> a rider must look for the following non-negotiable factors:</p>
+                <h5 class="subheading">1. Claim Settlement Ratio (CSR)</h5>
+                <p>The Claim Settlement Ratio (CSR) is a crucial metric provided by the Insurance Regulatory and Development Authority of India (IRDAI). It is calculated as the total number of claims settled by an insurer divided by the total number of claims received in a financial year. </p>
+                <ul>
+                    <li><span class="font-weight-700">Why it Matters:</span> A consistently high <span class="font-weight-700">CSR (above 90-95%)</span> indicates that the insurer is reliable and likely to approve and process valid claims efficiently. A low CSR suggests the company might reject or delay claims more frequently. Always prioritize an insurer with a good CSR. </li>
+                </ul>
+                <h5 class="subheading">2. Network of Cashless Garages</h5>
+                <p>The cashless claim facility is a massive convenience for the insured person. If an accident occurs, having a vast network of partner garages means the rider can take their damaged bike to any network garage, get it repaired, and walk away without paying anything (except for deductibles and non-covered items). The insurer settles the bill directly with the garage.</p>
+                <ul>
+                    <li><span class="font-weight-700">Why it Matters:</span> A wider network, especially in the rider's regular commuting area or while traveling, ensures faster, hassle-free repairs without needing to pay a large amount upfront and wait for reimbursement.</li>
+                </ul>
+                <h5 class="subheading">3. Customer Service and Accessibility</h5>
+                <p>A good insurer should offer <span class="font-weight-700">24/7 customer support</span>, multiple channels for communication (app, website, helpline), and a user-friendly interface for policy management and claim initiation. In an emergency, a readily available and responsive support team makes a significant difference. Riders should research online reviews regarding the insurer's responsiveness, particularly during the claim filing process.</p>
+                <h5 class="subheading">4. Policy Inclusions and Exclusions</h5>
+                <p>The fine print is where the real value—or hidden pitfalls—of a policy lies.</p>
+                <ul>
+                    <li><span class="font-weight-700">Inclusions:</span> What specific events are covered (e.g., accidents, theft, natural disasters).</li>
+                    <li><span class="font-weight-700">Exclusions:</span> What the policy will not pay for. Common exclusions include:
+                        <ul>
+                            <li>Damages caused while riding without a valid license. </li>
+                            <li>Damages caused while riding under the influence of alcohol or drugs.</li>
+                            <li>Mechanical or electrical breakdowns not resulting from an accident. </li>
+                            <li>General wear and tear or aging of the vehicle.</li>
+                            <li>Consequential loss (indirect loss arising from damage).</li>
+                        </ul></li>
+                </ul>
+                <p>The owner must read the policy wording carefully to ensure there are no surprises when a claim is needed.</p>
+                <h5 class="subheading">5. Premium and Insured Declared Value (IDV) Balance</h5>
+                <p>While the premium is important, it should not be the sole deciding factor. A rider should compare policies that offer the <span class="font-weight-700">same IDV and same add-ons</span> to truly compare the cost. A policy with a seemingly low premium might have a drastically reduced IDV, leading to inadequate compensation later. Always ensure the chosen premium offers a fair balance with the bike’s IDV and the desired level of coverage. </p>
+                <h3 class="subheading">The Lifecycle of a Policy: Renewal and Transfer </h3>
+                <p>The responsibility of the bike owner does not end with the initial purchase. Understanding the long-term aspects of policy management is key to sustained protection. </p>
+                <h5 class="subheading">1. Understanding Long-Term Policies</h5>
+                <p>For all new two-wheelers, the regulatory body often mandates the purchase of a long-term policy. This typically involves a five-year Third-Party Liability cover bundled with a one-year or three-year Own Damage cover.</p>
+                <ul>
+                    <li><span class="font-weight-700">Benefits:</span> Long-term policies offer locked-in Third-Party premium rates (avoiding annual regulatory hikes) and remove the risk of the policy lapsing annually, thus preventing the owner from incurring penalties for riding without valid insurance.</li>
+                </ul>
+                <h5 class="subheading">2. The Renewal Process</h5>
+                <p>Policy renewal must be done before the expiration date. Renewing on time ensures the rider retains their accumulated NCB and avoids penalties. If a policy lapses, the bike may be subject to a physical inspection by the insurer before renewal is granted, and the rider will lose all accrued NCB benefits. Online renewal is fast, paperless, and the most convenient option available today.</p>
+                <h5 class="subheading">3. Transferring the Policy (When Selling the Bike)</h5>
+                <p>When a bike is sold, the insurance policy must be transferred to the new owner within a short period <span class="font-weight-700">(typically 14 days)</span> from the date of vehicle transfer. Failing to do so can create legal complications for both the old and new owners. Furthermore, if the current policyholder has accrued an NCB, they can get a NCB retention certificate from their insurer to use the discount on a future vehicle purchase. The new buyer will start their policy with a fresh NCB calculation. </p>
+                <h3 class="subheading">Conclusion: Riding with Confidence</h3>
+                <p>Choosing the right bike insurance is a deliberate, informed process, not just a casual formality. It involves moving beyond the basic legal requirement of <span class="font-weight-700">Third-Party Cover</span> and investing in a Comprehensive policy enhanced with strategic add-ons like <span class="font-weight-700">Zero Depreciation</span> and <span class="font-weight-700">RTI</span>, especially for newer or high-value bikes. By carefully evaluating the Insured Declared Value <span class="font-weight-700">(IDV)</span>, prioritizing a high <span class="font-weight-700">Claim Settlement Ratio (CSR)</span>, utilizing the benefits of the <span class="font-weight-700">No Claim Bonus (NCB)</span>, and comparing the offerings based on cashless garage networks, any rider can secure a policy that provides genuine financial peace of mind. Taking the time to understand these nuances ensures that should the worst happen, the ride ahead remains smooth and financially secure. </p>
+                <h3 class="subheading">Frequently Asked Questions (FAQs)</h3>
+
+                <div class="accordion" id="faqTeslaModelY">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. What is the minimum mandatory bike insurance cover?
+                            </button>
+                        </h3>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The minimum mandatory cover, as per law, is the <span class="font-weight-700">Third-Party Liability (TPL) Cover</span>. This policy covers any injury, death, or property damage caused to a third party by the insured bike in an accident. It does not cover damage to the insured's own bike.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. What is the difference between IDV and Premium?
+                            </button>
+                        </h3>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The <span class="font-weight-700">Insured Declared Value (IDV)</span> is the current market value of your bike and represents the maximum claim payout you can receive for theft or total loss. The <span class="font-weight-700">Premium</span> is the annual fee you pay to the insurance company to keep the policy active. A higher IDV generally leads to a higher premium.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Can I buy a Zero Depreciation cover for an old bike?
+                            </button>
+                        </h3>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Zero Depreciation cover is typically only available for new bikes, often up to the first three to five years of the vehicle's age. This is because, beyond this period, the vehicle's depreciation rate becomes too high for insurers to offer full depreciation waiver on all parts.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. What happens to my No Claim Bonus (NCB) if my policy lapses?
+                            </button>
+                        </h3>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                If your bike insurance policy lapses (expires without renewal), the No Claim Bonus (NCB) that you had accumulated will typically be reset to zero. To prevent this, it is crucial to renew the policy before the expiration date, or within a grace period if offered by the insurer.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Should I choose a low IDV to reduce my premium?
+                            </button>
+                        </h3>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                While opting for a lower IDV will reduce the premium, it is generally <span class="font-weight-700">not recommended</span>. The IDV is the maximum amount you will receive if your bike is stolen or totaled. Choosing an artificially low IDV means you will face a significant financial loss if you have to replace your bike after such an incident.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Is Personal Accident (PA) Cover for the Owner-Driver optional?
+                            </button>
+                        </h3>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                No, the Personal Accident (PA) Cover for the Owner-Driver is mandatory for all vehicle owners. However, if a rider already holds a PA Cover of the stipulated amount for another vehicle they own, they can typically opt out of the PA cover for their new bike.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. What is the penalty for riding a bike without mandatory insurance?
+                            </button>
+                        </h3>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Riding a bike without at least a valid Third-Party Liability insurance is a legal offense. The penalty for the first offense is typically a fine of ₹2,000, and for subsequent offenses, the fine increases to ₹4,000, potentially along with community service or imprisonment, as per revised motor vehicle laws.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. What is a "cashless claim"?
+                            </button>
+                        </h3>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                A cashless claim means that the insured person can take their damaged bike to a garage that is part of the insurer's network (a "network garage"). The insurer settles the repair bill directly with the garage, and the owner only pays for the deductibles and any non-covered expenses.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. What are 'Consumables' in bike insurance?
+                            </button>
+                        </h3>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Consumables refer to items used up during repair or replacement that are not covered under a standard policy. Examples include engine oil, nuts, bolts, screws, brake fluid, oil filters, and grease. The Consumables Cover add-on is needed to cover the cost of these items.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Can I transfer my bike insurance policy to a new owner?
+                            </button>
+                        </h3>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Yes, when selling a bike, the existing insurance policy must be transferred to the new owner's name within 14 days of the bike's transfer. The previous owner is also entitled to claim an NCB retention certificate to use their accumulated discount on their next vehicle purchase.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* @await Component.InvokeAsync("AllBlog") *@
+    @* @await Html.PartialAsync("_AllBrandComponent") *@
+    @await Html.PartialAsync("_AllViewComponent")
+
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

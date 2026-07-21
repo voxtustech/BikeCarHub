@@ -1,0 +1,247 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 10 Affordable Two-Wheelers Under ₹1 Lakh in India";
+}
+@section MetaTags{
+    <meta name="keywords" content="Affordable two-wheelers India, Best bikes under ₹1 lakh, Budget-friendly two-wheelers, Scooters under ₹1 lakh, Bikes for commuters, Mileage-friendly bikes, Cheap scooters in India, Economical two-wheelers 2024,Best mileage bikes, Two-wheelers for students, Daily use bikes India ,Budget scooters India, Commuter bikes 2024,Top bikes under ₹1 lakh, Two-wheelers India 2024" />
+    <meta name="description" content="Explore the top 10 budget-friendly two-wheelers in India under ₹1 lakh. Find the best bikes and scooters for performance, mileage, and affordability." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p><span class="font-weight-700">Bajaj Pulsar 125:</span> Known for its robust build and reliable performance, this bike offers an impressive mileage and features that make it a standout choice among budget-conscious buyers.</p>
+                <p><span class="font-weight-700">Hero Splendor Plus:</span> A household name in India, the Hero Splendor Plus is celebrated for its fuel efficiency and low maintenance costs, making it an ideal pick for daily commuters.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/top10affordabletwowheelersunder1lakhinindia/Bajaj Pulsar 125.webp" alt="Bajaj Pulsar 125" title="Bajaj Pulsar 125" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/top10affordabletwowheelersunder1lakhinindia/hero splendor plus.webp" alt="Hero Splendor Plus" title="Hero Splendor Plus" /></div>
+                </div>
+                <p><span class="font-weight-700">TVS Star City Plus:</span> Combining sleek design with practical functionality, this bike offers excellent mileage and comfort, making every ride enjoyable without burning a hole in your pocket.</p>
+                <p><span class="font-weight-700">Honda CD 110 Dream:</span> With Honda's trusted engineering, this model provides smooth handling and durability at an unbeatable price point.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/top10affordabletwowheelersunder1lakhinindia/tvs star city plus.webp" alt="TVS Star City Plus" title="TVS Star City Plus" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/top10affordabletwowheelersunder1lakhinindia/honda cd 110 dream.webp" alt="Honda CD 110 Dream" title="Honda CD 110 Dream" /></div>
+                </div>
+                <p><span class="font-weight-700">Bajaj Platina 100:</span> Famous for its outstanding mileage and comfortable ride quality, the Platina 100 is perfect for long-distance travel on a budget.</p>
+                <p><span class="font-weight-700">TVS Radeon:</span> This stylish commuter bike boasts features like LED DRLs and USB charging ports while ensuring high fuel efficiency—ideal for modern riders seeking value-packed options.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/top10affordabletwowheelersunder1lakhinindia/bajaj platina 100.webp" alt="Bajaj Platina 100" title="Bajaj Platina 100" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/top10affordabletwowheelersunder1lakhinindia/tvs radeon.webp" alt="TVS Radeon" title="TVS Radeon" /></div>
+                </div>
+                <p><span class="font-weight-700">Hero HF Deluxe:</span> Another gem from Hero's lineup, known for its reliability and economical running costs; it's perfect for those looking to save on both purchase price and ongoing expenses.</p>
+                <p><span class="font-weight-700">Yamaha Saluto RX:</span> Lightweight yet powerful enough to tackle city traffic with ease; Yamaha’s Saluto RX is designed to offer maximum comfort without stretching your budget too thin.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/top10affordabletwowheelersunder1lakhinindia/hero hf deluxe.webp" alt="Hero HF Deluxe" title="Hero HF Deluxe" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/top10affordabletwowheelersunder1lakhinindia/yamaha saluto rx.webp" alt="Yamaha Saluto RX" title="Yamaha Saluto RX" /></div>
+                </div>
+                <p><span class="font-weight-700">Suzuki Access 125 Drum Alloy CBS - SE Edition (Drum Brake):</span> Although technically a scooter rather than a motorcycle—it deserves mention due to its practicality as well as affordability under ₹1 lakh mark!</p>
+                <p><span class="font-weight-700">Honda Livo BS6 Drum Self Start Alloy Wheel Variant (Drum Brake):</span> Bringing together style & substance within reach financially speaking! This model ensures you get premium looks along with Honda’s assurance of quality engineering beneath all that flashy exterior!</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/top10affordabletwowheelersunder1lakhinindia/suzuki access 125 drum alloy cbs.webp" alt="Suzuki Access 125 Drum Alloy CBS" title="Suzuki Access 125 Drum Alloy CBS" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/top10affordabletwowheelersunder1lakhinindia/honda livo bs6 drum.webp" alt="Honda Livo BS6 Drum" title="Honda Livo BS6 Drum" /></div>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Name</th>
+                                <th class="text-center">Price</th>
+                                <th class="text-center">Engine</th>
+                                <th class="text-center">Power</th>
+                                <th class="text-center">Torque</th>
+                                <th class="text-center">Suspension</th>
+                                <th class="text-center">Ground Clearance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Bajaj Pulsar 125</td>
+                                <td>₹83,846 - 91,610</td>
+                                <td>4-Stroke, 2-Valve, Twin Spark BSVI Compliant DTS-i Engine</td>
+                                <td>11.8 PS @@ 8500 rpm</td>
+                                <td>10.8 Nm @@ 6500 rpm</td>
+                                <td>Suspension Front:- Telescopic,<br />Suspension Rear:- Twin Gas Shock</td>
+                                <td>165 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Hero Splendor Plus</td>
+                                <td>₹75,441 - 78,286</td>
+                                <td>Air cooled, 4-stroke, Single cylinder, OHC</td>
+                                <td>8.02 PS @@ 8000 rpm</td>
+                                <td>8.05 Nm @@ 6000 rpm</td>
+                                <td>
+                                    Suspension Front:- Telescopic Hydraulic Shock Absorbers,<br />
+                                    Suspension Rear:- Swingarm with 5-Step Adjustable Hydraulic Shock Absorbers
+                                </td>
+                                <td>165 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>TVS Star City Plus</td>
+                                <td>₹75,541 - 78,541</td>
+                                <td>Single Cylinder, 4-Stroke, Air Cooled</td>
+                                <td>8.19 PS @@ 7350 rpm</td>
+                                <td>8.7 Nm @@ 4500 rpm</td>
+                                <td>
+                                    Suspension Front:- Telescopic (Oil damped),<br />
+                                    Suspension Rear:- 5-step Adjustable Hydraulic Shock Absorber
+                                </td>
+                                <td>172 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Honda CD 110 Dream</td>
+                                <td>₹74,401</td>
+                                <td>4 stroke, SI, BS-VI Engine</td>
+                                <td>8.79 PS @@ 7500 rpm</td>
+                                <td>9.30 Nm @@ 5500 rpm</td>
+                                <td>
+                                    Suspension Front:- Telescopic,<br />
+                                    Suspension Rear:- Hydraulic Type
+                                </td>
+                                <td>162 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Bajaj Platina 100</td>
+                                <td>₹68,685</td>
+                                <td>4-Stroke, DTS-i, Single Cylinder</td>
+                                <td>7.9 PS @@ 7500 rpm</td>
+                                <td>7.9 PS @@ 7500 rpm</td>
+                                <td>
+                                    Suspension Front:- 135 mm, Hydraulic, Telescopic Type,<br />
+                                    Suspension Rear:- 110 mm, Spring in Spring Suspension
+                                </td>
+                                <td>200 mm</td>
+                            </tr>
+                            <tr>
+                                <td>TVS Radeon</td>
+                                <td>₹59,880 - 81,924</td>
+                                <td>4 Stroke Duralife Engine</td>
+                                <td>8.19 PS @@ 7350 rpm</td>
+                                <td>8.7 Nm @@ 4500 rpm</td>
+                                <td>
+                                    Suspension Front:- Telescopic oil damped shock absorber,<br />
+                                    Suspension Rear:- 5 step adjustable hydraulic shock absorber
+                                </td>
+                                <td>180 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Hero HF Deluxe</td>
+                                <td>₹59,998 - 69,018</td>
+                                <td>Air cooled, 4-stroke, Single cylinder, OHC</td>
+                                <td>8.02 PS @@ 8000 rpm</td>
+                                <td>8.05 Nm @@ 6000 rpm</td>
+                                <td>
+                                    Suspension Front:- Telescopic Hydraulic Shock Absorbers,<br />
+                                    Suspension Rear:- Swingarm with 2-Step Adjustable Hydraulic Shock Absorbers
+                                </td>
+                                <td>165 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Yamaha Saluto RX</td>
+                                <td>₹58,371 - 63,809</td>
+                                <td>110cc, single-cylinder, air-cooled engine</td>
+                                <td>7 bhp @@ 7000 rpm</td>
+                                <td>8.5 Nm @@ 4500 rpm</td>
+                                <td>
+                                    Suspension Front:- Telescopic,<br />
+                                    Suspension Rear:- Swingarm
+                                </td>
+                                <td>175 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Suzuki Access 125 Drum Alloy</td>
+                                <td>₹80,335 - 90,934</td>
+                                <td>4- Stroke, 1-Cylinder, Air Cooled</td>
+                                <td>8.7 PS @@ 6750 rpm</td>
+                                <td>10 Nm @@ 5500 rpm</td>
+                                <td>
+                                    Suspension Front:- Telescopic,<br />
+                                    Suspension Rear:- Swingarm
+                                </td>
+                                <td>160 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Honda Livo BS6 Drum</td>
+                                <td>₹77,651 - 81,651</td>
+                                <td>Air Cooled, 4 Stroke, SI, BS-VI Engine</td>
+                                <td>8.79 PS @@ 7500 rpm</td>
+                                <td>9.30 Nm @@ 5500 rpm</td>
+                                <td>
+                                    Suspension Front:- Telescopic,<br />
+                                    Suspension Rear:- Hydraulic Type
+                                </td>
+                                <td>163 mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>These top contenders prove you don’t need deep pockets when searching out truly remarkable rides available today across Indian showrooms everywhere! Each one delivers unique benefits catering specifically towards varying needs/preferences amongst riders nationwide—all while staying firmly below Rs100k threshold set forth here initially thus ensuring smart investment overall regardless which option ultimately chosen by discerning buyer themselves eventually down line later too hopefully soon enough perhaps even now already who knows right?</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

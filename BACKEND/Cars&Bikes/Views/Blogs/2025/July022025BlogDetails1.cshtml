@@ -1,0 +1,403 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Meteor 350 vs Yezdi Roadster: Cruiser Bike Comparison 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Meteor 350 vs Yezdi Roadster, Meteor 350 price, Yezdi Roadster mileage, best cruiser bikes India 2025, Meteor 350 vs Yezdi Roadster comparison, Meteor 350 features, Yezdi Roadster performance" />
+    <meta name="description" content="Compare Meteor 350 vs Yezdi Roadster for performance, mileage, comfort, and touring features. Find the best cruiser bike for you with BikeCarHub's expert guide" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 1th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+            <p>In this detailed comparison by <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span>, we will break down every important aspect like design, performance, mileage, features, pricing, and more to help you decide which cruiser bike suits you best in 2025.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Meteor 350 and Yezdi Roadster Overview</h2>
+
+                <h3 class="subheading">Royal Enfield Meteor 350</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/meteor 350 vs yezdi roadster/meteor 350.webp" alt="Royal Enfield Meteor 350" title="Royal Enfield Meteor 350" /></div>
+                </div>
+                <p>The <span class="font-weight-700">Royal Enfield Meteor 350</span > is a modern cruiser that combines classic Royal Enfield charm with advanced touring features. It is built for long, relaxed rides with its smooth engine and comfortable ergonomics.</p>
+
+                <h3 class="subheading">Yezdi Roadster</h3>
+              
+                <p>The <span class="font-weight-700">Yezdi Roadster</span > is a bold comeback by Yezdi, offering a punchier and sportier roadster experience with modern styling, aggressive performance, and a slightly more youthful design.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> The Meteor 350 leans towards easy touring, while the Yezdi Roadster brings more muscle and excitement to the ride.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Specifications & Features Comparison Table</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">Meteor 350</th>
+                                <th class="text-center">Yezdi Roadster</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine</td>
+                                <td>349cc, Air-Oil Cooled, Single cylinder, 4 stroke</td>
+                                <td>334cc, Single Cylinder, 4 Stroke, Liquid Cooled, DOHC</td>
+                            </tr>
+                            <tr>
+                                <td>Power</td>
+                                <td>20.2 PS@6100 rpm</td>
+                                <td>29 PS@7300 rpm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Torque</td>
+                                <td>27 Nm@4000 rpm</td>
+                                <td>29.40 Nm@6500 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Mileage</td>
+                                <td>41.88 kmpl</td>
+                                <td>28.53 kmpl</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Weight</td>
+                                <td>191 kg</td>
+                                <td>194 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel Tank Capacity</td>
+                                <td>15 litres</td>
+                                <td>12.5 litres</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Braking System</td>
+                                <td>Dual-channel ABS</td>
+                                <td>Dual-channel ABS</td>
+                            </tr>
+                            <tr>
+                                <td>Seat Height</td>
+                                <td>765 mm</td>
+                                <td>790 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Price (Ex-showroom)</td>
+                                <td>₹2,08,270 -- ₹2,32,545</td>
+                                <td>₹2,10,900 -- ₹2,18,900</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Design and Styling: Retro Elegance vs. Modern Aggression</h2>
+
+                <h3 class="subheading">Meteor 350</h3>
+                <p>The <span class="font-weight-700">Royal Enfield Meteor 350</span > carries a timeless cruiser design with a round headlamp, chrome touches, and a relaxed, touring-friendly silhouette. The comfortable split seats, wide handlebars, and classic Royal Enfield vibe make it a favorite among those who love retro-inspired motorcycles.</p>
+
+                <h3 class="subheading">Yezdi Roadster</h3>
+                <p>The <span class="font-weight-700">Yezdi Roadster</span > comes with a bolder, more muscular stance. Its street-friendly design, modern alloy wheels, and compact body give it a sharp road presence. It appeals more to riders who prefer a modern roadster look combined with cruising capabilities.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Meteor for classic cruiser lovers, Roadster for those wanting modern aggression.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Engine Performance and Ride Feel</h2>
+
+                <h3 class="subheading">Meteor 350 Performance</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/meteor 350 vs yezdi roadster/meteor 350-1.webp" alt="Meteor 350 Engine" title="Meteor 350 Engine" /></div>
+                </div>
+                <p>The Meteor 350's 349cc engine delivers a smooth and linear power delivery. It is perfect for relaxed cruising at 80-90 kmph and feels stable on highways. The bike's low-end torque ensures a stress-free city ride with minimal gear changes.</p>
+
+                <h3 class="subheading">Yezdi Roadster Performance</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/meteor 350 vs yezdi roadster/yezdi roadster-1.webp" alt="Yezdi Roadster Engine" title="Yezdi Roadster Engine" /></div>
+                </div>
+                <p>The Yezdi Roadster's liquid-cooled 334cc engine offers a more aggressive throttle response. It packs significantly more power than the Meteor 350 and feels sportier both in the city and on highways. Its quick acceleration and higher revving nature make it an exciting option for spirited riders.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Meteor for smooth cruising, Roadster for sporty performance.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Mileage and Fuel Efficiency Comparison</h2>
+                <ul>
+                    <li><span class="font-weight-700">Meteor 350:</span> 41.88 kmpl - Better for long-distance touring</li>
+                    <li><span class="font-weight-700">Yezdi Roadster:</span> 28.53 kmpl - Respectable given its higher power output</li>
+                </ul>
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Meteor 350 is significantly more fuel efficient.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Features and Technology</h2>
+
+                <h3 class="subheading">Meteor 350 Features:</h3>
+                <ul>
+                    <li>Royal Enfield Tripper navigation system</li>
+                    <li>Digital-analog console</li>
+                    <li>USB charging port</li>
+                    <li>Dual-channel ABS</li>
+                </ul>
+
+                <h3 class="subheading">Yezdi Roadster Features:</h3>
+                <ul>
+                    <li>Fully digital instrument cluster</li>
+                    <li>Dual-channel ABS</li>
+                    <li>Liquid-cooled engine for better heat management</li>
+                    <li>Sleek minimalist design</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Meteor's navigation is great for touring, while Roadster offers a sportier digital display.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Comfort, Ride Quality, and Touring Suitability</h2>
+
+                <h3 class="subheading">Meteor 350</h3>
+                <p>Offers exceptional comfort with its wide, cushioned seats, relaxed riding position, and smooth suspension. It is tailor-made for long highway rides and easy city cruising. Pillion riders will also appreciate the comfortable backrest.</p>
+
+                <h3 class="subheading">Yezdi Roadster</h3>
+                <p>Feels sportier and more upright. Its seat is slightly firmer, and while it handles city roads well, long touring comfort may not match the plushness of the Meteor 350. However, it offers nimble handling and a more connected feel for riders who prefer active engagement.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Meteor for comfort, Roadster for sportier handling.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Price and Value for Money</h2>
+                <ul>
+                    <li><span class="font-weight-700">Meteor 350:</span> ₹2,08,270 - ₹2,32,545 (Based on Colour)</li>
+                    <li><span class="font-weight-700">Yezdi Roadster:</span> ₹2,10,900 - ₹2,18,900 (Based on Colour)</li>
+                </ul>
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Both offer good value - Meteor for touring, Roadster for performance.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Pros and Cons</h2>
+
+                <h3 class="subheading">Meteor 350</h3>
+                <p><span class="font-weight-700">Pros:</span></p>
+                <ul>
+                    <li>Smooth cruiser ride</li>
+                    <li>Comfortable seat</li>
+                    <li>Navigation system</li>
+                    <li>Better fuel efficiency</li>
+                </ul>
+                <p><span class="font-weight-700">Cons:</span></p>
+                <ul>
+                    <li>Lower power output</li>
+                    <li>Heavier build</li>
+                </ul>
+
+                <h3 class="subheading">Yezdi Roadster</h3>
+                <p><span class="font-weight-700">Pros:</span></p>
+                <ul>
+                    <li>Sporty performance</li>
+                    <li>Lightweight</li>
+                    <li>Aggressive design</li>
+                    <li>Modern liquid-cooled engine</li>
+                </ul>
+                <p><span class="font-weight-700">Cons:</span></p>
+                <ul>
+                    <li>Firmer ride</li>
+                    <li>Smaller fuel tank</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Which One Should You Buy?</h2>
+
+                <p><span class="font-weight-700">Meteor 350 is Ideal For:</span></p>
+                <ul>
+                    <li>Long-distance tourers</li>
+                    <li>Riders preferring smooth, laid-back cruising</li>
+                    <li>Pillion-friendly riders</li>
+                    <li>Those looking for built-in navigation</li>
+                </ul>
+
+                <p><span class="font-weight-700">Yezdi Roadster is Ideal For:</span></p>
+                <ul>
+                    <li>Young riders looking for sportier performance</li>
+                    <li>City commuters who prefer agile handling</li>
+                    <li>Riders who want a muscular, modern design</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Final Verdict:</span></p>
+                <p>The <span class="font-weight-700">Royal Enfield Meteor 350</span > is the perfect choice for riders who want <span class="font-weight-700">comfort, classic cruiser looks, and smooth touring performance</span >. It is a proven bike with the right balance of tech, usability, and long-distance capability.</p>
+                <p>The <span class="font-weight-700">Yezdi Roadster</span >, on the other hand, is a great pick for those who want <span class="font-weight-700">more power, sportier riding, and a modern roadster feel</span >. It's ideal for riders who enjoy quick acceleration and nimble handling in daily traffic.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs: Meteor 350 vs Yezdi Roadster</h2>
+
+                <div class="accordion" id="faqMeteorRoadster">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which bike has better mileage, Meteor 350 or Yezdi Roadster?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqMeteorRoadster">
+                            <div class="accordion-body">
+                                The Meteor 350 offers better mileage of around 41.88 kmpl, while the Yezdi Roadster offers 28.53 kmpl.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Does the Yezdi Roadster have a navigation system?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqMeteorRoadster">
+                            <div class="accordion-body">
+                                No, the Yezdi Roadster does not have built-in navigation. The Meteor 350 comes with the Tripper navigation system.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Which bike is better for highway touring?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqMeteorRoadster">
+                            <div class="accordion-body">
+                                The Meteor 350 is better suited for highway touring due to its comfortable seating and smooth cruising capability.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Which bike is more powerful?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqMeteorRoadster">
+                            <div class="accordion-body">
+                                The Yezdi Roadster produces more power (29 PS) compared to the Meteor 350's 20.2 PS.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Does the Meteor 350 have ABS?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqMeteorRoadster">
+                            <div class="accordion-body">
+                                Yes, both the Meteor 350 and Yezdi Roadster come with dual-channel ABS.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Which is lighter, the Meteor 350 or Yezdi Roadster?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqMeteorRoadster">
+                            <div class="accordion-body">
+                                The Yezdi Roadster is a bit heavier at 194 kg, while the Meteor 350 weighs 191 kg.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which bike is more suitable for city commuting?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqMeteorRoadster">
+                            <div class="accordion-body">
+                                The Yezdi Roadster feels more agile and quicker in city traffic, while the Meteor 350 is better for relaxed cruising.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Which bike has better comfort for pillion riders?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqMeteorRoadster">
+                            <div class="accordion-body">
+                                The Meteor 350 offers better pillion comfort, including a backrest, making it more touring-friendly.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Are both bikes beginner-friendly?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqMeteorRoadster">
+                            <div class="accordion-body">
+                                Yes, both bikes are beginner-friendly. The Meteor 350 offers a smoother learning curve, while the Roadster is slightly sportier.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Which one is better for a youthful, sporty look?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqMeteorRoadster">
+                            <div class="accordion-body">
+                                The Yezdi Roadster's aggressive, modern design will appeal more to younger riders looking for a sportier appearance.
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

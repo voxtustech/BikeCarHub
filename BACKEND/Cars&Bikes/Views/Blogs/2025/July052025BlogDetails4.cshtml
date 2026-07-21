@@ -1,0 +1,492 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Nexon vs Hyundai Venue: Compact SUV Face-Off 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Tata Nexon vs Hyundai Venue, Nexon vs Venue comparison 2025, best compact SUV India 2025, Tata Nexon price 2025, Hyundai Venue features 2025, Nexon vs Venue mileage, Nexon safety rating, Venue turbo petrol review, sub-4 meter SUV comparison, Tata vs Hyundai SUVs" />
+    <meta name="description" content="Detailed comparison of Tata Nexon vs Hyundai Venue in 2025. Compare engines, features, safety, prices and decide which compact SUV is best for your needs." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 3rd July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>That's why <span class="font-weight-700">BikeCarHub</span> brings you a comprehensive 2025 guide covering <span class="font-weight-700">15+ essential things to check before buying a used bike</span>, including paperwork, inspection tips, a feature comparison table, FAQs, and everything you need for a confident purchase.</p>
+
+                <div class="div-line"></div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/things to check before buying secondhand bike/buying-second-hand-bike.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <h2 class="subheading">Why Consider a Second-Hand Bike?</h2>
+                <ul>
+                    <li><i class="fas fa-money-bill-wave checklist-icon"></i> <span class="font-weight-700">Cost-effective:</span> Save 30–60% compared to buying new</li>
+                    <li><i class="fas fa-tools checklist-icon"></i> <span class="font-weight-700">Lower maintenance</span> if the bike is already run-in</li>
+                    <li><i class="fas fa-graduation-cap checklist-icon"></i> <span class="font-weight-700">Ideal for beginners</span>, students, and city commutes</li>
+                    <li><i class="fas fa-biking checklist-icon"></i> <span class="font-weight-700">Access to premium models</span> within your budget</li>
+                    <li><i class="fas fa-chart-line checklist-icon"></i> <span class="font-weight-700">Depreciation already absorbed</span></li>
+                </ul>
+                <p>But while benefits are real, risks like hidden damages, fake documents, and unpaid challans are equally real. Let's explore how to avoid them.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Types of Sellers You May Encounter</h2>
+                <p>Before the inspection, identify who you're dealing with:</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Seller Type</th>
+                                <th class="text-center">What to Expect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Individual Owner</td>
+                                <td>Lower cost, needs more verification</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Authorized Reseller</td>
+                                <td>Warranty/Service support, higher price</td>
+                            </tr>
+                            <tr>
+                                <td>Used Bike Dealer</td>
+                                <td>Ready stock, middleman margin</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Online Platforms</td>
+                                <td>Quick comparisons, check for authenticity</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/things to check before buying secondhand bike/second-hand-motorcycle-buying-checklist-in-india.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p><span class="font-weight-700">BikeCarHub Tip:</span> If possible, choose an individual owner and meet in person for better negotiation and transparency.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Things to Inspect Before Buying a Used Bike</h2>
+
+                <h3 class="subheading"><i class="fas fa-wrench"></i> A. Mechanical & Physical Inspection</h3>
+
+                <h4 class="font-weight-700">1. Overall Body Condition</h4>
+                <ul>
+                    <li>Look for dents, scratches, rust patches, paint mismatch</li>
+                    <li>Check alignment of panels, handlebar, and wheels</li>
+                </ul>
+
+                <h4 class="font-weight-700">2. Engine Health</h4>
+                <ul>
+                    <li>Cold-start the bike</li>
+                    <li>Listen for knocking or strange noises</li>
+                    <li>Watch for smoke from exhaust</li>
+                </ul>
+
+                <h4 class="font-weight-700">3. Clutch & Gearbox</h4>
+                <ul>
+                    <li>Smooth clutch pull? Check!</li>
+                    <li>Gear shifting should be smooth without jerks</li>
+                </ul>
+
+                <h4 class="font-weight-700">4. Braking System</h4>
+                <ul>
+                    <li>Front and rear brakes should be effective</li>
+                    <li>Look for worn brake pads, damaged cables, or leaking calipers</li>
+                </ul>
+
+                <h4 class="font-weight-700">5. Suspension Check</h4>
+                <ul>
+                    <li>Push down on handlebars and rear seat—bike should bounce back smoothly</li>
+                    <li>Inspect fork seals and rear shocks for oil leaks</li>
+                </ul>
+
+                <h4 class="font-weight-700">6. Tyres & Rims</h4>
+                <ul>
+                    <li>Check tread depth and sidewall cracks</li>
+                    <li>Inspect rims for bends or rust</li>
+                </ul>
+
+                <h4 class="font-weight-700">7. Battery Performance</h4>
+                <ul>
+                    <li>Use self-start to test battery strength</li>
+                    <li>Check for date stamp on battery</li>
+                </ul>
+
+                <h4 class="font-weight-700">8. Odometer Reading</h4>
+                <ul>
+                    <li>Tampering is possible—compare with bike's wear and service logs</li>
+                </ul>
+
+                <h4 class="font-weight-700">9. Chain & Sprockets</h4>
+                <ul>
+                    <li>Excessively slack or rusted chains need replacement</li>
+                </ul>
+
+                <h4 class="font-weight-700">10. Lights, Indicators, and Horn</h4>
+                <ul>
+                    <li>Confirm everything works, including headlamp modes, tail light, and turn signals</li>
+                </ul>
+
+                <h3 class="subheading"><i class="fas fa-file-alt"></i> B. Document & Legal Checks</h3>
+
+                <h4 class="font-weight-700">11. RC (Registration Certificate)</h4>
+                <ul>
+                    <li>Ensure chassis and engine numbers match the RC</li>
+                    <li>Confirm bike is registered in the seller's name</li>
+                </ul>
+
+                <h4 class="font-weight-700">12. Valid Insurance Policy</h4>
+                <ul>
+                    <li>Should be valid at time of purchase (third-party or comprehensive)</li>
+                    <li>Needed for RC transfer</li>
+                </ul>
+
+                <h4 class="font-weight-700">13. PUC Certificate</h4>
+                <ul>
+                    <li>Emission compliance is mandatory for all running vehicles</li>
+                </ul>
+
+                <h4 class="font-weight-700">14. Loan Clearance or Form 35</h4>
+                <ul>
+                    <li>If the bike was under loan, request hypothecation termination documents</li>
+                </ul>
+
+                <h4 class="font-weight-700">15. Service Record</h4>
+                <ul>
+                    <li>Ask for service book, receipts, and history from authorized service centers</li>
+                </ul>
+
+                <h4 class="font-weight-700">16. Pending Challans</h4>
+                <ul>
+                    <li>Visit <a href="https://echallan.parivahan.gov.in/" class="for-link">echallan.parivahan.gov.in</a> to check fines</li>
+                </ul>
+
+                <h4 class="font-weight-700">17. No Objection Certificate (If applicable)</h4>
+                <ul>
+                    <li>Needed for inter-state bikes or those transferred between RTO zones</li>
+                </ul>
+
+                <div class="div-line"></div>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/things to check before buying secondhand bike/shb.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <h2 class="subheading">Test Ride Tips</h2>
+                <ul>
+                    <li>Start engine from cold</li>
+                    <li>Ride on multiple roads and speeds</li>
+                    <li>Test brakes, clutch response, and throttle feel</li>
+                    <li>Listen for noises, vibrations, or sluggish pickup</li>
+                    <li>Observe how it handles corners and bumps</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Price Evaluation & Negotiation</h2>
+                <ul>
+                    <li>Compare the price on platforms like OLX, Quikr, Droom</li>
+                    <li>Factor in repairs needed for negotiation</li>
+                    <li>
+                        Use depreciation formula:
+                        <ul>
+                            <li>5% loss in 1st six months</li>
+                            <li>10–15% 6 months to 1 year</li>
+                            <li>20% from 1 to 2 years</li>
+                            <li>30% from 2 to 3 years</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">BikeCarHub Note:</span> Don't be afraid to walk away if the seller resists fair negotiation.</p>
+
+                <div class="div-line"></div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/things to check before buying secondhand bike/shb-1.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <h2 class="subheading">Paperwork Checklist for Purchase</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Document</th>
+                                <th class="text-center">Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RC Copy</td>
+                                <td>Legal ownership proof</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Form 29 & 30</td>
+                                <td>Ownership transfer forms</td>
+                            </tr>
+                            <tr>
+                                <td>Delivery Note</td>
+                                <td>Proof of bike handover</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Sale Agreement</td>
+                                <td>Protects both buyer and seller</td>
+                            </tr>
+                            <tr>
+                                <td>ID Proof (Both parties)</td>
+                                <td>For verification</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Once purchase is complete, proceed with the RC transfer process at the local RTO or through the Parivahan portal.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">RC Transfer & Ownership Change</h2>
+                <ul>
+                    <li>Mandatory under the Motor Vehicles Act</li>
+                    <li>Visit <a href="https://parivahan.gov.in/" class="for-link">parivahan.gov.in</a></li>
+                    <li>Fill "Transfer of Ownership" form</li>
+                    <li>Upload documents & pay fees (₹150–₹300)</li>
+                    <li>Download receipt and await new RC</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Comparison Table -- New vs Second-Hand Bike</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Criteria</th>
+                                <th class="text-center">Brand New Bike</th>
+                                <th class="text-center">Second-Hand Bike</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Price</td>
+                                <td>High (₹1L–₹3L+)</td>
+                                <td>30–60% lower</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Insurance Premium</td>
+                                <td>High</td>
+                                <td>Lower (based on IDV)</td>
+                            </tr>
+                            <tr>
+                                <td>Registration Charges</td>
+                                <td>Included</td>
+                                <td>Already paid</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Warranty</td>
+                                <td>Full coverage</td>
+                                <td>Mostly expired</td>
+                            </tr>
+                            <tr>
+                                <td>Service Support</td>
+                                <td>3–5 years</td>
+                                <td>Depends on ownership</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>RC Transfer Needed</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Common Mistakes to Avoid</h2>
+                <ul>
+                    <li>Skipping engine inspection</li>
+                    <li>Not verifying RC and insurance</li>
+                    <li>Ignoring signs of tampered odometer</li>
+                    <li>Buying without a sale agreement</li>
+                    <li>Forgetting to initiate RC transfer</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Conclusion</h2>
+                <p>Buying a second-hand bike is a smart move when done right. The key lies in being patient, observant, and following a complete checklist covering mechanical, legal, and financial aspects.</p>
+                <p>Always prioritize <span class="font-weight-700">document validation and RC transfer</span> to avoid future issues. Use tools like the Parivahan portal, mParivahan app, and eChallan checker to assist your buying process.</p>
+                <p>For more tips on buying, owning, and maintaining two-wheelers in India, stay connected with <span class="font-weight-700">BikeCarHub</span> — your trusted two-wheeler companion.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs -- Buying a Second-Hand Bike in India</h2>
+
+                <div class="accordion" id="faqUsedBike">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Is it safe to buy a used bike online?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqUsedBike">
+                            <div class="accordion-body">
+                                Yes, if you verify the seller, inspect the bike in person, and validate documents.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Can I insure a second-hand bike?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqUsedBike">
+                            <div class="accordion-body">
+                                Absolutely. You can renew or buy a new insurance policy post-purchase.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. What is the cost of RC transfer?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqUsedBike">
+                            <div class="accordion-body">
+                                Typically ₹150–₹300, plus ₹200–₹250 for Smart Card in some states.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. How to check if a used bike has accident history?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqUsedBike">
+                            <div class="accordion-body">
+                                Check insurance claims history and inspect frame for welding marks.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. What if the RC is still in the original owner's name?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqUsedBike">
+                            <div class="accordion-body">
+                                Ask for Form 29/30 and a valid ID proof. Complete transfer ASAP to avoid legal trouble.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Can I test ride before buying?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqUsedBike">
+                            <div class="accordion-body">
+                                Yes, always. It helps identify mechanical faults and get a feel for the bike.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Is it necessary to update the insurance policy?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqUsedBike">
+                            <div class="accordion-body">
+                                Yes, insurance must be in the current owner's name for claims to be valid.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Can I check the challan history of the bike?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqUsedBike">
+                            <div class="accordion-body">
+                                Yes, on the Parivahan eChallan website using the registration number.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. What if the seller doesn't have service records?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqUsedBike">
+                            <div class="accordion-body">
+                                It's a red flag, but if the bike is well-maintained, you can still proceed cautiously.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. How many years old is too old for a second-hand bike?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqUsedBike">
+                            <div class="accordion-body">
+                                Ideally, avoid bikes older than 7–8 years unless very well maintained.
+                            </div>
+                        </div>
+                    </div>
+        </div>
+                <p></p>
+                <p><span class="font-weight-700"><a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650">BikeCarHub</a></span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

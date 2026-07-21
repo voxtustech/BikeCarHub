@@ -1,0 +1,292 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Punch vs Hyundai Exter (2025): India's Micro SUV Battle";
+}
+@section MetaTags {
+    <meta name="keywords" content="Tata Punch vs Hyundai Exter, Punch vs Exter 2025, best micro SUV India, Tata Punch review, Hyundai Exter features, Punch vs Exter mileage, Punch vs Exter safety, Punch vs Exter price" />
+    <meta name="description" content="Compare Tata Punch vs Hyundai Exter for performance, safety, features, and value. Find out which 2025 micro-SUV suits your needs with our detailed comparison." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 27th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Positioning & Pricing</h2>
+                <h3 class="subheading">Tata Punch 2025</h3>
+                <ul>
+                    <li>Officially priced starting around <span class="font-weight-700">₹5.99 L</span> for the base petrol model</li>
+                    <li>Offers petrol and emerging EV versions, placing it as a premium hatchback alternative</li>
+                </ul>
+
+                <h3 class="subheading">Hyundai Exter 2025</h3>
+                <ul>
+                    <li>Price range: <span class="font-weight-700">₹6.20 L to ₹12.33 L</span> ex-showroom across petrol, AMT, and CNG trims</li>
+                    <li>Positioned for young buyers who want SUV flair with modern convenience</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Powertrain & Performance</h2>
+                <h3 class="subheading">Tata Punch</h3>
+                <ul>
+                    <li><span class="font-weight-700">1.2 L Revotron</span> (3-cylinder) petrol: ~86 PS / 114 Nm</li>
+                    <li><span class="font-weight-700">5MT / optional AMT</span></li>
+                    <li>CNG and EV variants available, but core comparisons focus on petrol</li>
+                </ul>
+
+                <h3 class="subheading">Hyundai Exter</h3>
+                <ul>
+                    <li><span class="font-weight-700">1.2 L Kappa II</span> petrol: 82 PS / 114 Nm</li>
+                    <li><span class="font-weight-700">5MT or 5-speed AMT</span></li>
+                    <li><span class="font-weight-700">Bi-fuel CNG variant</span> with 68 PS / 95 Nm (CNG)</li>
+                </ul>
+
+                <h3 class="subheading">Fuel Economy (ARAI)</h3>
+                <ul>
+                    <li>Punch petrol: Not officially published; expected ~18 kmpl</li>
+                    <li>Punch CNG/EV: N/A for 2025 petrol model</li>
+                    <li>Exter petrol: <span class="font-weight-700">19.2 kmpl</span>, AMT ~19.2 kmpl</li>
+                    <li>Exter CNG: <span class="font-weight-700">27.1 km/kg</span></li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Dimensions & Practical Usability</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Spec</th>
+                                <th class="text-center">Tata Punch</th>
+                                <th class="text-center">Hyundai Exter</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Length</td>
+                                <td>3,800 mm</td>
+                                <td>3,815 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Width</td>
+                                <td>1,742 mm</td>
+                                <td>1,710 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Height</td>
+                                <td>1,615 mm</td>
+                                <td>1,631 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Wheelbase</td>
+                                <td>2,445 mm</td>
+                                <td>2,450 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Ground Clearance</td>
+                                <td>~187 mm-205 mm</td>
+                                <td>185 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Boot</td>
+                                <td>366 L (estimated)</td>
+                                <td><span class="font-weight-700">391 L</span></td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Seating</td>
+                                <td>5 adults</td>
+                                <td>5 adults</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><span class="font-weight-700">Verdict:</span> The Exter offers marginally more cabin and boot space. Both seat five comfortably but Punch feels roomier up front, while Exter leads cargo volume.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Safety & Crash Ratings</h2>
+                <h3 class="subheading">Tata Punch</h3>
+                <ul>
+                    <li>Features: Dual front airbags, ABS + EBD, ISOFIX, rear camera/sensors, TPMS, hill hold assist</li>
+                    <li><span class="font-weight-700">5-Star Global NCAP</span> (adult occupant), <span class="font-weight-700">5-Star Bharat NCAP (EV)</span></li>
+                </ul>
+
+                <h3 class="subheading">Hyundai Exter</h3>
+                <ul>
+                    <li>Features: 6 airbags, ABS + EBD, ESC, VSM, HAC, TPMS, ISOFIX, rear camera, dashcam with dual cameras standard from SX Tech</li>
+                    <li>Aims for <span class="font-weight-700">5-star Bharat NCAP</span> compliance</li>
+                </ul>
+                <p><span class="font-weight-700">Verdict:</span> While both shine in safety, Punch's crash-tested results (5★ GNCAP) give it proven credibility. Exter offers advanced active safety tech like dashcams and stability control across trims, exceeding norms.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Features & Technology</h2>
+                <h3 class="subheading">Punch</h3>
+                <ul>
+                    <li>Decent mid-trim tech: <span class="font-weight-700">7″ touchscreen</span>, Android Auto, rear AC vents, rear camera</li>
+                    <li>Top trims: Improved ergonomics, rear camera and premium upholstery</li>
+                </ul>
+
+                <h3 class="subheading">Exter</h3>
+                <ul>
+                    <li><span class="font-weight-700">8″ touchscreen</span> (optional 8″ wireless + wireless CarPlay/Android Auto)</li>
+                    <li>Digital display, dual-camera dashcam, voice-enabled sunroof (SX and above), auto-AC, cruise control, cooled glove box, BlueLink connectivity with 60+ features</li>
+                </ul>
+                <p><span class="font-weight-700">Human-Touch Perspective:</span> Exter feels tech-forward and aspirational, especially with its dashcam and voice sunroof. Punch, while simpler, focuses on safety and practical comfort.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Ride, Handling & Real-World Feedback</h2>
+                <h3 class="subheading">Punch</h3>
+                <ul>
+                    <li>Composed ride thanks to solid chassis; higher ground clearance is an asset</li>
+                    <li>Drivers praise cabin space but mention gearbox jerkiness in some AMT units. Some report service and quality-control issues</li>
+                </ul>
+
+                <h3 class="subheading">Exter</h3>
+                <ul>
+                    <li>Light steering, smooth AMT, good suspension compliance for city roads</li>
+                    <li>Owners appreciate dashcam and sunroof but note rear bench is cozy for three adults</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Trim & Price Variants</h2>
+                <h3 class="subheading">Punch</h3>
+                <ul>
+                    <li>Petrol-only trims: Active, Creative, Kaziranga variants around ₹6-9 L</li>
+                    <li>EV & CNG variants: Priced above ₹10 L, outside this comparison</li>
+                </ul>
+
+                <h3 class="subheading">Exter</h3>
+                <ul>
+                    <li>Extensive range: EX (₹7.7-7.9 L), S AMT (₹8.5-9.5 L), CNG options</li>
+                </ul>
+                <p><span class="font-weight-700">Value Comparison:</span> Punch emphasizes raw safety and space in straightforward trims. Exter packs more tech per rupee, especially its top-level wireless touchscreen, dashcam, sunroof, and BlueLink.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Ownership & After-Sales</h2>
+                <h3 class="subheading">Punch</h3>
+                <ul>
+                    <li>Tata's broad network is a service plus, but some owners report QC and service inconsistencies</li>
+                </ul>
+
+                <h3 class="subheading">Exter</h3>
+                <ul>
+                    <li>Hyundai offers perks through Hyundai Care App, 5-year warranties, flexible subscriptions, and roadside assistance</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Buyer Recommendations & Use Cases</h2>
+                <h3 class="subheading">Choosing the Tata Punch:</h3>
+                <ul>
+                    <li>You prioritize <span class="font-weight-700">proven crash safety</span> (5★ ratings)</li>
+                    <li>You want a <span class="font-weight-700">taller, SUV-like stance</span> and spacious cabin</li>
+                    <li>You prefer straightforward variants with strong value and traditional reliability</li>
+                </ul>
+
+                <h3 class="subheading">Choosing the Hyundai Exter:</h3>
+                <ul>
+                    <li>You seek <span class="font-weight-700">tech-rich features</span>—sunroof, wireless charging, dashcam</li>
+                    <li>You appreciate <span class="font-weight-700">connected car services</span> with BlueLink</li>
+                    <li>You want more powertrain options (CNG, AMT) and modern convenience à la carte</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Words: Who Wins?</h2>
+                <p>Both are excellent micro-SUVs but cater to different priorities:</p>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Tata Punch</th>
+                                <th class="text-center">Hyundai Exter</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Safety</td>
+                                <td>Proven crash ratings</td>
+                                <td>Advanced active safety</td>
+                            </tr>
+                            <tr>
+                                <td>Tech Features</td>
+                                <td>Basic to mid-level</td>
+                                <td>Sunroof, dashcam, BlueLink</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Comfort</td>
+                                <td>Spacious cabin</td>
+                                <td>Good ride, cozy rear bench</td>
+                            </tr>
+                            <tr>
+                                <td>Convenience</td>
+                                <td>Simple, reliable</td>
+                                <td>Connected and practical</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>After-Sales Coverage</td>
+                                <td>Large service network</td>
+                                <td>Enhanced perks and warranty</td>
+                            </tr>
+                            <tr>
+                                <td>Price (top trims)</td>
+                                <td>₹6-9 L</td>
+                                <td>₹6-9.5 L</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ul>
+                    <li><span class="font-weight-700">Buy Punch</span> if crash safety, space, and simplicity matter most</li>
+                    <li><span class="font-weight-700">Choose Exter</span> if you want tech, connectivity, and a modern package</li>
+                </ul>
+
+                <div class="div-line"></div>
+
+                <h3 class="heading">Check other brands here</h3>
+                <p>For Tata Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_1"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+
+            </div>
+            </div>
+        </div>
+
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

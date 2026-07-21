@@ -1,0 +1,98 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Chennai Company Gifts 28 Cars Including Mercedes-Benz to Employees";
+}
+@section MetaTags{
+    <meta name="keywords" content="Chennai company, employee gifts, morale boost, Mercedes-Benz, corporate culture, employee recognition, workplace motivation." />
+    <meta name="description" content="A Chennai firm has gifted 28 cars, including Mercedes-Benz models, to its employees to boost morale and recognize their hard work, fostering a positive workplace culture." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>
+                    In a remarkable move to boost employee morale, a Chennai-based company has gifted a total of 28 cars, including several high-end Mercedes-Benz models, to its employees. This initiative is part of the company’s effort to acknowledge the dedication and hard work of its staff, especially in challenging times.
+                </p>
+                <p>The decision to distribute these vehicles comes after the company experienced significant growth and success in recent years. By rewarding employees with cars, the management aims to not only express gratitude but also to create a motivating environment that encourages further productivity and commitment.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/diwali bonanza chennai firm presents 28 cars, including mercedes benz, to employees to boost morale/2.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/diwali bonanza chennai firm presents 28 cars, including mercedes benz, to employees to boost morale/3.webp" /></div>
+                </div>
+                <p>
+                    The gifting ceremony was held at the company’s headquarters, where employees were elated to receive their new cars. The luxury vehicles, including various models of Mercedes-Benz, symbolize the company's appreciation for their efforts. This generous gesture has garnered attention both within the organization and across the industry, highlighting the importance of employee recognition in fostering a positive workplace culture.
+                </p>
+                <p>In addition to boosting morale, the initiative is expected to enhance employee loyalty and retention. The company believes that by investing in its workforce, it will ultimately lead to greater innovation and success. As businesses navigate the complexities of the modern workplace, this example of corporate generosity sets a standard for others to follow.</p>
+                <p>With a focus on employee well-being, this Chennai firm is paving the way for a more engaged and motivated workforce, demonstrating that recognizing hard work can lead to mutual benefits for both employees and the organization.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

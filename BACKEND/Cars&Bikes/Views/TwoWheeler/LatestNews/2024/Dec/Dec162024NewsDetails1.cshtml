@@ -1,0 +1,127 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Triumph Speed T4 Gets ₹18,000 Discount – Limited Offer";
+}
+@section MetaTags{
+    <meta name="keywords" content="Triumph Speed T4, Speed T4 discount, Triumph bike offers, Speed T4 price, Triumph motorcycle deals, premium street bikes, Triumph India, Triumph Speed T4 price in India, Triumph Speed T4 on Road Price, Triumph speed t4 vs speed 400, Triumph Speed T4 mileage, Triumph speed t4 price has been dropped by rs. 18,000" />
+    <meta name="description" content="Grab the Triumph Speed T4 at ₹18,000 off! Enjoy premium performance, modern features, and iconic styling at an unbeatable price. Limited stocks only!" />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.NewsHeading" title="@Model.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <p>Triumph Motorcycles has announced a festive discount of ₹18,000 on the Speed T4, reducing its price for a limited period. The Speed T4 is one of the most sought-after bikes in Triumph’s lineup, appealing to riders with its powerful engine, refined aesthetics, and high-tech features. The new pricing aims to attract new customers and reinforce Triumph’s presence in the competitive mid-capacity motorcycle segment.</p>
+                <p>This offer is available across <a class="for-link" href="/triumph">Triumph</a> dealerships in India while stocks last. The bike’s post-discount price is set to intensify competition in its segment, making it a lucrative option for motorcycling enthusiasts.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/dec/triumphspeedt4receives18000discountforlimitedtime/triumph t4.webp" alt="Triumph T4" title="Triumph T4" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/dec/triumphspeedt4receives18000discountforlimitedtime/triumph speed t4.webp" alt="Triumph Speed T4" title="Triumph Speed T4" /></div>
+                </div>
+                <h3 class="subheading">Triumph Speed T4 Specifications:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Engine:</span> 398.15cc, Liquid-cooled, 4 valve, DOHC, single-cylinder</li>
+                    <li><span class="font-weight-700">Power:</span> 31 PS @@ 7000 rpm</li>
+                    <li><span class="font-weight-700">Torque:</span> 36 Nm @@ 5000 rpm</li>
+                    <li><span class="font-weight-700">Transmission:</span> 6-speed gearbox</li>
+                    <li><span class="font-weight-700">Chassis:</span> Hybrid tubular steel frame</li>
+                </ol>
+                <h3 class="subheading">Brakes:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Front:</span> 300mm disc with 4-piston radial caliper</li>
+                    <li><span class="font-weight-700">Rear:</span> 230mm disc with single-piston caliper</li>
+                </ol>
+                <h3 class="subheading">Suspension:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Front:</span> 43mm Telescopic Fork. 140mm wheel travel</li>
+                    <li><span class="font-weight-700">Rear:</span> Gas monoshock RSU with external reservoir and pre-load adjustment. 120mm wheel travel</li>
+                </ol>
+                <h3 class="subheading">Tyres:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Front:</span> 110/70-17</li>
+                    <li><span class="font-weight-700">Rear:</span> 140/70-17</li>
+                </ol>
+                <h3 class="subheading">Key Features:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Retro-Modern Design:</span> Blends classic Triumph styling with modern performance.</li>
+                    <li><span class="font-weight-700">Full-LED Lighting:</span> LED headlamp, tail lamp, and indicators.</li>
+                    <li><span class="font-weight-700">Ride-by-Wire:</span> Enhances throttle response and ride quality.</li>
+                    <li><span class="font-weight-700">Dual ABS:</span> Ensures safe braking on all terrains.</li>
+                    <li><span class="font-weight-700">Lightweight:</span> Tipping the scales at just 170 kg (dry), making it highly agile.</li>
+                </ol>
+                <h3 class="subheading">Pricing (After Discount):</h3>
+                <ol>
+                    <li><span class="font-weight-700">Ex-Showroom Price:</span> ₹1.99 Lakh</li>
+                    <li><span class="font-weight-700">On-Road Price:</span> Varies by location, check with local dealers for details.</li>
+                </ol>
+                <p>This limited-time offer positions the Triumph Speed T4 as one of the most accessible premium street bikes on the market, perfect for riders looking to upgrade or start their biking journey with a legendary brand.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

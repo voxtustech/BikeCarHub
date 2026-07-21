@@ -1,0 +1,118 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Demerits of Hyundai Alcazar: Key Drawbacks & Comparisons with Rivals";
+}
+@section MetaTags{
+    <meta name="keywords" content="Hyundai Alcazar drawbacks, Hyundai Alcazar demerits, Alcazar SUV disadvantages, Hyundai Alcazar engine performance, Hyundai Alcazar cramped seating, Alcazar vs Tata Safari, Hyundai Alcazar third-row space, Hyundai Alcazar review, Hyundai Alcazar diesel engine noise, Hyundai Alcazar vs Mahindra XUV700, Hyundai Alcazar expensive variants, Hyundai Alcazar no AWD, Hyundai Alcazar issues, Hyundai Alcazar handling flaws, Alcazar SUV comparison" />
+    <meta name="description" content="Discover the key drawbacks of the Hyundai Alcazar, including limited engine performance, cramped third-row seating, and the absence of AWD. Learn how it compares to competitors like the Tata Safari and Mahindra XUV700." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>The Hyundai Alcazar, known for its premium appeal and feature-rich cabin, competes in the mid-size SUV segment with rivals like the Tata Safari and Mahindra XUV700. However, several factors may hinder its success in this highly competitive market:</p>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Limited Engine Options:</span>
+                        The Alcazar comes with a 2.0-liter petrol and 1.5-liter diesel engine, both of which are adequate for city driving but feel underpowered when fully loaded. Compared to its competitors, which offer more powerful engine variants, the Alcazar's engine lineup may not satisfy performance-driven customers.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">
+                            Cramped Third-Row Seating:</span>
+                        Despite being marketed as a 7-seater, the Alcazar's third-row seats are tight and uncomfortable for adults, making them suitable only for children or short trips. For families seeking spacious seating in all rows, this could be a significant drawback.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">
+                            No AWD or 4x4 Option:</span>
+                        Unlike its competitors, the Hyundai Alcazar does not come with an all-wheel-drive (AWD) or 4x4 variant, limiting its off-road capabilities. Buyers looking for better traction in challenging conditions may opt for alternatives that offer this feature.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">
+                            Expensive Top-End Variants:</span>
+                        The Alcazar's base variants are competitively priced, but the top-end versions can be quite expensive, placing them in competition with more powerful SUVs. Buyers may find better value in rival models that offer superior performance and features at a similar price point.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">
+                            Average Driving Dynamics:</span>
+                        The Alcazar offers a comfortable ride for daily commuting, but its handling lacks the precision and engagement that competitors provide. The steering response is not as sharp, which may be a concern for drivers seeking a more dynamic driving experience.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">
+                            Diesel Engine Noise and Vibration:</span>
+                        The 1.5-liter diesel engine, though fuel-efficient, tends to produce noticeable noise and vibrations, particularly at higher speeds. This impacts the overall cabin refinement compared to rival models with smoother diesel engines.
+                    </li>
+                </ol>
+                <p>In summary, while the Hyundai Alcazar excels in offering premium features and comfort, it falls short in areas like engine performance, third-row space, and off-road capability. Buyers may want to consider these factors before making a purchase decision, especially with strong alternatives available in the market.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

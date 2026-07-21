@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!--@{
+}
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+
+@if (Context.Session.GetString("Username") != null)
+{
+    <p>Welcome, @Context.Session.GetString("Username")</p>
+    <a href="/Account/Logout">Logout</a>
+}-->
+@*New*@
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-5">
+
+    <h2>Dashboard</h2>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h4>Welcome, @User.Identity.Name</h4>
+
+        <br />
+
+        <a asp-controller="Account"
+           asp-action="Logout"
+           class="btn btn-danger">
+            Logout
+        </a>
+    }
+    else
+    {
+        <h4>User not logged in</h4>
+
+        <a asp-controller="Account"
+           asp-action="Login"
+           class="btn btn-primary">
+            Login
+        </a>
+    }
+
+</div>

@@ -1,0 +1,11 @@
+﻿@*<div class="header-img"> <img src="~/images/main-slider/header.png" /></div>*@
+@if (Model != null)
+{
+    <p>Max Power: @Model.MaxPower</p>
+    <a asp-action="Edit" asp-route-id="@Model.TWSpecId" class="btn btn-sm btn-warning">Edit</a>
+    <a asp-action="Delete" asp-route-id="@Model.TWSpecId" class="btn btn-sm btn-danger">Delete</a>
+}
+else
+{
+    <p>No specification found.</p>
+}

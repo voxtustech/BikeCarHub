@@ -1,0 +1,563 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "TVS Apache RTX 300: Price, Specs, Features & Review";
+}
+@section MetaTags {
+    <meta name="keywords" content="TVS Apache RTX, Apache RTX 300, RTX 300 Price, Rally Tourer Extreme, TVS Adventure Bike, RTX Specifications, RTX Features, 300cc Adventure Bike, RTX Cruise Control, TVS RT-XD4 Engine, RTX Comparison" />
+    <meta name="description" content="The definitive review of the TVS Apache RTX: India's most advanced rally tourer. See the ₹1,99,000 price, 35 PS specs, Cruise Control, and 4 riding modes." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 16th October 2025</p>
+
+                <div class="div-line"></div>
+                <h3 class="subheading">The Next Chapter of Adventure: Introducing the TVS Apache RTX</h3>
+                <p>
+                    The Indian motorcycling landscape has long been defined by the hunger for adventure, a craving for machines that seamlessly transition from the concrete jungle to untamed trails. TVS Motor Company, with its unparalleled four-decade racing heritage, has answered this call with an offering that doesn't just enter the segment—it redefines it. Welcome to the world of the <span class="font-weight-700">TVS Apache RTX</span>, the Rally Tourer Extreme. This motorcycle is more than just a bike; it is a meticulously engineered extension of the legendary Apache DNA, forged on the racetrack and refined for the open road and the challenging path less traveled.                     <br /><br />
+                    For enthusiasts and potential buyers alike, the RTX represents a pivotal moment. It’s a bold statement that combines TVS Racing's "Track-To-Road Philosophy" with genuine long-distance touring capability and extreme off-road readiness. This comprehensive article, proudly presented by <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a>, dives deep into every aspect of this incredible machine, exploring its groundbreaking engine, its segment-leading features, and the highly competitive price point that is set to shake up the mid-capacity adventure segment in India. Our aim is to give you a genuine, friendly, and human-written perspective on why the Apache RTX is poised to become the new benchmark for affordable adventure touring.
+                </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/tvs apache rtx 300/TVS Apache RTX Website Image1.webp" alt="TVS Apache RTX 300" title="TVS Apache RTX 300" loading="lazy" /></div>
+                </div>
+                <h3 class="subheading">Forged Off the Track: A Legacy of Racing Excellence</h3>
+                <p>
+                    The essence of the Apache RTX is rooted in performance. TVS Racing, established over 43 years ago, is India’s first factory racing team, boasting countless wins in Supercross and Rally championships, and holding the distinction of being the first Indian Manufacturer to compete in the grueling Dakar Rally. This deep-seated racing DNA is directly infused into the RTX, guaranteeing that the machine is not just rugged, but inherently fast, agile, and capable of enduring the most punishing conditions.
+                    <br /><br />
+                    The name 'RTX'—Rally, Tourer, Extreme—is a literal manifestation of its design philosophy. It signifies that the bike is capable of handling the high-speed demands of a rally, the comfort and technology required of a grand tourer, and the robustness needed for extreme, unpredictable terrain. Every component, from the engine cooling system to the chassis geometry, has been developed with this triple mandate in mind. The result is a motorcycle that offers high-performance excitement without compromising the practicality needed for everyday adventure. This track-to-road transfer of technology is a core value proposition that sets the Apache RTX apart from its competitors, promising the rider a machine born with a winning gene.
+                </p>
+                <h3 class="subheading">Powering the Adventure: The All-New RT-XD4 Engine Platform</h3>
+                <p>At the heart of the TVS Apache RTX lies an all-new powerhouse: the <span class="font-weight-700">RT-XD4 engine platform</span>. This motor is arguably the most significant piece of engineering in the motorcycle, replacing the older shared architecture and establishing TVS’s dominance in the sub-350cc segment. It is designed from the ground up to deliver a perfect blend of high-revving performance and low-end grunt—exactly what an adventure-touring machine needs. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/tvs apache rtx 300/TVS Apache RTX Website Image2.webp" alt="TVS Apache RTX Website Image2" title="TVS Apache RTX Website Image2" loading="lazy" /></div>
+                </div>
+                <h5 class="subheading">Engine Specifications at a Glance (The Power of Dual Tech)</h5>
+                <p>The detailed specifications showcase the engine's technical sophistication:</p>
+                <ul>
+                    <li><span class="font-weight-700">Displacement: 299.1 cc.</span></li>
+                    <li><span class="font-weight-700">Type:</span> Single-cylinder, 4-valve, Liquid-cooled, <span class="font-weight-700">DOHC</span> (Dual Overhead Camshaft).</li>
+                    <li><span class="font-weight-700">Max Power:< 35 PS</span> at 9,000 rpm.</li>
+                    <li><span class="font-weight-700">Max Torque: 28.5 Nm</span> at 7,000 rpm.</li>
+                    <li><span class="font-weight-700">Transmission:</span> 6-speed gearbox.</li>
+                    <li><span class="font-weight-700">Clutch:</span> Assist and <span class="font-weight-700">Slipper Clutch</span>.</li>
+                    <li><span class="font-weight-700">Key Technology:</span> <span class="font-weight-700">Dual Cooling Jacket Cylinder Head</span> (using both water and oil) and a <span class="font-weight-700">Dual Breather System</span>.</li>
+                </ul>
+                <p>This engine is engineered for consistent, long-duration performance. The <span class="font-weight-700">35 PS power output</span> is one of the highest in its direct segment, ensuring that highway cruising is effortless and overtaking maneuvers are quick and safe. The torque delivery is optimized for the <span class="font-weight-700">All-Range Torque</span> philosophy mentioned in the brochure, meaning the engine pulls strongly right from the bottom end, a crucial factor when tackling steep inclines or loose terrain.</p>
+                <p>The <span class="font-weight-700">Dual Cooling Jacket</span> and <span class="font-weight-700">Dual Breather System</span> are advanced, race-derived technologies. The cooling jacket ensures superior thermal management, preventing overheating during prolonged periods of high-stress riding—think sustained high-speed highway stretches or slow, intense off-roading. Meanwhile, the dual breather system works to reduce oil consumption and enhance the long-term reliability of the motor, cementing the RTX as a reliable partner for thousands of kilometers. This kind of attention to internal engineering detail highlights TVS's commitment to making the RTX a true adventure machine, not just a dressed-up street fighter.</p>
+                <h3 class="subheading">The Rally DNA: Chassis, Suspension, and Handling</h3>
+                <p>A true adventure bike is defined by its ability to absorb punishment and maintain composure regardless of the ground beneath its wheels. The TVS Apache RTX is built on a high-strength foundation to achieve exactly this.</p>
+                <h5 class="subheading">The Trellis Backbone and Long-Travel Suspension</h5>
+                <p>The RTX utilizes a <span class="font-weight-700">High-Strength Steel Trellis Frame</span>. This structure provides an exceptional balance of rigidity for precise handling on the tarmac and flexibility to handle the lateral stresses of off-road riding. The chassis geometry is paired with a visible, bolt-on rear subframe, which is designed for easy replacement in the event of severe damage—a subtle nod to its rally roots and practicality.</p>
+                <p>The most impressive aspect of the chassis package is the suspension system:</p>
+                <ul>
+                    <li><span class="font-weight-700">Front: 41mm Upside-Down (USD) Forks.</span></li>
+                    <li><span class="font-weight-700">Rear: Mono-tube Floating Piston (MFP) Monoshock.</span></li>
+                    <li><span class="font-weight-700">Key Feature:</span> Both the front and rear suspension units are fully adjustable for <span class="font-weight-700">preload and damping</span>.</li>
+                </ul>
+                <p>The adjustability is a <span class="font-weight-700">major highlight</span> and a segment-best feature. It allows the rider to fine-tune the bike's dynamics based on the load (solo rider, pillion, or full luggage) and the terrain (soft trails vs. hard highways). This customization elevates the RTX from a mere commuter to a serious tool for rally tourers. With <span class="font-weight-700">180mm of wheel travel</span> (Source: Search results confirmed the long travel, specifically 180mm), the suspension travel is generous enough to soak up large bumps, ruts, and jumps, providing both comfort and control.</p>
+                <h5 class="subheading">Dimensions and Off-Road Readiness</h5>
+                <ul>
+                    <li><span class="font-weight-700">Ground Clearance:</span> 200 mm. This high clearance is critical for clearing large obstacles found on challenging trails.</li>
+                    <li><span class="font-weight-700">Kerb Weight:</span> 180 kg. This is highly competitive in the 300cc ADV class, contributing to the bike’s overall agility and making it easier to manage during low-speed off-road maneuvers or when picking it up after a fall.</li>
+                    <li><span class="font-weight-700">Wheels and Tyres:</span> The bike comes equipped with a <span class="font-weight-700">19-inch alloy wheel at the front</span> and a <span class="font-weight-700">17-inch alloy wheel at the rear</span>. These are shod with <span class="font-weight-700">adventure-oriented tyres</span> with a wide tread block pattern, optimized for superior grip across diverse surfaces—from wet roads to loose gravel and dirt. The 19/17-inch setup strikes a perfect balance, providing stability and quick steering response for road-biased touring while still offering competent off-road performance.</li>
+                </ul>
+                <p>To further protect the bike’s internals, the brochure also highlights accessories like a metal bash plate and knuckle guards, emphasizing its Extreme designation.</p>
+                <h3 class="subheading">The Tourer Advantage: Electronics and Comfort</h3>
+                <p>What truly sets the Apache RTX apart in its category is the sheer volume of advanced technology and touring-specific features packed into the package. TVS has not held back, making the RTX one of the most technologically advanced sub-350cc adventure bikes available.</p>
+                <h5 class="subheading">Advanced Electronics Suite and Connectivity</h5>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/tvs apache rtx 300/TVS Apache RTX Website Image.webp" alt="TVS Apache RTX Website Image" title="TVS Apache RTX Website Image" loading="lazy" /></div>
+                </div>
+                <p>The rider interface is dominated by the <span class="font-weight-700">5-inch Multi-Information TFT Cluster</span>. This full-color display is bright, crisp, and provides essential information, but its real power lies in its connectivity:</p>
+                <ul>
+                    <li><span class="font-weight-700">Map Mirroring and Navigation:</span> Using the <span class="font-weight-700">TVS SmartXonnect</span> app, the TFT screen can display full-fledged <span class="font-weight-700">Map Mirroring</span> from Google Maps, giving the rider turn-by-turn navigation directly on the dash. This eliminates the need for a separate phone mount for primary navigation.</li>
+                    <li><span class="font-weight-700">Riding Modes:</span> The RTX features four distinct Riding Modes that dynamically adjust engine power delivery, Traction Control (TC) sensitivity, and ABS intervention to match the riding environment:
+                        <ul>
+                            <li><span class="font-weight-700">Urban:</span> Balanced power, high ABS/TC intervention for city traffic.</li>
+                            <li><span class="font-weight-700">Rain:</span> Subdued power, highest ABS/TC intervention for slippery conditions.</li>
+                            <li><span class="font-weight-700">Tour:</span> Full power, moderate intervention, optimized for highway cruising.</li>
+                            <li><span class="font-weight-700">Rally:</span> Full power, minimum or switchable ABS/TC, optimized for expert off-road use.</li>
+                        </ul></li>
+                    <li><span class="font-weight-700">Cruise Control:</span> A must-have for long-distance touring, the RTX includes <span class="font-weight-700">Cruise Control</span>. This feature is a game-changer for reducing rider fatigue during sustained highway rides.</li>
+                    <li><span class="font-weight-700">Tyre Pressure Monitoring System (TPMS):</span> Another premium feature, the TPMS constantly monitors the real-time pressure of both front and rear tires, displaying the readings on the cluster. Maintaining correct tire pressure is vital for safety, handling, and fuel economy, making this a crucial feature for adventure touring.</li>
+                    <li><span class="font-weight-700">Bi-Directional Quickshifter:</span> The quickshifter allows for seamless, clutchless upshifts and downshifts. This feature, usually found on higher-capacity sports bikes, drastically improves the riding experience, whether on the track, through tight city gears, or on rough terrain where clutching can be awkward.</li>
+                    <li><span class="font-weight-700">Class D LED Headlamp:</span> The headlamp system features a distinct crystalline twin-beam design with DRL blades. Critically, it includes <span class="font-weight-700">Adaptive Intensity Control</span>, which increases the headlight brightness as the motorcycle's speed increases, ensuring maximum visibility when you need it most.</li>
+                </ul>
+                <h5 class="subheading">Design, Aesthetics, and Practicality</h5>
+                <p>
+                    The Apache RTX boasts a dominating road presence. Its <span class="font-weight-700">Rally-Inspired Styling</span> features a forward-leaning, mono-volume silhouette that aggressively merges the semi-fairing, beak fender, and muscular tank. This design is not just aesthetic; the tall windscreen integrated into the fairing offers significant wind blast protection, which is essential for highway comfort.
+                    <br /><br />
+                    The bike is offered in five vibrant and distinctive color variants:
+                </p>
+                <ul>
+                    <li><span class="font-weight-700">Viper Green</span></li>
+                    <li><span class="font-weight-700">Metallic Blue</span></li>
+                    <li><span class="font-weight-700">Pearl White</span></li>
+                    <li><span class="font-weight-700">Lightning Black</span></li>
+                    <li><span class="font-weight-700">Tarn Bronze</span></li>
+                </ul>
+                <p>Each variant features the signature Apache Red accents, connecting the adventure machine back to its racing roots.</p>
+                <p>For the Tourer aspect, the RTX provides modular mounts for luggage, including factory-fit options for quick-release panniers and a top box, often offered in partnership with brands like GIVI. This means the bike is truly <span class="font-weight-700">Touring-Ready</span> straight from the showroom floor, allowing riders to load up for epic cross-country journeys. The ergonomics, with a split-seat setup and a balanced rider triangle, are optimized for both seated long-distance comfort and standing control during aggressive off-roading.</p>
+                <h3 class="subheading">Price and Variants: Unmatched Value Proposition</h3>
+                <p>The pricing strategy for the TVS Apache RTX is one of its most attractive aspects, positioning it as a disruptive force in the premium sub-350cc ADV segment. TVS has launched the RTX with a highly competitive introductory price, offering immense value for the advanced technology it packs. </p>
+                <h5 class="subheading">The Introductory Ex-Showroom Price</h5>
+                <p>The <span class="font-weight-700">TVS Apache RTX</span> starts at an introductory ex-showroom price of:</p>
+                <h3 class="subheading">₹ 1,99,000 (Ex-Showroom)</h3>
+                <p>This starting price point directly undercuts or rivals key competitors, despite the RTX offering advanced features like Cruise Control, a Bi-Directional Quickshifter, and fully adjustable suspension, which are often reserved for much pricier motorcycles. </p>
+                <h5 class="subheading">Variant Breakdown</h5>
+                <p>The Apache RTX is available in three distinct variants, catering to different rider needs and budgets:</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>                            <tr>
+                                <th class="text-center font-weight-600">Variant Name</th>
+                                <th class="text-center font-weight-600">Introductory Ex-Showroom Price (INR) </th>
+                                <th class="text-center font-weight-600">Key Feature Summary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Base Variant</td>
+                                <td>₹ 1,99,000</td>
+                                <td>Dual-Channel ABS, Ride Modes, TFT Display, Basic Connectivity</td>
+                            </tr>
+                            <tr>
+                                <td>Top Variant</td>
+                                <td>₹ 2,14,000</td>
+                                <td>Adds Cruise Control, Bi-Directional Quickshifter, TPMS, Full SmartXonnect Features</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>BTO (Built-to-Order) Variant </td>
+                                <td>₹ 2,34,000</td>
+                                <td>Includes all Top Variant features plus optional fully-adjustable suspension and specialized accessories</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The option of the <span class="font-weight-700">Built-to-Order (BTO) variant</span> is another unique highlight derived from the Apache RR 310's program. It allows the most demanding enthusiasts to receive the bike with factory-fitted specialized parts, such as the full adjustability for the <span class="font-weight-700">USD forks and monoshock</span>, ensuring the bike is tailor-made for their specific adventure needs.</p>
+                <h3 class="subheading">Competitive Analysis: RTX vs. The Field</h3>
+                <p>When considering a purchase, buyers frequent platforms like <span class="font-weight-700">BikeCarHub</span> to compare specifications side-by-side. The TVS Apache RTX enters a highly competitive field, primarily challenging the Suzuki V-Strom SX, the KTM 250 Adventure, and the Yezdi Adventure. Here is a comparison highlighting how the RTX stacks up against its direct rivals, proving its superior value proposition in terms of power and technology.</p>
+                <h5 class="subheading">Comparison Table: TVS Apache RTX vs. Rivals</h5>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/tvs apache rtx 300/RIDER WITH BIKE.webp" alt="RIDER WITH BIKE" title="RIDER WITH BIKE" loading="lazy" /></div>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Feature</th>
+                                <th class="text-center font-weight-600">TVS Apache RTX 300</th>
+                                <th class="text-center font-weight-600">Suzuki V-Strom SX</th>
+                                <th class="text-center font-weight-600">KTM 250 Adventure</th>
+                                <th class="text-center font-weight-600">Yezdi Adventure</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Engine Displacement</td>
+                                <td>299.1 cc</td>
+                                <td>249cc</td>
+                                <td>249.07cc</td>
+                                <td>334cc</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Max Power</td>
+                                <td>35 PS (36 hp)</td>
+                                <td>26.5 hp</td>
+                                <td>31 PS (31 hp)</td>
+                                <td>29.6 PS (29.6 hp)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Max Torque</td>
+                                <td>28.5 Nm</td>
+                                <td>22.2 Nm</td>
+                                <td>25 Nm</td>
+                                <td>29.6 Nm</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Front Suspension</td>
+                                <td>USD Forks (Adjustable)</td>
+                                <td>Telescopic Forks </td>
+                                <td>USD Forks (Non-Adjustable) </td>
+                                <td>Telescopic Forks</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Ground Clearance</td>
+                                <td>200 mm</td>
+                                <td>205 mm </td>
+                                <td>200 mm </td>
+                                <td>220 mm </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Kerb Weight</td>
+                                <td>180 kg</td>
+                                <td>167 kg</td>
+                                <td>176 kg </td>
+                                <td>187 kg</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Quickshifter </td>
+                                <td>Bi-Directional</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Cruise Control</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">TPMS </td>
+                                <td>Yes (Standard on Top/BTO)</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Price (Ex-Showroom)</td>
+                                <td>₹ 1,99,000 (Base)</td>
+                                <td>₹ 1,98,018 </td>
+                                <td>₹ 2,40,010</td>
+                                <td>₹ 1,98,000 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h5 class="subheading">The Performance Edge</h5>
+                <p>
+                    As the table clearly demonstrates, the <span class="font-weight-700">TVS Apache RTX</span> offers the <span class="font-weight-700">highest power and torque</span> figures (barring the higher-displacement Yezdi Adventure's torque) in this direct comparison. More importantly, the <span class="font-weight-700">feature list</span> is where the RTX creates a significant gap. It is the only bike in this segment comparison to offer sophisticated electronics like <span class="font-weight-700">Cruise Control</span> and a <span class="font-weight-700">Bi-Directional Quickshifter</span>. These features drastically enhance the touring experience, delivering a level of convenience and performance typically found on motorcycles costing substantially more, often in the <span class="font-weight-700">₹ 3.5 lakh+ range.</span>
+                    <br /><br />
+                    The use of <span class="font-weight-700">USD Forks</span> with adjustability also gives the RTX a premium edge over the V-Strom SX and Yezdi Adventure, offering superior damping control and ride quality, both on the road and when attacking trails. While the V-Strom SX is the lightest, and the Yezdi offers slightly more ground clearance, the RTX's combination of power, competitive weight (180 kg), and a staggering electronics package at its price point makes it an unmatched overall value proposition.
+                </p>
+                <h3 class="subheading">A Deep Dive into Technical Specifications</h3>
+                <p>For those who rely on the numbers, here is the full technical breakdown of the <span class="font-weight-700">TVS Apache RTX 300</span> model, confirming all critical components based on the brochure and launch details:</p>
+                <h5 class="subheading">Engine and Performance</h5>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Feature </th>
+                                <th class="text-center font-weight-600">Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Engine Type</td>
+                                <td>299.1 cc, Single-cylinder, 4-valve, DOHC</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Cooling System</td>
+                                <td>Liquid-cooled, Dual Cooling Jacket Technology</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Max Power</td>
+                                <td>35 PS @@ 9000 rpm (approx. 36 bhp) </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Max Torque</td>
+                                <td>28.5 Nm @@ 7000 rpm </td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Fuel System</td>
+                                <td>Fuel Injection (FI) </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Transmission</td>
+                                <td>6-Speed Manual </td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Clutch </td>
+                                <td>Assist and Slipper Clutch </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Quickshifter</td>
+                                <td>Bi-Directional Quickshifter (on Top/BTO variants) </td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Riding Modes</td>
+                                <td>4 Modes: Urban, Rain, Tour, Rally</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h5 class="subheading">Chassis and Suspension</h5>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Feature </th>
+                                <th class="text-center font-weight-600">Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Frame Type</td>
+                                <td>High-Strength Steel Trellis Frame</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Front Suspension</td>
+                                <td>41mm USD Cartridge Forks, Long Travel (Adjustable on BTO)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Rear Suspension</td>
+                                <td>Monoshock with Floating Piston, 180mm Travel (Preload Adjustable) </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Front Brake </td>
+                                <td>320 mm Petal Disc with Radial Caliper </td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Rear Brake</td>
+                                <td>240 mm Petal Disc </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">ABS </td>
+                                <td>Dual Channel Switchable ABS (Terrain-Adaptive) </td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Tyres</td>
+                                <td>Adventure-Oriented Dual-Purpose Tubeless Tyres </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Wheel Size (F/R)</td>
+                                <td>19-inch (Front) / 17-inch (Rear) Alloy Wheels</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h5 class="subheading">Dimensions and Capacity</h5>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Feature </th>
+                                <th class="text-center font-weight-600">Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Kerb Weight</td>
+                                <td>180 kg </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Ground Clearance </td>
+                                <td>200 mm </td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Seat Height </td>
+                                <td>835 mm </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Fuel Tank Capacity </td>
+                                <td>12.5 Litres </td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Overall Length </td>
+                                <td>2176 mm </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Wheelbase</td>
+                                <td>1430 mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The comprehensive nature of these specifications underlines TVS's commitment to delivering a motorcycle that is capable in every sense of the word. From the <span class="font-weight-700">28.5 Nm of torque</span> at a mid-range RPM perfect for trail riding, to the essential <span class="font-weight-700">200 mm ground clearance</span> and dual-channel ABS, the RTX is engineered for Indian conditions and global adventure standards. </p>
+                <h3 class="subheading">The Riding Experience: Comfort, Control, and Confidence</h3>
+                <p>The goal of the Apache RTX is to inspire confidence in riders, regardless of their experience level in the adventure segment. The unique blend of ergonomics, electronics, and mechanical components works synergistically to achieve this.</p>
+                <h5 class="subheading">Ergonomics for the Long Haul </h5>
+                <p>
+                    Rider fatigue is the enemy of any long tour, and TVS has meticulously crafted the riding triangle (handlebar, seat, footpeg relation) to be upright and relaxed. The seat height of <span class="font-weight-700">835 mm</span> is standard for an adventure bike with this much suspension travel, offering a commanding view of the road. The split-seat is engineered for both rider and pillion comfort over extended distances, featuring denser foam and an ergonomic shape. Crucially, the footpegs and handlebars are positioned neutrally, allowing the rider to easily transition between a seated touring position and a standing-up rally position when navigating technical off-road sections.
+                    <br /><br />
+                    The standard-fit <span class="font-weight-700">Cruise Control</span> is a monumental inclusion that allows the rider to lock in a speed on long, empty highway stretches, giving their right hand and wrist a much-needed rest. Combined with the smooth power delivery of the new <span class="font-weight-700">RT-XD4 engine</span>, this feature ensures that high-speed cruising remains comfortable for hours on end.
+                </p>
+                <h5 class="subheading">Control in All Conditions </h5>
+                <p>
+                    The electronics play a key role in the RTX’s control. The four riding modes offer a bespoke calibration for the engine response and safety systems. For instance, in <span class="font-weight-700">Rally Mode</span>, the Traction Control and ABS intervention are significantly reduced, or the ABS can be switched off on the rear wheel entirely, giving the experienced rider full control for sliding the rear wheel—a necessity in deep sand or mud. Conversely, <span class="font-weight-700">Rain Mode</span> dampens the throttle and ensures maximum safety intervention from the traction control, preventing any sudden loss of grip on slick surfaces.
+                    <br /><br />
+                    The braking performance is equally high-spec, featuring a large <span class="font-weight-700">320mm front petal disc with a radial caliper</span>. Radial calipers offer consistent and strong braking force, a vital safety net for a bike designed for high-speed highway use and sudden trail stops. This commitment to premium components, rather than compromising on essential safety equipment, is a testament to the quality TVS has built into the <span class="font-weight-700">RTX platform.</span>
+                </p>
+                <h3 class="subheading">Conclusion: The New Dawn of Adventure Touring</h3>
+                <p>
+                    The <span class="font-weight-700">TVS Apache RTX</span> is not just another motorcycle launch; it is a clear statement of intent from TVS Motor Company. By leveraging their deep knowledge of rally racing and infusing the motorcycle with technology that is genuinely segment-leading—from <span class="font-weight-700">Cruise Control</span> and the Bi-Directional <span class="font-weight-700">Quickshifter</span> to the fully-featured <span class="font-weight-700">Map Mirroring TFT display</span>—TVS has created a machine that redefines the <span class="font-weight-700">Rally Tourer Extreme</span> segment.
+                    <br /><br />
+                    The combination of the powerful <span class="font-weight-700">35 PS engine</span> and the highly aggressive <span class="font-weight-700">introductory price of ₹ 1,99,000 (ex-showroom)</span> makes the RTX an almost irresistible proposition for any rider looking to upgrade to a serious, feature-packed adventure machine. It provides power, technology, comfort, and the essential ruggedness needed for Indian roads and unpredictable terrain.
+                    <br /><br />
+                    For those keeping an eye on the motorcycling world, platforms like <span class="font-weight-700">BikeCarHub</span> have been eagerly anticipating this launch, recognizing that the RTX offers an unbeatable value-for-money package. It successfully bridges the gap between a performance street bike and a full-fledged adventure machine, promising to deliver a riding experience that is engaging, comfortable, and safe, no matter where the adventure leads. The legacy of 'Grit to Glory' is truly realized in this motorcycle, making the <span class="font-weight-700">Apache RTX</span> the undeniable new champion of the entry-level adventure touring category.
+                </p>
+
+                <h3 class="subheading">Asked Questions (FAQs) About the TVS Apache RTX</h3>
+                <p>As interest in this groundbreaking new adventure motorcycle surges, riders often have detailed questions about its performance, features, and ownership experience. Here are 10 of the most frequently asked questions regarding the TVS Apache RTX. </p>
+                <div class="accordion" id="faqTeslaModelY">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1.  What does the "RTX" in the name stand for?
+                            </button>
+                        </h3>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The name RTX stands for <span class="font-weight-700">Rally Tourer Extreme</span>. This nomenclature signifies that the motorcycle is built for three core purposes: performance derived from rally racing (R), comfort and features for long-distance touring (T), and robustness for extreme off-road use (X).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. What is the introductory ex-showroom price of the TVS Apache RTX?
+                            </button>
+                        </h3>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The introductory ex-showroom price for the <span class="font-weight-700">Base Variant</span> of the TVS Apache RTX is highly competitive at <span class="font-weight-700">₹ 1,99,000</span>. The price goes up for the <span class="font-weight-700">Top and BTO variants.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. What is the maximum power and torque output of the new RT-XD4 engine?
+                            </button>
+                        </h3>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The new 299.1cc, liquid-cooled RT-XD4 engine produces a maximum power of <span class="font-weight-700">35 PS (36 hp) at 9,000 rpm</span> and a peak torque of <span class="font-weight-700">28.5 Nm at 7,000 rpm</span>. This is segment-leading power output.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Does the Apache RTX come with Cruise Control and a Quickshifter?
+                            </button>
+                        </h3>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Yes, the Top and BTO variants of the TVS Apache RTX come standard with both <span class="font-weight-700">Cruise Control</span> and a <span class="font-weight-700">Bi-Directional Quickshifter</span>. The quickshifter allows for seamless, clutchless upshifts and downshifts.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. What are the key technological features in the Apache RTX
+                            </button>
+                        </h3>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The RTX is technologically loaded. Key features include a <span class="font-weight-700">5-inch TFT Display with Map Mirroring (Google Maps integration)</span>, four <span class="font-weight-700">Riding Modes</span> (Urban, Rain, Tour, Rally), <span class="font-weight-700">Traction Control (TC), and a Tyre Pressure Monitoring System (TPMS).</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. What kind of suspension setup does the TVS Apache RTX use?
+                            </button>
+                        </h3>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The RTX features a premium, long-travel suspension system. It has <span class="font-weight-700">41mm Upside-Down (USD) Forks</span> at the front and a Monoshock with Floating Piston at the rear. Both units are adjustable for preload and damping on the BTO variant.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. What are the color options available for the Apache RTX?
+                            </button>
+                        </h3>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The TVS Apache RTX is available in five distinct color variants: <span class="font-weight-700">Viper Green, Metallic Blue, Pearl White, Lightning Black, and Tarn Bronze.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Is the Apache RTX designed for hardcore off-roading?
+                            </button>
+                        </h3>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                While its design is rally-inspired and it includes features like <span class="font-weight-700">200 mm ground clearance, switchable ABS</span>, and adjustable long-travel suspension, the RTX is primarily positioned as an Adventure Rally Tourer. It is well-equipped for off-road trails and mild adventure riding but its alloy wheels and 19/17-inch setup lean it towards being an excellent road-biased tourer that can handle rough terrain effortlessly.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. What are the main competitors of the TVS Apache RTX in the Indian market?
+                            </button>
+                        </h3>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The main competitors for the TVS Apache RTX in the mid-capacity adventure segment include the <span class="font-weight-700">Suzuki V-Strom SX, KTM 250 Adventure</span>, and the Yezdi Adventure. The RTX offers a compelling feature set at a very aggressive price point against these rivals.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. How does the new RT-XD4 engine manage heat during long rides?
+                            </button>
+                        </h3>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The RT-XD4 engine features advanced thermal management technology, including a <span class="font-weight-700">Dual Cooling Jacket Cylinder Head</span> (using both liquid and oil cooling) and a <span class="font-weight-700">Dual Breather System</span>. These race-derived technologies ensure better cooling efficiency, reduced emissions, and sustained performance over long periods of high stress, enhancing the durability required for adventure touring.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* @await Component.InvokeAsync("AllBlog") *@
+    @* @await Html.PartialAsync("_AllBrandComponent") *@
+    @await Html.PartialAsync("_AllViewComponent")
+
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

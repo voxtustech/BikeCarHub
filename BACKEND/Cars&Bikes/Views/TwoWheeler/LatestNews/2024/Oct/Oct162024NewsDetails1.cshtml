@@ -1,0 +1,120 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Bajaj Set to Launch Pulsar N125: New Variant Announcement";
+}
+@section MetaTags{
+    <meta name="keywords" content="Bajaj Pulsar N125, new motorcycle launch, Pulsar variant, commuter bike, 125cc motorcycle, Bajaj Auto, motorcycle features, urban mobility." />
+    <meta name="description" content="Bajaj Auto is preparing to unveil the new Pulsar variant, likely the N125. Anticipated features include a 125cc engine, modern design, and advanced technology for urban commuting." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>Bajaj Auto is set to expand its Pulsar lineup with the introduction of a new variant, likely named the Pulsar N125. This motorcycle is expected to cater to the growing demand for commuter bikes that offer a balance of performance, style, and efficiency. The Pulsar N125 is anticipated to feature a refined engine that enhances fuel efficiency while delivering the power and agility that the Pulsar brand is known for.</p>
+                <p>Rumors suggest that the N125 will be powered by a single-cylinder engine, possibly with a displacement close to 125cc. This engine configuration is well-suited for city riding, providing quick acceleration and nimble handling. Additionally, the bike is expected to incorporate advanced technology, such as fuel injection, to improve throttle response and efficiency.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/bajaj prepares to unveil new pulsar variant, likely the n125 by tomorrow/2.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/bajaj prepares to unveil new pulsar variant, likely the n125 by tomorrow/3.webp" /></div>
+                </div>
+                <p>In terms of design, the Pulsar N125 is likely to sport a modern and aggressive look, with sharp lines and dynamic graphics that appeal to younger riders. Features such as LED lighting, a digital instrument cluster, and enhanced suspension components are expected to be part of the package, elevating the overall riding experience.</p>
+                <p>Bajaj has a strong legacy in the motorcycle segment, and the introduction of the N125 could further solidify its position in the competitive commuter market. With its anticipated blend of style, performance, and practicality, the Pulsar N125 is poised to capture the attention of motorcycle enthusiasts and everyday riders alike.</p>
+                <h3 class="subheading">Specifications and Features:</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Engine Type:</span> Single-cylinder, air-cooled
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Displacement:</span> Approximately 125cc
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Fuel System:</span> Fuel injection
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Expected Power Output:</span> Competitive horsepower and torque
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Design:</span> Aggressive styling with LED lights
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Instrument Cluster:</span> Fully digital display
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Suspension:</span> Advanced front and rear suspension for improved handling
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Target Audience:</span> Urban commuters and young riders
+                    </li>
+                </ol>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

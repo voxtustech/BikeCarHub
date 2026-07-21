@@ -1,0 +1,101 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Honda Activa E and QC1 Electric Scooters: Range, Features, Price in India";
+}
+@section MetaTags{
+    <meta name="keywords" content="Honda Activa E, QC1 Electric Scooter, Honda Electric Scooter India, Activa Electric Range, Activa E Price, Honda EV India, Honda activa electric scooter qc1, Honda activa e qc1 electric scooters, Honda Activa Electric scooter booking, Honda Activa Electric scooter On Road Price, Honda Activa Electric scooter specifications, Honda Activa 6G Electric scooter price, Honda Activa Electric scooter price in Delhi, Honda activa electric qc1, Honda activa electric scooter qc1, Honda Activa Electric scooter booking, Honda Activa Electric On Road Price, Honda Activa Electric range, Honda Activa Electric website, Honda Activa Electric scooter specifications" />
+    <meta name="description" content="Discover Honda's new Activa E and QC1 electric scooters launched in India. Explore their impressive 102 km range, advanced features, and expected pricing." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.NewsHeading" title="@Model.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <p>Honda's Activa E and QC1 signal a major step in electrification for the brand. These scooters cater to daily commuters looking for reliable electric alternatives.</p>
+                <h3 class="subheading">Key Features and Specifications:</h3>
+                <p class="font-weight-700">Battery and Range:</p>
+                <p>The Activa E features dual swappable batteries (1.5 kWh each), providing a range of approximately 102 km on a full charge​. The QC1 has a fixed battery setup with a slightly lower range suitable for short city rides.</p>
+                <p class="font-weight-700">Motor:</p>
+                <p>Powered by a 6 kW Permanent Magnet Synchronous Motor (PMSM), the Activa E offers smooth acceleration and a top speed of 80 km/h​.</p>
+                <p class="font-weight-700">Display and Connectivity:</p>
+                <p>A 7-inch TFT touchscreen offers navigation, smartphone connectivity, and notifications​.</p>
+                <p class="font-weight-700">Ride Modes:</p>
+                <p>Both models feature three ride modes (Standard, Eco, and Sport) and include a reverse gear for added convenience​.</p>
+                <p class="font-weight-700">Expected Price:</p>
+                <p>
+                    Activa E: ₹1.10–1.40 lakh (ex-showroom)<br />
+                    QC1: ₹90,000–1.00 lakh​.
+                </p>
+                <p class="font-weight-700">Availability:</p>
+                <p>Bookings start early 2025, with deliveries expected later in the year</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

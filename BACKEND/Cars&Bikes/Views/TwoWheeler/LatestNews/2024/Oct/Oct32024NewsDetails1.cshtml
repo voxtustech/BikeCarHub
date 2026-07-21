@@ -1,0 +1,93 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Zelio Eeva ZX+ Electric Scooter Launched in India";
+}
+@section MetaTags{
+    <meta name="keywords" content="Zelio Eeva ZX+ launch, Eeva ZX+ electric scooter India, Zelio electric scooter, new electric scooter launch, Eeva ZX+ features, Zelio Eeva ZX+ price, electric mobility India, eco-friendly scooters." />
+    <meta name="description" content="Zelio introduces the new Eeva ZX+ electric scooter in India, featuring a modern design, 80-90 km range, LED lighting, and advanced safety features. A perfect choice for urban electric mobility." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>Zelio, a growing name in the electric vehicle market, has launched its new electric scooter, the Eeva ZX+, in India. With rising demand for electric mobility solutions, the Eeva ZX+ aims to provide urban commuters with an eco-friendly, convenient, and affordable transportation option. The scooter boasts a sleek design, impressive range, and user-friendly features, making it a strong contender in the country’s electric two-wheeler market.</p>
+                <p>The Zelio Eeva ZX+ comes equipped with a powerful electric motor, providing sufficient torque for a smooth and quick ride across city roads. It has a claimed range of approximately 80 to 90 kilometers per charge, catering to daily commuting needs without the frequent need for recharging. Powered by a lithium-ion battery, the Eeva ZX+ offers fast charging options, allowing users to get back on the road with minimal downtime. The battery can be fully charged in about 4 to 5 hours, making it highly convenient for everyday use.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/zelio launches eeva zx electric scooter in india/2.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/zelio launches eeva zx electric scooter in india/3.webp" /></div>
+                </div>
+                <p>The design of the Eeva ZX+ is modern and stylish, with a focus on aerodynamics and comfort. The scooter features LED headlights and taillights for better visibility and energy efficiency, along with digital instrumentation to display essential riding information like speed, battery level, and distance covered. Safety features include disc brakes, combined braking system (CBS), and a sturdy frame to ensure stability on diverse road conditions.</p>
+                <p>Zelio aims to cater to the growing electric two-wheeler market by offering the Eeva ZX+ at a competitive price point. The scooter is expected to attract young and environmentally-conscious consumers who are looking for an economical alternative to petrol-powered scooters.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

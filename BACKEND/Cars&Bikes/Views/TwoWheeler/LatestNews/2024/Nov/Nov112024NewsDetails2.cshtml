@@ -1,0 +1,118 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Hero Karizma XMR 210 Debuts at EICMA 2024: Specs & Features";
+}
+@section MetaTags{
+    <meta name="keywords" content="Hero Karizma XMR 210, Hero MotoCorp EICMA 2024, Karizma XMR specs, 210cc bike, Karizma price in India, Hero Karizma features, Indian sports bikes" />
+    <meta name="description" content="Hero MotoCorp reveals the Hero Karizma XMR 210 at EICMA 2024, showcasing a new 210cc engine, digital console, and an expected price in India of INR 1.8-2 lakh." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <p>Hero MotoCorp, India’s largest two-wheeler manufacturer, has unveiled the latest iteration of its iconic Karizma XMR 210 at the EICMA 2024 in Milan, Italy. The Karizma XMR 210 boasts an evolved design and enhanced performance features, underscoring Hero's renewed focus on the premium motorcycle segment. This version of the Karizma brings Hero’s legendary brand to a new generation of riders with sporty aesthetics and advanced mechanics.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <img src="~/images/latestnews/2024/nov/herokarizmaxmr210unveiledateicma2024withenhancedspecsandfeatures/3.webp" alt="Hero Karizma XMR 210 Unveiled at EICMA 2024 - 3" />
+                     </div>
+                </div>
+                <p>Under the hood, the XMR 210 is equipped with a 210cc liquid-cooled single-cylinder engine that produces around 25 bhp at 9,250 rpm and 20.4Nm of torque at 7,250 rpm, providing a dynamic and responsive ride. A six-speed gearbox with a slip-and-assist clutch allows for smoother shifting, catering to city rides and highway journeys. Hero has also integrated advanced tech features such as a fully digital instrument cluster with Bluetooth connectivity, GPS navigation, and turn-by-turn directions, keeping the tech-savvy rider in mind.</p>
+                    <p>The Karizma XMR 210 is set to rival models like the <a class="for-link" asp-controller="Bajaj" asp-action="BajajPulsarRS200">Bajaj Pulsar RS200</a> and <a class="for-link" asp-controller="Yamaha" asp-action="YamahaR15M">Yamaha R15</a> in India, offering a comparable mix of power and practicality. With sharp lines, LED headlamps, and a streamlined fairing, it combines visual appeal with aerodynamic efficiency.</p>
+                <p>Expected to be priced around INR 1.8 lakh to INR 2 lakh in India, the Karizma XMR 210 brings impressive features at a competitive price point. It is anticipated to be a significant player in the Indian sports commuter segment upon its release.</p>
+                <div class="row m-b20">
+                        <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/herokarizmaxmr210unveiledateicma2024withenhancedspecsandfeatures/2.webp" alt="Hero Karizma XMR 210 Unveiled at EICMA 2024 - 2" /></div>
+                        <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/herokarizmaxmr210unveiledateicma2024withenhancedspecsandfeatures/4.webp" alt="Hero Karizma XMR 210 Unveiled at EICMA 2024 - 4" /></div>
+                </div>
+                <h3 class="subheading">Specifications:</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Engine:</span> 210cc liquid-cooled, single-cylinder
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Power:</span> 25 bhp @@  9,250 rpm
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Torque:</span> 20.4 Nm @@ 7,250 rpm
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Transmission:</span> 6-speed with slip-assist clutch
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Instrument Cluster:</span> Digital with Bluetooth, GPS, turn-by-turn navigation
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Expected Price in India:</span> INR 1.8 - 2 lakh
+                    </li>
+                </ol>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

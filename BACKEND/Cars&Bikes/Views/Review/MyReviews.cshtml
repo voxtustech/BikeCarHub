@@ -1,0 +1,199 @@
+﻿@model List<Cars_Bikes.Models.Review>
+
+@{
+    ViewData["Title"] = "My Reviews";
+}
+<style>
+    .my-review-card {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    }
+
+    .bike-name {
+        color: #1f4d66;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .review-stars {
+        color: #f5b301;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .review-content {
+        color: #444;
+        font-size: 15px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+        word-break: break-all;
+    }
+
+    .review-date {
+        color: #888;
+        font-size: 14px;
+    }
+
+    .reviews-page-header {
+        padding-bottom: 40px;
+    }
+
+    .review-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+        .review-actions .btn {
+            min-width: 90px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+    .modal-header {
+        background: #0f2d3c;
+        color: white;
+        border-bottom: none;
+    }
+
+    .modal-title {
+        font-weight: 600;
+    }
+
+    .btn-danger {
+        border-radius: 8px;
+    }
+
+    .btn-secondary {
+        border-radius: 8px;
+    }
+
+    .btn-close {
+        filter: invert(1);
+    }
+</style>
+<div class="reviews-page-header container mt-3">
+
+    <h2 class="mb-4">My Reviews</h2>
+    <p>Manage and view all your bike reviews.</p>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center">
+            You haven't posted any reviews yet.
+        </div>
+    }
+    else
+    {
+        foreach (var review in Model)
+        {
+            <div class="my-review-card">
+
+                <div class="d-flex justify-content-between align-items-start">
+
+                    <div>
+                        <h4 class="bike-name">
+                            @review.TwoWheeler?.TwoWheelerName
+                        </h4>
+
+                        <div class="review-stars">
+                            @for (int i = 0; i < review.Rating; i++)
+                            {
+                                <span>★</span>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="review-date">
+                        @review.CreatedAt.ToString("dd MMM yyyy")
+                    </div>
+
+                </div>
+
+                <div class="review-content">
+                    @review.ReviewText
+                </div>
+                <div class="review-actions mt-3">
+                    @*<a asp-controller="Review"
+                           asp-action="EditReview"
+                           asp-route-id="@review.ReviewID"
+                           class="btn btn-sm btn-outline-primary">
+                            Edit
+                        </a>*@
+                    <a asp-controller="Review"
+                       asp-action="EditReview"
+                       asp-route-id="@review.ReviewID"
+                       class="btn btn-sm btn-outline-primary">
+                        Edit
+                    </a>
+                    <button type="button"
+                            class="btn btn-sm btn-outline-danger"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteModal-@review.ReviewID">
+                        Delete
+                    </button>
+
+                </div>
+                <div class="modal"
+                     id="deleteModal-@review.ReviewID"
+                     tabindex="-1"
+                     aria-hidden="true">
+
+                    <div class="modal-dialog modal-dialog-centered">
+
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title">
+                                    Delete Review
+                                </h5>
+
+                                <button type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal">
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                Are you sure you want to delete your review for
+                                <strong>@review.TwoWheeler?.TwoWheelerName</strong>?
+                                <br /><br />
+                                This action cannot be undone.
+                            </div>
+
+                            <div class="modal-footer">
+
+                                <button type="button"
+                                        class="btn btn-secondary"
+                                        data-bs-dismiss="modal">
+                                    Cancel
+                                </button>
+
+                                <form asp-controller="Review"
+                                      asp-action="DeleteReview"
+                                      asp-route-id="@review.ReviewID"
+                                      method="post">
+
+                                    <button type="submit"
+                                            class="btn btn-danger">
+                                        Delete Review
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        }
+    }
+
+</div>

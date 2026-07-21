@@ -1,0 +1,299 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Maruti Brezza vs Hyundai Venue: Which Compact SUV is Better in 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Maruti Brezza vs Hyundai Venue, Brezza vs Venue comparison 2025, best compact SUV India, Maruti Brezza mileage, Hyundai Venue features, Brezza CNG vs Venue diesel, sub-4m SUV comparison, Brezza vs Venue price, which SUV to buy, BikeCarHub SUV review" />
+    <meta name="description" content="Detailed comparison of Maruti Brezza vs Hyundai Venue covering engines (petrol/CNG/diesel), mileage, safety, features & prices. Find out which compact SUV is best for city driving or highway performance in 2025." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 24th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                  <h2 class="subheading">1.Overview & Positioning</h2>
+            
+            <h3 class="subheading">Maruti Vitara Brezza</h3>
+            <p>Brezza is Maruti's flagship sub-4m SUV, powered by a 1.5L K-Series petrol engine with SHVS mild-hybrid tech. It also offers an S-CNG version. Known for its strong real-world efficiency, Maruti's immense service network, and fuel-focused practicality.</p>
+
+            <h3 class="subheading">Hyundai Venue</h3>
+            <p>Venue, Hyundai's popular sub-compact SUV, is available in three powertrains: 1.2L NA petrol, 1.0L turbo petrol, and 1.5L diesel. The updated 2024 model brings fresh styling, advanced connected features (Bluelink), and premium equipment across trims.</p>
+
+            <div class="div-line"></div>
+            <h2 class="subheading">2.Engine & Performance</h2>
+            
+            <h3 class="subheading">Maruti Brezza</h3>
+            <ul>
+                <li><span class="font-weight-700">Engine:</span> 1,462cc K-Series DualJet petrol with Dual VVT + SHVS</li>
+                <li><span class="font-weight-700">Power:</span> ~102PS@6,000rpm</li>
+                <li><span class="font-weight-700">Torque:</span> ~137Nm@4,400rpm</li>
+                <li><span class="font-weight-700">Transmission:</span> 5-speed manual, 6-speed torque converter AT</li>
+                <li><span class="font-weight-700">Special Fuel:</span> S-CNG MT variant available</li>
+            </ul>
+
+            <h3 class="subheading">Hyundai Venue</h3>
+            <ul>
+                <li><span class="font-weight-700">1.2L NA petrol:</span> 1,197cc Kappa MPI, 83PS, 113.8Nm - 5-speed MT</li>
+                <li><span class="font-weight-700">1.0L turbo petrol:</span> 998cc Kappa T-GDi, 118PS, 172Nm - 6-speed MT / 7-speed DCT</li>
+                <li><span class="font-weight-700">1.5L diesel:</span> 1,493cc U2 CRDi, 114PS, 250Nm - 6-speed MT</li>
+            </ul>
+
+            <div class="verdict">
+                <p><span class="font-weight-700">Key Takeaway:</span> Brezza's NA petrol with mild-hybrid provides smooth, linear output and excellent mileage. Venue offers powertrain diversity: the turbo petrol excels in mid-range punch; diesel delivers high torque for heavy duty use.</p>
+            </div>
+
+            <div class="div-line"></div>
+            <h2 class="subheading">3.Fuel Efficiency (ARAI)</h2>
+            
+            <h3 class="subheading">Maruti Brezza</h3>
+            <ul>
+                <li>Petrol MT: 17.38kmpl</li>
+                <li>Petrol AT: 19.8kmpl</li>
+                <li>S-CNG MT: 25.51km/kg</li>
+            </ul>
+
+            <h3 class="subheading">Hyundai Venue</h3>
+            <ul>
+                <li>1.2L petrol: ~18.3kmpl</li>
+                <li>Turbo petrol: ~18.3kmpl (combined)</li>
+                <li>Diesel: ~23.4kmpl</li>
+            </ul>
+
+            <div class="verdict">
+                <p><span class="font-weight-700">Verdict:</span> Brezza excels on petrol efficiency with mild-hybrid and CNG options. Venue's diesel closely rivals but petrol models are mid-tier comparable.</p>
+            </div>
+
+            <div class="div-line"></div>
+            <h2 class="subheading">4.Dimensions & Practicality</h2>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Specification</th>
+                            <th class="text-center">Brezza</th>
+                            <th class="text-center">Venue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>Length</td>
+                            <td>3,995mm</td>
+                            <td>3,995mm</td>
+                        </tr>
+                        <tr>
+                            <td>Width</td>
+                            <td>1,790mm</td>
+                            <td>1,770mm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Wheelbase</td>
+                            <td>2,500mm</td>
+                            <td>2,500mm</td>
+                        </tr>
+                        <tr>
+                            <td>Ground Clearance</td>
+                            <td>198mm</td>
+                            <td>~195mm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Boot Space</td>
+                            <td>328L</td>
+                            <td>350L</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel Tank Capacity</td>
+                            <td>48L</td>
+                            <td>45L</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><span class="font-weight-700">Insight:</span> They share nearly identical footprint. Venue offers a larger boot, while Brezza boasts slightly better ground clearance and marginally larger fuel tank—beneficial on long drives.</p>
+
+            <div class="div-line"></div>
+            <h2 class="subheading">5.Safety & Ratings</h2>
+            
+            <h3 class="subheading">Maruti Brezza</h3>
+            <ul>
+                <li>Equipped with 6 airbags, ABS + EBD, ESP with Hill-Hold Assist, ISOFIX, reverse sensors, Suzuki TECT built-in body structure</li>
+                <li>No current GNCAP rating for latest model</li>
+            </ul>
+
+            <h3 class="subheading">Hyundai Venue</h3>
+            <ul>
+                <li>Features across all trims: 6 airbags, ABS with EBD, ESC, HAC, VSM, tyre pressure monitoring, rear camera, parking sensors, electrochromic IRVM on high trims</li>
+                <li>Hyundai's Bluelink helps with SOS/emergency services</li>
+            </ul>
+
+            <div class="verdict">
+                <p><span class="font-weight-700">Conclusion:</span> While both are well-equipped, Venue offers more advanced driver aids and active safety systems like ESC, VSM, and HAC standard across line-up.</p>
+            </div>
+
+            <div class="div-line"></div>
+            <h2 class="subheading">6.Features & Comfort</h2>
+            
+            <h3 class="subheading">Maruti Brezza</h3>
+            <ul>
+                <li>9″ SmartPlay Pro+ touchscreen with wireless Android Auto/Apple CarPlay</li>
+                <li>Heads-up display (HUD), sunroof, wireless charger, reverse parking camera, cooled glovebox, 360° camera on top trims</li>
+            </ul>
+
+            <h3 class="subheading">Hyundai Venue</h3>
+            <ul>
+                <li>8″ or 10.25″ touchscreen with Bluelink connected car tech, sunroof, ambient lighting, auto AC, voice command, air purifier, 7-speaker Bose system (top trims), dual dash cameras (O and IRVM-mounted) in N Line</li>
+            </ul>
+
+            <div class="verdict">
+                <p><span class="font-weight-700">Edge:</span> Venue edges out when it comes to connectivity and premium features, while Brezza offers sufficient essentials with modern appeal.</p>
+            </div>
+
+            <div class="div-line"></div>
+            <h2 class="subheading">7.Ride & Handling</h2>
+            
+            <h3 class="subheading">Maruti Brezza</h3>
+            <p>MacPherson strut front, torsion beam rear—comfort-focused ride for Indian roads. SHVS mild-hybrid delivers smooth low-end torque.</p>
+
+            <h3 class="subheading">Hyundai Venue</h3>
+            <p>Similar suspension layout; turbo petrol and diesel variants feel peppier. Bluelink drive modes (Eco/Normal/Sport) enhance handling engagement.</p>
+
+            <div class="verdict">
+                <p><span class="font-weight-700">Summary:</span> Brezza aims for soft comfort. Venue has a slightly sharper ride, with better mid-range drive quality especially in turbo/diesel trims.</p>
+            </div>
+
+            <div class="div-line"></div>
+            <h2 class="subheading">8.Price Comparison</h2>
+            
+            <h3 class="subheading">Maruti Brezza</h3>
+            <p>Ex-showroom: ₹8.19L — ₹13.88L</p>
+
+            <h3 class="subheading">Hyundai Venue</h3>
+            <p>Ex-showroom: ₹7.94L — ₹13.62L for standard trims; N Line from ₹12.14L</p>
+
+            <div class="verdict">
+                <p><span class="font-weight-700">Insight:</span> Prices slightly overlap. Venue's base variants are competitively priced while Brezza sits higher with CNG/mild-hybrid addition. N-Line and diesel variants sit at premium end.</p>
+            </div>
+
+            <div class="div-line"></div>
+            <h2 class="subheading">Final Verdict: Who Should Choose Which?</h2>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Priority</th>
+                            <th class="text-center">Choose Maruti Brezza</th>
+                            <th class="text-center">Choose Hyundai Venue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>Fuel efficiency (petrol/CNG)</td>
+                            <td>✅ Best-in-class petrol & CNG mileage</td>
+                            <td>⚠️ Good diesel, petrol average</td>
+                        </tr>
+                        <tr>
+                            <td>Engine choice</td>
+                            <td>⚠️ Only 1.5L petrol + CNG</td>
+                            <td>✅ NA petrol, turbo, diesel options</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Comfort & ride smoothness</td>
+                            <td>✅ Soft, city-oriented ride</td>
+                            <td>⚠️ Firmer, fuel/progress boosts</td>
+                        </tr>
+                        <tr>
+                            <td>Tech & convenience features</td>
+                            <td>✅ HUD, wireless charger</td>
+                            <td>✅ Bluelink, air purifier, Bose, sunroof</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Safety systems</td>
+                            <td>✅ Core safety (6 airbags, ESP)</td>
+                            <td>✅ Advanced systems (ESC, VSM, HAC)</td>
+                        </tr>
+                        <tr>
+                            <td>Best-in-segment price</td>
+                            <td>✅ Mild-hybrid/CNG priced well</td>
+                            <td>⚠️ Broader variants; slightly more expensive</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>After-sales network</td>
+                            <td>✅ Maruti's massive service reach</td>
+                            <td>⚠️ Hyundai service good but fewer centers</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="verdict">
+                <p><span class="font-weight-700">Final Recommendation:</span></p>
+                <p><strong>Maruti Brezza</strong> is your perfect city SUV if you prioritize outstanding petrol/CNG mileage, soft ride, reliability, and easy maintenance backed by Maruti's network.</p>
+                <p><strong>Hyundai Venue</strong> is ideal if you want more engine options (especially the 1.0L turbo or diesel), deeper tech/trims, and enhanced ride dynamics—especially in premium or N Line variants.</p>
+            </div>
+
+            <div class="div-line"></div>
+            <h2 class="subheading">Quick Comparison Highlights</h2>
+            <ul>
+                <li><span class="font-weight-700">Engines:</span> Brezza — 1.5L NA (102PS); Venue — 1.2L NA, 1.0L turbo (118PS), 1.5L diesel.</li>
+                <li><span class="font-weight-700">Mileage (ARAI):</span> Brezza — up to 19.8kmpl petrol, 25.5km/kg CNG; Venue — ~18.3kmpl NA/turbo petrol, ~23.4kmpl diesel.</li>
+                <li><span class="font-weight-700">Boot:</span> Venue's 350L > Brezza's 328L.</li>
+                <li><span class="font-weight-700">Safety & Tech:</span> Both have 6 airbags, but Venue includes ESC, HAC, VSM, Bluelink, air purifier.</li>
+                <li><span class="font-weight-700">Price:</span> Brezza ₹8.19–13.88L; Venue ₹7.94–13.62L (+N Line ₹12.14L onwards).</li>
+            </ul>
+
+            <div class="div-line"></div>
+            <h2 class="subheading">Conclusion</h2>
+            <ul>
+                <li><span class="font-weight-700">Choose the Brezza</span> if you want effortless day-to-day driving, excellent fuel economy, and minimal upkeep.</li>
+                <li><span class="font-weight-700">Opt for the Venue</span> if you desire enhanced performance, connected features, and a broader choice of trim & engine options—even if it comes with a slightly firmer ride and higher cost of upkeep.</li>
+            </ul>
+
+            <div class="div-line"></div>
+                <p>For more updates, comparisons, and in-depth SUV reviews, keep visiting <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a>—your trusted source for all things bikes and cars!</p>
+        
+        <h3 class="subheading">Check your brands here</h3>
+                <p>For Maruti Suzuki Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1">Click here!</a></p>
+                <p>For Skoda Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="SkodaKylaq1">Click here!</a></p>
+    </div>
+
+
+            </div>
+            </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

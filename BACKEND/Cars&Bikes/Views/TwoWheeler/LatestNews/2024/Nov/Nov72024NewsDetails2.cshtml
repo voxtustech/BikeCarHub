@@ -1,0 +1,205 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Škoda Kylaq 2024 SUV: Unmatched Comfort, Safety, and Style for Indian Roads";
+}
+@section MetaTags{
+    <meta name="keywords" content="Škoda Kylaq 2024, Škoda India SUV, Škoda Kylaq features, Kylaq safety features, TSI engine SUV, 2024 Škoda models, spacious SUV India, connected SUV India, new SUV launch" />
+    <meta name="description" content="Discover the all-new Škoda Kylaq 2024 SUV, crafted specifically for India. With innovative safety features, a spacious 446L boot, ventilated electric seats, powerful TSI engines, and advanced connectivity, the Kylaq redefines the driving experience for Indian roads." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <p>Škoda has announced the highly anticipated 2024 Kylaq, a robust and stylish SUV engineered for the unique demands of Indian roads and drivers. Set to make its mark in the SUV segment, the Kylaq introduces a combination of innovative design, advanced safety, and a focus on comfort—all while providing the reliability Škoda is known for. This new model embodies Škoda’s commitment to delivering a vehicle that aligns with the needs of India’s rapidly evolving automotive market.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/launchinganallnewsuvdesignedforindiasroadsandlifestyles/2.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/launchinganallnewsuvdesignedforindiasroadsandlifestyles/3.webp" /></div>
+                </div>
+                <h3 class="subheading">Feature Highlights</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">
+                            Segment-First Comfort Features<br /></span>
+                            One of the standout features of the Škoda Kylaq is its ventilated, six-way electrically adjustable front seats—a rare find in this segment. Designed for both comfort and functionality, these seats offer additional support and convenience for drivers, especially on long journeys or in hot weather.
+                    <li>
+                        <span class="font-weight-700">
+                            Enhanced Safety for Peace of Mind<br /></span>
+                            Safety is a top priority in the Kylaq, which includes over 25 safety features. Among these, six airbags are standard across all models, providing essential protection in the event of a collision. Additionally, the Kylaq includes advanced driver-assistance features such as anti-lock brakes, electronic stability control, and hill-hold control. These systems offer greater stability on difficult terrain and ensure control even on steep slopes.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">
+                            Spacious Interior and Practical Design<br /></span>
+                            The Kylaq boasts a spacious 446-liter boot, making it ideal for both daily use and long-distance travel. This ample cargo space provides flexibility for families, adventurers, and anyone needing a reliable vehicle for carrying luggage, shopping, or sports gear. The interior materials reflect a blend of style and durability, designed to withstand the demands of active lifestyles while maintaining an elegant feel.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">
+                            Powerful and Efficient TSI Engine Options<br /></span>
+                            Under the hood, the Kylaq offers efficient TSI engine options that provide a blend of power and fuel economy. These engines are tuned to handle both city commutes and longer highway drives. They cater to those looking for reliable performance without compromising on fuel efficiency—especially critical for India’s diverse driving conditions.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">
+                            Advanced Connectivity and Infotainment<br /></span>
+                            With connectivity as a growing priority for drivers, the Kylaq incorporates an advanced infotainment system. It includes smartphone integration, enabling drivers and passengers to connect devices seamlessly, access media, navigate, and use apps directly from the vehicle’s interface. The Kylaq’s connectivity features make it easy to stay connected, informed, and entertained on the road.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">
+                            Built for India’s Roads and Conditions<br /></span>
+                            With a design that prioritizes versatility and adaptability, the Kylaq 2024 is engineered to handle diverse Indian road conditions. Whether navigating urban areas or exploring rural roads, the Kylaq offers stability and control. This adaptability makes it a strong contender in the Indian SUV market, addressing the everyday needs of Indian drivers.
+                    </li>
+                </ol>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/launchinganallnewsuvdesignedforindiasroadsandlifestyles/4.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/launchinganallnewsuvdesignedforindiasroadsandlifestyles/5.webp" /></div>
+                </div>
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Specification</th>
+                            <th class="text-center">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>Length</td>
+                            <td>4,225 mm</td>
+                        </tr>
+                        <tr>
+                            <td>Width</td>
+                            <td>1,760 mm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Height</td>
+                            <td>1,612 mm</td>
+                        </tr>
+                        <tr>
+                            <td>Wheelbase</td>
+                            <td>2,651 mm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Ground Clearance</td>
+                            <td>188 mm</td>
+                        </tr>
+                        <tr>
+                            <td>Boot Space</td>
+                            <td>385 liters</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Fuel Tank Capacity</td>
+                            <td>50 liters</td>
+                        </tr>
+                        <tr>
+                            <td>Curb Weight</td>
+                            <td>1,200 - 1,250 kg</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Turning Radius</td>
+                            <td>5.2 meters</td>
+                        </tr>
+                        <tr>
+                            <td>Seating Capacity</td>
+                            <td>5</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Engine Options</td>
+                            <td>1.0L TSI / 1.5L TSI</td>
+                        </tr>
+                        <tr>
+                            <td>Transmission</td>
+                            <td>6-speed MT / 6-speed AT / 7-speed DSG</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Power (1.0L)</td>
+                            <td>115 PS</td>
+                        </tr>
+                        <tr>
+                            <td>Power (1.5L)</td>
+                            <td>150 PS</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Torque (1.0L)</td>
+                            <td>175 Nm</td>
+                        </tr>
+                        <tr>
+                            <td>Torque (1.5L)</td>
+                            <td>250 Nm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Top Speed</td>
+                            <td>~185 km/h (1.0L) / 195 km/h (1.5L)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="subheading">Conclusion</h3>
+                <p>The Škoda Kylaq 2024 represents a bold step forward for the brand in India. With a well-rounded feature set and design tailored specifically to Indian drivers, it promises to be a popular choice for those looking for a comfortable, safe, and stylish SUV. Škoda’s focus on creating a balanced vehicle is evident in the Kylaq, bringing an SUV that fits seamlessly into both city life and adventure.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

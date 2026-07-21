@@ -1,0 +1,1674 @@
+﻿@model TwoWheeler
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<!--End-->
+<!DOCTYPE html>
+
+<!--[if IE 7 ]>  <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>  <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>  <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!-- Meta -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no">
+    <!-- Favicons Icon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Page Title Here -->
+    @* <title>bikecarhub - New Bikes & Cars, Scooters, Bike & Car Prices, E-Vehicle</title> *@
+    @{
+        ViewData["Title"] = "New Bikes, Cars, Scooters & New Electric Vehicle";
+    }
+    @section MetaTags{
+        <meta name="keywords" content="bikecarhub, bike, new bikes, bike comparison, bikes prices, reviews, Images, news, compare bikes, Instant Bike On-Road Price, Upcoming bikes, Latest News, Ask a Question" />
+        <meta name="description" content="Discover your ideal bike or scooter at BikeCarHub. Check on-road prices, colors, reviews, comparisons, latest news, and upcoming bikes & cars in one place at BikeCarHub." />
+    }
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+</head>
+
+<body id="bg">
+
+    <div class="page-wraper">
+        @* <div id="loading-area"></div> *@
+
+        <!-- Content -->
+        @* <div class="page-content"> *@
+        <!-- Slider -->
+        <div class="slider">
+            <div class="slides">
+                <!-- Image 1 -->
+                @*<div class="slide">
+                        <img src="~/images/main-slider/tophd.webp" alt="bikecarhubslider1image" title="bikecarhubslider1image">
+                    </div>*@
+                <div class="slide">
+                    @if (Context.Request.Cookies["theme"] == "dark")
+                    {
+                        <img src="~/images/main-slider/topdark.png"
+                             alt="bikecarhubslider1image"
+                             title="bikecarhubslider1image">
+                    }
+                    else
+                    {
+                        <img src="~/images/main-slider/topnew.jpeg"
+                             alt="bikecarhubslider1image"
+                             title="bikecarhubslider1image">
+                    }
+                </div>
+                <!-- Image 2 -->
+                @* <div class="slide"> *@
+                @*     <img src="~/images/main-slider/Slide_4.png" alt="bikecarhubslider2image" title="bikecarhubslider2image"> *@
+                @* </div> *@
+                @* <!-- Image 3 --> *@
+                @* <div class="slide"> *@
+                @*     <img src="~/images/main-slider/Slide_3.png" alt="bikecarhubslider3image" title="bikecarhubslider3image"> *@
+                @* </div> *@
+                <div class="tp-bannertimer tp-bottom bg-primary" style="height: 5px; "></div>
+            </div>
+
+            <!--Search-->
+            <div class="search-main-container">
+                <div class="search-container">
+                    <div class="search-head"><h2>Search Bikes</h2></div>
+                    <div class="search-bottom">
+                        <div class="search-ddn">
+                            <select id="ddlBrand" class="ddnvarient" asp-items="ViewBag.TWLists">
+                                <option value=""> Select Brand</option>
+                            </select>
+                        </div>
+                        <div class="search-ddn">
+                            <select id="ddlModel" asp-for="TwoWheelerName" class="ddnvarient">
+                                <option value=""> Select Model</option>
+                            </select>
+                        </div>
+                        <button class="contact-form-button" type="button" id="searchButton">SEARCH</button>
+                    </div>
+                </div>
+            </div>
+            <!--Search End-->
+        </div>
+        @*
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="ca-pub-8720291170595920"
+                 data-ad-slot="9704814526"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        *@
+        @* </div> *@
+        @await Html.PartialAsync("_AllBlogComponent")
+        <!-- Horizontal ads -->
+        <div class="google-ad">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8720291170595920"
+                 data-ad-slot="9025038118"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true">
+            </ins>
+        </div>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <!-- Value For Money -->
+        <div class="blogs-section">
+            <h2 class="for-h1"><a asp-controller="ValueForMoney" asp-action="Index">Value For Money</a></h2>
+            <div class="blogs-section">
+                <button class="scroll-button-vfm left-vfm" onclick="scrollLeftVFM()">&#128896;</button>
+                <div class=" blogs-container" id="VFMContainer">
+                    @foreach (var VFM in ViewBag.VFM)
+                    {
+                        <div class="blogs-item">
+                            <section>
+                                <a href="/@VFM.URL" style="text-decoration:none">
+                                    <div class="upcoming-bike-img"><img src="@VFM.ImageURL" alt="@VFM.VFMHeading" loading="lazy" title="@VFM.VFMHeading" /></div>
+                                    <div class="upcoming-bike-name">@Truncate(@VFM.VFMHeading, 56)</div>
+                                    <span class="text-black">By : BikeCarHub Team</span>
+                                </a>
+
+                            </section>
+                        </div>
+                    }
+                </div><button class="scroll-button-vfm right-vfm" onclick="scrollRightVFM()">&#128898;</button>
+            </div>
+        </div>
+        <div class="google-ad">
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:1000px;height:200px"
+                 data-ad-client="ca-pub-8720291170595920"
+                 data-ad-slot="6204553210">
+            </ins>
+        </div>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <!-- Upcoming bikes section -->
+        <div class="upcoming-bikes-section">
+            <h2 class="for-h1"><a asp-controller="UpcomingBike" asp-action="TWUpcomingBikeDetails">Upcoming Bikes</a></h2>
+            <button class="scroll-button-ub left-ub" onclick="scrollLeftUB()">&#128896;</button>
+            <div class="upcoming-bikes-container" id="upcomingBikesContainer">
+                @foreach (var bike in ViewBag.upcomingbike)
+                {
+                    <div class="upcoming-bike-item">
+                        <section>
+
+                            <a href="/@bike.ImageURL" style="text-decoration:none">
+
+                                <div class="upcoming-bike-img">
+                                    <img src="@bike.ImageFolderURL"
+                                         alt="@bike.UpcomingBikeName"
+                                         loading="lazy"
+                                         title="@bike.UpcomingBikeName" />
+                                </div>
+
+                                <div class="upcoming-bike-name">
+                                    @*@Truncate(@bike.UpcomingBikeName, 26)*@
+                                    @Truncate(@bike.UpcomingBikeName ?? "", 26)
+                                </div>
+
+                                <div class="upcoming-bike-date">
+                                    <p>
+                                        BikeCarHub |
+                                        <i class="fa fa-calendar"></i>
+                                        @bike.ExpectedLaunchDate
+                                    </p>
+                                </div>
+                            </a>
+                            @*------------Launching date from dataabse---------(To make it enable: Uncomment it)*@
+                            @*<div class="launch-countdown"
+                                 data-launch="@bike.FilterLaunchDate?.ToString("yyyy-MM-dd")">
+                                <div class="countdown-box">
+                                    <span class="days">00</span>
+                                    <small>Days</small>
+                                </div>
+
+                                <div class="countdown-box">
+                                    <span class="hours">00</span>
+                                    <small>Hours</small>
+                                </div>
+
+                                <div class="countdown-box">
+                                    <span class="minutes">00</span>
+                                    <small>Minutes</small>
+                                </div>
+                                <div class="countdown-box">
+                                    <span class="seconds">00</span>
+                                    <small>Seconds</small>
+                                </div>
+                            </div>*@
+
+                            @*-------Hardcoded Launch Dates For Different Bikes(To make it disable: Comment till else)-------*@
+                            @*@if (bike.UpcomingBikeName.Contains("Yamaha"))
+                            {
+                                <div class="launch-countdown" data-launch="2026-05-20" data-url="/@bike.ImageURL">
+                                    <div class="countdown-box">
+                                        <span class="days">00</span>
+                                        <small>Days</small>
+                                    </div>
+                                    <div class="countdown-box">
+                                        <span class="hours">00</span>
+                                        <small>Hours</small>
+                                    </div>
+                                    <div class="countdown-box">
+                                        <span class="minutes">00</span>
+                                        <small>Minutes</small>
+                                    </div>
+                                    <div class="countdown-box">
+                                        <span class="seconds">00</span>
+                                        <small>Seconds</small>
+                                    </div>
+                                </div>
+                            }
+                            else if (bike.UpcomingBikeName.Contains("Triumph"))
+                            {
+                                <div class="launch-countdown" data-launch="2026-05-12" data-url="/@bike.ImageURL">
+                                    <div class="countdown-box">
+                                        <span class="days">00</span>
+                                        <small>Days</small>
+                                    </div>
+                                    <div class="countdown-box">
+                                        <span class="hours">00</span>
+                                        <small>Hours</small>
+                                    </div>
+                                    <div class="countdown-box">
+                                        <span class="minutes">00</span>
+                                        <small>Minutes</small>
+                                    </div>
+                                    <div class="countdown-box">
+                                        <span class="seconds">00</span>
+                                        <small>Seconds</small>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="launch-countdown" data-launch="2026-07-20" data-url="/@bike.ImageURL">
+                                    <div class="countdown-box">
+                                        <span class="days">00</span>
+                                        <small>Days</small>
+                                    </div>
+                                    <div class="countdown-box">
+                                        <span class="hours">00</span>
+                                        <small>Hours</small>
+                                    </div>
+                                    <div class="countdown-box">
+                                        <span class="minutes">00</span>
+                                        <small>Minutes</small>
+                                    </div>
+                                    <div class="countdown-box">
+                                        <span class="seconds">00</span>
+                                        <small>Seconds</small>
+                                    </div>
+                                </div>
+                            }*@
+
+                            @*------------Launching bar(To make it work just uncomment it)----------------*@
+                            @*<div class="launch-progress">
+            <div class="launch-progress-fill"></div>
+        </div>*@
+                            @*--------------we dont have this field in database for now so hardcoded values------------*@
+                            @*<div class="expected-launch-price">
+            Expected Price: @bike.ExpectedPrice
+        </div>*@
+                            @*@if (bike.UpcomingBikeName.Contains("Yamaha"))
+                            {
+                                <div class="expected-launch-price">Expected Price: ₹1.1 Lakh</div>
+                            }
+                            else if (bike.UpcomingBikeName.Contains("Triumph"))
+                            {
+                                <div class="expected-launch-price">Expected Price: ₹1.2 Lakh</div>
+                            }
+                            else
+                            {
+                                <div class="expected-launch-price">Expected Price: ₹1 Lakh</div>
+                            }*@
+                            @*-----This is only a popup(alert), it won't actually notify a user bcoz that requires a user credentials(An account,mail)-----*@
+                            @*<button class="notify-launch-btn" onclick="alert('You will be notified soon!')">
+                                Notify Me
+                            </button>*@
+                            <div class="ow-post-readmore">
+                                <a href="/@bike.ImageURL" rel="bookmark">
+                                    Read More <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+
+                        </section>
+                    </div>
+                }
+            </div>
+            <button class="scroll-button-ub right-ub" onclick="scrollRightUB()">&#128898;</button>
+        </div>
+
+
+        <!-- Slider END -->
+        <!-- New Car -->
+        @* <div class="section-full bg-img-fix dlab-new-work overlay-white-dark " style="background-image: url(images/background/bg1.jpg);">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4  p-a0 no-of-item">
+                            <div class="no-of-item-dtl">
+                                <h2>18+</h2>
+                                <h3>UPCOMING CARS</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-8 p-a0">
+                            <div class="new-item owl-btn-style-1 owl-carousel">
+                            @foreach (var UPBike in ViewBag.Upcomingbike){
+                                <div class="item dlab-new-item">
+                                    <div class="dlab-box">
+                                        <div class="dlab-media">
+                                            <a href="#"><img src="images/our-work/work/pic1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="dlab-info">
+                                            <p class="event-date">@UPBike.ExpectLaunchDate?.ToString("d MMM yyyy")</p>
+                                            <h4 class="dlab-title"><a href="new-car-upcoming.html">Toyota avalon hybrid  <i class="fa fa-angle-right pull-right"></i></a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                                <div class="item dlab-new-item">
+                                    <div class="dlab-box">
+                                        <div class="dlab-media">
+                                            <a href="#"><img src="images/our-work/work/pic2.jpg" alt=""></a>
+                                        </div>
+                                        <div class="dlab-info">
+                                            <p class="event-date">November 6, 2018</p>
+                                            <h4 class="dlab-title"><a href="new-car-upcoming.html">Toyota avalon hybrid  <i class="fa fa-angle-right pull-right"></i></a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item dlab-new-item">
+                                    <div class="dlab-box">
+                                        <div class="dlab-media">
+                                            <a href="#"><img src="images/our-work/work/pic3.jpg" alt=""></a>
+                                        </div>
+                                        <div class="dlab-info">
+                                            <p class="event-date">November 6, 2018</p>
+                                            <h4 class="dlab-title"><a href="new-car-upcoming.html">Toyota avalon hybrid  <i class="fa fa-angle-right pull-right"></i></a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> *@
+        <!-- New Car New -->
+        <!-- About Us -->
+        <!-- <div class="section-full about-us bg-white content-inner-2" style="background-image: url(images/background/about-us.jpg); background-position:bottom; background-repeat:no-repeat; background-size:100%;">
+             <div class="container">
+                 <div class="section-head text-center head-1">
+                     <span class="text-primary">Welcome To Our Website</span>
+                     <h3 class="h3 text-uppercase">Car Dealership</h3>
+                     <div class="dlab-separator bg-gray-dark"></div>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
+                 </div>
+                 <div class="row">
+                     <div class="col-md-3 col-sm-6  col-xs-6">
+                         <div class="dlab-box-bg m-b30 box-hover" style="background-image: url(images/our-work/work/pic1.jpg)">
+                             <div class="icon-bx-wraper center p-lr20 p-tb30">
+                                 <div class="text-primary m-b20">
+                                     <span class="icon-cell"><i class="glyph-icon flaticon-steering-wheel"></i></span>
+                                 </div>
+                                 <div class="icon-content">
+                                     <h4 class="dlab-tilte text-uppercase">All brands</h4>
+                                     <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
+                                 </div>
+                             </div>
+                             <div class="icon-box-btn text-center">
+                                 <a href="#" class="site-button btn-block">Read More</a>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-md-3 col-sm-6 col-xs-6">
+                         <div class="dlab-box-bg m-b30 box-hover" style="background-image: url(images/our-work/work/pic2.jpg)">
+                             <div class="icon-bx-wraper center p-lr20 p-tb30">
+                                 <div class="text-primary m-b20">
+                                     <span class="icon-cell"><i class="glyph-icon flaticon-speech-bubble"></i></span>
+                                 </div>
+                                 <div class="icon-content">
+                                     <h4 class="dlab-tilte text-uppercase">Free Support</h4>
+                                     <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
+                                 </div>
+                             </div>
+                             <div class="icon-box-btn text-center">
+                                 <a href="#" class="site-button btn-block">Read More</a>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-md-3 col-sm-6 col-xs-6">
+                         <div class="dlab-box-bg m-b30 box-hover active" style="background-image: url(images/our-work/work/pic3.jpg)">
+                             <div class="icon-bx-wraper center p-lr20 p-tb30">
+                                 <div class="text-primary m-b20">
+                                     <span class="icon-cell"><i class="glyph-icon flaticon-mechanic"></i></span>
+                                 </div>
+                                 <div class="icon-content">
+                                     <h4 class="dlab-tilte text-uppercase">Dealership</h4>
+                                     <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
+                                 </div>
+                             </div>
+                             <div class="icon-box-btn text-center">
+                                 <a href="#" class="site-button btn-block">Read More</a>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-md-3 col-sm-6 col-xs-6">
+                         <div class="dlab-box-bg m-b30 box-hover" style="background-image: url(images/our-work/work/pic4.jpg)">
+                             <div class="icon-bx-wraper center p-lr20 p-tb30">
+                                 <div class="text-primary m-b20">
+                                     <span class="icon-cell"><i class="glyph-icon flaticon-list"></i></span>
+                                 </div>
+                                 <div class="icon-content">
+                                     <h4 class="dlab-tilte text-uppercase">affordable</h4>
+                                     <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
+                                 </div>
+                             </div>
+                             <div class="icon-box-btn text-center">
+                                 <a href="#" class="site-button btn-block">Read More</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="dlab-info-about">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-md-5">
+                             <div class="">
+                                 <h3 class="h3 text-uppercase m-b10 m-t0">About us </h3>
+                                 <p class="p-t0">Everything you need to build an amazing dealership website.</p>
+                             </div>
+                             <div class="about-us-info">
+                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                                     to make a type specimen book.</p>
+                                 <div class="media media-info">
+                                     <div class="media-left">
+                                         <a href="#">
+                                         <img class="media-object" src="images/testimonials/pic2.jpg" alt="">
+                                     </a>
+                                     </div>
+                                     <div class="media-body p-l15">
+                                         <h4 class="font-weight-700 text-uppercase text-primary m-b10">Have any question ?</h4>
+                                         <h2 class="media-heading open-sans font-weight-700">01 123 456 789</h2>
+                                     </div>
+                                 </div>
+                                 <div class="m-t30">
+                                     <a href="#" class="site-button">Read More</a>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-md-7">
+                             <div class="about-side-img wow fadeInRight" data-wow-duration="1.50s" data-wow-delay="0.50s">
+                                 <img src="images/car.png" alt="">
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <!-- About Us END -->
+        <!-- For Your Quick Look -->
+        <!-- <div class="section-full bg-white content-inner car-listing">
+             <div class="container">
+                 <div class="section-head">
+                     <h3 class="h3 text-uppercase">For your quick look</h3>
+                     <ul class="nav theme-tabs">
+                         <li role="presentation" class="active"><a data-toggle="tab" aria-controls="upcoming" href="#upcoming">UPCOMING</a></li>
+                         <li role="presentation"><a data-toggle="tab" aria-controls="popular" href="#popular">POPULAR</a></li>
+                         <li role="presentation"><a data-toggle="tab" aria-controls="latest" href="#latest">LATEST</a></li>
+                     </ul>
+                 </div>
+                 <div class="section-content ">
+                     <div class="row">
+                         <div class="dlab-tabs">
+
+                             <div class="tab-content">
+                                 <div id="upcoming" class="tab-pane active clearfix">
+                                     <div class="col-md-12 owl-carousel owl-btn-style-2 quick-look">
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-upcoming.html"><img src="images/our-work/work/pic1.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-upcoming.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-upcoming.html"><img src="images/our-work/work/pic2.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-upcoming.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-upcoming.html"><img src="images/our-work/work/pic3.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-upcoming.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-upcoming.html"><img src="images/our-work/work/pic4.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-upcoming.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div id="popular" class="tab-pane clearfix fade">
+                                     <div class="col-md-12 owl-carousel owl-btn-style-2 quick-look">
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-popular.html"><img src="images/our-work/work/pic3.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-popular.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-popular.html"><img src="images/our-work/work/pic4.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-popular.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-popular.html"><img src="images/our-work/work/pic1.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-popular.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-popular.html"><img src="images/our-work/work/pic2.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-popular.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div id="latest" class="tab-pane clearfix fade">
+                                     <div class="col-md-12 owl-carousel owl-btn-style-2 quick-look">
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-latest.html"><img src="images/our-work/work/pic2.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-latest.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-latest.html"><img src="images/our-work/work/pic3.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-latest.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-latest.html"><img src="images/our-work/work/pic1.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-latest.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <div class="item">
+                                             <div class="dlab-feed-list">
+                                                 <div class="dlab-media">
+                                                     <a href="new-car-latest.html"><img src="images/our-work/work/pic4.jpg" alt=""></a>
+                                                 </div>
+                                                 <div class="dlab-info">
+                                                     <h4 class="dlab-title"><a href="new-car-latest.html">Hyundai santa fe sport </a></h4>
+                                                     <div class="dlab-separator bg-black"></div>
+                                                     <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                 </div>
+                                                 <div class="icon-box-btn text-center">
+                                                     <ul class="clearfix">
+                                                         <li>2019</li>
+                                                         <li>Manual</li>
+                                                         <li>210 hp </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>-->
+        <!-- For Your Quick Look END -->
+        <!-- Car Find And Sale -->
+        <!--<div class="section-full bg-gray p-tb20 car-listing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="find-car box-hover " style="background-image: url(images/blog/default/thum1.jpg)">
+                            <div class="car-box">
+                                <span class="text-primary">Are You Looking</span>
+                                <h2 class="text-uppercase">To Buy A Car ?</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the..</p>
+                                <a href="new-car-search.html" class="site-button outline">
+                                Search Your Car
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="find-car box-hover active" style="background-image: url(images/blog/default/thum2.jpg)">
+                            <div class="car-box">
+                                <span class="text-primary">Are You Looking</span>
+                                <h2 class="text-uppercase">To Buy A Car ?</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the..</p>
+                                <a href="new-car-search.html" class="site-button outline">
+                                Search Your Car
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="find-car box-hover" style="background-image: url(images/blog/default/thum3.jpg)">
+                            <div class="car-box">
+                                <span class="text-primary">Are You Looking</span>
+                                <h2 class="text-uppercase">To Buy A Car ?</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the..</p>
+                                <a href="new-car-search.html" class="site-button outline">
+                                Search Your Car
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- Car Find And Sale END -->
+        <!-- For Your Quick Look -->
+        <!--<div class="section-full bg-white content-inner car-listing ">
+            <div class="container">
+                <div class="section-head">
+                    <h3 class="h3 text-uppercase">Used Cars</h3>
+                    <ul class="nav theme-tabs">
+                        <li role="presentation" class="active"><a data-toggle="tab" aria-controls="by-city" href="#by-city">BY CITY</a></li>
+                        <li role="presentation"><a data-toggle="tab" aria-controls="by-price" href="#by-price">BY PRICE</a></li>
+                    </ul>
+                </div>
+                <div class="section-content ">
+                    <div class="row">
+                        <div class="dlab-tabs">
+                            <div class="tab-content">
+                                <div id="by-city" class="tab-pane active clearfix city-list">
+                                    <div class="col-md-12 owl-carousel owl-btn-style-2 city-item" id="da-thumbs">
+                                        <div class="item">
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-university"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-office-1"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-school"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-cityscape"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-holidays-1"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-building"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-construction"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-holidays"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-monument-1"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-skyscraper"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-office"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                            <div class="city-box">
+                                                <div class="glyph-icon flaticon-city-hall"></div>
+                                                <div class="city-info">
+                                                    <span>Used Cars In </span>
+                                                    <a href="used-car-search-result.html">United Kingdom</a>
+                                                </div>
+                                                <div class="dlab-move"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="by-price" class="tab-pane clearfix fade">
+                                    <div class="col-md-12 owl-carousel owl-btn-style-2 quick-look">
+                                        <div class="item">
+                                            <div class="dlab-feed-list">
+                                                <div class="dlab-media">
+                                                    <a href="used-car-search-result.html"><img src="images/our-work/work/pic1.jpg" alt=""></a>
+                                                </div>
+                                                <div class="dlab-info">
+                                                    <h4 class="dlab-title"><a href="used-car-search-result.html">Hyundai santa fe sport </a></h4>
+                                                    <div class="dlab-separator bg-black"></div>
+                                                    <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                </div>
+                                                <div class="icon-box-btn text-center">
+                                                    <ul class="clearfix">
+                                                        <li>2019</li>
+                                                        <li>Manual</li>
+                                                        <li>210 hp </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="dlab-feed-list">
+                                                <div class="dlab-media">
+                                                    <a href="used-car-search-result.html"><img src="images/our-work/work/pic2.jpg" alt=""></a>
+                                                </div>
+                                                <div class="dlab-info">
+                                                    <h4 class="dlab-title"><a href="used-car-search-result.html">Hyundai santa fe sport </a></h4>
+                                                    <div class="dlab-separator bg-black"></div>
+                                                    <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                </div>
+                                                <div class="icon-box-btn text-center">
+                                                    <ul class="clearfix">
+                                                        <li>2019</li>
+                                                        <li>Manual</li>
+                                                        <li>210 hp </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="dlab-feed-list">
+                                                <div class="dlab-media">
+                                                    <a href="used-car-search-result.html"><img src="images/our-work/work/pic3.jpg" alt=""></a>
+                                                </div>
+                                                <div class="dlab-info">
+                                                    <h4 class="dlab-title"><a href="used-car-search-result.html">Hyundai santa fe sport </a></h4>
+                                                    <div class="dlab-separator bg-black"></div>
+                                                    <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                </div>
+                                                <div class="icon-box-btn text-center">
+                                                    <ul class="clearfix">
+                                                        <li>2019</li>
+                                                        <li>Manual</li>
+                                                        <li>210 hp </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="dlab-feed-list">
+                                                <div class="dlab-media">
+                                                    <a href="used-car-search-result.html"><img src="images/our-work/work/pic4.jpg" alt=""></a>
+                                                </div>
+                                                <div class="dlab-info">
+                                                    <h4 class="dlab-title"><a href="used-car-search-result.html">Hyundai santa fe sport </a></h4>
+                                                    <div class="dlab-separator bg-black"></div>
+                                                    <p class="dlab-price"><del>$40,152</del> <span class="text-primary">$26,598</span></p>
+                                                </div>
+                                                <div class="icon-box-btn text-center">
+                                                    <ul class="clearfix">
+                                                        <li>2019</li>
+                                                        <li>Manual</li>
+                                                        <li>210 hp </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- For Your Quick Look END -->
+        <!-- Testimonial -->
+        <!--<div class="section-full content-inner bg-img-fix overlay-primary-dark" style="background-image: url(images/background/bg3.jpg);">
+            <div class="container">
+                <div class="section-head text-center head-1 text-white">
+                    <span>What Our Happy Clients say about us </span>
+                    <h3 class="h3 text-uppercase">our Testimonial</h3>
+                    <div class="dlab-separator bg-white"></div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
+                </div>
+                <div class="section-content ">
+
+                    <div class="testimonial-center owl-carousel owl-btn-center-lr">
+                        <div class="item">
+                            <div class="testimonial-2 testimonial-bg style-1">
+                                <div class="testimonial-text">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                                        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                </div>
+                                <div class="testimonial-detail clearfix">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-pic radius shadow"><img src="images/testimonials/pic1.jpg" alt="" width="100" height="100"></div>
+                                        <strong class="testimonial-name">John Doe</strong>
+                                        <span class="text-white">Car Dealer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial-2 testimonial-bg style-1">
+                                <div class="testimonial-text">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                                        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                </div>
+                                <div class="testimonial-detail clearfix">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-pic radius shadow"><img src="images/testimonials/pic2.jpg" alt="" width="100" height="100"></div>
+                                        <strong class="testimonial-name">John Doe</strong>
+                                        <span class="text-white">Car Dealer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial-2 testimonial-bg style-1">
+                                <div class="testimonial-text">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                                        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                </div>
+                                <div class="testimonial-detail clearfix">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-pic radius shadow"><img src="images/testimonials/pic3.jpg" alt="" width="100" height="100"></div>
+                                        <strong class="testimonial-name">John Doe</strong>
+                                        <span class="text-white">Car Dealer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- Testimonial -->
+        <!-- Latest News -->
+        <div class="m-b20 m-t20">
+            @* <div class="latest-section-head"> *@
+            @* <ul class="navlatestnews theme-tabs">
+                    <li role="presentation"><a href="#bikeNews" class="active" data-toggle="tab">Bikes</a></li>
+                    <li role="presentation"><a href="#carNews" data-toggle="tab">Cars</a></li>
+                </ul> *@
+            @* </div> *@
+            <div class="blogs-section">
+                <h2 class="for-h1"><a asp-controller="LatestNews" asp-action="Index">Latest News</a></h2>
+                <div class="blogs-section">
+                    <button class="scroll-button-ln left-ln" onclick="scrollLeftLN()">&#128896;</button>
+                    @* <div class="tab-lscontent active" id="bikeNews"> *@
+                    @*     <button class="scroll-button left" onclick="scrollLeftLN()">&#9664;</button> *@
+                    <div class="latest-news-container" id="latestNewsContainer">
+                        @foreach (var news in ViewBag.TWNews)
+                        {
+                            <div class="latest-news-item">
+
+                                @* <section> *@
+                                @* <a href="/@news.ImageURL" title="Bike post" style="text-decoration:none;"> *@
+                                @*     <div class="upcoming-bike-img"><img src="@VFM.ImageURL" alt="@VFM.VFMHeading" title="@VFM.VFMHeading" /></div>
+                                    @*     <div class="upcoming-bike-name">@Truncate(@VFM.VFMHeading, 56)</div> *@
+                                <center> <div class="upcoming-bike-img"><img src="@news.ImageFolderURL" alt="@news.NewsHeading" loading="lazy" title="@news.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("/images/twowheeler/default.jpg")';" /></div></center>
+                                <div class="latest-news-content">
+                                    <div class="latest-news-heading"><a href="/@news.ImageURL" title="Bike post" style="text-decoration:none;"><p>@Truncate(news.NewsHeading, 77)</p></a> </div>
+                                    <div class="latest-news-summary"><p>BikeCarHub | <i class="fa fa-calendar"></i>  @news.Date?.ToString("d MMM yyyy")</p></div>
+                                    <div class="ow-post-readmore">
+                                        <a href="/@news.ImageURL" rel="bookmark"> Read More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+
+                                @* </section> *@
+                            </div>
+                        }
+                        @* @foreach (var news in ViewBag.TWNews) *@
+                        @* { *@
+                        @*         @* <a href="@Url.Action("TWLatestNewsDetails", "LatestNews", new { id = news.NewsHeading })" rel="bookmark"> *@
+                        @*         <a href="/@news.ImageURL" rel="bookmark"> *@
+                        @*            <div class="latest-news-item"> *@
+                        @*                 <center> <div class="upcoming-bike-img"><img src="@news.ImageFolderURL" alt="@news.NewsHeading" title="@news.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("/images/twowheeler/default.jpg")';" /></div></center> *@
+                        @*             <div class="latest-news-content"> *@
+                        @*                     <div class="latest-news-heading"><a href="/@news.ImageURL" title="Bike post" style="text-decoration:none;"><p>@Truncate(news.NewsHeading, 77)</p></a> </div> *@
+                        @*                     <div class="latest-news-summary"><p><i class="fa fa-calendar"></i>  @news.Date?.ToString("d MMM yyyy")</p></div> *@
+                        @*                 <div class="ow-post-readmore"> *@
+                        @*                         <a href="/@news.ImageURL" rel="bookmark"> Read More <i class="fa fa-angle-right"></i></a> *@
+                        @*                 </div> *@
+                        @*             </div> *@
+                        @*            </div> *@
+                        @*         </a> *@
+                        @* } *@
+                    </div>
+                    @* <div class="scroll-btns"> *@
+                    @*     <button class="scroll-btn left" onclick="scrollLeftLN('bikeNews')">&#9664;</button>  *@
+                    @*      <button class="scroll-btn right" onclick="scrollRightLN('bikeNews')">&#9654;</button> *@
+
+                    <button class="scroll-button-ln right-ln" onclick="scrollRightLN()">&#128898;</button>
+                    @* </div> *@
+
+                </div>
+
+                @* <div class="tab-lscontent" id="carNews">
+                        <div class="latest-news-container">
+                        @foreach (var news in ViewBag.FWNews)
+                        {
+                                <div class="latest-news-item">
+                                    <center><img src="@news.ImageURL" alt="Car News Image"></center>
+                                    <div class="latest-news-content">
+                                        <div class="latest-news-heading"><a href="@Url.Action("TWLatestNewsDetails", "Home", new { id = news.FWLatestNewsId })" title="Car post">@news.NewsHeading</a> </div>
+                                        <div class="latest-news-summary">@news.NewsSummary</div>
+                                        <div class="ow-post-readmore">
+                                            <a href="@Url.Action("TWLatestNewsDetails", "Home", new { id = news.FWLatestNewsId })" rel="bookmark" class="site-button-link text-decoration-none"> Read More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                        }
+                        </div>
+                        <div class="scroll-btns">
+                            <button class="scroll-btn left" onclick="scrollLeft('carNews')">&lt;</button>
+                            <button class="scroll-btn right" onclick="scrollRight('carNews')">&gt;</button>
+                        </div>
+                    </div> *@
+            </div>
+
+            @* <div class="section-full bg-white content-inner-1">
+                    <div class="container">
+                        <div class="section-head text-center head-1">
+                            <span class="text-danger">Read our latest news</span>
+                            <h3 class="h3 text-uppercase fw-bold">Latest News</h3>
+                        </div>
+                        <div class="row">
+                            <div class="blog-carousel owl-carousel col-md-12">
+                        @foreach (var TWNews in ViewBag.TWNews)
+                                   {
+                                <div class="item">
+                                    <div class="ow-blog-post date-style-2 dlab-latest-blog">
+                                        <div class="ow-post-media dlab-img-effect zoom-slow shadow"> <img src="@TWNews.ImageURL" alt=""> </div>
+                                        <div class="ow-post-meta">
+                                            <ul>
+                                                <li class="profile-user">
+                                                    <img src="images/testimonials/pic1.jpg" alt="" />
+                                                </li>
+                                                <li><span>John Doe</span></li>
+                                                <li><i class="fa fa-calendar"></i></li>
+                                                <li><i class="fa fa-comments"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="ow-post-info ">
+                                            <div class="ow-post-title">
+                                                <h4 class="post-title"> <a href="@Url.Action("TWLatestNewsDetails", "Home", new { id = TWNews.TWLatestNewsId })" title="Video post">@TWNews.NewsHeading</a> </h4>
+                                            </div>
+                                            <div class="ow-post-text">
+                                                <p>@TWNews.NewsSummary</p>
+                                            </div>
+                                            <div class="ow-post-readmore ">
+                                                <a href="@Url.Action("TWLatestNewsDetails", "Home", new { id = TWNews.TWLatestNewsId })" rel="bookmark" class="site-button-link text-decoration-none"> Read More <i class="fa fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>}
+                                <div class="item">
+                                    <div class="ow-blog-post date-style-2 dlab-latest-blog">
+                                        <div class="ow-post-media dlab-img-effect zoom-slow"> <img src="images/blog/latest-blog/pic1.jpg" alt=""> </div>
+                                        <div class="ow-post-meta">
+                                            <ul>
+                                                <li class="profile-user">
+                                                    <img src="images/testimonials/pic2.jpg" alt="" />
+                                                </li>
+                                                <li><span>John Doe</span></li>
+                                                <li><i class="fa fa-calendar"></i></li>
+                                                <li><i class="fa fa-comments"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="ow-post-info ">
+                                            <div class="ow-post-title">
+                                                <h4 class="post-title"> <a href="blog-single-sidebar.html" title="Video post">Porche Release New Model</a> </h4>
+                                            </div>
+                                            <div class="ow-post-text">
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry......</p>
+                                            </div>
+                                            <div class="ow-post-readmore ">
+                                                <a href="#" rel="bookmark" class="site-button-link"> Read More <i class="fa fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="ow-blog-post date-style-2 dlab-latest-blog">
+                                        <div class="ow-post-media dlab-img-effect zoom-slow"> <img src="images/blog/latest-blog/pic3.jpg" alt=""> </div>
+                                        <div class="ow-post-meta">
+                                            <ul>
+                                                <li class="profile-user">
+                                                    <img src="images/testimonials/pic3.jpg" alt="" />
+                                                </li>
+                                                <li><span>John Doe</span></li>
+                                                <li><i class="fa fa-calendar"></i></li>
+                                                <li><i class="fa fa-comments"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="ow-post-info ">
+                                            <div class="ow-post-title">
+                                                <h4 class="post-title"> <a href="blog-single-sidebar.html" title="Video post">Porche Release New Model</a> </h4>
+                                            </div>
+                                            <div class="ow-post-text">
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry......</p>
+                                            </div>
+                                            <div class="ow-post-readmore ">
+                                                <a href="#" rel="bookmark" class="site-button-link"> Read More <i class="fa fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> *@
+            <!-- Latest News END-->
+            <!-- Client logo Carousel -->
+            <!-- <div class="section-full bg-img-fix p-t30 p-b30 ">
+                 <div class="container">
+                     <div class="section-content">
+                         <div class="client-logo-carousel owl-carousel mfp-gallery gallery owl-btn-center-lr">
+                             <div class="item">
+                                 <div class="ow-client-logo">
+                                     <div class="client-logo"><a href="#"><img src="images/client-logo/logo1.jpg" alt=""></a></div>
+                                 </div>
+                             </div>
+                             <div class="item">
+                                 <div class="ow-client-logo">
+                                     <div class="client-logo"> <a href="#"><img src="images/client-logo/logo2.jpg" alt=""></a> </div>
+                                 </div>
+                             </div>
+                             <div class="item">
+                                 <div class="ow-client-logo">
+                                     <div class="client-logo"> <a href="#"><img src="images/client-logo/logo3.jpg" alt=""></a> </div>
+                                 </div>
+                             </div>
+                             <div class="item">
+                                 <div class="ow-client-logo">
+                                     <div class="client-logo"> <a href="#"><img src="images/client-logo/logo4.jpg" alt=""></a> </div>
+                                 </div>
+                             </div>
+                             <div class="item">
+                                 <div class="ow-client-logo">
+                                     <div class="client-logo"> <a href="#"><img src="images/client-logo/logo5.jpg" alt=""></a> </div>
+                                 </div>
+                             </div>
+                             <div class="item">
+                                 <div class="ow-client-logo">
+                                     <div class="client-logo"> <a href="#"><img src="images/client-logo/logo2.jpg" alt=""></a> </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>-->
+            <!-- Client logo Carousel END -->
+            <!-- Content END-->
+            <!-- scroll top button -->
+            <button class="scroltop fa fa-chevron-up"></button>
+
+        </div>
+
+        <!--All Brand Component-->
+        @await Html.PartialAsync("_AllBrandComponent")
+        <!--CompareBikesCode-->
+        @await Html.PartialAsync("_CompareBikes")
+
+        @* </div> *@
+    </div>
+
+</body>
+
+</html>
+<!--For Searching Dropdown-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // $("#ddlBrand").append('<option value="">Select Brand</option>');
+       // alert("1");
+        $("#ddlBrand").change(function () {
+            // alert("2");
+            var url = "@Url.Action("GetModelsByBrand", "Home")";
+            $.getJSON(url, { Id: $("#ddlBrand").val() }, function (data) {
+                 //alert(JSON.stringify(data));
+                $("#ddlModel").empty(); // Clear existing options
+                $("#ddlModel").append('<option value="">Select Model</option>');
+                $.each(data, function (index, item) {
+                    // debugger;
+                    $("#ddlModel").append('<option value="' + item.twoWheelerId + '">' + item.twoWheelerName + '</option>');
+                });
+            });
+        });
+        $('#searchButton').click(function () {
+            //debugger;
+            var brandId = $('#ddlBrand').val();
+            var modelId = $('#ddlModel').val();
+            var brandName = $('#ddlBrand option:selected').text().replace(/ /g, "-").toLowerCase();
+            var modelName = $('#ddlModel option:selected').text().replace(/ /g, "-").toLowerCase();
+
+            if (brandId && !modelId) {
+                // Redirect with only brandName
+                window.location.href = '/' + brandName;
+            } else if (brandId && modelId) {
+                // Redirect with brandName and modelName
+                window.location.href = '/' + brandName + '/' + modelName;
+            } else {
+                alert("Please select a brand.");
+            }
+
+            $("#ddlBrand").val("");
+            $("#ddlModel").empty();
+            $("#ddlModel").append('<option value="">Select Model</option>');
+        });
+
+    });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--Upcoming Bike-->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const containerUB = document.getElementById('upcomingBikesContainer');
+        const itemWidthUB = containerUB.querySelector('.upcoming-bike-item').offsetWidth;
+        const scrollSpeedUB = 2; // Pixels per frame
+        let scrollPositionUB = 0;
+        let isManualScrollingUB = false;
+        let autoScrollTimeoutUB;
+
+        @* function continuousScrollUB() { *@
+        @*     if (!isManualScrollingUB) { *@
+        @*         scrollPositionUB += scrollSpeedUB; *@
+
+        @*         // If we've reached the end, reset to the start *@
+        @*         if (scrollPositionUB >= containerUB.scrollWidth - containerUB.offsetWidth) { *@
+        @*             scrollPositionUB = 0; // Reset scroll to the beginning *@
+        @*         } *@
+
+        @*         containerUB.scrollLeft = scrollPositionUB; // Update scroll position *@
+        @*     } *@
+
+        @*     requestAnimationFrame(continuousScrollUB); // Keep scrolling *@
+        @* } *@
+
+        @* // Start the continuous scrolling *@
+        @* continuousScrollUB(); *@
+
+        // Manual scroll functions
+       //function scrollLeftUB() {
+       window.scrollLeftUB = function(){
+            isManualScrollingUB = true;
+            //clearTimeout(autoScrollTimeoutUB);
+            containerUB.scrollBy({ left: -itemWidthUB, behavior: 'smooth' });
+            //resumeAutoScrollUB();
+        }
+
+        //function scrollRightUB() {
+            window.scrollRightUB = function(){
+            isManualScrollingUB = true;
+            //clearTimeout(autoScrollTimeoutUB);
+            containerUB.scrollBy({ left: itemWidthUB, behavior: 'smooth' });
+            //resumeAutoScrollUB();
+        }
+
+        // Resume auto-scroll after a delay
+        // function resumeAutoScrollUB() {
+        //     autoScrollTimeoutUB = setTimeout(() => {
+        //         isManualScrollingUB = false;
+        //     }, 11000); Resume after 3 seconds of inactivity
+        // }
+
+        // Attach event listeners to buttons
+        document.querySelector('.scroll-button-ub.left-ub').addEventListener('click', window.scrollLeftUB);
+        document.querySelector('.scroll-button-ub.right-ub').addEventListener('click', window.scrollRightUB);
+    });
+</script>
+<!--Blogs Bike-->
+<script>document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById('blogsContainer');
+        const itemWidth = container.querySelector('.blogs-item').offsetWidth;
+        const scrollSpeed = 2; // Pixels per frame
+        let scrollPosition = 0;
+        let isManualScrolling = false;
+        let autoScrollTimeout;
+
+        // function continuousScroll() {
+        //     if (!isManualScrolling) {
+        //         scrollPosition += scrollSpeed;
+
+        //         If we've reached the end, reset to the start
+        //         if (scrollPosition >= container.scrollWidth - container.offsetWidth) {
+        //             scrollPosition = 0; Reset scroll to the beginning
+        //         }
+
+        //         container.scrollLeft = scrollPosition; Update scroll position
+        //     }
+
+        //     requestAnimationFrame(continuousScroll); Keep scrolling
+        // }
+
+        // Start continuous scrolling
+        // continuousScroll();
+
+        // Manual scroll functions
+        //function scrollLeft() {
+        window.scrollLeft = function () {
+            isManualScrolling = true;
+            //clearTimeout(autoScrollTimeout);
+            container.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+            // resumeAutoScroll();
+        }
+
+        //function scrollRight() {
+        window.scrollRight = function () {
+            isManualScrolling = true;
+            //clearTimeout(autoScrollTimeout);
+            container.scrollBy({ left: itemWidth, behavior: 'smooth' });
+            // resumeAutoScroll();
+        }
+
+        // Resume auto-scroll after a delay
+        // function resumeAutoScroll() {
+        //     autoScrollTimeout = setTimeout(() => {
+        //         isManualScrolling = false;
+        //     }, 19000); Resume after 3 seconds of inactivity
+        // }
+
+        // Attach event listeners to manual scroll buttons
+        document.querySelector('.scroll-button.left').addEventListener('click', window.scrollLeft);
+        document.querySelector('.scroll-button.right').addEventListener('click', window.scrollRight);
+    });</script>
+<!--Value For Money Bike-->
+<script>document.addEventListener("DOMContentLoaded", function () {
+        const containerVFM = document.getElementById('VFMContainer');
+        const itemWidthVFM = containerVFM.querySelector('.blogs-item').offsetWidth;
+        const scrollSpeedVFM = 2; //Pixels per frame
+        let scrollPositionVFM = 0;
+        let isManualScrollingVFM = false;
+        let autoScrollTimeoutVFM;
+
+
+        // function continuousScrollVFM() {
+        //     if (!isManualScrollingVFM) {
+        //         scrollPositionVFM += scrollSpeedVFM;
+
+        //        If we've reached the end, reset to the start
+        //         if (scrollPositionVFM >= containerVFM.scrollWidth - containerVFM.offsetWidth) {
+        //             scrollPositionVFM = 0; Reset scroll to the beginning
+        //         }
+
+        //         containerVFM.scrollLeft = scrollPositionVFM;Update scroll position
+        //     }
+
+        //     requestAnimationFrame(continuousScrollVFM); Keep scrolling
+        // }
+
+        // Start continuous scrolling
+        // continuousScrollVFM();
+
+        //Manual scroll functions
+        //function scrollLeft() {
+        window.scrollLeftVFM = function () {
+            isManualScrollingVFM = true;
+            //clearTimeout(autoScrollTimeoutVFM);
+            containerVFM.scrollBy({ left: -itemWidthVFM, behavior: 'smooth' });
+            // resumeAutoScrollVFM();
+        }
+
+        // function scrollRight() {
+        window.scrollRightVFM = function () {
+            isManualScrollingVFM = true;
+            //clearTimeout(autoScrollTimeoutVFM);
+            containerVFM.scrollBy({ left: itemWidthVFM, behavior: 'smooth' });
+            // resumeAutoScrollVFM();
+        }
+
+        // Resume auto-scroll after a delay
+        // function resumeAutoScrollVFM() {
+        //     autoScrollTimeoutVFM = setTimeout(() => {
+        //         isManualScrollingVFM = false;
+        //     }, 21000); Resume after 3 seconds of inactivity
+        // }
+
+        // Attach event listeners to manual scroll buttons
+        // document.querySelector('.scroll-button.left').addEventListener('click',scrollLeft);
+        // document.querySelector('.scroll-button.right').addEventListener('click',scrollRight);
+        document.querySelector('.scroll-button-vfm.left-vfm').addEventListener('click', window.scrollLeftVFM);
+        document.querySelector('.scroll-button-vfm.right-vfm').addEventListener('click', window.scrollRightVFM);
+    });</script>
+<!--Latest New-->
+<script>document.addEventListener("DOMContentLoaded", function () {
+        const containerLN = document.getElementById('latestNewsContainer');
+        const itemWidthLN = containerLN.querySelector('.latest-news-item').offsetWidth;
+        const scrollSpeedLN = 2; // Pixels per frame
+        let scrollPositionLN = 0;
+        let isManualScrollingLN = false;
+        let autoScrollTimeoutLN;
+
+        // function continuousScrollLN() {
+        //     scrollPositionLN += scrollSpeedLN;
+        //     console.log("scroll");
+        //     If we've reached the end, reset to the start
+        //     if (scrollPositionLN >= containerLN.scrollWidth - containerLN.offsetWidth) {
+        //         scrollPositionLN = 0; Reset scroll to the beginning
+        //     }
+
+        //     containerLN.scrollLeft = scrollPositionLN; Update scroll position
+        //     requestAnimationFrame(continuousScrollLN); Keep scrolling
+        // }
+
+        // Start the continuous scrolling
+        // continuousScrollLN();
+        //  function scrollLeftLN = {
+        window.scrollLeftLN = function () {
+            isManualScrollingLN = true;
+            //clearTimeout(autoScrollTimeoutLN);
+            containerLN.scrollBy({ left: -itemWidthLN, behavior: 'smooth' });
+            // resumeAutoScrollLN();
+        }
+
+        //  function scrollRight() {
+        window.scrollRightLN = function () {
+            isManualScrollingLN = true;
+            //clearTimeout(autoScrollTimeoutLN);
+            containerLN.scrollBy({ left: itemWidthLN, behavior: 'smooth' });
+            // resumeAutoScrollLN();
+        }
+
+        // Resume auto-scroll after a delay
+        // function resumeAutoScrollLN() {
+        //     console.log("resume");
+        //     autoScrollTimeoutLN = setTimeout(() => {
+        //         isManualScrollingLN = false;
+        //     }, 21000);Resume after 3 seconds of inactivity
+        // }
+
+        // Attach event listeners to manual scroll buttons
+        //  document.querySelector('.scroll-button.left').addEventListener('click',scrollLeft);
+        //  document.querySelector('.scroll-button.right').addEventListener('click',scrollRight);
+        document.querySelector('.scroll-button-ln.left-ln').addEventListener('click', window.scrollLeftLN);
+        document.querySelector('.scroll-button-ln.right-ln').addEventListener('click', window.scrollRightLN);
+
+    });</script>
+<script>// document.addEventListener("DOMContentLoaded", function () {
+    //     function scrollLeftLN(containerId) {
+    //         const container = document.querySelector(`#${containerId} .latest-news-container`);
+    //         const itemWidth = container.querySelector('.latest-news-item').offsetWidth;
+    //         container.scrollBy({
+    //             left: -itemWidth,
+    //             behavior: 'smooth'
+    //         });
+    //     }
+
+    //     function scrollRightLN(containerId) {
+    //         const container = document.querySelector(`#${containerId} .latest-news-container`);
+    //         const itemWidth = container.querySelector('.latest-news-item').offsetWidth;
+    //         container.scrollBy({
+    //             left: itemWidth,
+    //             behavior: 'smooth'
+    //         });
+    //     }
+
+    //     document.querySelectorAll('.navlatestnews a').forEach(tab => {
+    //         tab.addEventListener('click', function (e) {
+    //             e.preventDefault();
+
+    //             document.querySelectorAll('.navlatestnews a').forEach(link => {
+    //                 link.classList.remove('active');
+    //             });
+
+    //             this.classList.add('active');
+
+    //             document.querySelectorAll('.tab-lscontent').forEach(pane => {
+    //                 pane.classList.remove('active');
+    //             });
+
+    //             const target = this.getAttribute('href');
+    //             document.querySelector(target).classList.add('active');
+    //         });
+    //     });
+
+    //     document.querySelectorAll('.scroll-btn.left').forEach(button => {
+    //         button.addEventListener('click', function () {
+    //             const containerId = this.closest('.tab-lscontent').id;
+    //             scrollLeftLN(containerId);
+    //         });
+    //     });
+
+    //     document.querySelectorAll('.scroll-btn.right').forEach(button => {
+    //         button.addEventListener('click', function () {
+    //             const containerId = this.closest('.tab-lscontent').id;
+    //             scrollRightLN(containerId);
+    //         });
+    //     });
+    // });</script>
+@*--------Slide-------- *@
+<script>let currentIndex = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        if (index >= totalSlides) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = totalSlides - 1;
+        } else {
+            currentIndex = index;
+        }
+
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    setInterval(nextSlide, 5000); // Change image every 5 seconds
+
+    // Initial call to show the first slide
+    showSlide(currentIndex);</script>
+<script>document.addEventListener("DOMContentLoaded", function () {
+
+        const banner = document.querySelector('img[alt="bikecarhubslider1image"]');
+
+        function updateBanner() {
+
+            if (document.body.classList.contains("dark-mode")) {
+                banner.src = "/images/main-slider/topdark.png";
+            } else {
+                banner.src = "/images/main-slider/topnew.jpeg";
+            }
+        }
+
+        updateBanner();
+
+        const observer = new MutationObserver(updateBanner);
+
+        observer.observe(document.body, {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+
+    });</script>

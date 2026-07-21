@@ -1,0 +1,64 @@
+﻿@model Blogs
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+
+<div class="blogs-section">
+    @*<h2 class="for-h1"><a asp-controller="Blogs" asp-action="Index">Blogs</a></h2>*@
+    <div class="blogs-header">
+
+        <h2 class="for-h1">
+            <a asp-controller="Blogs" asp-action="Index">Blogs</a>
+        </h2>
+
+        <a asp-controller="Blogs"
+           asp-action="Index"
+           class="view-all-btn">
+            View All Blogs →
+        </a>
+
+    </div>
+
+    @*<button class="scroll-button left" onclick="scrollLeft()">&#128896;</button>*@
+    <button class="scroll-button left" onclick="scrollLeft()">❮</button>
+    <div class=" blogs-container" id="blogsContainer">
+        @foreach (var blogs in ViewBag.Blogs)
+        {
+            <div class="blogs-item">
+                <div class="blog-category">Blog</div>
+                <section>
+                    <a href="/@blogs.URL" style="text-decoration:none">
+                        <div class="blog-img"><img src="@blogs.ImageURL" alt="@blogs.BlogHeading" loading="lazy" title="@blogs.BlogHeading" /></div>
+                        @*<div class="upcoming-bike-name">@Truncate(@blogs.BlogHeading, 56)</div>*@
+                        <div class="upcoming-bike-name">@blogs.BlogHeading</div>
+                    </a>
+                </section>
+            </div>
+        }
+        @*</div><button class="scroll-button right" onclick="scrollRight()">&#128898;</button>*@
+        <button class="scroll-button right" onclick="scrollRight()">❯</button>
+        @* </div> *@
+    </div>
+</div>
+<script>function scrollLeft() {
+        document.getElementById("blogsContainer")
+            .scrollBy({
+                left: -400,
+                behavior: 'smooth'
+            });
+    }
+
+    function scrollRight() {
+        document.getElementById("blogsContainer")
+            .scrollBy({
+                left: 400,
+                behavior: 'smooth'
+            });
+    }
+</script>

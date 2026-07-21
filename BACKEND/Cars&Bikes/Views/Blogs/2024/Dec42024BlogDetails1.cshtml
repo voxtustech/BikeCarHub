@@ -1,0 +1,221 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Best Sports Bikes Under ₹4 Lakh in India | Specs & Prices";
+}
+@section MetaTags{
+    <meta name="keywords" content="sports bikes under ₹4 lakh, Kawasaki Ninja 400, TVS Apache RR 310, BMW G310 RR, Ultraviolette F77, KTM RC 390, bike prices in India, bike feature, Sports bike under 4 lakhs in India, Super bikes under 5 lakhs, Best bike under 4 lakh in India, Best bike under 4 lakh in India 2024" />
+    <meta name="description" content="Explore the top 5 sports bikes under ₹4 lakh in India, featuring Kawasaki Ninja 400, TVS Apache RR 310, KTM RC 390, and more. Specs, features, and prices included!" />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. Kawasaki Ninja 400</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 399cc, Liquid-cooled, 4-stroke Parallel Twin
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 45 PS @@ 10000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 37 Nm @@ 8,000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Top Speed:</span> ~190 km/h
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 24.18 km/l
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹3.18 lakh (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Lightweight trellis frame, slipper clutch, ABS, ergonomic seating, and sporty design. The Ninja 400 is a great entry-level supersport bike for spirited riding.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5sportsbikesunder4lakhinindiafeaturesspecsandprices/kawasaki ninja 400.webp" alt="Kawasaki Ninja 400" title="Kawasaki Ninja 400" /></center></div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. TVS Apache RR 310</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 312.2cc, SI, 4 stroke, 4 valve, Single cylinder, Liquid cooled, Reverse inclined
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 38 PS @@ 9900 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 29 Nm @@ 7900 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Top Speed:</span> ~160 km/h
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 34 km/l
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹2.75 lakh (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Adjustable suspension, quick shifter, Michelin Road 5 tires, and a fully digital display. Known for its versatility in track and commuting environments.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5sportsbikesunder4lakhinindiafeaturesspecsandprices/tvs apache rr 310.webp" alt="TVS Apache RR 310" title="TVS Apache RR 310" /></center></div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">3. BMW G310 RR</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 312.12cc,Water-cooled, single-cylinder 4-stroke engine, four valves, two overhead camshafts and cam followers, wet sump lubrication
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 34 PS @@ 9700 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 27.3 Nm @@ 7700 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Top Speed:</span> ~160 km/h
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 30.3 km/l
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹3.05 lakh
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> BMW branding with premium build quality, comfortable ergonomics, and high precision for new riders.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5sportsbikesunder4lakhinindiafeaturesspecsandprices/bmw g310 rr.webp" alt="BMW G310 RR" title="BMW G310 RR" /></center></div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">4. Ultraviolette F77 Mach 2</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Battery:</span> 7.1 kWh
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Range:</span> 211 km per charge
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Top Speed:</span> ~155 km/h
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹3 lakh
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> All-electric sports bike with cutting-edge tech, including an aerodynamic design, advanced display, and eco-friendly performance.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5sportsbikesunder4lakhinindiafeaturesspecsandprices/ultraviolette f77 mach 2.webp" alt="Ultraviolette F77 Mach 2" title="Ultraviolette F77 Mach 2" /></center></div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">5. KTM RC 390</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 373cc, 1-cylinder, 4-stroke engine
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 43.5 bhp @@ 9,000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 37 Nm @@ 7,000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Top Speed:</span> ~170 km/h
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 25.89 km/l
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹3.20 lakh
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> TFT display, quick shifter, lean-sensitive ABS, and aggressive track-ready design. This bike is ideal for thrill-seekers and racers.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5sportsbikesunder4lakhinindiafeaturesspecsandprices/ktm rc 390.webp" alt="KTM RC 390" title="KTM RC 390" /></center></div>
+                </div>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

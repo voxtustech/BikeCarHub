@@ -1,0 +1,326 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @foreach (var brand in ViewBag.Tag)
+    {
+        ViewData["Title"] = @brand.TitleTag;
+    }
+}
+
+@section MetaTags {
+    @foreach (var brand in ViewBag.Tag)
+    {
+        <meta name="keywords" content="@brand.MetaKeywords" />
+        <meta name="description" content="@brand.MetaDescription" />
+    }
+}
+@foreach (var brand in ViewBag.Tag)
+{
+    <div class=" ">
+        <h1 class="latest-bike-head">@brand.BrandName Bikes</h1>
+        @*<h2 class="latest-bike-description p-b20">@brand.Discription</h2>*@
+        <div class="brand-info-container">
+            <div class="brand-info-content">
+                <h3>Royal Enfield: A Timeless Legacy on Two Wheels in India</h3>
+                <p class="brand-info-short">
+                    When one hears the name Royal Enfield, the first image that comes to mind is the thump of an engine echoing down a rugged mountain road. With over a century of history behind it, Royal Enfield isn’t just a motorcycle brand—it’s a symbol of heritage, pride, and adventure for millions across the world, especially in India.
+
+                    Known for producing motorcycles that exude vintage charm, raw mechanical appeal, and long-distance touring prowess, Royal Enfield has carved out a unique place in the hearts of Indian riders. Whether it's the classic Bullet thundering through city traffic or the Himalayan cruising the Leh-Ladakh passes, these bikes deliver a riding experience like no other.
+
+                    As we steped into 2025, Royal Enfield continues to modernize its lineup while staying true to its core values. Here’s a complete look at the current models, pricing, mileage, and everything else you need to know.
+                </p>
+
+                <div class="brand-info-full" id="royalEnfieldMoreText">
+
+
+                    <h3>Royal Enfield Bikes Price List 2025 in India</h3>
+
+                    <div class="brand-table-wrapper">
+                        <table class="brand-info-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Ex-Showroom Price</th>
+                                    <th>Mileage</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Classic 350</td>
+                                    <td>₹1,95,300 – ₹2,32,645</td>
+                                    <td>35–40 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Hunter 350</td>
+                                    <td>₹1,49,900 – ₹1,81,750</td>
+                                    <td>36–40 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bullet 350</td>
+                                    <td>₹1,74,875 – ₹2,18,283</td>
+                                    <td>35–38 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Meteor 350</td>
+                                    <td>₹2,08,270 – ₹2,32,545</td>
+                                    <td>35–39 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Himalayan 450</td>
+                                    <td>₹2,89,000 – ₹2,98,000</td>
+                                    <td>28–32 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Super Meteor 650</td>
+                                    <td>₹3,68,085 – ₹3,98,885</td>
+                                    <td>24–27 km/l</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Which Royal Enfield Is Best for Long Rides?</h3>
+
+                    <p>
+                        Royal Enfield has long been the go-to brand for touring enthusiasts in India.
+                        Riders planning long-distance adventures can count on several RE models that are
+                        specifically built for comfort, durability, and performance over extended journeys.
+                    </p>
+
+                    <h4 class="brand-sub-heading">Top Choices for Long Rides:</h4>
+
+                    <ul class="brand-info-list">
+                        <li>
+                            <strong>Himalayan 450:</strong>
+                            Built for adventure touring, it handles off-road trails,
+                            mountain roads, and long highway rides with ease.
+                        </li>
+
+                        <li>
+                            <strong>Meteor 350:</strong>
+                            Offers upright ergonomics, a soft seat, wind protection,
+                            and stability—perfect for highways.
+                        </li>
+
+                        <li>
+                            <strong>Super Meteor 650:</strong>
+                            Royal Enfield’s most premium cruiser, offering a smooth
+                            twin-cylinder engine and relaxed riding posture for long
+                            hours in the saddle.
+                        </li>
+                    </ul>
+
+                    <p>
+                        These bikes are not just mechanically capable but also supported by
+                        Royal Enfield’s wide service network across India, ensuring peace of
+                        mind for travelers.
+                    </p>
+                    <h3>Which Royal Enfield Has the Best Mileage?</h3>
+
+                    <p>
+                        If you're looking for a balance between classic styling and fuel efficiency,
+                        several RE models perform admirably in terms of mileage.
+                    </p>
+
+                    <h4 class="brand-sub-heading">Best Mileage Royal Enfield Models:</h4>
+
+                    <ul class="brand-info-list">
+
+                        <li>
+                            <strong>Hunter 350:</strong>
+                            Lightweight and nimble, offering mileage around 36–40 km/l.
+                        </li>
+
+                        <li>
+                            <strong>Classic 350:</strong>
+                            Despite its retro looks and signature engine thump,
+                            it delivers around 35–40 km/l.
+                        </li>
+
+                        <li>
+                            <strong>Meteor 350:</strong>
+                            Offers fuel efficiency in the 35–39 km/l range,
+                            depending on riding style and road conditions.
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        These models use the refined J-series engine, known for smoother performance,
+                        improved combustion efficiency, and reduced vibrations—contributing to
+                        better overall fuel economy.
+                    </p>
+                    <h3>Why Is Royal Enfield Famous?</h3>
+
+                    <p>
+                        Royal Enfield isn’t just famous—it’s iconic. Here’s why:
+                    </p>
+
+                    <ul class="brand-info-list">
+
+                        <li>
+                            <strong>Rich Heritage:</strong>
+                            Founded in 1901 in England, Royal Enfield is the world’s
+                            oldest motorcycle brand in continuous production.
+                            Its classic motorcycles like the Bullet have become timeless icons.
+                        </li>
+
+                        <li>
+                            <strong>Unique Riding Experience:</strong>
+                            No other motorcycle delivers the raw mechanical feedback
+                            and signature “thump” that Royal Enfield engines are known for.
+                            It’s a riding experience that feels alive and deeply connected.
+                        </li>
+
+                        <li>
+                            <strong>Community and Culture:</strong>
+                            Royal Enfield riders are part of a passionate riding community.
+                            Events like Rider Mania, One Ride, and Himalayan Odyssey celebrate
+                            the spirit of motorcycling across India.
+                        </li>
+
+                        <li>
+                            <strong>Adventure-Ready Machines:</strong>
+                            Models like the Himalayan and Interceptor 650 have proven themselves
+                            on some of the toughest terrains—from Ladakh to international touring routes.
+                        </li>
+
+                        <li>
+                            <strong>Customization Friendly:</strong>
+                            Royal Enfield bikes are among the most customized motorcycles in India.
+                            From touring accessories to bobber kits and aftermarket exhausts,
+                            riders enjoy endless personalization options.
+                        </li>
+
+                    </ul>
+                    <h3>Final Thoughts</h3>
+
+                    <p>
+                        Royal Enfield is not just about motorcycles; it’s about identity, journey, and freedom. Whether you are a first-time buyer seeking the charm of a Classic 350 or a seasoned traveler looking for the ruggedness of a Himalayan 450, there's a Royal Enfield that fits your spirit.
+                    </p>
+
+                    <p>
+                        In 2025, with new launches, electric versions on the horizon, and continued innovation, Royal Enfield continues to roar forward—one thump at a time.
+                    </p>
+                    <h3>FAQs About Royal Enfield</h3>
+
+                    <div class="faq-container">
+
+                        <div class="faq-item">
+                            <h4>1. Which Royal Enfield is best for daily use?</h4>
+                            <p>
+                                The Hunter 350 and Classic 350 are ideal for daily commuting
+                                due to their balanced weight, comfortable ergonomics,
+                                and fuel efficiency.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>2. What is the mileage of Royal Enfield bikes?</h4>
+                            <p>
+                                Royal Enfield bikes offer mileage ranging from around
+                                24 km/l for the 650cc twins to nearly 40 km/l for
+                                350cc motorcycles like the Hunter 350 and Classic 350.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>3. Is Royal Enfield suitable for beginners?</h4>
+                            <p>
+                                Yes. Models like the Hunter 350 and Meteor 350 are beginner-friendly,
+                                offering smooth engines, stable handling, and comfortable riding dynamics.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>4. Which Royal Enfield is best for long rides?</h4>
+                            <p>
+                                Himalayan 450, Super Meteor 650, and Meteor 350 are among
+                                the best options for touring and long-distance riding.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>5. Are Royal Enfield bikes high maintenance?</h4>
+                            <p>
+                                Modern Royal Enfield motorcycles are significantly more refined.
+                                The newer J-platform engines require less maintenance and
+                                offer smoother reliability.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>6. Is Royal Enfield launching electric bikes?</h4>
+                            <p>
+                                Yes. Royal Enfield is actively working on electric motorcycles,
+                                with its first EV models expected in the coming years.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>7. What makes Royal Enfield different from other brands?</h4>
+                            <p>
+                                Its timeless design, signature engine thump,
+                                rich heritage, and passionate riding community
+                                make Royal Enfield stand out from other motorcycle brands.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>8. What is the engine life of a Royal Enfield bike?</h4>
+                            <p>
+                                With proper maintenance and regular servicing,
+                                a Royal Enfield engine can easily last beyond 1 lakh kilometers.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>9. Which Royal Enfield gives the best resale value?</h4>
+                            <p>
+                                The Classic 350 and Bullet 350 generally offer
+                                strong resale value due to their popularity and brand appeal.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>10. Is Royal Enfield made in India?</h4>
+                            <p>
+                                Yes. Royal Enfield motorcycles are manufactured by Eicher Motors
+                                at production facilities located in Chennai, India.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="brand-read-btn" onclick="toggleRoyalEnfieldContent()" id="readMoreBtn">
+                    Read More
+                </button>
+
+            </div>
+        </div>
+
+        <script>function toggleRoyalEnfieldContent() {
+
+                const moreText = document.getElementById("royalEnfieldMoreText");
+                const btn = document.getElementById("readMoreBtn");
+
+                if (moreText.style.display === "block") {
+                    moreText.style.display = "none";
+                    btn.innerText = "Read More";
+                }
+                else {
+                    moreText.style.display = "block";
+                    btn.innerText = "Read Less";
+                }
+            }</script>
+    </div>
+}
+@await Html.PartialAsync("_BrandComponent")
+@await Html.PartialAsync("_AllComponent")

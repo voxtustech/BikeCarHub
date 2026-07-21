@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Cars_Bikes.Models.TWChassisAndSuspension>
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+<form method="get" asp-action="ListTWChassis">
+    <input type="text" name="searchString" placeholder="Search by Name or Varient" class="form-control" />
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>TW Name</th>
+            <th>Varient</th>
+            <th>Body Type</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TWName</td>
+                <td>@item.Varients</td>
+                <td>@item.BodyType</td>
+                <td>
+                    <a asp-action="EditTWChassis" asp-route-id="@item.TWChassisAndSuspensionId" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="DeleteTWChassis" asp-route-id="@item.TWChassisAndSuspensionId" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+ </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

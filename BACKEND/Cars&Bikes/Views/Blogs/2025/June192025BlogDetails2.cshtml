@@ -1,0 +1,569 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 10 Indian 150cc Bikes in 2025 – Best Mileage Picks";
+}
+@section MetaTags {
+    <meta name="keywords" content="150cc bikes India 2025, best 150cc Indian bikes, Hero Xtreme 160R, Bajaj Pulsar 150, TVS Apache 160, Indian bikes under, Yamaha R15 V5 ,Yamaha MT 15 V2, Hero Hunk 160R 4V"/>
+    <meta name="description" content="Explore the best 150cc Indian bikes in 2025 by Bajaj, Hero & TVS. Compare mileage, prices & features to find your perfect daily ride." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p><span class="font-weight-700">Written by</span>: BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on</span>: 18th June 2025</p>
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                    <h2>The 150cc Bike Revolution in India</h2>
+
+                    <p>The <span class="font-weight-700">150cc motorcycle segment</span> is one of the most popular choices among Indian riders. These bikes offer the perfect balance of <span class="font-weight-700">power, fuel efficiency, comfort, and affordability.</span> Whether you are a college student, an office-goer, or a weekend rider, 150cc bikes provide an excellent riding experience without burning a hole in your pocket.</p>
+                    <p>In <span class="font-weight-700">2025</span>, Indian manufacturers like <span class="font-weight-700">Hero, Bajaj, and TVS</span> have stepped up with exciting new models, bringing stylish designs, better features, and excellent performance to this segment.</p>
+                    <p>Today, <span class="font-weight-700">BikeCarHub</span> brings you the <span class="font-weight-700">Top 10 Indian 150cc bikes in 2025</span>, carefully selected based on <span class="font-weight-700">mileage, price, style, performance, and value.</span></p>
+
+                <div class="div-line"></div>
+
+              <h3 class="subheading">Why Should You Choose a 150cc Bike in India?</h3>
+    
+    
+        
+            <h5 class="subheading">1. Great Mileage</h5>
+            <p>Most 150cc bikes deliver between <span class="font-weight-700">45 to 60 kmpl</span>, making them perfect for daily city commutes and occasional long rides.</p>
+        
+       
+            <h5 class="subheading">2. Affordable Pricing</h5>
+            <p>You can get a stylish and powerful 150cc bike without spending too much. Prices generally start around ₹1 lakh.</p>
+        
+        
+            <h5 class="subheading">3. Easy Handling</h5>
+            <p>150cc bikes are <span class="font-weight-700">lightweight and easy to ride,</span> even in busy Indian traffic and narrow lanes.</p>
+        
+       
+            <h5 class="subheading">4. Sporty and Stylish Designs</h5>
+            <p>Modern 150cc bikes look premium and sporty, perfect for young riders.</p>
+        
+        
+            <h5 class="subheading">5. Low Maintenance Costs</h5>
+            <p>These bikes are budget-friendly when it comes to servicing, and Indian brands offer a <span class="font-weight-700">large network of service centers.</span></p>
+
+
+
+
+                    <div class="div-line"></div>
+
+        <h3 class="subheading">Comparison Table:</h3>
+              <div style="overflow-x: auto;">
+              <table class="comparison-table-content">
+                          
+            <thead>
+                <tr>
+                    <th class="text-center">S.No</th>
+                    <th class="text-center">Bike Name</th>
+                    <th class="text-center">Mileage (kmpl)</th>
+                    <th class="text-center">Max. Power (PS)</th>
+                    <th class="text-center">Price (Ex-showroom)</th>
+                </tr>
+            </thead>
+                            <tr class="compare-head-text">
+                    <td>1</td>
+                    <td><span class="font-weight-700">Bajaj Pulsar 150</span></td>
+                    <td>47</td>
+                    <td>14 PS@8500 rpm</td>
+                    <td>₹1,13,696 - ₹1,17,632</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><span class="font-weight-700">TVS Apache RTR 160 2V</span></td>
+                    <td>47</td>
+                    <td>16.04 PS@8750 rpm</td>
+                    <td>₹1,21,420 - ₹1,30,520</td>
+                </tr>
+                            <tr class="compare-head-text">
+                    <td>3</td>
+                    <td><span class="font-weight-700">Hero Xtreme 160R (Single Disc)</span></td>
+                    <td>46</td>
+                    <td>15 PS@8500 rpm</td>
+                    <td>₹1,11,611</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><span class="font-weight-700">Bajaj Pulsar N150</span></td>
+                    <td>48</td>
+                    <td>14.5 PS@8500 rpm</td>
+                    <td>₹1,13,696</td>
+                </tr>
+                            <tr class="compare-head-text">
+                    <td>5</td>
+                    <td><span class="font-weight-700">TVS Apache RTR 160 4V</span></td>
+                    <td>45</td>
+                    <td>17.55 PS@9250 rpm</td>
+                    <td>₹1,24,870 - ₹1,39,990</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><span class="font-weight-700">Hero Xtreme 160R 4V (Disc)</span></td>
+                    <td>46</td>
+                    <td>16.9 PS@8500 rpm</td>
+                    <td>₹1,39,000</td>
+                </tr>
+                            <tr class="compare-head-text">
+                    <td>7</td>
+                    <td><span class="font-weight-700">Bajaj Avenger Street 160</span></td>
+                    <td>47.2</td>
+                    <td>15 PS@8500 rpm</td>
+                    <td>₹1,20,704</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><span class="font-weight-700">Hero Hunk 160R 4V</span></td>
+                    <td>48</td>
+                    <td>16.9 PS@8500 rpm</td>
+                    <td>₹99,900</td>
+                </tr>
+                            <tr class="compare-head-text">
+                    <td>9</td>
+                    <td><span class="font-weight-700">Yamaha MT 15 V2</span></td>
+                    <td>56.87</td>
+                    <td>18.4 PS@10,000 rpm</td>
+                    <td>₹1,69,550 - ₹1,74,250</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><span class="font-weight-700">Yamaha R15 V5</span></td>
+                    <td>45</td>
+                    <td>18.4 PS@10,000 rpm</td>
+                    <td>₹1,84,400 - ₹1,89,400</td>
+                </tr>
+           
+                  </table>
+             </div>
+
+
+                    <div class="div-line"></div>
+
+                 <h3 class="subheading">Top 10 150cc Bikes in India (2025) - Made for Indian Riders</h3>
+                   
+
+             <h3>1. Bajaj Pulsar 150</h3>
+                    <div class="row m-b20">
+                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top10indian150ccbikes/bajaj pulsar 150.webp" alt="bikecarhubi10vsaltroz" title="bikecarhubi10vsaltroz" /></div>
+                    </div>
+              <h5 class="subheading">Key Specifications:</h5>
+            <ul>
+                <li><span class="font-weight-700">Engine type:</span> 4-Stroke, 2-Valve, Twin Spark BSVI Compliant DTS-I FI Engine</li>
+                <li><span class="font-weight-700">Displacement:</span> 149.50 cc</li>
+                <li><span class="font-weight-700">Max Power:</span> 10.3 kW 14 PS@8500 rpm</li>
+                <li><span class="font-weight-700">Fuel Tank:</span> 15 L</li>
+                <li><span class="font-weight-700">Mileage:</span> 47 kmpl</li>
+                <li><span class="font-weight-700">Pulsar 150 Variants:</span> Pulsar 150 SD & Pulsar 150 TD</li>
+                <li><span class="font-weight-700">Colour Options:</span> Sparkle Black Red, Sparkle Black Blue & Sparkle Black Silver</li>
+                <li><span class="font-weight-700">Features:</span> Muscular design, comfortable riding position, trusted engine</li>
+            </ul>
+                <p><span class="font-weight-700">Bajaj Pulsar 150 SD price is starting from Rs. 1,13,696/- (Ex-Showroom)</span></p>
+                <p><span class="font-weight-700">Bajaj Pulsar 150 TD price is starting from Rs. 1,17,632/- (Ex-Showroom)</span></p>
+                <h5 class="subheading">Why It's Popular:</h5>
+                <p>The <span class="font-weight-700">Pulsar 150</span> has been India's favorite for years. It offers <span class="font-weight-700">good pickup, stability, and a classic sporty look.</span> Perfect for daily riders who want a balance between style and savings.</p>
+                <p>To know more about the other <span class="font-weight-700"><a class="for-link" asp-controller="Bajaj" asp-action="BajajPulsar150">bike of Bajaj click here.</a></span></p>
+
+
+                    <div class="div-line"></div>
+
+                <h3 class="subheading">2. TVS Apache RTR 160 2V</h3>
+                                <div class="row m-b20">
+                                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top10indian150ccbikes/tvs apache rtr 160 2v.webp" alt="bikecarhubi10vsaltroz" title="bikecarhubi10vsaltroz" /></div>
+                                </div>
+
+                    <h5 class="subheading">Key Specifications:</h5>
+                    <ul>
+                        <li><span class="font-weight-700">Engine Type:</span> SI, 4 stroke, Air cooled, SOHC, Fuel Injection</li>
+                        <li><span class="font-weight-700">Engine Capacity:</span> 159.7 cc</li>
+                        <li><span class="font-weight-700">Mileage:</span> 47 kmpl</li>
+                        <li><span class="font-weight-700">Max speed:</span> Sport : 107 km/h, Urban/ Rain : 97 km/h</li>
+                        <li><span class="font-weight-700">Maximum Power:</span> Sport : 11.8 kW 16.04 PS@8750 rpm, Urban/ Rain : 9.8 kW 13.32 PS@8000 rpm</li>
+                        <li><span class="font-weight-700">Model & Price(Ex-Showroom):</span> RM Drum (Black Edition)(<span class="font-weight-700">₹ 1,21,420</span>), RM Drum (<span class="font-weight-700">₹ 1,22,220</span>), RM Disc (<span class="font-weight-700">₹ 1,25,720</span>), RM Disc BT (<span class="font-weight-700">₹ 1,29,020</span>), Racing Edition (<span class="font-weight-700">₹ 1,30,520</span>)</li>
+                        <li><span class="font-weight-700">Features:</span> Sporty design, smooth gear shifts, excellent handling</li>
+                    </ul>
+                <h5 class="subheading">Why It's Popular:</h5>
+                <p>The <span class="font-weight-700">Apache RTR 160 2V</span> is sharp-looking and provides a <span class="font-weight-700">zippy city ride</span> with excellent cornering. A great choice for first-time sport riders.</p>
+                <p>To know more about the other <span class="font-weight-700"><a class="for-link" asp-controller="TVS" asp-action="TVSApacheRTR160">bike of TVS click here</a></span></p>
+
+
+                    <div class="div-line"></div>
+                <h3 class="subheading">3. Hero Xtreme 160R (Single Disc)</h3>
+                                <div class="row m-b20">
+                                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top10indian150ccbikes/hero xtreme 160r.webp" alt="bikecarhubi10vsaltroz" title="bikecarhubi10vsaltroz" /></div>
+                                </div>
+
+                    <h5 class="subheading">Key Specifications:</h5>
+                    <ul>
+                        <li><span class="font-weight-700">Engine Type:</span> 4 Stroke, Air Cooled, 2 Valve</li>
+                        <li><span class="font-weight-700">Displacement:</span> 163.2 cc</li>
+                        <li><span class="font-weight-700">Speed(0-60km/h):</span> 4.7 Sec</li>
+                        <li><span class="font-weight-700">Max Torque:</span> 14 Nm@6500 rpm</li>
+                        <li><span class="font-weight-700">Max Power:</span> 15 Ps@8500 rpm</li>
+                        <li><span class="font-weight-700">Mileage:</span> 46 kmpl</li>
+                        <li><span class="font-weight-700">Price Starts From:</span> ₹1,11,611(Ex-Showroom price- Delhi)</li>
+                        <li><span class="font-weight-700">Features:</span> Lightweight, quick acceleration, modern styling</li>
+                    </ul>
+                <h5 class="subheading">Why It's Popular:</h5>
+                <p>The <span class="font-weight-700">Xtreme 160R</span> is <span class="font-weight-700">fast, fuel-efficient, and stylish.</span> It's one of the most value-packed 150cc bikes available, suitable for young and budget-conscious riders.</p>
+                <p>To know more about the other <span class="font-weight-700"><a class="for-link" asp-controller="Hero" asp-action="HeroXtreme160R">bike of Hero click here.</a></span></p>
+
+
+                    <div class="div-line"></div>
+
+                <h3 class="subheading">4. Bajaj Pulsar N150</h3>
+
+                                <div class="row m-b20">
+                                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top10indian150ccbikes/bajaj pulsar n150.webp" alt="bikecarhubi10vsaltroz" title="bikecarhubi10vsaltroz" /></div>
+                                </div>
+
+                <h5 class="subheading">Key Specifications:</h5>
+                <ul>
+                    <li><span class="font-weight-700">Engine Type:</span> Fuel Injection System, Triple Spark 4-Valve 200cc BSVI DTS-i FI Engine, Liquid Cooled</li>
+                    <li><span class="font-weight-700">Displacement:</span> 149.68 cc</li>
+                    <li><span class="font-weight-700">Fuel Tank:</span> 14 L</li>
+                    <li><span class="font-weight-700">Max Power:</span> 10.66 kW 14.5 PS@8500 rpm</li>
+                    <li><span class="font-weight-700">Mileage:</span> 48 kmpl</li>
+                    <li><span class="font-weight-700">Price:</span> <span class="font-weight-700">₹1,13,696</span>(Ex-Showroom Price-Delhi)</li>
+                    <li><span class="font-weight-700">Features:</span> Fresh design, digital display, single-channel ABS</li>
+                </ul>
+                <h5 class="subheading">Why It's Popular:</h5>
+                <p>The <span class="font-weight-700">Pulsar N150</span> is perfect for young riders who want <span class="font-weight-700">modern looks, digital features, and smooth performance</span> at a reasonable price.</p>
+
+
+                    <div class="div-line"></div>
+
+                    <h3 class="subheading">5. TVS Apache RTR 160 4V</h3>
+
+                                    <div class="row m-b20">
+                                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top10indian150ccbikes/hero xtreme 160r 4v.webp" alt="bikecarhubi10vsaltroz" title="bikecarhubi10vsaltroz" /></div>
+                                    </div>
+
+                    <h5 class="subheading">Key Specifications:</h5>
+                    <ul>
+                        <li><span class="font-weight-700">Engine Type:</span> SI, 4 stroke, Oil cooled, SOHC, Fuel Injection</li>
+                        <li><span class="font-weight-700">Engine Capacity:</span> 159.7 cc</li>
+                        <li><span class="font-weight-700">Mileage:</span> 45 kmpl</li>
+                        <li><span class="font-weight-700">Max speed:</span> Sport : Sport : 114 km/h. Urban/ Rain : 103 km/h</li>
+                        <li><span class="font-weight-700">Maximum Power:</span> Sport: 12.91 kW 17.55 PS@9250 rpm Urban / Rain: 11.50 kW 15.64 PS@8650 rpm</li>
+                        <li><span class="font-weight-700">Model & Price(Ex-Showroom):</span> RM Drum (Black Edition <span class="font-weight-700">₹ 1,24,870</span>), Drum (<span class="font-weight-700">₹ 1,25,670</span>), Disc (<span class="font-weight-700">₹ 1,29,170</span>), BT Disc (<span class="font-weight-700">₹ 1,32,470</span>), Special Edition (<span class="font-weight-700">₹ 1,34,970</span>), Dual Channel ABS(<span class="font-weight-700">₹ 1,36,990</span>), Dual Channel ABS with USD(<span class="font-weight-700">₹ 1,39,990</span>)</li>
+                        <li><span class="font-weight-700">Features:</span> 4-valve engine, multiple ride modes, digital cluster</li>
+                    </ul>
+                    <h5 class="subheading">Why It's Popular:</h5>
+                    <p>The <span class="font-weight-700">Apache RTR 160 4V</span> is a powerful option with <span class="font-weight-700">ride modes and excellent top-end performance.</span> It's a top pick for riders who enjoy speed and advanced tech.</p>
+
+                                    <div class="div-line"></div>
+                    <h3 class="subheading">6. Hero Xtreme 160R 4V (Disc)</h3>
+
+                                    <div class="row m-b20">
+                                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top10indian150ccbikes/hero xtreme 160r 4v.webp" alt="bikecarhubi10vsaltroz" title="bikecarhubi10vsaltroz" /></div>
+                                    </div>
+
+                        <h5 class="subheading">Key Specifications:</h5>
+                        <ul>
+                            <li><span class="font-weight-700">Engine Type:</span> 4 Stroke, Air Cooled, 4 Valve</li>
+                            <li><span class="font-weight-700">Displacement:</span> 163.2 cc</li>
+                            <li><span class="font-weight-700">Max Torque:</span> 14.6 Nm@6500 rpm</li>
+                            <li><span class="font-weight-700">Max Power:</span> 6.9 Ps@8500 rpm</li>
+                            <li><span class="font-weight-700">Mileage:</span> 46 kmpl</li>
+                            <li><span class="font-weight-700">Fuel Tank:</span> 12 L</li>
+                            <li><span class="font-weight-700">Price Starts From:</span> ₹1,39,000(Ex-Showroom price- Delhi)</li>
+                            <li><span class="font-weight-700">Features:</span> USD forks, LED lights, refined 4-valve engine</li>
+                        </ul>
+                        <h5 class="subheading">Why It's Popular:</h5>
+                        <p>The upgraded <span class="font-weight-700">Xtreme 160R 4V</span> comes with <span class="font-weight-700">better suspension, improved comfort, and a powerful engine,</span> making it ideal for both city and weekend rides.</p>
+
+                    <div class="div-line"></div>
+
+                    <h3 class="subheading">7. Bajaj Avenger Street 160</h3>
+
+                                    <div class="row m-b20">
+                                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top10indian150ccbikes/bajaj avenger street 160.webp" alt="bikecarhubi10vsaltroz" title="bikecarhubi10vsaltroz" /></div>
+                                    </div>
+
+
+                    <h5 class="subheading">Key Specifications:</h5>
+                    <ul>
+                        <li><span class="font-weight-700">Engine Type:</span> Single cylinder, Twin Spark DTS-i , Fuel Injected, 4 stroke, SOHC, 2 valve, Air cooled</li>
+                        <li><span class="font-weight-700">Displacement:</span> 160 cc</li>
+                        <li><span class="font-weight-700">Fuel Tank:</span> 13 L</li>
+                        <li><span class="font-weight-700">Mileage:</span> 47.2 kmpl</li>
+                        <li><span class="font-weight-700">Max Power:</span> 11.03 kW 15 PS@8500 rpm</li>
+                        <li><span class="font-weight-700">Price:</span> <span class="font-weight-700">₹1,20,704</span>(Ex-Showroom Price-Delhi)</li>
+                        <li><span class="font-weight-700">Features:</span> Cruiser design, relaxed seating, wide handlebars</li>
+                    </ul>
+                    <h5 class="subheading">Why It's Popular:</h5>
+                    <p>If <span class="font-weight-700">comfort</span> is your priority, the <span class="font-weight-700">Avenger Street 160</span> is the best cruiser-style bike under 150cc. It's perfect for highway rides and long-distance travel.</p>
+
+
+                    <div class="div-line"></div>
+
+                        <h3 class="subheading">8. Hero Hunk 160R 4V</h3>
+
+                                        <div class="row m-b20">
+                                            <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top10indian150ccbikes/hero hunk 160r 4v.webp" alt="bikecarhubi10vsaltroz" title="bikecarhubi10vsaltroz" /></div>
+                                        </div>
+
+
+                        <h5 class="subheading">Key Specifications:</h5>
+                        <ul>
+                            <li><span class="font-weight-700">Engine Type:</span> 4 Stroke, Air Cooled, 4 Valve</li>
+                            <li><span class="font-weight-700">Displacement:</span> 163.2 cc</li>
+                            <li><span class="font-weight-700">Max Torque:</span> 14.6 Nm@6500 rpm</li>
+                            <li><span class="font-weight-700">Max Power:</span> 6.9 Ps@8500 rpm</li>
+                            <li><span class="font-weight-700">Mileage:</span> 48 kmpl</li>
+                            <li><span class="font-weight-700">Fuel Tank:</span> 12 L</li>
+                            <li><span class="font-weight-700">Price Starts From:</span> <span class="font-weight-700">₹ 99,900</span>(Ex-Showroom price- Delhi)</li>
+                            <li><span class="font-weight-700">Features:</span> USD forks, LED lights, refined 4-valve engine</li>
+                            <li><span class="font-weight-700">Other Features:</span> Fresh design, improved engine, sporty looks</li>
+                        </ul>
+                        <h5 class="subheading">Why It's Popular:</h5>
+                        <p>The <span class="font-weight-700">Hero Hunk 160R 4V</span> offers a great commuter-sport mix with <span class="font-weight-700">reliable Hero engineering.</span> A solid choice for practical riders with a touch of style.</p>
+
+                    <div class="div-line"></div>
+
+                    <h3 class="subheading">9. Yamaha MT 15 V2</h3>
+
+
+
+                    <h5 class="subheading">Key Specifications:</h5>
+                    <ul>
+                        <li><span class="font-weight-700">Engine Type:</span> Liquid-cooled, 4-stroke, SOHC, 4-valve</li>
+                        <li><span class="font-weight-700">Displacement:</span> 155 cc</li>
+                        <li><span class="font-weight-700">Fuel Tank:</span> 10 L</li>
+                        <li><span class="font-weight-700">Mileage:</span> 56.87 kmpl</li>
+                        <li><span class="font-weight-700">Max Power:</span> 13.5kW(18.4PS)/10000r/min</li>
+                        <li><span class="font-weight-700">Max Torque:</span> 14.1N.m(1.4kgf.m)/7500r/min</li>
+                        <li><span class="font-weight-700">Price Range:</span> ₹1,69,550-₹1,74,250 (Ex-Showroom Price-Delhi)</li>
+                        <li><span class="font-weight-700">Features:</span> Digital display, sporty design, eco/sport ride modes</li>
+                    </ul>
+                    <h5 class="subheading">Why It's Popular:</h5>
+                    <p>The <span class="font-weight-700">Yamaha MT 15 V2</span> could be a game-changer. If launched, it will offer <span class="font-weight-700">youthful design, smart features, and amazing mileage</span> at a competitive price.</p>
+                    <p>To know more about the other <span class="font-weight-700"><a class="for-link" asp-controller="Yamaha" asp-action="YamahaMT15Ver2Point0">bike of Yamaha click here.</a></span></p>
+
+                                    <div class="div-line"></div>
+
+                    <h3 class="subheading">10. Yamaha R15 V5</h3>
+
+                                    <div class="row m-b20">
+                                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top10indian150ccbikes/yamaha r15 v4.webp" alt="bikecarhubi10vsaltroz" title="bikecarhubi10vsaltroz" /></div>
+                                    </div>
+
+
+                    <h5 class="subheading">Key Specifications:</h5>
+                    <ul>
+                        <li><span class="font-weight-700">Engine Type:</span> Liquid-cooled, 4-stroke, SOHC, 4-valve</li>
+                        <li><span class="font-weight-700">Displacement:</span> 155 cc</li>
+                        <li><span class="font-weight-700">Fuel Tank:</span> 11 L</li>
+                        <li><span class="font-weight-700">Mileage:</span> 45 kmpl</li>
+                        <li><span class="font-weight-700">Max Power:</span> 13.5kW(18.4PS)/10000 RPM</li>
+                        <li><span class="font-weight-700">Max Torque:</span> 14.2 Nm 1.4 kgfm@7,500 RPM</li>
+                        <li><span class="font-weight-700">Price Range:</span> ₹1,84,400-₹1,89,400 (Ex-Showroom Price-Delhi)</li>
+                        <li><span class="font-weight-700">Features:</span> Digital display, sporty design, eco/sport ride modes</li>
+                        <li><span class="font-weight-700">Other Features:</span> Practical design, budget-friendly, simple features</li>
+                    </ul>
+                    <h5 class="subheading">Why It's Popular:</h5>
+                    <p>The <span class="font-weight-700">Yamaha R15 V5</span> will be <span class="font-weight-700">a perfect commuter's choice</span> -- simple, durable, and extremely cost-effective for daily city riders.</p>
+
+
+                    <div class="div-line"></div>
+
+                    <h3 class="subheading">Best 150cc Bikes by Category | Quick Picks by BikeCarHub</h3>
+
+                        <div style="overflow-x: auto;">
+                         <table class="comparison-table-content">
+                         <thead>
+                        <tr>
+                            <th class="text-center">Category</th>
+                            <th class="text-center">Recommended Bike</th>
+                        </tr>
+                         </thead>
+                            <tr class="compare-head-text">
+                            <td>Best Mileage</td>
+                            <td>Yamaha MT 15 V2</td>
+                        </tr>
+                        <tr>
+                            <td>Best for City Rides</td>
+                            <td>TVS Apache RTR 160 2V</td>
+                        </tr>
+                             <tr class="compare-head-text">
+                            <td>Most Stylish Bike</td>
+                            <td>Bajaj Pulsar N150</td>
+                        </tr>
+                        <tr>
+                            <td>Best for Long Rides</td>
+                            <td>Bajaj Avenger Street 160</td>
+                        </tr>
+                         <tr class="compare-head-text">
+                            <td>Best All-Rounder</td>
+                            <td>TVS Apache RTR 160 4V</td>
+                        </tr>
+                        <tr>
+                            <td>Best Budget Option</td>
+                            <td>Hero Hunk 160R 4V</td>
+                        </tr>
+                    </table>
+                    </div>
+
+
+                                    <div class="div-line"></div>
+
+                    <h2>Find Your Perfect Ride with BikeCarHub</h2>
+                    <p>The <span class="font-weight-700">Indian 150cc motorcycle segment in 2025</span> offers fantastic options for every type of rider. Whether you want a <span class="font-weight-700">fuel-efficient commuter, a stylish bike, or a comfortable highway cruiser,</span> there is a perfect match waiting for you.</p>
+                    <p>At <span class="font-weight-700">BikeCarHub</span>, we recommend taking a test ride and comparing features carefully based on your daily riding needs. These bikes are not just about going from one place to another---they are about <span class="font-weight-700">comfort, style, and smart savings.</span></p>
+                    <p>With the right 150cc bike, you can make your everyday commute enjoyable, efficient, and affordable.</p>
+
+
+                    <div class="div-line"></div>
+
+                    <h2>Frequently Asked Questions -- 150cc Bikes in India (2025)</h2>
+
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                    Which is the most fuel-efficient 150cc bike in India (2025)?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The <span class="font-weight-700">Yamaha MT 15 V2</span> offers excellent mileage, around <span class="font-weight-700">56.87 kmpl</span>, making it one of the best in its class.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                    Are all these bikes BS6-compliant?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, all current 150cc bikes listed by <span class="font-weight-700">BikeCarHub</span> meet the <span class="font-weight-700">BS6 emission standards.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                    Which bike is best for long-distance rides?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The <span class="font-weight-700">Bajaj Avenger Street 160</span> is the most comfortable option for highway trips.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                    Which 150cc bike is the most affordable?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The <span class="font-weight-700">Bajaj Pulsar 150</span> remains the most budget-friendly option with good features.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                    Are 150cc bikes good for beginners?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, bikes like the Pulsar 150 and Hero Xtreme are <span class="font-weight-700">easy to control and perfect for new riders.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                                    Do 150cc bikes come with smart features?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Some bikes, like the <span class="font-weight-700">TVS Apache RTR 160 4V</span> and <span class="font-weight-700">Hero Xtreme 160R 4V</span>, now come with <span class="font-weight-700">digital displays, ride modes, and even Bluetooth features.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                                    Which bike looks the most stylish?
+                                </button>
+                            </h2>
+                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The <span class="font-weight-700">Bajaj Pulsar N150</span> has a fresh and sporty design, perfect for young riders.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                                    What is the average mileage of 150cc bikes in India?
+                                </button>
+                            </h2>
+                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    On average, most 150cc bikes deliver <span class="font-weight-700">45 to 55 kmpl.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                                    Which 150cc bike is the most powerful?
+                                </button>
+                            </h2>
+                            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The <span class="font-weight-700">TVS Apache RTR 160 4V</span> is one of the most powerful Indian 150cc bikes with excellent acceleration.
+                                </div>
+                            </div>
+
+
+                      </div>
+                  </div>
+             </div>
+            @await Component.InvokeAsync("AllBlog")
+            @await Html.PartialAsync("_AllBrandComponent")
+          </div>
+
+    </div>
+
+       
+                
+
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

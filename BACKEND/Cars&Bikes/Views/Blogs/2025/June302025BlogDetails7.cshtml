@@ -1,0 +1,469 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 10 Upcoming Bikes in India 2025 | BikeCarHub";
+}
+@section MetaTags {
+    <meta name="keywords" content="upcoming bikes in India 2025, new bike launches India 2025, Hero Mavrick 440 Scrambler, TVS Apache RTX 300, Himalayan 750 launch, Activa 7G, Hero Karizma XMR 250, Ducati Multistrada V2, best upcoming bikes 2025" />
+    <meta name="description" content="Discover the top 10 upcoming bikes in India 2025. Explore launch dates, prices, features, and exciting models from Hero, TVS, BMW, Ducati, and more" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 1 July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>This list by <span class="font-weight-700">BikeCarHub</span> highlights the <span class="font-weight-700">Top 10 Upcoming Bikes in India (2025 Edition)</span> that are set to redefine biking with new designs, advanced technology, and powerful engines. Whether someone is a daily commuter, an off-road enthusiast, or a touring lover, these bikes promise something for everyone.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Upcoming Bikes in India - Detailed List (2025 Edition)</h2>
+
+                <h3 class="subheading"><a class="for-link" asp-controller="Hero" asp-action="HeroMavrick440">1. Hero Mavrick 440 Scrambler</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 10 upcoming bikes in india 2025/hero mavrick 440 scrambler.webp" alt="Hero Mavrick 440 Scrambler" title="Hero Mavrick 440 Scrambler" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Expected Launch Date:</span> 22nd Oct 2025</li>
+                    <li><span class="font-weight-700">Expected Price:</span> ₹ 2,20,000-₹ 2,50,000</li>
+                    <li>
+                        <span class="font-weight-700">Key Highlights:</span>
+                        <ul>
+                            <li>Scrambler-inspired design</li>
+                            <li>Rugged build and upright riding posture</li>
+                            <li>Suitable for light off-roading</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">Why It's Special:</span> Hero's new entry into the scrambler category, the Mavrick 440 Scrambler, is to attract young, adventure-seeking riders who want style, practicality, and versatility in a single bike.</p>
+
+                <h3 class="subheading">2. TVS Apache RTX 300</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 10 upcoming bikes in india 2025/tvs-apache-rtx-300.webp" alt="TVS Apache RTX 300" title="TVS Apache RTX 300" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Expected Launch Date:</span> Aug 2025</li>
+                    <li><span class="font-weight-700">Expected Price:</span> ₹ 2,60,000 -₹ 2,90,000</li>
+                    <li>
+                        <span class="font-weight-700">Key Highlights:</span>
+                        <ul>
+                            <li>New liquid-cooled engine</li>
+                            <li>Performance-focused streetfighter</li>
+                            <li>Aggressive styling</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">Why It's Special:</span> TVS is preparing to expand its Apache lineup with the RTX 300, designed for riders who want speed, agility, and sharp handling. It competes directly with KTM's Duke series.</p>
+
+                <h3 class="subheading">3. BMW R 1300 R</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 10 upcoming bikes in india 2025/bmw r 1300 r.webp" alt="BMW R 1300 R" title="BMW R 1300 R" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Expected Launch Date:</span> 19th Aug 2025</li>
+                    <li><span class="font-weight-700">Expected Price:</span> ₹ 20 lakh (ex-showroom)</li>
+                    <li>
+                        <span class="font-weight-700">Key Highlights:</span>
+                        <ul>
+                            <li>Boxer twin engine</li>
+                            <li>Top-class electronics and riding modes</li>
+                            <li>Premium street-naked design</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">Why It's Special:</span> BMW's R 1300 R will bring premium power and advanced riding aids to India's big bike market. It's aimed at serious riders looking for a premium, high-performance naked street bike.</p>
+
+                <h3 class="subheading">4. Hero Xpulse 421</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 10 upcoming bikes in india 2025/hero xpulse 421.webp" alt="Hero Xpulse 421" title="Hero Xpulse 421" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Expected Launch Date:</span> Feb 2026</li>
+                    <li><span class="font-weight-700">Expected Price:</span> ₹ 2,40,000 -₹ 3,00,000</li>
+                    <li>
+                        <span class="font-weight-700">Key Highlights:</span>
+                        <ul>
+                            <li>Larger 421cc adventure engine</li>
+                            <li>Improved suspension and off-road capabilities</li>
+                            <li>Touring-friendly upgrades</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">Why It's Special:</span> Hero's Xpulse 421 is set to take the brand's adventure range to the next level, offering riders a more powerful machine that can comfortably handle long-distance touring and rough terrains.</p>
+
+                <h3 class="subheading">5. Kawasaki W230</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 10 upcoming bikes in india 2025/kawasaki w230.webp" alt="Kawasaki W230" title="Kawasaki W230" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Expected Launch Date:</span> August 2025</li>
+                    <li><span class="font-weight-700">Expected Price:</span> ₹ 2,20,000 -₹ 2,40,000</li>
+                    <li>
+                        <span class="font-weight-700">Key Highlights:</span>
+                        <ul>
+                            <li>Retro-classic design</li>
+                            <li>Lightweight and beginner-friendly</li>
+                            <li>Simple air-cooled engine</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">Why It's Special:</span> Kawasaki's W230 will appeal to riders who love vintage styling paired with everyday practicality. It will be a simple, stylish commuter with modern reliability.</p>
+
+                <h3 class="subheading">6. Husqvarna Vitpilen 401</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 10 upcoming bikes in india 2025/husqvarna vitpilen 401.webp" alt="Husqvarna Vitpilen 401" title="Husqvarna Vitpilen 401" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Expected Launch Date:</span> August 2025</li>
+                    <li><span class="font-weight-700">Expected Price:</span> ₹2,50,000</li>
+                    <li>
+                        <span class="font-weight-700">Key Highlights:</span>
+                        <ul>
+                            <li>Café-racer inspired styling</li>
+                            <li>Refined performance with KTM's 399cc platform</li>
+                            <li>Lightweight and nimble</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">Why It's Special:</span> The Husqvarna Vitpilen 401 will stand out with its unique Scandinavian design and sharp riding dynamics, perfect for riders looking for something stylish yet performance-driven.</p>
+
+                <h3 class="subheading">7. Honda Activa 7G</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 10 upcoming bikes in india 2025/honda activa 7g.webp" alt="Honda Activa 7G" title="Honda Activa 7G" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Expected Launch Date:</span> September 2025</li>
+                    <li><span class="font-weight-700">Expected Price:</span> ₹80,000 -- ₹90,000</li>
+                    <li>
+                        <span class="font-weight-700">Key Highlights:</span>
+                        <ul>
+                            <li>Next-gen features</li>
+                            <li>Potential fuel-injection upgrades</li>
+                            <li>Possibly equipped with hybrid tech</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">Why It's Special:</span> Honda Activa's next generation is eagerly awaited. The Activa 7G is to bring fresh updates to India's most popular scooter, possibly with new technology and improved mileage.</p>
+
+                <h3 class="subheading">8. Royal Enfield Himalayan 750</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 10 upcoming bikes in india 2025/royal enfield himalayan 750.webp" alt="Royal Enfield Himalayan 750" title="Royal Enfield Himalayan 750" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Expected Launch Date:</span> November 2025</li>
+                    <li><span class="font-weight-700">Expected Price:</span> ₹ 4,00,000- ₹ 4,09,999</li>
+                    <li>
+                        <span class="font-weight-700">Key Highlights:</span>
+                        <ul>
+                            <li>New parallel twin engine</li>
+                            <li>Improved touring comfort</li>
+                            <li>Long-range capabilities</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">Why It's Special:</span> The Himalayan 750 will be Royal Enfield's flagship adventure motorcycle, taking the Himalayan series to global standards with better power and highway cruising abilities.</p>
+
+                <h3 class="subheading">9. Hero Karizma XMR 250</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 10 upcoming bikes in india 2025/hero karizma xmr 250.webp" alt="Hero Karizma XMR 250" title="Hero Karizma XMR 250" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Expected Launch Date:</span> September 2025</li>
+                    <li><span class="font-weight-700">Expected Price:</span> ₹ 2,00,000 to ₹ 2,20,000</li>
+                    <li>
+                        <span class="font-weight-700">Key Highlights:</span>
+                        <ul>
+                            <li>Sporty styling with full fairing</li>
+                            <li>250cc engine targeting young riders</li>
+                            <li>Affordable sports tourer</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">Why It's Special:</span> The Hero Karizma is making a strong comeback in the 250cc segment. The XMR 250 is to be sporty yet practical, bringing the iconic Karizma name back to Indian roads.</p>
+
+                <h3 class="subheading">10. Ducati Multistrada V2</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 10 upcoming bikes in india 2025/ducati multistrada v2.webp" alt="Ducati Multistrada V2" title="Ducati Multistrada V2" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Expected Launch Date:</span> September 2025</li>
+                    <li><span class="font-weight-700">Expected Price:</span> ₹ 15,00,000 to ₹ 17,00,000</li>
+                    <li>
+                        <span class="font-weight-700">Key Highlights:</span>
+                        <ul>
+                            <li>Long-distance touring focus</li>
+                            <li>High-end features like cornering ABS and ride modes</li>
+                            <li>Lightweight chassis</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">Why It's Special:</span> The Ducati Multistrada V2 will bring a new level of luxury touring to India. It's perfect for riders who want a premium, high-performance adventure tourer with Ducati's signature styling.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Quick Comparison Table - Top 10 Upcoming Bikes in India 2025</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Bike Name</th>
+                                <th class="text-center">Expected Launch</th>
+                                <th class="text-center">Expected Price (₹)</th>
+                                <th class="text-center">Special Feature</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Hero Mavrick 440 Scrambler</td>
+                                <td>22nd Oct 2025</td>
+                                <td>₹ 2,20,000-₹ 2,50,000</td>
+                                <td>Scrambler styling, light off-road</td>
+                            </tr>
+                            <tr>
+                                <td>TVS Apache RTX 300</td>
+                                <td>August 2025</td>
+                                <td>₹ 2,60,000 -₹ 2,90,000</td>
+                                <td>Performance streetfighter</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>BMW R 1300 R</td>
+                                <td>19th Aug 2025</td>
+                                <td>₹ 20 lakh (ex-showroom)</td>
+                                <td>Premium street naked</td>
+                            </tr>
+                            <tr>
+                                <td>Hero Xpulse 421</td>
+                                <td>Feb 2026</td>
+                                <td>₹ 2,40,000 -₹ 3,00,000</td>
+                                <td>Adventure-focused touring</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Kawasaki W230</td>
+                                <td>August 2025</td>
+                                <td>₹ 2,20,000 -₹ 2,40,000</td>
+                                <td>Retro-classic design</td>
+                            </tr>
+                            <tr>
+                                <td>Husqvarna Vitpilen 401</td>
+                                <td>August 2025</td>
+                                <td>₹ 2,50,000</td>
+                                <td>Café-racer styling</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Honda Activa 7G</td>
+                                <td>September 2025</td>
+                                <td>₹ 80,000 -- ₹ 90,000</td>
+                                <td>Next-gen scooter</td>
+                            </tr>
+                            <tr>
+                                <td>Royal Enfield Himalayan 750</td>
+                                <td>November 2025</td>
+                                <td>₹ 4,00,000- ₹ 4,09,999</td>
+                                <td>Big adventure tourer</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Hero Karizma XMR 250</td>
+                                <td>September 2025</td>
+                                <td>₹ 2,00,000 to ₹ 2,20,000</td>
+                                <td>Sporty comeback</td>
+                            </tr>
+                            <tr>
+                                <td>Ducati Multistrada V2</td>
+                                <td>September 2025</td>
+                                <td>₹ 15,00,000 to ₹ 17,00,000</td>
+                                <td>Premium touring machine</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Why 2025 Will Be a Game-Changing Year for Bike Launches in India</h2>
+                <p>The year 2025 promises to be a <span class="font-weight-700">landmark year for the Indian motorcycle market.</span> The variety of segments—from scooters to high-end adventure bikes—shows that manufacturers are listening to customer demands.</p>
+                <p>Brands like Hero and Royal Enfield are focusing on expanding their adventure range, while TVS and Husqvarna are pushing for sportier designs. Premium manufacturers like Ducati and BMW are introducing global models for serious Indian riders.</p>
+                <p>The Indian biking community is set to experience better technology, improved safety features, and diverse choices like never before.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Thoughts by BikeCarHub</h2>
+                <p>The upcoming bikes in India for 2025 promise a <span class="font-weight-700">diverse and exciting range</span> for every type of rider. Whether someone is looking for a practical scooter, a premium adventure tourer, or a stylish streetfighter, the Indian market will offer something fresh.</p>
+                <p><span class="font-weight-700">BikeCarHub</span> encourages readers to stay updated with the latest news, attend upcoming bike shows, and keep an eye on launch events. The future of motorcycling in India looks brighter than ever.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs: Top 10 Upcoming Bikes in India (2025 Edition)</h2>
+
+                <div class="accordion" id="faqUpcomingBikes">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. When will the Hero Mavrick 440 Scrambler be launched?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqUpcomingBikes">
+                            <div class="accordion-body">
+                                The Hero Mavrick 440 Scrambler is expected to launch on 22nd Oct 2025.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. What is the expected price of the TVS Apache RTX 300?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqUpcomingBikes">
+                            <div class="accordion-body">
+                                The TVS Apache RTX 300 is expected to be priced between ₹ 2,60,000 -₹ 2,90,000.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Which bike is the most affordable in the upcoming list?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqUpcomingBikes">
+                            <div class="accordion-body">
+                                The Honda Activa 7G is likely to be the most affordable option, expected between ₹80,000 to ₹90,000.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Is the Royal Enfield Himalayan 750 suitable for touring?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqUpcomingBikes">
+                            <div class="accordion-body">
+                                Yes, the Royal Enfield Himalayan 750 will be built specifically for long-distance touring and adventure riding.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Will the Ducati Multistrada V2 be available in India?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqUpcomingBikes">
+                            <div class="accordion-body">
+                                Yes, the Ducati Multistrada V2 is expected to launch in India by September 2025.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. What is the top feature of the Husqvarna Vitpilen 401?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqUpcomingBikes">
+                            <div class="accordion-body">
+                                The Vitpilen 401 stands out with its café-racer styling and lightweight performance.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which upcoming bike is best for off-roading?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqUpcomingBikes">
+                            <div class="accordion-body">
+                                The Hero Xpulse 421 and Royal Enfield Himalayan 750 are best suited for off-road and adventure riding.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Is the Hero Karizma XMR 250 coming back?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqUpcomingBikes">
+                            <div class="accordion-body">
+                                Yes, Hero is reintroducing the Karizma in a sportier 250cc version in September 2025.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. What is special about the BMW R 1300 R?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqUpcomingBikes">
+                            <div class="accordion-body">
+                                The BMW R 1300 R offers premium naked styling, advanced riding aids, and a boxer twin engine.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Will the Kawasaki W230 be a retro bike?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqUpcomingBikes">
+                            <div class="accordion-body">
+                                Yes, the Kawasaki W230 will carry a retro-classic design with simple mechanics aimed at everyday use.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

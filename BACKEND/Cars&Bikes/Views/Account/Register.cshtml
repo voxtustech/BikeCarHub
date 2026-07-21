@@ -1,0 +1,154 @@
+﻿@model Cars_Bikes.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container mt-5 mb-5 auth-page">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow p-4">
+
+                <h2 class="text-center mb-4">Register</h2>
+
+                <form asp-action="Register" method="post">
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Full Name <span class="text-danger">*</span>
+                        </label>
+                        <input asp-for="FullName" class="form-control" />
+                        <span asp-validation-for="FullName"
+                              class="text-danger">
+                        </span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Username<span class="text-danger">*</span>
+                        </label>
+                        <input asp-for="UserName" class="form-control" />
+                        <span asp-validation-for="UserName"
+                              class="text-danger">
+                        </span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Email<span class="text-danger">*</span>
+                        </label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email"
+                              class="text-danger">
+                        </span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Phone Number</label>
+                        <input asp-for="PhoneNumber"
+                               type="tel"
+                               pattern="[0-9]{10}"
+                               class="form-control" />
+                        <span asp-validation-for="PhoneNumber"
+                              class="text-danger">
+                        </span>
+                    </div>
+                    @*<small id="passwordStrength" class="text-muted"></small>*@
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Password<span class="text-danger">*</span>
+                        </label>
+                        <input asp-for="Password"
+                               type="password"
+                               id="passwordInput"
+                               class="form-control" />
+                        <span asp-validation-for="Password"
+                              class="text-danger">
+                        </span>
+                        <small id="passwordStrength"
+                               class="text-muted">
+                        </small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Confirm Password<span class="text-danger">*</span>
+                        </label>
+                        <input asp-for="ConfirmPassword"
+                               type="password"
+                               class="form-control"
+                               onpaste="return false"
+                               oncopy="return false"
+                               oncut="return false" />
+                        <span asp-validation-for="ConfirmPassword"
+                              class="text-danger">
+                        </span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        Register
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>const passwordInput =
+        document.getElementById("passwordInput");
+
+    const passwordStrength =
+        document.getElementById("passwordStrength");
+
+    passwordInput.addEventListener("input", function () {
+
+        const password = passwordInput.value;
+
+        const hasUppercase =
+            /[A-Z]/.test(password);
+
+        const hasLowercase =
+            /[a-z]/.test(password);
+
+        const hasNumber =
+            /[0-9]/.test(password);
+
+        const hasSpecial =
+            /[^A-Za-z0-9]/.test(password);
+
+        const hasLength =
+            password.length >= 6;
+
+        let message = "";
+
+        message += hasLength
+            ? "✔ Minimum 6 characters<br>"
+            : "✖ Minimum 6 characters<br>";
+
+        message += hasUppercase
+            ? "✔ Uppercase letter<br>"
+            : "✖ Uppercase letter required<br>";
+
+        message += hasLowercase
+            ? "✔ Lowercase letter<br>"
+            : "✖ Lowercase letter required<br>";
+
+        message += hasNumber
+            ? "✔ Numeric value<br>"
+            : "✖ Numeric value required<br>";
+
+        message += hasSpecial
+            ? "✔ Special character<br>"
+            : "✖ Special character required<br>";
+
+        passwordStrength.innerHTML = message;
+
+    });</script>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

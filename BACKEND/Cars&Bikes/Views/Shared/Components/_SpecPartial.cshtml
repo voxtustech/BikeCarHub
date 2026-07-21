@@ -1,0 +1,14 @@
+﻿@if (Model != null)
+{
+    <div>
+        <p><strong>Engine Type:</strong> @Model.EngineType</p>
+        <p><strong>Battery Capacity:</strong> @Model.BatteryCapacity</p>
+        <!-- Add more fields -->
+        <a href="@Url.Action("Edit", "TWSpec", new { id = Model.TWSpecId })" class="btn btn-sm btn-warning">Update</a>
+        <a href="@Url.Action("Delete", "TWSpec", new { id = Model.TWSpecId })" class="btn btn-sm btn-danger">Delete</a>
+    </div>
+}
+else
+{
+    <p>No specification found for this variant.</p>
+}

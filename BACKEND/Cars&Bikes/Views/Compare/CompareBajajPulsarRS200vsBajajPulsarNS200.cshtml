@@ -1,0 +1,25 @@
+﻿
+@model CompareViewModel
+@{
+    ViewData["Title"] = "Pulsar RS200 vs NS200 – Full Spec Comparison ";
+}
+@section MetaTags {
+    <meta name="keywords" content="Pulsar RS200 vs NS200, Bajaj Pulsar 200cc comparison, RS200 vs NS200 specs, Pulsar RS200 mileage, Pulsar NS200 top speed, Best 200cc bike in India, Pulsar RS200 vs NS200 price, Pulsar 200cc bikes comparison, RS200 vs NS200 which is better, Bajaj Pulsar NS200 review, Pulsar RS200 drag race, Pulsar NS200 vs RS200 performance, RS200 vs NS200 real mileage, Pulsar RS200 features, Bajaj sportbike comparison 2025 " />
+    <meta name="description" content="Compare Bajaj Pulsar RS200 vs NS200 on performance, design, mileage, price & features. Find out which 200cc Pulsar fits your riding style best in 2025. " />
+}
+<div class=" ">
+    @* @Html.RenderPartial("_CompareTable", Model) *@
+
+    @await Html.PartialAsync("_CompareTable", Model)
+</div>
+<div class="google-ad">
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:1000px;height:200px"
+         data-ad-client="ca-pub-8720291170595920"
+         data-ad-slot="6204553210">
+    </ins>
+</div>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+@await Html.PartialAsync("_AllViewComponent")

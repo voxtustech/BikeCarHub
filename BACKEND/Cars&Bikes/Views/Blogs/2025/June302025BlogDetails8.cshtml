@@ -1,0 +1,482 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Budget-Friendly Bikes in India Under ₹1 Lakh (2025)";
+}
+@section MetaTags {
+    <meta name="keywords" content="Best budget bikes in India 2025, Bikes under 1 lakh in India 2025, Top affordable bikes India 2025, Best mileage bikes under ₹1 lakh, Budget-friendly bikes for students 2025, Hero Splendor Plus XTEC review 2025, Bajaj Platina 110 mileage 2025, TVS Sport price in India 2025, Honda CD 110 Dream features 2025, Hero HF Deluxe mileage 2025, Best bikes for daily commute India, Cheapest bikes in India 2025, Budget commuter bikes 2025, Low maintenance bikes in India, Top 5 bikes under 1 lakh 2025 India" />
+    <meta name="description" content="Explore top 5 budget-friendly bikes in India under ₹1 lakh (2025). Compare mileage, features, and prices to find the best affordable bike for daily use." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 1th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <div class="div-line"></div>
+
+                
+                <h2 class="subheading">Why Budget-Friendly Bikes Are Popular in India</h2>
+                <p>Budget bikes have always been the backbone of the Indian two-wheeler market. They are:</p>
+                <ul>
+                    <li><span class="font-weight-700">Extremely fuel-efficient</span>, saving daily travel costs.</li>
+                    <li><span class="font-weight-700">Affordable to purchase and maintain</span>, especially for students, office commuters, and middle-class families.</li>
+                    <li><span class="font-weight-700">Reliable and durable</span>, making them perfect for Indian roads and long-term usage.</li>
+                </ul>
+                <p>These bikes aren't just cost-effective—they're dependable companions for everyday life.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Key Factors to Consider Before Buying a Budget Bike</h2>
+                <p>Before diving into the list, <span class="font-weight-700">BikeCarHub</span> recommends considering these key factors:</p>
+                <ul>
+                    <li><span class="font-weight-700">Mileage:</span> High fuel efficiency is a top priority.</li>
+                    <li><span class="font-weight-700">Comfort:</span> For daily commuting, the seat and suspension must offer a smooth ride.</li>
+                    <li><span class="font-weight-700">Reliability:</span> A proven engine with low maintenance costs is crucial.</li>
+                    <li><span class="font-weight-700">Performance:</span> Even a budget bike should offer smooth, adequate power for city rides.</li>
+                    <li><span class="font-weight-700">Resale Value:</span> Some bikes hold their value better over time.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Top 5 Budget-Friendly Bikes in India Under ₹1 Lakh (2025)</h2>
+                <p>Here's a look at the best options for 2025 that perfectly balance price, mileage, and performance.</p>
+
+
+                <h3 class="subheading"><a class="for-link" asp-controller="Hero" asp-action="HeroSplendorPlusXTEC">1. Hero Splendor Plus XTEC (2025)</a></h3>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 5 budget-friendly bikes/hero splendor plus xtec.webp" alt="Hero Splendor Plus XTEC 2025" title="Hero Splendor Plus XTEC 2025" /></div>
+                </div>
+                <p><span class="font-weight-700">Overview</span></p>
+                <p>The <span class="font-weight-700">Hero Splendor Plus XTEC</span> continues to be India's best-selling commuter bike. Known for its legendary reliability and superb mileage, it remains the top pick for value-conscious riders.</p>
+
+                <p><span class="font-weight-700">Key Features and Specifications</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 97.2cc, Air-cooled engine</li>
+                    <li><span class="font-weight-700">Power:</span> 8.02 PS@8000 rpm</li>
+                    <li><span class="font-weight-700">Fuel Tank:</span> 9.8 L</li>
+                    <li><span class="font-weight-700">Mileage:</span> 70 kmpl</li>
+                    <li><span class="font-weight-700">Features:</span> Bluetooth connectivity, digital speedometer, real-time mileage indicator</li>
+                    <li><span class="font-weight-700">Price Range:</span> ₹81,001-₹86,051(Ex-Showroom, Delhi)</li>
+                </ul>
+
+                <p><span class="font-weight-700">Mileage and Performance</span></p>
+                <p>The Splendor Plus XTEC offers <span class="font-weight-700">one of the highest mileages in its segment</span>, making it a daily commuter's best friend.</p>
+
+                <p><span class="font-weight-700">Pros and Cons</span></p>
+                <p><span class="font-weight-700">Pros:</span></p>
+                <ul>
+                    <li>Outstanding fuel efficiency</li>
+                    <li>Low maintenance</li>
+                    <li>Reliable Hero engine</li>
+                </ul>
+                <p><span class="font-weight-700">Cons:</span></p>
+                <ul>
+                    <li>Basic design</li>
+                    <li>Less exciting performance</li>
+                </ul>
+
+                <p><span class="font-weight-700">Who Should Buy?</span></p>
+                <p>Perfect for office goers, students, and anyone prioritizing low running costs.</p>
+
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Bajaj" asp-action="BajajPlatina110">2. Bajaj Platina 110 (2025)</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 5 budget-friendly bikes/bajaj platina 110.webp" alt="Bajaj Platina 110 2025" title="Bajaj Platina 110 2025" /></div>
+                </div>
+                <p><span class="font-weight-700">Overview</span></p>
+                <p>The <span class="font-weight-700">Bajaj Platina 110</span> is an excellent comfort-focused commuter, well-known for its plush ride quality.</p>
+
+                <p><span class="font-weight-700">Key Features and Specifications</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 115.45cc, 4-stroke, single-cylinder, air-cooled engine</li>
+                    <li><span class="font-weight-700">Max Power:</span> 8.48 bhp of power at 7000 rpm</li>
+                    <li><span class="font-weight-700">Max Torque:</span> 9.81 Nm@5000 rpm</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 90 kmph</li>
+                    <li><span class="font-weight-700">Mileage:</span> 69.5 kmpl</li>
+                    <li><span class="font-weight-700">Price Range:</span> ₹71,558 and ₹74,214 (ex-showroom)</li>
+                    <li><span class="font-weight-700">Features:</span> Anti-skid braking, comfortable seat, hand guards</li>
+                </ul>
+
+                <p><span class="font-weight-700">Mileage and Performance</span></p>
+                <p>Delivers <span class="font-weight-700">best-in-class mileage</span> and excellent ride comfort, especially for long city rides.</p>
+
+                <p><span class="font-weight-700">Pros and Cons</span></p>
+                <p><span class="font-weight-700">Pros:</span></p>
+                <ul>
+                    <li>Exceptional fuel economy</li>
+                    <li>Soft suspension setup</li>
+                    <li>Comfortable seating</li>
+                </ul>
+                <p><span class="font-weight-700">Cons:</span></p>
+                <ul>
+                    <li>Limited features</li>
+                    <li>Slightly underpowered for highways</li>
+                </ul>
+
+                <p><span class="font-weight-700">Who Should Buy?</span></p>
+                <p>Ideal for daily city commuters seeking maximum comfort and fuel savings.</p>
+
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="TVS" asp-action="TVSSport">3. TVS Sport 110 (2025)</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 5 budget-friendly bikes/tvs sport 110.webp" alt="TVS Sport 110 2025" title="TVS Sport 110 2025" /></div>
+                </div>
+                <p><span class="font-weight-700">Overview</span></p>
+                <p>The <span class="font-weight-700">TVS Sport 110</span> is a sporty-looking commuter that delivers excellent mileage at a competitive price.</p>
+
+                <p><span class="font-weight-700">Key Features and Specifications</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 109.7cc, single-cylinder, 4-stroke, fuel-injected, air-cooled spark ignition engine</li>
+                    <li><span class="font-weight-700">Max Power:</span> 8.08 PS</li>
+                    <li><span class="font-weight-700">Max Torque:</span> 8.7 Nm</li>
+                    <li><span class="font-weight-700">Fuel Tank:</span> 10 L</li>
+                    <li><span class="font-weight-700">Mileage:</span> 70 kmpl</li>
+                    <li><span class="font-weight-700">Price Range:</span> ₹59,881-₹71,785</li>
+                    <li><span class="font-weight-700">Features:</span> Kick and electric start, stylish graphics</li>
+                </ul>
+
+                <p><span class="font-weight-700">Mileage and Performance</span></p>
+                <p>The bike offers <span class="font-weight-700">excellent mileage and peppy city performance</span>, making it a solid all-rounder.</p>
+
+                <p><span class="font-weight-700">Pros and Cons</span></p>
+                <p><span class="font-weight-700">Pros:</span></p>
+                <ul>
+                    <li>Affordable price tag</li>
+                    <li>Excellent mileage</li>
+                    <li>Sporty appearance</li>
+                </ul>
+                <p><span class="font-weight-700">Cons:</span></p>
+                <ul>
+                    <li>Limited safety features</li>
+                    <li>Basic console</li>
+                </ul>
+
+                <p><span class="font-weight-700">Who Should Buy?</span></p>
+                <p>Great for college students and first-time buyers looking for style and savings.</p>
+
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Honda" asp-action="HondaCD110Dream">4. Honda CD 110 Dream (2025)</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 5 budget-friendly bikes/honda cd 110 dream.webp" alt="Honda CD 110 Dream 2025" title="Honda CD 110 Dream 2025" /></div>
+                </div>
+                <p><span class="font-weight-700">Overview</span></p>
+                <p>The <span class="font-weight-700">Honda CD 110 Dream</span> is known for its <span class="font-weight-700">smooth and reliable engine performance</span>, backed by Honda's proven quality.</p>
+
+                <p><span class="font-weight-700">Key Features and Specifications</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 109.51cc, 4-stroke, SI (Spark Ignition), BS-VI compliant engine</li>
+                    <li><span class="font-weight-700">Power:</span> 8.79 PS (8.67 bhp) at 7500 rpm</li>
+                    <li><span class="font-weight-700">Torque:</span> 9.30 Nm@5500 rpm</li>
+                    <li><span class="font-weight-700">Mileage:</span> 65 kmpl</li>
+                    <li><span class="font-weight-700">Price:</span> ₹56,804(Starting)</li>
+                    <li><span class="font-weight-700">Features:</span> Silent start, tubeless tyres, CBS (Combined Braking System)</li>
+                </ul>
+
+                <p><span class="font-weight-700">Mileage and Performance</span></p>
+                <p>Offers <span class="font-weight-700">smooth engine refinement and predictable handling</span>, a hallmark of Honda bikes.</p>
+
+                <p><span class="font-weight-700">Pros and Cons</span></p>
+                <p><span class="font-weight-700">Pros:</span></p>
+                <ul>
+                    <li>Reliable engine</li>
+                    <li>Comfortable seating</li>
+                    <li>Silent start system</li>
+                </ul>
+                <p><span class="font-weight-700">Cons:</span></p>
+                <ul>
+                    <li>Slightly lower mileage compared to rivals</li>
+                    <li>Conservative design</li>
+                </ul>
+
+                <p><span class="font-weight-700">Who Should Buy?</span></p>
+                <p>Perfect for riders who want a refined, no-nonsense daily commuter.</p>
+
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Hero" asp-action="HeroHFDeluxe">5. Hero HF Deluxe (2025)</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 5 budget-friendly bikes/hero hf deluxe.webp" alt="Hero HF Deluxe 2025" title="Hero HF Deluxe 2025" /></div>
+                </div>
+                <p><span class="font-weight-700">Overview</span></p>
+                <p>The <span class="font-weight-700">Hero HF Deluxe</span> is another budget king known for its <span class="font-weight-700">low maintenance and high fuel efficiency</span>.</p>
+
+                <p><span class="font-weight-700">Key Features and Specifications</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 97.2cc, air-cooled, 4-stroke, single-cylinder engine</li>
+                    <li><span class="font-weight-700">Power:</span> 8.02 PS 5.9 kW@8000 rpm</li>
+                    <li><span class="font-weight-700">Torque:</span> 8.05 Nm@6000 rpm</li>
+                    <li><span class="font-weight-700">Fuel Tank:</span> 9.6 L</li>
+                    <li><span class="font-weight-700">Mileage:</span> 70 kmpl</li>
+                    <li><span class="font-weight-700">Price Range:</span> ₹59,998-₹70,618</li>
+                    <li><span class="font-weight-700">Features:</span> i3S start-stop system, kick and self-start</li>
+                </ul>
+
+                <p><span class="font-weight-700">Mileage and Performance</span></p>
+                <p>Offers <span class="font-weight-700">very low running costs</span> and good performance for everyday commuting.</p>
+
+                <p><span class="font-weight-700">Pros and Cons</span></p>
+                <p><span class="font-weight-700">Pros:</span></p>
+                <ul>
+                    <li>Excellent mileage</li>
+                    <li>Lightweight and easy to handle</li>
+                    <li>Affordable pricing</li>
+                </ul>
+                <p><span class="font-weight-700">Cons:</span></p>
+                <ul>
+                    <li>Very basic feature set</li>
+                    <li>Outdated instrument cluster</li>
+                </ul>
+
+                <p><span class="font-weight-700">Who Should Buy?</span></p>
+                <p>A solid pick for those looking for ultra-low maintenance and reliability.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Specifications & Features Comparison Table</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Bike Name</th>
+                                <th class="text-center">Engine (cc)</th>
+                                <th class="text-center">Power (PS)</th>
+                                <th class="text-center">Mileage (kmpl)</th>
+                                <th class="text-center">Key Features</th>
+                                <th class="text-center">Price Range</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Hero Splendor Plus XTEC</td>
+                                <td>97.2</td>
+                                <td>8.02</td>
+                                <td>70</td>
+                                <td>Bluetooth, digital speedometer</td>
+                                <td>₹81,001-₹86,051</td>
+                            </tr>
+                            <tr>
+                                <td>Bajaj Platina 110</td>
+                                <td>115.45</td>
+                                <td>8.6</td>
+                                <td>69.5</td>
+                                <td>Anti-skid brakes, comfort seat</td>
+                                <td>₹71,558-₹74,214</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>TVS Sport 110</td>
+                                <td>109.7</td>
+                                <td>8.08</td>
+                                <td>70</td>
+                                <td>Sporty graphics, electric start</td>
+                                <td>₹59,881-₹71,785</td>
+                            </tr>
+                            <tr>
+                                <td>Honda CD 110 Dream</td>
+                                <td>109.51</td>
+                                <td>8.79</td>
+                                <td>65</td>
+                                <td>Silent start, CBS braking</td>
+                                <td>₹56,804(Starting)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Hero HF Deluxe</td>
+                                <td>97.2</td>
+                                <td>8.02</td>
+                                <td>70</td>
+                                <td>i3S technology, lightweight design</td>
+                                <td>₹59,998-₹70,618</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">BikeCarHub's Recommendation: Which Bike Should You Choose?</h2>
+                <p>Choosing the right bike depends on your needs:</p>
+                <ul>
+                    <li><span class="font-weight-700">For Best Mileage:</span> Hero Splendor Plus XTEC or TVS Sport</li>
+                    <li><span class="font-weight-700">For Feature-Rich Commuting:</span> Hero Splendor Plus XTEC</li>
+                    <li><span class="font-weight-700">For Smooth Engine Performance:</span> Honda CD 110 Dream</li>
+                    <li><span class="font-weight-700">For Lowest Maintenance:</span> Hero HF Deluxe</li>
+                </ul>
+                <p><span class="font-weight-700">BikeCarHub</span> suggests the Hero Splendor Plus XTEC if you want a perfect mix of reliability, modern features, and fuel efficiency.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Conclusion</h2>
+                <p>Budget bikes under ₹1 lakh in India continue to dominate the market in 2025, offering unbeatable value for money. Each of these bikes excels in fuel efficiency, affordability, and reliability, making them perfect for Indian commuters.</p>
+                <p>Always consider your specific needs—whether it's mileage, comfort, or features—before making a purchase.</p>
+                <p>For more two-wheeler comparisons and buying guides, visit <span class="font-weight-700">BikeCarHub</span> regularly to stay updated.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs</h2>
+
+                <div class="accordion" id="faqBudgetBikes">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which bike under ₹1 lakh offers the best mileage in 2025?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqBudgetBikes">
+                            <div class="accordion-body">
+                                Hero Splendor Plus XTEC and TVS Sport are leading mileage champions, offering 70 kmpl.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Which is the most feature-rich budget bike?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqBudgetBikes">
+                            <div class="accordion-body">
+                                The Hero Splendor Plus XTEC with Bluetooth connectivity and digital speedometer offers the best features.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Are these bikes suitable for long-distance rides?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqBudgetBikes">
+                            <div class="accordion-body">
+                                These bikes are primarily designed for city commuting but can handle occasional short highway trips.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Which bike is the most comfortable for daily use?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqBudgetBikes">
+                            <div class="accordion-body">
+                                The Bajaj Platina 110 is known for its soft suspension and comfortable seating.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which bike is cheapest to maintain?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqBudgetBikes">
+                            <div class="accordion-body">
+                                Hero HF Deluxe is one of the most affordable bikes to maintain.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Which bike offers the best resale value?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqBudgetBikes">
+                            <div class="accordion-body">
+                                The Hero Splendor Plus XTEC generally holds strong resale value.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Are these bikes good for college students?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqBudgetBikes">
+                            <div class="accordion-body">
+                                Yes, all these bikes are lightweight, easy to handle, and pocket-friendly.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Do these bikes come with tubeless tyres?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqBudgetBikes">
+                            <div class="accordion-body">
+                                Most of these bikes now offer tubeless tyres as standard or optional.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Which bike is best for rural roads?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqBudgetBikes">
+                            <div class="accordion-body">
+                                The Hero HF Deluxe and Bajaj Platina 110 are excellent choices for village or rough road conditions.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Do these bikes have self-start options?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqBudgetBikes">
+                            <div class="accordion-body">
+                                Yes, all five bikes offer electric start in their latest 2025 variants.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+        <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+
+    </div>
+    </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

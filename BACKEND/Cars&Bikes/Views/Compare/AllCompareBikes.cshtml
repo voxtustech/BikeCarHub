@@ -1,0 +1,550 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "All Compare Bikes";
+}
+
+
+@* <div class="container  "> *@
+    
+
+@*     <div class="row"> *@
+@*         @await Html.PartialAsync("_CompareBikes", true) *@
+        
+@*     </div> *@
+@* </div> *@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Horizontal Scroll Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        .compare-scroll-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .compare-scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            pointer-events: all;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+
+        .compare-scroll-left {
+            left: 10px;
+        }
+
+        .compare-scroll-right {
+            right: 10px;
+        }
+
+        .card-wrapper {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 1rem;
+            /* padding: 1rem 0;  */
+            margin: 0;
+        }
+
+            .card-wrapper::-webkit-scrollbar {
+                display: none;
+            }
+
+        .card {
+            flex: 0 0 auto;
+            width: 33.33%;
+            min-width: 300px;
+            height: 250px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .compare-card {
+            height: 150px;
+            cursor: pointer;
+        }
+
+        .compare-scroll-btn,
+        .compare-scroll-btn:focus,
+        .compare-scroll-btn:active,
+        .compare-scroll-btn:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            outline: none;
+            box-shadow: none;
+        }
+
+            .compare-scroll-btn:focus {
+                outline: 2px solid #555;
+            }
+
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: #fff;
+            padding: 5px;
+        }
+
+        .card-body {
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        .card-wrapper .card:first-child {
+            margin-left: 0.5rem;
+        }
+
+        .card-wrapper .card:last-child {
+            margin-right: 1rem;
+        }
+
+        .card-body {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .compare-section {
+            padding: 40px 20px; 
+        }
+
+
+        /**/
+
+        /* .compare-card .card-body { */
+        /*     padding: 10px; */
+        /* } */
+
+        /* .compare-card .btn { */
+        /*     background-color: white; */
+        /*     color: #000; */
+        /*     border: 1px solid #ccc; */
+        /*     width: 100%; */
+        /* } */
+
+    </style>
+</head>
+<body>
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    @* <div class="container py-4"> *@
+    <h2 class="for-h1" style="cursor:pointer;" onclick="location.href='/Compare/AllCompareBikes'">Compare Bikes </h2>
+
+    <div class="container compare-section compare-scroll-container">
+        <h2 class="text-center mb-4">Compare Bikes</h2>
+        <div class="card-wrapper" id="cardContainer">
+          <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                            <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Honda Activa 125', 'TVS Jupiter')">
+                                <img src="/images/CompareBikes/activavsjupiter125.webp" class="card-img-top" alt="Honda Activa 125 vs TVS Jupiter">
+                                <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Honda Activa 125 vs TVS Jupiter</span> </p>
+                   
+                                </div>
+                            </div>
+                 </div>
+                <div class="col-md-4 col-sm-6">
+                        <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Apache RR 310', 'Royal Enfield Bullet 350')">
+                            <img src="~/images/CompareBikes/royalvsapache.webp" class="card-img-top" alt="TVS Apache RR 310 vs Royal Enfield Bullet 350">
+                            <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Royal Enfield Bullet350 vs TVS Apache RR310</span></p>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                        <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Bajaj Pulsar 125', 'Bajaj Pulsar 150')">
+                            <img src="~/images/CompareBikes/pulsarvspulsar.webp" class="card-img-top" alt="Bajaj Pulsar 125 vs Bajaj Pulsar 150">
+                            <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Bajaj Pulsar 150 vs Bajaj Pulsar 125</span></p>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                        <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Yamaha R3', 'Bajaj Pulsar NS200')">
+                            <img src="~/images/CompareBikes/yamahavspulsar.webp" class="card-img-top" alt="Yamaha MT-15 V2.0 vs Bajaj Pulsar 200 NS">
+                            <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Yamaha R3 vs Bajaj Pulsar NS200</span></p>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Bajaj Pulsar RS200', 'Bajaj Pulsar NS200')">
+                        <img src="~/images/CompareBikes/bajajvsbajaj.webp" class="card-img-top" alt="Bajaj Pulsar RS 200 vs Bajaj Pulsar 200 NS">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Bajaj Pulsar RS200 vs Bajaj Pulsar  NS200</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Apache RTR 160 4V', 'Bajaj Dominar 250')">
+                        <img src="~/images/CompareBikes/apachevsdominar.webp" class="card-img-top" alt="TVS Apache RTR 160 4V vs Bajaj Discover 125">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">TVS Apache RTR 160 4V vs Bajaj Dominar 250</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Ronin', 'Royal Enfield Hunter 350')">
+                        <img src="~/images/comparebikes/royal enfield hunter 350 vs tvs ronin.webp" class="card-img-top" alt="Royal Enfield Hunter 350 vs TVS Ronin">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">TVS Ronin vs Royal Enfield Hunter 350 </span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Honda Activa 125 ', 'Suzuki Access 125')">
+                        <img src="~/images/comparebikes/honda activa 125 vs suzuki access 125.webp" class="card-img-top" alt="Honda Activa 125 FI vs Suzuki New Access 125">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700"> Suzuki Access 125 vs Honda Activa 125</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Suzuki Gixxer', 'TVS Apache RTR 160')">
+                        <img src="~/images/comparebikes/suzuki gixxer vs tvs apache rtr 160.webp" class="card-img-top" alt="Suzuki Intruder vs TVS Apache RTR 160">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Suzuki Gixxer vs TVS Apache RTR 160</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Radeon', 'Hero Splendor Plus')">
+                        <img src="~/images/comparebikes/tvs radeon vs hero splendor plus.webp" class="card-img-top" alt="TVS Radeon vs Hero Splendor Plus">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">TVS Radeon vs Hero Splendor Plus</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Bajaj Pulsar 150', 'TVS Apache RTR 160')">
+                        <img src="~/images/comparebikes/bajaj pulsar 150 vs tvs apache rtr 160.webp" class="card-img-top" alt="Bajaj Pulsar 150 vs TVS Apache RTR 160">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Bajaj Pulsar 150 vs TVS Apache RTR 160</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Bajaj Platina 110', 'TVS Sport')">
+                        <img src="~/images/comparebikes/bajaj platina 110 vs tvs sport.webp" class="card-img-top" alt="Bajaj Platina 110 vs TVS Sport">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Bajaj Platina 110 vs TVS Sport</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+
+
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Suzuki Access 125', 'TVS Jupiter')">
+                        <img src="~/images/comparebikes/suzuki access 125 vs tvs jupiter 125.webp" class="card-img-top" alt="Suzuki Access 125 vs TVS Jupiter">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Suzuki Access 125 vs TVS Jupiter</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Honda Activa 125', 'TVS Jupiter')">
+                        <img src="~/images/comparebikes/honda activa 125 vs tvs jupiter.webp" class="card-img-top" alt="Honda Activa 125 vs TVS Jupiter">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Honda Activa 125 vs TVS Jupiter</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Honda Unicorn', 'Suzuki Gixxer')">
+                        <img src="~/images/comparebikes/honda unicorn vs suzuki gixxer.webp" class="card-img-top" alt="Honda X-Blade vs Suzuki Intruder">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Honda Unicorn vs Suzuki Gixxer</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Honda Activa 6G', 'TVS Jupiter')">
+                        <img src="~/images/comparebikes/honda activa 6g vs tvs jupiter.webp" class="card-img-top" alt="Honda Activa 6G vs TVS Jupiter">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">TVS Jupiter vs Honda Activa 6G</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Kawasaki Ninja', 'BMW S 1000 RR')">
+                        <img src="~/images/comparebikes/kawasaki ninja vs bmw s 1000 rr.webp" class="card-img-top" alt="Kawasaki Ninja ZX-10RR vs BMW S 1000 RR">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Kawasaki Ninja vs BMW S 1000 RR</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Bajaj Pulsar RS200', 'Hero Karizma XMR')">
+                        <img src="~/images/comparebikes/bajaj pulsar rs200 vs hero karizma xmr.webp" class="card-img-top" alt="Bajaj Pulsar RS 200 vs Hero Karizma ZMR">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text"><span class="font-weight-700">Bajaj Pulsar RS200 vs Hero Karizma XMR</span></p>
+                        </div>
+                    </div>
+                </div>
+               
+
+
+            </div> @*div for row*@
+
+            @*
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Honda Activa 6G', 'Honda Activa 125')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Honda Activa 6G vs Honda Activa 125">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Honda Activa 6G vs Honda Activa 125 </p>
+                    </div>
+                </div>
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('KTM RC 200', 'KTM 200 Duke')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="KTM RC 200 vs KTM 200 Duke">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">KTM RC 200 vs KTM 200 Duke</p>
+                    </div>
+                </div>
+
+
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Kawasaki Ninja H2R', 'Kawasaki Ninja H2')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Kawasaki Ninja H2R vs Kawasaki Ninja H2">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Kawasaki Ninja H2R vs Kawasaki Ninja H2</p>
+                    </div>
+                </div>
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Suzuki Hayabusa', 'Kawasaki Ninja')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Suzuki Hayabusa vs Kawasaki Ninja ZX-10R">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Suzuki Hayabusa vs Kawasaki Ninja</p>
+                    </div>
+                </div>
+                *@
+            @*  //not in db
+                <div class="card" role="button" tabindex="0" onclick="compareByNames('Suzuki Hayabusa', 'Kawasaki Ninja ZX-14R')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Suzuki Hayabusa vs Kawasaki Ninja ZX-14R">
+                    <div class="card-body">
+                        <p class="card-text">Suzuki Hayabusa vs Kawasaki Ninja ZX-14R</p>
+                    </div>
+                </div>
+
+                <div class="card" role="button" tabindex="0" onclick="compareByNames('Suzuki Hayabusa', 'Kawasaki Ninja H2')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Suzuki Hayabusa vs Kawasaki Ninja H2">
+                    <div class="card-body">
+                        <p class="card-text">Suzuki Hayabusa vs Kawasaki Ninja H2</p>
+                    </div>
+                </div>
+
+                <div class="card" role="button" tabindex="0" onclick="compareByNames('Yamaha YZF R15 V4.0', 'Yamaha R15 V3.0')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Yamaha YZF R15 V4.0 vs Yamaha R15 V3.0">
+                    <div class="card-body">
+                        <p class="card-text">Yamaha YZF R15 V4.0 vs Yamaha R15 V3.0</p>
+                    </div>
+                </div>
+                *@
+            @*
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Yamaha MT-15 Ver2.0', 'KTM 200 Duke')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Yamaha MT-15 vs KTM 200 Duke">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Yamaha MT-15 Ver2.0 vs KTM 200 Duke</p>
+                    </div>
+                </div>
+
+
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Yamaha MT-15', 'Yamaha R15 V3.0')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Yamaha MT-15 vs Yamaha R15 V3.0">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Yamaha MT-15 vs Yamaha R15 V3.0</p>
+                    </div>
+                </div>
+
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Yamaha R15 V4', 'KTM RC 200')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Yamaha R15 V3.0 vs KTM RC 200 ">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Yamaha R15 V4 vs KTM RC 200 </p>
+                    </div>
+                </div>
+                *@
+
+            @*
+                    <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Yamaha YZF R15', 'KTM 390')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Yamaha YZF R15 V4.0 vs KTM RC 390">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Yamaha YZF R15 V4 vs KTM 390</p>
+                    </div>
+                </div>
+                <div class="card" role="button" tabindex="0" onclick="compareByNames('KTM RC 390', 'KTM 390 Duke')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="KTM RC 390 vs KTM 390 Duke">
+                    <div class="card-body">
+                        <p class="card-text">KTM RC 390 vs KTM 390 Duke</p>
+                    </div>
+                </div>
+                *@
+
+            @*
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Kawasaki Ninja H2R', 'Suzuki Hayabusa')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Kawasaki Ninja H2R vs Suzuki Hayabusa">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Kawasaki Ninja H2R vs Suzuki Hayabusa</p>
+                    </div>
+                </div>
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Honda Activa 125 FI', 'TVS Ntorq 125')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Honda Activa 125 FI vs TVS Ntorq 125">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Honda Activa 125 FI vs TVS Ntorq 125</p>
+                    </div>
+                </div>
+
+
+
+
+                *@
+            @*// not in db
+                <div class="card" role="button" tabindex="0" onclick="compareByNames('Honda Activa 125 FI', 'Suzuki New Access 125')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Honda Activa 125 FI vs Suzuki New Access 125">
+                    <div class="card-body">
+                        <p class="card-text">Honda Activa 125 FI vs Suzuki New Access 125</p>
+                    </div>
+                </div>
+
+                <div class="card" role="button" tabindex="0" onclick="compareByNames('Honda Activa 6G', 'Honda Activa 125')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Honda Activa 6G vs Honda Activa 125">
+                    <div class="card-body">
+                        <p class="card-text">Honda Activa 6G vs Honda Activa 125</p>
+                    </div>
+                </div>
+
+                <div class="card" role="button" tabindex="0" onclick="compareByNames('Honda Activa 6G', 'Honda Activa 125 FI')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Honda Activa 6G vs Honda Activa 125 FI">
+                    <div class="card-body">
+                        <p class="card-text">Honda Activa 6G vs Honda Activa 125 FI</p>
+                    </div>
+                </div>
+
+                <div class="card" role="button" tabindex="0" onclick="compareByNames('Honda Activa 125', 'Suzuki Access 125')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Honda Activa 125 vs Suzuki Access 125">
+                    <div class="card-body">
+                        <p class="card-text">Honda Activa 125 vs Suzuki Access 125</p>
+                    </div>
+                </div>
+                *@
+            @*
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Ola Electric S1 X', 'Ather 450X')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Ola Electric S1 X vs Ather 450X">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Ola Electric S1 X vs Ather 450X</p>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Jupiter 125', 'Honda Activa 6G')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="TVS Jupiter 125 vs Honda Activa 6G">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">TVS Jupiter 125 vs Honda Activa 6G</p>
+                    </div>
+                </div>
+                *@
+
+            @*
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS iQube', 'Bajaj Chetak')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="TVS iQube vs Bajaj Chetak">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">TVS iQube vs Bajaj Chetak</p>
+                    </div>
+                </div>
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Ntorq 125', 'Suzuki Burgman')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="TVS Ntorq 125 vs Suzuki Burgman">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">TVS Ntorq 125 vs Suzuki Burgman</p>
+                    </div>
+                </div>
+
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Hero Honda Splendor Plus', 'Hero HF Deluxe')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Hero Honda Splendor Plus vs Hero HF Deluxe">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Hero Honda Splendor Plus vs Hero HF Deluxe</p>
+                    </div>
+                </div>
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Sport', 'Bajaj CT 100')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="TVS Sport vs Bajaj CT 100">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">TVS Sport vs Bajaj CT 100</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Radeon', 'Hero Honda Splendor Super')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="TVS Radeon vs Hero Honda Splendor Super">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">TVS Radeon vs Hero Honda Splendor Super</p>
+                    </div>
+                </div>
+
+                <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Yamaha MT-15 Ver 2.0', 'KTM 125 Duke')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="Yamaha MT-15 vs KTM 125 Duke">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text">Yamaha MT-15 Ver 2.0 vs KTM 125 Duke</p>
+                    </div>
+                </div>
+                *@
+
+            @*//not in db
+                <div class="card" role="button" tabindex="0" onclick="compareByNames('TVS Apache RTR 160', 'Bajaj Pulsar AS 150')">
+                    <img src="/images/blogs/2025/may/top5royalenfieldbikesinindia/reclassic350.webp" class="card-img-top" alt="TVS Apache RTR 160 vs Bajaj Pulsar AS 150">
+                    <div class="card-body">
+                        <p class="card-text">TVS Apache RTR 160 vs Bajaj Pulsar AS 150</p>
+                    </div>
+                </div>
+                *@
+        </div>
+
+        @* <button class="compare-scroll-btn compare-scroll-right" onclick="scrollCompareRight()">&#128898;</button> *@
+    </div>
+    @* </div> *@
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    
+    <script>
+      
+
+         function navigateToComparePage(bike1, bike2) {
+             const urlBike1 = encodeURIComponent(bike1.replace(/\s+/g, '-'));
+             const urlBike2 = encodeURIComponent(bike2.replace(/\s+/g, '-'));
+             const url = `/Compare/${urlBike1}-vs-${urlBike2}`;
+             window.location.href = url;
+         }
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>

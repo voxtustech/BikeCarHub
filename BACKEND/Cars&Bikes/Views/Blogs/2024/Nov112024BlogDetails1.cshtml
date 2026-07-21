@@ -1,0 +1,180 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Best-Selling Bikes in India - November 2024";
+}
+@section MetaTags{
+    <meta name="keywords" content="Top-selling bikes India 2024, best motorcycles November 2024, Hero Splendor Plus, Honda Shine, Bajaj Pulsar 125, TVS Raider 125, Royal Enfield Classic 350" />
+    <meta name="description" content="Discover the top 5 best-selling bikes in India as of November 2024, including specifications, features, and pricing details." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h1 class="heading">Detailed Analysis of India's Top-Selling Motorcycles in November 2024</h1>
+                <p>The Indian two-wheeler market has witnessed significant growth, with several models standing out in terms of sales and popularity. As of November 2024, the top five best-selling motorcycles are:</p>
+                <p><span class="font-weight-700">1. Hero Splendor Plus:</span> Renowned for its reliability and fuel efficiency, the <a class="for-link" asp-controller="Hero" asp-action="HeroSplendorPlus">Hero Splendor Plus</a> remains a favorite among commuters. Its 97.2 cc engine delivers 8.02 PS of power, ensuring a smooth ride. Priced between ₹75,441 and ₹78,286, it offers excellent value for money.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <p><span class="font-weight-700">Hero Splendor Plus</span></p>
+                        <p>Specifications, Features, and Pricing of Top-Selling Bikes in India</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 97.2 cc, 8.02 PS @@ 8000 rpm power
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Fuel-efficient, reliable commuter bike
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹75,441 - ₹78,286
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topfivesellingbikesinindianovember2024overview/hero splendor plus.webp" alt="Hero Splendor Plus" title="Hero Splendor Plus" /></center></div>
+                </div>
+                <p><span class="font-weight-700">2. Honda Shine:</span> The <a class="for-link" asp-controller="Honda" asp-action="HondaShine100">Honda Shine</a> has gained popularity due to its refined performance and stylish design. Equipped with a 123.94 cc engine producing 10.74 PS, it caters to a broad range of riders. The price ranges from ₹80,250 to ₹84,2507. </p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <p><span class="font-weight-700">Honda Shine</span></p>
+                        <p>Specifications, Features, and Pricing of Top-Selling Bikes in India</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 123.94 cc, 10.74 PS @@ 7500 rpm power
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Refined performance, stylish design
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹80,250 - ₹84,2507
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topfivesellingbikesinindianovember2024overview/honda shine.webp" alt="Honda Shine" title="Honda Shine" /></center></div>
+                </div>
+                <p><span class="font-weight-700">3. Bajaj Pulsar 125:</span> With its sporty design and performance, the <a class="for-link" asp-controller="Bajaj" asp-action="BajajPulsar125">Bajaj Pulsar 125</a> appeals to younger riders and performance enthusiasts. Its 124.4 cc engine generates 11.8 PS of power. The price ranges from ₹92,883.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <p><span class="font-weight-700">Bajaj Pulsar 125</span></p>
+                        <p>Specifications, Features, and Pricing of Top-Selling Bikes in India</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 124.4 cc, 11.8 PS power
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Sporty design, performance-oriented
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹92,883
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topfivesellingbikesinindianovember2024overview/bajaj pulsar 125.webp" alt="Bajaj Pulsar 125" title="Bajaj Pulsar 125" /></center></div>
+                </div>
+                <p><span class="font-weight-700">4. TVS Raider 125:</span> Noted for its stylish design and advanced features, the <a class="for-link" asp-controller="TVS" asp-action="TVSRaider125">TVS Raider 125</a> caters to riders seeking a modern and feature-rich motorcycle. It is powered by a 124.8 cc engine delivering 11.38 PS. The price ranges from ₹84,869 to ₹1,04,334 lakh.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <p><span class="font-weight-700">TVS Raider 125</span></p>
+                        <p>Specifications, Features, and Pricing of Top-Selling Bikes in India</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 124.8 cc, 8.37kW @@ 7500 rpm power
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Modern features, stylish design
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹84,869 - ₹1,04,334 lakh
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topfivesellingbikesinindianovember2024overview/tvs raider 125.webp" alt="TVS Raider 125" title="TVS Raider 125" /></center></div>
+                </div>
+                <p><span class="font-weight-700">5. Royal Enfield Classic 350:</span> Combining classic design with modern engineering, the <a class="for-link" asp-controller="RoyalEnfield" asp-action="REClassic350">Royal Enfield Classic 350</a> continues to attract enthusiasts. Its 349 cc engine produces 20.2 BHP of power. The price ranges from ₹1,95,919 lakh to ₹ 2,30,000 lakh. </p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <p><span class="font-weight-700">Royal Enfield Classic 350</span></p>
+                        <p>Specifications, Features, and Pricing of Top-Selling Bikes in India</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 349 cc, 20.2 BHP power
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Features:</span> Classic design, robust performance
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹1,95,919 lakh - ₹2,30,000 lakh
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topfivesellingbikesinindianovember2024overview/royal enfield classic 350.webp" alt="Royal Enfield Classic 350" title="Royal Enfield Classic 350" /></center></div>
+                </div>
+                <p>These motorcycles have consistently met the diverse needs of Indian riders, from daily commuting to leisure riding. Their popularity is a testament to their quality, performance, and the trust they have built among consumers.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

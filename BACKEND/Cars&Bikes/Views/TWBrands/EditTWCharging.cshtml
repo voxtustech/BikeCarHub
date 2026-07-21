@@ -1,0 +1,46 @@
+﻿@model Cars_Bikes.Models.TWCharging
+@{
+    ViewData["Title"] = "Edit TW Charging";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+<h2 class="text-center mb-4">Edit TW Charging</h2>
+
+<form asp-action="EditTWCharging" method="post" class="mx-auto" style="width: 60%;">
+    <input type="hidden" asp-for="TWChargingId" />
+
+    <div class="mb-3">
+        <label asp-for="TwoWheelerId" class="form-label">Two Wheeler</label>
+        <select asp-for="TwoWheelerId" class="form-select" asp-items="ViewBag.TwoWheelers"></select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="TWVarientId" class="form-label">Varient</label>
+        <select asp-for="TWVarientId" class="form-select" asp-items="ViewBag.TWVarients"></select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ChargingAtHome" class="form-label"></label>
+        <input asp-for="ChargingAtHome" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="ChargingAtChargingStation" class="form-label"></label>
+        <input asp-for="ChargingAtChargingStation" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

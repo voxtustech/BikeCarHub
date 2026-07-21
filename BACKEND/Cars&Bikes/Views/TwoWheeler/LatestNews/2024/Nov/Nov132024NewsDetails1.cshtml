@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Honda Gold Wing Recall in India: Engine Stalling Issue";
+}
+@section MetaTags{
+    <meta name="keywords" content="Honda Gold Wing recall, Honda Gold Wing GL1800 issue, India Gold Wing recall, Honda engine stalling recall, Gold Wing safety recall" />
+    <meta name="description" content="Honda recalls GL1800 Gold Wing bikes in India for engine bolt issue. Free replacements at Honda dealerships from December 2024." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">Detailed News on Honda Gold Wing Recall</h3>
+                <p>Honda Motorcycle and Scooter India (HMSI) has announced a recall of its premium touring bike, the GL1800 Gold Wing, produced between March 2018 and May 2021. This recall addresses a critical issue with the primary drive gear fastening bolt, which could potentially break and lead to unexpected engine stoppage. The recall reflects Honda's commitment to safety, as a broken bolt may interrupt power transmission, posing a risk to riders.</p>
+                <p>Replacement parts for the affected Gold Wing models will be available at Honda BigWing dealerships across India from mid-December 2024. Honda has stated that these replacements will be performed free of charge, regardless of the bike's warranty status. Affected owners will be contacted by Honda, and they can also verify recall eligibility by entering their VIN on the official Honda BigWing website.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <img src="~/images/latestnews/2024/nov/hondagoldwingrecallinindia/2.webp" alt="Honda Gold Wing Recall in India" />
+                    </div>
+                </div>
+                <h3 class="subheading">Specifications and Features of Honda Gold Wing</h3>
+                <p class="font-weight-700">Price in India: ₹39.8 lakh to ₹44.5 lakh (ex-showroom, Delhi)</p>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Engine:</span> 1,833cc, six-cylinder, liquid-cooled engine
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Power:</span> Approximately 125 hp
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Torque:</span> 170 Nm
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Transmission:</span> 7-speed dual-clutch automatic (DCT) or 6-speed manual
+                    </li>
+                </ol>
+                <p>The Honda Gold Wing, known for its advanced touring capabilities, features a luxurious design with ample storage, a full-LED lighting system, Apple CarPlay/Android Auto integration, and an electronically adjustable windshield.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

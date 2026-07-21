@@ -1,0 +1,165 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Maruti’s 1.0L Boosterjet Engine – Performance Packed in a Small Turbo";
+}
+@section MetaTags {
+    <meta name="keywords" content="Boosterjet engine, Maruti 1.0L Turbo, Fronx Turbo, Baleno RS engine, Maruti performance cars, turbocharged petrol engine, Boosterjet review, Maruti Suzuki engines" />
+    <meta name="description" content="Explore the 1.0L Boosterjet turbocharged petrol engine used in the Maruti Fronx and Baleno RS. Learn about its specs, performance, and why it's a gem for driving enthusiasts." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <div class="row m-b20">
+
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/april/1lturbojetengine/engine.webp" alt="engine" title="engine" /></div>
+                </div>
+                <p>In this post, we’ll take a deep dive into this little beast of an engine and the cars it has powered.</p>
+                <h3 class="subheading">Engine Overview: What is the Boosterjet?</h3>
+                <p>The <span class="font-weight-700">1.0-liter Boosterjet</span> is a <span class="font-weight-700">three-cylinder, turbocharged petrol engine</span> developed by Suzuki. It’s designed to offer a balance of <span class="font-weight-700">performance and efficiency,</span> especially for enthusiasts who crave a peppy drive without compromising on mileage.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/april/1lturbojetengine/boosterjetengine.webp" alt="boosterjetengine" title="boosterjetengine" /></div>
+                </div>
+                <h3 class="subheading">Key Specifications:</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Displacement</td>
+                                <td>998 cc (1.0L)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Engine Type</td>
+                                <td>3-cylinder, Turbocharged Petrol</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Power Output</td>
+                                <td>100 PS@5500 rpm</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Torque</td>
+                                <td>147 Nm@2000-4500 rpm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Transmission Options</td>
+                                <td>5-speed Manual / 6-speed Automatic</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Fuel Type</td>
+                                <td>Petrol</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">Performance Highlights</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/april/1lturbojetengine/3dengine.webp" alt="3dengine" title="3dengine" /></div>
+                </div>
+                <p>The Boosterjet’s compact design and turbocharging make it a torque-rich engine that feels punchy even at low RPMs. Unlike naturally aspirated engines that require high revving, the Boosterjet delivers its peak torque early, giving the driver a strong mid-range push—perfect for overtakes and highway sprints.</p>
+                <ul>
+                    <li><span class="font-weight-700">Turbo Lag? </span>Minimal, thanks to a well-tuned low-inertia turbo.</li>
+                    <li><span class="font-weight-700">Driving Feel:</span> Smooth, peppy, and refined, with that nice turbo whistle under hard acceleration.</li>
+                    <li><span class="font-weight-700">Fuel Efficiency: </span>Around 18–20 km/l under mixed driving conditions, depending on transmission and driving style.</li>
+                </ul>
+                <h3 class="subheading">Cars That Have Used the 1.0L Boosterjet Engine</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/april/1lturbojetengine/frontengine.webp" alt="frontengine" title="frontengine" /></div>
+                </div>
+                <h3 class="subheading">1. Maruti Suzuki Baleno RS (Discontinued)</h3>>
+                <p>Launched in 2017, the <span class="font-weight-700">Baleno RS </span>was Maruti’s first proper hot hatch offering. It looked nearly identical to the regular Baleno, but under the hood, it packed the Boosterjet.</p>
+                <ul>
+                    <li>
+                        <span class="font-weight-700">
+                            Why it stood out:
+                        </span>
+                        <ul>
+                            <li>Sportier suspension tuning.</li>
+                            <li>Disc brakes on all four wheels.</li>
+                            <li>Performance-oriented appeal.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Despite a small but loyal fan base, the Baleno RS was discontinued due to low sales and BS6 emission norms.</p>
+                <h3 class="subheading">2. Maruti Suzuki Fronx (Ongoing)</h3>
+                <p>In 2023, the Boosterjet made a comeback with the <span class="font-weight-700">Maruti Suzuki Fronx</span>—a compact crossover based on the Baleno’s platform, sold through Nexa.</p>
+                <ul>
+                    <li>
+                        <span class="font-weight-700">
+                            Variants using Boosterjet:
+                        </span>
+                        <ul>
+                            <li><span class="font-weight-700">Fronx Turbo (1.0L Boosterjet) </span>available in <span class="font-weight-700">Delta+, Zeta, and Alpha</span> trims.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">
+                            Transmission options:
+                        </span>
+                        <ul>
+                            <li>5-speed Manual</li>
+                            <li>6-speed Torque Converter Automatic (with paddle shifters)</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-weight-700">USP: </span>A sporty alternative to the 1.2L NA engine Fronx, targeting urban drivers and enthusiasts looking for more zip in a compact SUV format.</li>
+                </ul>
+                <h3 class="subheading">Why This Engine Matters</h3>
+                <p>In an era where most carmakers are downsizing engines or switching to hybrids, the Boosterjet represents <span class="font-weight-700">a modern turbocharged petrol solution </span>for performance-focused compact cars. It proves that small engines, when engineered well, can offer both power and practicality.</p>
+                <ul>
+                    <li><span class="font-weight-700">Compact but Powerful:</span> Matches the output of some 1.5L naturally aspirated engines.</li>
+                    <li><span class="font-weight-700">Efficient: </span>Turbocharging ensures fuel is used optimally.</li>
+                    <li><span class="font-weight-700">Fun to Drive:</span>Responsive and engaging, especially with the manual gearbox.</li>
+                </ul>
+                <h3 class="subheading">Should You Consider a Car with the Boosterjet?</h3>
+                <p><span class="font-weight-700">Yes, if you:</span></p>
+                <ul>
+                    <li>Want a fun-to-drive Maruti without sacrificing practicality.</li>
+                    <li>Are looking for something punchier than the typical 1.2L NA engine.</li>
+                    <li>Appreciate modern engine tech in an affordable package.</li>
+                </ul>
+                <p><span class="font-weight-700">Maybe not, if you:</span></p>
+                <ul>
+                    <li>Are focused purely on mileage.</li>
+                    <li>Prefer a more sedate, relaxed driving experience.</li>
+                    <li>Are wary of turbocharged engine maintenance in the long term (although Suzuki has tuned it conservatively for reliability).</li>
+                </ul>
+                <h3 class="subheading">Final Thoughts</h3>
+                <p>The 1.0L Boosterjet engine may not be a fire-breathing monster, but in the Indian mass market, it's a breath of fresh air for those who crave <span class="font-weight-700">performance and fun</span> without spending a fortune. Whether you’re eyeing a used Baleno RS or considering the new Fronx Turbo, this engine is definitely worth a closer look.</p>
+                <p> Would you like me to design a thumbnail or social media caption to go along with this blog?</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

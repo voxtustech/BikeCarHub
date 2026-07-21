@@ -1,0 +1,368 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Trending Electric Scooters in India";
+}
+@section MetaTags {
+    <meta name="keywords" content="electric scooters India 2025, trending EV scooters, best electric scooters, Ola S1 Pro+ Gen 3, Ather 450X, TVS iQube ST, Hero Vida V2 Pro, Bajaj Chetak 3502" />
+    <meta name="description" content="Discover the top 5 trending electric scooters in India (2025). Compare range, battery, price & features to find your perfect EV ride today." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p> *@
+
+
+
+                <p>Written by: BikeCarHub Editorial Team</p>
+                <p>Published on: 12th June 2025</p>
+                <div class="div-line"></div>
+               
+
+                
+                    <p><span class="font-weight-700">The EV Revolution on Two Wheels.</span></p>
+                    <p>India is undergoing a major transformation in mobility, and electric scooters are leading the charge. With fuel prices on the rise, increasing environmental awareness, and tech-savvy riders seeking smarter options, electric scooters have surged ahead as the go-to choice for urban commuting. The days of viewing EVs as impractical or just a trend are long gone. By 2025, electric scooters will not only offer real-world usability but also impressive performance, stylish designs, and cutting-edge technology---making them a favorite among college students, professionals, and even older riders.</p>
+                    <p>Today, <a class="for-link" asp-controller="Home" asp-action="Index"><span class="font-weight-700">BikeCarHub</span></a> is taking a closer look at the top 5 trending electric scooters in India, assessing them based on what truly counts: battery range, performance, features, comfort, and value.</p>
+
+                <div class="div-line"></div>
+     
+                    <h3 class="subheading">1. Ola S1 Pro+ Gen 3</h3>
+                    <p>Among India's most recognized electric vehicles, the <span class="font-weight-700">Ola S1 Pro+ Gen 3</span> continues to rule the streets with its bold design, powerful motor, and futuristic features.</p>
+
+
+                <p class="subheading">Key Specifications:</p>
+                        <ul>
+                            <li><span class="font-weight-700">Battery Capacity:</span> 5.3/4kWh</li>
+                            <li><span class="font-weight-700">Claimed Range:</span> 320 km per charge/242km per charge</li>
+                            <li><span class="font-weight-700">Top Speed:</span> 141 km/h</li>
+                            <li><span class="font-weight-700">Charging Time:</span> Around 7 hours</li>
+                            <li><span class="font-weight-700">Peak Power:</span> 13kW</li>
+                            <li><span class="font-weight-700">Acceleration:</span> 0-40km in 2.1 sec/2.3 sec</li>
+                        </ul>
+
+
+
+                <p class="subheading">Why It's Trending:</p>
+                        <ul>
+                            <li><span class="font-weight-700">Hyper Mode:</span> Gives you instant acceleration with a sporty feel.</li>
+                            <li><span class="font-weight-700">Touchscreen TFT Display:</span> Features Google Maps integration, Bluetooth connectivity, and more.</li>
+                            <li><span class="font-weight-700">Braking:</span> Dual ABS</li>
+                            <li><span class="font-weight-700">Control Features:</span> Multi-mode traction control.</li>
+                            <li><span class="font-weight-700">Colours:</span> Available in Porcelain White, Passion Red, Jet Black, Silver, Stellar Blue, Midnight Blue.</li>
+                        </ul>
+                    
+
+                    <p>The Ola S1 Pro+ Gen 3 is the perfect blend of <span class="font-weight-700">performance and connectivity</span>---ideal for riders who want more than just transportation. It's a statement on wheels.</p>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top 5 trending electric scooters in india/ola s1 pro.webp" alt="bikecarhub Ola s1 pro+" title="bikecarhub Ola s1 pro+" /></div>
+                </div>
+
+                <p>To know more about the other <a class="for-link" asp-controller="OlaElectric" asp-action="OlaS1Pro"><span class="font-weight-700">Ola Electric Scooters click here.</span></a></p>
+                
+
+            <div class="div-line"></div>
+                    <h3 class="scooter-name">2. Ather 450X</h3>
+                    <p>The <span class="font-weight-700">Ather 450X</span> is the mature, tech-friendly scooter that's won hearts in major cities. With years of on-road data and rider feedback, Ather's model offers a refined EV experience without cutting corners.</p>
+
+
+                <p class="subheading">Key Specifications:</p>
+                        <ul>
+                            <li><span class="font-weight-700">Battery Capacity:</span> 3.7 kWh</li>
+                            <li><span class="font-weight-700">IDC Range:</span> 161 km</li>
+                            <li><span class="font-weight-700">Motor:</span> 6kW power, 26 Nm instant torque</li>
+                            <li><span class="font-weight-700">Top Speed:</span> 90 km/h</li>
+                            <li><span class="font-weight-700">Acceleration:</span> 0-40 km/h in 3.3 sec</li>
+                            <li><span class="font-weight-700">Charging Time:</span> fast charging(0-80%) in 3 hours</li>
+                        </ul>
+
+
+
+                <p class="subheading">Why It's Trending:</p>
+                        <ul>
+                            <li><span class="font-weight-700">Warp Mode:</span> An EV with sports bike-like acceleration.</li>
+                            <li><span class="font-weight-700">7" Color Display:</span> Comes with Bluetooth, Google Maps, WhatsApp alerts, and more.</li>
+                            <li><span class="font-weight-700">Reverse Assist:</span> Perfect for tight parking spots.</li>
+                            <li><span class="font-weight-700">Ather Grid:</span> A growing fast-charging network across metro cities.</li>
+                            <li><span class="font-weight-700">Colours:</span> available in two new colours Stealth Blue & Hyper Sand Basic Colours: Hyper Sand, Stealth blue, True red, Lunar grey, Cosmic Black, Space Grey, Still white.</li>
+                        </ul>
+                    
+
+                    <p>The Ather 450X appeals to <span class="font-weight-700">urban riders who value performance, intelligence, and seamless tech integration</span>. It's a premium scooter that acts smarter than most entry-level cars.</p>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top 5 trending electric scooters in india/arther 450x.webp" alt="bikecarhub Arther 450x" title="bikecarhub Arther 450x" /></div>
+                </div>
+
+                <p>To know more about the other <a class="for-link" asp-controller="AtherEnergy" asp-action="Ather450"><span class="font-weight-700">Ather Electric</span> click here.</a></p>
+                
+        <div class="div-line"></div>
+
+            <h3 class="subheading">3. TVS iQube ST</h3>
+                    <p>TVS brings legacy to the EV world with its widely appreciated <span class="font-weight-700">iQube ST</span>. It's not trying to be flashy---it's trying to be your best companion on daily commutes.</p>
+
+             
+                <p class="subheading">Key Specifications:</p>
+                        <ul>
+                            <li><span class="font-weight-700">Battery Capacity:</span> 5.3 kWh</li>
+                            <li><span class="font-weight-700">Claimed Range:</span> 212 km/charge</li>
+                            <li><span class="font-weight-700">Top Speed:</span> 82 km/h</li>
+                            <li><span class="font-weight-700">Charging Time:</span> 0-80% in (4 hr 18m)</li>
+                            <li><span class="font-weight-700">Portable Charger:</span> yes</li>
+                            <li><span class="font-weight-700">Weight:</span> 132 kg</li>
+                            <li><span class="font-weight-700">Acceleration:</span> 0-40 km/h in 4.5 sec</li>
+                        </ul>
+
+
+
+                <p class="subheading">Why It's Trending:</p>
+                        <ul>
+                            <li><span class="font-weight-700">Spacious Under-Seat Storage:</span> Holds up to 32 liters---fits a full-size helmet and more.</li>
+                            <li><span class="font-weight-700">Alexa Voice Support:</span> Controls the scooter via smart devices.</li>
+                            <li><span class="font-weight-700">Side-stand sensor, anti-theft alerts, USB charger, and geo-fencing:</span> Makes it the perfect family scooter.</li>
+                            <li><span class="font-weight-700">Familiar Controls:</span> Easy to user for new and older riders.</li>
+                            <li><span class="font-weight-700">Precision at your fingertips:</span> Touchscreen functionality, Play/Pause music, Incoming call alerts.</li>
+                        </ul>
+                    
+
+                    <p>This scooter is the most <span class="font-weight-700">versatile and comfort-oriented</span> of the bunch. If you're a first-time EV buyer or sharing the ride with family members, the iQube ST is built for you.</p>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top 5 trending electric scooters in india/iqube st.webp" alt="bikecarhub TVS iQube ST" title="bikecarhub TVS iQube ST" /></div>
+                </div>
+
+                <p>To know more about the other <a class="for-link" asp-controller="Brand" asp-action="tvs"><span class="font-weight-700">TVS petrol and electric bikes</span> click here.</a></p>
+                
+        <div class="div-line"></div>
+
+
+                <h3 class="subheading">4. Hero Vida V2 Pro</h3>
+                    <p>Hero MotoCorp made a grand entry into the electric game with the <span class="font-weight-700">Vida V2 Pro</span>, and it brings one feature that's a game-changer: a <span class="font-weight-700">removable battery system</span>.</p>
+
+
+                <p class="subheading">Key Specifications:</p>
+                        <ul>
+                            <li><span class="font-weight-700">Battery Capacity:</span> 3.9 kWh (dual removable batteries)</li>
+                            <li><span class="font-weight-700">IDC Range:</span> 165 km</li>
+                            <li><span class="font-weight-700">Top Speed:</span> 90 km/h</li>
+                            <li><span class="font-weight-700">Acceleration:</span> 0-40km/h in 2.9 sec</li>
+                            <li><span class="font-weight-700">Riding Mode:</span> Eco, Ride, Sport, Custom</li>
+                            <li><span class="font-weight-700">Charging Time:</span> 5 hours</li>
+                            <li><span class="font-weight-700">Boot Space:</span> 26L</li>
+                            <li><span class="font-weight-700">Colours Available:</span> White, NexusBlue, Orange, Black, Red, Blue</li>
+                        </ul>
+
+
+
+                <p class="subheading">Why It's Trending:</>
+                        <ul>
+                            <li><span class="font-weight-700">Dual Battery Advantage:</span> Remove and charge them anywhere---perfect for apartments or offices.</li>
+                            <li><span class="font-weight-700">Custom Riding Modes:</span> You can create personalized performance profiles.</li>
+                            <li><span class="font-weight-700">Regenerative Braking:</span> Saves power as you brake---good for city traffic.</li>
+                            <li><span class="font-weight-700">Keyless Entry and Smart Dashboard:</span> Keeps up with rivals on tech.</li>
+                            <li><span class="font-weight-700">Digital Display:</span> 7 inch TFT screen with touch functionality</li>
+                        </ul>
+                    
+
+                    <p><span class="font-weight-700">(The Vida V2 Pro is especially helpful in tier-2 cities or places with limited EV infrastructure, where charging stations might not be nearby.)</span></p>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/top 5 trending electric scooters in india/hero vida v2.webp" alt="bikecarhub  Hero Vida V2 Pro" title="bikecarhub  Hero Vida V2 Pro" /></div>
+                </div>
+
+                <p>To know more about the other <a class="for-link" asp-controller="Brand" asp-action="hero"><span class="font-weight-700">Hero Petro & Electric Bikes</span> click here.</a></p>
+                
+        <div class="div-line"></div>
+
+
+                <h3 class="subheading">5. Bajaj Chetak 3502</h3>
+                    <p>For those who love tradition but want modern performance, the <span class="font-weight-700">Bajaj Chetak 3502</span> is a delightful blend of old-school elegance and 21st-century engineering.</p>
+
+
+                <p class="subheading">Key Specifications:</p>
+                        <ul>
+                            <li><span class="font-weight-700">Battery Capacity:</span> 3.5 kWh</li>
+                            <li><span class="font-weight-700">IDC Range:</span> 153 km</li>
+                            <li><span class="font-weight-700">Top Speed:</span> 73 km/h</li>
+                            <li><span class="font-weight-700">Charging Time:</span> 0-80% in (3hr 25m)</li>
+                            <li><span class="font-weight-700">Ride Mode:</span> Eco, Sports</li>
+                            <li><span class="font-weight-700">App Connectivity:</span> Full</li>
+                        </ul>
+
+                <p class="subheading">Why It's Trending:</p>
+                        <ul>
+                            <li><span class="font-weight-700">Metal Body:</span> More durable than most plastic-bodied scooters.</li>
+                            <li><span class="font-weight-700">Elegant Styling:</span> Resembles vintage Chetak design but with a digital soul.</li>
+                            <li><span class="font-weight-700">IP67 Waterproofing:</span> Ready for Indian monsoons.</li>
+                            <li><span class="font-weight-700">Elegant features :</span> Notification Alert, Music Control, Guide me home light, Anti-theft alert and more.</li>
+                        </ul>
+                    
+
+                    <p>While its range may be lower than competitors, the Chetak 3502 <span class="font-weight-700">build quality, smooth ride, and classic looks</span> make it a hit among older riders, urban professionals, and fans of legacy brands.</p>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"> <img src="~/images/blogs/2025/june/top 5 trending electric scooters in india/bajaj chetak3502.webp" alt="bikecarhub Bajaj Chetak 3502" title="bikecarhub Bajaj Chetak 3502" /></div>
+                </div>
+
+                <p>To know more about the other <a class="for-link" asp-controller="Bajaj" asp-action="BajajChetak3502"><span class="font-weight-700">Bajaj Petro & Electric Bikes</span> click here.</a></p>
+                
+        <div class="div-line"></div>
+
+                <h3 class="subheading">Comparison Table -- Quick Look</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                    <thead>
+                            <tr class="compare-head-text">
+                        <th class="text-center">Model</th>
+                        <th class="text-center">Range (km)</th>
+                        <th class="text-center">Battery</th>
+                        <th class="text-center">Top Speed</th>
+                        <th class="text-center">Price (₹)</th>
+                            </tr>
+                    </thead>
+                    <tr>
+                        <td>Ola S1 Pro+ Gen 3</td>
+                        <td>320</td>
+                        <td>5.3 kWh</td>
+                        <td>141 km/h</td>
+                        <td>₹1,88,200</td>
+                    </tr>
+                        <tr class="compare-head-text">
+                        <td>Ather 450X</td>
+                        <td>161</td>
+                        <td>3.7 kWh</td>
+                        <td>90 km/h</td>
+                        <td>₹1,46,999</td>
+                    </tr>
+                    <tr>
+                        <td>TVS iQube ST</td>
+                        <td>212</td>
+                        <td>5.3 kWh</td>
+                        <td>82 km/h</td>
+                        <td>₹1,71,115</td>
+                    </tr>
+                        <tr class="compare-head-text">
+                        <td>Hero Vida V2 Pro</td>
+                        <td>165</td>
+                        <td>3.9 kWh</td>
+                        <td>90 km/h</td>
+                        <td>₹1,20,300</td>
+                    </tr>
+                    <tr>
+                        <td>Bajaj Chetak 3502</td>
+                        <td>153</td>
+                        <td>3.5 kWh</td>
+                        <td>73 km/h</td>
+                        <td>₹1,22,499</td>
+                    </tr>
+                </table>
+        <div class="div-line"></div>
+
+                
+                    <h3 class="subheading">Buying Tips: How to Choose the Right One?</h3>
+                    <p>Choosing the right electric scooter isn't about specs alone. Consider:</p>
+                    <ul>
+                        <li>
+                            <span class="font-weight-700">Your Daily Commute</span>
+                            <ul>
+                                <li>Less than 30 km/day? Chetak or Vida is enough</li>
+                                <li>50 km/day? Go for Ola or Ather</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="font-weight-700">Charging Convenience</span>
+                            <ul>
+                                <li>No home charger? Hero Vida's removable battery helps</li>
+                                <li>Want fast charging? Ather and Ola are ideal</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="font-weight-700">Family Usage</span>
+                            <ul>
+                                <li>TVS iQube ST wins with comfort, space, and familiarity</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="font-weight-700">Style vs. Substance</span>
+                            <ul>
+                                <li>Want a head-turner? Ola S1 Pro+ Gen 3</li>
+                                <li>Prefer build quality? Bajaj Chetak 3502</li>
+                            </ul>
+                        </li>
+                     </ul>
+
+                    <div class="div-line"></div>
+
+                    <p>India's love for two-wheelers is legendary---and the EV revolution is taking that legacy to the next level.</p>
+                    <p>Whether you're driven by savings, the environment, or the thrill of riding something smart, 2025's top electric scooters <span class="font-weight-700">deliver value like never before</span>. From the high-tech <span class="bold underline">Ola S1 Pro+ Gen 3</span> to the elegant <span class="bold underline">Bajaj Chetak 3502</span>, these scooters are more than just machines---they're part of a cleaner, smarter tomorrow.</p>
+                    <p>Still wondering whether to make the switch? Take a test ride. Once you ride an electric scooter, there's a good chance you'll never look back.</p>
+                
+        <div class="div-line"></div>
+
+                <h3 class="subheading">FAQs About Trending Electric Scooters in India</h3>
+
+                <p class="font-weight-700">1. Which electric scooter in India has the best range?</p>
+                <p class="faq-answer">→ The Ola S1 Pro+ Gen 3 offers up to 320 km per charge.</p>
+
+                <p class="font-weight-700">2. Which EV scooter is the most high-tech?</p>
+                <p class="faq-answer">→ Ather 450X leads with smart UI, Warp mode, and seamless connectivity.</p>
+
+                <p class="font-weight-700">3. Can I charge these scooters at home?</p>
+                <p class="faq-answer">→ Yes. All listed scooters support home charging; Vida V2 also has removable batteries.</p>
+
+                <p class="font-weight-700">4. Are electric scooters suitable for rainy conditions?</p>
+                <p class="faq-answer">→ Yes. Most have IP-rated waterproofing.</p>
+
+                <p class="font-weight-700">5. Which one is best for families?</p>
+                <p class="faq-answer">→ TVS iQube ST for its space, comfort, and ease of use.</p>
+
+                <p class="font-weight-700">6. Is there government subsidy on these scooters?</p>
+                <p class="faq-answer">→ Yes. Central and state governments offer subsidies and state-level incentives.</p>
+
+                <p class="font-weight-700">7. How much does it cost to charge an electric scooter?</p>
+                <p class="faq-answer">→ At public charging stations, you can expect to pay between ₹4 to ₹10 per unit (kWh).</p>
+
+                <p class="font-weight-700">8. Are electric scooters low on maintenance?</p>
+                <p class="faq-answer">→ Yes. No oil changes or engine issues. Just battery care and regular servicing.</p>
+
+                <p class="font-weight-700">9. Do electric scooters have resale value?</p>
+                <p class="faq-answer">→ Increasingly yes, especially popular models like Ather and Ola.</p>
+
+                <p class="font-weight-700">10. Do I need a license and insurance?</p>
+                <p class="faq-answer">→ Yes. For scooters above 25 km/h or 250W, you need both license and insurance in India.</p>
+           
+            <div class="div-line"></div>
+
+                </div>
+    </div>
+            @await Html.PartialAsync("_AllBrandComponent")
+      </div>
+      </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

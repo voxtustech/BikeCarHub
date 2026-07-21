@@ -1,0 +1,370 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @foreach (var brand in ViewBag.Tag)
+    {
+        ViewData["Title"] = @brand.TitleTag;
+    }
+}
+
+@section MetaTags {
+    @foreach (var brand in ViewBag.Tag)
+    {
+        <meta name="keywords" content="@brand.MetaKeywords" />
+        <meta name="description" content="@brand.MetaDescription" />
+    }
+}
+@foreach (var brand in ViewBag.Tag)
+{
+    <div class=" ">
+        <h1 class="latest-bike-head">@brand.BrandName Bikes</h1>
+        @*<h2 class="latest-bike-description p-b20">@brand.Discription</h2>*@
+        <div class="brand-info-container">
+            <div class="brand-info-content">
+                <h3>Bajaj Bikes in India 2025: Price List, Mileage, Best Models & More</h3>
+                <p class="brand-info-short">
+                    When it comes to motorcycles that combine performance, practicality, and affordability, Bajaj Auto stands tall as one of the most trusted two-wheeler brands in India. Known for its wide range of bikes, Bajaj has become a household name over the years, dominating the streets with models like the Pulsar, Avenger, CT, and Dominar series.
+                    From entry-level commuters to power-packed tourers, Bajaj has crafted motorcycles that serve everyone—from students and delivery riders to long-distance travellers and adventure seekers. In 2025, the brand continues its strong momentum with updated models offering better mileage, new features, and improved styling.
+                    In this article, we take a look at Bajaj’s latest bike price list, find out which model is best for long rides, discover the highest mileage bikes, and explore why Bajaj remains one of India’s most iconic motorcycle brands.
+                </p>
+
+                <div class="brand-info-full" id="bajajMoreText">
+                    <h3>Bajaj Bikes Price List 2025 in India</h3>
+
+                    <p>
+                        Here’s a detailed price and mileage list of Bajaj motorcycles currently available in 2025:
+                    </p>
+
+                    <div class="brand-table-wrapper">
+                        <table class="brand-info-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Ex-Showroom Price (₹)</th>
+                                    <th>Mileage (km/l)</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Bajaj Platina 100</td>
+                                    <td>₹61,000 – ₹65,000</td>
+                                    <td>70–75 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bajaj CT 110X</td>
+                                    <td>₹67,000 – ₹72,000</td>
+                                    <td>68–72 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bajaj Pulsar 125</td>
+                                    <td>₹82,000 – ₹91,000</td>
+                                    <td>55–60 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bajaj Pulsar 150</td>
+                                    <td>₹1.10 lakh – ₹1.14 lakh</td>
+                                    <td>50–55 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bajaj Pulsar N160</td>
+                                    <td>₹1.23 lakh – ₹1.30 lakh</td>
+                                    <td>45–50 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bajaj Pulsar NS200</td>
+                                    <td>₹1.49 lakh – ₹1.54 lakh</td>
+                                    <td>35–40 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bajaj Avenger 160 Street</td>
+                                    <td>₹1.15 lakh – ₹1.18 lakh</td>
+                                    <td>45–50 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bajaj Avenger 220 Cruise</td>
+                                    <td>₹1.43 lakh – ₹1.47 lakh</td>
+                                    <td>38–42 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bajaj Dominar 250</td>
+                                    <td>₹1.84 lakh – ₹1.89 lakh</td>
+                                    <td>32–35 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bajaj Dominar 400</td>
+                                    <td>₹2.31 lakh – ₹2.36 lakh</td>
+                                    <td>27–30 km/l</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <i>Note: All prices and mileage figures are approximate and may vary based on city, variant, and usage.</i>
+                    </p>
+                    <h3>Which Bajaj Is Best for Long Rides?</h3>
+
+                    <p>
+                        Bajaj has carved out a strong niche for itself among long-distance riders by offering bikes that are not only powerful but also comfortable for extended hours on the saddle.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Top Bajaj Bikes for Long Rides:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Bajaj Dominar 400</strong>
+                            <ul>
+                                <li>Designed as a sports tourer</li>
+                                <li>Liquid-cooled 373cc engine derived from KTM’s platform</li>
+                                <li>Dual-channel ABS, LED headlamps, and touring-friendly ergonomics</li>
+                                <li>Ideal for highway rides, mountain passes, and weekend escapes</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Bajaj Avenger 220 Cruise</strong>
+                            <ul>
+                                <li>Classic cruiser styling</li>
+                                <li>Laid-back seating posture, forward-set footpegs</li>
+                                <li>Excellent comfort for highway cruising</li>
+                                <li>Windshield and chrome styling enhance long-distance appeal</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Bajaj Dominar 250</strong>
+                            <ul>
+                                <li>Lighter alternative to Dominar 400</li>
+                                <li>Easier handling in traffic with touring capabilities</li>
+                                <li>Ideal for those looking to enter the touring segment at a lower price point</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        All these bikes are supported by Bajaj’s extensive spare parts network and after-sales service, making ownership and long journeys stress-free.
+                    </p>
+                    <h3>Which Bajaj Has the Best Mileage?</h3>
+
+                    <p>
+                        Bajaj’s reputation in the fuel-efficiency segment is well-earned. The brand offers several budget bikes that deliver exceptional mileage, making them perfect for daily commuting.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Top Mileage Bajaj Bikes:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Bajaj Platina 100</strong>
+                            <ul>
+                                <li>Mileage: 70–75 km/l</li>
+                                <li>One of the most economical bikes in India</li>
+                                <li>Lightweight, durable, and low maintenance</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Bajaj CT 110X</strong>
+                            <ul>
+                                <li>Mileage: 68–72 km/l</li>
+                                <li>Rugged commuter built for Indian road conditions</li>
+                                <li>Great for both urban and rural commuting</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Bajaj Pulsar 125</strong>
+                            <ul>
+                                <li>Mileage: 55–60 km/l</li>
+                                <li>Sporty performance combined with practical fuel economy</li>
+                                <li>Ideal for students and young professionals</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        These models come with Bajaj’s DTS-i engine technology and ExhausTEC system, optimizing fuel combustion and power delivery.
+                    </p>
+                    <h3>Why Is Bajaj Famous?</h3>
+
+                    <p>
+                        Bajaj Auto isn’t just a motorcycle manufacturer — it's a cultural icon in the Indian two-wheeler landscape. Its bikes are known for delivering solid value, reliable performance, and innovative engineering.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Top Reasons Why Bajaj is a Popular Brand:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Wide Range of Models:</strong>
+                            <ul>
+                                <li>From fuel-efficient commuters to highway dominators, Bajaj caters to nearly every type of rider.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Performance Legacy:</strong>
+                            <ul>
+                                <li>The Pulsar series changed how Indians looked at motorcycles, introducing accessible sportiness for the masses.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Strong Technology Base:</strong>
+                            <ul>
+                                <li>Bajaj bikes feature advanced tech like liquid cooling, dual-channel ABS, LED lighting, and digital consoles, often at more affordable prices than competitors.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Robust Global Presence:</strong>
+                            <ul>
+                                <li>Bajaj exports to over 70 countries and is a major stakeholder in KTM and Triumph’s India operations.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Trusted Service Network:</strong>
+                            <ul>
+                                <li>With thousands of dealerships and authorized service centers across the country, owning a Bajaj is worry-free.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Resale Value:</strong>
+                            <ul>
+                                <li>Thanks to their popularity and low maintenance, Bajaj bikes generally hold value well over time.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <h3>Final Thoughts</h3>
+
+                    <p>
+                        In 2025, Bajaj Auto continues to deliver motorcycles that meet the evolving needs of Indian riders — be it high mileage for daily commuting or sheer performance for long rides. The brand stays true to its roots of engineering excellence while embracing modern technology and rider-focused design.
+                        If you’re in the market for a motorcycle that blends affordability, fuel economy, and ride quality, Bajaj offers compelling options across every segment. Whether it’s the humble Platina or the mighty Dominar, there’s a Bajaj for every rider and every road.
+                    </p>
+                    <h3>Top 10 FAQs About Bajaj Bikes in India (2025)</h3>
+
+                    <div class="faq-container">
+
+                        <div class="faq-item">
+                            <h4>1. Which is the most fuel-efficient Bajaj bike?</h4>
+                            <p>
+                                The Bajaj Platina 100 offers the best mileage, around 70–75 km/l.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>2. Is Bajaj Dominar 400 good for touring?</h4>
+                            <p>
+                                Yes, it’s one of the best entry-level touring bikes in India with great highway performance.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>3. Which is the best Bajaj bike under ₹1 lakh?</h4>
+                            <p>
+                                The Bajaj Pulsar 125 is a strong contender under ₹1 lakh, offering performance and mileage.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>4. Is Bajaj a reliable brand?</h4>
+                            <p>
+                                Absolutely. Bajaj bikes are known for their durability, ease of maintenance, and long engine life.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>5. What is the starting price of Bajaj bikes in 2025?</h4>
+                            <p>
+                                Prices start at around ₹61,000 for the Platina 100.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>6. Which Bajaj bike is best for city commuting?</h4>
+                            <p>
+                                The CT 110X and Pulsar 125 are ideal for city riding due to their compact design and fuel economy.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>7. Is Bajaj suitable for beginners?</h4>
+                            <p>
+                                Yes, many Bajaj bikes are lightweight, easy to handle, and beginner-friendly.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>8. Do Bajaj bikes come with ABS?</h4>
+                            <p>
+                                Yes, many models like the Pulsar NS200, N160, and Dominar range come with ABS.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>9. Is Bajaj better for power or mileage?</h4>
+                            <p>
+                                Bajaj offers both — commuter models for mileage and Pulsar/Dominar models for performance.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>10. Does Bajaj make electric bikes?</h4>
+                            <p>
+                                Yes, Bajaj launched the Chetak Electric scooter and plans to expand its EV lineup.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <button class="brand-read-btn"
+                        onclick="toggleBrandInfo('bajajMoreText', this)">
+                    Read More
+                </button>
+            </div>
+        </div>
+        <script>function toggleBrandInfo(contentId, button) {
+
+                const content = document.getElementById(contentId);
+
+                if (content.style.display === "block") {
+
+                    content.style.display = "none";
+                    button.innerText = "Read More";
+
+                } else {
+
+                    content.style.display = "block";
+                    button.innerText = "Read Less";
+                }
+            }</script>
+    </div>
+}
+@await Html.PartialAsync("_BrandComponent")
+@await Html.PartialAsync("_AllComponent")

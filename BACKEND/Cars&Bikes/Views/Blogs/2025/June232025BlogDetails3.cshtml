@@ -1,0 +1,382 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Honda Amaze vs Tata Tigor: Detailed Comparison - Price, Mileage, Features";
+}
+@section MetaTags {
+    <meta name="keywords" content="Honda Amaze 2025, Tata Tigor 2025, Amaze vs Tigor comparison, best compact sedan under 10 lakhs,
+    Honda Amaze mileage, Tata Tigor CNG, Honda SENSING features, Tata Revotron engine,
+    Amaze CVT vs Tigor AMT, safest compact sedan, fuel-efficient sedans India" />
+    <meta name="description" content="Wondering between the Honda Amaze and Tata Tigor? Compare their refined petrol performance, advanced safety tech, and premium interiors in this expert review. Discover which compact sedan delivers the best comfort, features, and value for your daily drives." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+
+                <p><span class="font-weight-700">Published on:</span> 23th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                
+                <div class="div-line"></div>
+
+                <h3 class="subheading">Quick Specifications Comparison</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">2025 Honda Amaze</th>
+                                <th class="text-center">2025 Tata Tigor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine</td>
+                                <td>1.2L i-VTEC Petrol (90PS/110Nm)</td>
+                                <td>1.2L Revotron Petrol (86PS/110Nm) or iCNG (74PS/95Nm)</td>
+                            </tr>
+                            <tr>
+                                <td>Transmission</td>
+                                <td>5MT/CVT</td>
+                                <td>5MT/5AMT</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Mileage</td>
+                                <td>18.65 kmpl (MT), 19.46 kmpl (CVT)</td>
+                                <td>19.3 kmpl (Petrol), 28 km/kg (CNG)</td>
+                            </tr>
+                            <tr>
+                                <td>Length</td>
+                                <td>3,995 mm</td>
+                                <td>3,992 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Boot Space</td>
+                                <td>416L</td>
+                                <td>419L</td>
+                            </tr>
+                            <tr>
+                                <td>Infotainment</td>
+                                <td>8" HD Display with Wireless AA/CarPlay</td>
+                                <td>10.25" Harman Touchscreen with 360° Camera</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Safety</td>
+                                <td>6 Airbags, Honda SENSING ADAS</td>
+                                <td>Dual Airbags, 4-Star GNCAP, ESP</td>
+                            </tr>
+                            <tr>
+                                <td>Price Range</td>
+                                <td>₹8.09 - ₹11.19 Lakh</td>
+                                <td>₹5.99 - ₹9.50 Lakh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="div-line"></div>
+                <h3 class="subheading">1. Engine & Performance</h3>
+             
+                
+                <h5 class="subheading">Honda Amaze (2025)</h5>
+                <p>The Amaze is powered by a <span class="font-weight-700">1.2L i-VTEC petrol engine</span>, producing <span class="font-weight-700">90PS@6,000rpm</span> and <span class="font-weight-700">110Nm torque@4,800rpm</span>. Available with a <span class="font-weight-700">5-speed manual</span> or <span class="font-weight-700">CVT automatic</span>, this is the sole powertrain option.</p>
+                <ul>
+                    <li><span class="font-weight-700">Reliability & refinement</span> - classic Honda attributes</li>
+                    <li><span class="font-weight-700">CVT with paddle shifters</span> adds comfort and premium feel</li>
+                </ul>
+                
+                <h5 class="subheading">Tata Tigor (2025)</h5>
+                <p>Tata offers a <span class="font-weight-700">1.2L Revotron petrol engine</span> with <span class="font-weight-700">86PS@6,000rpm</span> (petrol) and <span class="font-weight-700">74PS@6,000rpm</span> (CNG). It's paired with a <span class="font-weight-700">5-speed manual</span> or <span class="font-weight-700">5-speed AMT</span>.</p>
+                <ul>
+                    <li>Petrol power slightly lower than Amaze</li>
+                    <li>Versatility with petrol/CNG + AMT option</li>
+                    <li>Compact three-cylinder engine offers efficiency</li>
+                </ul>
+                
+                <div class="div-line"></div>
+                <h3 class="subheading">2. Fuel Efficiency</h3>
+               
+                        <h5 class="subheading">Honda Amaze</h5>
+                        <ul>
+                            <li><span class="font-weight-700">Manual:</span> ~18.65 km/l</li>
+                            <li><span class="font-weight-700">CVT:</span> ~19.46 km/l</li>
+                        </ul>
+                        <p>These are claimed figures, aligning with Honda's focus on urban commuting.</p>
+                        <h5 class="subheading">Tata Tigor</h5>
+                        <ul class="efficiency-list">
+                            <li><span class="font-weight-700">Petrol (MT/AMT):</span> ~19.3 km/l</li>
+                            <li><span class="font-weight-700">CNG:</span> ~28 km/kg</li>
+                        </ul>
+
+                <p>Amaze and Tigor petrol models offer comparable mileage. <span class="font-weight-700">CNG gives Tigor a real edge</span> in running cost for frequent drivers.</p>
+
+                <div class="div-line"></div>
+                <h3 class="subheading">3. Dimensions & Design</h3>
+                
+                
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">Honda Amaze</th>
+                                <th class="text-center">Tata Tigor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Length</td>
+                                <td>3,995 mm</td>
+                                <td>3,992 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Width</td>
+                                <td>1,733 mm</td>
+                                <td>1,677 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Height</td>
+                                <td>1,500 mm</td>
+                                <td>1,532 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Wheelbase</td>
+                                <td>2,470 mm</td>
+                                <td>2,450 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Boot Space</td>
+                                <td>416L</td>
+                                <td>419L</td>
+                            </tr>
+                            <tr>
+                                <td>Ground Clearance</td>
+                                <td>172 mm</td>
+                                <td>170 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Fuel Tank Capacity</td>
+                                <td>172 mm</td>
+                                <td>170 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Design Highlights</td>
+                                <td>172 mm</td>
+                                <td>170 mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">Design</h3>
+                <p>	Sedan silhouette with styling tweaks in the 2025 facelift: bootlid spoiler, refreshed grille & bumper, updated alloys</p>
+                <p>Amaze is slightly broader and taller, giving a stronger road presence, while Tigor maintains snazzy sedan styling with practical design tweaks</p>
+
+                <p>Amaze is slightly <span class="font-weight-700">broader and lower</span>, giving a stronger road presence, while Tigor maintains <span class="font-weight-700">snazzy sedan styling</span> with practical design tweaks.</p>
+                
+                <div class="div-line"></div>
+                <h3 class="subheading">4. Interior Features & Tech</h3>
+               
+                
+                <h5 class="subheading">Honda Amaze</h5>
+                <ul>
+                    <li><span class="font-weight-700">8" floating HD display</span> with wireless Apple CarPlay & Android Auto</li>
+                    <li><span class="font-weight-700">Honda SENSING ADAS</span> suite (lane-watch camera + more)</li>
+                    <li>Paddle shifters on CVT</li>
+                    <li>Dual USB-C/A chargers, rear camera, TPMS,DRLs,fog lamps</li>
+                    <li>Already listed 28+ active/passive safety features.</li>
+                    <li>Luxurious ambience with floating displays and connectivity </li>
+                    <li>Cabin feels premium with fabric seats, urethane steering wheel.</li>
+                </ul>
+                
+                <h5 class="subheading">Tata Tigor</h5>
+                <ul>
+                    <li><span class="font-weight-700">10.25" touchscreen</span> (Harman®) with wireless connectivity</li>
+                    <li><span class="font-weight-700">360° camera</span> on top trims</li>
+                    <li>Wireless charging, USB A+C ports</li>
+                    <li>Digital instrument cluster (4" to 10.25")</li>
+                    <li>Cruise control, auto climate, rain-sensing wipers in higher varients</li>
+                    <li>Premium touches — illuminated steering, leatherette, 6-speaker sound, and front armrest.</li>
+                </ul>
+                <p>Briefly: both cabins are modern and feature-rich; Amaze focuses on refinement and ADAS, while Tigor emphasizes tech, creature comforts, and broader powertrain flexibility.</p>
+                
+                <div class="div-line"></div>
+                <h3 class="subheading">5. Safety & ADAS</h3>
+                <h5 class="subheading">Honda Amaze</h5>
+                <ul>
+                    <li><span class="font-weight-700">Honda SENSING</span> suite (collision mitigation, lane-watch camera)</li>
+                    <li><span class="font-weight-700">Six airbags</span> VSA, Vehicle stability assist standard.</li>
+                    <li>Vehicle Stability Assist, Hill Start Assist</li>
+                    <li>Strong passive safety from ACE body, rear seatbelt reminder, reverse camera.</li>
+                </ul>
+                
+                <h5 class="subheading">Tata Tigor</h5>
+                <ul>
+                    <li><span class="subheading">Dual front airbags</span>, ABS with EBD,ISOFIX, rear parking sensors.</li>
+                    <li>Upper trims get ESP, Hill Hold Control, cruise control</li>
+                    <li>XZ+ Lux includes 360° camera, leather steering, auto climate, rain-sensing wipers.</li>
+                    <li>Safety rating: 4 star Global NCAP (adult), 3 star (child) from past tests and applies to this facelift.</li>
+                </ul>
+                <p><span class="subheading">Conclusion:</span> Amaze leads in ADAS sophistication; Tigor offers solid safety and GNCAP protection but fewer active safety tools.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">6. Pricing & Variants</h3>
+
+
+                
+
+                <h3 class="subheading">Honda Amaze</h3>
+               
+                <ul>
+                    <li><span class="font-weight-700">Ex-showroom Delhi </span>starting at ~₹8.09 Lakh</li>
+                    <li><span class="font-weight-700">Variants:</span> V, VX, ZX (in MT & CVT)</li>
+                    <li><span class="font-weight-700"></span>V: ~₹8 L,VX: ~₹9.19 L,ZX: ~₹9.99 L</li>
+                     
+                </ul>
+
+                <h3 class="subheading">Tata Tigor</h3>
+                <p>The Tata Tigor combines practicality and affordability, appealing to budget-conscious buyers who want value and efficiency.</p>
+                <ul>
+                    <li><span class="subheading">Ex-showroom Delhi price range:</span> ₹5.99 L to ₹9.50 L</li>
+                    <li>Variants: XM (₹5.99 L), XT (6.79 L), XZ+ (₹7.99 L petrol / ₹7.79 L CNG).</li>
+                 </ul>
+           
+
+                <h5 class="subheading">Price Comparison</h5>
+                <p>At base trims, Tigor (₹8 L). Top trims with full kit are similar, but Amaze's CVT + ADAS push pricing higher (~₹10–12 L on-road).</p>
+
+                <h3 class="subheading">Side-By-Side Quick Comparison</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">2025 Honda Amaze</th>
+                                <th class="text-center">2025 Tata Tigor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine / Power</td>
+                                <td>1.2L i-VTEC, 90 PS / 110 Nm (MT/CVT)</td>
+                                <td>1.2L Revotron I3 petrol (86 PS / 110 Nm), iCNG (74 PS / 95 Nm)</td>
+                            </tr>
+                            <tr>
+                                <td>Transmission</td>
+                                <td>5-speed MT / CVT</td>
+                                <td>5-speed MT / 5-speed AMT</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Fuel Efficiency</td>
+                                <td>18.65 km/l (MT), 19.46 km/l (CVT)</td>
+                                <td>~19 km/l (petrol), ~28 km/kg (CNG)</td>
+                            </tr>
+                            <tr>
+                                <td>Boot Space</td>
+                                <td>416 L</td>
+                                <td>~419 L</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Wheelbase</td>
+                                <td>2,470 mm</td>
+                                <td>2,450 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Infotainment</td>
+                                <td>8" HD, wireless Apple CarPlay & Android Auto</td>
+                                <td>10.25" Harman, wireless AA/AC, 360° cam</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>ADAS</td>
+                                <td>Honda SENSING (lane-watch, collision mitigation)</td>
+                                <td>ESP, HHC, cruise control (no full ADAS)</td>
+                            </tr>
+                            <tr>
+                                <td>Safety</td>
+                                <td>Six airbags, VSA, hill-start, reverse cam</td>
+                                <td>Dual airbags, ISOFIX, GNCAP rating 4-star</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Variants / Pricing</td>
+                                <td>V, VX, ZX</td>
+                                <td>₹8.0–10.9 L ex-showroom</td>
+                            </tr>
+                            <tr>
+                                <td>USP</td>
+                                <td>Refined drive, ADAS suite, brand legacy</td>
+                                <td>Value-for-money, petrol/CNG, strong tech value</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">8.Verdict: Which One's Right for You?</h3>
+
+                <p>Here's a breakdown based on your priorities:</p>
+
+              
+                    <h5 class="subheading">If you want refinement and active safety:</h5>
+                    <ul>
+                        <li><span class="font-weight-700">Go for:</span> Honda Amaze</li>
+                        <li><span class="font-weight-700">Why:</span> Smooth CVT, dependable petrol engine, intuitive ADAS with Honda SENSING, stylish design, quality finish. It's pricier but offers premium ownership benefits.</li>
+                    </ul>
+                          
+                    <h5 class="subheading">If you want value and versatility:</h5>
+                    <ul>
+                        <li><span class="font-weight-700">Go for:</span> Tata Tigor</li>
+                        <li><span class="font-weight-700">Why:</span> Lower starting price, offers petrol + CNG flexibility, strong infotainment (<span class="font-weight-700">10.25" screen</span>, <span class="font-weight-700">360° cam</span>), safety tech like ESP and cruise control, and generous variant levels.</li>
+                    </ul>
+               
+
+                <div class="div-line"></div>
+
+                <h4 class="subheading">Conclusion</h4>
+                <p>Both <span class="font-weight-700">2025 Honda Amaze</span> and <span class="font-weight-700">Tata Tigor</span> bring compelling packages to India's compact sedan arena. Honda leans on its reputation for smooth performance, refinement, and advanced driver assistance. Tata counters with affordability, tech-rich features, and fuel-efficient flexibility.</p>
+
+                <div class="final-pick">
+                    <p><span class="font-weight-700">Our pick:</span></p>
+                    <ul>
+                        <li><span class="font-weight-700">For driving refinement & ADAS</span> — choose <span class="font-weight-700">Amaze</span>.</li>
+                        <li><span class="font-weight-700">For features, affordability & CNG efficiency</span> — choose <span class="font-weight-700">Tigor</span>.</li>
+                    </ul>
+                </div>
+                <p>To know more about Honda Vehicle <a class="for-link" asp-controller="Honda" asp-action="HondaDio"> click here</a></p>
+                <p>To know more about Tata Vehicle  <a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_1">click here</a></p>
+                <p>  <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></p>
+            </div>
+            @await Html.PartialAsync("_AllBrandComponent")
+                </div>
+       
+            </div>
+       
+ 
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

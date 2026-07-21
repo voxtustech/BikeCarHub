@@ -1,0 +1,92 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Honda Electric Scooter | EV India Launch: Key Features and Expectations | Honda Electric";
+}
+@section MetaTags{
+    <meta name="keywords" content="Honda electric scooter India, Honda electric vehicle launch, electric scooter 2025, India electric scooter market, Honda EV India" />
+    <meta name="description" content="Honda is set to launch its electric scooter in India by March 2025. This new model will bring advanced technology and sustainability to the growing electric vehicle market in India." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>
+                    Honda Motor Co., a global leader in the automotive industry, has announced plans to launch its first electric scooter in the Indian market by March 2025. This move is part of Honda’s broader strategy to expand its footprint in the burgeoning electric vehicle (EV) sector, which is gaining significant traction in India due to rising environmental concerns and supportive government policies.
+                </p>
+                <p>The upcoming electric scooter is expected to incorporate Honda’s cutting-edge technology, which has been honed through years of expertise in both automotive and two-wheeler segments. While specific details about the scooter’s specifications and features have not been fully disclosed, industry insiders suggest that it will offer impressive performance metrics, including a robust range and advanced battery management systems. The scooter is likely to include features such as smart connectivity, regenerative braking, and high-efficiency motors, aimed at providing a reliable and enjoyable riding experience.</p>
+                <p>Honda's entry into the Indian electric scooter market is timely, given the country's aggressive push towards electric mobility. The Indian government has set ambitious targets to increase the adoption of electric vehicles as part of its broader strategy to combat pollution and reduce reliance on fossil fuels. Initiatives such as the Faster Adoption and Manufacturing of Hybrid and Electric Vehicles (FAME) scheme and state-level incentives are expected to create a favorable environment for electric scooter sales.</p>
+                <p>In preparation for the launch, Honda is expected to ramp up its local manufacturing capabilities to ensure a steady supply of the new electric scooter. This strategy aligns with Honda’s global commitment to sustainability and local market adaptation. Additionally, the company plans to invest in a network of service centers and charging infrastructure to support the new model, enhancing customer convenience and confidence in adopting electric mobility.</p>
+                <p>Honda’s entry into the electric scooter market will intensify competition among existing players, such as Ola Electric, Ather Energy, and Bajaj Auto, driving innovation and potentially lowering prices. As consumers increasingly prioritize eco-friendly and cost-effective transportation options, the introduction of Honda's electric scooter could further accelerate the shift towards sustainable mobility in India.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

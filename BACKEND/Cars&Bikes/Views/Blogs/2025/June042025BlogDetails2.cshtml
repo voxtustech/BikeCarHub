@@ -1,0 +1,207 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Harrier EV Launch, Price, Features & Range";
+}
+@section MetaTags {
+    <meta name="keywords" content="•	Tata Harrier EV launch date at bikecarhub, Harrier EV price in India, Tata electric SUV 2025, Harrier EV range, Tata Harrier EV specs, Best electric SUV India, Tata Harrier EV interior, Harrier EV vs MG ZS, Tata EV car with ADAS, Upcoming Tata EV cars 2025" />
+    <meta name="description" content=" Explore Tata Harrier EV’s launch at bikecarhub, price, range, features, battery specs & more. Here’s everything you need to know about Tata’s upcoming electric SUV." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @*<div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+               
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p> 
+                <p>Unveiled as a near-production concept, the Harrier EV is Tata’s attempt to deliver a feature-rich, high-range electric SUV that rivals both international and domestic offerings. In this article, we explore the <span class="font-weight-700">launch details, pricing, features, battery specs, and more.</span></p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Tata Harrier EV: Expected Launch Timeline</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataevharrier/front.webp" alt="bikecarhubsidetataevharrierfront" title="bikecarhubsidetataevharrierfront" /></div>
+                </div>
+                <p>The Tata Harrier EV was officially showcased at <span class="font-weight-700">Auto Expo 2023, </span>drawing significant attention. Tata has confirmed that the Harrier EV is in the final stages of development, with a <span class="font-weight-700">launched on 3rd June, 2025.</span>Production is likely to begin by the end of 2024, with test mules already spotted on Indian roads.</p>
+               
+                <div class="div-line"></div>
+                <h3 class="subheading">Price in India</h3>
+                <p>
+                    Tata has officially revealed the pricing, the starting price of Harrier EV is<span class="font-weight-700">₹ 21.49 Lakh </span> </p>
+                <p>This price puts it right in the middle of the premium EV SUV market—<span class="font-weight-700">more expensive than the Nexon EV </span>but competitively priced against global models like the <span class="font-weight-700">MG ZS EV, BYD Atto 3,</span> and the upcoming <span class="font-weight-700">Mahindra XUV.e8.</span></p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Design & Styling Enhancements</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataevharrier/side.webp" alt="bikecarhubsidetataevharrierside" title="bikecarhubsidetataevharrierside" /></div>
+                </div>
+                <p>The Harrier EV retains the muscular stance of the regular Harrier but adds distinctive EV styling elements:</p>
+                <ul>
+                    <li><span class="font-weight-700">Closed-off front grille </span>with a futuristic textured pattern</li>
+                    <li><span class="font-weight-700">Connected LED DRLs</span> and sharp LED headlamps</li>
+                    <li><span class="font-weight-700">Aero-optimized alloy wheels</span> for better efficiency</li>
+                    <li><span class="font-weight-700">Sleek EV-specific badging</span></li>
+                    <li><span class="font-weight-700">Updated bumper and rear lighting</span> inspired by the Harrier facelift</li>
+                </ul>
+                <p>Overall, the Harrier EV carries a clean and premium design that blends familiarity with futuristic cues.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Battery, Range & Charging</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataevharrier/rear.webp" alt="bikecarhubsidetataevharrierrear" title="bikecarhubsidetataevharrierrear" /></div>
+                </div>
+                <p>While official specs are still under wraps, here's what’s expected:</p>
+                <ul>
+                    <li><span class="font-weight-700">Battery Pack:</span> 75 kWh Lithium-ion</li>
+                    <li><span class="font-weight-700">Expected Range: </span>622 km</li>
+                    <li><span class="font-weight-700">Charging:</span>
+                        <ul>
+                            <li><span class="font-weight-700">AC Charging:</span> 7.2 kW onboard charger</li>
+                            <li><span class="font-weight-700">DC Fast Charging:</span> 125 kW CCS2 compatibility</li>
+                            <li><span class="font-weight-700">0–80% </span>in around <span class="font-weight-700">25 minutes </span>using fast charger</li>
+                </ul>
+                </ul>
+                <p>Tata is expected to use<span class="font-weight-700"> Ziptron Gen-2 EV architecture, </span>improving energy density, efficiency, and charging times.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Motor & Performance</h3>
+                <p>The Harrier EV will likely offer <span class="font-weight-700">both FWD (single motor) </span>and <span class="font-weight-700">AWD (dual motor) </span>configurations. While exact output figures are not revealed, estimates point toward:</p>
+                <ul>
+                    <li><span class="font-weight-700">Power Output: </span> 390 bhp</li>
+                    <li><span class="font-weight-700">Torque: </span>Over 504 Nm</li>
+                    <li><span class="font-weight-700">Drive Modes: </span> Eco, City, Sport</li>
+                    <li><span class="font-weight-700">Regenerative Braking: </span> Multiple levels</li>
+                    <li><span class="font-weight-700">Acceleration (0–100 km/h): </span> Expected around 6.3 seconds (AWD) </li>
+                </ul>
+                <p>This will position the Harrier EV as one of the sportier EV SUVs in its price segment.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Features & Technology</h3>
+                <p>Tata Motors is known for offering <span class="font-weight-700">feature-loaded cabins, </span>and the Harrier EV is no exception. Expected features include:</p>
+                <ul>
+                    <li><span class="font-weight-700">12.3-inch infotainment touchscreen </span>with new UI</li>
+                    <li><span class="font-weight-700">10.25-inch digital driver display</span></li>
+                    <li><span class="font-weight-700">Panoramic sunroof with ambient lighting</span></li>
+                    <li><span class="font-weight-700">Connected car tech with Tata iRA 2.0</span></li>
+                    <li><span class="font-weight-700">Over-the-air (OTA) software updates</span></li>
+                    <li><span class="font-weight-700">ADAS Level 2 features: </span> Adaptive cruise control, lane assist, auto braking</li>
+                    <li><span class="font-weight-700">Wireless Android Auto and Apple CarPlay</span></li>
+                    <li><span class="font-weight-700">360-degree surround-view camera</span> with blind-view monitor</li>
+                </ul>
+                <p>Premium materials, soft-touch finishes, and ventilated seats are also likely on higher variants.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Safety and Build Quality</h3>
+                <p>Built on the Omega-Arc platform, the Harrier EV is expected to inherit Tata’s high safety standards. It’s likely to come with:</p>
+                <ul>
+                    <li><span class="font-weight-700">6 airbags (standard on top trims) </span> </li>
+                    <li><span class="font-weight-700">Electronic Stability Program (ESP) </span></li>
+                    <li><span class="font-weight-700">Hill Hold & Hill Descent Control</span></li>
+                    <li><span class="font-weight-700">ISOFIX mounts, ABS, and EBD</span></li>
+                    <li><span class="font-weight-700">ADAS integration</span> for added driver confidence</li>
+                </ul>
+                <p>Tata is targeting a<span class="font-weight-700"> 5-star Global NCAP rating, </span>continuing its commitment to safety.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Rivals and Competitors</h3>
+                <p>The Harrier EV will enter a growing EV SUV segment. Here's how it compares:</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Battery Size</th>
+                                <th class="text-center">Range (Claimed)</th>
+                                <th class="text-center">Price (Est.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Tata Harrier EV	</td>
+                                <td>75 kWh</td>
+                                <td>622 km</td>
+                                <td>₹21.49 lakh</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">MG ZS EV</td>
+                                <td>50.3 kWh</td>
+                                <td>461 km</td>
+                                <td>₹18.98–26.64 lakh</td>
+                            </tr>
+                            <tr class="compare-head-text">	        	       	               
+                                <td class="font-weight-600">BYD Atto 3</td>
+                                <td>60.5 kWh</td>
+                                <td>521 km</td>
+                                <td> ₹24.9- 33.99 lakh</td>
+                            </tr>
+                            <tr>	        	       	                
+                                <td class="font-weight-600">Mahindra XUV.e8</td>
+                                <td>80 kWh (est.)</td>
+                                <td>450–500 km</td>
+                                <td>₹35–40 lakh</td>
+                            </tr>
+                            <tr class="compare-head-text">         	       	                
+                                <td class="font-weight-600">Hyundai Kona EV	</td>
+                                <td>39.2 kWh</td>
+                                <td>452 km</td>
+                                <td>₹23.84–24.03 lakh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Tata’s edge lies in <span class="font-weight-700"> pricing, localization, and robust EV servicing infrastructure</span> through its EV-exclusive dealerships and the expanding Tata Power charging network.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Final Thoughts</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/tataevharrier/header.webp" alt="bikecarhubsidetataevharrierheader" title="bikecarhubsidetataevharrierheader" /></div>
+                </div>
+                <p>The <span class="font-weight-700"> Tata Harrier EV </span>marks a significant leap for Tata Motors, bringing together <span class="font-weight-700"> design, power, and practicality </span>in one electric SUV. For those looking for an Indian-built, premium, and feature-loaded electric SUV without paying luxury car prices, the Harrier EV looks incredibly promising.</p>
+                <p>Whether you're upgrading from a petrol SUV or entering the EV space for the first time, this upcoming Harrier EV could be one of the best value offerings in 2025.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">FAQs About Tata Harrier EV</h3>
+                <p class="font-weight-700">1. When will the Tata Harrier EV launch in India?</p>
+                <p>Launched on 3rd June, 2025, with updated and new features. </p>
+                <p class="font-weight-700">2. What will be the price of the Tata Harrier EV? </p>
+                <p>Estimated to be ₹21.49 lakh (Introductory ex-showroom). </p>
+                <p class="font-weight-700">3. What is the expected range of the Harrier EV? </p>
+                <p>Claimed range is expected around 622 km per charge</p>
+                <p class="font-weight-700">4. Will the Harrier EV support fast charging? </p>
+                <p>Yes, it is expected to support DC fast charging up to 125 kW. </p>
+                <p class="font-weight-700">5. What battery size will the Harrier EV offer? </p>
+                <p>It is expected to come with a 65–75 kWh lithium-ion battery. </p>
+                <p class="font-weight-700">6. Will Tata Harrier EV have ADAS features? </p>
+                <p>Yes, Tata is likely to offer Level 2 ADAS with features like adaptive cruise and lane assist. </p>
+                <p class="font-weight-700">7. Is the Harrier EV based on a new platform? </p>
+                <p>It uses Tata’s Gen-2 EV architecture, based on a modified Omega-Arc platform. </p>
+                <p class="font-weight-700">8. Will it be available in AWD? </p>
+                <p>Dual-motor AWD variant is expected alongside a standard FWD version. </p>
+                <p class="font-weight-700">9. Can I charge the Harrier EV at home? </p>
+                <p>Yes, using a 7.2 kW AC wallbox charger for overnight charging. </p>
+                <p class="font-weight-700">10. How does it compare to the Nexon EV? </p>
+                <p>The Harrier EV is larger, more powerful, and aimed at premium EV buyers. </p>
+                <div class="div-line"></div>
+                <p class="font-weight-700">If you want to know about Tata Altroz Facelift Value for Money <a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_1">click here</a></p>
+                <p class="font-weight-700">If you want to know about  Feature and Specifications of Tata Altroz Facelift <a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_2">click here</a> </p>
+                <p class="font-weight-700">If you want to know more about Tata Altroz Facelift Value for Money <a class="for-link" asp-controller="Blogs" asp-action="June042025BlogDetails1">click here</a></p>
+            </div>
+            @await Html.PartialAsync("_AllBrandComponent")
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

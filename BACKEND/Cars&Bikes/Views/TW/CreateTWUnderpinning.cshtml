@@ -1,0 +1,77 @@
+﻿@model Cars_Bikes.Models.TWUnderpinning
+@{
+    ViewData["Title"] = "Add Underpinning";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+<h2 class="text-center">Add Underpinning Details</h2>
+
+<form asp-action="CreateTWUnderpinning" method="post">
+    <div class="form-group">
+        <label asp-for="TwoWheelerId"></label>
+        <select asp-for="TwoWheelerId" asp-items="ViewBag.TwoWheelers" class="form-control"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TWVarientId"></label>
+        <select asp-for="TWVarientId" asp-items="ViewBag.TWVarients" class="form-control"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SuspensionFront"></label>
+        <input asp-for="SuspensionFront" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SuspensionRear"></label>
+        <input asp-for="SuspensionRear" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="BrakesFront"></label>
+        <input asp-for="BrakesFront" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="BrakesRear"></label>
+        <input asp-for="BrakesRear" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TyreSize"></label>
+        <input asp-for="TyreSize" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="WheelSize"></label>
+        <input asp-for="WheelSize" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="WheelType"></label>
+        <input asp-for="WheelType" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TubelessTyre"></label>
+        <input asp-for="TubelessTyre" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

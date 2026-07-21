@@ -1,0 +1,375 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Maruti Brezza vs Kia Sonet: Detailed Comparison of India's Compact SUVs";
+}
+@section MetaTags {
+    <meta name="keywords" content="Maruti Brezza vs Kia Sonet, Brezza vs Sonet comparison, best compact SUV India, Maruti Brezza 2025 review, Kia Sonet facelift, sub-4m SUV comparison, Brezza mileage, Sonet features, Brezza vs Sonet price, BikeCarHub SUV comparison" />
+    <meta name="description" content="Compare Maruti Brezza vs Kia Sonet on performance, mileage, features, safety & price. Find the best compact SUV for your needs with BikeCarHub's expert analysis" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 24th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+
+                     <h2 class="subheading">1.Model Overview & Positioning</h2>
+
+                <h3 class="subheading">Maruti Vitara Brezza</h3>
+               
+                <p>The Brezza is a stalwart in the sub-4m compact SUV segment. Offered only with a 1.5L petrol engine enhanced with mild-hybrid technology and available in manual, automatic, and CNG configurations, it appeals to buyers seeking fuel economy, reliability, and Maruti's strong service network.</p>
+
+                <h3 class="subheading">Kia Sonet</h3>
+                
+                <p>Launched in 2020 and facelifted in December 2023, the Sonet offers three engine options (1.2L petrol, 1.0L turbo petrol, 1.5L diesel), multiple gearboxes (MT, iMT/DCT, automatic), and a richer feature set. It delivers a more premium appeal and dynamic drive, targeting urban buyers who value refinement and choice.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">2.Engine & Performance</h2>
+                
+                <h3 class="subheading">Maruti Brezza</h3>
+                
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 1,462cc K-Series DualJet Dual-VVT petrol</li>
+                    <li><span class="font-weight-700">Power:</span> ~101.6 bhp 102 PS@6,000 rpm</li>
+                    <li><span class="font-weight-700">Torque:</span> ~137 Nm@4,400 rpm</li>
+                    <li><span class="font-weight-700">Transmission:</span> 5-speed MT, 6-speed automatic (torque converter)</li>
+                    <li><span class="font-weight-700">Mild-hybrid (SHVS)</span> standard on petrol variants; CNG version also available</li>
+                </ul>
+
+                <h3 class="subheading">Kia Sonet</h3>
+            
+                <ul>
+                    <li><span class="font-weight-700">1.2L NA petrol (1,197cc):</span> ~82 PS; torque ~115 Nm; paired with 5-speed MT</li>
+                    <li><span class="font-weight-700">1.0L turbo GDi petrol:</span> ~120 PS, 172 Nm; available with iMT, DCT, or MT</li>
+                    <li><span class="font-weight-700">1.5L diesel CRDi:</span> 85 kW (~115 PS) and 250 Nm; MT, iMT, or 6-speed torque converter</li>
+                </ul>
+                <p><span class="font-weight-700">Takeaway:</span> Brezza's NA engine with mild-hybrid tech delivers smooth, linear power and enhanced mileage. Sonet offers greater flexibility: the turbo petrol relishes mid-range punch, while the diesel delivers strong torque, especially at low revs.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">3.Fuel Efficiency (ARAI)</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza Petrol MT/AT:</span> 17.38-19.9 kmpl</li>
+                    <li><span class="font-weight-700">Brezza Petrol AT:</span> ~19.8 kmpl</li>
+                    <li><span class="font-weight-700">Brezza CNG MT:</span> 25.51 km/kg</li>
+                    <li><span class="font-weight-700">Sonet 1.2L petrol:</span> ~19 kmpl</li>
+                    <li><span class="font-weight-700">Sonet 1.0L turbo petrol:</span> ~18.4 kmpl</li>
+                    <li><span class="font-weight-700">Sonet Diesel:</span> ~24.1 kmpl</li>
+                </ul>
+                <p><span class="font-weight-700">Takeaway:</span> Brezza leads in pure petrol efficiency thanks to its mild-hybrid and CNG offering. Sonet's diesel closely trails, while turbo petrol offers mid-tier mileage.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">4.Dimensions & Practicality</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">Maruti Brezza</th>
+                                <th class="text-center">Kia Sonet</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Length</td>
+                                <td>3,995 mm</td>
+                                <td>3,995 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Width</td>
+                                <td>1,790 mm</td>
+                                <td>1,790 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Height</td>
+                                <td>1,685 mm</td>
+                                <td>1,610 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Wheelbase</td>
+                                <td>2,500 mm</td>
+                                <td>2,500 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Ground Clearance</td>
+                                <td>~198 mm</td>
+                                <td>205 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Boot Space</td>
+                                <td>328 L</td>
+                                <td>385 L</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Fuel Tank Capacity</td>
+                                <td>48 L</td>
+                                <td>45 L</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><span class="font-weight-700">Takeaway:</span> The Brezza and Sonet share external dimensions, but Sonet offers more boot space, while Brezza provides slightly lower ground clearance.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">5.Safety & Ratings</h2>
+                
+                <h3 class="subheading">Maruti Brezza</h3>
+                <ul>
+                    <li>Equipped with 6 airbags, ESP, ABS with EBD, hill-hold assist, Suzuki-TECT body</li>
+                    <li>No recent GNCAP rating for the current model</li>
+                </ul>
+
+                <h3 class="subheading">Kia Sonet</h3>
+                <ul>
+                    <li>Standard with 6 airbags, ESC, VSM, HAC, BVM blind-spot monitor, 360° camera, parking sensors</li>
+                    <li>Kia globally scores well in crash ratings, though no direct Indian GNCAP score for facelift yet</li>
+                </ul>
+                <p><span class="font-weight-700">Takeaway:</span> Both cars come well-equipped with safety tech. Sonet edges ahead with additional systems like BVM and 360° camera.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">6.Features & Comfort</h2>
+                
+                <h3 class="subheading">Maruti Brezza</h3>
+              
+                <ul>
+                    <li>9″ SmartPlay Pro+ infotainment with wireless Android Auto/Apple CarPlay</li>
+                    <li>Heads-up display, wireless charger, sunroof, rear AC vents, 360° camera (on higher trims)</li>
+                </ul>
+
+                <h3 class="subheading">Kia Sonet</h3>
+               
+                <ul>
+                    <li>8″/10.67″ touchscreen with wired or wireless Android Auto/Apple CarPlay</li>
+                    <li>Connected UVO tech, sunroof, ventilated seats, air purifier, Bose 7-speaker system (on top trims), 360° camera</li>
+                </ul>
+                <p><span class="font-weight-700">Takeaway:</span> Sonet brings more high-end tech and premium audio in top trims, while Brezza focuses on essential and useful convenience features.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">7.Ride & Handling</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza:</span> MacPherson front & torsion beam rear; ride tuned for compliance on Indian roads. Mild-hybrid assists seamless acceleration</li>
+                    <li><span class="font-weight-700">Sonet:</span> Likely similar suspension setup; slightly firmer ride for sporty handling. Turbo petrol and diesel feel lively, with DCT delivering smooth performance</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">8.Pricing</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza:</span> ₹8.69L - ₹13.98L ex-showroom ● CNG variant (~₹9.6L)</li>
+                    <li><span class="font-weight-700">Sonet:</span> ₹8.00L - ₹15.74L ex-showroom depending on engine/trim (1.2L petrol MT to diesel AT)</li>
+                </ul>
+                <p><span class="font-weight-700">Takeaway:</span> Pricing brackets overlap significantly. Brezza typically costs less in petrol variants, while Sonet offers broader engine/gearbox diversity, including diesel AT.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Who Should Buy Which?</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Requirement</th>
+                                <th class="text-center">Maruti Brezza</th>
+                                <th class="text-center">Kia Sonet</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Fuel Economy</td>
+                                <td>✅ Excellent, esp. mild-hybrid & CNG</td>
+                                <td>⚠️ Diesel good (~24 kmpl), petrol mid-tier</td>
+                            </tr>
+                            <tr>
+                                <td>Engine Options</td>
+                                <td>⚠️ Only petrol + mild-hybrid, plus CNG</td>
+                                <td>✅ Petrol (NA/turbo), diesel + DCT/iMT options</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Boot Space & GC</td>
+                                <td>✅ Good 198 mm GC, 328L boot</td>
+                                <td>✅ More boot at 385L, GC comparable</td>
+                            </tr>
+                            <tr>
+                                <td>Safety Tech</td>
+                                <td>✅ 6 airbags, ESP, ABS</td>
+                                <td>✅ More ADAS gear: ESC, VSM, BVM, cams</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Features</td>
+                                <td>✅ Sunroof, HUD, wireless, infotainment</td>
+                                <td>✅ Premium: ventilated seats, Bose audio</td>
+                            </tr>
+                            <tr>
+                                <td>Service & Maintenance</td>
+                                <td>✅ Maruti's vast network, low cost</td>
+                                <td>⚠️ Higher-cost service, fewer dealerships</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Pricing</td>
+                                <td>✅ More affordable petrol trims</td>
+                                <td>✅ Good value across trims, special editions</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Verdict</h2>
+                <ul>
+                    <li><span class="font-weight-700">Choose the Brezza</span> for its <span class="font-weight-700">mild-hybrid efficiency</span>, <span class="font-weight-700">CNG option</span>, trustworthy <span class="font-weight-700">after-sales network</span>, and practicality for everyday city driving.</li>
+                    <li><span class="font-weight-700">Opt for the Sonet</span> if you want a <span class="font-weight-700">turbo-diesel/petrol choice</span>, love <span class="font-weight-700">premium tech</span> (like ventilated seats and Bose audio), and don't mind paying a bit more for features and refinement.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Quick Summary</h2>
+                <ul>
+                    <li><span class="font-weight-700">Engine Lineup:</span>
+                        <ul>
+                            <li><span class="font-weight-700">Brezza:</span> 1.5L NA petrol (101 bhp) with mild-hybrid + CNG</li>
+                            <li><span class="font-weight-700">Sonet:</span> 1.2L petrol, 1.0L turbo petrol, 1.5L diesel (115-120 PS)</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-weight-700">Fuel Efficiency (ARAI):</span>
+                        <ul>
+                            <li><span class="font-weight-700">Brezza:</span> 17-19.9 kmpl petrol, 25.5 km/kg CNG</li>
+                            <li><span class="font-weight-700">Sonet:</span> 19 kmpl (1.2L), 18.4 kmpl (turbo), 24.1 kmpl diesel</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-weight-700">Space & Practicality:</span>
+                        <ul>
+                            <li>Equal length/wheelbase; <span class="font-weight-700">Sonet</span> offers bigger boot (385L vs 328L)</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-weight-700">Features & Safety:</span>
+                        <ul>
+                            <li><span class="font-weight-700">Sonet</span> offers more tech (BVM, 360° cam, ventilated seats, Bose), <span class="font-weight-700">Brezza</span> focuses on core essentials with helpful additions (HUD, wireless charging)</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-weight-700">Pricing:</span>
+                        <ul>
+                            <li><span class="font-weight-700">Brezza:</span> ₹8.69-13.98L</li>
+                            <li><span class="font-weight-700">Sonet:</span> ₹8.00-15.74L (varies by engine and trim)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Thoughts</h2>
+                <ul>
+                    <li>Prefer <span class="font-weight-700">no-frills efficiency and driving comfort</span>? Go <span class="font-weight-700">Brezza</span>—simple, dependable, cost-effective.</li>
+                    <li>Want <span class="font-weight-700">choices, style, and tech-rich features</span>? <span class="font-weight-700">Sonet</span> is your pick—offering premium perks and engine variety for modern buyers.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h3 class="subheading">FAQs: Maruti Brezza vs Kia Sonet</h3>
+
+                <div class="accordion" id="faqBrezzaSonet">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs1" aria-expanded="false" aria-controls="bs1">
+                                1. Which SUV has better fuel efficiency?
+                            </button>
+                        </h2>
+                        <div id="bs1" class="accordion-collapse collapse" data-bs-parent="#faqBrezzaSonet">
+                            <div class="accordion-body">
+                                The Maruti Brezza petrol is more efficient (19.9 kmpl ARAI) than the Sonet petrol variants. The Brezza also offers a CNG option with 25.51 km/kg efficiency. The Sonet diesel offers good mileage at 24.1 kmpl.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs2" aria-expanded="false" aria-controls="bs2">
+                                2. Which offers more engine choices?
+                            </button>
+                        </h2>
+                        <div id="bs2" class="accordion-collapse collapse" data-bs-parent="#faqBrezzaSonet">
+                            <div class="accordion-body">
+                                The Kia Sonet offers three engine options (1.2L petrol, 1.0L turbo petrol, 1.5L diesel) with multiple transmission choices. The Brezza comes only with a 1.5L petrol engine (with mild-hybrid) and a CNG variant.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs3" aria-expanded="false" aria-controls="bs3">
+                                3. Which has more premium features?
+                            </button>
+                        </h2>
+                        <div id="bs3" class="accordion-collapse collapse" data-bs-parent="#faqBrezzaSonet">
+                            <div class="accordion-body">
+                                The Kia Sonet offers more premium features like ventilated seats, Bose audio system, air purifier, and UVO connected car tech. The Brezza focuses on practical features like heads-up display and wireless charging.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs4" aria-expanded="false" aria-controls="bs4">
+                                4. Which is better for after-sales service?
+                            </button>
+                        </h2>
+                        <div id="bs4" class="accordion-collapse collapse" data-bs-parent="#faqBrezzaSonet">
+                            <div class="accordion-body">
+                                Maruti Suzuki has India's largest service network with lower maintenance costs. Kia's service network is growing but currently has fewer service centers and higher maintenance costs compared to Maruti.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs5" aria-expanded="false" aria-controls="bs5">
+                                5. Which has more boot space?
+                            </button>
+                        </h2>
+                        <div id="bs5" class="accordion-collapse collapse" data-bs-parent="#faqBrezzaSonet">
+                            <div class="accordion-body">
+                                The Kia Sonet offers more boot space at 385 liters compared to the Brezza's 328 liters. Both SUVs have similar exterior dimensions but the Sonet makes better use of interior space.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-line"></div>
+                <p>For more updates, comparisons, and in-depth SUV reviews, keep visiting <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a>—your trusted source for all things bikes and cars!</p>
+                <p>For Maruti Suzuki Motors <a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1">Click here!</a></p>
+                <p>For Kia Motors <a class="for-link" asp-controller="ValueForMoney" asp-action="KiaSyros_1">Click here!</a></p>
+            </div>
+        </div>
+       
+    </div>
+
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

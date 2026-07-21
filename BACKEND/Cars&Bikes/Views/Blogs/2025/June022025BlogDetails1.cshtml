@@ -1,0 +1,146 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Suzuki e-Access Electric Scooter: Specs, Features & Price";
+}
+@section MetaTags {
+    <meta name="keywords" content="Bikecarhub,Suzuki e-Access, Suzuki electric scooter, Suzuki e-Access launch date, Suzuki e-Access specs, e-Access 2024 scooter, Access 125 electric version, Long-range electric scooters India, Suzuki EV scooter, Best family electric scooter, Electric scooter under 1.25 lakh" />
+    <meta name="description" content="Discover at bikecarhub the all-new Suzuki e-Access – an electric scooter blending trusted performance with eco-friendly innovation. Range, specs, features & more." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+               
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p>The e-Access represents more than just an electric scooter; it symbolizes a shift in Suzuki’s strategy to embrace cleaner, smarter, and more sustainable urban mobility. This article takes a closer look at what the Suzuki e-Access brings to the table and why it might just become the EV India has been waiting for.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Background: Evolution of the Access Series</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/suzukieaccess/white.webp" alt="bikecarhubwhitesuzuki" title="bikecarhubwhitesuzuki" /></div>
+                </div>
+                <p>Launched in 2007, the <span class="font-weight-700"> Suzuki Access</span> has consistently ranked among the top-selling scooters in India. Praised for its smooth engine, good fuel economy, and low maintenance costs, the Access 125 carved a niche among urban riders who valued both performance and comfort.</p>
+                <p>Given its massive fan base, it makes perfect sense for Suzuki to electrify this iconic model. By transitioning an already trusted name to electric, Suzuki ensures brand familiarity while easing consumer hesitation around switching to EVs. In essence, the  <span class="font-weight-700">e-Access is a modern twist on a proven formula.</span><p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Suzuki e-Access: Concept and Early Glimpse</h3>
+                    <div class="row m-b20">
+                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/suzukieaccess/green.webp" alt="bikecarhubgreensuzuki" title="bikecarhubgreensuzuki" /></div>
+                    </div>
+                <p>The Suzuki e-Access made its first public appearance as a concept model at the <span class="font-weight-700">Auto Expo, </span>drawing considerable attention from media and potential buyers alike. Though not officially launched at the time, it gave enthusiasts a taste of what the Japanese giant has in store for the electric segment. </p>
+                <p>Visually, the e-Access closely resembles the existing Access 125, retaining its clean, conservative design. However, subtle EV cues such as a revised front apron, unique badging, and an all-digital cluster suggest its futuristic identity. </p>
+                <p>Suzuki is reportedly targeting <span class="font-weight-700">urban commuters, college students, and eco-conscious daily riders</span> with the e-Access, making it an everyday electric scooter with wide appeal.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Specifications</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/suzukieaccess/sidegreen.webp" alt="bikecarhubsidegreensuzuki" title="bikecarhubsidegreensuzuki" /></div>
+                </div>
+                <p>While official specifications are still under wraps, industry insiders and test mule sightings suggest the following <span class="font-weight-700">expected specs </span>for the Suzuki e-Access:</p>
+                 <ul>
+                    <li><span class="font-weight-700">Battery Type: Lithium Iron Phosphate(LFP)</span></li>
+                    <li><span class="font-weight-700">Battery Capacity: </span>60 Ah, 3.072 kWh</li>
+                    <li><span class="font-weight-700">Claimed Range:</span> 95 km on a single charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> Around 60–80 km/h</li>
+                    <li><span class="font-weight-700">Charging Time(Fast Charger): (0-80%) – 1 hrs 12 mins</span></li>
+                    <li><span class="font-weight-700">Charging Time(Fast Charger): (0-100%) – 2 hrs 12 mins</span></li>
+                    <li><span class="font-weight-700">Motor Type: </span>Hub-mounted electric motor</li>
+                    <li><span class="font-weight-700">Power Output: </span>4.1 kW</li>
+                    <li><span class="font-weight-700">Maximum Torque:</span> 15Nm</li>
+                    <li><span class="font-weight-700">Headlight: </span>LED</li>
+                    <li><span class="font-weight-700">Tail Light:</span> LED</li>
+                    <li><span class="font-weight-700">DRL:</span> LED</li>
+                 </ul>
+                <p>If these figures hold true, the e-Access would sit comfortably in the mid-range EV scooter segment, competing with rivals like <a class="for-link" asp-controller="TVS" asp-action="TVSiQube">TVS iQube</a> ,<a class="for-link" asp-controller="AtherEnergy" asp-action="Ather450"> Ather 450</a> and Hero Vida V1</p>
+                <div class="div-line"></div>
+                <h3 class="subheading"> Features and Technology</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/suzukieaccess/side.webp" alt="bikecarhubsidesuzuki" title="bikecarhubsidesuzuki" /></div>
+                </div>
+                <p>Suzuki is expected to equip the e-Access with a range of modern features to align with the needs of today's tech-savvy riders:</p>
+                <ul>
+                    <li><span class="font-weight-700">Fully Digital Instrument Console:</span> Displays speed, battery level, riding modes, trip info, and more</li>
+                    <li><span class="font-weight-700">Smart Connectivity: </span> Expected Bluetooth support with call/SMS alerts and ride statistics</li>
+                    <li><span class="font-weight-700">Riding Modes: </span>Likely to include Eco, Normal, and Power</li>
+                    <li><span class="font-weight-700">Reverse Assist: </span>Helpful for parking in tight spots</li>
+                    <li><span class="font-weight-700">USB Charging Port: </span> For on-the-go smartphone charging</li>
+                    <li><span class="font-weight-700">Regenerative Braking: </span> Likely included to improve battery efficiency</li>
+                </ul>
+                <p>In short, Suzuki is expected to retain its <span class="font-weight-700">comfort-first approach, </span> while also embracing smart technologies that modern electric scooter buyers now expect as standard.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Design and Build</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/suzukieaccess/redblack.webp" alt="bikecarhubredblacksuzuki" title="bikecarhubredblacksuzuki" /></div>
+                </div>
+                <p>True to its roots, the <span class="font-weight-700">e-Access retains the familiar and practical design language </span>of the Access 125. This approach is likely strategic—it makes the electric transition less intimidating for traditional users.</p>
+                <p><span class="font-weight-700">Key Design Elements:	</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Ergonomic Seating: </span>Comfortable for riders of all ages</li>
+                    <li><span class="font-weight-700">Large Footboard: </span>Practical for carrying small bags or daily groceries</li>
+                    <li><span class="font-weight-700">Lightweight Chassis: </span> Likely built on a modified underbone frame</li>
+                    <li><span class="font-weight-700">Under-Seat Storage: </span> Spacious enough for a helmet and charger</li>
+                    <li><span class="font-weight-700">Wheel Size & Suspension: </span>Expected to feature telescopic front forks and 12-inch wheels for better stability</li>
+                </ul>
+                <p>Color options and styling will likely reflect Suzuki’s minimal yet premium aesthetic, aimed at both younger and mature audiences.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Market Positioning and Pricing</h3>
+                <p><span class="font-weight-700">Suzuki </span>will likely position the e-Access as a <span class="font-weight-700">mid-premium electric scooter, </span>offering the reliability of the Access brand with EV benefits.<p>
+                <p><span class="font-weight-700">Expected Price: ₹1.10 lakh – ₹1.25 lakh (ex-showroom)</span></p>
+                <p>At this price point, it will compete with:</p>
+                <ul>
+                    <li><span class="font-weight-700">TVS iQube</span></li>
+                    <li><span class="font-weight-700">Hero Vida V1</span></li>
+                    <li><span class="font-weight-700">Bajaj Chetak</span></li>
+                    <li><span class="font-weight-700">Ola S1 Air</span></li>
+                </ul>
+                <p>However, <span class="font-weight-700">brand trust, service network, and familiarity with the Access platform </span>could give the e-Access a significant edge among value-conscious buyers.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Launch Timeline and Availability</h3>
+                <p>As of now, Suzuki has not officially confirmed the launch date of the e-Access, but multiple reports suggest<span class="font-weight-700"> mid 2025.</span> The model is expected to be made available across Suzuki’s existing network of two-wheeler dealerships under its EV sales strategy.
+                <p>There may also be <span class="font-weight-700">online booking options</span> along with introductory offers to encourage early adoption.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Potential Impact on the Indian EV Market</h3>
+                <p>Suzuki’s entry into the electric scooter segment through a <span class="font-weight-700">familiar model like the Access</span> could be a game-changer. The e-Access has the potential to:</p>
+                <ul>
+                    <li>Convert a large base of existing Access 125 users to electric</li>
+                    <li>Attract first-time EV buyers who were unsure about new brands</li>
+                    <li>Drive mainstream EV adoption in Tier 2 and Tier 3 cities due to Suzuki’s wide network</li>
+                    <li>Increase competition in the affordable EV space, driving innovation and price correction</li>
+                </ul>
+                <p>If executed well, the <span class="font-weight-700">e-Access could become India’s best-selling family electric scooter,</span> just like the petrol version did in its category.</p>
+                <h3 class="subheading">Conclusion</h3>
+                <p>The <span class="font-weight-700">Suzuki e-Access</span> is more than just another electric scooter—it represents a bridge between India’s petrol past and its electric future. Backed by Suzuki’s proven engineering, a trusted nameplate, and practical features, this EV could win hearts across generations of riders.</p>
+                <p>While final specifications and pricing are still awaited, all signs point toward the e-Access becoming a strong contender in the electric mobility space. It may not reinvent the wheel, but it could certainly make the<span class="font-weight-700"> transition to electric two-wheelers smoother and smarter </span>for millions of Indian commuters.</p>
+                <p>If you want to know about Suzuki Access 125 <a class="for-link" asp-controller="Suzuki" asp-action="SuzukiAccess125">click here</a></p>
+                <p>If you want to know about Suzuki Avenis 125<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiAvenis125"> click here</a></p>
+                <p>If you want to know about Suzuki Gixxer <a class="for-link" asp-controller="Suzuki" asp-action="SuzukiGixxer">click here</a></p>
+            
+            </div>
+            @await Html.PartialAsync("_AllBrandComponent")
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

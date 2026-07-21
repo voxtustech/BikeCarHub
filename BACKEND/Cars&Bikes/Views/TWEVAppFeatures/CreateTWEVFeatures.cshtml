@@ -1,0 +1,133 @@
+﻿@model TWEVFeatures
+@{
+    ViewBag.Title = "Create TW Features";
+}
+
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <div class="container mt-4">
+                        <h3>Create TW Features</h3>
+                        <form asp-action="CreateTWEVFeatures" method="post">
+                            <div class="form-group">
+                                <label asp-for="TwoWheelerId"></label>
+                                <select asp-for="TwoWheelerId" asp-items="ViewBag.TwoWheelers" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="TWVarientId"></label>
+                                <select asp-for="TWVarientId" asp-items="ViewBag.TWVarients" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="EVName"></label>
+                                <input asp-for="EVName" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Varients"></label>
+                                <input asp-for="Varients" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="InstrumentConsole"></label>
+                                <input asp-for="InstrumentConsole" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="BluetoothConnectivity"></label>
+                                <input asp-for="BluetoothConnectivity" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Navigation"></label>
+                                <input asp-for="Navigation" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CallSMSAlerts"></label>
+                                <input asp-for="CallSMSAlerts" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="RoadsideAssistance"></label>
+                                <input asp-for="RoadsideAssistance" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="AntiTheftAlarm"></label>
+                                <input asp-for="AntiTheftAlarm" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="USBChargingPort"></label>
+                                <input asp-for="USBChargingPort" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MusicControl"></label>
+                                <input asp-for="MusicControl" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="OTA "></label>
+                                <input asp-for="OTA " class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Speedometer"></label>
+                                <input asp-for="Speedometer" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Tripmeter"></label>
+                                <input asp-for="Tripmeter" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Odometer"></label>
+                                <input asp-for="Odometer" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="AdditionalFeaturesOfVariant"></label>
+                                <input asp-for="AdditionalFeaturesOfVariant" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="SeatType"></label>
+                                <input asp-for="SeatType" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Clock "></label>
+                                <input asp-for="Clock " class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="PassengerFootrest"></label>
+                                <input asp-for="PassengerFootrest" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CarryHook"></label>
+                                <input asp-for="CarryHook" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="UnderseatStorage"></label>
+                                <input asp-for="UnderseatStorage" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ChargerOutput"></label>
+                                <input asp-for="ChargerOutput" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="RegenerativeBraking"></label>
+                                <input asp-for="RegenerativeBraking" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="HillHold"></label>
+                                <input asp-for="HillHold" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="KeylessIgnition"></label>
+                                <input asp-for="KeylessIgnition" class="form-control" />
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>

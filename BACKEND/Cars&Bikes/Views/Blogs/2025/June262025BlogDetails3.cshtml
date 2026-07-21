@@ -1,0 +1,368 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "KTM Duke 200 vs Bajaj Pulsar NS200 – Full Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="KTM Duke 200 vs Bajaj Pulsar NS200, Duke 200 mileage, Pulsar NS200 features, KTM Duke 200 price, Pulsar NS200 performance, best 200cc bikes India 2025, KTM Duke 200 specs, Pulsar NS200 comparison" />
+    <meta name="description" content="Compare KTM Duke 200 and Bajaj Pulsar NS200 for mileage, features, price, and daily comfort. Find the perfect 200cc street bike for you at BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 26th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">The Battle of India’s Favourite 200cc Street Bikes</h2>
+                            <p>In this detailed comparison brought to you by <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span>, we'll dive deep into their design, performance, features, pricing, and more to help buyers make an informed decision.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Quick Overview</h2>
+            <p>The <span class="font-weight-700">KTM Duke 200</span> is an internationally designed street-naked motorcycle with a bold look, lightweight frame, and razor-sharp handling. It is known for its quick throttle response and premium feel.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/dukevsns200/ktm duke 200.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+            <p>The <span class="font-weight-700">Bajaj Pulsar NS200</span> is India's trusted street performer with a muscular build, balanced power delivery, and excellent value for money. It is popular for being versatile and affordable, without compromising on style.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/dukevsns200/bajaj pulsar ns 200.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Detailed Specifications Comparison</h2>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Specification</th>
+                            <th class="text-center">KTM Duke 200</th>
+                            <th class="text-center">Bajaj Pulsar NS200</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>Engine</td>
+                            <td>199.5cc, Single Cylinder Liquid-Cooled, DOHC, FI Engine</td>
+                            <td>199.5cc, Liquid Cooled, 4-Valve FI 6-Speed</td>
+                        </tr>
+                        <tr>
+                            <td>Power</td>
+                            <td>25 PS@10,000 rpm</td>
+                            <td>24.5 PS@9750 rpm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Torque</td>
+                            <td>19.2 Nm@8000 rpm</td>
+                            <td>18.74 Nm@8000 rpm</td>
+                        </tr>
+                        <tr>
+                            <td>Mileage (Approx.)</td>
+                            <td>35 kmpl</td>
+                            <td>40.36 kmpl</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Weight</td>
+                            <td>159 kg</td>
+                            <td>158 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel Tank Capacity</td>
+                            <td>13.5 litres</td>
+                            <td>12 litres</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Braking System</td>
+                            <td>Dual-channel ABS</td>
+                            <td>Dual-channel ABS (New models)</td>
+                        </tr>
+                        <tr>
+                            <td>Seat Height</td>
+                            <td>822 mm</td>
+                            <td>1075 mm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Colours</td>
+                            <td>Electronic Orange, Dark Galvano, Electric Orange, Silver Metallic</td>
+                            <td>Cocktail wine Red-White, Glossy Ebony Black, Metallic Pearl White, Pewter Grey-White</td>
+                        </tr>
+                        <tr>
+                            <td>Price (Ex-showroom)</td>
+                            <td>₹2,06,312 (Starting)</td>
+                            <td>₹1,58,336 (Starting)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Design and Styling</h2>
+            <p>The <span class="font-weight-700"><a class="for-link" asp-controller="KTM" asp-action="KTM200DUKE">KTM Duke 200</a></span> carries an aggressive streetfighter look with sharp tank shrouds, exposed trellis frame, and a compact, minimalistic design. It immediately grabs attention with its bold lines and lightweight frame.</p>
+                <p>On the other hand, the <span class="font-weight-700"><a class="for-link" asp-controller="Bajaj" asp-action="BajajPulsarNS200">Bajaj Pulsar NS200</a></span> looks muscular and slightly more commuter-friendly. It comes with a semi-faired look, sporty graphics, and an upright stance that balances style and comfort.</p>
+            <p>While the Duke 200 looks more premium and internationally inspired, the Pulsar NS200's design is more accessible and road-friendly for everyday Indian riders.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Engine Performance and Riding Experience</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/dukevsns200/ktm duke 200-2.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+            <h3 class="subheading">KTM Duke 200 Performance</h3>
+
+            <p>The Duke 200's liquid-cooled engine offers thrilling performance with sharp throttle response. The lightweight body and quick handling make it ideal for zipping through city traffic and enjoying weekend rides. It is a rev-happy bike that loves to be pushed hard.</p>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/dukevsns200/bajaj pulsar ns 200-3.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+            <h3 class="subheading">Bajaj Pulsar NS200 Performance</h3>
+            <p>The Pulsar NS200 offers a more balanced and refined power delivery. It feels stable at mid-range speeds and performs well on both city streets and highways. Its power comes in smoothly, making it a friendly option for daily riders.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Mileage and Fuel Efficiency Comparison</h2>
+            <p>The <span class="font-weight-700">KTM Duke 200</span> generally offers around <span class="font-weight-700">35 kmpl</span> under mixed riding conditions.</p>
+            <p>The <span class="font-weight-700">Bajaj Pulsar NS200</span> is slightly more fuel-efficient, delivering <span class="font-weight-700">40.36 kmpl</span>, making it the better pick for riders who commute daily and prioritize fuel economy.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Features and Technology</h2>
+            <h3 class="subheading">KTM Duke 200 Features:</h3>
+            <ul>
+                <li>Trellis frame for excellent agility</li>
+                <li>Fully digital console</li>
+                <li>Dual-channel ABS</li>
+                <li>LED headlamp (newer models)</li>
+            </ul>
+            
+            <h3 class="subheading">Bajaj Pulsar NS200 Features:</h3>
+            <ul>
+                <li>Perimeter frame for rigidity</li>
+                <li>Semi-digital console</li>
+                <li>Dual-channel ABS (latest versions)</li>
+                <li>Aggressive styling with sporty decals</li>
+            </ul>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Comfort, Ride Quality, and Daily Usability</h2>
+            <p>The <span class="font-weight-700">KTM Duke 200</span> has an upright riding posture, which is comfortable for city rides but may feel stiff on longer highway stretches. The seat is firmer, which suits short aggressive rides better than long-distance touring.</p>
+            <p>The <span class="font-weight-700">Bajaj Pulsar NS200</span> offers a more relaxed seating posture and a wider seat, which makes it more comfortable for longer commutes and occasional touring. The suspension on the NS200 is slightly softer, handling bad roads better.</p>
+            <p>For pillion riders, the NS200 provides a more comfortable experience compared to the Duke's compact rear seat.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Price and Value for Money</h2>
+            <p>The <span class="font-weight-700">KTM Duke 200</span> is priced around <span class="font-weight-700">₹2,06,312 (ex-showroom)</span>, which is justified by its premium build, brand appeal, and international engineering.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/dukevsns200/ktm duke 200-1.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+            <p>The <span class="font-weight-700">Bajaj Pulsar NS200</span> is more budget-friendly at around <span class="font-weight-700">₹1,58,336 (ex-showroom)</span>, offering a great mix of performance, comfort, and everyday practicality.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/dukevsns200/bajaj pulsar ns 200-1.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Pros and Cons</h2>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Bike</th>
+                            <th class="text-center">Pros</th>
+                            <th class="text-center">Cons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>KTM Duke 200</td>
+                            <td>Sharp handling, aggressive styling, premium feel</td>
+                            <td>Lower mileage, higher price</td>
+                        </tr>
+                        <tr>
+                            <td>Bajaj Pulsar NS200</td>
+                            <td>Affordable, comfortable for daily use, good mileage</td>
+                            <td>Less aggressive than Duke 200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Which Street Bike Should You Buy?</h2>
+            <p>The <span class="font-weight-700">KTM Duke 200</span> is the perfect option for riders who want aggressive streetfighter performance, premium build quality, and thrilling city rides. It's a head-turner with sharp handling and quick power delivery.</p>
+            <p>The <span class="font-weight-700">Bajaj Pulsar NS200</span> is an excellent choice for those who want a practical street bike that can handle daily commutes, occasional highway rides, and offers better fuel economy. It is more affordable and offers proven reliability.</p>
+            <p>Both bikes are great choices, but the final decision depends on whether the rider values raw performance (Duke 200) or practical comfort and savings (NS200).</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">FAQs: KTM Duke 200 vs Bajaj Pulsar NS200</h2>
+            
+            <div class="accordion" id="faqDukePulsar">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                            1. Which bike has better mileage, Duke 200 or NS200?
+                        </button>
+                    </h2>
+                    <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqDukePulsar">
+                        <div class="accordion-body">
+                            The Bajaj Pulsar NS200 offers slightly better mileage at 40.36 kmpl compared to the Duke 200's 35 kmpl.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                            2. Which bike is better for daily city commuting?
+                        </button>
+                    </h2>
+                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqDukePulsar">
+                        <div class="accordion-body">
+                            The KTM Duke 200 is sharper for quick city rides, but the NS200 is more comfortable for daily use and longer commutes.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                            3. Which bike is more affordable?
+                        </button>
+                    </h2>
+                    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqDukePulsar">
+                        <div class="accordion-body">
+                            The Bajaj Pulsar NS200 is more affordable by ₹30,000 -- ₹40,000 compared to the KTM Duke 200.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                            4. Does the Duke 200 have better technology?
+                        </button>
+                    </h2>
+                    <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqDukePulsar">
+                        <div class="accordion-body">
+                            Yes, the Duke 200 offers a premium trellis frame, full-digital console, and lightweight engineering.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                            5. Which bike is better for highway rides?
+                        </button>
+                    </h2>
+                    <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqDukePulsar">
+                        <div class="accordion-body">
+                            The Pulsar NS200 offers more comfort on highways due to its smoother suspension and more relaxed seating.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                            6. Which is more beginner-friendly?
+                        </button>
+                    </h2>
+                    <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqDukePulsar">
+                        <div class="accordion-body">
+                            Both bikes are beginner-friendly, but the NS200's smoother power delivery makes it slightly easier for new riders.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                            7. Do both bikes have ABS?
+                        </button>
+                    </h2>
+                    <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqDukePulsar">
+                        <div class="accordion-body">
+                            Yes, both the KTM Duke 200 and Bajaj Pulsar NS200 now come with dual-channel ABS.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                            8. Which bike is better for pillion riders?
+                        </button>
+                    </h2>
+                    <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqDukePulsar">
+                        <div class="accordion-body">
+                            The Pulsar NS200 offers better pillion comfort compared to the compact seat on the Duke 200.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                            9. Which has better service network support?
+                        </button>
+                    </h2>
+                    <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqDukePulsar">
+                        <div class="accordion-body">
+                            Both Bajaj and KTM (supported by Bajaj's network) offer excellent service coverage across India.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                            10. Which bike should I choose for a sporty weekend ride?
+                        </button>
+                    </h2>
+                    <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqDukePulsar">
+                        <div class="accordion-body">
+                            The KTM Duke 200 is better suited for aggressive, sporty weekend rides due to its quick handling and powerful engine.
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="div-line"></div>
+                <p>For more updates, comparisons, and in-depth SUV reviews, keep visiting <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a>—your trusted source for all things bikes and cars!</p>
+        </div>
+    </div>
+
+
+           
+
+            </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

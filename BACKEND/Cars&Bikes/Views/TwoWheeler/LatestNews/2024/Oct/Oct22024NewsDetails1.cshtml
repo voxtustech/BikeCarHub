@@ -1,0 +1,107 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "BMW X3 Set for India Launch at Bharat Mobility Global Expo 2025";
+}
+@section MetaTags{
+    <meta name="keywords" content="BMW X3 2025, BMW X3 India launch, Bharat Mobility Expo 2025, BMW luxury SUV, new BMW X3 features, BMW X3 specifications, BMW hybrid SUV India, luxury cars in India 2025." />
+    <meta name="description" content="BMW to unveil the new X3 SUV at Bharat Mobility Global Expo 2025 in India. Featuring updated design, hybrid powertrains, advanced safety features, and BMW's latest technology, the new X3 aims to set a benchmark in the luxury SUV segment." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>The luxury automaker BMW is all set to introduce the all-new X3 SUV in India during the Bharat Mobility Global Expo 2025, a premier event for automotive launches and technology advancements. The next-generation BMW X3 is expected to be packed with cutting-edge features and advanced technology, aligning well with the ever-growing demands of the Indian automotive market. The X3 has been a popular choice in the luxury SUV segment due to its sporty driving dynamics, robust build, and premium cabin experience, and this new model aims to elevate these aspects even further.</p>
+                <p>The upcoming X3 will be designed to cater to a broader audience, combining BMW’s signature driving pleasure with practicality and efficiency. It will feature updated exterior styling with sharper LED headlights, a larger kidney grille, and refined lines that lend it a sporty yet elegant appearance. Inside, BMW is likely to include a revamped cabin with premium materials, a new-generation infotainment system, and enhanced connectivity options.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/bmw set to unveil all new x3 at bharat mobility global expo 2025/1.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/bmw set to unveil all new x3 at bharat mobility global expo 2025/4.webp" /></div>
+                </div>
+                <p>Under the hood, the new X3 is anticipated to offer a range of efficient petrol and diesel engines, potentially with plug-in hybrid and mild-hybrid variants to cater to eco-conscious buyers. The focus on hybrid powertrains aligns with the trend of reducing emissions and improving fuel efficiency.</p>
+                <p>With improved safety features, a host of driver assistance systems, and the latest version of BMW’s iDrive technology, the new X3 aims to set a benchmark in the premium SUV segment. The launch at Bharat Mobility Global Expo is poised to attract considerable attention, marking BMW’s continued focus on innovation and customer satisfaction in India.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/bmw set to unveil all new x3 at bharat mobility global expo 2025/2.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/bmw set to unveil all new x3 at bharat mobility global expo 2025/3.webp" /></div>
+                </div>
+                <h3 class="subheading">Features and Specifications:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Engine Options:</span> Expected range of petrol, diesel, and hybrid powertrains with mild-hybrid variants.</li>
+                    <li><span class="font-weight-700">Transmission:</span> 8-speed automatic with paddle shifters.</li>
+                    <li><span class="font-weight-700">Exterior:</span> Larger kidney grille, LED headlamps, new alloy wheels, sporty lines.</li>
+                    <li><span class="font-weight-700">Interior:</span> Premium leather upholstery, panoramic sunroof, and digital cockpit.</li>
+                    <li><span class="font-weight-700">Infotainment:</span> New-generation iDrive with touchscreen and gesture controls, integrated Android Auto and Apple CarPlay.</li>
+                    <li><span class="font-weight-700">Safety Features:</span> Multiple airbags, adaptive cruise control, lane departure warning, 360-degree camera.</li>
+                    <li><span class="font-weight-700">Other Features:</span> Adaptive suspension, automatic climate control, powered tailgate, ambient lighting.</li>
+                </ol>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

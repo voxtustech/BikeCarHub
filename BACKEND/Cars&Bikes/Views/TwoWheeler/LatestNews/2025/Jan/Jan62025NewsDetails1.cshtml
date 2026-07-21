@@ -1,0 +1,218 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Upcoming MG Cyberster: The Future of Electric Convertibles";
+}
+@section MetaTags{
+    <meta name="keywords" content="MG Cyberster, electric convertible, MG Motor, electric vehicle, luxury EV, EV specifications, MG Cyberster launch" />
+    <meta name="description" content="Discover the all-electric MG Cyberster, an innovative convertible with futuristic design, advanced features, and a range of up to 800 km." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.NewsHeading" title="@Model.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Specifications and Features of MG Cyberster</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Category</th>
+                                <th class="text-center">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Powertrain</td>
+                                <td>Dual Electric Motors</td>
+                            </tr>
+                            <tr>
+                                <td>Range</td>
+                                <td>Up to 800 km (WLTP)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Acceleration</td>
+                                <td>0-100 km/h in under 3 seconds</td>
+                            </tr>
+                            <tr>
+                                <td>Battery Capacity</td>
+                                <td>Estimated 77 kWh</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Charging</td>
+                                <td>Fast Charging (DC): 0-80% in 30 minutes</td>
+                            </tr>
+                            <tr>
+                                <td>Drive Type</td>
+                                <td>All-Wheel Drive (AWD)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Top Speed</td>
+                                <td>Over 200 km/h</td>
+                            </tr>
+                            <tr>
+                                <td>Design</td>
+                                <td>Convertible Roadster with a sleek, futuristic aesthetic</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Infotainment</td>
+                                <td>14-inch touchscreen with AI-driven features, augmented reality heads-up display (AR-HUD)</td>
+                            </tr>
+                            <tr>
+                                <td>Connectivity</td>
+                                <td>5G connectivity, OTA updates, smart app integration</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Safety</td>
+                                <td>Advanced Driver Assistance Systems (ADAS), including adaptive cruise control and lane-keeping assist</td>
+                            </tr>
+                            <tr>
+                                <td>Interior</td>
+                                <td>Premium leather seats, customizable ambient lighting, and a fully digital cockpit</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Price</td>
+                                <td>Expected to start at ₹1.5 crore (India) or $150,000 (global market)</td>
+                            </tr>
+                            <tr>
+                                <td>Launch Timeline</td>
+                                <td>Late 2025 (India)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading">MG Cyberster Specifications and Features: A Closer Look</h3>
+                <p>The MG Cyberster is more than just a car—it’s a statement. With its cutting-edge design, exhilarating performance, and state-of-the-art technology, the Cyberster redefines what we can expect from electric vehicles. Here’s an in-depth look at its specifications and features:</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2025/jan/upcomingmgcyberstertheelectricconvertiblerevolution/cybersterexterior1.webp" alt="cybersterexterior1" title="cybersterexterior1" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2025/jan/upcomingmgcyberstertheelectricconvertiblerevolution/cybersterexterior2.webp" alt="cybersterexterior2" title="cybersterexterior2" /></div>
+                </div>
+                <h3 class="subheading">Specifications of MG Cyberster</h3>
+                <p class="font-weight-700">1. Powertrain & Performance</p>
+                <ul>
+                    <li><span class="font-weight-700">Dual Electric Motors:</span> Delivers exceptional power and precision.</li>
+                    <li><span class="font-weight-700">Top Speed:</span> Exceeds 200 km/h for thrilling highway drives.</li>
+                    <li><span class="font-weight-700">Acceleration:</span> Achieves 0-100 km/h in under 3 seconds, making it one of the fastest EVs in its class.</li>
+                    <li><span class="font-weight-700">Drive System:</span> All-Wheel Drive (AWD) ensures superior traction and handling.</li>
+                </ul>
+                <p class="font-weight-700">2. Battery & Range</p>
+                <ul>
+                    <li><span class="font-weight-700">Battery Capacity:</span> Approximately 77 kWh, offering a balance of performance and range.</li>
+                    <li><span class="font-weight-700">Driving Range:</span> Up to 800 km (WLTP cycle) on a single charge, setting a new benchmark for EV convertibles.</li>
+                    <li><span class="font-weight-700">Fast Charging:</span> DC fast charging enables 0-80% charge in just 30 minutes.</li>
+                </ul>
+                <p class="font-weight-700">3. Dimensions</p>
+                <ul>
+                    <li><span class="font-weight-700">Length:</span> ~4,300 mm</li>
+                    <li><span class="font-weight-700">Width:</span> ~1,800 mm</li>
+                    <li><span class="font-weight-700">Height:</span> ~1,300 mm</li>
+                    <li><span class="font-weight-700">Wheelbase:</span> Long wheelbase for enhanced stability and interior space.</li>
+                </ul>
+                <p class="font-weight-700">4. Exterior Design</p>
+                <ul>
+                    <li><span class="font-weight-700">Convertible Roadster:</span> Aerodynamic and futuristic design.</li>
+                    <li><span class="font-weight-700">Signature Features:</span> Scissor doors, LED headlights, and a sleek rear profile enhance its sporty appeal.</li>
+                </ul>
+                <div class="div-line"></div>
+                <h3 class="subheading">Features of MG Cyberster</h3>
+                <p class="font-weight-700">1. Interior & Comfort</p>
+                <ul>
+                    <li><span class="font-weight-700">Digital Cockpit:</span> A fully digital dashboard paired with a 14-inch touchscreen infotainment system.</li>
+                    <li><span class="font-weight-700">Premium Seating:</span> High-quality leather seats with heating and ventilation options.</li>
+                    <li><span class="font-weight-700">Ambient Lighting:</span> Customizable lighting to match your mood.</li>
+                    <li><span class="font-weight-700">Convertible Roof:</span> Electrically operated soft top for open-air driving.</li>
+                </ul>
+                <p class="font-weight-700">2. Technology</p>
+                <ul>
+                    <li><span class="font-weight-700">Infotainment:</span> AI-driven features, augmented reality heads-up display (AR-HUD), and 5G connectivity.</li>
+                    <li><span class="font-weight-700">Voice Commands:</span> Advanced voice assistant for seamless control.</li>
+                    <li><span class="font-weight-700">OTA Updates:</span> Over-the-air updates ensure the latest features are always at your fingertips.</li>
+                </ul>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2025/jan/upcomingmgcyberstertheelectricconvertiblerevolution/cybersterinterior.webp" alt="cybersterinterior" title="cybersterinterior" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2025/jan/upcomingmgcyberstertheelectricconvertiblerevolution/cybersterperformance.webp" alt="cybersterperformance" title="cybersterperformance" /></div>
+                </div>
+                <p class="font-weight-700">3. Safety</p>
+                <ul>
+                    <li><span class="font-weight-700">Advanced Driver Assistance Systems (ADAS):</span> Includes adaptive cruise control, automatic emergency braking, lane-keeping assist, and traffic sign recognition.</li>
+                    <li><span class="font-weight-700">Cameras & Sensors:</span> 360-degree cameras and ultrasonic sensors for better situational awareness.</li>
+                    <li><span class="font-weight-700">Build Quality:</span> Ultra-high-strength steel and aluminum for a lightweight yet strong body structure.</li>
+                </ul>
+                <p class="font-weight-700">4. Connectivity</p>
+                <ul>
+                    <li><span class="font-weight-700">Smartphone Integration:</span> Compatible with Apple CarPlay and Android Auto.</li>
+                    <li><span class="font-weight-700">Remote Control:</span> Manage functions like climate control and locking/unlocking via the MG smartphone app.</li>
+                    <li><span class="font-weight-700">5G Connectivity:</span> Ensures fast, seamless internet access for navigation, streaming, and updates</li>
+                </ul>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

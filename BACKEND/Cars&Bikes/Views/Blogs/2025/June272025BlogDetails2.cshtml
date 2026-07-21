@@ -1,0 +1,373 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Suzuki Gixxer SF vs Yamaha FZ25 Comparison 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Suzuki Gixxer SF vs Yamaha FZ25, Gixxer SF mileage, Yamaha FZ25 performance, best commuter bike 2025, Gixxer vs FZ25 price, premium commuter bike comparison, Suzuki Gixxer SF features, Yamaha FZ25 comfort, Suzuki Gixxer SF vs Yamaha FZ25 review" />
+    <meta name="description" content="Compare Suzuki Gixxer SF vs Yamaha FZ25 for design, mileage, comfort, and performance. Find the best fit for your ride with BikeCarHub’s detailed guide." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 27th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+
+                      <p>While the <span class="font-weight-700">Suzuki Gixxer SF</span> appeals to those who love fully-faired, sporty designs, the <span class="font-weight-700">Yamaha FZ25</span> is known for its aggressive streetfighter looks and highway-friendly comfort. This detailed comparison by <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span> will help riders understand which bike is the better pick in 2025.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Suzuki Gixxer SF and Yamaha FZ25</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/gixxervsfz25/suzuki-gixxer-sf.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+
+                <p>The <span class="font-weight-700"><a class="for-link" asp-controller="Suzuki" asp-action="SuzukiGixxerSF">Suzuki Gixxer SF</a></span> is a fully-faired 155cc sports commuter, known for its sleek design and city-focused performance. It is lightweight, stylish, and attracts riders looking for a sporty yet practical daily bike.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/gixxervsfz25/yamaha fz25.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+            <p>The <span class="font-weight-700"><a class="for-link" asp-controller="Yamaha" asp-action="YamahaFZX">Yamaha FZ25</a></span> is a 249cc naked streetfighter that delivers a more powerful riding experience, perfect for city rides and occasional highway trips. It is popular among those who want a muscular, no-fuss machine with reliable performance.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Detailed Specifications Comparison</h2>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Specification</th>
+                            <th class="text-center">Suzuki Gixxer SF</th>
+                            <th class="text-center">Yamaha FZ25</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>Engine</td>
+                            <td>155cc, 4-Cycle, 1-Cylinder, Air-Cooled</td>
+                            <td>249cc, Air-Cooled, 4-Stroke, SOHC, 2-Valve</td>
+                        </tr>
+                        <tr>
+                            <td>Power</td>
+                            <td>13.6 PS@8000 rpm</td>
+                            <td>20.8 PS@8000 rpm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Torque</td>
+                            <td>13.8 Nm@6000 rpm</td>
+                            <td>20.1 Nm@6000 rpm</td>
+                        </tr>
+                        <tr>
+                            <td>Mileage (Approx.)</td>
+                            <td>45 kmpl</td>
+                            <td>38 kmpl</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Weight</td>
+                            <td>148 kg</td>
+                            <td>153 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel Tank Capacity</td>
+                            <td>12 litres</td>
+                            <td>14 litres</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Braking System</td>
+                            <td>Dual-channel ABS</td>
+                            <td>Dual-channel ABS</td>
+                        </tr>
+                        <tr>
+                            <td>Seat Height</td>
+                            <td>795 mm</td>
+                            <td>795 mm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Price (Ex-showroom)</td>
+                            <td>₹1,47,400 -₹1,47,901</td>
+                            <td>₹1,38,800 - ₹1,50,200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Design and Styling</h2>
+            <p>The <span class="font-weight-700">Suzuki Gixxer SF</span> is all about sharp, aerodynamic styling. Its fully-faired body, aggressive LED headlamp, and race-inspired graphics make it a head-turner on city streets. It's perfect for riders who want a sporty look in their daily commute.</p>
+            <p>On the other hand, the <span class="font-weight-700">Yamaha FZ25</span> carries a bold, muscular design with minimal fairing. Its beefy fuel tank, wide handlebars, and tough street presence give it a rugged look. Riders who love naked streetfighters will naturally lean towards the FZ25's stance.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Engine Performance and Ride Feel</h2>
+            <h3 class="subheading">Suzuki Gixxer SF Performance</h3>
+         
+            <p>The Suzuki Gixxer SF is powered by a smooth 155cc engine that delivers a peppy ride, ideal for city traffic. It's lightweight, quick off the mark, and perfect for riders who enjoy agile handling in busy urban streets.</p>
+            
+            <h3 class="subheading">Yamaha FZ25 Performance</h3>
+         
+            <p>The Yamaha FZ25 is equipped with a 249cc engine that offers superior torque and effortless cruising at higher speeds. It feels stable and relaxed on highways and can comfortably manage longer rides. The extra power is a bonus for riders who want a more versatile machine.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Mileage and Fuel Efficiency Comparison</h2>
+            <p>When it comes to fuel economy, the <span class="font-weight-700">Suzuki Gixxer SF</span> performs well with an average mileage of <span class="font-weight-700">45 kmpl</span>, making it a cost-effective choice for daily city riders.</p>
+            <p>The <span class="font-weight-700">Yamaha FZ25</span>, being a larger engine motorcycle, delivers around <span class="font-weight-700">38 kmpl</span>, which is respectable for a 250cc bike but slightly higher on fuel consumption compared to the Gixxer SF.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Features and Technology</h2>
+            <p>Both bikes offer essential modern features:</p>
+            <h3 class="subheading">Suzuki Gixxer SF Features:</h3>
+            <ul>
+                <li>Full digital console</li>
+                <li>LED headlamp and tail lamp</li>
+                <li>Dual-channel ABS</li>
+                <li>Sporty split seats</li>
+            </ul>
+            
+            <h3 class="subheading">Yamaha FZ25 Features:</h3>
+            <ul>
+                <li>Digital console</li>
+                <li>Bi-functional LED headlamp</li>
+                <li>Dual-channel ABS</li>
+                <li>Side-stand engine cut-off</li>
+            </ul>
+            <p>While neither bike offers Bluetooth or advanced connectivity, they both focus on practical features that enhance daily riding safety and comfort.</p>
+            
+            <div class="div-line"></div>
+                <h2 class="subheading">Comfort and Ride Quality:Daily Commute or Touring?</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/gixxervsfz25/suzuki-gixxer-sf-1.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+            <h3 class="subheading">Suzuki Gixxer SF Comfort</h3>
+            <p>The Gixxer SF has a slightly aggressive seating position but remains comfortable for daily commuting. Its lightweight frame and soft seat make it city-friendly but not ideal for long-distance rides.</p>
+            
+            <h3 class="subheading">Yamaha FZ25 Comfort</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/gixxervsfz25/yamaha fz25-1.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p>The FZ25 offers a more upright, relaxed seating posture with better suspension setup. It handles potholes and bad roads with more confidence and is better suited for long weekend rides and highway touring.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Price and Value for Money</h2>
+            <p>The <span class="font-weight-700">Suzuki Gixxer SF</span> is priced between <span class="font-weight-700">₹1,47,400 -- ₹1,47,901 (ex-showroom)</span> while the <span class="font-weight-700">Yamaha FZ25</span> is slightly higher at <span class="font-weight-700">₹1,38,800 -- ₹1,50,200</span>.</p>
+            <p>Both bikes offer good value, but the Gixxer SF provides a more affordable entry point for riders looking for a sporty bike. The FZ25, for a small premium, delivers extra power and better touring comfort.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Pros and Cons</h2>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Bike</th>
+                            <th class="text-center">Pros</th>
+                            <th class="text-center">Cons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>Suzuki Gixxer SF</td>
+                            <td>Sporty looks, lightweight, good mileage</td>
+                            <td>Less powerful, aggressive seating</td>
+                        </tr>
+                        <tr>
+                            <td>Yamaha FZ25</td>
+                            <td>Strong performance, comfortable for long rides</td>
+                            <td>Slightly lower mileage, heavier weight</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Best Fit for Rider Profiles</h2>
+            <h3 class="subheading">Suzuki Gixxer SF is Ideal For:</h3>
+            <ul>
+                <li>Riders who want a stylish, fully-faired commuter</li>
+                <li>Young city riders focused on mileage and lightweight handling</li>
+                <li>Occasional weekend riders</li>
+            </ul>
+            
+            <h3 class="subheading">Yamaha FZ25 is Ideal For:</h3>
+            <ul>
+                <li>Riders who want strong highway and city performance</li>
+                <li>Commuters looking for comfort and stable handling</li>
+                <li>Occasional tourers who want a practical all-rounder</li>
+            </ul>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Final Verdict</h2>
+            <p>Both the <span class="font-weight-700">Suzuki Gixxer SF</span> and <span class="font-weight-700">Yamaha FZ25</span> offer excellent value in their segments but cater to different rider preferences. Riders looking for sporty styling, higher mileage, and a lighter, city-friendly machine will find the Gixxer SF more appealing.</p>
+            <p>On the other hand, the Yamaha FZ25 is a powerful, comfortable, and muscular bike that can handle both daily city commutes and highway rides with ease.</p>
+            <p>Ultimately, the right choice depends on whether the rider prioritizes style and economy (Gixxer SF) or power and comfort (FZ25).</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">FAQs: Suzuki Gixxer SF vs Yamaha FZ25</h2>
+            
+            <div class="accordion" id="faqGixxerFZ25">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                            1. Which bike offers better mileage, Gixxer SF or FZ25?
+                        </button>
+                    </h2>
+                    <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqGixxerFZ25">
+                        <div class="accordion-body">
+                            The Suzuki Gixxer SF offers better mileage at around 45 kmpl, compared to the Yamaha FZ25's 38 kmpl.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                            2. Which bike is better for highway rides?
+                        </button>
+                    </h2>
+                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqGixxerFZ25">
+                        <div class="accordion-body">
+                            The Yamaha FZ25 is better suited for highways due to its stronger engine and more stable ride at higher speeds.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                            3. Does the Suzuki Gixxer SF have ABS?
+                        </button>
+                    </h2>
+                    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqGixxerFZ25">
+                        <div class="accordion-body">
+                            Yes, the Suzuki Gixxer SF comes with dual-channel ABS as standard.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                            4. Is the Yamaha FZ25 heavier than the Gixxer SF?
+                        </button>
+                    </h2>
+                    <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqGixxerFZ25">
+                        <div class="accordion-body">
+                            Yes, the FZ25 is slightly heavier at 153 kg, while the Gixxer SF weighs around 148 kg.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                            5. Which bike is better for city riding?
+                        </button>
+                    </h2>
+                    <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqGixxerFZ25">
+                        <div class="accordion-body">
+                            The Gixxer SF is easier to maneuver in city traffic due to its lighter weight and compact design.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                            6. Are both bikes suitable for beginners?
+                        </button>
+                    </h2>
+                    <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqGixxerFZ25">
+                        <div class="accordion-body">
+                            Yes, both bikes are beginner-friendly. The Gixxer SF is perfect for entry-level riders, while the FZ25 is a great step-up bike.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                            7. Which bike is more comfortable for long rides?
+                        </button>
+                    </h2>
+                    <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqGixxerFZ25">
+                        <div class="accordion-body">
+                            The Yamaha FZ25 offers better comfort for long-distance rides due to its upright seating and better suspension.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                            8. Which has a more aggressive riding posture?
+                        </button>
+                    </h2>
+                    <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqGixxerFZ25">
+                        <div class="accordion-body">
+                            The Suzuki Gixxer SF has a sportier, slightly forward-leaning posture compared to the relaxed seating of the FZ25.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                            9. What is the price difference between the two bikes?
+                        </button>
+                    </h2>
+                    <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqGixxerFZ25">
+                        <div class="accordion-body">
+                            The Yamaha FZ25 is priced slightly higher than the Suzuki Gixxer SF, but the difference is justified by its engine performance.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                            10. Which bike should you buy for daily commuting?
+                        </button>
+                    </h2>
+                    <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqGixxerFZ25">
+                        <div class="accordion-body">
+                            If daily commuting and mileage are priorities, the Suzuki Gixxer SF is a better choice. If occasional long rides are expected, the Yamaha FZ25 is more practical.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+          
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

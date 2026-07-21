@@ -1,0 +1,298 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top Cars Under ₹7 Lakhs in India (2024) – Affordable & Feature-Packed";
+}
+@section MetaTags{
+    <meta name="keywords" content="Cars under 7 lakhs, budget cars India, best cars under 7 lakhs, affordable cars, 2024 cars under 7 lakhs, Maruti Suzuki Alto K10, Tata Tiago, Renault Kwid, Hyundai Grand i10 Nios" />
+    <meta name="description" content="Discover the best cars under ₹7 lakhs in India for 2024. Explore top budget-friendly variants with on-road prices, features, and mileage details." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. Maruti Suzuki Alto K10</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Variant:</span> VXI
+                            </li>
+                            <li>
+                                <span class="font-weight-700">On-Road Price:</span> ₹6.50 lakhs (approx.)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Highlights:</span>
+                                <ul>
+                                    <li>1.0L petrol engine with peppy performance.</li>
+                                    <li><span class="font-weight-700">Mileage:</span> 24-26 km/l.</li>
+                                    <li>Compact design, ideal for city driving.</li>
+                                    <li><span class="font-weight-700">Features:</span> Touchscreen infotainment, dual airbags, ABS with EBD.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span><br />
+                                    Affordable maintenance and Maruti Suzuki’s extensive service network.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestcarsunder7lakhsinindia(2024)/maruti suzuki alto k10.webp" alt="Maruti Suzuki Alto K10" title="Maruti Suzuki Alto K10" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. Tata Tiago</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Variant:</span> XE
+                            </li>
+                            <li>
+                                <span class="font-weight-700">On-Road Price:</span> ₹6.90 lakhs (approx.)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Highlights:</span>
+                                <ul>
+                                    <li>1.2L Revotron petrol engine.</li>
+                                    <li><span class="font-weight-700">Mileage:</span> 20-23 km/l.</li>
+                                    <li>High safety rating (4 stars in Global NCAP).</li>
+                                    <li><span class="font-weight-700">Features:</span> Dual airbags, rear parking sensors, sturdy build.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span><br />
+                                Offers premium build quality and advanced safety features at a budget-friendly price.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestcarsunder7lakhsinindia(2024)/tata tiago.webp" alt="Tata Tiago" title="Tata Tiago" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">3. Renault Kwid</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Variant:</span> RXT 1.0
+                            </li>
+                            <li>
+                                <span class="font-weight-700">On-Road Price:</span> ₹6.70 lakhs (approx.)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Highlights:</span>
+                                <ul>
+                                    <li>1.0L petrol engine with AMT option.</li>
+                                    <li><span class="font-weight-700">Mileage:</span> 21-22 km/l.</li>
+                                    <li>Sporty SUV-inspired design.</li>
+                                    <li><span class="font-weight-700">Features:</span> LED DRLs, 8-inch touchscreen, digital instrument cluster.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span><br />
+                                Perfect for urban commuters with its unique style and feature-packed interior.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestcarsunder7lakhsinindia(2024)/renault kwid.webp" alt="Renault Kwid" title="Renault Kwid" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">4. Hyundai Grand i10 Nios</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Variant:</span> Era
+                            </li>
+                            <li>
+                                <span class="font-weight-700">On-Road Price:</span> ₹6.99 lakhs (approx.)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Highlights:</span>
+                                <ul>
+                                    <li>1.2L Kappa petrol engine.</li>
+                                    <li><span class="font-weight-700">Mileage:</span> 20-21 km/l.</li>
+                                    <li>Spacious and premium interiors.</li>
+                                    <li><span class="font-weight-700">Features:</span> Power windows, ABS with EBD, front dual airbags.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span><br />
+                                Reliable performance and brand trust of Hyundai.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestcarsunder7lakhsinindia(2024)/hyundai grand i10 nios.webp" alt="Hyundai Grand i10 Nios" title="Hyundai Grand i10 Nios" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">5. Maruti Suzuki Celerio</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Variant:</span> VXI
+                            </li>
+                            <li>
+                                <span class="font-weight-700">On-Road Price:</span> ₹6.85 lakhs (approx.)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Highlights:</span>
+                                <ul>
+                                    <li>1.0L DualJet petrol engine with excellent fuel efficiency.</li>
+                                    <li><span class="font-weight-700">Mileage:</span> 26-27 km/l.</li>
+                                    <li>Compact yet spacious design.</li>
+                                    <li><span class="font-weight-700">Features:</span> SmartPlay infotainment system, idle start-stop, dual airbags.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span><br />
+                                Best-in-class mileage and practical features.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestcarsunder7lakhsinindia(2024)/maruti suzuki celerio.webp" alt="Maruti Suzuki Celerio" title="Maruti Suzuki Celerio" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">6. Maruti Suzuki S-Presso</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Variant:</span> VXI+
+                            </li>
+                            <li>
+                                <span class="font-weight-700">On-Road Price:</span> ₹6.75 lakhs (approx.)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Highlights:</span>
+                                <ul>
+                                    <li>1.0L petrol engine.</li>
+                                    <li><span class="font-weight-700">Mileage:</span> 24-25 km/l.</li>
+                                    <li>Mini SUV-like design with high ground clearance.</li>
+                                    <li><span class="font-weight-700">Features:</span> SmartPlay Studio, dual airbags, ABS with EBD.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span><br />
+                                A quirky design with an SUV stance at a hatchback price.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestcarsunder7lakhsinindia(2024)/maruti suzuki s-presso.webp" alt="Maruti Suzuki S-Presso" title="Maruti Suzuki S-Presso" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">7. Citroën C3</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Variant:</span> Live
+                            </li>
+                            <li>
+                                <span class="font-weight-700">On-Road Price:</span> ₹6.99 lakhs (approx.)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Highlights:</span>
+                                <ul>
+                                    <li>1.2L petrol engine.</li>
+                                    <li><span class="font-weight-700">Mileage:</span> 19-20 km/l.</li>
+                                    <li>European design and comfort-focused cabin.</li>
+                                    <li><span class="font-weight-700">Features:</span> Dual-tone interiors, touchscreen infotainment, high ground clearance.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span><br />
+                                A stylish, modern hatchback with a premium feel.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestcarsunder7lakhsinindia(2024)/citroen c3.webp" alt="Citroën C3" title="Citroën C3" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading">Key Considerations When Choosing a Car Under ₹7 Lakhs</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Fuel Efficiency:</span> Opt for cars with high mileage to save on fuel costs.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Safety Features:</span> Look for cars with at least dual airbags, ABS, and a sturdy build.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">After-Sales Service:</span> Ensure the brand has a widespread service network.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Resale Value:</span> Brands like Maruti Suzuki and Hyundai offer better resale value.
+                    </li>
+                    </ol>
+                <div class="div-line"></div>
+                <h3 class="subheading">Final Thoughts</h3>
+                <p>These cars prove that you don’t need to spend a fortune to own a reliable, feature-packed vehicle in India. Whether you prioritize fuel efficiency, safety, or modern features, there’s something for everyone in this list. Take a test drive, compare features, and pick the one that best suits your needs and lifestyle.</p>
+                <p>Which one would you choose? Let us know in the comments below!</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @*  <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

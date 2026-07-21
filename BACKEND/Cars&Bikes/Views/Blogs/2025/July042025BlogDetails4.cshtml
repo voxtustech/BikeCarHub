@@ -1,0 +1,597 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Kia Sonet vs Hyundai Venue vs Tata Nexon vs Maruti Brezza vs Škoda Kylaq: Best Compact SUV 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Kia Sonet vs Hyundai Venue vs Tata Nexon vs Maruti Brezza vs Škoda Kylaq, best compact SUV India 2025, Kia Sonet review 2025, Hyundai Venue specifications, Tata Nexon features, Maruti Brezza mileage, Škoda Kylaq price, compact SUV comparison 2025, best sub-4 meter SUV, SUV buying guide 2025, fuel efficient SUV India" />
+    <meta name="description" content="Comprehensive comparison of Kia Sonet, Hyundai Venue, Tata Nexon, Maruti Brezza and Škoda Kylaq compact SUVs in 2025. Compare engines, features, prices and find the best SUV for your needs." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 4th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+
+                <h2 class="subheading">1. Engine & Performance</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Engine Options (cc)</th>
+                                <th class="text-center">Power & Torque</th>
+                                <th class="text-center">Transmission Types</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Kia Sonet</td>
+                                <td>998-cc I3 T-GDi, 1197-cc MPI, 1493-cc MPI/Diesel</td>
+                                <td>120 PS/172 Nm (turbo), 83 PS/115 Nm (1.2 MPI), 115 PS/144 Nm (1.5 MPI); Diesel 115 PS/250 Nm</span></td>
+                                <td>5-sp & 6-sp manual, 6-sp auto, 7-sp DCT, CVT, 6-sp AT</td>
+                            </tr>
+                            <tr>
+                                <td>Hyundai Venue</td>
+                                <td>998-cc I3 turbo MPI, 121-hp 1.5L (diesel)</td>
+                                <td>120 PS/172 Nm (turbo)petrol, 114 bhp (~113 PS/250Nm) diesel</td>
+                                <td>6-sp manual, 7-sp DCT, iMT clutchless, IVT (CVT)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Tata Nexon</td>
+                                <td>1199-cc Revotron 3 cylinder, 1497-cc Revotorq diesel 4 cylinder, 1.2L CNG</td>
+                                <td>Petrol: 120 PS/170 Nm; Diesel: 115 PS/260 Nm; CNG:99 bhp</td>
+                                <td>6-sp manual & AMT (both engines) & 7 speed DTC</td>
+                            </tr>
+                            <tr>
+                                <td>Maruti Brezza</td>
+                                <td>1462-cc K15C petrol/td>
+                                <td>103 PS/137 Nm</td>
+                                <td>5-sp manual, 6-sp automatic</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Škoda Kylaq</td>
+                                <td>999-ccTSI turbo petrol</td>
+                                <td>114 PS/178 Nm</td>
+                                <td>6-sp manual or 6-sp automatic</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">Insights:</h3>
+                <ul>
+                    <li>The <span class="font-weight-700">Sonet</span> and <span class="font-weight-700">Nexon</span> offer the most variety, with multiple petrol and diesel options; Sonet adds a sporty 1.0-litre turbo.</li>
+                    <li><span class="font-weight-700">Venue</span> is focused on petrol markets; plans for hybrid/electric in some regions.</li>
+                    <li><span class="font-weight-700">Brezza</span> uses a simple, reliable 1.5-litre petrol; no turbo.</li>
+                    <li><span class="font-weight-700">Kylaq</span> targets the premium small SUV segment with turbo efficiency.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">2. Fuel Efficiency (ARAI / Manufacturer Data)</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Claimed Efficiency</th>
+                                <th class="text-center">City/Highway Figures</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Kia Sonet</td>
+                                <td>18.2-24.1 kmpl</td>
+                                <td>Diesel ~19 kmpl</td>
+                            </tr>
+                            <tr>
+                                <td>Hyundai Venue</td>
+                                <td>18.3 kmpl (ARAI); City ~16 kmpl</td>
+                                <td>16 Kmlp (P), 23Kmpl(D)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Tata Nexon</td>
+                                <td>Diesel: ~24 kmpl; CNG 16.5-18 km/kg</td>
+                                <td>17 Kmpl(P), 22 Kmpl(D), 17.44 km/kg(Cng)</td>
+                            </tr>
+                            <tr>
+                                <td>Maruti Brezza</td>
+                                <td>Petrol: 17.4-19.9 kmpl; AT: 19.8 kmpl</td>
+                                <td>25 (Cng);19(P)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Škoda Kylaq</td>
+                                <td>Estimated 17-19 kmpl (city/highway)</td>
+                                <td>18 kmpl</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">Insights:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Sonet's</span> diesel variant leads in efficiency; petrol manual is strong.</li>
+                    <li><span class="font-weight-700">Venue</span> offers decent mileage, typical for small turbos.</li>
+                    <li><span class="font-weight-700">Nexon diesel</span> is efficient for its power; CNG gives best cost savings.</li>
+                    <li><span class="font-weight-700">Brezza</span> delivers solid city mileage; AT surprisingly fuel-efficient.</li>
+                    <li><span class="font-weight-700">Kylaq</span> delivers balance performance and economy.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">3. Dimensions & Practicality</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Length × Width × Height (mm)</th>
+                                <th class="text-center">Wheelbase (mm)</th>
+                                <th class="text-center">Boot Space (L)</th>
+                                <th class="text-center">Ground Clearance (mm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Sonet</td>
+                                <td>~3995 × 1790 × 1620 mm</td>
+                                <td>2,500 mm</td>
+                                <td>385 L</td>
+                                <td>205 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Venue</td>
+                                <td>~3995 × 1790 × 1617 mm</td>
+                                <td>2500 mm</td>
+                                <td>350 L</td>
+                                <td>205 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Nexon</td>
+                                <td>~3995 × 1804 × 1620 mm</td>
+                                <td>2498 mm</td>
+                                <td>382 L</td>
+                                <td>208 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Brezza</td>
+                                <td>~3995 × 1790 × 1685 mm</td>
+                                <td>2500 mm</td>
+                                <td>328 L</td>
+                                <td>198 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Kylaq</td>
+                                <td>~3995 × 1783 × 1619 mm</td>
+                                <td>2566 mm</td>
+                                <td>446 L</td>
+                                <td>189 mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">Insights:</h3>
+                <ul>
+                    <li>All fall around 4 m; <span class="font-weight-700">Venue</span> exploits tax class.</li>
+                    <li><span class="font-weight-700">Sonet</span> offers best boot (385 L) and ground clearance (205 mm).</li>
+                    <li><span class="font-weight-700">Nexon</span> matches practicality with 382 L boot and highest clearance.</li>
+                    <li><span class="font-weight-700">Brezza</span> is reliable but least spacious.</li>
+                    <li><span class="font-weight-700">Kylaq</span> ideal if compactness and premium cabin matter more than cargo.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">4. Technology & Infotainment</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Infotainment & Connectivity</th>
+                                <th class="text-center">Digital Cluster</th>
+                                <th class="text-center">Highlights</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Kia Sonet</td>
+                                <td>10.25″ HD touchscreen, wireless Android Auto/CarPlay, Kia Connect, optional BOSE audio</td>
+                                <td>10.25″ full digital cluster</td>
+                                <td>Voice control, wireless charger, multi drive modes</td>
+                            </tr>
+                            <tr>
+                                <td>Hyundai Venue</td>
+                                <td>~8″ touchscreen wireless AA/AC in facelift</td>
+                                <td>Digital cluster in refresh</td>
+                                <td>N Line upgrades, ADAS in variants</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Tata Nexon</td>
+                                <td>HD touchscreen by Harmon, 9-speaker system, connected tech</td>
+                                <td>10″ cinematic Harman cluster</td>
+                                <td>EV variant advanced tech</td>
+                            </tr>
+                            <tr>
+                                <td>Maruti Brezza</td>
+                                <td>Floating audio, wireless charging, ambient lighting, 360° camera</td>
+                                <td>--</td>
+                                <td>Sunroof, HUD in top trims</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Škoda Kylaq</td>
+                                <td>25.4 cm infotainment, wireless Android/CarPlay, online connectivity</td>
+                                <td>--</td>
+                                <td>Ambient lighting, sunroof, 6 airbags</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">Insights:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Sonet</span> and <span class="font-weight-700">Nexon</span> are tech leaders, especially Sonet's premium audio and connectivity.</li>
+                    <li><span class="font-weight-700">Venue</span> upgraded but trails.</li>
+                    <li><span class="font-weight-700">Brezza</span> remains feature-packed in top trims but lacks cluster.</li>
+                    <li><span class="font-weight-700">Kylaq</span> combines premium infotainment and safety.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">5. Safety & Features</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Airbags</th>
+                                <th class="text-center">ESP & ABS</th>
+                                <th class="text-center">ADAS</th>
+                                <th class="text-center">Cruise Control</th>
+                                <th class="text-center">Sunroof</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Kia Sonet</td>
+                                <td>Dual front; higher trims likely ESC, rear camera</td>
+                                <td>ABS & ESC in higher trims</td>
+                                <td>Multi drive & traction modes</td>
+                                <td>Yes</td>
+                                <td>Available</td>
+                            </tr>
+                            <tr>
+                                <td>Hyundai Venue</td>
+                                <td>Likely 2-6 airbags depending on region</td>
+                                <td>ESC + vehicle stability in facelift</td>
+                                <td>--</td>
+                                <td>Limited</td>
+                                <td>N-Line variant</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Tata Nexon</td>
+                                <td>6 airbags standard (Global NCAP 5★)</td>
+                                <td>ABS, ESC, HSA standard</td>
+                                <td>--</td>
+                                <td>Yes</td>
+                                <td>Available</td>
+                            </tr>
+                            <tr>
+                                <td>Maruti Brezza</td>
+                                <td>6 airbags in ZXi+; ESP, HSA standard</td>
+                                <td>Yes</td>
+                                <td>--</td>
+                                <td>Yes (top trims)</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Škoda Kylaq</td>
+                                <td>6 airbags, ESC standard</td>
+                                <td>Yes</td>
+                                <td>Online support; no ADAS</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">Insights:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Nexon</span> holds standout 5-star safety and full airbag suite.</li>
+                    <li><span class="font-weight-700">Kylaq</span> offers solid safety for premium value.</li>
+                    <li><span class="font-weight-700">Brezza</span> caught up with top trims' safety.</li>
+                    <li><span class="font-weight-700">Sonet</span> and <span class="font-weight-700">Venue</span> offer feature-rich but may lack full ADAS.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">6. Pricing & Value (India Ex-Showroom)</h2>
+                <ul>
+                    <li><span class="font-weight-700">Sonet</span>: ₹7.99-15.74 L</li>
+                    <li><span class="font-weight-700">Venue</span>: ~₹7-13 L (based on available data)</li>
+                    <li><span class="font-weight-700">Nexon</span>: ₹12.2-14.7 L depending on engine & variant</li>
+                    <li><span class="font-weight-700">Brezza</span>: ₹8.69-14.14 L</li>
+                    <li><span class="font-weight-700">Kylaq</span>: ₹8.25-13.99 L</li>
+                </ul>
+
+                <h3 class="subheading">Insights:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Sonet</span> and <span class="font-weight-700">Brezza</span> are budget-friendly with feature-rich top trims.</li>
+                    <li><span class="font-weight-700">Venue</span> sits mid-frame with lower entry price.</li>
+                    <li><span class="font-weight-700">Nexon</span> and <span class="font-weight-700">Kylaq</span> target higher-end; <span class="font-weight-700">Kylaq</span> likely premium.</li>
+                </ul>
+
+
+                <h2 class="emoji">🏆 Verdict: Which Compact SUV Wins?</h2>
+
+                <table>
+                    <tr>
+                        <th class="text-centre">Priority</th>
+                        <th class="text-centre">Recommended Model</th>
+                    </tr>
+                    <tr>
+                        <td>Engine Variety & Performance</td>
+                        <td><span class="font-weight-700">Kia Sonet</span> – Most options, turbo performance</td>
+                    </tr>
+                    <tr>
+                        <td>Fuel Efficiency</td>
+                        <td><span class="font-weight-700">Sonet Diesel</span> or <span class="font-weight-700">Nexon Diesel/CNG</span></td>
+                    </tr>
+                    <tr>
+                        <td>Practicality & Space</td>
+                        <td><span class="font-weight-700">Sonet</span> slightly edges with big boot; <span class="font-weight-700">Nexon</span> highest clearance</td>
+                    </tr>
+                    <tr>
+                        <td>Technology & Infotainment</td>
+                        <td><span class="font-weight-700">Kia Sonet</span> or <span class="font-weight-700">Tata Nexon</span> (EV variant)</td>
+                    </tr>
+                    <tr>
+                        <td>Safety</td>
+                        <td><span class="font-weight-700">Tata Nexon</span> (5★ NCAP), then <span class="font-weight-700">Škoda Kushaq</span></td>
+                    </tr>
+                    <tr>
+                        <td>Overall Value</td>
+                        <td><span class="font-weight-700">Kia Sonet</span> – balance of pricing, variety, tech</td>
+                    </tr>
+                    <tr>
+                        <td>Premium Feel & Brand</td>
+                        <td><span class="font-weight-700">Škoda Kushaq</span> – premium segment at lower price</td>
+                    </tr>
+                    <tr>
+                        <td>Pure Reliability & Cost of Ownership</td>
+                        <td><span class="font-weight-700">Maruti Brezza</span> – strong service network</td>
+                    </tr>
+                </table>
+
+                <h3 class="subheading">Here’s a deeper dive into pricing, maintenance, and overall ownership costs of the five compact SUVs, with tables for clarity:</h3>
+                <div class="div-line"></div>
+                <h2 class="subheading">Ownership Costs & Maintenance</h2>
+                <h3 class="subheading">1. Ex-Showroom Price (India)</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Entry-Level ₹ (Lakh) approx</th>
+                                <th class="text-center">Top-End ₹ (Lakh) approx</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Kia Sonet</td>
+                                <td>7.99</td>
+                                <td>15.74</td>
+                            </tr>
+                            <tr>
+                                <td>Hyundai Venue</td>
+                                <td>7.00</td>
+                                <td>13.00</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Tata Nexon</td>
+                                <td>7.50</td>
+                                <td>14.70</td>
+                            </tr>
+                            <tr>
+                                <td>Maruti Brezza</td>
+                                <td>8.69</td>
+                                <td>14.14</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Škoda Kylaq¹</td>
+                                <td>8.25</td>
+                                <td>13.99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">2. 5-Year Maintenance Costs</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">5-Year Cost (₹)</th>
+                                <th class="text-center">Average Annual</th>
+                                <th class="text-center">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Kia Sonet</td>
+                                <td>16,395-19,652</td>
+                                <td>~3.3 k/yr</td>
+                                <td>5-year cost ₹19.7 k</td>
+                            </tr>
+                            <tr>
+                                <td>Hyundai Venue</td>
+                                <td>~18,651-20,181</td>
+                                <td>~3.7 k/yr</td>
+                                <td>First two services free</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Tata Nexon</td>
+                                <td>18,334-24,095</td>
+                                <td>~3.7-4.8 k/yr</td>
+                                <td>₹31.3 k; 91Wheels ₹18.3 k</td>
+                            </tr>
+                            <tr>
+                                <td>Maruti Brezza</td>
+                                <td>24,588-25,934</td>
+                                <td>~5.0 k/yr</td>
+                                <td>₹25.8 k over 5 yrs</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Škoda Kylaq</td>
+                                <td>~33,775</td>
+                                <td>~6.8 k/yr</td>
+                                <td>Based on Kushaq</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">4.Ownership Experience & Reliability</h3>
+                <ul>
+                    <li>
+                        <span class="font-weight-700">Kia Sonet</span>
+                        <ul>
+                            <li>Lowest scheduled maintenance cost in segment (16-17% below average)</li>
+                            <li>Residual values ~3% higher, reducing total cost.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Hyundai Venue</span>
+                        <ul>
+                            <li>Free first two services. Owner threads note ₹15-16k annual upkeep.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Tata Nexon</span>
+                        <ul>
+                            <li>First-year bill ≈ ₹4.45k.</li>
+                            <li>AMC silver plan ~₹9-13k/yr.</li>
+                            <li>Diesel 30k service ₹10.2k for major maintenance.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Maruti Brezza</span>
+                        <ul>
+                            <li>Typical 4th service ≈ ₹6k (includes approx. ₹2k labor).</li>
+                            <li>Owners report smooth service experience.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Škoda Kylaq/Kushaq</span>
+                        <ul>
+                            <li>First-year ≈ ₹7.5k (no labour charge).</li>
+                            <li>Kushaq services ~₹10-12k yearly; annual repair budget advised under ₹10k.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Verdict: Which Compact SUV Wins?</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Priority</th>
+                                <th class="text-center">Recommended Model</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine Variety & Performance</td>
+                                <td>Kia Sonet -- Most options, turbo performance</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel Efficiency</td>
+                                <td>Sonet Diesel or Nexon Diesel/CNG</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Practicality & Space</td>
+                                <td>Sonet slightly edges with big boot; Nexon highest clearance</td>
+                            </tr>
+                            <tr>
+                                <td>Technology & Infotainment</td>
+                                <td>Kia Sonet or Tata Nexon (EV variant)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Safety</td>
+                                <td>Tata Nexon (5★ NCAP), then Škoda Kylaq</td>
+                            </tr>
+                            <tr>
+                                <td>Overall Value</td>
+                                <td>Kia Sonet -- balance of pricing, variety, tech</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Premium Feel & Brand</td>
+                                <td>Škoda Kylaq -- premium segment at lower price</td>
+                            </tr>
+                            <tr>
+                                <td>Pure Reliability & Cost of Ownership</td>
+                                <td>Maruti Brezza -- strong service network</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Recommendation</h2>
+                <ul>
+                    <li><span class="font-weight-700">Choose Kia Sonet</span> for lowest maintenance and full-feature compact SUV ownership.</li>
+                    <li><span class="font-weight-700">Go with <a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1"> Brezza</a></span> if you prefer dependable service, low hassle, and service costs.</li>
+                    <li><span class="font-weight-700">Opt for Venue</span> for balanced cost and features, but budget ~₹15k service yearly.</li>
+                    <li><span class="font-weight-700">Pick Nexon</span> for safety and features, but be ready for AMC or diesel maintenance costs.</li>
+                    <li><span class="font-weight-700">Selected<a class="for-link" asp-controller="ValueForMoney" asp-action="SkodaKylaq1"> Kylaq</a></span> only if you value premium comfort and quality despite higher upkeep.</li>
+                </ul>
+
+                <p><span class="font-weight-700">Overall Winner:</span> For most buyers, <span class="font-weight-700">Kia Sonet</span> stands out—thanks to varied engines, strong tech, spaciousness, and competitive pricing. If you prefer diesel or CNG, <span class="font-weight-700">Tata Nexon</span> offers leading safety and efficiency. For a premium experience, <span class="font-weight-700">Škoda Kylaq</span> appeals with its brand cachet and refined ride. Budget-conscious and service-minded? <span class="font-weight-700">Maruti Brezza</span> remains a dependable veteran.</p>
+
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

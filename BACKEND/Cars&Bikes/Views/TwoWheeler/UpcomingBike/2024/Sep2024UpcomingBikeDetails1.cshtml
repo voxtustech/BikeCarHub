@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Husqvarna Vitpilen 401: Performance, Milage & Specs";
+}
+@section MetaTags{
+    <meta name="keywords" content="Husqvarna Vitpilen 401, Vitpilen 401 specs, Husqvarna 401 price, Vitpilen 401 features, Husqvarna café racer, Vitpilen 401 review, Urban motorcycles" />
+    <meta name="description" content="Experience the Husqvarna Vitpilen 401 with its minimalist design and punchy 373cc engine. Discover specs, features, and price of this unique urban café racer." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="overlay-black-middle" style=" background:linear-gradient(#475372, #78829A, #9EA3AD, #fff); margin:0;">
+    <img src="~/images/background/banner.png" />
+</div> *@
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" /></div> *@
+<!-- Breadcrumb row END -->
+@* <div class="car-details-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="nav">
+                    <ul>
+                        <li><a></a></li>
+                        <li class="active"><a href="car-details-overview.html">Overview</a></li>
+                        <li><a href="car-detail-specifications.html">Specifications</a></li>
+                        <li><a href="car-detail-price.html">Price</a></li>
+                        <li><a href="car-detail-compare.html">Compare</a></li>
+                        <li><a href="car-detail-pictures.html">Pictures</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+<body>
+    <div class=" ">
+    <h1 class="latest-bike-head">Upcoming Bikes</h1>
+    <div class="TWupcoming-container">
+        <div class="upcoming-bikes-details-image">
+            <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+            <div class="upcoming-bikes-details-text">
+                <h2>@Model.UpcomingBikeName</h2>
+                <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+            </div>
+        </div>
+
+        <div class="upcoming-bikes-details-content">
+            <h2>About @Model.UpcomingBikeName</h2>
+            @* <p>@Html.Raw(@Upbike.UpcomingBikeDetails.Replace("\n", "<br>"))</p> *@
+            <p>Husqvarna Vitpilen 401 is expected to launch in India in September 2024 in the expected price range of ₹ 2,50,000 to ₹ 2,60,000. Currently available bikes which are similar to Vitpilen 401 are Husqvarna Vitpilen 250, Royal Enfield Guerrilla 450 & Husqvarna Vitpilen 250 [2024].</p>
+            <p>Husqvarna is originally a Swedish brand that is now owned by KTM. Its products will sit above the Austrian manufacturer’s, and the styling, feature sets and pricing will reflect that.</p>
+            <p>One of the two new roadgoing products for the brand is the Vitpilen 701. The name means “White Arrow”, and is based on the mental KTM 690 Duke. With 72bhp and at just 148.5kg dry, it will have a power-to-weight ratio that most supercars would envy. It is styled as a café racer, with a sporty riding position, clip-on handlebars, and rearset footpegs. The brakes are sourced from Brembo.</p>
+            <p>The Vitpilen 701 will make a most interesting alternative to products like the Ducati Scrambler Café Racer and the Triumph Street Triple. However, the odds of it launching in the Indian market are extremely slim.</p>
+        </div>
+    </div>
+    }
+    <!-- Bike 1 -->
+    <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allUpbike in ViewBag.allupcomingbike)
+        {
+            <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                <div class="upcoming-bikes-details-card">
+                    <div class="upcoming-bikes-all-image">
+                        <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                    </div>
+
+                    <div class="upcoming-allbikes-details-content">
+                        <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                        <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                        <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+    </div>
+</body>

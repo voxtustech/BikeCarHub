@@ -1,0 +1,318 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Maruti Suzuki Alto K10 VXI - Price, Features, Mileage (2024)";
+}
+@section MetaTags{
+    <meta name="keywords" content="Maruti Suzuki Alto K10, Alto K10 2024, Alto K10 price, Alto K10 mileage, Alto K10 features, Maruti Alto K10 review, compact cars under 7 lakhs, budget cars India, Alto K10 petrol engine, affordable city cars India, best small cars in India, Maruti Suzuki cars, Alto K10 VXI price, Alto K10 specifications, Alto K10 design, cars for small families, fuel-efficient cars India, Alto K10 on-road price, Alto K10 safety features, Alto K10 interiors, Alto K10 comparison, Alto K10 user reviews, Alto K10 EMI options, value-for-money cars India, cars with touchscreen, Alto K10 infotainment system, low-maintenance cars India, Maruti Suzuki service network." />
+    <meta name="description" content="Explore the Maruti Suzuki Alto K10 VXI, a budget-friendly car with a powerful 1.0L engine, excellent mileage, and advanced features. On-road price starts at ₹6.50 lakhs in India." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p> *@
+                <p>Looking for a car that’s perfect for India’s bustling streets and open highways? The Suzuki Alto K10 is here to redefine compact car excellence!</p>
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">DIMENSIONS</th>
+                            <th class="text-center">Petrol</th>
+                            <th class="text-center">CNG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>Overall Length (mm) </td>
+                            <td colspan="2">3530</td>
+                        </tr>
+                        <tr>
+                            <td>Overall Width (mm)</td>
+                            <td colspan="2">1490</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Overall Height (Unladen) (mm)</td>
+                            <td colspan="2">1520</td>
+                        </tr>
+                        <tr>
+                            <td>Overall Length (mm) </td>
+                            <td colspan="2">3530</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>OWheelbase (mm)</td>
+                            <td colspan="2">2380</td>
+                        </tr>
+                        <tr>
+                            <td>Turning Radius (m)</td>
+                            <td colspan="2">4.5</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Seating Capacity</td>
+                            <td>5 Persons</td>
+                            <td>4 Person</td>
+                        </tr>
+                        <tr>
+                            <td>Boot Space (L) #</td>
+                            <td>214</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><span class="font-weight-700">1. Peppy Performance:</span> Powered by the advanced <span class="font-weight-700">K-Series engine</span>, the Alto K10 zips through city traffic with ease and delivers exceptional mileage. Whether it’s a quick run to the market or a long road trip, this car has got your back.</p>
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">ENGINE</th>
+                            <th class="text-center">Petrol</th>
+                            <th class="text-center">CNG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>Engine Type</td>
+                            <td>K10C</td>
+                            <td>K10C CNG</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel type</td>
+                            <td>Petrol</td>
+                            <td>Petrol + CNG</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Piston Displacement (cc)</td>
+                            <td colspan="2">998</td>
+                        </tr>
+                        <tr>
+                            <td>Maximum Power (kW@rpm)</td>
+                            <td>49 kW @@ 5500 rpm</td>
+                            <td>CNG Mode: 41.7 kW @@ 5300 rpm Petrol Mode: 48 kW @@ 5500 rpm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Maximum Torque (Nm@rpm)</td>
+                            <td>89 Nm @@ 3500 rpm</td>
+                            <td>CNG Mode: 82.1 Nm @@ 3400 rpm Petrol Mode: 89 Nm @@ 3500 rpm</td>
+                        </tr>
+                        <tr>
+                            <td>Emission Standard</td>
+                            <td colspan="2">BS VI</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Fuel Tank Capacity (L)</td>
+                            <td>27</td>
+                            <td>Petrol: 27 CNG: 55 (Water Equivalent)</td>
+                        </tr>
+                        <thead>
+                            <tr>
+                            <th class="text-center">TRANSMISSION</th>
+                            <th class="text-center">Petrol</th>
+                            <th class="text-center">CNG</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>Transmission Type</td>
+                            <td>5MT / AGS</td>
+                            <td>5MT</td>
+                        </tr>
+                        <thead>
+                        <tr>
+                            <th class="text-center">Mileage</th>
+                            <th class="text-center">Petrol</th>
+                            <th class="text-center">CNG</th>
+                        </tr>
+                        </thead>
+                        <tr class="compare-head-text">
+                            <td>24.39* Petrol MT</td>
+                            <td>24.90* Petrol AGS</td>
+                            <td>33.85* CNG MT</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <p>Choose your style of driving with two dynamic transmission options:</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">5-Speed Manual Transmission (MT):</span> Feel the power at your fingertips with smooth gear shifts, giving you total control on every drive. Perfect for those who love the traditional driving experience.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Auto Gear Shift (AGS):</span> Say goodbye to clutch hassles! The AGS ensures effortless driving, especially in bumper-to-bumper traffic. It combines the ease of an automatic with the fuel efficiency of a manual, making city commutes a breeze.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/discovertheallnewsuzukialtok10smallcarbigpossibilities/gear shift.webp" alt="Gear Shift" title="Gear Shift" /></center></div>
+                </div>
+                <h3 class="subheading">Alto K10: Value for Money Varient </h3>
+                <p><span class="font-weight-700">Value for Money:</span> Who says you can’t get great performance and features on a budget? The Alto K10 offers top-tier technology and reliability without burning a hole in your pocket.</p>
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Varient</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Engine Type</th>
+                            <th class="text-center">Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td><span class="text-highlight">VXI (Top Selling)</span></td>
+                            <td><span class="text-highlight">Rs. 5,61,000</span></td>
+                            <td><span class="text-highlight">Petrol</span></td>
+                            <td><span class="text-highlight">Best for budget-conscious buyers looking for essential features.</span></td>
+                        </tr>
+                        <tr>
+                            <td>VXI +</td>
+                            <td>Rs. 5,90,000</td>
+                            <td>Petrol</td>
+                            <td>Suitable for those wanting more tech features like a touchscreen and smartphone connectivity.</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>VXI CNG</td>
+                            <td>RS. 5 96 000</td>
+                            <td>CNG</td>
+                            <td>Ideal for users focused on long-term fuel savings and eco-friendly driving, despite some trade-offs in performance and storage.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>See why you in variant is Value for money.</p>
+                <p class="font-weight-700">1. Price vs. Features Balance: </p>
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Features</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>VXI <span class="text-highlight">(Rs. 5,61,000)</span></td>
+                            <td>
+                                Media Receiver (AM/FM/Bluetooth),
+                                2 Speakers,
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>VXI + (Rs. 5,90,000)</td>
+                            <td>
+                                17.78 cm (SmartPlay Studio),
+                                4 Speakers,
+                                Remote Application,
+                                Android Auto,
+                                Apple Carplay,
+                                Steering Mounted Audio & Voice Control,
+                                Assist Grips,
+                                Remote Keyless Entry,
+                                Rear Parcel Tray,
+                                Silver Accent Inside Door Handles,
+                                Silver Accent on Steering Wheel,
+                                Silver Accent on Side Louvers,
+                                Silver Accent on Center Garnish
+                            </td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>VXI CNG (RS. 5 96 000)</td>
+                            <td>
+                                33.85* Mileage,
+                                Media Receiver (AM/FM/Bluetooth),
+                                2 Speakers,
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2024/discovertheallnewsuzukialtok10smallcarbigpossibilities/rear parking sensor.webp" alt="Rear Parking Sensor" title="Rear Parking Sensor" /></div>
+                </div>
+                <p class="font-weight-700">2. Safety Features: </p>
+                <p>Some key highlight are [VXI, VXI (CNG)] (<span class="text-color">Speed Sensing Auto Door Lock, Central Door Locking, and Impact Sensing Door Unlock</span>) for Variants above LXI. </p>
+                <p class="font-weight-700">3. Comfort and Convenience:</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2024/discovertheallnewsuzukialtok10smallcarbigpossibilities/comfort and convenience.webp" alt="Comfort and Convenience" title="Comfort and Convenience" /></div>
+                </div>
+                <p>For VXI and CNG variant user will get (<span class="text-color">Front Power Windows, Internally Adjustable ORVMs</span>) and (<span class="text-color">Remote Keyless Entry</span>) as additional for VXI + Variant.</p>
+                <p>Equipped with Suzuki’s BS6-compliant engine, the Alto K10 ensures reduced emissions, letting you contribute to a greener future.</p>
+                <p class="font-weight-700">4. Exterior and Interior Design:</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/discovertheallnewsuzukialtok10smallcarbigpossibilities/infotainment system.webp" alt="Infotainment System" title="Infotainment System" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/discovertheallnewsuzukialtok10smallcarbigpossibilities/exterior and interior design.webp" alt="Exterior and Interior Design" title="Exterior and Interior Design" /></div>
+                </div>
+                <p><span class="font-weight-700">Feature-Packed Interior:</span> Experience comfort and convenience like never before:</p>
+                <ul>
+                    <li>
+                        <span class="font-weight-700 text-highlight">SmartPlay Studio infotainment system</span> keeps you connected.
+                    </li>
+                    <li>Spacious cabin and ergonomically designed seats for a smooth ride.</li>
+                    <li>Best-in-class <span class="text-highlight">boot space</span> of 214 L for all your travel essentials.</li>
+                </ul>
+                <p class="font-weight-700">5. Resale Value:</p>
+                <ul>
+                    <li>Value-for-money variants generally hold better resale value since they cater to a broad audience focused on affordability.</li>
+                </ul>
+                <p class="text-highlight">6. With rising fuel prices, the Alto K10’s incredible efficiency ensures you save big without compromising performance. It’s the ultimate car for budget-conscious yet performance-driven drivers.</p>
+
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @*  <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

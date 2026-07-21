@@ -1,0 +1,410 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Norton V4 Superbike: Specs, Price, Launch & Rivals";
+}
+@section MetaTags {
+    <meta name="keywords" content="Norton V4, Norton Superbike, Norton V4SV, Norton Price India, Norton Launch Date, V4 Specifications, TVS Norton, Ducati Panigale V4, Aprilia RSV4, BMW M 1000 RR, British Superbike, Handcrafted Motorcycle, V4 Engine, Superbike Comparison, Norton EICMA 2025,BikeCarHub." />
+    <meta name="description" content="The new Norton V4 is coming! Read the full article for expected specs (200+ bhp), India price, tentative launch timeline, and comparison with Ducati and BMW rivals at BikeCarHub" />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">The Roar Returns: Everything You Need to Know About the Upcoming Norton V4 Superbike</h3>
+
+                <p>The name Norton is synonymous with British motorcycling heritage—a century-old story of racing glory, iconic design, and machines that stir the soul. In recent years, under the steady and strategic ownership of India’s TVS Motor Company, the brand is experiencing a magnificent resurgence. And at the forefront of this new era stands the latest iteration of their flagship superbike: the all-new <span class="font-weight-700">Norton V4</span>.</p>
+                <p>This isn't just a bike; it's a statement. It's the culmination of painstaking re-engineering, significant investment, and a determined effort to reclaim its position among the world's elite high-performance motorcycles. For enthusiasts and prospective owners, the waiting game is almost over, and the buzz around this machine is reaching a fever pitch. Get ready to dive deep into the specifications, expected performance, pricing, and the sheer exhilaration promised by the new-generation <span class="font-weight-700">Norton V4, </span>a machine we here at <a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub,</a> believe is poised to redefine the segment.</p>
+                <h3 class="subheading">A Legacy Reimagined: The New V4 Takes Shape</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/norton v4/black.webp" alt="black" title="black" loading="lazy" /></div>
+                </div>
+                
+                <p>The<span class="font-weight-700"> new Norton V4 </span>is set to succeed the acclaimed V4SV, and early glimpses via spy shots suggest a more aggressive, modern, and globally competitive design. The V4SV already set a high bar with its exquisite craftsmanship—featuring an exposed, mirror-polished aluminium tube frame, premium components, and an unmistakable British flair. The upcoming model, however, looks ready to shed some of that retro-inspired styling for a truly contemporary superbike silhouette, one that can go toe-to-toe with the world’s best on the showroom floor and on the racetrack.</p>
+                <p>Sources indicate that Norton has listened to the market, focusing on compliance, performance, and cutting-edge technology. The shift in design philosophy hints at improved aerodynamics, better mass centralisation, and an overall package engineered for peak performance. This new machine represents the true global ambition of the TVS-backed Norton, designed to meet modern emission standards (like Euro 5+) and finally conquer markets beyond the UK.</p>
+                <h3 class="subheading">Expected Technical Specifications: The Heart of the Beast</h3>
+                <p>
+                    While official, final figures for the all-new Norton V4 are still under wraps, the bike is expected to carry forward a heavily revised version of Norton’s own in-house developed V4 engine. This unit is a masterpiece of engineering, designed to deliver power with a uniquely British character.
+                    <div style="overflow-x: auto;">
+
+                        <table class="comparison-table-content">
+
+                            <thead>
+                                <tr>
+                                    <th class="font-weight-600 text-center">Component</th>
+                                    <th class="font-weight-600 text-center">Expected Specification (New Norton V4)</th>
+                                    <th class="font-weight-600 text-center">Reference (Previous V4SV)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Engine Type</td>
+                                    <td>72-degree Liquid-cooled V4, Four-Stroke</td>
+                                    <td>72-degree Liquid-cooled V4, Four-Stroke</td>
+                                </tr>
+                                <tr>
+                                    <td>Displacement</td>
+                                    <td>1200cc (or slightly larger to boost power)</td>
+                                    <td>1200cc</td>
+                                </tr>
+                                <tr>
+                                    <td>Max Power (Expected)</td>
+                                    <td>200+ bhp@12,500 rpm</td>
+                                    <td>185 bhp@12,500 rpm</td>
+                                </tr>
+                                <tr>
+                                    <td>Max Torque (Expected)</td>
+                                    <td>130+ Nm@9,000 rpm</td>
+                                    <td>125 Nm@9,000 rpm</td>
+                                </tr>
+                                <tr>
+                                    <td>Transmission</td>
+                                    <td>6-Speed, with Full Quick Shift and Auto Blipper</td>
+                                    <td>6-Speed, with Full Quick Shift and Auto Blipper</td>
+                                </tr>
+                                <tr>
+                                    <td>Frame</td>
+                                    <td>Polished Handcrafted Aluminium Tubular Frame (Likely redesigned)</td>
+                                    <td>Handcrafted Aluminium Tubular Frame</td>
+                                </tr>
+                                <tr>
+                                    <td>Swingarm</td>
+                                    <td>Braced and Underslung Single-Sided Billet Aluminium</td>
+                                    <td>Braced and Underslung Single-Sided Billet Aluminium</td>
+                                </tr>
+                                <tr>
+                                    <td>Front Suspension</td>
+                                    <td>Öhlins NIX30 Fully Adjustable USD Forks (Potentially Semi-Active)</td>
+                                    <td>Öhlins NIX30 Fully Adjustable USD Forks</td>
+                                </tr>
+                                <tr>
+                                    <td>Rear Suspension</td>
+                                    <td>Öhlins TTXGP Monoshock (Potentially Semi-Active)</td>
+                                    <td>Öhlins TTXGP Monoshock</td>
+                                </tr>
+                                <tr>
+                                    <td>Front Brakes</td>
+                                    <td>Twin 330mm Floating Discs, Brembo Hypure Monobloc Calipers</td>
+                                    <td>Twin 330mm Discs, Radially Mounted Brembo Monobloc Calipers</td>
+                                </tr>
+                                <tr>
+                                    <td>Wheels</td>
+                                    <td>Carbon Fibre BSTs (Carbon variant) or Forged Aluminium (Standard variant)</td>
+                                    <td>Carbon Fibre BSTs (Carbon) or OZ Racing Forged Aluminium (Manx Silver)</td>
+                                </tr>
+                                <tr>
+                                    <td>Dry Weight</td>
+                                    <td>Aiming for sub-190 kg (Estimate)</td>
+                                    <td>193 kg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                <p><span class="font-weight-700">The Power Play: </span>The most critical expected update lies in the power output. To truly compete with its Italian and German rivals, the new V4 must cross the 200 horsepower mark. This increase will likely be achieved through internal engine revisions, lighter components, and a sophisticated, Euro 5+ compliant exhaust system—possibly a new underbelly unit as hinted in spy shots, which would also aid in better mass centralisation.</p>
+                <h3 class="subheading">Key Features: Technology Meets Tradition</h3>
+                <p>The Norton V4 is set to be a showcase of premium componentry and advanced rider aids. It will blend the classic craftsmanship of a TIG-welded, mirror-polished frame with the latest in performance technology.</p>
+                The Electronic Suite
+                <p>The new V4 will be a tech-laden motorcycle, featuring a comprehensive electronics package governed by a <span class="font-weight-700">Six-Axis Inertial Measurement Unit (IMU). </span>This IMU is the brain behind sophisticated systems, including:</p>
+                <ul>
+                    <li><span class="font-weight-700"> Lean-Angle Sensitive Traction Control (TC): </span>Offering seamless control when accelerating out of a corner.</li>
+                    <li><span class="font-weight-700">  Cornering ABS:</span> Ensuring optimal braking performance even when leaned over.</li>
+                    <li><span class="font-weight-700">Multiple Engine Modes: </span>Expected to include at least Wet, Road, and Sport settings, each customising power delivery and electronic intervention levels.</li>
+                    <li><span class="font-weight-700">   Full Quick Shifter and Auto Blipper: </span>Allowing for lightning-fast, clutch-less upshifts and downshifts.</li>
+                    <li>  <span class="font-weight-700"> Full-Colour TFT Display:</span> A large, modern instrument panel, possibly a 6-inch or 7-inch unit, with auto-brightness adjustment and excellent readability.</li>
+                </ul>
+                High-End Componentry
+                <p>The motorcycle’s exclusivity is cemented by its choice of parts:</p>
+                <ul>
+                    <li><span class="font-weight-700"> Suspension: </span>Fully adjustable, top-of-the-line Öhlins units, ensuring a sublime balance between track-day precision and road comfort. The possibility of semi-active electronic suspension is a highly anticipated addition to keep pace with rivals.</li>
+                    <li> <span class="font-weight-700"> Braking: </span>Brembo components are a non-negotiable for a superbike of this calibre. The expected inclusion of Brembo's Hypure monobloc calipers, as seen on other top-tier superbikes, signals an intent for unmatched stopping power.</li>
+                    <li> <span class="font-weight-700">   Materials: </span>Extensive use of carbon fibre for the bodywork and the under-seat fuel tank, with models like the 'Carbon' variant expected to feature lightweight Carbon Fibre BST wheels. The billet-machined yokes, footrests, and pedals are all meticulously crafted pieces that highlight the attention to detail Norton is famous for.</li>
+                </ul>
+                <h3 class="subheading">Expected Price and Launch Timeline</h3>
+                <p>Norton Motorcycles is a luxury brand, and the V4 is their flagship offering. Consequently, it commands a premium price reflective of its exotic components, handcrafted frame, and limited production volume.</p>
+                <p><span class="font-weight-700">Expected Price</span>
+                <p>The previous V4SV was priced at £44,000 in the UK, which converted to a significantly higher figure in markets like India due to import duties.</p>
+                <ul>
+                    <li><span class="font-weight-700">UK Price (Expected):</span> The new V4 is likely to be priced competitively with other premium European superbikes, possibly starting around <span class="font-weight-700">£21,000 - £26,000 </span>for the base variant.</li>
+                    <li><span class="font-weight-700">  India Price (Expected): </span>Should the motorcycle arrive as a Completely Built Unit (CBU), the ex-showroom price could range from <span class="font-weight-700">₹25,00,000 to ₹30,00,000 </span>(Ex-Showroom, Delhi/Mumbai) or even higher, positioning it as one of the most expensive and exclusive superbikes in the country. Prices may vary significantly depending on the final assembly strategy and local taxation.</li>
+                </ul>
+                Expected Launch Timeline
+                <p>The new Norton V4 has been the subject of intensive development under TVS’s ownership, specifically targeting global market compliance.</p>
+                <ul>
+                    <li>
+                    <span class="font-weight-700"> Global Unveiling:</span> The new Norton V4 is highly anticipated to make its global public debut at the
+                    </li>
+                    <li>
+                        <span class="font-weight-700"> EICMA 2025 </span>show in Milan.
+                    </li>
+                        <li>
+
+                    <span class="font-weight-700">   India Launch:</span> Norton Motorcycles, backed by TVS, has confirmed an entry into the Indian market. The new V4, being the brand's halo product, is expected to lead the charge. Indian enthusiasts can tentatively look forward to the launch by
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Nov 2025.</span>
+                    </li>
+
+                </ul>
+                <h3 class="subheading">The Contender: Comparison with Key Competitors</h3>
+                <p>The Norton V4 enters one of the most fiercely contested segments in motorcycling—the elite V4 and inline-four superbikes. Its direct competition includes the very best that Italy and Germany have to offer. The Norton V4's edge, however, will always be its British heritage, exclusivity, and the unique character of its 72-degree V4 engine.</p>
+                <p>Here is a comparison table outlining how the expected specifications of the new Norton V4 stack up against its primary rivals:</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature</th>
+                                <th class="font-weight-600 text-center">Expected New Norton V4</th>
+                                <th class="font-weight-600 text-center">Ducati Panigale V4 S</th>
+                                <th class="font-weight-600 text-center">Aprilia RSV4 Factory</th>
+                                <th class="font-weight-600 text-center">BMW M 1000 RR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engine Type</td>
+                                <td>1200cc V4</td>
+                                <td>1103cc V4 Desmosedici Stradale</td>
+                                <td>1099cc V4</td>
+                                <td>999cc Inline-Four</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>200+ bhp</td>
+                                <td>218.99 PS</td>
+                                <td>220 hp</td>
+                                <td>212 hp</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque</td>
+                                <td>130+ Nm</td>
+                                <td>120.9 Nm</td>
+                                <td>127 Nm</td>
+                                <td>113 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Frame Type</td>
+                                <td>Handcrafted Aluminium Tube</td>
+                                <td>Aluminium Front Frame</td>
+                                <td>Aluminium Twin Spar</td>
+                                <td>Aluminium Bridge</td>
+                            </tr>
+                            <tr>
+                                <td>Suspension</td>
+                                <td>Öhlins NIX30/TTXGP (Potentially Semi-Active)</td>
+                                <td>Öhlins Smart EC 2.0 Semi-Active</td>
+                                <td>Öhlins Smart EC 2.0 Semi-Active</td>
+                                <td>Marzocchi USD, Full Manual Adjust (DDC Option)</td>
+                            </tr>
+                            <tr>
+                                <td>Dry/Kerb Weight</td>
+                                <td>Aiming for sub-190 kg (Dry)</td>
+                                <td>174 kg (Dry)</td>
+                                <td>204 kg (Wet)</td>
+                                <td>192 kg (Wet)</td>
+                            </tr>
+                            <tr>
+                                <td>Key Electronic Aids</td>
+                                <td>Full IMU Suite, Cornering ABS, TC, Riding Modes</td>
+                                <td>Full IMU Suite, Riding Modes, DTC, DWC, EBC, Slide Control</td>
+                                <td>Full IMU Suite, APRC, Multi-level TC, Wheelie Control, Cornering ABS</td>
+                                <td>Full IMU Suite, ShiftCam, DTC, Riding Modes Pro, Launch Control</td>
+                            </tr>
+                            <tr>
+                                <td>USPs</td>
+                                <td>British Heritage, Hand-polished Frame, Exclusivity, Carbon Fibre Everywhere</td>
+                                <td>MotoGP Pedigree, Desmodromic Valves, Raw Performance, Design</td>
+                                <td>Unique V4 Sound, Legendary Chassis Handling, APRC Electronics</td>
+                                <td>ShiftCam Technology, Highly Advanced Engine, Factory Race Homologation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <p>As this comparison shows, the Norton V4 is not trying to simply beat rivals on peak power figures alone (though it is closing the gap). Its primary selling points remain its unique engine configuration, the unparalleled craftsmanship of its frame and components, and the inherent exclusivity of a hand-built British superbike—a fact that will be heavily marketed by <span class="font-weight-700">BikeCarHub </span>when the bike is finally launched.</p>
+                <h3 class="subheading">Riding the Wave of Excitement</h3>
+                <p>The anticipation surrounding the new Norton V4 is a testament to the enduring love for the brand. For years, the V4 platform has been a blend of raw power and bespoke elegance. The commitment from TVS to not just revive, but re-engineer the V4 platform for a new decade, has been meticulous. They are moving the V4 from a niche, UK-focused machine to a global superbike contender, fully compliant with modern regulations and loaded with next-generation technology.</p>
+                <p>The new V4, with its expected sharper aesthetics and powerful, Euro-5+ compliant engine, promises to be a highly sought-after machine. It’s a motorcycle for the enthusiast who values heritage and hand-built quality as much as they do lap times and cutting-edge electronics. This machine is poised to write the next illustrious chapter in Norton's long and storied history.</p>
+                <h3 class="subheading">Frequently Asked Questions (FAQs) about the Norton V4</h3>
+
+
+                <div class="accordion my-4" id="nortonAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                Q1: What is the official name of the upcoming model?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#nortonAccordion">
+                            <div class="accordion-body">
+                                While the predecessor was the <strong>V4SV</strong>, the new model has been frequently referred to as the
+                                <strong>"New Norton V4"</strong> or <strong>"Next-Gen Norton V4"</strong>, representing the modern evolution of the flagship superbike.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                Q2: Who owns Norton Motorcycles now?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#nortonAccordion">
+                            <div class="accordion-body">
+                                <strong>Norton Motorcycles</strong> is owned by <strong>TVS Motor Company</strong> (India), which acquired the brand in 2020.
+                                TVS has since invested heavily in new facilities, quality control, and the complete re-engineering of the V4 platform.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                Q3: Where is the new Norton V4 manufactured?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#nortonAccordion">
+                            <div class="accordion-body">
+                                The new Norton V4 is <strong>designed and built in Solihull, West Midlands, UK</strong>, at Norton’s state-of-the-art facility,
+                                maintaining its authentic British craftsmanship.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                Q4: Has the power output increased on the new V4 compared to the V4SV?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#nortonAccordion">
+                            <div class="accordion-body">
+                                Yes. While the <strong>V4SV produced 185 bhp</strong>, the new V4 is expected to be re-engineered to deliver
+                                <strong>over 200 bhp</strong>, making it competitive with top-tier superbikes from Ducati and Aprilia.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                Q5: Will the new V4 be road legal in Europe and other international markets?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#nortonAccordion">
+                            <div class="accordion-body">
+                                Absolutely. The new V4 will comply with <strong>Euro 5+</strong> emission and safety standards,
+                                making it <strong>road legal globally</strong>, including in Europe and India.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                                Q6: Does the new Norton V4 feature carbon fibre components?
+                            </button>
+                        </h2>
+                        <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#nortonAccordion">
+                            <div class="accordion-body">
+                                Yes, the new V4 will include <strong>extensive carbon fibre components</strong> such as the full bodywork
+                                and Kevlar-reinforced under-seat fuel tank. The top-spec <strong>Carbon variant</strong> may also feature
+                                carbon fibre wheels for further weight reduction.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                                Q7: What kind of suspension is on the motorcycle?
+                            </button>
+                        </h2>
+                        <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#nortonAccordion">
+                            <div class="accordion-body">
+                                The V4 is equipped with <strong>premium Öhlins suspension</strong> — NIX30 upside-down forks at the front
+                                and a <strong>TTXGP monoshock</strong> at the rear. Some variants may feature <strong>semi-active electronic suspension</strong>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                                Q8: Does the V4 have modern electronic rider aids?
+                            </button>
+                        </h2>
+                        <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#nortonAccordion">
+                            <div class="accordion-body">
+                                Yes, it includes a <strong>Six-Axis IMU</strong> with features such as <strong>lean-sensitive traction control</strong>,
+                                <strong>cornering ABS</strong>, <strong>wheelie control</strong>, and <strong>multiple riding modes</strong> (Wet, Road, Sport).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                                Q9: When can I buy the Norton V4 in India?
+                            </button>
+                        </h2>
+                        <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#nortonAccordion">
+                            <div class="accordion-body">
+                                The <strong>global reveal</strong> is expected at <strong>EICMA 2025</strong>, with an <strong>India launch tentatively in November 2025</strong>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                                Q10: What makes the Norton V4's frame special?
+                            </button>
+                        </h2>
+                        <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#nortonAccordion">
+                            <div class="accordion-body">
+                                The V4’s frame is a <strong>hand-TIG welded, aerospace-grade aluminium tubular chassis</strong>, polished to a mirror finish.
+                                This showcases the <strong>artisanal craftsmanship</strong> that sets the Norton V4 apart in the superbike category.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+        @await Html.PartialAsync("_AllViewComponent")
+    </div>
+</body>

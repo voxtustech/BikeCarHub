@@ -1,0 +1,203 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Best-Selling Royal Enfield Bikes in India for 2024: Specifications, Features, and Prices";
+}
+@section MetaTags{
+    <meta name="keywords" content="Royal Enfield 2024, Best Royal Enfield bikes, Classic 350, Hunter 350, Bullet 350, Meteor 350, Himalayan 450, Royal Enfield prices India, Royal Enfield specifications" />
+    <meta name="description" content="Discover the top 5 best-selling Royal Enfield bikes in India for 2024, including the Classic 350, Hunter 350, and Himalayan 450. Learn about specifications, prices, and features." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. Royal Enfield Classic 350</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹1.93 - ₹2.30 lakh (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 349.34cc, air-cooled, single-cylinder
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 20.21 ps @@ 6100 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 27 Nm @@ 4000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 41.55 km/l
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bestsellingroyalenfieldbikesinindia(2024)/royal enfield classic 350.webp" alt="Royal Enfield Classic 350" title="Royal Enfield Classic 350" /></center></div>
+                </div>
+                <p>The Classic 350, with its timeless design and signature thump, continues to lead the market as Royal Enfield's top-selling model, appealing to a wide range of riders due to its comfort and modern features​</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. Royal Enfield Hunter 350</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹1,49,900 - ₹1,75,655 (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 349cc, air-cooled, single-cylinder
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 20.2 bhp
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 27 Nm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 36.5 km/l
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bestsellingroyalenfieldbikesinindia(2024)/royal enfield hunter 350.webp" alt="Royal Enfield Hunter 350" title="Royal Enfield Hunter 350" /></center></div>
+                </div>
+                <p>The Hunter 350 is popular for its nimble handling, compact design, and affordability, making it an ideal urban motorcycle. Its lightweight frame has attracted young, city-based riders​</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">3. Royal Enfield Bullet 350</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹1,73,562 - ₹2,15,801 (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 349cc, air-cooled, single-cylinder
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 20.4 ps @@ 6100 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 27 Nm @@ 4000rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 36.2km/l
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bestsellingroyalenfieldbikesinindia(2024)/royal enfield bullet 350.webp" alt="Royal Enfield Bullet 350" title="Royal Enfield Bullet 350" /></center></div>
+                </div>
+                <p>A symbol of retro motorcycling, the Bullet 350 remains an enduring favorite, particularly for its classic charm and robust build​​</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">4. Royal Enfield Meteor 350</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹2,05,900 - ₹2,29,900 (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 349cc, air-cooled, single-cylinder
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 20.2 bhp @@ 6100 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 27 Nm @@ 4000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 41.88 km/l
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bestsellingroyalenfieldbikesinindia(2024)/royal enfield meteor 350.webp" alt="Royal Enfield Meteor 350" title="Royal Enfield Meteor 350" /></center></div>
+                </div>
+                <p>The Meteor 350 is a cruiser bike that combines modern tech with retro aesthetics, making it perfect for long-distance touring. It has received praise for its comfort and touring capabilities​​​</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">5. Royal Enfield Himalayan 450</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹2.85 - ₹2.98 lakh (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 452cc, liquid-cooled, single-cylinder
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 40.02 ps @@ 8000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 40 Nm @@ 5500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 30 km/l
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bestsellingroyalenfieldbikesinindia(2024)/royal enfield himalayan 450.webp" alt="Royal Enfield Himalayan 450" title="Royal Enfield Himalayan 450" /></center></div>
+                </div>
+                <p>Known for its off-road prowess, the Himalayan 450 is an adventure-tourer bike that offers excellent performance on both highways and rough terrain. It’s ideal for enthusiasts seeking long-distance adventure rides​​​​</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

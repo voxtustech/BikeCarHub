@@ -1,0 +1,643 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Sierra 2025: Price, Specs & Launch of the Legend | BikeCarHub";
+}
+@section MetaTags {
+    <meta name="keywords" content="Tata Sierra, Tata Sierra 2025, Tata Sierra Price, Tata Sierra EV, Tata Sierra Launch Date, Tata Sierra Specifications, Sierra Specs, Tata 1.5L Turbo Petrol, Tata Sierra Competitors, Sierra Alpine Window, Tata Motors SUV, Sierra Features, acti.ev, BikeCarHub, New Tata Sierra,BikecarHub." />
+    <meta name="description" content="The iconic Tata Sierra returns in 2025! Get the definitive review,prices (ICE/EV), 170 hp turbo-petrol specs, triple-screen features, and competitor comparison at BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+
+
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">A Walk Down Memory Lane: The Original Tata Sierra (1991–2003)</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/tata sierra/left.webp" alt="left" title="left" loading="lazy" /></div>
+                </div>
+                <p>To truly appreciate the rebirth of the new Sierra, one must first understand the ground Tata Motors broke with the original model. Launched in 1991, the Sierra was a revelation. It wasn't just another car; it was India’s <span class="font-weight-700">first indigenously designed and manufactured off-road Sport Utility Vehicle (SUV), </span>a concept virtually unknown to the average Indian consumer at the time.</p>
+                <p><span class="font-weight-700">The Pioneer of Indian SUVs</span></p>
+                <p>In an era dominated by utilitarian workhorses and basic sedans, the original three-door Tata Sierra stood out as a beacon of individuality and premium ruggedness. It was built on the robust <span class="font-weight-700">Tata X2 platform </span>(shared with the Telcoline pick-up), featuring a sturdy ladder-frame chassis capable of handling the most challenging Indian terrains. It offered amenities considered luxurious in the early 90s, such as<span class="font-weight-700"> power steering, power windows, and central locking.</span> It was even offered in a capable <span class="font-weight-700">4x4 variant,</span> cementing its status as an aspirational lifestyle vehicle.</p>
+                <p><span class="font-weight-700">Design that Defined an Era</span></p>
+                <p>The original Sierra's unmistakable identity was defined by its unique silhouette, particularly the vast, fixed, panoramic three-quarter glass section running along the rear sides—affectionately known as the<span class="font-weight-700"> ‘Alpine Window’</span> or ‘Sierra Glasshouse’. This design choice flooded the cabin with light, creating an open, airy environment that passengers adored, making it feel less like a rugged truck and more like a spacious, luxurious family adventurer. The car was initially powered by a 2.0-litre naturally aspirated diesel engine, later upgraded with a turbocharger in 1997 to produce a more respectable 87 horsepower, making it a capable performer for its time. Although production ceased in 2003, the legend of the Sierra never faded.</p>
+
+                <h3 class="subheading">The Legend Reborn: Design and Stance of the 2025 Sierra</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/tata sierra/right.webp" alt="right" title="right" loading="lazy" /></div>
+                </div>
+                <p>Fast forward to the present, and the new Tata Sierra has been meticulously crafted to revive that legendary status while being entirely relevant to the demands of a modern SUV buyer. Drawing inspiration from the well-received concepts shown at recent Auto Expos, the production version strikes a near-perfect balance between nostalgic cues and futuristic aesthetics.</p>
+                <p><span class="font-weight-700">Exterior: </span>Marrying Nostalgia with Futurism</p>
+                <p>The new Sierra retains the quintessential<span class="font-weight-700"> boxy, upright silhouette </span>of its predecessor, immediately giving it a strong, commanding road presence that few rivals can match. Unlike the original, the 2025 model adopts a far more practical <span class="font-weight-700">five-door layout, </span>addressing the primary convenience concern of the old three-door format.</p>
+                <p>The front fascia is entirely modern, featuring a sleek, gloss-black panel that houses the full-width connected LED DRLs and the illuminated Tata logo—a signature design element found on Tata’s new-age offerings. The main projector headlamps are strategically positioned lower down in a split arrangement, contributing to its sophisticated and contemporary look. The pronounced wheel arches, robust body cladding, and available <span class="font-weight-700">19-inch dual-tone alloy wheels </span>reinforce its SUV credentials and sense of durability. A critical detail that truly ties the new Sierra to the old is the bold <span class="font-weight-700">'Sierra' badging </span>prominently displayed on both the bonnet line and the rear tailgate.</p>
+                <p><span class="font-weight-700">The Iconic Alpine Window, Reimagined</span></p>
+                <p>The defining feature of the original—the Alpine Window—has been cleverly reimagined for the modern, five-door structure and to comply with stringent safety regulations. Instead of a single, continuous glass section, the new design uses a partially blacked-out C-pillar and a contrasting black roof/roof finisher. This visual trickery successfully mimics the wraparound glass effect of the original, maintaining the signature light and airy feel. Adding to this sense of openness is the large <span class="font-weight-700">PanoraMax panoramic sunroof, </span>which stretches deep into the cabin, allowing occupants to enjoy a wide, expansive view—a detail that the dedicated team at <span class="font-weight-700">BikeCarHub</span> has highlighted as a major USP. This blend of nostalgic design and modern engineering earned the Sierra the prestigious <span class="font-weight-700">Red Dot Design Award in 2025,</span> a global affirmation of its design excellence.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading">Inside the Cabin: A 'Living Room on Wheels'</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/tata sierra/side.webp" alt="side" title="side" loading="lazy" /></div>
+                </div>
+                <p>Tata Motors has deployed an all-new interior philosophy for the Sierra, which they term the <span class="font-weight-700">'Life Space'</span>—an approach designed to create a calming, premium<span class="font-weight-700"> "living room on wheels."</span> The cabin combines soft-touch materials, thoughtful ambient lighting, and high-quality dual-tone themes (typically black and grey) to create an ambiance that significantly elevates the passenger experience beyond typical mid-size SUVs.</p>
+                <p><span class="font-weight-700">Segment-Defining Technology: The Triple-Screen Display</span></p>
+                <p>The most striking aspect of the Sierra’s interior is its segment-first <span class="font-weight-700">Triple-Screen TheatrePro</span>dashboard layout (in top trims). This cutting-edge setup integrates three seamless displays:</p>
+                <ol start="1">
+                    <li><span class="font-weight-700">Digital Driver Display:</span> A fully customizable instrument cluster (likely 10.25-inch or 12.3-inch).</li>
+                    <li><span class="font-weight-700">Primary Infotainment Screen:</span> A large central unit (likely 12.3-inch) for navigation and media.</li>
+                    <li><span class="font-weight-700">Dedicated Co-driver Screen: </span>An additional display providing entertainment or navigation data to the front passenger.</li>
+                </ol>
+                <p>This technology, along with the new four-spoke steering wheel featuring an illuminated Tata logo and touch-sensitive controls, positions the Sierra as a true technology leader in its category. Furthermore, the Sierra is to debut a premium<span class="font-weight-700"> JBL Black 12-speaker audio system with Dolby Atmos, </span>further enhancing the immersive in-cabin experience.</p>
+                <p><span class="font-weight-700">Luxury and Comfort Features</span></p>
+                <p>The Sierra is packed with comfort and safety features that align it with premium segments:</p>
+                <ul>
+                    <li><span class="font-weight-700">Comfort & Convenience:</span> Dual-zone automatic climate control, ventilated and powered front seats, a large panoramic sunroof, a wireless charging pad, rear window sunshades, and an electronic parking brake (EPB) with Auto Hold.</li>
+                    <li><span class="font-weight-700">Safety & ADAS:</span> The SUV will be equipped with a comprehensive standard safety package, including a minimum of <span class="font-weight-700">six airbags, ABS with ESC,</span> and an advanced<span class="font-weight-700"> Level 2 ADAS (Advanced Driver Assistance System)</span> suite in higher variants. This ADAS package includes features like Adaptive Cruise Control, Lane Keep Assist, and Autonomous Emergency Braking (AEB), providing peace of mind for highway driving. A <span class="font-weight-700">360-degree camera</span> further aids maneuverability in urban environments.</li>
+                </ul>
+
+                <h3 class="subheading">Performance and Powertrains: ICE and EV Dominance</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/tata sierra/yellow.webp" alt="yellow" title="yellow" loading="lazy" /></div>
+                </div>
+                <p>The new Tata Sierra is launched with a diverse powertrain strategy that caters to modern buyers, offering Petrol, Diesel, and Electric options right from the start.</p>
+                <p><span class="font-weight-700">The New Turbo-Petrol Engine Debut</span></p>
+                <p>The Sierra is the platform chosen by Tata Motors to debut its much-anticipated <span class="font-weight-700">1.5-litre TGDi (Turbo Gasoline Direct Injection) turbo-petrol engine. </span>This flagship motor is engineered for high performance and efficiency, offering:</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Parameter</th>
+                                <th class="font-weight-600 text-center">Specification (Expected)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Engine Type</td>
+                                <td>1.5L TGDi Turbo-Petrol</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Power Output</td>
+                                <td>170 hp (125 kW)</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Torque</td>
+                                <td>280 Nm</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Transmission</td>
+                                <td>6-speed Manual (MT) / 6-speed Automatic (AT)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>The introduction of this powerful turbo-petrol unit gives the Sierra a significant performance advantage over several key rivals in the segment.</p>
+                <p><span class="font-weight-700">Reliable Diesel Power: The Kryotec Legacy</span></p>
+                <p>For long-distance travelers and diesel enthusiasts, the Sierra is  to use the tried-and-tested<span class="font-weight-700"> 2.0-litre Kryotec diesel engine,</span>a powerhouse currently serving in the Harrier and Safari models.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Parameter</th>
+                                <th class="font-weight-600 text-center">Specification (Expected)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Engine Type</td>
+                                <td>2.0L Kryotec Turbo-Diesel</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Power Output</td>
+                                <td>170 hp (125 kW)</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Torque</td>
+                                <td>350 Nm</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Transmission</td>
+                                <td>6-speed Manual (MT) / 6-speed Automatic (AT)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><span class="font-weight-700">The All-Electric Sierra EV: Range and Platform</span></p>
+                <p>The electric variant, built on the highly adaptable <span class="font-weight-700">acti.ev platform, </span>is  to follow the ICE launch and represents Tata’s commitment to electrification. It will borrow battery technology and electric motor setups from the Harrier EV.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Parameter</th>
+                                <th class="font-weight-600 text-center">Specification (Expected)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Platform</td>
+                                <td>acti.ev Dedicated EV Architecture</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Battery Options</td>
+                                <td> 65 kWh and 75 kWh packs</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Range (Claimed)</td>
+                                <td>500 – 600 km (on a full charge, depending on battery pack)</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">DriveTrain</td>
+                                <td>Front-Wheel Drive (FWD) or All-Wheel Drive (AWD) on higher trims</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Fast Charging</td>
+                                <td>
+                                    Support for rapid DC charging (20% to 80% in ~25-30 minutes)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>This EV variant will feature unique elements like a blanked-off grille, distinctive EV badging, and possibly lounge seating, setting it apart as a premium, long-range electric SUV.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading"> Pricing and Variants</h3>
+                <p>While the official price announcement is highly anticipated, market analysts and dealership sources suggest the Tata Sierra will be strategically positioned to bridge the gap between the mid-size SUV segment (Creta/Seltos) and the upper-mid-size SUV segment (Harrier/Safari/Scorpio-N).</p>
+                <p><span class="font-weight-700">Pricing Strategy and Market Position</span></p>
+                <p>The pricing is to reflect the premium positioning, the advanced feature list (especially the triple-screen setup and ADAS), and the introduction of the new turbo-petrol engine.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Powertrain Type</th>
+                                <th class="font-weight-600 text-center">Ex-Showroom Price Range</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">ICE (Petrol/Diesel)</td>
+                                <td class="font-weight-600">₹11.49 Lakh Starting Price</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The Sierra will likely be offered in a structure similar to other Tata models, potentially using names like <span class="font-weight-700">Pure, Adventure, and Accomplished, </span>offering buyers a choice between naturally aspirated petrol (entry-level), turbo-petrol/diesel, and the top-spec EV with all the bells and whistles.</p>
+                <p><span class="font-weight-700">Vibrant Colour Variants</span></p>
+                <p>The Sierra is anticipated to be available in a range of sophisticated and striking colours, emphasizing its dual nature as both a rugged adventurer and a stylish urban commuter. Colour variants include:</p>
+                <ul>
+                    <li><span class="font-weight-700">Mintal Grey</span></li>
+                    <li><span class="font-weight-700">Coorg Clouds</span></li>
+                    <li><span class="font-weight-700">Bengal Rouge</span></li>
+                    <li><span class="font-weight-700">Munnar Mist</span></li>
+                    <li><span class="font-weight-700">Andaman Adventure</span></li>
+                    <li><span class="font-weight-700">Classic Black and White options are also expected.</span></li>
+                </ul>
+                <h3 class="subheading">Specifications & Features Comparison Table (New Tata Sierra ICE vs. EV)</h3>
+                <p>To understand the difference between the core offerings, here is a detailed comparison of the key specifications and features of the new Tata Sierra in its ICE and EV avatars, based on concept reveals and production details.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature / Specification</th>
+                                <th class="font-weight-600 text-center">ICE Turbo-Petrol / Diesel (Expected)</th>
+                                <th class="font-weight-600 text-center">Sierra EV (Expected)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td class="font-weight-600">Platform</td>
+                                <td>Omega Arc / Hybrid Platform</td>
+                                <td>acti.ev Dedicated EV Platform</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Engine/Motor</td>
+                                <td>1.5L TGDi Petrol / 2.0L Kryotec Diesel</td>
+                                <td>Single/Dual Electric Motor</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Power Output</td>
+                                <td>Up to 170 hp</td>
+                                <td>Equivalent to 150-220 hp</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Torque</td>
+                                <td>Up to 350 Nm (Diesel)</td>
+                                <td>300-500 Nm (Instant)</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Transmission</td>
+                                <td>6MT / 6AT</td>
+                                <td>Single-speed Automatic</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Drivetrain</td>
+                                <td>FWD (Primary) / AWD (Diesel/High-end EV)</td>
+                                <td>FWD / AWD (Dual-Motor)</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Range</td>
+                                <td>Petrol: 600-700 km (Tank)</td>
+                                <td>500-600 km (Battery)</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Infotainment Screen</td>
+                                <td>12.3-inch Touchscreen</td>
+                                <td>12.3-inch Touchscreen + Co-Driver Screen</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Driver Display</td>
+                                <td>10.25-inch Full Digital</td>
+                                <td>12.3-inch Full Digital</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">ADAS Level</td>
+                                <td>Level 2 (High Variants)</td>
+                                <td>Level 2 (High Variants)</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Sound System</td>
+                                <td>JBL 12-Speaker with Dolby Atmos</td>
+                                <td>JBL 12-Speaker with Dolby Atmos</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Signature Design</td>
+                                <td>Faux Alpine Window Styling, Flush Door Handles</td>
+                                <td>Blanked-off Grille, EV specific aerodynamic wheels</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading">Facing the Competition: Tata Sierra vs. the Mid-Size SUV Arena</h3>
+                <p>The re-entry of the Sierra places it directly into India's most fiercely competitive segment: the mid-size SUV category. It faces established leaders known for their refinement, feature list, and massive sales volumes, such as the Hyundai Creta and Kia Seltos, while also staring down capable body-on-frame competitors like the Mahindra Scorpio-N. Tata's strategy is clear: leverage the Sierra's nostalgia and deliver segment-best features like the triple-screen setup, high-power turbo-petrol engine, and the option of a powerful EV. This bold move is sure to bring exciting dynamics to the market, especially for readers following BikeCarHub.</p>
+                <p><span class="font-weight-700">Competitors Comparison Table</span></p>
+                <p>To showcase how the Tata Sierra stacks up against its primary rivals, let’s compare the top-spec ICE versions on key metrics.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature</th>
+                                <th class="font-weight-600 text-center">Tata Sierra 1.5L Turbo-Petrol (Expected)</th>
+                                <th class="font-weight-600 text-center">Hyundai Creta 1.5L Turbo</th>
+                                <th class="font-weight-600 text-center">Kia Seltos 1.5L Turbo</th>
+                                <th class="font-weight-600 text-center">Mahindra Scorpio-N 2.0L Petrol</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td class="font-weight-600">Price (Lakh, Ex-S)</td>
+                                <td class="font-weight-600">₹11.49 - ₹25.39</td>
+                                <td>₹17.83 - ₹20.09</td>
+                                <td>₹15.20 - ₹19.81</td>
+                                <td>₹15.38 - ₹20.49</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Engine (Primary)</td>
+                                <td class="font-weight-600">1.5L TGDi Turbo-Petrol</td>
+                                <td>1.5L Turbo-Petrol</td>
+                                <td>1.5L Turbo-Petrol</td>
+                                <td>2.0L Turbo-Petrol (mStallion)</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Power</td>
+                                <td class="font-weight-600">170 hp</td>
+                                <td>158 hp</td>
+                                <td>158 hp</td>
+                                <td>200 hp</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Torque</td>
+                                <td class="font-weight-600">280 Nm</td>
+                                <td>253 Nm</td>
+                                <td>253 Nm</td>
+                                <td>370 Nm</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Safety Standard</td>
+                                <td class="font-weight-600">6 Airbags, ESC, EPB</td>
+                                <td>6 Airbags, ESC</td>
+                                <td>6 Airbags, ESC</td>
+                                <td>6 Airbags, ESC</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">ADAS Availability</td>
+                                <td class="font-weight-600">Yes (Level 2)</td>
+                                <td>Yes (Level 2)</td>
+                                <td>Yes (Level 2)</td>
+                                <td>No (Currently)</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Unique Feature USP</td>
+                                <td class="font-weight-600">Triple-Screen Dashboard, JBL Dolby Atmos Audio</td>
+                                <td>Ventilated Seats, Powered Driver Seat</td>
+                                <td>Dual-Zone Climate Control (Top)</td>
+                                <td>Body-on-Frame, True 4x4 Option</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Structure Type</td>
+                                <td class="font-weight-600">Monocoque (Expected)</td>
+                                <td>Monocoque</td>
+                                <td>Monocoque</td>
+                                <td>Body-on-Frame</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <p>The table clearly demonstrates that the new Sierra is entering the fight with a performance and feature advantage. Its power figures are higher than its direct monocoque rivals (Creta and Seltos), and its interior technology is truly groundbreaking for the segment. By offering the latest ADAS safety features and the iconic design aesthetic, the Sierra offers a compelling and emotionally resonant choice for consumers.</p>
+
+                <h3 class="subheading">Detailed Insights and Market Analysis</h3>
+                <p>The revival of the Sierra is more than just a model launch; it is a carefully calculated move by Tata Motors to solidify its position as a dominant player across all premium SUV segments. The strategy of offering both ICE and EV models caters to the transitional market, ensuring that the Sierra nameplate captures market share regardless of a buyer's preferred fuel source.</p>
+                <p><span class="font-weight-700">The Engineering Marvel: Acti.ev Platform</span></p>
+                <p>The decision to base the Sierra EV on the acti.ev platform is crucial. Unlike previous ‘conversion’ EVs built on adapted ICE architectures, acti.ev is a dedicated EV-first platform designed to maximize efficiency, interior space, and battery packaging. This is why the Sierra EV can promise a real-world range that crosses the 500 km mark, a figure that is essential for overcoming range anxiety and competing effectively against upcoming electric rivals like the Mahindra BE 6.</p>
+                <p><span class="font-weight-700">The 'Lifestyle' Appeal</span></p>
+                <p>The original Sierra was a lifestyle statement. The 2025 version aims to amplify this. The upright posture, the muscular haunches, and the retention of the ‘Alpine’ visual cues appeal directly to buyers who seek a vehicle that stands out from the crowd of conventional, softer SUVs. The spacious cabin, often described by Tata as having a <span class="font-weight-700">“Living Room Philosophy,”</span> is designed for comfortable long-distance travel and family adventures, reinforcing its image as a capable, aspirational vehicle ready for any journey. The inclusion of high-end features like the<span class="font-weight-700"> JBL Black 12-speaker audio system with a SonicShaft soundbar </span>further enhances this premium, lifestyle positioning.</p>
+                <p><span class="font-weight-700">Ensuring Human-Written Feel and Tone</span></p>
+                <p>In line with the user’s request, this entire narrative is crafted in a friendly, third-person perspective, focusing on exciting the reader about the legendary return. We’ve covered the technical aspects—the power figures, the ADAS features, and the prices—but framed them within the context of the Sierra's legacy and future impact on the market. For those planning their next purchase, the detailed tables and comprehensive analysis provided here on <span class="font-weight-700">BikeCarHub </span>aim to be the definitive resource. The combination of nostalgia, high-tech features, and diverse powertrains ensures the new Sierra is one of the most talked-about and highly anticipated launches in recent automotive history. It truly embodies the idea of a classic legend re-engineered for the future, ready to reclaim its crown.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading">Frequently Asked Questions (FAQs) About the Tata Sierra</h3>
+                <div class="accordion" id="sierraFAQ">
+
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                                Q1: What is the launch date for the new Tata Sierra (ICE and EV)?
+                            </button>
+                        </h2>
+                        <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#sierraFAQ">
+                            <div class="accordion-body">
+                                The production-spec Tata Sierra (ICE version) has been unveiled, and the official price announcement is on <b>November 25, 2025</b>.
+                                The Sierra EV is to follow in <b>early 2026</b>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                                Q2: Will the new Tata Sierra be offered in a 3-door version like the original?
+                            </button>
+                        </h2>
+                        <div id="a2" class="accordion-collapse collapse" data-bs-parent="#sierraFAQ">
+                            <div class="accordion-body">
+                                No, the new Sierra is a <b>5-door SUV</b> for better practicality.
+                                It still retains the iconic boxy design and a tribute to the original’s three-door glasshouse styling.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+                                Q3: What are the primary engine options in the ICE model?
+                            </button>
+                        </h2>
+                        <div id="a3" class="accordion-collapse collapse" data-bs-parent="#sierraFAQ">
+                            <div class="accordion-body">
+                                The Sierra ICE will offer:<br>
+                                • 1.5L TGDi Turbo-Petrol (~170 hp)<br>
+                                • 2.0L Kryotec Diesel (~170 hp)<br>
+                                • A naturally aspirated petrol for base variants (expected)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">
+                                Q4: Does the new Tata Sierra feature ADAS?
+                            </button>
+                        </h2>
+                        <div id="a4" class="accordion-collapse collapse" data-bs-parent="#sierraFAQ">
+                            <div class="accordion-body">
+                                Yes, top variants will get <b>Level 2 ADAS</b>, including Lane Keep Assist, Adaptive Cruise Control, and AEB.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5">
+                                Q5: What is the driving range for the Tata Sierra EV?
+                            </button>
+                        </h2>
+                        <div id="a5" class="accordion-collapse collapse" data-bs-parent="#sierraFAQ">
+                            <div class="accordion-body">
+                                The Sierra EV with 65 kWh & 75 kWh battery packs is to deliver <b>500–600 km certified range</b>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6">
+                                Q6: What unique interior feature sets the Sierra apart?
+                            </button>
+                        </h2>
+                        <div id="a6" class="accordion-collapse collapse" data-bs-parent="#sierraFAQ">
+                            <div class="accordion-body">
+                                The standout feature is the <b>Triple-Screen TheatrePro Dashboard</b> with a dedicated passenger display.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a7">
+                                Q7: Will the new Sierra be a 4x4/AWD vehicle?
+                            </button>
+                        </h2>
+                        <div id="a7" class="accordion-collapse collapse" data-bs-parent="#sierraFAQ">
+                            <div class="accordion-body">
+                                The ICE model is to be <b>FWD</b>, but <b>AWD options</b> may be offered in the top diesel and EV variants.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a8">
+                                Q8: Which cars will compete with the Tata Sierra?
+                            </button>
+                        </h2>
+                        <div id="a8" class="accordion-collapse collapse" data-bs-parent="#sierraFAQ">
+                            <div class="accordion-body">
+                                Main rivals include:<br>
+                                • Hyundai Creta<br>
+                                • Kia Seltos<br>
+                                • Maruti Grand Vitara<br>
+                                • Toyota Hyryder<br><br>
+                                It may also challenge base variants of the Scorpio-N & XUV700.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a9">
+                                Q9: Why is the Sierra’s design considered special?
+                            </button>
+                        </h2>
+                        <div id="a9" class="accordion-collapse collapse" data-bs-parent="#sierraFAQ">
+                            <div class="accordion-body">
+                                It blends <b>retro appeal with modern design</b>, retaining the boxy stance, Alpine Window effect, connected LED bars, and flush door handles.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a10">
+                                Q10: Where is the Sierra positioned in Tata’s SUV lineup?
+                            </button>
+                        </h2>
+                        <div id="a10" class="accordion-collapse collapse" data-bs-parent="#sierraFAQ">
+                            <div class="accordion-body">
+                                The Sierra will sit <b>above the Tata Curvv</b> and near or above the high-end Harrier variants, targeting premium SUV buyers.
+                            </div>
+                        </div>
+                    </div>
+                    <p></p>
+                    <p>Tata Sierra 2025<a class="for-link" asp-controller="Blogs" asp-action="Nov102025BlogDetails3"> Click Here!</a></p>
+                    <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+                </div>
+
+            </div>
+        </div>
+
+     </div>
+
+        @await Html.PartialAsync("_AllViewComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

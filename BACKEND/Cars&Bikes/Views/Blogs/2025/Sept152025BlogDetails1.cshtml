@@ -1,0 +1,485 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Maruti Victoris SUV: Mileage, Features & Review";
+}
+@section MetaTags {
+    <meta name="keywords" content="Maruti Victoris mileage, Maruti Victoris features, Maruti Victoris variants, Maruti Victoris hybrid SUV, Maruti Victoris CNG, Maruti Victoris specifications, Maruti Victoris review, Maruti Victoris price in India, Maruti Victoris interior, Maruti Victoris safety features, Maruti Victoris competitors, Maruti Victoris vs Creta, Maruti Victoris vs Seltos, Maruti Victoris ADAS, Maruti Victoris SUV 2025" />
+    <meta name="description" content="Explore Maruti Victoris mileage, variants, features, safety, price, and competitor comparison. A complete SUV review with specs and FAQs." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 19th August 2025</p>
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p><span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub </a></span>explores every detail of the Maruti Victoris, including its <span class="font-weight-700">mileage, features, variants, safety technology, interiors, competitors, and specifications, </span>so readers can understand whether it’s the right SUV for them.</p>
+
+                <h3 class="subheading">Maruti Victoris Mileage & Fuel Efficiency</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/sept/marutivictoris/full.webp" alt="full" title="full" loading="lazy" /></div>
+                </div>
+                <p>One of the strongest highlights of the Maruti Victoris is its impressive fuel efficiency across variants. Mileage plays a big role in India, and Maruti has ensured the Victoris meets the expectations of different kinds of drivers.</p>
+                <ul>
+                    <li><span class="font-weight-700">Petrol (MT):</span> 21.18 km/l</li>
+                    <li><span class="font-weight-700">Petrol (AT): </span>21.06 km/l</li>
+                    <li><span class="font-weight-700">Petrol (ALLGRIP AT): </span>19.07 km/l</li>
+                    <li><span class="font-weight-700">Strong Hybrid Petrol (e-CVT): </span>28.65 km/l</li>
+                    <li><span class="font-weight-700">Petrol + CNG: </span>27.02 km/kg</li>
+                </ul>
+                <p>For buyers focused on maximum fuel savings, the <span class="font-weight-700">Strong Hybrid and CNG variants</span> stand out. The hybrid variant, in particular, delivers a class-leading 28.65 km/l, making it one of the most fuel-efficient SUVs in its segment.</p>
+
+                <h3 class="subheading">Design and Exterior Styling</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/sept/marutivictoris/display.avif" alt=" display " title=" display " loading="lazy" /></div>
+                </div>
+                <p>The Victoris is designed to command attention with its bold, chiseled looks. From the <span class="font-weight-700">segmented LED tail lamps</span> that stretch across the rear to the <span class="font-weight-700">bold-cut LED DRLs and projector headlamps</span>, it ensures a road presence that is hard to ignore.</p>
+                <ul>
+                    <li><span class="font-weight-700">Alloy Wheels:</span> Aerodynamic alloy wheels add to its modern appeal.</li>
+                    <li><span class="font-weight-700">Body Colours: </span>Available in stylish dual-tone and monotone shades including Magma Grey, Bluish Black, Mystic Green, Eternal Blue, Splendid Silver, Sizzling Red, and Pearl Arctic White.</li>
+                    <li><span class="font-weight-700">Dynamic Stance</span>: With a<span class="font-weight-700"> length of 4360 mm</span> and a <span class="font-weight-700">wide body stance of 1795 mm,</span> it looks premium and sporty.</li>
+                </ul>
+                <p>The Victoris clearly shows that Maruti Suzuki has shifted gears in terms of SUV styling, making it a stylish option for urban buyers. </p>
+
+                <h3 class="subheading">Additional Exterior Details</h3>
+                <ul>
+                    <li><span class="font-weight-700">LED Fog Lamps </span>enhance visibility in tough conditions. </li>
+                    <li><span class="font-weight-700">Shark Fin Antenna </span>adds a sporty appeal. </li>
+                    <li><span class="font-weight-700">Skid Plates (front & rear) </span>for SUV ruggedness. </li>
+                    <li><span class="font-weight-700">Roof Rails</span> for a muscular look and practicality.</li>
+                </ul>
+
+                <h3 class="subheading">Interior and Cabin Experience</h3>
+               
+                <p>Step inside, and the Victoris feels more premium than many of its rivals. The <span class="font-weight-700">dual-tone interiors </span> (Black & Ivory) or <span class="font-weight-700">all-black champagne gold accented interiors</span> for hybrid variants create a classy environment. </p>
+                <ul>
+                    <li><span class="font-weight-700">Panoramic Sunroof </span>for an airy feel. </li>
+                    <li><span class="font-weight-700">64-colour ambient lighting </span>for mood enhancement. </li>
+                    <li><span class="font-weight-700">Plush leatherette seats </span>for comfort. </li>
+                    <li><span class="font-weight-700">26.03 cm digital instrument cluster</span> and a large <span class="font-weight-700">10.1-inch infotainment system </span>for a futuristic touch.</li>
+                </ul>
+                <p>Passengers will appreciate the thoughtful design, with multiple storage spaces, rear AC vents, and a spacious boot even in the CNG variant. </p>
+
+                <h3 class="subheading">Interior Enhancements</h3>
+                <ul>
+                    <li><span class="font-weight-700">Leather-wrapped steering wheel & gear knob </span>for a premium touch. </li>
+                    <li><span class="font-weight-700">Front Armrest with Storage </span>and><span class="font-weight-700"> Rear Armrest with Cupholders</span> for added convenience. </li>
+                    <li><span class="font-weight-700">Piano Black Accents and Champagne Gold Finish</span> on Hybrid interiors. </li>
+                    <li><span class="font-weight-700">Wide-opening rear doors</span> for easier ingress and egress.</li>
+                </ul>
+                <h3 class="subheading">Comfort and Convenience Features</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/sept/marutivictoris/airbags.webp" alt=" airbags " title=" airbags " loading="lazy" /></div>
+                </div>
+                <p>Maruti Victoris ensures long drives feel effortless. Some notable features include: </p>
+                <ul>
+                    <li><span class="font-weight-700">8-way powered driver seat</span></li>
+                    <li><span class="font-weight-700">Ventilated front seats</span></li>
+                    <li><span class="font-weight-700">Smart powered tailgate with gesture control</span></li>
+                    <li><span class="font-weight-700">Wireless phone charger </span>with cooling</li>
+                    <li><span class="font-weight-700">Auto AC with PM 2.5 filter</span></li>
+                    <li><span class="font-weight-700">60:40 split rear seats</span></li>
+                </ul>
+                <p>Whether it’s city commutes or weekend trips, Victoris prioritizes comfort for every passenger. </p>
+                <h3 class="subheading">Comfort & Convenience Add-ons</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/sept/marutivictoris/display.webp" alt=" display " title=" display " loading="lazy" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Cruise Control</span> for long highway drives. </li>
+                    <li><span class="font-weight-700">Keyless Push Start/Stop button</span> with Smart Key access. </li>
+                    <li><span class="font-weight-700">Tilt & Telescopic Steering Adjustment</span> for better driving ergonomics. </li>
+                    <li><span class="font-weight-700">Auto-dimming IRVM (Inside Rear View Mirror) </span>for night driving comfort. </li>
+                    <li><span class="font-weight-700">Rain-sensing wipers</span> and <span class="font-weight-700">auto headlamp</span>s add premium convenience.</li>
+                </ul>
+                <h3 class="subheading">Technology and Infotainment</h3>
+         
+                <p>Tech-savvy drivers will enjoy the cutting-edge infotainment system: </p>
+                <ul>
+                    <li><span class="font-weight-700">SmartPlay Pro X system </span>with a 10.1-inch HD touchscreen. </li>
+                    <li><span class="font-weight-700">Infinity 8-speaker sound system </span>with Dolby Atmos 5.1 surround sound. </li>
+                    <li><span class="font-weight-700">Alexa Auto Voice AI </span>with over 40 features for hands-free commands. </li>
+                    <li><span class="font-weight-700">Next-gen Suzuki Connect</span> with over 60 connected car features including vehicle tracking, emergency alerts, and remote functions. </li>
+                    <li><span class="font-weight-700">Wireless Android Auto and Apple  CarPlay </span>for seamless connectivity.</li>
+                </ul>
+                <p>This level of tech ensures that Victoris keeps up with digital lifestyles. </p>
+                <h3 class="subheading">Technology Add-ons</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/sept/marutivictoris/desktop.webp" alt=" desktop " title=" desktop " loading="lazy" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Heads-Up Display (HUD): </span> Projects key information (speed, navigation) directly on the windshield. </li>
+                    <li><span class="font-weight-700">Arkamys sound tuning </span>enhances audio experience in lower trims without Infinity speakers. </li>
+                    <li><span class="font-weight-700">Over-the-air (OTA) software updates</span> for SmartPlay Pro system.</li>
+                </ul>
+                <h3 class="subheading">Safety Features</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/sept/marutivictoris/parking.avif" alt=" parking " title=" parking " loading="lazy" /></div>
+                </div>
+                <p>Safety is a big priority for Indian families, and the Victoris delivers confidently. </p>
+                <ul>
+                    <li><span class="font-weight-700">6 airbags standard</span> across all variants. </li>
+                    <li><span class="font-weight-700">ABS with EBD and Brake Assist</span></li>
+                    <li><span class="font-weight-700">Electronic Stability Program (ESP) </span></li>
+                    <li><span class="font-weight-700">Hill Hold Assist and Hill Descent Control (AllGrip variant) </span> </li>
+                    <li><span class="font-weight-700">360-degree HD camera </span>with 11 views</li>
+                    <li><span class="font-weight-700">ISOFIX child seat anchors</span></li>
+                </ul>
+                <p>Such features ensure peace of mind, whether it’s city driving or highway cruising. </p>
+                <h3 class="subheading">Safety Additions</h3>
+                <ul>
+                <li><span class="font-weight-700">Tyre Pressure Monitoring System (TPMS) </span> for real-time pressure checks. </li>
+                <li><span class="font-weight-700">High-strength Heartect platform </span>designed to absorb and disperse crash energy. </li>
+                <li><span class="font-weight-700">Pedestrian Protection Compliance</span> for better safety in urban environments. </li>
+                <li><span class="font-weight-700">Immobilizer & Security Alarm </span>as anti-theft measures.</li>
+                </ul>
+                <h3 class="subheading">Advanced Driver Assistance Systems (ADAS – Level 2)</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/sept/marutivictoris/adas.avif" alt="adas" title="adas" loading="lazy" /></div>
+                </div>
+                <p>One of the standout highlights of the Victoris is its Level 2 ADAS suite. Few SUVs in this segment offer such advanced features. </p>
+                <ul>
+                    <li>Lane Keep Assist & Lane Departure Warning</li>
+                    <li>Adaptive Cruise Control with curve speed reduction</li>
+                    <li>Blind Spot Monitor with Lane Change Alert</li>
+                    <li>Automatic Emergency Braking with Forward Collision Warning</li>
+                    <li>Rear Cross Traffic Alert</li>
+                    <li>High Beam Assist</li>
+                </ul>
+                <p>These intelligent features not only improve safety but also enhance convenience during long highway drives. </p>
+
+                <h3 class="subheading">Practicality & Utility</h3>
+                <ul>
+                    <li><span class="font-weight-700">Boot space of 373 liters (Petrol/Hybrid) and 265 liters (CNG variant). </span></li>
+                    <li><span class="font-weight-700">Rear seat recline function </span>for added comfort on long drives. </li>
+                    <li><span class="font-weight-700">Adjustable headrests </span>for all five seats.</li>
+                </ul>
+
+
+
+                <h3 class="subheading">Engine, Performance & Transmission Options</h3>
+                <p>Maruti Victoris offers multiple engine choices for different driving styles: </p>
+                <ul>
+                    <li><span class="font-weight-700">K15C Petrol Engine </span>(Manual & Automatic) – Reliable and efficient. </li>
+                    <li><span class="font-weight-700">ALLGRIP Select (AWD) </span> – For adventurous drivers tackling mixed terrains. </li>
+                    <li><span class="font-weight-700">Strong Hybrid Petrol (e-CVT) </span> – Smooth and extremely fuel-efficient. </li>
+                    <li><span class="font-weight-700">Factory-fitted CNG variant  </span>– Eco-friendly with low running costs.</li>
+                </ul>
+                <p>Transmission options include <span class="font-weight-700">5-speed manual, 6-speed automatic with paddle shifters, and e-CVT </span>in the hybrid. </p>
+
+                <h3 class="subheading">Variants and Key Differences</h3>
+                <p>The Victoris is available in LXi, VXi, ZXi, and ZXi+ trims, with optional (O) packs. </p>
+                <ul>
+                    <li><span class="font-weight-700">Lower trims (LXi, VXi):</span> Basic features but still get safety essentials like 6 airbags. </li>
+                    <li><span class="font-weight-700">Mid trims (ZXi): :</span> Add comfort features like infotainment, chrome accents, and parking aids. </li>
+                    <li><span class="font-weight-700">Top trims (ZXi+): :</span>Feature-rich with panoramic sunroof, ventilated seats, ADAS, and advanced tech.</li>
+                </ul>
+                <p>Buyers can choose based on budget and priorities. </p>
+
+                <h3 class="subheading">Competitors Comparison Table</h3>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Model</th>
+                                <th class="font-weight-600 text-center">Mileage (Petrol)</th>
+                                <th class="font-weight-600 text-center">Hybrid Mileage</th>
+                                <th class="font-weight-600 text-center">CNG Mileage</th>
+                                <th class="font-weight-600 text-center">Key Highlights</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Maruti Victoris</td>
+                                <td>21.18 km/l (MT)</td>
+                                <td>28.65 km/l (Hybrid)</td>
+                                <td>27.02 km/kg</td>
+                                <td>ADAS, AWD option, Dolby Atmos</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Hyundai Creta</td>
+                                <td>17.4 km/l</td>
+                                <td>No hybrid</td>
+                                <td>No CNG</td>
+                                <td>Panoramic sunroof, diesel option</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Kia Seltos</td>
+                                <td>17.9 km/l</td>
+                                <td>No hybrid</td>
+                                <td>No CNG</td>
+                                <td>Sporty design, 1.5 turbo petrol</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Toyota Hyryder</td>
+                                <td>20–21 km/l</td>
+                                <td>27.97 km/l Hybrid</td>
+                                <td>No CNG</td>
+                                <td>Hybrid tech, Toyota reliability</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Grand Vitara</td>
+                                <td>20–21 km/l</td>
+                                <td>27.97 km/l Hybrid</td>
+                                <td>CNG available</td>
+                                <td>Similar features, premium badge</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <p>The Victoris clearly shines with its multiple fuel options (Petrol, Hybrid, CNG, AWD), giving it a unique edge. </p>
+
+                <h3 class="subheading">Specifications & Features Comparison Table</h3>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Category</th>
+                                <th class="font-weight-600 text-center">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Engine Options</td>
+                                <td>K15C Petrol, Strong Hybrid Petrol (M15D), Petrol + CNG</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Transmission</td>
+                                <td>5MT, 6AT (ISG), e-CVT</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Mileage</td>
+                                <td>19.07–28.65 km/l, 27.02 km/kg (CNG)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Dimensions</td>
+                                <td>Length: 4360 mm, Width: 1795 mm, Height: 1655 mm, Wheelbase: 2600 mm</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Seating Capacity</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Safety</td>
+                                <td>6 airbags, ESP, Hill Assist, ADAS, 360° camera, TPMS</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Comfort</td>
+                                <td>Panoramic sunroof, ventilated seats, powered driver seat, PM2.5 filter</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Infotainment</td>
+                                <td>10.1-inch SmartPlay Pro X, Infinity speakers with Dolby Atmos, Alexa AI</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Variants</td>
+                                <td>LXi, VXi, ZXi, ZXi+ (with optional packs)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">Pros and Cons of Maruti Victoris</h3>
+                <p><span class="font-weight-700">Pros</span></p>
+                <ul>
+                    <li>Excellent mileage across variants (Petrol, CNG, Hybrid). </li>
+                    <li>ADAS Level 2 in the segment. </li>
+                    <li>Premium interiors with advanced infotainment. </li>
+                    <li>Multiple fuel choices. </li>
+                    <li>Strong comfort and convenience features. </li>
+                </ul>
+                <p><span class="font-weight-700">Cons</span></p>
+                <ul>
+                    <li>No diesel engine option (competitors like Creta offer diesel). </li>
+                    <li>Top-end variants may feel expensive. </li>
+                    <li>AWD limited to Petrol AT variant. </li>
+                </ul>
+
+                <h3 class="subheading">Conclusion</h3>
+                <p>The Maruti Victoris represents a major leap for Maruti Suzuki in India’s SUV market. It is <span class="font-weight-700">fuel-efficient, stylish, safe, and loaded with features </span>that Indian buyers have been asking for. By offering <span class="font-weight-700">Petrol, Hybrid, and CNG </span>options in one package, it sets itself apart from rivals like Hyundai Creta and Kia Seltos.</p>
+                <p>For buyers looking for an SUV that combines <span class="font-weight-700">technology, comfort, safety, and efficiency,</span> the Victoris makes a compelling case. And with Maruti’s extensive service network, ownership is bound to be stress-free.</p>
+                <p><span class="font-weight-700">BikeCarHub </span>recommends the Victoris as one of the most complete SUVs in its class.</p>
+
+                <h3 class="subheading">FAQs About Maruti Victoris</h3>
+                <div class="accordion accordion-flush" id="accordionVictor">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="victor-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#victor-collapseOne" aria-expanded="false" aria-controls="victor-collapseOne">
+                                Q1. What is the mileage of Maruti Victoris Hybrid variant?
+                            </button>
+                        </h2>
+                        <div id="victor-collapseOne" class="accordion-collapse collapse" aria-labelledby="victor-headingOne" data-bs-parent="#accordionVictor">
+                            <div class="accordion-body">
+                                A: The Strong Hybrid Petrol e-CVT offers 28.65 km/l.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="victor-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#victor-collapseTwo" aria-expanded="false" aria-controls="victor-collapseTwo">
+                                Q2. Does Maruti Victoris have AWD?
+                            </button>
+                        </h2>
+                        <div id="victor-collapseTwo" class="accordion-collapse collapse" aria-labelledby="victor-headingTwo" data-bs-parent="#accordionVictor">
+                            <div class="accordion-body">
+                                A: Yes, the Petrol AT variant offers ALLGRIP AWD.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="victor-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#victor-collapseThree" aria-expanded="false" aria-controls="victor-collapseThree">
+                                Q3. What is the mileage of Maruti Victoris CNG?
+                            </button>
+                        </h2>
+                        <div id="victor-collapseThree" class="accordion-collapse collapse" aria-labelledby="victor-headingThree" data-bs-parent="#accordionVictor">
+                            <div class="accordion-body">
+                                A: 27.02 km/kg.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="victor-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#victor-collapseFour" aria-expanded="false" aria-controls="victor-collapseFour">
+                                Q4. How many airbags does Victoris have?
+                            </button>
+                        </h2>
+                        <div id="victor-collapseFour" class="accordion-collapse collapse" aria-labelledby="victor-headingFour" data-bs-parent="#accordionVictor">
+                            <div class="accordion-body">
+                                A: Six airbags are standard across all trims.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="victor-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#victor-collapseFive" aria-expanded="false" aria-controls="victor-collapseFive">
+                                Q5. Which infotainment system is offered?
+                            </button>
+                        </h2>
+                        <div id="victor-collapseFive" class="accordion-collapse collapse" aria-labelledby="victor-headingFive" data-bs-parent="#accordionVictor">
+                            <div class="accordion-body">
+                                A: SmartPlay Pro X with a 10.1-inch HD screen, Dolby Atmos sound, and Alexa AI.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="victor-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#victor-collapseSix" aria-expanded="false" aria-controls="victor-collapseSix">
+                                Q6. Does Victoris support wireless Android Auto and CarPlay?
+                            </button>
+                        </h2>
+                        <div id="victor-collapseSix" class="accordion-collapse collapse" aria-labelledby="victor-headingSix" data-bs-parent="#accordionVictor">
+                            <div class="accordion-body">
+                                A: Yes, wireless Android Auto and Apple CarPlay are supported.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="victor-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#victor-collapseSeven" aria-expanded="false" aria-controls="victor-collapseSeven">
+                                Q7. Which variants offer a sunroof?
+                            </button>
+                        </h2>
+                        <div id="victor-collapseSeven" class="accordion-collapse collapse" aria-labelledby="victor-headingSeven" data-bs-parent="#accordionVictor">
+                            <div class="accordion-body">
+                                A: ZXi+ variants come with a panoramic sunroof.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="victor-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#victor-collapseEight" aria-expanded="false" aria-controls="victor-collapseEight">
+                                Q8. Is a diesel version available?
+                            </button>
+                        </h2>
+                        <div id="victor-collapseEight" class="accordion-collapse collapse" aria-labelledby="victor-headingEight" data-bs-parent="#accordionVictor">
+                            <div class="accordion-body">
+                                A: No, the Victoris does not come with a diesel engine.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="victor-headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#victor-collapseNine" aria-expanded="false" aria-controls="victor-collapseNine">
+                                Q9. Who are its main competitors?
+                            </button>
+                        </h2>
+                        <div id="victor-collapseNine" class="accordion-collapse collapse" aria-labelledby="victor-headingNine" data-bs-parent="#accordionVictor">
+                            <div class="accordion-body">
+                                A: Hyundai Creta, Kia Seltos, Toyota Hyryder, and Maruti Grand Vitara.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="victor-headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#victor-collapseTen" aria-expanded="false" aria-controls="victor-collapseTen">
+                                Q10. Why choose Maruti Victoris over others?
+                            </button>
+                        </h2>
+                        <div id="victor-collapseTen" class="accordion-collapse collapse" aria-labelledby="victor-headingTen" data-bs-parent="#accordionVictor">
+                            <div class="accordion-body">
+                                A: It offers hybrid + CNG + AWD in one model, unmatched efficiency, and Maruti’s trusted service.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+
+            </div>
+        </div>
+    </div>
+    @await Html.PartialAsync("_AllViewComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

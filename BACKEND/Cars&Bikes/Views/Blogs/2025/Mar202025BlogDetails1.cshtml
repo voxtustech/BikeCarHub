@@ -1,0 +1,116 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Longest Range Electric Scooters in India";
+}
+@section MetaTags {
+    <meta name="keywords" content="longest range electric scooter, best EV scooters India, top electric scooters, high battery capacity scooters, best mileage EV scooter, electric bike range, best electric scooter under 2 lakh, Simple One range, Ola S1 Pro mileage, Ather 450X top speed, Hero Vida V1 battery, TVS iQube ST range, best e-scooters India, high-speed electric scooters, top EV two-wheelers" />
+    <meta name="description" content="Discover the top 5 electric scooters in India with the highest battery capacity and longest range per charge. Compare specs, price, and mileage before you buy." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                    <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">1. Ola S1 Pro Gen 2 – Best Overall Long-Range Electric Scooter</a></h3>
+                    <div class="row m-b20">
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <img src="~/images/Blogs/2025/March/Top5ElectricScootersinIndiaBasedonBatteryCapacity&HighestRangePerCharge/OlaS1ProGen2.webp" alt="OlaS1ProGen2" title="OlaS1ProGen2" />
+                        </div>
+                    </div>
+                    <ul>
+                        <li><span class="font-weight-700">Battery Capacity:</span> 4 kWh Lithium-ion	</li>
+                        <li><span class="font-weight-700">Range (IDC Claimed):</span> 195 km per charge</li>
+                        <li><span class="font-weight-700">Top Speed:</span> 120 km/h</li>
+                        <li><span class="font-weight-700">Charging Time:</span> 6.5 hours</li>
+                    </ul>
+                    <p>The <span class="font-weight-700"> Ola S1 Pro Gen 2</span> leads the pack with a <span class="font-weight-700">4 kWh battery </span>and an impressive <span class="font-weight-700">195 km range per charge. </span> It comes with a powerful motor, fast acceleration, and <span class="font-weight-700">AI-powered features</span> like <span class="font-weight-700">cruise control, hyper mode, and voice commands</span>. If you want an <span class="font-weight-700">EV scooter with a long range</span> and <span class="font-weight-700"> premium tech features,</span> this is a great choice.</p>
+                    <div class="div-line"></div>
+                    <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">2. Simple One – Highest Range Electric Scooter in India</a></h3>
+                    <div class="row m-b20">
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <img src="~/images/Blogs/2025/March/Top5ElectricScootersinIndiaBasedonBatteryCapacity&HighestRangePerCharge/SimpleOne.webp" alt="SimpleOne" title="SimpleOne" />
+                        </div>
+                    </div>
+                    <ul>
+                        <li><span class="font-weight-700">Battery Capacity:</span>5 kWh Lithium-ion (Fixed + Removable)</li>
+                        <li><span class="font-weight-700">Range (IDC Claimed):</span> 248 km per charge</li>
+                        <li><span class="font-weight-700">Top Speed:</span> 105 km/h</li>
+                        <li><span class="font-weight-700">Charging Time:</span> 5 hours</li>
+                    </ul>
+                    <p>The <span class="font-weight-700">Simple One</span> boasts the <span class="font-weight-700">highest range electric scooter</span> in India, offering <span class="font-weight-700">248 km per charge</span> with a <span class="font-weight-700">5 kWh dual battery setup</span> (fixed + removable). It delivers <span class="font-weight-700">excellent mileage, </span>making it a perfect choice for riders who need <span class="font-weight-700">long-distance travel </span>without frequent charging.</p>
+                    <div class="div-line"></div>
+                    <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">3. Ather 450X Gen 3 – Best Performance-Oriented EV Scooter</a></h3>
+                    <div class="row m-b20">
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <img src="~/images/Blogs/2025/March/Top5ElectricScootersinIndiaBasedonBatteryCapacity&HighestRangePerCharge/Ather450XGen3.webp" alt="Ather450XGen3" title="Ather450XGen3" />
+                        </div>
+                    </div>
+                    <ul>
+                        <li><span class="font-weight-700">Battery Capacity:</span> 3.7 kWh Lithium-ion</li>
+                        <li><span class="font-weight-700">Range (IDC Claimed):</span> 161 km per charge</li>
+                        <li><span class="font-weight-700">Top Speed:</span> 90 km/h</li>
+                        <li><span class="font-weight-700">Charging Time:</span> 5.4 hours</li>
+                    </ul>
+                    <p>The <span class="font-weight-700">Ather 450X Gen 3</span> is a <span class="font-weight-700">premium performance-focused e-scooter </span>that balances <span class="font-weight-700">speed, range, and handling. </span>It features <span class="font-weight-700">quick acceleration, a touchscreen dashboard, and fast charging capabilities. </span> While its <span class="font-weight-700">range of 150 km</span> is slightly lower than others on this list, its <span class="font-weight-700">sporty ride dynamics</span> make it ideal for urban riders.</p>
+                    <div class="div-line"></div>
+                    <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">4. Hero Vida V1 Pro – Best Removable Battery EV Scooter</a></h3>
+                    <div class="row m-b20">
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <img src="~/images/Blogs/2025/March/Top5ElectricScootersinIndiaBasedonBatteryCapacity&HighestRangePerCharge/HeroVidaV1Pro.webp" alt="HeroVidaV1Pro" title="HeroVidaV1Pro" />
+                        </div>
+                    </div>
+                    <ul>
+                        <li><span class="font-weight-700">Battery Capacity: </span>3.9 kWh Lithium-ion (Removable)</li>
+                        <li><span class="font-weight-700">Range (IDC Claimed):</span> 165 km per charge</li>
+                        <li><span class="font-weight-700">Top Speed:</span> 90 km/h</li>
+                        <li><span class="font-weight-700">Charging Time: </span>5 hours</li>
+                    </ul>
+                    <p>The <span class="font-weight-700">Hero Vida V1 Pro  </span>offers a <span class="font-weight-700">removable battery, </span> making charging easier for those who <span class="font-weight-700">don’t have a dedicated EV charging setup. </span>With a <span class="font-weight-700">165 km range per charge, </span> it is a great <span class="font-weight-700">mid-range electric scooter  </span>with a <span class="font-weight-700">strong build and advanced features. </span></p>
+                    <div class="div-line"></div>
+                    <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">5. TVS iQube ST – Best Family-Friendly Electric Scooter</a></h3>
+                    <div class="row m-b20">
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <img src="~/images/Blogs/2025/March/Top5ElectricScootersinIndiaBasedonBatteryCapacity&HighestRangePerCharge/TVSiQubeST.webp" alt="TVSiQubeST" title="TVSiQubeST" />
+                        </div>
+                    </div>
+                    <ul>
+                        <li><span class="font-weight-700">Battery Capacity:</span> 5.1 kWh Lithium-ion</li>
+                        <li><span class="font-weight-700">Range (IDC Claimed):</span> 150 km per charge</li>
+                        <li><span class="font-weight-700">Top Speed:</span> 82 km/h</li>
+                        <li><span class="font-weight-700">Charging Time:</span> 4.5 hours</li>
+                    </ul>
+                    <p>The <span class="font-weight-700">TVS iQube ST  </span>is designed for <span class="font-weight-700">comfort and practicality, </span> making it a <span class="font-weight-700">family-friendly electric scooter. </span> It offers a<span class="font-weight-700"> large boot space, comfortable seating, </span>and <span class="font-weight-700">smart connectivity features. </span> Its <span class="font-weight-700">150 km range per charge </span> and <span class="font-weight-700">fast charging support </span> make it a reliable choice for daily commuters.</p>
+                    <div class="div-line"></div>
+                    <h3 class="subheading">Which Electric Scooter Should You Buy?</h3>
+                    <p>If you're looking for the <span class="font-weight-700">longest range per charge,</span> the <span class="font-weight-700">Simple One (248 km) </span> is the best pick. For <span class="font-weight-700">overall performance and tech features, </span> the <span class="font-weight-700">Ola S1 Pro Gen 2 (195 km) </span> is ideal. If you need a <span class="font-weight-700">removable battery, </span> go for the <span class="font-weight-700">Hero Vida V1 Pro (165 km). </span> Switching to an <span class="font-weight-700">electric scooter  </span>not only saves fuel costs but also contributes to a cleaner environment. Choose wisely based on your <span class="font-weight-700">daily commuting needs, charging convenience, and budget! </span></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

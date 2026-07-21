@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top Safety Tips for Two-Wheeler Riders";
+}
+@section MetaTags {
+    <meta name="keywords" content="two-wheeler safety, riding tips, helmet safety, motorcycle protection, scooter safety, road safety, riding gear, rider safety tips, bike safety rules, road safety tips, safe riding, motorcycle gear, accident prevention, rider protection, safe commuting" />
+    <meta name="description" content="Learn essential safety tips for two-wheeler riders to stay protected while enjoying the ride." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+				<div class="row m-b20">
+				
+                     <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2025/feb/topsafetytipsfortwowheelerriders/Helmet.webp" alt="Helmet" title="Helmet" /></div>
+                     <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2025/feb/topsafetytipsfortwowheelerriders/yellowHelmet.webp" alt="Yellow Helmet" title="Yellow Helmet" /></div>
+                 </div>                                     
+                  <p>First and foremost, helmet safety cannot be overstated. A quality <span class="font-weight-700"> helmet</span> is your first line of defense against head injuries in the event of an accident. Always choose a helmet that meets safety standards and fits snugly, ensuring maximum protection. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/feb/topsafetytipsfortwowheelerriders/tvsriding.webp"  alt="tvsriding" title="tvsriding" /></div>
+                </div>
+                <p>Investing in proper <span class="font-weight-700"> motorcycle gear</span> goes beyond just helmets. Riding gear such as<span class="font-weight-700">  jackets</span> with <span class="font-weight-700"> armor, gloves, and knee guards </span>can provide crucial protection against abrasions and impacts. Opt for bright or reflective clothing to increase visibility during both day and night rides.</p>
+                <p>Adhering to bike safety rules is another critical aspect of safe riding. Always obey traffic signals, adhere to speed limits, and use indicators when making turns or changing lanes. These basic road safety tips are fundamental in preventing accidents.</p>
+                <p>Road conditions can change quickly; therefore, being alert at all times is vital for accident prevention. Keep an eye out for potholes, wet patches, or debris that could cause loss of control.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2025/feb/topsafetytipsfortwowheelerriders/ridingboots.webp" alt="boots" title="boots" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2025/feb/topsafetytipsfortwowheelerriders/ridinggloves.webp" alt="gloves" title="gloves" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2025/feb/topsafetytipsfortwowheelerriders/RidingJacket.webp" alt="jacket" title="jacket" /></div>
+                </div>
+                <p>Lastly, regular maintenance checks on your  <a class="for-link" asp-controller="Home" asp-action="Index">two-wheeler </a>can significantly enhance rider protection. Ensure brakes are responsive, tires are properly inflated, and lights are functional before hitting the road.</p>
+                <p>By following these comprehensive rider safety tips and incorporating them into your daily commuting routine, you not only protect yourself but also contribute to overall road safety for everyone sharing the space with you. Safe riding starts with conscious choices—make them wisely!</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>
+

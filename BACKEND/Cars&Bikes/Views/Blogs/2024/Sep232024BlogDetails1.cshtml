@@ -1,0 +1,262 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Best Indian Cars Under ₹8 Lakh On-Road Price (2024) – Top Affordable Picks";
+}
+@section MetaTags{
+    <meta name="keywords" content="Best cars under ₹8 lakh, Affordable cars India 2024, Top cars below 8 lakh, Budget cars India, Best hatchbacks under ₹8 lakh, Best sedans under ₹8 lakh, Compact SUVs under 8 lakh, Maruti Suzuki Swift VXI, Tata Punch Adventure, Hyundai Grand i10 Nios" />
+    <meta name="description" content="Discover the best cars under ₹8 lakh on-road in India for 2024. Explore hatchbacks, sedans, and compact SUVs with great features, fuel efficiency, and performance." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. Maruti Suzuki Swift VXI</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹7.80 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.2L Petrol, 88 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 22-24 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>Touchscreen infotainment system</li>
+                                    <li>Power windows, ABS with EBD</li>
+                                    <li>Dual airbags</li>
+                                    <li>Automatic climate control</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarsunder8lakhonroadprice(2024)/maruti suzuki swift vxi.webp" alt="Maruti Suzuki Swift VXI" title="Maruti Suzuki Swift VXI" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Swift VXI</span> offers the right mix of essential features and performance while staying within the ₹8 lakh on-road price limit. It’s a practical choice with great fuel efficiency and a fun driving experience.</p>
+                <div class="div-line"></div>
+
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. Tata Punch Adventure</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹7.85 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.2L Petrol, 86 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 18-19 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>5-star Global NCAP safety rating</li>
+                                    <li>7-inch touchscreen infotainment system</li>
+                                    <li>16-inch alloy wheels</li>
+                                    <li>Rear parking sensors</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarsunder8lakhonroadprice(2024)/tata punch adventure.webp" alt="Tata Punch Adventure" title="Tata Punch Adventure" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Punch Adventure</span> variant is ideal if you’re looking for a mini-SUV with great safety ratings and high ground clearance. It's perfect for urban and off-road driving.</p>
+                <div class="div-line"></div>
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">3. Hyundai Grand i10 Nios Magna</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹7.60 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.2L Petrol, 82 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 20 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>8-inch touchscreen with Apple CarPlay & Android Auto</li>
+                                    <li>Automatic climate control</li>
+                                    <li>Stylish dual-tone interiors</li>
+                                    <li>LED DRLs</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarsunder8lakhonroadprice(2024)/hyundai grand i10 nios magna.webp" alt="Hyundai Grand i10 Nios Magna" title="Hyundai Grand i10 Nios Magna" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Grand i10 Nios Magna</span> offers solid tech features and premium interiors, making it an excellent choice for city commuters.</p>
+                <div class="div-line"></div>
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">4. Renault Kiger RXE</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹7.85 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.0L Turbo-petrol, 99 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 20 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>LED DRLs and taillights</li>
+                                    <li>Spacious cabin and best-in-class boot space (405L)</li>
+                                    <li>Power steering, keyless entry</li>
+                                    <li>Dual airbags</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarsunder8lakhonroadprice(2024)/renault kiger rxe.webp" alt="Renault Kiger RXE" title="Renault Kiger RXE" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Kiger RXE</span> gives you the feel of an SUV at a very affordable price, making it a top choice for budget-conscious SUV enthusiasts.</p>
+                <div class="div-line"></div>
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">5. Maruti Suzuki Baleno Sigma</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹7.85 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.2L Petrol, 88 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 22 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>ABS with EBD and rear parking sensors</li>
+                                    <li>Electrically adjustable ORVMs</li>
+                                    <li>Dual airbags, SmartPlay Studio infotainment system</li>
+                                    <li>16-inch steel wheels</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarsunder8lakhonroadprice(2024)/maruti suzuki baleno sigma.webp" alt="Maruti Suzuki Baleno Sigma" title="Maruti Suzuki Baleno Sigma" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Baleno Sigma</span> is a great option for buyers looking for a premium hatchback that delivers a spacious interior and excellent fuel efficiency.</p>
+                <div class="div-line"></div>
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">6. Nissan Magnite XE</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹7.90 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.0L Turbo-petrol, 99 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 18-20 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>Bold SUV design</li>
+                                    <li>Dual airbags and ABS</li>
+                                    <li>Power windows and steering</li>
+                                    <li>Rear parking sensors</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarsunder8lakhonroadprice(2024)/nissan magnite xe.webp" alt="Nissan Magnite XE" title="Nissan Magnite XE" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Magnite XE</span> is the most affordable SUV in its class with excellent features for its price, making it ideal for those looking for a budget-friendly compact SUV.</p>
+                <div class="div-line"></div>
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">7. Honda Amaze E</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹7.90 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.2L Petrol, 89 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 18 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>ABS with EBD and dual airbags</li>
+                                    <li>Stylish design with large boot space</li>
+                                    <li>Power steering and front power windows</li>
+                                    <li>Manual air conditioning</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarsunder8lakhonroadprice(2024)/honda amaze e.webp" alt="Honda Amaze E" title="Honda Amaze E" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Honda Amaze E</span> is a compact sedan that offers reliability, a premium feel, and a good balance of performance and fuel efficiency within your budget.</p>
+                <div class="div-line"></div>
+
+                <h3 class="subheading">Conclusion</h3>
+                <br />
+                <p>For under ₹8 lakh on-road, these cars and their specific variants offer a range of choices depending on your needs—whether it’s the sporty <span class="font-weight-700">Maruti Suzuki Swift</span>, the rugged <span class="font-weight-700">Tata Punch</span>, or the tech-savvy <span class="font-weight-700">Hyundai Grand i10 Nios</span>. These models deliver the perfect balance of features, safety, and performance for your money.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

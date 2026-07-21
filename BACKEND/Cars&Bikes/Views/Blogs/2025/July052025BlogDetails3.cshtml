@@ -1,0 +1,444 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Nexon EV vs Mahindra XUV400 EV: Full 2025 Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="Tata Nexon EV vs Mahindra XUV400 EV, Nexon EV vs XUV400 EV comparison 2025, best electric SUV India 2025, Tata Nexon EV price 2025, Mahindra XUV400 EV features 2025, electric car comparison India, Nexon EV vs XUV400 EV range, Tata Nexon EV specifications, Mahindra XUV400 EV specifications, which electric SUV to buy 2025, sub-20 lakh electric cars India, EV comparison India 2025, Tata vs Mahindra electric cars, affordable electric SUVs India" />
+    <meta name="description" content="Compare Tata Nexon EV vs Mahindra XUV400 EV in 2025. Check range, performance, features, price, and decide which electric SUV is best for your needs." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 3rd July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Why Choose an EV?</h2>
+                <p>Going electric isn't a decision—it's a change of mind for a brighter tomorrow. Electric cars provide a greener, smarter, and more sustainable drive. Consider it: no noisy engine, no fumes, and no weekly trips to the petrol station. What you do get is smooth, quiet journeys and the added convenience of charging at home. EVs are cheaper to operate per kilometre, and with fewer components than petrol or diesel engines, there's much less to go wrong—so you save a fortune on maintenance as well.</p>
+                <p>But the biggest win? You're doing your bit for the planet. EVs produce zero tailpipe emissions, helping reduce air pollution in our already-crowded cities. As India ramps up renewable energy, your EV becomes even cleaner. And let's be honest—there's something exciting about owning a vehicle that reflects innovation, responsibility, and modern living. In 2025, an EV isn't just better than a fuel car—it's the smart, responsible, and future-ready choice.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Powertrain & Performance</h2>
+
+                <h3 class="subheading">Tata Nexon EV</h3>
+                <ul>
+                    <li><span class="font-weight-700">Battery & Motor (Standard):</span> 30 kWh lithium‑ion, single synchronous motor delivering ~127 PS and 215 Nm torque</li>
+                    <li><span class="font-weight-700">Nexon.ev Max variant:</span> Ups power to 143 PS, same torque, with a 45 kWh pack</li>
+                    <li><span class="font-weight-700">0-100 km/h:</span> ~9.9 seconds</li>
+                    <li><span class="font-weight-700">Drive Modes:</span> Drive & Sport, regenerative braking levels</li>
+                </ul>
+
+                <h3 class="subheading">Mahindra XUV400 EV</h3>
+                <ul>
+                    <li><span class="font-weight-700">Battery Pack:</span> 34.5 kWh or 39.4 kWh LFP batteries</li>
+                    <li><span class="font-weight-700">Motor Output:</span> Approx. 148 PS (110-110 kW) with 310 Nm torque</li>
+                    <li><span class="font-weight-700">Drive Modes:</span> Fun, Fast, Fearless + regen modes for single-pedal driving</li>
+                </ul>
+
+                <div class="verdict">
+                    <span class="font-weight-700">Verdict:</span> Nexon EV offers a lighter, agile feel with modest power; XUV400 EV delivers stronger acceleration and torque—better for spirited driving.
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Range & Charging</h2>
+
+                <h3 class="subheading">Tata Nexon EV</h3>
+                <ul>
+                    <li><span class="font-weight-700">ARAI Range:</span> 312 km (30 kWh); 489 km (45 kWh)</li>
+                    <li>
+                        <span class="font-weight-700">Charging Times:</span>
+                        <ul>
+                            <li>15 A home plug: ~10.5-17.5 hrs</li>
+                            <li>Fast AC (7.2 kW): ~4-6.5 hrs</li>
+                            <li>DC fast (50 kW): ~40-60 min (0-80%)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3 class="subheading">Mahindra XUV400 EV</h3>
+                <ul>
+                    <li><span class="font-weight-700">ARAI Range:</span> 375 km (34.5 kWh) / 456 km (39.4 kWh)</li>
+                    <li>
+                        <span class="font-weight-700">Charging Times:</span>
+                        <ul>
+                            <li>3.3 kW: ~13.5 hrs</li>
+                            <li>7.2 kW: ~6.5 hrs</li>
+                            <li>50 kW DC: ~50 min (0-80%)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="verdict">
+                    <span class="font-weight-700">Verdict:</span> XUV400 EV offers significantly better range in both packs; both charge similarly fast with DC, though XUV400's bigger battery covers more ground per charge.
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Dimensions & Usability</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">Tata Nexon EV</th>
+                                <th class="text-center">Mahindra XUV400 EV</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Length × Width × Height</td>
+                                <td>3993×1811×1606 mm</td>
+                                <td>4200×1821×1634 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Wheelbase</td>
+                                <td>2498 mm</td>
+                                <td>2600 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Ground Clearance</td>
+                                <td>205 mm</td>
+                                <td>Not stated officially</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Boot Volume</td>
+                                <td>350 L</td>
+                                <td>368-378 L</td>
+                            </tr>
+                            <tr>
+                                <td>Seating</td>
+                                <td>5 adults</td>
+                                <td>5 adults</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="verdict">
+                    <span class="font-weight-700">Verdict:</span> XUV400 EV is larger and more spacious overall; Nexon EV is more compact but still practical for family use.
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Features & Tech</h2>
+
+                <h3 class="subheading">Tata Nexon EV</h3>
+                <ul>
+                    <li>12.3" HD touchscreen + 10.25" digital cluster</li>
+                    <li>JBL 9-speaker system</li>
+                    <li>Sunroof, air purifier, ventilated seats</li>
+                    <li>Vehicle-to-Load (V2L) for gadgets</li>
+                    <li>Adventure+ versions include dual-tone paint, digital DRL, drive modes, 360° camera, ESP</li>
+                </ul>
+
+                <h3 class="subheading">Mahindra XUV400 EV</h3>
+                <ul>
+                    <li>10.25" infotainment + 10.25" digital driver display</li>
+                    <li>Dual-zone climate, sunroof, wireless charging, push-button start</li>
+                    <li>Dual-cam dashcam</li>
+                    <li>Drive modes, regen adjust, electronic gear selector</li>
+                </ul>
+
+                <h3 class="subheading">Convenience Comparison</h3>
+                <ul>
+                    <li>Both offer advanced connectivity (Bluelink vs Blue Sense)</li>
+                    <li>XUV400's dual-cam dashcam is unique</li>
+                    <li>Nexon has V2L—useful in emergencies</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Safety & Ratings</h2>
+
+                <h3 class="subheading">Tata Nexon EV</h3>
+                <ul>
+                    <li>6 airbags, ESP, EBD, hill hold, TPMS, 360° camera</li>
+                    <li><span class="font-weight-700">5★ Bharat NCAP</span> (adult & child)</li>
+                </ul>
+
+                <h3 class="subheading">Mahindra XUV400 EV</h3>
+                <ul>
+                    <li>6 airbags, ESP, TPMS, hill-hold, rear camera</li>
+                    <li><span class="font-weight-700">5★ Bharat NCAP</span> (adult & child)</li>
+                </ul>
+
+                <div class="verdict">
+                    <span class="font-weight-700">Verdict:</span> Both offer top-rated crash protection and necessary safety aids. Nexon adds V2L and airbag standardization.
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Pricing & Variants</h2>
+
+                <h3 class="subheading">Tata Nexon EV</h3>
+                <ul>
+                    <li>Starts at ₹12.49 L (30 kWh)</li>
+                    <li>Nexon.ev Max (45 kWh) is higher—exact prices vary regionally</li>
+                    <li>Single variants with consistent features across packs</li>
+                </ul>
+
+                <h3 class="subheading">Mahindra XUV400 EV</h3>
+                <ul>
+                    <li>EC Pro (34.5 kWh): ₹15.49 L</li>
+                    <li>EL Pro (34.5 kWh DT): ₹16.74 L</li>
+                    <li>EL Pro DT (39.4 kWh): ₹17.69 L</li>
+                </ul>
+
+                <div class="verdict">
+                    <span class="font-weight-700">Verdict:</span> Nexon EV is more budget-friendly initially; XUV400 starts higher but offers larger batteries and range—worth the premium for range-conscious buyers.
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Variant-Level Comparison at a Glance</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Nexon EV (~₹12.5 L-? L)</th>
+                                <th class="text-center">XUV400 EV (₹15.5-17.7 L)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Battery Options</td>
+                                <td>30 kWh / 45 kWh</td>
+                                <td>34.5 kWh / 39.4 kWh</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Power / Torque</td>
+                                <td>127-143 PS, 215 Nm</td>
+                                <td>148 PS, 310 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>ARAI Range</td>
+                                <td>312 km / 489 km</td>
+                                <td>375 km / 456 km</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Quality Sound System</td>
+                                <td>JBL 9-speaker</td>
+                                <td>--</td>
+                            </tr>
+                            <tr>
+                                <td>Dashcam</td>
+                                <td>360° available</td>
+                                <td>Dual-cam standard</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>V2L Capability</td>
+                                <td>✔ Included</td>
+                                <td>--</td>
+                            </tr>
+                            <tr>
+                                <td>Bharat NCAP Rating</td>
+                                <td>5★ adult & child</td>
+                                <td>5★ adult & child</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Starting Price</td>
+                                <td>₹12.49 L</td>
+                                <td>₹15.49 L</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Real-World Driving & Ownership</h2>
+
+                <h3 class="subheading">Tata Nexon EV</h3>
+                <p>Agile, compact, with fast charging and smart tech; V2L gives it edge for camping/disaster use.</p>
+
+                <h3 class="subheading">Mahindra XUV400 EV</h3>
+                <p>Spacious, quick off-the-line, smoother experience, impressive infotainment, pricier but range adds utility.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Verdict</h2>
+
+                <ul>
+                    <li><span class="font-weight-700">Choose Tata Nexon EV</span> if you want affordability, V2L use, agile city driving, and proven safety with JBL comfort.</li>
+                    <li><span class="font-weight-700">Choose Mahindra XUV400 EV</span> if range matters most—longer trips without stress, extra cabin space, dual-cam dash.</li>
+                </ul>
+
+                <p>Both are compelling, but your choice comes down to <span class="font-weight-700">budget vs range</span> and your specific daily use case.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs: Tata Nexon EV vs Mahindra XUV400 EV</h2>
+
+                <div class="accordion" id="faqNexonXUV">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which EV has better real-world range?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqNexonXUV">
+                            <div class="accordion-body">
+                                The XUV400 EV typically delivers better real-world range, especially in city conditions, due to its larger battery options.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Which is more suitable for city driving?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqNexonXUV">
+                            <div class="accordion-body">
+                                The Nexon EV's more compact dimensions make it slightly more maneuverable in tight city spaces.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Which has faster charging capability?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqNexonXUV">
+                            <div class="accordion-body">
+                                Both support 50kW DC fast charging with similar 0-80% charging times (~50 minutes).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Which has better after-sales service?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqNexonXUV">
+                            <div class="accordion-body">
+                                Tata has more extensive EV service experience, but Mahindra is rapidly expanding its EV service network.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which is better for highway driving?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqNexonXUV">
+                            <div class="accordion-body">
+                                The XUV400 EV's stronger torque and slightly better high-speed stability make it better suited for highway driving.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Which has more premium interiors?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqNexonXUV">
+                            <div class="accordion-body">
+                                The Nexon EV offers more premium touches like ventilated seats and JBL audio, while the XUV400 has a more minimalist, tech-focused interior.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which is more value for money?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqNexonXUV">
+                            <div class="accordion-body">
+                                The Nexon EV offers better value at its lower price point, but the XUV400 justifies its premium with better range and performance.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Which has better resale value?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqNexonXUV">
+                            <div class="accordion-body">
+                                Both should have good resale value as popular EVs, but Tata's established EV reputation might give the Nexon a slight edge.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Which has more cabin space?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqNexonXUV">
+                            <div class="accordion-body">
+                                The XUV400 EV offers more cabin space, especially in the rear seats, due to its longer wheelbase.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Which would you recommend for a family?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqNexonXUV">
+                            <div class="accordion-body">
+                                For families prioritizing space and comfort, the XUV400 EV is the better choice. For smaller families or urban dwellers, the Nexon EV offers excellent value.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

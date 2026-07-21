@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Cars_Bikes.Models.TWMileageAndPerformance>
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+<form asp-action="ListTWMileageandPerformances" method="get" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="searchString" value="@Context.Request.Query["searchString"]" class="form-control" placeholder="Search by name or variant..." />
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
+        </div>
+    </div>
+</form>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Variant</th>
+            <th>Overall</th>
+            <th>City</th>
+            <th>Highway</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TWName</td>
+                <td>@item.Varients</td>
+                <td>@item.OverallMileage</td>
+                <td>@item.CityMileage</td>
+                <td>@item.HighwayMileage</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TWMileageAndPerformanceId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TWMileageAndPerformanceId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Add New Mileage Record</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

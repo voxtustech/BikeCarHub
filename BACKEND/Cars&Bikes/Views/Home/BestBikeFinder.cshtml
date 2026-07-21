@@ -1,0 +1,138 @@
+﻿@*using System;
+    namespace Cars_Bikes.Views.Home
+    {
+        public class BestBikeFinder
+        {
+            public BestBikeFinder()
+            {
+            }
+        }
+    }*@
+
+@model IEnumerable<Cars_Bikes.Models.TwoWheeler>
+
+<div class="budget-finder-container">
+
+    <h1>Find Best Bike Under Your Budget</h1>
+
+    <div class="filter-box">
+
+        <select id="budgetFilter">
+            <option value="">Select Budget</option>
+            <option value="100000">Under ₹1 Lakh</option>
+            <option value="150000">Under ₹1.5 Lakh</option>
+            <option value="200000">Under ₹2 Lakh</option>
+        </select>
+
+        <select id="typeFilter">
+            <option value="">Select Type</option>
+            @*<option value="Sports">Sports</option>*@
+            @*<option value="Cruiser">Cruiser</option>*@
+            <option value="Scooter">Scooter</option>
+            <option value="Bike">Bike</option>
+            @*<option value="Commuter">Commuter</option>*@
+        </select>
+
+        @*<button onclick="filterBikes()">
+            Find Bikes
+        </button>*@
+        <button id="findBikeBtn">
+            Find Bikes
+        </button>
+
+    </div>
+
+    <div class="bike-results" id="bikeResults">
+
+        @foreach (var bike in Model)
+        {
+            <div class="bike-card"
+                 data-price="@bike.BasePrice"
+                 data-type="@bike.Type">
+
+                <img src="@bike.TWImage"
+                     alt="@bike.TwoWheelerName" />
+
+                <h3>@bike.TwoWheelerName</h3>
+                @*<p>Type: @bike.Type</p>*@
+                @*<p>Base Price: @bike.BasePrice</p>*@
+                <p>@bike.Price</p>
+                <a href="/@bike.Brand.ToLower()/@bike.TwoWheelerName.ToLower().Replace(" ","-")">
+                    View Details
+                </a>
+            </div>
+        }
+
+    </div>
+
+</div>
+@*<script>function filterBikes() {
+
+        const budget =
+            document.getElementById("budgetFilter").value;
+
+        const type =
+            document.getElementById("typeFilter").value;
+
+        const bikes =
+            document.querySelectorAll(".bike-card");
+
+        bikes.forEach(bike => {
+
+            const bikePrice =
+                parseInt(bike.dataset.price);
+
+            const bikeType =
+                bike.dataset.type;
+
+            let show = true;
+
+            if (budget && bikePrice > parseInt(budget)) {
+                show = false;
+            }
+
+            if (type && bikeType !== type) {
+                show = false;
+            }
+
+            bike.style.display = show
+                ? "block"
+                : "none";
+        });
+    }</script>*@
+<script>document
+        .getElementById("findBikeBtn")
+        .addEventListener("click", function () {
+
+            const budget =
+                document.getElementById("budgetFilter").value;
+
+            const type =
+                document.getElementById("typeFilter").value;
+
+            const bikes =
+                document.querySelectorAll(".bike-card");
+
+            bikes.forEach(bike => {
+
+                const bikePrice =
+                    parseInt(bike.dataset.price) || 99999999;
+                const bikeType =
+                    bike.dataset.type;
+
+                let show = true;
+
+                if (budget && bikePrice > parseInt(budget)) {
+                    show = false;
+                }
+
+                if (type && bikeType !== type) {
+                    show = false;
+                }
+
+                bike.style.display = show
+                    ? "block"
+                    : "none";
+            });
+
+        });</script>

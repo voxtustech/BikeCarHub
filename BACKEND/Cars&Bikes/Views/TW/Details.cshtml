@@ -1,0 +1,397 @@
+﻿@model Cars_Bikes.ViewModels.TwoWheelerFullDetailsViewModel
+
+@{
+    var model = Model ?? new Cars_Bikes.ViewModels.TwoWheelerFullDetailsViewModel();
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <!-- Brand Dropdown -->
+    <div class="form-group">
+        <label>Select Variant</label>
+        <select id="variantDropdown" class="form-control">
+            <option value="">-- Select Variant --</option>
+            @foreach (var item in ViewBag.TWVarients as List<SelectListItem>)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+
+    <!-- Show this only after a variant is selected -->
+    <div id="tabSection" style="display: none;">
+        <ul class="nav nav-tabs" id="variantTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-tab="specTab">Specification</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-tab="featuresTab">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-tab="motorTab">Motor & Battery</a>
+            </li>
+        </ul>
+
+        <div id="tabContent" class="mt-3">
+            <!-- AJAX-loaded form will appear here -->
+        </div>
+    </div>
+    @* <select id="brandDropdown" class="form-control"> *@
+    @*     <option value="">-- Select Brand --</option> *@
+    @*     @foreach (var item in ViewBag.TwoWheelers as List<SelectListItem>) *@
+    @*     { *@
+    @*         <option value="@item.Value">@item.Text</option> *@
+    @*     } *@
+    @* </select> *@
+
+    @* <!-- Variant Dropdown --> *@
+    @* <select id="variantDropdown" class="form-control"> *@
+    @*     <option value="">-- Select Variant --</option> *@
+    @* </select> *@
+
+    @* <!-- Bootstrap Tabs --> *@
+    @* <ul class="nav nav-tabs" id="formTabs" role="tablist"> *@
+    @*     <li class="nav-item"> *@
+    @*         <a class="nav-link active" data-toggle="tab" href="#specTab" role="tab">Specification</a> *@
+    @*     </li> *@
+    @*     <li class="nav-item"> *@
+    @*         <a class="nav-link" data-toggle="tab" href="#featuresTab" role="tab">Features</a> *@
+    @*     </li> *@
+    @*     <li class="nav-item"> *@
+    @*         <a class="nav-link" data-toggle="tab" href="#performanceTab" role="tab">Performance</a> *@
+    @*     </li> *@
+    @* </ul> *@
+
+    @* <!-- Tab Content --> *@
+    @* <div class="tab-content" id="tabContent"> *@
+    @*     <div class="tab-pane fade show active" id="specTab" role="tabpanel"></div> *@
+    @*     <div class="tab-pane fade" id="featuresTab" role="tabpanel"></div> *@
+    @*     <div class="tab-pane fade" id="performanceTab" role="tabpanel"></div> *@
+    @* </div> *@
+
+    @* <div class="form-group"> *@
+    @*     <label for="twoWheelerDropdown">Select Brand</label> *@
+    @*     <select id="twoWheelerDropdown" class="form-control"> *@
+    @*         <option value="">-- Select Brand --</option> *@
+    @*         @if (ViewBag.TwoWheelers != null) *@
+    @*         { *@
+    @*             foreach (var item in ViewBag.TwoWheelers as List<SelectListItem>) *@
+    @*             { *@
+    @*                 <option value="@item.Value">@item.Text</option> *@
+    @*             } *@
+    @*         } *@
+    @*     </select> *@
+    @* </div> *@
+
+    @* <div class="form-group"> *@
+    @*     <label for="twVarientDropdown">Select Variant</label> *@
+    @*     <select id="twVarientDropdown" class="form-control"> *@
+    @*         <option value="">-- Select Variant --</option> *@
+    @*     </select> *@
+    @* </div> *@
+    @* <div id="tabContent"></div> *@
+
+    @* <div class="mt-3"> *@
+    @*     <ul class="nav nav-tabs" id="formTabs" role="tablist"> *@
+    @*         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#specTab">Specification</a></li> *@
+    @*         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#featuresTab">Features</a></li> *@
+    @*         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#performanceTab">Performance</a></li> *@
+    @*         <!-- Add more tabs as needed --> *@
+    @*     </ul> *@
+
+    @*     <div class="tab-content border p-3" id="tabContent"> *@
+    @*         <div id="specTab" class="tab-pane fade show active"></div> *@
+    @*         <div id="featuresTab" class="tab-pane fade"></div> *@
+    @*         <div id="performanceTab" class="tab-pane fade"></div> *@
+    @*     </div> *@
+    @* </div> *@
+
+
+    @* <ul class="nav nav-tabs" id="myTab" role="tablist"> *@
+    @*     <li class="nav-item" role="presentation"> *@
+    @*         <a class="nav-link active" id="spec-tab" data-bs-toggle="tab" href="#spec" role="tab">Specification</a> *@
+    @*     </li> *@
+    @*     <li class="nav-item" role="presentation"> *@
+    @*         <a class="nav-link" id="motor-tab" data-bs-toggle="tab" href="#motor" role="tab">Motor & Battery</a> *@
+    @*     </li> *@
+    @*     <li class="nav-item" role="presentation"> *@
+    @*         <a class="nav-link" id="features-tab" data-bs-toggle="tab" href="#features" role="tab">Features</a> *@
+    @*     </li> *@
+
+    @* </ul> *@
+
+    @* <div class="tab-content mt-3"> *@
+    @*     <div class="tab-pane fade show active" id="spec-tab" role="tabpanel"> *@
+    @*         @Html.Partial("Partials/_SpecPartial", Model.TWSpec) *@
+    @*     </div> *@
+    @*     <div class="tab-pane fade" id="motor" role="tabpanel"> *@
+    @*         @Html.Partial("Partials/_MotorPartial", Model.TWMotorAndBattery) *@
+    @*     </div> *@
+    @*     <div class="tab-pane fade" id="features" role="tabpanel"> *@
+    @*         @Html.Partial("Partials/_FeaturesPartial", Model.TWFeatures) *@
+    @*     </div> *@
+    @*     <!-- Add more partials --> *@
+    @* </div> *@
+</body>
+@* <script src="~/js/twdetails.js"></script> *@
+@* @section Scripts { *@
+@*     <script> *@
+@*              $(document).ready(function () { *@
+@*             $('#twoWheelerDropdown').change(function () { *@
+@*                 var selectedId = $(this).val(); *@
+@*                 if (selectedId) { *@
+@*                     $.ajax({ *@
+@*                         url: '/YourController/GetVarientsByTwoWheelerId', *@
+@*                         type: 'GET', *@
+@*                         data: { id: selectedId }, *@
+@*                         success: function (data) { *@
+@*                             var dropdown = $('#twVarientDropdown'); *@
+@*                             dropdown.empty(); *@
+@*                             dropdown.append('<option value="">-- Select Variant --</option>'); *@
+@*                             $.each(data, function (i, item) { *@
+@*                                 dropdown.append($('<option>', { *@
+@*                                     value: item.value, *@
+@*                                     text: item.text *@
+@*                                 })); *@
+@*                             }); *@
+@*                         } *@
+@*                     }); *@
+@*                 } *@
+@*             }); *@
+@*         }); *@
+@*         $(document).ready(function () { *@
+@*             $('#twoWheelerDropdown').change(function () { *@
+@*                 var brandId = $(this).val(); *@
+
+@*                 if (brandId) { *@
+@*                     $.ajax({ *@
+@*                         url: '/TWController/GetVariants', // Replace with actual controller if needed *@
+@*                         type: 'GET', *@
+@*                         data: { brandId: brandId }, *@
+@*                         success: function (variants) { *@
+@*                             $('#twVarientDropdown').empty(); *@
+@*                             $('#twVarientDropdown').append('<option value="">-- Select Variant --</option>'); *@
+@*                             $.each(variants, function (index, variant) { *@
+@*                                 $('#twVarientDropdown').append('<option value="' + variant.twVarientId + '">' + variant.twName + '</option>'); *@
+@*                             }); *@
+@*                         }, *@
+@*                         error: function () { *@
+@*                             alert('Error loading variants.'); *@
+@*                         } *@
+@*                     }); *@
+@*                 } else { *@
+@*                     $('#twVarientDropdown').empty(); *@
+@*                     $('#twVarientDropdown').append('<option value="">-- Select Variant --</option>'); *@
+@*                 } *@
+@*             }); *@
+@*         }); *@
+
+@*             $(document).ready(function () { *@
+@*             // Load brands on page load *@
+@*             $.getJSON('/TWController/GetBrands', function (data) { *@
+@*                 $.each(data, function (i, brand) { *@
+@*                     $('#brandDropdown').append($('<option>', { *@
+@*                         value: brand.id, *@
+@*                         text: brand.name *@
+@*                     })); *@
+@*                 }); *@
+@*             }); *@
+
+@*             // Load variants when a brand is selected *@
+@*             $('#brandDropdown').change(function () { *@
+@*                 var brandId = $(this).val(); *@
+@*                 $('#variantDropdown').empty().append('<option value="">Select Variant</option>'); *@
+@*                 if (brandId) { *@
+@*                     $.getJSON('/TWController/GetVariants', { brandId: brandId }, function (data) { *@
+@*                         $.each(data, function (i, variant) { *@
+@*                             $('#variantDropdown').append($('<option>', { *@
+@*                                 value: variant.id, *@
+@*                                 text: variant.name *@
+@*                             })); *@
+@*                         }); *@
+@*                     }); *@
+@*                 } *@
+@*             }); *@
+
+@*             // Load tab content when a variant is selected *@
+@*             $('#variantDropdown').change(function () { *@
+@*                 var brandId = $('#brandDropdown').val(); *@
+@*                 var variantId = $(this).val(); *@
+@*                 if (brandId && variantId) { *@
+@*                     $.get('/TWController/GetDetails', { brandId: brandId, variantId: variantId }, function (data) { *@
+@*                         $('#tabContent').html(data); *@
+@*                     }); *@
+@*                 } *@
+@*             }); *@
+@*         });; *@
+@*     </script> *@
+@* } *@
+
+@*
+    @section Scripts {
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+
+                // Populate variants based on selected brand
+                $('#twoWheelerDropdown').change(function () {
+                    var brandId = $(this).val();
+
+                    $('#twVarientDropdown').empty().append('<option value="">-- Select Variant --</option>');
+                    $('#tabContent').html(''); // Clear form content when brand changes
+
+                    if (brandId) {
+                        $.ajax({
+                            url: '/TW/GetVariants',  // Adjust to match your controller name if different
+                            type: 'GET',
+                            data: { brandId: brandId },
+                            success: function (variants) {
+                                $.each(variants, function (index, variant) {
+                                    $('#twVarientDropdown').append('<option value="' + variant.twVarientId + '">' + variant.twName + '</option>');
+                                });
+                            },
+                            error: function () {
+                                alert('Error loading variants.');
+                            }
+                        });
+                    }
+                });
+
+                // Load the partial view when variant is selected
+                $('#twVarientDropdown').change(function () {
+                    var brandId = $('#twoWheelerDropdown').val();
+                    var variantId = $(this).val();
+
+                    if (brandId && variantId) {
+                        $.ajax({
+                            url: '/TW/GetVariants',
+                            type: 'GET',
+                            data: { brandId: brandId, variantId: variantId },
+                            success: function (data) {
+                                $('#tabContent').html(data); // Load partial into tab area
+                            },
+                            error: function () {
+                                alert('Error loading details.');
+                            }
+                        });
+                    }
+                });
+
+            });
+
+             $(document).ready(function () {
+                // Load Variants when brand selected
+                $('#brandDropdown').change(function () {
+                    const brandId = $(this).val();
+                    $('#variantDropdown').empty().append('<option value="">-- Select Variant --</option>');
+                    if (brandId) {
+                        $.getJSON('/TW/GetVariants', { brandId: brandId }, function (data) {
+                            $.each(data, function (i, item) {
+                                $('#variantDropdown').append(`<option value="${item.twVarientId}">${item.twName}</option>`);
+                            });
+                        });
+                    }
+                });
+
+                // Load forms in tabs when both selected
+                $('#variantDropdown').change(function () {
+                    const brandId = $('#brandDropdown').val();
+                    const variantId = $(this).val();
+                    if (brandId && variantId) {
+                        // Load each tab with separate AJAX call
+                        $('#tabContent .tab-pane').each(function () {
+                            const tabId = $(this).attr('id'); // e.g., specTab, featuresTab
+                            $.get(`/TW/LoadTabPartial`, {
+                                brandId: brandId,
+                                variantId: variantId,
+                                tab: tabId
+                            }, function (html) {
+                                $(`#${tabId}`).html(html);
+                            });
+                        });
+                    }
+                });
+            });
+        </script>
+    }
+*@
+
+@section Scripts {
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>$(document).ready(function () {
+            // When a variant is selected
+            $('#variantDropdown').change(function () {
+                const variantId = $(this).val();
+                if (variantId) {
+                    $('#tabSection').show(); // Show the tabs
+                    $('#tabContent').html(''); // Clear previous content
+                } else {
+                    $('#tabSection').hide();
+                    $('#tabContent').html('');
+                }
+            });
+
+            // When a tab is clicked
+            $('#variantTabs .nav-link').click(function () {
+                const tabName = $(this).data('tab'); // e.g. specTab, featuresTab
+                const variantId = $('#variantDropdown').val();
+
+                if (!variantId) {
+                    alert('Please select a variant first.');
+                    return;
+                }
+
+                // Set active tab styling
+                $('#variantTabs .nav-link').removeClass('active');
+                $(this).addClass('active');
+
+                // Load tab content via AJAX
+                $.get('/TW/LoadUpdateForm', { tab: tabName, variantId: variantId }, function (html) {
+                    $('#tabContent').html(html);
+                });
+            });
+        });</script>
+}
+<div class="bike-details-page container mt-5">
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <img src="@Model.TwoWheeler?.TWImage"
+                 class="img-fluid rounded" />
+        </div>
+
+        <div class="col-md-6">
+
+            <h1>@Model.TwoWheeler?.TwoWheelerName</h1>
+
+            <h3>@Model.TwoWheeler?.Price</h3>
+
+            <p>
+                Brand:
+                @Model.TwoWheeler?.Brand
+            </p>
+
+            <p>
+                Type:
+                @Model.TwoWheeler?.Type
+            </p>
+
+            <p>
+                Launch Date:
+                @Model.TwoWheeler?.LaunchDate
+            </p>
+
+            @if (!string.IsNullOrEmpty(Model.TwoWheeler?.Discription))
+            {
+                <p>
+                    @Model.TwoWheeler.Discription
+                </p>
+            }
+
+        </div>
+
+    </div>
+
+</div>

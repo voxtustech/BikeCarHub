@@ -1,0 +1,93 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "JSW MG Announces 'MG Select' Outlets for Premium Car Sales Starting 2025";
+}
+@section MetaTags{
+    <meta name="keywords" content="JSW MG, MG Select, premium vehicles, luxury cars, new outlets 2025, MG automotive, high-end car sales, luxury vehicle showrooms" />
+    <meta name="description" content="JSW MG will introduce 'MG Select' outlets in 2025, focusing on premium vehicle sales. The new showrooms will offer an exclusive, high-end customer experience with advanced facilities and personalized service." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>
+                    JSW MG is making a significant shift in its approach to premium vehicle sales with the introduction of <span class="font-weight-700">'MG Select'</span> outlets, which are scheduled to launch in 2025. This new initiative represents a strategic enhancement aimed at providing an upscale and specialized experience for customers seeking high-end MG models.
+                </p>
+                <p>The <span class="font-weight-700">'MG Select'</span> outlets are designed to offer a unique retail environment that highlights MG’s premium and luxury vehicle range. These dedicated showrooms will not only showcase the brand's most exclusive models but will also feature an array of premium services intended to cater to the specific needs and preferences of luxury car buyers.</p>
+                <p>Unlike traditional car dealerships, <span class="font-weight-700">'MG Select'</span> will focus on delivering a sophisticated and immersive customer experience. Each outlet will be equipped with state-of-the-art facilities, including personalized consultation areas, interactive vehicle displays, and advanced after-sales support services. The design and layout of these showrooms will be curated to reflect the luxury and elegance associated with MG’s high-end vehicles.</p>
+                <p>The strategic rollout of <span class="font-weight-700">'MG Select'</span> outlets will target key metropolitan regions, ensuring that the brand’s premium offerings are easily accessible to its target audience. This approach is expected to not only enhance MG’s market presence but also strengthen its position in the competitive luxury automotive segment.</p>
+                <p>JSW MG’s decision to launch <span class="font-weight-700">'MG Select'</span> outlets aligns with a broader industry trend of creating specialized retail environments to better serve affluent customers. By focusing on high-end vehicles and providing an enhanced shopping experience, the company aims to attract a niche customer base and elevate its brand status.</p>
+                <p>The <span class="font-weight-700">'MG Select'</span> initiative is anticipated to make a notable impact on the premium car market, reinforcing JSW MG’s commitment to innovation and customer satisfaction. With the new outlets set to open their doors in 2025, the company is poised to set new standards in luxury car retailing and drive growth in the high-end automotive sector.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

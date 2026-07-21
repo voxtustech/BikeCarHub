@@ -1,0 +1,105 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Maruti Suzuki Unveils the All-New 2024 Swift Dzire with Advanced Features and Enhanced Performance";
+}
+@section MetaTags{
+    <meta name="keywords" content="2024 Maruti Suzuki Swift Dzire, new Swift Dzire features, Maruti Suzuki compact sedan, hybrid Swift Dzire India, fuel-efficient cars India, Swift Dzire safety features, Maruti Suzuki 2024 model, advanced technology sedan, affordable sedans India, Swift Dzire design update" />
+    <meta name="description" content="Discover the all-new 2024 Maruti Suzuki Swift Dzire – a compact sedan that blends style, performance, and advanced technology. With a hybrid engine, enhanced safety features, and a modern design, this new Dzire sets a new standard for fuel-efficient, family-friendly cars in India." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <p>Maruti Suzuki, India’s leading automobile manufacturer, has introduced the all-new 2024 Swift Dzire. The latest version of this bestselling sedan is packed with upgrades in design, performance, and technology, making it an even more compelling choice in the compact sedan market.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/marutisuzukiunveilstheallnew2024swiftdzirewithadvancedfeaturesandenhancedperformance/1.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/marutisuzukiunveilstheallnew2024swiftdzirewithadvancedfeaturesandenhancedperformance/2.webp" /></div>
+                </div>
+                <h3 class="subheading">Design and Styling:</h3>
+                <p>The 2024 Swift Dzire has undergone a stylish facelift, featuring a refreshed front grille, sleek LED headlamps, and new alloy wheel designs that lend it a more modern and premium look. The aerodynamic shape has been further refined, enhancing both its aesthetic appeal and fuel efficiency. Inside, the cabin has been upgraded with high-quality materials, a larger infotainment screen, and a redesigned dashboard that offers a sophisticated feel.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/latestnews/2024/nov/marutisuzukiunveilstheallnew2024swiftdzirewithadvancedfeaturesandenhancedperformance/3.webp" /></div>
+                </div>                
+                <h3 class="subheading">Engine and Performance:</h3>
+                <p>One of the most significant updates in the 2024 Dzire is its engine. Maruti Suzuki has introduced a 1.2-liter hybrid petrol engine that offers enhanced fuel efficiency and reduced emissions, making it more eco-friendly. The Smart Hybrid technology improves fuel economy by up to 20%, making the new Dzire one of the most efficient models in its class. The engine comes with both manual and automatic transmission options, ensuring a smooth and responsive drive.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/latestnews/2024/nov/marutisuzukiunveilstheallnew2024swiftdzirewithadvancedfeaturesandenhancedperformance/4.webp" /></div>
+                </div>
+                <h3 class="subheading">Safety and Technology:</h3>
+                <p>Safety has been a primary focus in the new Dzire, with Maruti Suzuki adding several advanced features. The car now includes six airbags, electronic stability control, and a rear parking camera with sensors. It also features Maruti Suzuki's SmartPlay Pro+ infotainment system, which is compatible with Apple CarPlay and Android Auto. Additionally, the 2024 model comes equipped with a 360-degree camera and advanced driver assistance systems (ADAS), including lane departure warning and automatic emergency braking.</p>
+                <h3 class="subheading">Price and Availability:</h3>
+                <p>The 2024 Swift Dzire is available in multiple variants to cater to a wide range of budgets, with prices expected to start from ₹6.5 lakh (ex-showroom). Maruti Suzuki dealerships across India are now accepting bookings for the new Dzire, with deliveries slated to begin shortly.</p>
+                <h3 class="subheading">Conclusion:</h3>
+                <p>With its modern design, improved fuel efficiency, enhanced safety, and advanced technology, the new Maruti Suzuki Swift Dzire 2024 is poised to be a game-changer in the Indian compact sedan market. It combines style, performance, and practicality, making it an ideal choice for urban drivers and small families alike.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

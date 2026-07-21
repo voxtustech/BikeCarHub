@@ -1,0 +1,382 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "KTM Duke 200 vs Yamaha R15 – Detailed Comparison 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="KTM Duke 200 vs Yamaha R15, KTM Duke 200 mileage, Yamaha R15 V4 features, KTM Duke 200 performance, Yamaha R15 price, best sports bikes in India 2025, Duke 200 vs R15 comparison, Yamaha R15 mileage, KTM Duke 200 specs" />
+    <meta name="description" content="Compare KTM Duke 200 and Yamaha R15 for power, features, mileage, and comfort. Find out which sporty 2025 bike suits your riding style with BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 26th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <h3 class="subheading">Popular Picks in the Entry-Level Sports Segment</h3>
+                  <p>While the <span class="font-weight-700">KTM Duke 200</span> brings streetfighter energy with its aggressive, upright design, the <span class="font-weight-700">Yamaha R15</span> offers track-inspired styling and precision. In this detailed comparison brought to you by <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span>, we'll break down their differences to help you make the best choice in 2025.</p>
+               
+            <div class="div-line"></div>
+                <h2 class="subheading">KTM Duke 200 and Yamaha R15</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/duke200vsyamahar15/ktm duke 200.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+            <p>The <span class="font-weight-700">KTM Duke 200</span> is a muscular street-naked bike known for its sharp acceleration, agile handling, and upright riding posture. It's a perfect fit for city riders who love quick throttle response and aggressive looks.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/duke200vsyamahar15/yamaha r15.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+            <p>The <span class="font-weight-700">Yamaha R15</span> is a fully-faired sports bike with track-focused DNA. It's famous for its aerodynamic design, smooth power delivery, and precision handling, making it ideal for cornering lovers and highway racers.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Detailed Specifications Comparison</h2>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Specification</th>
+                            <th class="text-center">KTM Duke 200</th>
+                            <th class="text-center">Yamaha R15 V4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>Engine</td>
+                            <td>199.5cc, Single Cylinder Liquid-Cooled, DOHC, FI Engine</td>
+                            <td>155cc, Liquid-cooled, 4-stroke, SOHC, 4-valve</td>
+                        </tr>
+                        <tr>
+                            <td>Power</td>
+                            <td>25 PS@10,000 rpm</td>
+                            <td>18.4 PS@10,000 rpm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Torque</td>
+                            <td>19.2 Nm@8000 rpm</td>
+                            <td>14.2 Nm@7500 rpm</td>
+                        </tr>
+                        <tr>
+                            <td>Mileage (Approx.)</td>
+                            <td>35 kmpl</td>
+                            <td>45 kmpl</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Weight</td>
+                            <td>159 kg</td>
+                            <td>141 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel Tank Capacity</td>
+                            <td>13.5 litres</td>
+                            <td>11 litres</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Braking System</td>
+                            <td>Dual-channel ABS</td>
+                            <td>Dual-channel ABS</td>
+                        </tr>
+                        <tr>
+                            <td>Seat Height</td>
+                            <td>822 mm</td>
+                            <td>815 mm</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Colours</td>
+                            <td>Electronic Orange, Dark Galvano, Electric Orange, Silver Metallic</td>
+                            <td>RACING BLUE, VIVID MAGENTA METALLIC, INTENSITY WHITE, DARK KNIGHT, METALLIC RED</td>
+                        </tr>
+                        <tr>
+                            <td>Price (Ex-showroom)</td>
+                            <td>₹2,06,312 (Starting)</td>
+                            <td>₹1,84,400 -- ₹1,89,400 (Based on Colours)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Design and Styling</h2>
+            <p>The <span class="font-weight-700">KTM Duke 200</span> features a bold, naked streetfighter design with exposed frames, sharp tank shrouds, and an aggressive stance. The upright riding position offers excellent visibility and comfort in city traffic.</p>
+            <p>The <span class="font-weight-700">Yamaha R15</span> flaunts its fully-faired, aerodynamic look inspired by Yamaha's R-series superbikes. Its sharp LED headlamps, sporty fairing, and crouched riding posture make it look track-ready.</p>
+            <p>Riders who love the raw street look will find the Duke 200 attractive, while those who prefer racing aesthetics will naturally gravitate towards the R15.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Engine Performance and Ride Feel</h2>
+            <h3 class="subheading">KTM Duke 200 Performance</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/duke200vsyamahar15/ktm duke 200-1.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+            <p>The <span class="font-weight-700"><a class="for-link" asp-controller="KTM" asp-action="KTM200DUKE">Duke 200's 199.5cc engine</a></span> delivers thrilling city performance with instant throttle response. The bike feels alive in the mid-range and offers punchy acceleration. Its lightweight frame and precise steering make it easy to weave through traffic.</p>
+            
+            <h3 class="subheading">Yamaha R15 Performance</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/duke200vsyamahar15/yamaha r15-1.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+            <p>The <span class="font-weight-700"><a class="for-link" asp-controller="Yamaha" asp-action="YamahaR15M">Yamaha R15's 155cc engine</a></span> might be smaller, but it uses <span class="font-weight-700">VVA (Variable Valve Actuation)</span> technology, which offers a smooth power band and impressive high-rev performance. It's a stable, refined machine with exceptional cornering ability, making it a great companion for track enthusiasts and highway riders.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Mileage and Fuel Efficiency Comparison</h2>
+            <p>The <span class="font-weight-700">KTM Duke 200</span> typically offers a mileage of around <span class="font-weight-700">35 kmpl</span> in real-world city riding conditions.</p>
+            <p>The <span class="font-weight-700">Yamaha R15</span> is far more fuel-efficient, delivering <span class="font-weight-700">45 kmpl</span>, making it the better choice for daily commuters who care about long-term fuel savings.</p>
+            
+            <div class="div-line"></div>
+                <h2 class="subheading">Features and Technology:Street Smart vs. Racing Tech</h2>
+            <h3 class="subheading">KTM Duke 200 Features:</h3>
+            <ul>
+                <li>Fully digital console</li>
+                <li>Dual-channel ABS</li>
+                <li>Trellis frame for better rigidity</li>
+                <li>Sharp LED headlamp (new models)</li>
+            </ul>
+            
+            <h3 class="subheading">Yamaha R15 Features:</h3>
+            <ul>
+                <li>VVA (Variable Valve Actuation)</li>
+                <li>Assist & slipper clutch</li>
+                <li>Digital instrument cluster</li>
+                <li>Dual-channel ABS</li>
+                <li>Aerodynamic fairing for better wind resistance</li>
+            </ul>
+            
+            <div class="div-line"></div>
+                <h2 class="subheading">Comfort, Ride Quality, and Usability:City vs. Track</h2>
+            <p>The <span class="font-weight-700">KTM Duke 200</span> is more city-friendly with its upright riding position, wider handlebars, and comfortable ergonomics. It's better for daily rides, especially for those who frequently navigate traffic.</p>
+            <p>The <span class="font-weight-700">Yamaha R15</span> offers a more committed riding posture. Its crouched stance may be uncomfortable in stop-and-go traffic, but it shines on highways and twisty roads. Long rides might be challenging for some due to the aggressive seating angle.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Price and Value for Money</h2>
+            <p>The <span class="font-weight-700">KTM Duke 200</span> is priced around <span class="font-weight-700">₹2,06,312 (ex-showroom)</span>, offering a powerful 200cc engine, excellent build quality, and solid street presence.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/duke200vsyamahar15/ktm duke 200-2.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+            <p>The <span class="font-weight-700">Yamaha R15</span> is priced between <span class="font-weight-700">₹1,84,400 -- ₹1,89,400 (Based on Colours) (ex-showroom)</span>, delivering top-class racing features, brilliant mileage, and a proven sports bike legacy.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/duke200vsyamahar15/yamaha r15-3.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Pros and Cons</h2>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Bike</th>
+                            <th class="text-center">Pros</th>
+                            <th class="text-center">Cons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>KTM Duke 200</td>
+                            <td>Aggressive styling, punchy performance, city comfort</td>
+                            <td>Lower mileage, slightly higher price</td>
+                        </tr>
+                        <tr>
+                            <td>Yamaha R15</td>
+                            <td>VVA tech, excellent mileage, track-like handling</td>
+                            <td>Aggressive riding posture, less city comfort</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Best Fit for Rider Profiles</h2>
+            <h3 class="subheading">KTM Duke 200 is Ideal For:</h3>
+            <ul>
+                <li>City commuters looking for powerful street bikes</li>
+                <li>Riders who prefer upright seating and quick throttle response</li>
+                <li>Aggressive, attention-grabbing design lovers</li>
+            </ul>
+            
+            <h3 class="subheading">Yamaha R15 is Ideal For:</h3>
+            <ul>
+                <li>Young riders dreaming of a track-style bike</li>
+                <li>Daily commuters who prioritize mileage</li>
+                <li>Weekend riders who enjoy twisties and occasional highway rides</li>
+            </ul>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">Final Verdict</h2>
+            <p>The <span class="font-weight-700">KTM Duke 200</span> is the perfect bike for riders who want a bold, powerful streetfighter with sharp handling and strong street presence. It's a city king with punchy performance and quick maneuverability.</p>
+            <p>The <span class="font-weight-700">Yamaha R15</span> is a fantastic option for those who want a sports bike that delivers excellent mileage, smooth highway stability, and cutting-edge technology like VVA and slipper clutch.</p>
+            <p>Both bikes are great in their own right. Riders should choose the Duke 200 if they want a more upright, aggressive, city-focused ride, and the Yamaha R15 if they prefer a fully-faired, race-ready motorcycle with better fuel economy.</p>
+            
+            <div class="div-line"></div>
+            <h2 class="subheading">FAQs: KTM Duke 200 vs Yamaha R15</h2>
+            
+            <div class="accordion" id="faqDukeR15">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                            1. Which bike has better mileage, Duke 200 or R15?
+                        </button>
+                    </h2>
+                    <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqDukeR15">
+                        <div class="accordion-body">
+                            The Yamaha R15 offers better mileage of around 45 kmpl, compared to the Duke 200's 35 kmpl.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                            2. Which bike is better for city riding?
+                        </button>
+                    </h2>
+                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqDukeR15">
+                        <div class="accordion-body">
+                            The KTM Duke 200 is more comfortable for city riding thanks to its upright seating and quick throttle response.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                            3. Does the Yamaha R15 have advanced features?
+                        </button>
+                    </h2>
+                    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqDukeR15">
+                        <div class="accordion-body">
+                            Yes, the Yamaha R15 comes with VVA technology, assist & slipper clutch, and aerodynamic design.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                            4. Which bike is more powerful?
+                        </button>
+                    </h2>
+                    <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqDukeR15">
+                        <div class="accordion-body">
+                            The KTM Duke 200 produces more power (25 PS) compared to the Yamaha R15 (18.4 PS).
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                            5. Which is more beginner-friendly?
+                        </button>
+                    </h2>
+                    <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqDukeR15">
+                        <div class="accordion-body">
+                            Both are beginner-friendly, but the Duke 200 is easier to handle in the city. The R15 may take some time to get used to due to its aggressive seating.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                            6. Which is better for long rides?
+                        </button>
+                    </h2>
+                    <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqDukeR15">
+                        <div class="accordion-body">
+                            The Yamaha R15 offers better high-speed stability but may cause discomfort due to the forward-leaning posture. The Duke 200 is more comfortable in the long run for some riders.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                            7. Do both bikes have ABS?
+                        </button>
+                    </h2>
+                    <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqDukeR15">
+                        <div class="accordion-body">
+                            Yes, both the Duke 200 and Yamaha R15 come with dual-channel ABS as standard.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                            8. Which bike has better acceleration?
+                        </button>
+                    </h2>
+                    <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqDukeR15">
+                        <div class="accordion-body">
+                            The KTM Duke 200 has a sharper initial pickup and punchier acceleration.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                            9. Which bike has better service network?
+                        </button>
+                    </h2>
+                    <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqDukeR15">
+                        <div class="accordion-body">
+                            Both KTM and Yamaha have a wide service network across India with good after-sales support.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                            10. Which bike is better for daily use?
+                        </button>
+                    </h2>
+                    <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqDukeR15">
+                        <div class="accordion-body">
+                            The Yamaha R15 offers better mileage, but the KTM Duke 200 is more comfortable for daily city rides.
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        
+        </div>
+    </div>
+
+                
+            </div>
+
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

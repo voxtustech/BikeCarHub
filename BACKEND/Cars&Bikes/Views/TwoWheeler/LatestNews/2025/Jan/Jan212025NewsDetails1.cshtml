@@ -1,0 +1,140 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "TVS Jupiter CNG Scooter Launched with 140-Mile Range";
+}
+@section MetaTags {
+    <meta name="keywords" content="TVS Jupiter CNG, CNG scooter India, eco-friendly scooter, TVS Jupiter price, TVS Jupiter features, TVS Jupiter range, TVS Jupiter CNG mileage, dual-fuel scooter, green mobility, CNG scooter, CNG two-wheelers, CNG scooter mileage, urban commuting scooter, TVS Motor Company." />
+    <meta name="description" content="Explore the TVS Jupiter CNG scooter with 140-mile range, eco-friendly dual-fuel tech, and a starting price of ₹90,000. Perfect for sustainable urban commuting!" />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.NewsHeading" title="@Model.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <p>We saw the world’s first CNG motorcycle in the  <a class="for-link" asp-controller="Brand" asp-action="Bajaj">Bajaj Freedom 125</a> last year. Now, we see the tech carried over to the world’s first CNG scooter by TVS. TVS Motor Company has introduced the world’s first CNG-powered scooter, the<span class="font-weight-700"> TVS Jupiter CNG,</span> aimed at addressing the need for sustainable mobility solutions in India. This revolutionary scooter combines practicality with eco-friendliness, offering a claimed range of approximately <span class="font-weight-700">140 miles (226 kilometers)</span> on a single CNG fill.</p>
+                <h3 class="subheading">Specifications</h3>
+                <ul>
+                    <li>
+                        <span class="font-weight-700">Engine:</span> 124.8cc, single-cylinder, air-cooled engine modified for CNG.
+                    </li>
+
+                    <li>
+                        <span class="font-weight-700">Power Output: </span>Approx. 7.2 HP.
+                    </li>
+
+                    <li>
+                        <span class="font-weight-700">   Range:</span> 140 miles (226 km) on CNG.
+                    </li>
+
+                    <li>
+                        <span class="font-weight-700">Fuel Tank Capacity:</span> 1.4 kg CNG tank and 2-litre capacity petrol fuel tank
+                    </li>
+
+                    <li>
+                        <span class="font-weight-700">Emissions:</span> Up to 20% lower than petrol variants.
+                    </li>
+                </ul>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <img src="~/images/latestnews/2025/jan/tvsjupitercngscooterlaunchedwith140milerange/back.webp" alt="back" title="back" />
+                    </div>
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <img src="~/images/latestnews/2025/jan/tvsjupitercngscooterlaunchedwith140milerange/side.webp" alt="side" title="side" />
+                    </div>
+                </div>
+                <h3 class="subheading">Features</h3>
+                <ul>
+                    <li>
+                        <span class="font-weight-700">Dual-Fuel Technology: </span>Allows switching between petrol and CNG for flexibility.
+                    </li>
+
+                    <li>
+                        <span class="font-weight-700">Eco Mode:</span>Optimizes fuel efficiency while maintaining performance.
+                    </li>
+
+                    <li>
+                        <span class="font-weight-700">  Digital Console:</span>Displays fuel levels for both petrol and CNG.
+                    </li>
+
+                    <li>
+                        <span class="font-weight-700">Braking: </span> Integrated braking system (IBS) for safety.
+                    </li>
+                </ul>
+                <h3 class="subheading">Price in India</h3>
+                <p>
+                    The  <a class="for-link" asp-controller="TVS" asp-action="TVSJupiter">TVS Jupiter</a> CNG starts at <span class="font-weight-700">₹90,000.00 to ₹1,00,000 (ex-showroom),</span> making it an economical choice for urban commuters.
+                </p>
+                <p>
+                    With rising fuel prices and environmental concerns, the Jupiter CNG offers an ideal balance of affordability and sustainability, appealing to budget-conscious riders.
+                </p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

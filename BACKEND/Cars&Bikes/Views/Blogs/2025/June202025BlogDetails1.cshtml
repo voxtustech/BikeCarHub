@@ -1,0 +1,419 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Hunter 350 vs Bullet 350 – Royal Enfield Comparison 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Hunter 350 vs Bullet 350, Hunter 350 mileage, Bullet 350 comfort, Royal Enfield 350cc comparison, Hunter 350 price, Bullet 350 features, best cruiser bikes India 2025" />
+    <meta name="description" content="Compare Hunter 350 vs Bullet 350 for design, mileage, features, and comfort. Find the perfect Royal Enfield cruiser for your riding style at BikeCarHub." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                 
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 20th June 2025</p>
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <div class="div-line"></div>
+
+                  <h3 class="subheading">The New-Age Cruiser vs The Timeless Classic</h3>
+        
+        <p>While the <span class="font-weight-700">Hunter 350</span> brings a fresh, nimble design suitable for city riding, the <span class="font-weight-700">Bullet 350</span> carries Royal Enfield's heritage with its timeless appeal and classic cruiser experience. This in-depth comparison by <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">
+ BikeCarHub</a></span> will help riders decide which bike is the right fit for their riding style in 2025.</p>
+        
+        <div class="div-line"></div>
+        
+        <h3 class="subheading">Quick Overview: Hunter 350 and Bullet 350</h3>
+        <p>The <span class="font-weight-700">Hunter 350</span> is a lightweight, urban cruiser that appeals to young riders and city commuters. It's compact, easy to handle, and blends modern features with Royal Enfield's classic touch.</p>
+        <p>The <span class="font-weight-700">Bullet 350</span>, on the other hand, is a symbol of Royal Enfield's rich legacy. With its retro styling, thumping exhaust note, and relaxed riding posture, it continues to attract riders who value tradition and long-distance comfort.</p>
+        
+        <div class="div-line"></div>
+        
+        <h3 class="subheading">Detailed Specifications Comparison</h3>
+        <div style="overflow-x: auto;">
+            <table class="comparison-table-content">
+                <thead>
+                    <tr>
+                        <th class="text-center">Specification</th>
+                        <th class="text-center">Hunter 350</th>
+                        <th class="text-center">Bullet 350</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="compare-head-text">
+                        <td>Engine Capacity</td>
+                        <td>349cc, Air-Oil Cooled</td>
+                        <td>349cc, Air-Oil Cooled</td>
+                    </tr>
+                    <tr>
+                        <td>Power</td>
+                        <td>20.2 PS@6100 rpm</td>
+                        <td>20.2 PS@6100 rpm</td>
+                    </tr>
+                    <tr class="compare-head-text">
+                        <td>Torque</td>
+                        <td>27 Nm@4000 rpm</td>
+                        <td>27 Nm@4000 rpm</td>
+                    </tr>
+                    <tr>
+                        <td>Mileage (Approx.)</td>
+                        <td>36.20 kmpl</td>
+                        <td>41.55 kmpl</td>
+                    </tr>
+                    <tr class="compare-head-text">
+                        <td>Weight</td>
+                        <td>181 kg</td>
+                        <td>191 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Fuel Tank Capacity</td>
+                        <td>13 litres</td>
+                        <td>13 litres</td>
+                    </tr>
+                    <tr class="compare-head-text">
+                        <td>Braking System</td>
+                        <td>Dual-channel ABS</td>
+                        <td>Single/Dual-channel ABS</td>
+                    </tr>
+                    <tr>
+                        <td>Seat Height</td>
+                        <td>800 mm</td>
+                        <td>800 mm</td>
+                    </tr>
+                    <tr class="compare-head-text">
+                        <td>Price (Ex-showroom)</td>
+                        <td>₹1,49,900 - ₹1,76,750</td>
+                        <td>₹1,95,300 - ₹2,32,645</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="div-line"></div>
+        
+        <h3 class="subheading">Design and Styling: Urban Charm vs. Heritage Classic</h3>
+        <p>The <span class="font-weight-700">Hunter 350</span> is designed with modern city riders in mind. It has a minimalist, agile look with sporty colours, blacked-out engine components, and a compact stance that feels young and fresh.</p>
+        <p>The <span class="font-weight-700">Bullet 350</span> stays loyal to its roots with a classic metal body, signature round headlamp, and chrome elements that give it an iconic retro presence. It's perfect for those who want a timeless cruiser feel that never goes out of style.</p>
+        <p>While the Hunter 350 speaks to new-age riders, the Bullet 350 remains the king of nostalgia.</p>
+        
+     
+        
+        <div class="div-line"></div>
+        
+        <h3 class="subheading">Engine Performance and Ride Feel</h3>
+        <h5 class="subheading">Hunter 350 Performance</h5>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/huntervsbullet/hunter-350-1.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+        <p>The Hunter 350 shares the same J-platform engine as the Meteor and Classic 350 but delivers a sportier and more responsive city ride. Its lighter frame allows quicker handling and nimble movements, making it an excellent everyday commuter.</p>
+        
+        <h5 class="subheading">Bullet 350 Performance</h5>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">"<img src="~/images/blogs/2025/june/huntervsbullet/bullet-350-1.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+
+
+        <p>The Bullet 350 offers the same power figures but focuses more on stability and smooth cruising. It's built for steady, relaxed rides with a calm, signature thump that has won the hearts of generations.</p>
+        
+        <div class="div-line"></div>
+        
+        <h3 class="subheading">Mileage and Fuel Efficiency Comparison</h3>
+        <p>Both bikes deliver similar mileage between <span class="font-weight-700">35-40 kmpl</span> under real-world riding conditions. However, the Hunter 350, being lighter, may offer slightly better efficiency in dense city traffic but for the longer run classic wins.</p>
+        <p>For highway rides, both maintain consistent fuel consumption, making them reasonable options for long-distance riders concerned about fuel economy.</p>
+        
+        <div class="div-line"></div>
+        
+        <h3 class="subheading">Features and Technology: Modern Touch vs. Classic Simplicity</h3>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/huntervsbullet/hunter-350.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+
+                <h5 class="subheading">Hunter 350 Features:</h5>
+        <ul>
+            <li>Semi-digital console</li>
+            <li>Optional Tripper navigation system</li>
+            <li>Dual-channel ABS</li>
+            <li>Modern switchgear and refined ergonomics</li>
+        </ul>
+        
+        <h5 class="subheading">Features & Specifications:</h5>
+        <ul>
+            <li><span class="font-weight-700">Engine type:</span> SINGLE CYLINDER, 4 STROKE, AIR-OIL COOLED</li>
+            <li><span class="font-weight-700">Displacement:</span> 349CC</li>
+            <li><span class="font-weight-700">Max Power:</span> 20.2 BHP@6100 RPM (14.87 KW)</li>
+            <li><span class="font-weight-700">Max Torque:</span> 27 NM@4000 RPM</li>
+            <li><span class="font-weight-700">Fuel Tank:</span> 13 L</li>
+            <li><span class="font-weight-700">Braking:</span> Dual Channel ABS</li>
+            <li><span class="font-weight-700">Mileage:</span> 36.2 kmpl</li>
+            <li><span class="font-weight-700">Colour Options:</span> Tokyo Black, London Red, Rebel Blue, Dapper Grey, Rio White, Factory Black</li>
+            <li><span class="font-weight-700">Features:</span> Slip-Assist clutch, LED Lights, Digi-Analogue Instrument.</li>
+            <li><span class="font-weight-700">Price Range:</span> ₹ 1,49,900-1,76,750 (Ex-Showroom Price based on colours)</li>
+        </ul>
+
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/huntervsbullet/bullet-350.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+        
+        <h5 class="subheading">Bullet 350 Features:</h5>
+        <ul>
+            <li>Basic analog console</li>
+            <li>Retro-styled speedometer</li>
+            <li>Single-channel ABS in base models (dual-channel in higher trims)</li>
+            <li>Minimalistic old-school design</li>
+        </ul>
+        
+        <h5 class="subheading">Features & Specifications:</h5>
+        <ul>
+            <li><span class="font-weight-700">Engine type:</span> SINGLE CYLINDER, 4 STROKE, AIR-OIL COOLED</li>
+            <li><span class="font-weight-700">Displacement:</span> 349CC</li>
+            <li><span class="font-weight-700">Max Power:</span> 20.2 BHP@6100 RPM (14.87 KW)</li>
+            <li><span class="font-weight-700">Max Torque:</span> 27 NM@4000 RPM</li>
+            <li><span class="font-weight-700">Fuel Tank:</span> 13 L</li>
+            <li><span class="font-weight-700">Variants:</span> Single Channel ABS & Dual Channel ABS</li>
+            <li><span class="font-weight-700">Mileage:</span> 41.55 kmpl</li>
+            <li><span class="font-weight-700">Colour Options:</span> Emerald, Stealth Black, Gun Grey, Commando Sand, Medallion Bronze, Madras Red, Jodhpur Blue, Redditch Red, Halcyon Black</li>
+            <li><span class="font-weight-700">Features:</span> Single Channel & Dual Channel ABS, High Engine Performance, Strong Build Quality.</li>
+            <li><span class="font-weight-700">Price Range:</span> ₹ 1,95,300-2,32,645 (Ex-Showroom Price based on colours)</li>
+        </ul>
+        
+        <p>Riders looking for tech-friendly features will appreciate the Hunter's navigation and display, while classic lovers will be drawn to the simplicity of the Bullet.</p>
+        
+        <div class="div-line"></div>
+        
+        <h3 class="subheading">Comfort, Ride Quality, and Daily Usability</h3>
+        <p>The <span class="font-weight-700">Hunter 350</span> offers an upright, comfortable seating position ideal for city commutes. The slightly firmer seat and compact size make it easy to maneuver in traffic and park in tight spots.</p>
+        <p>The <span class="font-weight-700">Bullet 350</span> provides a plush, wide seat and relaxed cruiser posture that excels in long highway journeys. It absorbs bumps better on rough roads and offers superior pillion comfort.</p>
+        <p>For city-heavy riding, the Hunter is more practical, while the Bullet is a better highway companion.</p>
+        
+        <div class="div-line"></div>
+        
+        <h5 class="subheading">Price and Value for Money</h5>
+        <p>The <span class="font-weight-700">Hunter 350</span> is priced between <span class="font-weight-700">₹1,49,900-1,76,750 (ex-showroom)</span>, making it an affordable entry into Royal Enfield ownership with modern touches.</p>
+        <p>The <span class="font-weight-700">Bullet 350</span> ranges from <span class="font-weight-700">₹1,95,300-2,32,645 (ex-showroom)</span> depending on the variant, reflecting its classic status and premium heritage build.</p>
+        <p>If price is a key factor, the Hunter offers better value for younger or first-time buyers. The Bullet 350, though more expensive, provides unmatched legacy and highway comfort.</p>
+        
+        <div class="div-line"></div>
+        
+        <h3 class="subheading">Pros and Cons: Hunter 350 vs Bullet 350</h3>
+        <div style="overflow-x: auto;">
+            <table class="comparison-table-content">
+                <thead>
+                    <tr>
+                        <th class="text-center">Bike</th>
+                        <th class="text-center">Pros</th>
+                        <th class="text-center">Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="compare-head-text">
+                        <td>Hunter 350</td>
+                        <td>Light, nimble, modern features, affordable</td>
+                        <td>Slightly less Mileage, firmer seat</td>
+                    </tr>
+                    <tr>
+                        <td>Bullet 350</td>
+                        <td>Classic cruiser comfort, timeless design</td>
+                        <td>Heavier, less tech-friendly</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="div-line"></div>
+        
+        <h3 class="subheading">Best Fit for Rider Profiles</h3>
+        
+        <h5 class="subheading">Hunter 350 is Ideal For:</h5>
+        <ul>
+            <li>City commuters who want quick handling</li>
+            <li>First-time Royal Enfield buyers</li>
+            <li>Young riders who prefer a modern cruiser</li>
+        </ul>
+        
+        <h5 class="subheading">Bullet 350 is Ideal For:</h5>
+        <ul>
+            <li>Long-distance tourers who love relaxed cruising</li>
+            <li>Riders looking for classic Royal Enfield appeal</li>
+            <li>Traditionalists valuing the heritage riding experience</li>
+        </ul>
+        
+        <div class="div-line"></div>
+        
+        <h3 class="subheading">Final Verdict: Which Royal Enfield Should You Buy?</h3>
+        <p>The <span class="font-weight-700"><a class="for-link" asp-controller="RoyalEnfield" asp-action="REHunter350">Royal Enfield Hunter 350</a></span> is an excellent choice for riders who want a nimble, city-friendly Royal Enfield with modern features and stylish looks. It's light, affordable, and perfect for everyday commuting.</p>
+        <p>The <span class="font-weight-700"><a class="for-link" asp-controller="RoyalEnfield" asp-action="REBullet350">Royal Enfield Bullet 350</a></span> remains the better option for those who love the heritage of Royal Enfield, prefer a stable, comfortable highway ride, and appreciate the timeless design.</p>
+        <p>Both bikes offer value in their own way. Riders should decide based on whether they want a modern urban cruiser (Hunter 350) or a traditional highway thumper (Bullet 350).</p>
+        
+        <div class="div-line"></div>
+        
+        <h3 class="subheading">FAQs: Hunter 350 vs Bullet 350</h3>
+        
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                        Which bike is better for city rides?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The Hunter 350 is better for city rides due to its lighter weight and easier handling in traffic.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                        Which has better mileage, Hunter 350 or Bullet 350?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Both offer similar mileage of around 35-40 kmpl in real-world riding.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                        Does the Bullet 350 have Tripper navigation?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        No, only the Hunter 350 offers optional Tripper navigation. The Bullet 350 has a basic analog console.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                        Which is more comfortable for long rides?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The Bullet 350 is more comfortable for long highway rides thanks to its relaxed seating and soft suspension.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                        Which bike is more affordable?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The Hunter 350 is more affordable, starting around ₹1,49,900(Starting), while the Bullet 350 starts at ₹1,95,300(Starting).
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                        Do both bikes come with dual-channel ABS?
+                    </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The Hunter 350 has dual-channel ABS as standard. The Bullet 350 offers single-channel ABS in base variants and dual-channel in higher trims.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                        Which bike is better for new riders?
+                    </button>
+                </h2>
+                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The Hunter 350 is more beginner-friendly due to its lightweight body and simple handling.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                        Is the Bullet 350 suitable for daily use?
+                    </button>
+                </h2>
+                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, but it may feel heavier in dense traffic compared to the Hunter 350.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                        Which bike has a more modern look?
+                    </button>
+                </h2>
+                <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The Hunter 350 carries a modern, sporty design while the Bullet 350 retains its retro charm.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+                        Which one is better for a pillion rider?
+                    </button>
+                </h2>
+                <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The Bullet 350 offers better pillion comfort with its wider, softer seat.
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+            </div>
+            @await Component.InvokeAsync("AllBlog")
+            @await Html.PartialAsync("_AllBrandComponent")
+        </div>
+    </div>
+
+
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

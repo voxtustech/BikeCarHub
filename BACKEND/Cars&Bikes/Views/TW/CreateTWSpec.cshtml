@@ -1,0 +1,102 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Cars_Bikes.Models.TWSpec
+
+@{
+    ViewData["Title"] = "Add Two Wheeler Specification";
+}
+
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="text-end mb-2">
+                    <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                        <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+                    </form>
+                </div>
+                <div class="card shadow-lg p-4">
+                    <h2 class="text-center mb-4">Add Specification Features</h2>
+                    @* <form asp-action="@((Model.TWSpecId == 0) ? "CreateTWSpec" : "EditTWSpec")" method="post"> *@
+                            @* <input type="hidden" asp-for="TWSpecId" /> *@
+                    <form asp-action="EditTWSpec" method="post">
+                        @*<form asp-action="CreateTWSpec" method="post">
+                        <div class="form-group">
+                            <label asp-for="TWName"></label>
+                            <input asp-for="TWName" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Varients"></label>
+                            <input asp-for="Varients" class="form-control" />
+                        </div>
+                        *@
+                        <input type="hidden" asp-for="TWSpecId" />
+
+                        <div class="form-group">
+                            <label asp-for="TWName"></label>
+                            <input asp-for="TWName" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Varients"></label>
+                            <input asp-for="Varients" class="form-control" />
+                        </div>
+
+
+                        <div class="form-group">
+                            <label asp-for="Milage"></label>
+                            <input asp-for="Milage" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="FrontBrake"></label>
+                            <input asp-for="FrontBrake" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RearBrake"></label>
+                            <input asp-for="RearBrake" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="FuelCapacity"></label>
+                            <input asp-for="FuelCapacity" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="TwoWheelerId">Select Two Wheeler</label>
+                            <select asp-for="TwoWheelerId" class="form-control" asp-items="ViewBag.TwoWheelers">
+                                <option value="">-- Select --</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="TWVarientId">Select Variant</label>
+                            <select asp-for="TWVarientId" class="form-control" asp-items="ViewBag.TWVarients">
+                                <option value="">-- Select --</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="BodyType"></label>
+                            <input asp-for="BodyType" class="form-control" />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        @* <button type="submit" class="btn btn-primary"> *@
+                        @*     @(Model.TWSpecId == 0 ? "Submit" : "Update") *@
+                        @* </button> *@
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

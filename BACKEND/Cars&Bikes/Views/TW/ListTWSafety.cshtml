@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Cars_Bikes.Models.TWSafety>
+
+@{
+    ViewData["Title"] = "Safety List";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+<div class="container mt-4">
+    <h2 class="text-center mb-3">Two Wheeler Safety Features</h2>
+
+    <form method="get" asp-action="ListTWSafety" class="form-inline mb-3 justify-content-center">
+        <input type="text" name="search" class="form-control mr-2" placeholder="Search..." />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <table class="table table-bordered table-hover text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Variant</th>
+                <th>Pass Switch</th>
+                <th>Engine Kill</th>
+                <th>Display</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TWName</td>
+                    <td>@item.Varients</td>
+                    <td>@item.PassSwitch</td>
+                    <td>@item.EngineKillSwitch</td>
+                    <td>@item.Display</td>
+                    <td>
+                        <a asp-action="EditTWSafety" asp-route-id="@item.TWSafetyId" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="DeleteTWSafety" asp-route-id="@item.TWSafetyId" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</body>

@@ -1,0 +1,150 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "TVS Raider iGO Variant Launched: Features, Specifications, and Price Comparison in India";
+}
+@section MetaTags{
+    <meta name="keywords" content="TVS Raider iGO launch, TVS Raider 125 new variant, TVS Raider iGO specifications, TVS Raider iGO price in India, TVS Raider iGO features, budget commuter bikes India 2024, TVS Raider comparison" />
+    <meta name="description" content="Discover the newly launched TVS Raider iGO variant with updated features like iGO Smart Connect, LED headlamps, and a fully digital instrument cluster. Compare its specs, features, and price in India." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">What’s New in TVS Raider iGO?</h3>
+                <p>The TVS Raider iGO focuses on improving rider convenience with added smart features and upgrades in comfort. The key additions to this variant include:</p>
+                <ul>
+                    <li><span class="font-weight-700">iGO Smart Connect:</span> The Raider iGO comes with a smartphone connectivity system allowing riders to sync their phones with the bike’s display for navigation, call alerts, and SMS notifications.</li>
+                    <li><span class="font-weight-700">LED Headlamps:</span> Enhanced LED lighting for better visibility, making it safer for night rides.</li>
+                    <li><span class="font-weight-700">Digital Instrument Cluster:</span> The fully digital console now includes real-time mileage updates, turn-by-turn navigation, and trip meters.</li>
+                </ul>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                <h3 class="subheading">Specifications of TVS Raider iGO</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Engine:</span> 124.8 cc, single-cylinder, air-cooled, 3-valve
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Power:</span> 11.38 PS @@ 7500 rpm
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Torque:</span> 11.2 Nm @@ 6000 rpm
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Transmission:</span> 5-speed gearbox
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Mileage:</span> 71.94 km/l
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Top Speed:</span> 99 km/h
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Fuel Tank Capacity:</span> 10 litres
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Weight:</span> 123 kg
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Seat Height:</span> 780 mm
+                    </li>
+                </ol>
+                <h3 class="subheading">Features of TVS Raider iGO</h3>
+                <ol>
+                    <li><span class="font-weight-700">iGO Smart Connect:</span> Bluetooth-enabled system for smartphone connectivity.</li>
+                    <li><span class="font-weight-700">Multiple Riding Modes:</span> Eco and Power modes to optimize fuel efficiency or maximize performance.</li>
+                    <li><span class="font-weight-700">Mono-shock Rear Suspension:</span> Ensures a comfortable ride, even on rough roads.</li>
+                    <li><span class="font-weight-700">LED DRLs and Headlamp:</span> For improved visibility during day and night riding.</li>
+                    <li><span class="font-weight-700">Split Seat:</span> Adds to the sporty appeal and provides better comfort for both rider and pillion.</li>
+                    <li><span class="font-weight-700">USB Charging Port:</span> Convenient for charging mobile devices on the go.</li>
+                </ol>
+                <h3 class="subheading">Features of TVS Raider iGO</h3>
+                <ol>
+                    <li><span class="font-weight-700">Brakes:</span> Front disc (240 mm), rear drum (130 mm) with CBS (Combi Brake System)</li>
+                    <li><span class="font-weight-700">Suspension:</span> Front telescopic forks, rear mono-shock suspension for added comfort.</li>
+                    <li><span class="font-weight-700">Tyres:</span> Tubeless tyres for better durability and reduced chances of punctures.</li>
+                    <li><span class="font-weight-700">Frame:</span> Lightweight frame designed for agility and fuel efficiency.</li>
+                </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/latestnews/2024/oct/tvs raider igo variant launched new features, specifications, comparison, and price in india/2.webp" /></center></div>
+                </div>
+                <h3 class="subheading">Comparison with Other TVS Raider Variants</h3>
+                <p>Compared to the standard Raider 125, the Raider iGO stands out with its smart features like Bluetooth connectivity, LED headlamps, and an upgraded instrument cluster. While the engine performance remains largely similar, the iGO variant is targeted at tech enthusiasts who want a more connected riding experience. The Raider iGO offers improved rider convenience but retains the same sporty DNA that made the Raider 125 a favorite among young riders.</p>
+                <h3 class="subheading">Cost of TVS Raider iGO in India</h3>
+                <p>
+                    Price: ₹ 98,389 (ex-showroom)<br />
+                    With its new features and modern styling, the TVS Raider iGO is competitively priced, offering good value for money for riders looking for a mix of technology, performance, and style.
+                </p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

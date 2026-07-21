@@ -1,0 +1,558 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "TVS Orbiter Electric Scooter Review, Specs, & Price";
+}
+@section MetaTags {
+    <meta name="keywords" content="TVS Orbiter, TVS electric scooter, Orbiter price, 158 km range, 34L boot space, electric scooter review, best electric scooter, TVS Orbiter specs, Orbiter features, TVS EV, electric scooter comparison, Orbiter colours, TVS Orbiter mileage, connected scooter." />
+    <meta name="description" content="In-depth review of the new TVS Orbiter electric scooter. See 158 km range, 34L storage, 14-inch wheel, specs, estimated price, and competitor comparison." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 14th October 2025</p>
+
+                <div class="div-line"></div>
+                <p>
+                    The electric scooter segment is rapidly accelerating, becoming the preferred choice for urban commuters looking for a blend of style, sustainability, and smart technology. Stepping confidently into this electrifying arena is the <span class="font-weight-700">TVS Orbiter</span>, a model that promises not just a ride, but a comprehensive, connected, and comfortable mobility solution. TVS, a brand synonymous with reliability and innovation in the two-wheeler space, has designed the Orbiter to be <span class="font-weight-700">always on the move with you</span>, focusing heavily on convenience, practicality, and cutting-edge design.
+                    <br /><br />
+                    This in-depth article will take a closer look at every aspect of the TVS Orbiter, diving into its striking design, practical engineering, smart technology suite, and how it measures up against the current giants of the electric two-wheeler market. We will explore the detailed specifications extracted from the official materials and provide an informed perspective on its market positioning for our readers at  <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub.</a>
+                </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/tvs orbiter scooter/TVS Orbiter img.webp" alt="TVS Orbiter img" title="TVS Orbiter img" loading="lazy" /></div>
+                </div>
+                <h3 class="subheading">Design and Aesthetics: A New Era of E-Scooter Style</h3>
+                <p>The <span class="font-weight-700">TVS Orbiter</span> distinguishes itself immediately with a design philosophy centered on being <span class="font-weight-700">sleek, aerodynamic, and minimalistic</span>. Unlike some competitors that lean heavily into futuristic curves, the Orbiter adopts a <span class="font-weight-700">straight-line new age design</span> that ensures the scooter stands out with an understated elegance. This commitment to form is entirely functional, showcasing TVS's engineering prowess.</p>
+                <h5 class="subheading">Sleek Aerodynamics & The Range Boost</h5>
+                <p>The most notable design element is the <span class="font-weight-700">aerodynamic visor</span>, which TVS highlights as being more than just a stylish component. Its shape and structure are meticulously engineered to cut down on wind resistance, contributing to an impressive <span class="font-weight-700">10% more range per charge</span>. For the conscious EV user, this is a significant advantage, translating directly into fewer charging stops and more time on the road. The bodywork flows seamlessly from the front apron to the rear, giving the scooter a cohesive and premium appearance. The minimalist aesthetic is not just about looks; it hints at a machine optimized for efficiency and modern urban use. </p>
+                <h5 class="subheading">Crystal LED Lighting for Safety and Style</h5>
+                <p>Visibility, both for the rider and for others on the road, is paramount. The Orbiter features <span class="font-weight-700">Crystal LED Tech headlamps and LED combination lights.</span> This advanced lighting unit is fully integrated into the design, creating a minimalistic and stylish signature. Critically, this technology isn't just for show; the LED setup promises a <span class="font-weight-700">wider throw of light on the roads</span>, significantly enhancing night-time safety and rider confidence. The use of LED technology extends to the indicators and tail lamp, ensuring low power consumption and high visibility across the entire vehicle.</p>
+                <h5 class="subheading">The Foundation of Quality: Built for the Long Haul</h5>
+                <p>The underlying structure of the Orbiter is a <span class="font-weight-700">steel tube chassis</span>, providing a robust and durable foundation. While the design is sleek, the build quality emphasizes longevity and stability—a hallmark of TVS vehicles. This sturdy chassis complements the overall design, ensuring that the lightweight electric setup doesn't compromise on ride integrity or safety over challenging city roads.</p>
+                <h3 class="subheading">Power and Performance: Riding the Electric Wave</h3>
+                <p>An electric scooter's true value lies in the performance it offers—specifically, its range, battery security, and charging convenience. The TVS Orbiter provides compelling figures that position it as a serious contender for daily commutes and weekend errands alike.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/tvs orbiter scooter/Display img.webp" alt="Display img" title="Display img" loading="lazy" /></div>
+                </div>
+                <h5 class="subheading">IDC Range Explained: 158 km of Freedom</h5>
+                <p>
+                    The TVS Orbiter boasts an impressive <span class="font-weight-700">158 km IDC range</span>. The IDC (Indian Driving Cycle) is a standardized test used to determine a vehicle's maximum possible range under ideal laboratory conditions. While real-world range can vary depending on factors like riding style, speed, payload, and road conditions, a 158 km IDC figure strongly suggests a healthy <span class="font-weight-700">true real-world range</span> of well over 100 km, which is more than sufficient for the vast majority of urban commuters who travel an average of 30-50 km per day.
+                    <br /><br />
+                    The battery specifications, while not detailing the exact kWh or voltage in the provided materials, are highlighted as being <span class="font-weight-700">IP67 Rated for water and dust resistance</span>. This rating is crucial, assuring riders that the most expensive component of the scooter—the battery pack—is thoroughly protected against the often unpredictable Indian weather and road environments, including heavy monsoon downpours or dusty conditions.
+                </p>
+                <h5 class="subheading">Motor and Drivetrain (The Silent Power)</h5>
+                <p>While the specific kW rating or peak torque of the motor is not detailed in the available brochure, the Orbiter is designed for smooth, responsive urban performance. Electric scooters inherently offer instant torque, making them agile in stop-and-go traffic. The dual-shock rear suspension and telescopic front suspension are tuned to handle the quick acceleration and deceleration characteristic of EV riding, ensuring a comfortable transition of power to the wheels. The quiet operation of the electric motor contributes significantly to a less stressful and more enjoyable riding experience.</p>
+                <h5 class="subheading">Charging Convenience and Battery Longevity</h5>
+                <p>
+                    The Orbiter supports <span class="font-weight-700">Home Charging</span>, a standard but essential feature that allows riders to plug in their scooter overnight using a conventional power socket. This removes the reliance on public charging infrastructure for daily use, integrating the scooter seamlessly into the user’s routine.
+                    <br /><br />
+                    In terms of assurance, TVS offers a substantial <span class="font-weight-700">3 years or 50,000 Kms warranty</span> on the <span class="font-weight-700">Vehicle Battery and Charger</span>. This is a critical factor for potential buyers, as battery replacement cost is often a point of concern. This warranty demonstrates TVS’s confidence in the quality and lifespan of the core electric components.
+                </p>
+                <h3 class="subheading">Comfort and Ergonomics: Engineered for the City</h3>
+                <p>Commuting comfort is often overlooked in performance-focused reviews, but the TVS Orbiter has dedicated several best-in-segment features to ensure every ride is a pleasure, not a strain.</p>
+                <h3 class="subheading">Optimal Rider Posture and Ground Reach</h3>
+                <p>The Orbiter prioritizes <span class="font-weight-700">best-in-class ergonomics</span>. This is achieved through an <span class="font-weight-700">upright handlebar</span> position and an <span class="font-weight-700">easy ground reach</span>. In congested city traffic, this combination is invaluable. An upright riding posture reduces back and shoulder strain, allowing the rider to maintain comfort even during long waiting periods at traffic lights. Easy ground reach instills confidence, especially for shorter riders or for quick maneuvers in dense traffic, eliminating the stress of balancing the scooter at a standstill.</p>
+                <h3 class="subheading">Spacious Footboard and Seat Design</h3>
+                <p>
+                    One of the standout practicality features is the <span class="font-weight-700">First-in-Segment Straight Line Footboard</span>. Measuring a generous <span class="font-weight-700">290 mm</span>, this spacious footboard provides more room for the rider’s feet, making the ride comfortable and reducing fatigue. More importantly, a flat footboard is essential for carrying luggage, grocery bags, or even a small gas cylinder safely and conveniently.
+                    <br /><br />
+                    The seat design is equally focused on utility and comfort. The <span class="font-weight-700">Long Flatform Seat</span> gives <span class="font-weight-700">extra room</span> for both the rider and a pillion, ensuring a comfortable two-up ride. The seat length is specified at <span class="font-weight-700">845 mm</span>, a generous dimension that confirms its focus on practical two-person urban mobility. The optimal <span class="font-weight-700">seat height of 763 mm</span> perfectly complements the easy ground reach feature.
+                </p>
+                <h5 class="subheading">Dimensions and Maneuverability</h5>
+                <p>The overall dimensions contribute to its city-friendly nature: </p>
+                <ul>
+                    <li><span class="font-weight-700">Length:</span> 1850±20mm</li>
+                    <li><span class="font-weight-700">Width:</span> 734±10mm</li>
+                    <li><span class="font-weight-700">Height:</span> 1294±10mm</li>
+                    <li><span class="font-weight-700">Ground Clearance:</span> 169mm</li>
+                </ul>
+                <p>A <span class="font-weight-700">169 mm ground clearance</span> is excellent for an electric scooter, allowing the Orbiter to safely navigate the notorious speed breakers and potholes that characterize many urban and semi-urban roads without scraping the undercarriage. This practical dimension ensures stress-free navigation over unpredictable terrain.</p>
+                <h3 class="subheading">The Tech Advantage: Smart Connectivity and Features</h3>
+                <p>In today's connected world, a premium scooter is to be a smart device on wheels, and the TVS Orbiter delivers with a rich suite of technology features.</p>
+                <h5 class="subheading">The Connected Mobile App and Cluster</h5>
+                <p>The core of the Orbiter’s smart features is its <span class="font-weight-700">Connected Mobile App</span>, which integrates seamlessly with the scooter’s dashboard via <span class="font-weight-700">Bluetooth connection</span>. The rider interface is a clear <span class="font-weight-700">5.5-inch Coloured LCD screen</span>, a sophisticated size and type that provides all necessary information at a glance.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/tvs orbiter scooter/App Connectivity img.webp" alt="App Connectivity img" title="App Connectivity img" loading="lazy" /></div>
+                </div>
+                <p>Key connected features include:</p>
+                <ul>
+                    <li><span class="font-weight-700">TBT (Turn-By-Turn) Navigation:</span> This is vital for city navigation, displaying directions directly on the cluster, eliminating the need to constantly look down at a phone.</li>
+                    <li><span class="font-weight-700">OTA (Over-The-Air) Updates:</span> This future-proofs the scooter, allowing TVS to push software updates, feature enhancements, and bug fixes remotely, ensuring the vehicle’s technology remains current throughout its lifespan.</li>
+                </ul>
+                <p>These technological elements turn the Orbiter into a truly personalized vehicle, enhancing safety and convenience by keeping the rider informed and focused on the road.</p>
+                <h5 class="subheading">Unmatched Storage Utility</h5>
+                <p>The TVS Orbiter sets a high bar for utility with a massive <span class="font-weight-700">34 L of boot space</span>. This is marketed as <span class="font-weight-700">Twin Helmet Space</span>, a feature that drastically enhances the scooter's daily practicality. Most scooters can only accommodate one full-face helmet; the Orbiter’s ability to store two or equivalent luggage space solves a major pain point for riders who frequently travel with a pillion or require ample storage for work, shopping, or deliveries. <span class="font-weight-700">BikeCarHub</span> believes that this 34L boot space is a critical differentiator for customers prioritizing maximum utility and convenience in their electric scooter choice.</p>
+                <h5 class="subheading">Braking, Wheels, and Safety System</h5>
+                <p>Safety is non-negotiable, and the Orbiter is equipped with a reliable setup.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2025/oct/tvs orbiter scooter/Boot Space Img.webp" alt="Boot Space img" title="Boot Space img" loading="lazy" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2025/oct/tvs orbiter scooter/Wheel img.webp" alt="Wheel img" title="Wheel img" loading="lazy" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Braking System:</span> It features <span class="font-weight-700">CBS (Combi-Braking System)</span>. CBS links both the front and rear drum brakes, applying a controlled amount of braking force to both wheels even when the rider uses only the rear brake lever. This is a crucial safety feature that significantly reduces stopping distances and minimizes the risk of skidding, especially under panic braking.</li>
+                    <li><span class="font-weight-700">Wheels and Tyres:</span> The scooter features <span class="font-weight-700">Alloy Wheels</span> with a unique size combination: a <span class="font-weight-700">14-inch front wheel</span> and a <span class="font-weight-700">12-inch rear wheel.</span>
+                        <ul>
+                            <li><span class="font-weight-700">Front Tyre:</span> 90/80−14′′  </li>
+                            <li><span class="font-weight-700">Rear Tyre:</span> 90/90−12′′ The larger front wheel aids in stability and better handling over rough surfaces, while the 12-inch rear provides a good balance of agility and power delivery.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3 class="subheading">Detailed Specifications and Features Tables</h3>
+                <p>Here is a consolidated look at the technical data and a comparison of the Orbiter's features against the general segment standard.</p>
+                <h5 class="subheading">TVS Orbiter Full Technical Specifications</h5>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Category</th>
+                                <th class="text-center font-weight-600">Specification</th>
+                                <th class="text-center font-weight-600">Details / Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600" rowspan="4">Performance & Battery</td>
+                                <td>IDC Range</td>
+                                <td>158 km</td>
+                            </tr>
+                            <tr>
+                                <td>Battery Type & Safety</td>
+                                <td>IP67 Rated (Water & Dust Resistance)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Charging</td>
+                                <td>Home Charging Supported</td>
+                            </tr>
+                            <tr>
+                                <td>Battery/Charger Warranty</td>
+                                <td>3 Years / 50,000 Kms</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600" rowspan="6">Dimensions & Weight</td>
+                                <td>Length</td>
+                                <td>1850±20mm</td>
+                            </tr>
+                            <tr>
+                                <td>Width</td>
+                                <td>734±10mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Height</td>
+                                <td>1294±10mm</td>
+                            </tr>
+                            <tr>
+                                <td>Ground Clearance</td>
+                                <td>169 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Seat Height</td>
+                                <td>763 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Seat Length</td>
+                                <td>845 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600" rowspan="3">Chassis & Utility</td>
+                                <td>Chassis Type</td>
+                                <td>Steel Tube</td>
+                            </tr>
+                            <tr>
+                                <td>Boot Space</td>
+                                <td>34 L (Twin Helmet Space)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Footboard Space</td>
+                                <td>290 mm (Straight Line Footboard)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600" rowspan="7">Brakes, Wheels & Suspension</td>
+                                <td>Front Wheel Size</td>
+                                <td>14 inches (Alloy)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Rear Wheel Size</td>
+                                <td>12 inches (Alloy)</td>
+                            </tr>
+                            <tr>
+                                <td>Front Tyre Size</td>
+                                <td>90/80−14′′</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Rear Tyre Size</td>
+                                <td>90/90−12′′</td>
+                            </tr>
+                            <tr>
+                                <td>Front / Rear Suspension</td>
+                                <td>Telescopic / Dual Shock</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Front / Rear Brake Type</td>
+                                <td>Drum</td>
+                            </tr>
+                            <tr>
+                                <td>Braking System</td>
+                                <td>CBS (Combi-Braking System)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600" rowspan="4">Technology & Lighting</td>
+                                <td>Headlamps</td>
+                                <td>Crystal LED Tech</td>
+                            </tr>
+                            <tr>
+                                <td>Combination Lamps</td>
+                                <td>LED Tech (Tail Lamp + TSL)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Cluster Screen</td>
+                                <td>5.5 inch Coloured LCD</td>
+                            </tr>
+                            <tr>
+                                <td>Connectivity</td>
+                                <td>Bluetooth Connection, OTA Updates, TBT Navigation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h5 class="subheading">Specifications & Features Comparison Table (Orbiter vs. Segment Standard)</h5>
+                <p>This table highlights where the TVS Orbiter excels in comparison to the typical offerings found across the wider electric scooter market segment.</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Feature</th>
+                                <th class="text-center font-weight-600">TVS Orbiter</th>
+                                <th class="text-center font-weight-600">Segment Standard / Typical Offering</th>
+                                <th class="text-center font-weight-600">Orbiter Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Range (IDC)</td>
+                                <td>158 km</td>
+                                <td>120−140 km</td>
+                                <td>Above average range and efficiency.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Boot Space</td>
+                                <td>34 Litres (Twin Helmet)</td>
+                                <td>20−25 Litres (Single Helmet)</td>
+                                <td>Best-in-Segment storage utility.</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Front Wheel Size</td>
+                                <td>14-inch</td>
+                                <td>12-inch</td>
+                                <td>Enhanced stability and ride comfort over bumps.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Footboard Space</td>
+                                <td>290 mm (Flat)</td>
+                                <td>220−250 mm (Often non-flat)</td>
+                                <td>Superior rider comfort and cargo capacity.</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Ergonomics</td>
+                                <td>Upright Handlebar, Easy Ground Reach</td>
+                                <td>Variable, often aggressive posture</td>
+                                <td>Designed specifically for stress-free city riding.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Water/Dust Resistance</td>
+                                <td>IP67 Rated Battery</td>
+                                <td>IP65/IP54 or not specified</td>
+                                <td>Superior battery protection and reliability. </td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Navigation</td>
+                                <td>Turn-by-Turn (TBT)</td>
+                                <td>Basic App Connectivity / Phone Mount</td>
+                                <td>Integrated, focused rider assistance.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">Market Positioning, Estimated Price, and Colour Variants</h3>
+                <p>While the official price is not provided in the brochure, based on its impressive feature set, generous range, and connected technology, the TVS Orbiter is clearly positioned in the <span class="font-weight-700">premium-to-mid-premium segment</span> of the electric scooter market.</p>
+                <h5 class="subheading">Pricing Strategy</h5>
+                <p>TVS is known for competitive pricing, and the Orbiter will likely be strategically priced to challenge its key rivals. Given the <span class="font-weight-700">158 km IDC</span> range and premium <span class="font-weight-700">34L</span> storage, we can estimate its market price. The final ex-showroom price would be a critical factor, and it’s ex-showroom start from <span class="font-weight-700">Rs 1,04,900</span>. This pricing would be competitive, especially when factoring in the various state and central government subsidies available for electric vehicles. The total on-road cost, after subsidies, would make the Orbiter a highly attractive value proposition for the features it offers.</p>
+                <h5 class="subheading">Inferred Colour Variants</h5>
+                <p>The brochure showcases the scooter in a few distinct shades, suggesting a vibrant yet sophisticated palette to appeal to a wide demographic. While official names are not listed, the available visuals imply a strong focus on metallic and matte finishes:</p>
+                <ul>
+                    <li><span class="font-weight-700">Stellar Blue:</span> A rich, deep metallic blue, giving the scooter a premium, dynamic feel.</li>
+                    <li><span class="font-weight-700">Cosmic Black:</span> A sleek, matte or stealth black finish that emphasizes the modern, straight-line design.</li>
+                    <li><span class="font-weight-700">Lunar White:</span> A crisp, classic white that highlights the scooter’s aerodynamic curves and minimalist approach.</li>
+                    <li><span class="font-weight-700">Asteroid Grey:</span> A sophisticated, dark grey metallic finish offering a modern, understated alternative.</li>
+                </ul>
+                <p>These colours ensure that the Orbiter has a presence on the road that matches its technological advancements.</p>
+                <h3 class="subheading">The Competition Landscape: How the Orbiter Stacks Up</h3>
+                <p>
+                    The Indian EV market is intensely competitive, with strong offerings from established players and new-age startups. The TVS Orbiter is set to compete directly with segment leaders known for high performance and smart features. The key competitors include the Ather 450X, the Ola S1 Pro, and TVS's own TVS iQube.
+                    <br /><br />
+                    The Orbiter's differentiation lies in its best-in-class storage and robust ergonomics. While some rivals may offer higher peak speeds or marginally faster acceleration, the Orbiter focuses on the total ownership experience—practicality, comfort, and protection (IP67 rating).
+                </p>
+                <h5 class="subheading">Competitors Comparison Table</h5>
+                <p>This table compares the TVS Orbiter’s confirmed advantages against the approximate top-tier specifications of its closest rivals.</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center font-weight-600">Specification</th>
+                                <th class="text-center font-weight-600">TVS Orbiter</th>
+                                <th class="text-center font-weight-600">Ather 450X</th>
+                                <th class="text-center font-weight-600">Ola S1 Pro</th>
+                                <th class="text-center font-weight-600">Bajaj Chetak 3501</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Target Segment</td>
+                                <td>Practical Premium Commuter</td>
+                                <td>Performance & Handling Focused</td>
+                                <td>Feature-rich, High Performance</td>
+                                <td>Retro-Classic Commuter</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Boot Space (L)</td>
+                                <td>34 L (Twin Helmet)</td>
+                                <td>22 L</td>
+                                <td>34 L </td>
+                                <td>18 L</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Claimed Range (IDC/ARAI)</td>
+                                <td>158 km (IDC)</td>
+                                <td>126/161 km (True Range)</td>
+                                <td>176 km (ARAI)</td>
+                                <td>153 km (IDC)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Battery Protection</td>
+                                <td>IP67 Rated</td>
+                                <td>IP67 Rated</td>
+                                <td>IP67 Rated</td>
+                                <td>IP67 Rated</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Front Wheel Size</td>
+                                <td>14-inch </td>
+                                <td>12-inch </td>
+                                <td>12-inch </td>
+                                <td>12-inch </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Braking System</td>
+                                <td>CBS (Drum/Drum)</td>
+                                <td>Disc/Disc (Regen)</td>
+                                <td>Disc/Drum (Regen)</td>
+                                <td>Disc/Drum</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Connectivity</td>
+                                <td>TBT Navigation, Bluetooth</td>
+                                <td>Google Maps, 4G, Bluetooth</td>
+                                <td>TBT Navigation, Bluetooth</td>
+                                <td>TBT Navigation, Bluetooth</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Estimated Price Range</td>
+                                <td>Rs 1,04,900</td>
+                                <td>Rs 1,46,999</td>
+                                <td>Rs 1,22,999 – Rs 1,42,999</td>
+                                <td>Rs 1,22,500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/tvs orbiter scooter/Orbiter img.webp" alt="Orbiter img" title="Orbiter img" loading="lazy" /></div>
+                </div>
+                <h5 class="subheading">Analysis of Competitive Edge </h5>
+                <p>The Orbiter competes fiercely on utility. Its <span class="font-weight-700">34L storage</span> matches the best in the market, making it superior to the Ather 450X and Chetak for practicality. The <span class="font-weight-700">14-inch front wheel</span> gives it an edge in terms of dynamic handling and stability over rough Indian roads compared to the standard 12-inch setups. Furthermore, TVS's strong legacy, widespread service network, and the three-year battery warranty are intangible assets that provide a significant trust factor against the newer entrants in the market. The commitment to superior ergonomics and the 169mm ground clearance reinforce its positioning as the most practical and comfortable option for the daily grind.</p>
+                <h3 class="subheading">The Riding Experience: Safety Meets Agility</h3>
+                <p>Riding the TVS Orbiter is intended to be an effortless and safe experience. The combination of its mechanical and electronic features creates a balanced, confidence-inspiring machine.</p>
+                <h5 class="subheading">The Role of Suspension and Wheels</h5>
+                <p>The pairing of a <span class="font-weight-700">Telescopic Front Suspension</span> and a <span class="font-weight-700">Dual Shock Rear Suspension</span> is a tried-and-tested setup that offers excellent shock absorption. The telescopic forks at the front manage sudden impacts effectively, while the dual shocks at the rear ensure stability and comfortable load distribution, especially when carrying a pillion or heavy items in the boot. The mixed wheel size <span class="font-weight-700">(14′′ front, 12′′ rear)</span> is a thoughtful engineering choice, maximizing the trade-off between straight-line stability and tight-cornering agility needed in crowded city conditions.</p>
+                <h5 class="subheading">Braking Confidence with CBS</h5>
+                <p>The inclusion of the Combi-Braking System (CBS) across the <span class="font-weight-700">Drum</span> brakes (Front and Rear) is a significant safety net. While disc brakes offer superior heat dissipation and maximum stopping power, CBS on a drum setup is highly effective for scooters, preventing wheel lockup and ensuring a balanced stop. For the target audience—the everyday commuter—the reliability and predictable performance of the CBS system is often more valuable than the aggressive feel of a disc brake.</p>
+                <h3 class="subheading">Conclusion: The Practical Power of the Orbiter</h3>
+                <p>
+                    The TVS Orbiter is clearly designed as a compelling all-rounder that blends TVS's manufacturing reliability with advanced electric technology. Its focus on practical utility—highlighted by the massive 34L boot space and the comfortable, city-optimized ergonomics—sets it apart in a market often chasing raw performance figures. <span class="font-weight-700">The 158 km IDC range</span>, coupled with the <span class="font-weight-700">IP67-rated battery</span> and three-year warranty, makes a strong case for its reliability and long-term ownership value.
+                    <br /><br />
+                    For the urban commuter who needs a vehicle that is safe, comfortable, highly connected, and capable of handling luggage and passengers with ease, the Orbiter is a powerful contender. It offers a sophisticated, yet accessible entry into electric mobility. It is a scooter built not just for the commute, but for the entire range of daily life's demands.
+                    <br /><br />
+                    If you’re researching your next electric vehicle purchase, the TVS Orbiter deserves a serious look.
+                </p>
+                
+                <h3 class="subheading">Frequently Asked Questions (FAQs)</h3>
+
+                <div class="accordion" id="faqTeslaModelY">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1.  What is the real-world range of the TVS Orbiter?
+                            </button>
+                        </h3>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The TVS Orbiter has an IDC (Indian Driving Cycle) certified range of 158 km. In real-world urban commuting conditions, riders can generally expect a true range between 100 km and 120 km, depending heavily on factors like riding speed, payload, and the use of power modes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Is the TVS Orbiter suitable for riding in the rain?
+                            </button>
+                        </h3>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Yes, the battery pack of the TVS Orbiter is <span class="font-weight-700">IP67 Rated</span> for water and dust resistance. This high rating means the critical electric components are well-protected against heavy rain, water splashes, and dust, making it safe for all-weather riding.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. How large is the storage space, and can it fit two helmets?
+                            </button>
+                        </h3>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The TVS Orbiter offers a best-in-segment <span class="font-weight-700">34 Litres of boot space</span>. This space is generous enough to accommodate two standard helmets (often referred to as twin-helmet space) or a substantial amount of luggage, making it extremely practical for daily use.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Does the Orbiter support fast charging?
+                            </button>
+                        </h3>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The brochure confirms support for <span class="font-weight-700">Home Charging</span> via a standard household outlet. While it doesn't explicitly mention public DC fast charging, the convenience of home charging allows users to fully replenish the battery overnight easily.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. What kind of safety features are included in the braking system?
+                            </button>
+                        </h3>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The TVS Orbiter is equipped with the <span class="font-weight-700">Combi-Braking System (CBS)</span>. This system balances the braking force between the front and rear drum brakes when the rear brake lever is applied, significantly improving stability and reducing the risk of skidding during emergency stops.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. What kind of display does the scooter have?
+                            </button>
+                        </h3>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The scooter features a modern <span class="font-weight-700">5.5-inch Coloured LCD cluster</span>. This display is capable of showing speed, range, battery status, and also features <span class="font-weight-700">Turn-by-Turn (TBT) Navigation</span> when connected to the mobile app.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. What warranty is provided on the battery?
+                            </button>
+                        </h3>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                TVS offers a comprehensive warranty of <span class="font-weight-700">3 years or 50,000 Kms</span> (whichever comes first) on the vehicle battery and charger, providing peace of mind to the owner regarding the longevity of the core components.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. How does the Orbiter’s aerodynamic design affect the ride?
+                            </button>
+                        </h3>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The scooter's sleek and aerodynamic design, particularly the specialized visor, is engineered to reduce drag, which contributes to approximately <span class="font-weight-700">10% more range per charge</span> compared to non-aerodynamic designs, increasing overall efficiency.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. What are the key comfort features of the Orbiter?
+                            </button>
+                        </h3>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Key comfort features include <span class="font-weight-700">Best-in-Class Ergonomics</span> (upright handlebar), a <span class="font-weight-700">763 mm</span> seat height for easy ground reach, a wide <span class="font-weight-700">290 mm Straight Line Footboard</span> for maximum legroom and storage, and a long <span class="font-weight-700">845 mm Flatform Seat</span> for superior rider and pillion comfort.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Does the scooter receive software updates?
+                            </button>
+                        </h3>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Yes, the TVS Orbiter is equipped with <span class="font-weight-700">OTA (Over-The-Air) Updates</span> capability. This means that the scooter’s software can be updated remotely via the internet, allowing TVS to introduce new features or improvements over time without requiring a service center visit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* @await Component.InvokeAsync("AllBlog") *@
+    @* @await Html.PartialAsync("_AllBrandComponent") *@
+    @await Html.PartialAsync("_AllViewComponent")
+
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

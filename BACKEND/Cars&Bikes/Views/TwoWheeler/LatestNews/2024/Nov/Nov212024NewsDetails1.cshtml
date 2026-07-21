@@ -1,0 +1,104 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Royal Enfield Goan Classic 350 Bobber Revealed – Specs & Price";
+}
+@section MetaTags{
+    <meta name="keywords" content="Royal Enfield, Goan Classic 350, Royal Enfield Bobber, J-Series, 349cc engine, Jawa Perak rival, Motoverse 2024, bobber motorcycle, retro bike." />
+    <meta name="description" content="Royal Enfield unveils the Goan Classic 350 bobber. Stylish design, 349cc engine, relaxed stance. Launching Nov 23 at ₹2.15 lakh. Details and specs here!" />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.NewsHeading" title="@Model.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <p><a class="for-link" asp-controller="Home" asp-action="TWBrandDetails" asp-route-brandId="1">Royal Enfield</a> has expanded its 350cc lineup with the introduction of the Goan Classic 350, a bold bobber-style motorcycle, set to launch at Motoverse 2024 in Goa. This model takes inspiration from the popular Classic 350 while embracing a unique retro-modern design.</p>
+                <p>At its core, the Goan Classic 350 houses the reliable 349cc single-cylinder, air-cooled engine from the J-Series platform, delivering 20 bhp and 27 Nm of torque. Paired with a 5-speed gearbox, the engine ensures the refined performance Royal Enfield riders expect.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/latestnews/2024/nov/royalenfieldrevelstheallnewgoanclassic350bobber/2.webp" alt="Royal Enfield Reveals the All New Goan Classic 350 Bobber - 1" /></div>
+                </div>
+                <p>What sets this bike apart is its aesthetic and ergonomic transformation. The Goan Classic 350 features a shortened subframe, a solo saddle with the option for a pillion, and a striking exposed rear fender. Its tall ape handlebars and forward-set footpegs promise a relaxed, cruiser-like riding stance, perfect for long scenic journeys. Additionally, white-walled tyres and vibrant color schemes add to its retro charm.</p>               
+                <p>For practicality, it includes advanced safety features like dual-channel ABS and disc brakes on both ends. The suspension setup comprises telescopic forks upfront and twin shock absorbers at the rear, ensuring comfort on varied terrains.</p>
+                <p>Expected to be priced at approximately ₹2 lakh (ex-showroom), this new addition positions itself slightly above the Classic 350. Competing against models like the Jawa Perak, it caters to riders who prioritize both style and substance.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/latestnews/2024/nov/royalenfieldrevelstheallnewgoanclassic350bobber/3.webp" alt="Royal Enfield Reveals the All New Goan Classic 350 Bobber - 2" /></div>
+                </div>
+                <h3 class="subheading">Specifications:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Engine:</span> 349cc single-cylinder, air-cooled</li>
+                    <li><span class="font-weight-700">Power/Torque:</span> 20 bhp, 27 Nm</li>
+                    <li><span class="font-weight-700">Transmission:</span> 5-speed gearbox</li>
+                    <li><span class="font-weight-700">Braking System:</span> Dual disc with ABS</li>
+                    <li><span class="font-weight-700">Suspension:</span> Telescopic front forks, twin rear shock absorbers</li>
+                    <li><span class="font-weight-700">Price:</span> Approx. ₹2 lakh (ex-showroom)</li>
+                </ol>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

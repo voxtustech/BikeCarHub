@@ -1,0 +1,347 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Renault Triber 2025 Facelift Review, Price & Features";
+}
+@section MetaTags {
+    <meta name="keywords" content="Renault Triber 2025, Renault Triber Price India, 7-seater MPV, Renault Triber CNG, Best family car under 10 lakh, Renault Triber features, Renault Triber mileage, Renault Triber safety" />
+    <meta name="description" content="Complete review of the 2025 Renault Triber Facelift - India's most versatile 7-seater with SUV styling, flexible seating, modern tech and best-in-class safety features." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 23rd July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+
+                   <h2 class="subheading">What's New in the 2025 Renault Triber?</h2>
+            <p>Renault has reimagined the Triber with bold SUV styling and a premium feel—inside and out.</p>
+
+            <h3 class="subheading">New Design Language</h3>
+            <ul>
+                <li>A striking <span class="font-weight-700">front face</span> with silver-finished <span class="font-weight-700">skid plates</span> and expressive grille</li>
+                <li><span class="font-weight-700">LED headlamps, DRLs, fog lamps, and tail lamps</span> for sharp visibility and aesthetics</li>
+                <li><span class="font-weight-700">Dual-tone 38.1 cm "landscape" styled flex wheels</span> (Emotion variant)</li>
+                <li>Roof rails with a <span class="font-weight-700">50 kg load-carrying capacity</span></li>
+                <li><span class="font-weight-700">Ground clearance of 182 mm</span> — great for both urban roads and rural trails</li>
+            </ul>
+
+            <div class="row m-b20">
+                <div class="col-lg-12 col-md-12 text-center">
+                        <img src="~/images/blogs/2025/july/renault triber 2025 facelift/download (2).webp" alt="Renault Triber 2025 Design Features" title="Renault Triber 2025 Design Features" />
+                </div>
+            </div>
+
+            <p>Available colors include Amber Terracotta, Shadow Grey, Zanskar Blue, Ice Cool White, Moonlight Silver, and Stealth Black — with multiple dual-tone options.</p>
+
+            <h2 class="subheading">Unmatched Space & Modularity</h2>
+            <p>The Triber isn't just about seating seven; it's about doing it in style and comfort.</p>
+            <ul>
+                    <li><span class="font-weight-700">5 to 7 seat flexible layout</span> with EasyFix removable 3rd-row seats</li>
+                    <li><span class="font-weight-700">Over 100 seating combinations </span>– slide, recline, fold or tumble!</li>
+                    <li><span class="font-weight-700">625L boot space</span> with 3rd row removed – perfect for road trips</li>
+                    <li>Best-in-class<span class="font-weight-700">200 mm knee room </span> in the 2nd row</li>
+                    <li>Clever <span class="font-weight-700">23L storage compartments</span> including <span class="font-weight-700">refrigerated glovebox & center console </span></li>
+            </ul>
+   
+
+            <div class="row m-b20">
+                <div class="col-lg-12 col-md-12 text-center">
+                        <img src="~/images/blogs/2025/july/renault triber 2025 facelift/download (3).webp" alt="Renault Triber 2025 Interior Space" title="Renault Triber 2025 Interior Space" />
+                </div>
+            </div>
+
+                <h2 class="subheading"> Next-Gen Tech at Your Fingertips</h2>
+            <p>The Triber 2025 doesn't skimp on connectivity or convenience.</p>
+
+            <h3 class="subheading">Key Tech Features:</h3>
+            <ul>
+                <li><span class="font-weight-700">20.32 cm floating touchscreen</span> infotainment (Evolution variant & above)</li>
+                <li><span class="font-weight-700">Wireless Apple CarPlay™ & Android Auto™</span></li>
+                <li><span class="font-weight-700">Wireless charger</span>, USB ports, and rear-view camera</li>
+                <li><span class="font-weight-700">New 17.78 cm TFT instrument cluster</span> behind the wheel (Emotion variant)</li>
+            </ul>
+                <h2 class="subheading">Safety First: Now with 21 Standard Features</h2>
+                <p>Safety is non-negotiable, and Triber 2025 takes that seriously with <span class="font-weight-700">21 standard safety features</span> across all variants.</p>
+
+                <h3 class="subheading">Standard safety features across variants:</h3>
+           <ul>
+                    <li><span class="font-weight-700">6 airbags</span></li>
+                    <li><span class="font-weight-700">Electronic Stability Program (ESP)</span></li>
+                    <li><span class="font-weight-700">Hill Start Assist & Traction Control</span></li>
+                    <li><span class="font-weight-700">ABS with EBD & Brake Assist</span></li>
+                    <li><span class="font-weight-700">Tyre Pressure Monitoring System (TPMS)</span></li>
+                    <li><span class="font-weight-700">Rear & front parking sensors (front in Emotion variant)</span></li>
+                    <li><span class="font-weight-700">ISOFIX child seat anchors, pedestrian protection, and seatbelt reminders for all rows</span></li>
+           </ul>
+
+
+                <h2 class="subheading">Powertrain and CNG Option</h2>
+                <p>Under the hood,the 2025 Triber offers:</p>
+                <div>
+  <h5 class="subheading">1.0L MPFi Petrol Engine:</h5>
+  <ul>
+    <li><span class="font-weight-700">Power:</span> 72 PS@6250 RPM</li>
+    <li><span class="font-weight-700">Torque:</span> 96 Nm@3500 RPM</li>
+  </ul>
+
+     <p>
+   <span class="font-weight-700">Transmission:</span> 5-speed Manual or Easy-R AMT <br>
+  (AMT available only for Emotion variant)</p>
+
+  <p><span class="font-weight-700">Fuel Tank Capacity:</span> 40 Litres</p>
+
+  <p>
+    <span class="font-weight-700">Now with CNG Option:</span> <br>
+    Factory-fitted, cost-efficient, and no RC endorsement hassle. <br>
+    </p>
+ 
+
+            <div class="row m-b20">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <img src="~/images/blogs/2025/july/renault triber 2025 facelift/renault_triber_2025_banner_base.webp" alt="Renault Triber 2025 Accessories" title="Renault Triber 2025 Accessories" />
+                </div>
+            </div>
+            
+            <h2 class="subheading">Trims & Variants</h2>
+            <p>The new Triber comes in four well-equipped trims to suit different needs and budgets.</p>
+
+            <div style="overflow-x: auto;">
+                        <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Variant</th>
+                            <th>Key Features</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="font-weight-700">Authentic</span></td>
+                            <td>6 airbags, power windows, flexible 2nd & 3rd row</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td><span class="font-weight-700">Evolution</span></td>
+                            <td>Touchscreen, rear AC with vents for all rows, 4-speaker system</td>
+                        </tr>
+                        <tr>
+                            <td><span class="font-weight-700">Techno</span></td>
+                            <td>LED tail lamps, cooled storage, flex wheels, roof rails</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td><span class="font-weight-700">Emotion</span></td>
+                            <td>LED fog lamps, cruise control, auto headlamps, rain sensing wipers, dual-tone wheels</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="subheading">Accessory Highlights</h2>
+            <p>You can personalize your Triber with:</p>
+            <ul>
+                <li>Chrome grille inserts & tailgate garnish</li>
+                <li>Moulded mats & storage bags</li>
+                <li>Chrome tail lamp surrounds</li>
+                <li>Seat storage bags for EasyFix seats</li>
+            </ul>
+
+            <div class="row m-b20">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <img src="~/images/blogs/2025/july/renault triber 2025 facelift/download (4).webp" alt="Renault Triber 2025 Accessories" title="Renault Triber 2025 Accessories" />
+                </div>
+            </div>
+
+            <h2 class="subheading">Final Thoughts: Who Should Buy the 2025 Renault Triber?</h2>
+            <p>If you're a family-first buyer looking for a <span class="font-weight-700">stylish, safe, spacious, and tech-savvy</span> car that doesn't break the bank, the <span class="font-weight-700">Renault Triber 2025 Facelift</span> should be at the top of your list. Its <span class="font-weight-700">SUV-inspired design</span>, <span class="font-weight-700">high seating flexibility</span>, and <span class="font-weight-700">CNG availability</span> make it the ultimate city-to-countryside people-mover under ₹10 lakhs.</p>
+
+            <h2 class="subheading">Frequently Asked Questions</h2>
+
+            <div class="accordion" id="faqRenaultTriber">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                            Is CNG available in AMT variants?
+                        </button>
+                    </h3>
+                    <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqRenaultTriber">
+                        <div class="accordion-body">
+                            No, CNG is only available in manual variants.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                            How many airbags does the new Triber have?
+                        </button>
+                    </h3>
+                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqRenaultTriber">
+                        <div class="accordion-body">
+                            It offers <span class="font-weight-700">6 airbags</span> standard across all variants.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                            What's the mileage of the 2025 Triber?
+                        </button>
+                    </h3>
+                    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqRenaultTriber">
+                        <div class="accordion-body">
+                            While official figures are pending, expect similar efficiency to the previous model, with improved fuel savings on the CNG variant.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                            Is the Renault Triber 2025 facelift good for long-distance travel?
+                        </button>
+                    </h3>
+                    <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqRenaultTriber">
+                        <div class="accordion-body">
+                            <span class="font-weight-700">Yes</span>, the Triber is a solid choice for long trips. It offers <span class="font-weight-700">ample boot space (625L)</span> in 5-seater mode, <span class="font-weight-700">comfortable 2nd-row legroom (200mm)</span>, <span class="font-weight-700">rear AC vents for all rows</span>, and a <span class="font-weight-700">fuel-efficient engine</span>, making it ideal for family vacations and road trips.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                            What are the main differences between the 2025 Triber variants?
+                        </button>
+                    </h3>
+                    <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqRenaultTriber">
+                        <div class="accordion-body">
+                            The <span class="font-weight-700">Authentic</span> variant covers the essentials like airbags and power windows. As you move up to <span class="font-weight-700">Evolution</span>, <span class="font-weight-700">Techno</span>, and <span class="font-weight-700">Emotion</span>, you gain features like:
+                            <ul>
+                                <li>Touchscreen with wireless smartphone support (Evolution+)</li>
+                                <li>LED lighting and roof rails (Techno+)</li>
+                                <li>Cruise control, rain-sensing wipers, and dual-tone wheels (Emotion)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                            Does the Renault Triber 2025 support wireless Android Auto and Apple CarPlay?
+                        </button>
+                    </h3>
+                    <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqRenaultTriber">
+                        <div class="accordion-body">
+                            <span class="font-weight-700">Yes.</span> Starting from the <span class="font-weight-700">Evolution</span> variant, the Triber comes with a <span class="font-weight-700">20.32 cm touchscreen</span> that supports <span class="font-weight-700">wireless Android Auto™ and Apple CarPlay®</span>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                            What safety features are available in the 2025 Triber?
+                        </button>
+                    </h3>
+                    <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqRenaultTriber">
+                        <div class="accordion-body">
+                            The Triber offers <span class="font-weight-700">21 standard safety features</span>, including:
+                            <ul>
+                                <li>6 airbags</li>
+                                <li>Electronic Stability Program (ESP)</li>
+                                <li>Hill Start Assist</li>
+                                <li>Traction Control</li>
+                                <li>Rear and front parking sensors</li>
+                                <li>ISOFIX mounts and more</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                            Is the new Renault Triber available in an automatic transmission?
+                        </button>
+                    </h3>
+                    <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqRenaultTriber">
+                        <div class="accordion-body">
+                            Yes, the <span class="font-weight-700">Emotion variant</span> offers an <span class="font-weight-700">Easy-R AMT (Automated Manual Transmission)</span>, giving you a clutch-free driving experience.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                            Can I install a CNG kit in the new Renault Triber?
+                        </button>
+                    </h3>
+                    <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqRenaultTriber">
+                        <div class="accordion-body">
+                            Yes, Renault now offers a <span class="font-weight-700">factory-approved CNG kit</span> for all <span class="font-weight-700">manual transmission variants</span>. It comes with a <span class="font-weight-700">3-year / 100,000 km warranty</span> and does not require an RC endorsement.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                            How many people can the Renault Triber 2025 seat?
+                        </button>
+                    </h3>
+                    <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqRenaultTriber">
+                        <div class="accordion-body">
+                            It can seat up to <span class="font-weight-700">7 passengers</span> comfortably. You can remove the 3rd row to make more cargo space or reconfigure the seating in <span class="font-weight-700">100+ different ways</span>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <p>For more automotive reviews and comparisons, visi <a class="for-link" asp-controller="Home" asp-action="Index"> Bikecarhub </a> or check out our other reviews of family cars in this segment.</p>
+        </div>
+    </div>
+    </div>
+   </div>
+
+
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+    
+	
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

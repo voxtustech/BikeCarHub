@@ -1,0 +1,411 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "RC Transfer Process for Second-Hand Vehicles in India";
+}
+@section MetaTags {
+    <meta name="keywords" content="RC transfer second hand vehicle, How to transfer bike RC online, Vehicle ownership transfer guide India, Parivahan RC transfer steps, Used vehicle name change RTO, Online RC transfer documents, RTO transfer of ownership India, BikeCarHub RC guide 2025, Inter-state vehicle RC update, RC name transfer after death" />
+    <meta name="description" content="Learn how to transfer RC for second-hand vehicles online in India. Step-by-step 2025 guide with documents, fees & FAQs. BikeCarHub official guide." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 4th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>Thanks to digital India initiatives, the RC transfer process has become easier and faster through online portals like Parivahan. In this 2025 step-by-step guide by <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span>, we explain how to transfer RC for second-hand vehicles efficiently, legally, and conveniently.</p>
+
+                <div class="div-line"></div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/rc transfer process/rc.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <h2 class="subheading">Why RC Transfer is Necessary</h2>
+                <ul>
+                    <li>Legal ownership proof for the buyer</li>
+                    <li>Protects seller from future traffic fines or legal issues</li>
+                    <li>Required for insurance claim settlement</li>
+                    <li>Mandatory during vehicle resale or loan applications</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">When is RC Transfer Required?</h2>
+                <ul>
+                    <li>After the sale of a used vehicle (bike or car)</li>
+                    <li>Within-family transfers (gift or inheritance)</li>
+                    <li>Ownership change due to the death of the owner</li>
+                    <li>Inter-state relocation and registration change</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">RC Transfer Scenarios</h2>
+                <p>
+                    <span class="font-weight-700">1. Same-State Transfer</span>    Buyer and seller reside in the same state
+                </p>
+                
+                <p><span class="font-weight-700">  2. Inter-State Transfer</span>  Vehicle sold and registered in another state</p>
+         
+               <p> <span class="font-weight-700"> 3. Death of Owner</span>
+                Requires succession certificate or legal heir declaration</p>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/rc transfer process/rc-1.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Documents Required for RC Transfer</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Document Name</th>
+                                <th class="text-center">Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Original RC</td>
+                                <td>To validate current ownership</td>
+                            </tr>
+                            <tr>
+                                <td>Form 29 & 30</td>
+                                <td>Notification and application for ownership transfer</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>PUC Certificate</td>
+                                <td>Valid emission compliance</td>
+                            </tr>
+                            <tr>
+                                <td>Insurance Certificate</td>
+                                <td>Mandatory for transfer approval</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Address & ID Proofs</td>
+                                <td>Aadhaar, PAN, Passport, etc.</td>
+                            </tr>
+                            <tr>
+                                <td>NOC (if inter-state)</td>
+                                <td>No Objection Certificate from original RTO</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Form 28, 27, 35</td>
+                                <td>Additional for interstate or hypothecation removal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Pre-Transfer Checklist</h2>
+                <ul>
+                    <li>Ensure the vehicle has no pending challans (check via eChallan portal)</li>
+                    <li>Clear loan hypothecation if active</li>
+                    <li>Verify insurance and PUC validity</li>
+                    <li>Make a notarized sale agreement</li>
+                    <li>Scan and keep digital copies ready</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Step-by-Step Guide to Online RC Transfer (Same State)</h2>
+
+                <h3 class="subheading">Step 1: Visit the Parivahan Portal</h3>
+                <p>Go to <a href="https://parivahan.gov.in" class="for-link">https://parivahan.gov.in</a> and select "Vehicle Related Services."</p>
+
+                <h3 class="subheading">Step 2: Choose State and RTO</h3>
+                <p>Select your respective state and RTO office.</p>
+
+                <h3 class="subheading">Step 3: Select "Transfer of Ownership"</h3>
+                <p>Enter the vehicle registration number and chassis number (last 5 digits).</p>
+
+                <h3 class="subheading">Step 4: Fill Buyer and Seller Details</h3>
+                <p>Include names, addresses, contact details, and sale date.</p>
+
+                <h3 class="subheading">Step 5: Upload Documents</h3>
+                <p>Submit scanned copies of RC, Form 29 & 30, ID proofs, insurance, and PUC.</p>
+
+                <h3 class="subheading">Step 6: Pay Online Fee</h3>
+                <p>Fees can be paid via UPI, cards, or internet banking.</p>
+
+                <h3 class="subheading">Step 7: Book RTO Appointment (if required)</h3>
+                <p>Some RTOs may ask for physical verification.</p>
+
+                <h3 class="subheading">Step 8: Submit Acknowledgment Receipt</h3>
+                <p>Keep a digital/printed copy of your application for reference.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Online RC Transfer for Inter-State Vehicle</h2>
+                <h3 class="subheading">Additional Steps:</h3>
+                <ul>
+                    <li>Apply for NOC from original RTO using Form 28</li>
+                    <li>Submit Form 27 (re-registration) and pay applicable road tax</li>
+                    <li>Transfer RC after receiving NOC and re-registration</li>
+                </ul>
+                <p><span class="font-weight-700">Note:</span> New RC will have the updated RTO code of the buyer's state.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">RC Transfer Charges & Fees (2025)</h2>
+                <ul>
+                    <li><span class="font-weight-700">Regular Bike Transfer:</span> ₹30 - ₹35 (state-dependent)</li>
+                    <li><span class="font-weight-700">Smart Card Fee:</span> ₹200</li>
+                    <li><span class="font-weight-700">Imported Bike Transfer:</span> Up to ₹100 (state-dependent)</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Online vs Offline RC Transfer</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Online Transfer</th>
+                                <th class="text-center">Offline Transfer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Speed</td>
+                                <td>7-15 days</td>
+                                <td>15-30 days</td>
+                            </tr>
+                            <tr>
+                                <td>Convenience</td>
+                                <td>High</td>
+                                <td>Low</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Document Submission</td>
+                                <td>Digital</td>
+                                <td>Physical</td>
+                            </tr>
+                            <tr>
+                                <td>Payment Mode</td>
+                                <td>Online</td>
+                                <td>Cash/DD</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Tracking</td>
+                                <td>Real-time</td>
+                                <td>Manual follow-up</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p> <span class="font-weight-700">BikeCarHub Tip: Go digital! It's faster, safer, and more transparent.</span></p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">How to Track RC Transfer Status</h2>
+                <ol>
+                    <li>Visit Parivahan > Vehicle-Related Services</li>
+                    <li>Click "Application Status"</li>
+                    <li>Enter Application Number and Date of Birth</li>
+                    <li>View real-time status: pending, under review, approved, dispatched</li>
+                </ol>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Common Mistakes to Avoid</h2>
+                <ul>
+                    <li>Failing to check pending challans</li>
+                    <li>Missing NOC in case of inter-state transfer</li>
+                    <li>Not updating insurance to buyer's name</li>
+                    <li>Uploading poor quality or incorrect documents</li>
+                    <li>Delaying submission post-sale</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Tips for Smooth RC Transfer</h2>
+                <ul>
+                    <li>Always use high-resolution scanned documents</li>
+                    <li>Choose weekdays for RTO appointments</li>
+                    <li>Maintain backup copies of receipts and forms</li>
+                    <li>Start the process within 14 days of sale</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Conclusion</h2>
+                <p>Transferring the RC of a second-hand vehicle is a legal requirement that protects both the buyer and seller. With the Parivahan portal, the process has become highly efficient and transparent. Whether you're selling your old bike or buying a used scooter, following the correct RC transfer process will ensure smooth ownership change.</p>
+                <p>For more vehicle ownership and legal guides, visit <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span> — your trusted motor companion.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs — RC Transfer Process for Second-Hand Vehicles</h2>
+
+                <div class="accordion" id="faqRCTransfer">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Is RC transfer mandatory after selling my bike or car?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqRCTransfer">
+                            <div class="accordion-body">
+                                Yes, it's legally required to avoid future liabilities.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Can I transfer RC online in all states?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqRCTransfer">
+                            <div class="accordion-body">
+                                Most states support online RC transfer through Parivahan, but some may require partial offline steps.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. How long does the RC transfer take?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqRCTransfer">
+                            <div class="accordion-body">
+                                Typically 7-15 days if done online; longer for inter-state cases.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Do I need a NOC for same-state transfer?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqRCTransfer">
+                            <div class="accordion-body">
+                                No, NOC is only required for inter-state transfers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Can I transfer ownership without the seller's ID?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqRCTransfer">
+                            <div class="accordion-body">
+                                No. ID proof and signature of seller are mandatory.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Can I do the transfer without valid insurance?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqRCTransfer">
+                            <div class="accordion-body">
+                                No. Insurance must be valid for the transfer to be accepted.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. What happens if RC transfer is not done?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqRCTransfer">
+                            <div class="accordion-body">
+                                Seller may face legal and financial issues from the new owner's usage.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Is hypothecation removal necessary?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqRCTransfer">
+                            <div class="accordion-body">
+                                Yes, if the vehicle was under a loan, it must be cleared before transfer.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Can I use DigiLocker documents for upload?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqRCTransfer">
+                            <div class="accordion-body">
+                                Yes, DigiLocker-issued documents are accepted in most RTOs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. How to get a refund on road tax after inter-state transfer?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqRCTransfer">
+                            <div class="accordion-body">
+                                Apply at original RTO with new RC and proof of re-registration.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+               
+
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

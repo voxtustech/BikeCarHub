@@ -1,0 +1,411 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Horizontal Scroll Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        .compare-scroll-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .compare-scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            pointer-events: all;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        .compare-scroll-left {
+            left: 10px;
+        }
+
+        .compare-scroll-right {
+            right: 10px;
+        }
+
+        .card-wrapper {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 1rem;
+            /* padding: 1rem 0;  */
+            margin: 0;
+        }
+
+            .card-wrapper::-webkit-scrollbar {
+                display: none;
+            }
+
+        .card {
+            flex: 0 0 auto;
+            width: 33.33%;
+            min-width: 320px;
+            min-height: 360px;
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #ececec;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            transition: all 0.35s ease;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+            .card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 14px 30px rgba(0,0,0,0.16);
+            }
+
+        .compare-card {
+            height: 150px;
+            cursor: pointer;
+        }
+
+        .compare-scroll-btn,
+        .compare-scroll-btn:focus,
+        .compare-scroll-btn:active,
+        .compare-scroll-btn:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            outline: none;
+            box-shadow: none;
+        }
+
+            .compare-scroll-btn:focus {
+                outline: 2px solid #555;
+            }
+
+        .card-img-top {
+            width: calc(100% - 24px);
+            height: 220px;
+            margin: 12px;
+            border-radius: 14px;
+            object-fit: contain;
+            background: #fff;
+            transition: transform 0.4s ease;
+            display: block;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 20px;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .card-text {
+            font-size: 1.15rem;
+            font-weight: 700;
+            line-height: 1.5;
+            color: #222;
+            padding: 0 12px 10px;
+        }
+
+        .card-wrapper .card:first-child {
+            margin-left: 0.5rem;
+        }
+
+        .card-wrapper .card:last-child {
+            margin-right: 1rem;
+        }
+        .compare-now-btn:hover {
+            gap: 14px;
+            color: #0d3f59;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="for-h1" style="cursor:pointer;" onclick="location.href='/Compare/AllCompareBikes'">Compare Bikes </h2>
+
+    <div class="compare-scroll-container">
+        @*<button class="compare-scroll-btn compare-scroll-left" onclick="scrollCompareLeft()">&#128896;</button>*@
+        <button class="compare-scroll-btn compare-scroll-left"
+                onclick="scrollCompareLeft()">
+            <i class="fa fa-chevron-left"></i>
+        </button>
+        <div class="card-wrapper" id="cardContainer">
+            <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Honda Activa 125', 'TVS Jupiter')">
+                <img src="/images/CompareBikes/activavsjupiter125.webp" class="card-img-top" alt="Honda Activa 125 vs TVS Jupiter">
+                <div class="card-body">
+
+                    <p class="card-text">
+                        Honda Activa 125 vs TVS Jupiter
+                    </p>
+
+                    <div class="compare-meta">
+                        <span><i class="fa fa-user"></i> BikeCarHub   | </span>
+
+                        <span><i class="fa fa-calendar"></i> 21 Jan 2025</span>
+                    </div>
+                    <br />
+                    <a href="javascript:void(0)" class="compare-now-btn">
+                        Compare Now
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Apache RR 310', 'Royal Enfield Bullet 350')">
+                <img src="~/images/CompareBikes/royalvsapache.webp" class="card-img-top" alt="TVS Apache RR 310 vs Royal Enfield Bullet 350">
+
+                <div class="card-body">
+
+                    <p class="card-text">
+                        Royal Enfield Bullet 350 vs TVS Apache RR 310
+                    </p>
+
+                    <div class="compare-meta">
+                        <span><i class="fa fa-user"></i> BikeCarHub   | </span>
+
+                        <span><i class="fa fa-calendar"></i> 21 Jan 2025</span>
+                    </div>
+                    <br />
+                    <a href="javascript:void(0)" class="compare-now-btn">
+                        Compare Now
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+            <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Bajaj Pulsar 125', 'Bajaj Pulsar 150')">
+                <img src="~/images/CompareBikes/pulsarvspulsar.webp" class="card-img-top" alt="Bajaj Pulsar 125 vs Bajaj Pulsar 150">
+
+                <div class="card-body">
+
+                    <p class="card-text">
+                        Bajaj Pulsar 150 vs Bajaj Pulsar 125
+                    </p>
+
+                    <div class="compare-meta">
+                        <span><i class="fa fa-user"></i> BikeCarHub   | </span>
+
+                        <span><i class="fa fa-calendar"></i> 21 Jan 2025</span>
+                    </div>
+                    <br />
+                    <a href="javascript:void(0)" class="compare-now-btn">
+                        Compare Now
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Yamaha R3', 'Bajaj Pulsar NS200')">
+                <img src="~/images/CompareBikes/yamahavspulsar.webp" class="card-img-top" alt="Yamaha MT-15 V2.0 vs Bajaj Pulsar 200 NS">
+
+                <div class="card-body">
+
+                    <p class="card-text">
+                        Yamaha R3 vs Bajaj Pulsar NS 200
+                    </p>
+
+                    <div class="compare-meta">
+                        <span><i class="fa fa-user"></i> BikeCarHub   | </span>
+
+                        <span><i class="fa fa-calendar"></i> 21 Jan 2025</span>
+                    </div>
+                    <br />
+                    <a href="javascript:void(0)" class="compare-now-btn">
+                        Compare Now
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Bajaj Pulsar RS200', 'Bajaj Pulsar NS200')">
+                <img src="~/images/CompareBikes/bajajvsbajaj.webp" class="card-img-top" alt="Bajaj Pulsar RS 200 vs Bajaj Pulsar 200 NS">
+
+                <div class="card-body">
+
+                    <p class="card-text">
+                        Bajaj Pulsar RS 200 vs Bajaj Pulsar NS 200
+                    </p>
+
+                    <div class="compare-meta">
+                        <span><i class="fa fa-user"></i> BikeCarHub   | </span>
+
+                        <span><i class="fa fa-calendar"></i> 21 Jan 2025</span>
+                    </div>
+                    <br />
+                    <a href="javascript:void(0)" class="compare-now-btn">
+                        Compare Now
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Apache RTR 160 4V', 'Bajaj Dominar 250')">
+                <img src="~/images/CompareBikes/apachevsdominar.webp" class="card-img-top" alt="TVS Apache RTR 160 4V vs Bajaj Discover 125">
+
+                <div class="card-body">
+
+                    <p class="card-text">
+                        TVS Apache RTR 160 4V vs Bajaj Dominar 250
+                    </p>
+
+                    <div class="compare-meta">
+                        <span><i class="fa fa-user"></i> BikeCarHub   | </span>
+
+                        <span><i class="fa fa-calendar"></i> 21 Jan 2025</span>
+                    </div>
+                    <br />
+                    <a href="javascript:void(0)" class="compare-now-btn">
+                        Compare Now
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+            <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Ronin', 'Royal Enfield Hunter 350')">
+                <img src="~/images/comparebikes/royal enfield hunter 350 vs tvs ronin.webp" class="card-img-top" alt="Royal Enfield Hunter 350 vs TVS Ronin">
+
+                <div class="card-body">
+
+                    <p class="card-text">
+                        TVS Ronin vs Royal Enfield Hunter 350
+                    </p>
+
+                    <div class="compare-meta">
+                        <span><i class="fa fa-user"></i> BikeCarHub   | </span>
+
+                        <span><i class="fa fa-calendar"></i> 21 Jan 2025</span>
+                    </div>
+                    <br />
+                    <a href="javascript:void(0)" class="compare-now-btn">
+                        Compare Now
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Honda Activa 125 ', 'Suzuki Access 125')">
+                <img src="~/images/comparebikes/honda activa 125 vs suzuki access 125.webp" class="card-img-top" alt="Honda Activa 125 FI vs Suzuki New Access 125">
+
+                <div class="card-body">
+
+                    <p class="card-text">
+                        Suzuki Access 125 vs Honda Activa 125
+                    </p>
+
+                    <div class="compare-meta">
+                        <span><i class="fa fa-user"></i> BikeCarHub   | </span>
+
+                        <span><i class="fa fa-calendar"></i> 21 Jan 2025</span>
+                    </div>
+                    <br />
+                    <a href="javascript:void(0)" class="compare-now-btn">
+                        Compare Now
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('Suzuki Gixxer', 'TVS Apache RTR 160')">
+                <img src="~/images/comparebikes/suzuki gixxer vs tvs apache rtr 160.webp" class="card-img-top" alt="Suzuki Intruder vs TVS Apache RTR 160">
+
+                <div class="card-body">
+
+                    <p class="card-text">
+                        Suzuki Gixxer vs TVS Apache RTR 160
+                    </p>
+
+                    <div class="compare-meta">
+                        <span><i class="fa fa-user"></i> BikeCarHub   | </span>
+
+                        <span><i class="fa fa-calendar"></i> 21 Jan 2025</span>
+                    </div>
+                    <br />
+                    <a href="javascript:void(0)" class="compare-now-btn">
+                        Compare Now
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="card" role="button" tabindex="0" onclick="navigateToComparePage('TVS Radeon', 'Hero Splendor Plus')">
+                <img src="~/images/comparebikes/tvs radeon vs hero splendor plus.webp" class="card-img-top" alt="TVS Radeon vs Hero Splendor Plus">
+
+                <div class="card-body">
+
+                    <p class="card-text">
+                        TVS Radeon vs Hero Splendor Plus
+                    </p>
+
+                    <div class="compare-meta">
+                        <span><i class="fa fa-user"></i> BikeCarHub   | </span>
+
+                        <span><i class="fa fa-calendar"></i> 21 Jan 2025</span>
+                    </div>
+                    <br />
+                    <a href="javascript:void(0)" class="compare-now-btn">
+                        Compare Now
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        @*<button class="compare-scroll-btn compare-scroll-right" onclick="scrollCompareRight()">&#128898;</button>*@
+        <button class="compare-scroll-btn compare-scroll-right"
+                onclick="scrollCompareRight()">
+            <i class="fa fa-chevron-right"></i>
+        </button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>const container = document.getElementById('cardContainer');
+
+        function scrollCompareLeft() {
+            const card = container.querySelector('.card');
+
+            const scrollAmount = card.offsetWidth + 16;
+
+            container.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollCompareRight() {
+            const card = container.querySelector('.card');
+
+            const scrollAmount = card.offsetWidth + 16;
+
+            container.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }</script>
+
+    <script>function navigateToComparePage(bike1, bike2) {
+            const urlBike1 = encodeURIComponent(bike1.replace(/\s+/g, '-'));
+            const urlBike2 = encodeURIComponent(bike2.replace(/\s+/g, '-'));
+            const url = `/Compare/${urlBike1}-vs-${urlBike2}`;
+            window.location.href = url;
+        }</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>

@@ -1,0 +1,139 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Indian Government Enforces ISI-Certified Helmets, Promotes Safety Gear for Bikers | 2024 Safety Regulations";
+}
+@section MetaTags{
+    <meta name="keywords" content="Indian government, ISI helmets, biker safety gear, 2024 regulations, road safety, motorcycle gear, tax benefits, subsidies, road accidents, riding jackets, gloves, boots, motorcycle safety." />
+    <meta name="description" content="Discover the new Indian government regulations enforcing ISI-certified helmets and promoting biker safety gear through tax benefits. Learn how these 2024 policies aim to reduce road fatalities and encourage safe riding habits." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <p>In a bold move to address the rising number of road accidents involving two-wheelers, the Indian government has announced new safety regulations focused on mandatory helmet standards and the promotion of essential riding gear. Starting in 2024, all helmets sold in India must carry the ISI certification to ensure proper protection. This regulation aligns with the goal to reduce the alarming number of fatalities linked to improper head protection in motorcycle crashes.</p>
+                <p>Furthermore, the government is rolling out incentives, including tax benefits and subsidies, to encourage bikers to invest in protective riding gear such as jackets, gloves, boots, and guards. These new policies follow the latest data showing that motorcyclists represent nearly 37% of road fatalities in the country. The government hopes that by ensuring the use of certified safety gear, it can decrease the severity of injuries and improve survival rates in accidents.</p>
+                <p>Experts and road safety activists have welcomed this development, highlighting how affordable and readily available safety gear can bridge the gap in accident prevention. Manufacturers of safety equipment are also preparing to ramp up production to meet the anticipated surge in demand, with many planning to offer new lines of certified products.</p>
+                <p>This proactive approach could change the landscape of biker safety in India, saving countless lives and creating a culture where safety comes first.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/indian government mandates isi certified helmets and promotes biker safety gear through subsidies/helmet riding jacket.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/indian government mandates isi certified helmets and promotes biker safety gear through subsidies/paint guards back protector.webp" /></div>
+                </div>
+                <h3 class="subheading m-t20">Safety Gear Essentials for Indian Bikers</h3>
+                <table class="news-table">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Safety Gear</th>
+                            <th class="text-center">Essential Qualities</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Helmet</th>
+                            <td>ISI or DOT certified, full-face for maximum protection, strong outer shell, good ventilation, padded interior.</td>
+                        </tr>
+                        <tr>
+                            <th>Riding Jacket</th>
+                            <td>Abrasion-resistant material (e.g., leather or textile), CE-rated armor on elbows, shoulders, and back, waterproofing.</td>
+                        </tr>
+                        <tr>
+                            <th>Riding Gloves</th>
+                            <td>CE-rated protection, knuckle guards, reinforced palms, breathable material, secure wrist closure.</td>
+                        </tr>
+                        <tr>
+                            <th>Riding Pants</th>
+                            <td>Durable fabric (e.g., denim with Kevlar or textiles), CE-rated knee and hip armor, comfortable fit, good airflow.</td>
+                        </tr>
+                        <tr>
+                            <th>Riding Boots</th>
+                            <td>Ankle protection, reinforced toe box and heel, anti-slip sole, waterproof and breathable material.</td>
+                        </tr>
+                        <tr>
+                            <th>Knee Guards</th>
+                            <td>CE-rated armor, adjustable straps for a snug fit, impact-resistant plastic or Kevlar reinforcement.</td>
+                        </tr>
+                        <tr>
+                            <th>Elbow Guards</th>
+                            <td>Impact-resistant material, ergonomic design, adjustable fit, ventilation for airflow.</td>
+                        </tr>
+                        <tr>
+                            <th>Back Protector</th>
+                            <td>CE Level 2 protection, flexible and ergonomic design, shock-absorbing material, lightweight.</td>
+                        </tr>
+                        <tr>
+                            <th>Reflective Vest</th>
+                            <td>High-visibility material, durable, lightweight, large reflective panels, easy to wear over gear.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

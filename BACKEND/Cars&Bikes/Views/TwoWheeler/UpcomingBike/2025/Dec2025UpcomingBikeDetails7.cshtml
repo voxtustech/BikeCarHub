@@ -1,0 +1,448 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "BMW F 450 GS Launch 2025: Price, Specs & Competition | BikeCarHub";
+}
+@section MetaTags {
+    <meta name="keywords" content="BMW F 450 GS, F 450 GS Launch Date, BMW Adventure Bike, F 450 GS Price, BMW F 450 GS Specifications, BMW Parallel-Twin 450cc, KTM 390 Adventure Rival, Himalayan 450 Rival, BMW ASA Gearbox, Mid-Capacity ADV, New BMW GS 2025, F 450 GS Features, BMW Motorrad India, BikeCarHub, F 450 GS Colours." />
+    <meta name="description" content="Explore the all-new BMW F 450 GS (Dec 2025 launch). Get full specs, expected price (₹4-5L), features, competitors & 10 FAQs on this 'Baby GS' at bikecarhub" />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">The Next Chapter of Adventure: Decoding the All-New BMW F 450 GS – Launching December 2025</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/bmw f 450 gs/blue.webp" alt="blue" title="blue" loading="lazy" /></div>
+                </div>
+                <p>For decades, the name 'GS' from the house of BMW Motorrad has been synonymous with the pinnacle of adventure motorcycling. It represents a promise—a promise of exploring any corner of the globe, regardless of the terrain. While the mighty R 1300 GS and the versatile F 800/900 GS models cater to the premium segments, there has long been a desire for an accessible, yet uncompromising, entry point into the coveted 'GS Spirit'.</p>
+                <p>Enter the much-anticipated<span class="font-weight-700"> BMW F 450 GS</span>.</p>
+                <p>Expected to make its official global and Indian launch towards the end of <span class="font-weight-700">December 2025, the F 450 GS</span> is not just another motorcycle; it is the German marque's strategic answer to the rapidly expanding mid-capacity adventure segment. Built on an all-new platform, featuring a potent parallel-twin engine, and designed to carry the unmistakable legacy of its larger siblings, this "Baby GS" is poised to redefine the sub-500cc adventure touring space. It promises to be a featherlight powerhouse that retains the rugged capability and premium technology that BMW riders have come to expect.</p>
+                <p>This comprehensive article takes a deep dive into everything known, rumored, and anticipated about the upcoming<span class="font-weight-700"> F 450 GS. </span>From its groundbreaking specifications and aggressive pricing strategy to the cutting-edge features and a head-to-head comparison with its rivals, we've gathered all the details you need to prepare for its arrival. Get ready, as the adventure landscape is about to get a whole lot more exciting.</p>
+
+                <h3 class="subheading">A Legacy Redefined: Design and Styling</h3>
+                <p>When designing the F 450 GS, BMW Motorrad clearly understood the assignment: it had to look and feel like a true GS, only scaled down. The motorcycle’s styling takes heavy inspiration from the flagship, the R 1300 GS, ensuring an aggressive, modern, and unmistakably premium road presence.</p>
+                <h3 class="subheading">The Signature 'GS' Silhouette</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/bmw f 450 gs/rear.webp" alt="rear" title="rear" loading="lazy" /></div>
+                </div>
+                <p>The first thing that grabs your attention is the bike’s tall, purposeful stance. It boasts the iconic<span class="font-weight-700"> high-rise 'beak' front fender</span>—a styling cue that has defined the GS family for decades. This is flanked by a muscular, sculpted fuel tank and angular radiator shrouds that give the bike a wide-shouldered, ready-for-anything appearance.</p>
+                <p>The headlight assembly, as revealed in patent filings, is a mix of heritage and innovation. While the initial concept bike showcased an 'X' shaped daytime running light (DRL) similar to the <span class="font-weight-700">R 1300 GS,</span> recent test mules suggest a vertically stacked dual-LED headlight setup for the production model. This powerful all-LED lighting system is crucial for safety during late-night touring and cutting through foggy mountain passes. The overall bodywork, including the slim tail section and robust engine sump guard, screams off-road readiness. It’s a design language that successfully bridges the gap between a lightweight enduro machine and a long-distance touring companion.</p>
+                <h3 class="subheading">Built for Comfort and Control</h3>
+                <p>Ergonomics are paramount in the adventure segment, and BMW has engineered the<span class="font-weight-700"> F 450 GS </span>for marathon rides. The rider's triangle—the relationship between the handlebars, seat, and footpegs—appears spacious and upright, a configuration that reduces fatigue on long hauls and allows the rider to easily stand up on the pegs for better control during technical off-roading.</p>
+                <p>The seat looks comfortable and fairly generous, offering a good balance between on-road support and off-road maneuverability. Features like the high-set, wide handlebars and the possibility of adjustable levers underscore BMW's commitment to making this motorcycle adaptable to riders of varying sizes and skills. Even the footpegs, strategically positioned, are designed to offer maximum grip and leverage when tackling challenging trails. In short, the F 450 GS is visually rugged, yet thoughtfully ergonomic—a true BMW characteristic.</p>
+                <h3 class="subheading">The Mechanical Heart: Engine and Performance</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/bmw f 450 gs/front.webp" alt="front" title="front" loading="lazy" /></div>
+                </div>
+                <p>The soul of any great adventure bike lies in its engine, and the F 450 GS introduces a brand-new, exciting power unit to the mid-capacity segment. This is where BMW aims to deliver class-leading performance and refinement.</p>
+                <h3 class="subheading">Powering the New Generation</h3>
+                <p>At the core of the <span class="font-weight-700">F 450 GS</span>is a <span class="font-weight-700">450cc, liquid-cooled, parallel-twin engine.</span> This is a departure from the single-cylinder format of the G 310 GS it replaces, and a direct challenge to the parallel-twin offerings of its competitors. Sources suggest this engine is capable of churning out an impressive <span class="font-weight-700">48 horsepower (approx. 48.6 PS)</span> and around <span class="font-weight-700">45 Nm of peak torque</span>.</p>
+                <p>The key here is the engine's tuning. BMW has reportedly designed this motor with an offset ignition and a focus on being "characterful" and "rev-happy" while delivering a strong surge of torque in the lower to mid-range. This setup ensures that the F 450 GS feels equally punchy when overtaking on the highway as it does when crawling over rocks or tackling steep climbs off-road. Its power figures place it right at the top of the A2 license category in Europe, promising maximum performance within that accessible class, and a thrilling ride for riders worldwide.</p>
+                <h3 class="subheading">A Featherlight Warrior (Weight and Agility)</h3>
+                <p>One of the most talked-about attributes of the<span class="font-weight-700"> F 450 GS </span>concept was its remarkably low weight: just<span class="font-weight-700"> 175 kg (kerb). </span>While the final production model is expected to be slightly heavier due to the addition of necessary road components, it is still projected to be among the lightest parallel-twin adventure tourers in its class.</p>
+                <p>This lightweight construction, achieved through the use of lightweight materials like magnesium and a new chassis design, is transformative for an adventure bike. Less weight translates directly to better agility, easier handling at slow speeds, and significantly reduced fatigue when lifting the bike after an unfortunate fall on the trail. This focus on low weight ensures that even novice riders will find the F 450 GS manageable and confidence-inspiring, making it the perfect gateway to true adventure touring, as detailed by industry experts at BikeCarHub.</p>
+                <h3 class="subheading">The Gearbox of the Future: ASA Rumor</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/bmw f 450 gs/side.webp" alt="side" title="side" loading="lazy" /></div>
+                </div>
+                <p>While the F 450 GS will undoubtedly come standard with a robust 6-speed manual gearbox, a highly exciting rumor circulating in the biking world is the possibility of an optional <span class="font-weight-700">semi-automatic transmission, </span>potentially a simpler version of BMW's <span class="font-weight-700">Automated Shift Assistant (ASA) </span>system found on the<span class="font-weight-700"> R 1300 GS</span>.</p>
+                <p>This system would effectively allow the rider to change gears without manually operating the clutch, especially useful for navigating stop-start city traffic or making precise, quick shifts during aggressive off-road riding. If this technology makes it to the<span class="font-weight-700"> F 450 GS, </span>it would be a game-changer for the segment, offering unprecedented convenience and a unique selling point that no competitor can match.</p>
+                <h3 class="subheading">Chassis and Dynamics: Master of All Terrains</h3>
+                <p>A true GS bike is defined not just by its engine but by its ability to take a beating and keep going. The chassis and suspension components of the F 450 GS are engineered for just that.</p>
+                <h3 class="subheading">The Core Foundation</h3>
+                <p>The motorcycle is built around a new <span class="font-weight-700">steel bridge trellis frame </span>paired with a bolt-on sub-frame. This configuration offers the perfect blend of rigidity and flexibility. The trellis design provides structural strength and excellent feedback to the rider, which is essential for spirited riding both on and off the tarmac. The bolt-on sub-frame is a practical design choice, making it easier and cheaper to repair in case of damage during an off-road spill, a necessary consideration for a true adventure machine.</p>
+                <h3 class="subheading">Suspension Built to Conquer</h3>
+                <p>Suspension is the cornerstone of any adventure bike. Up front, the F 450 GS is expected to feature chunky, long-travel<span class="font-weight-700"> Upside-Down (USD) forks. </span>Crucially, there is strong anticipation that these forks will offer<span class="font-weight-700"> full adjustability</span>—a feature often reserved for much more expensive machines. At the rear, a long-travel<span class="font-weight-700"> monoshock absorber </span>with remote or accessible preload adjustment will manage the rough stuff, allowing the rider to fine-tune the suspension settings based on load (pillion, luggage) and terrain.</p>
+                <p>The bike is expected to roll on classic adventure-ready <span class="font-weight-700">
+                    spoke wheels—likely a 21-inch wheel at the front and a 17-inch or 18-inch at the rear—wrapped </span>in aggressive, block-pattern adventure tyres. While patent images have shown alloy wheels, the true off-road variants will undoubtedly feature spokes for superior resilience on harsh trails.</p>
+                    <h3 class="subheading">Advanced Braking and Safety Suite</h3>
+                    <div class="row m-b20">
+                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/bmw f 450 gs/riding.webp" alt="riding" title="riding" loading="lazy" /></div>
+                    </div>
+                    <p>Braking duties are handled by large disc brakes on both the front and rear wheels. However, the real story is in the electronics. The F 450 GS will feature a<span class="font-weight-700"> Dual-Channel ABS system, </span>which is expected to be an advanced<span class="font-weight-700"> ABS Pro </span>unit—meaning it is lean-angle sensitive, or <span class="font-weight-700">Cornering ABS.</span> This technology drastically improves safety by preventing wheel lock-up even when the bike is leaned over in a corner. The system will also be <span class="font-weight-700">switchable, allowing experienced off-roaders to disable the rear ABS entirely</span> for better control on dirt and gravel. Coupled with this, the bike will feature <span class="font-weight-700">Dynamic Traction Control (DTC), </span>which is also switchable, ensuring the rear wheel maintains optimal grip across changing surfaces.</p>
+                    <h3 class="subheading">Technology and Features: A Premium Experience</h3>
+                    <p>The F 450 GS may be the entry point to the GS line-up, but it is far from basic in terms of features, inheriting sophisticated electronics from its premium siblings.</p>
+                    <h3 class="subheading">Rider-Focused Cockpit</h3>
+                    <p>The rider is greeted by a large <span class="font-weight-700">6.5-inch full-colour TFT instrument display. </span>This screen is the central hub for all motorcycle information, from speed and gear position to rider modes and navigation. It is designed to be easily readable in all light conditions and likely comes with full <span class="font-weight-700">Bluetooth connectivity,</span> allowing the rider to manage calls, music, and turn-by-turn navigation directly through the motorcycle's controls and a connected helmet communication system. A multi-function <span class="font-weight-700">rotary jog dial </span>on the handlebar, similar to the one on the larger GS models, is expected to allow the rider to navigate the menus safely and intuitively without taking their hands far from the grips.</p>
+                    <h3 class="subheading">Smart Electronics and Rider Aids</h3>
+                <p>Beyond Cornering ABS and Traction Control, the F 450 GS is anticipated to come with multiple <span class="font-weight-700">Riding Modes</span> (e.g., Road, Rain, Enduro, and potentially a configurable Dynamic mode). Each mode adjusts the engine’s power delivery, throttle response, and the intervention levels of the electronic aids to suit the riding environment. Other expected features that underscore its premium positioning include:</p>
+                <ul>
+                    <li><span class="font-weight-700">Adjustable Levers: </span>For clutch and brake, to suit different hand sizes.</li>
+                    <li><span class="font-weight-700">USB/12V Charging Port: </span>Essential for powering devices on long tours.</li>
+                    <li><span class="font-weight-700">Heated Grips (Optional): </span>A crucial comfort feature for cold-weather riding.</li>
+                    <li><span class="font-weight-700">Adaptive Brake Light:</span> Which flashes under hard braking to alert following traffic.</li>
+                </ul>
+                <h3 class="subheading">Expected Price, Variants, and Colour Palette</h3>
+                <p><span class="font-weight-700">The Financial Aspect</span></p>
+                <p>The<span class="font-weight-700"> BMW F 450 GS </span>is being positioned as a premium offering in the sub-500cc segment. Given the brand prestige, the all-new parallel-twin engine, and the sheer volume of advanced technology, the motorcycle is expected to command a premium price tag.</p>
+                <p><span class="font-weight-700">Expected Ex-Showroom Price (India): ₹4,00,000 to ₹4,50,000</span></p>
+                <p>This price is justified by the bike's local production in collaboration with TVS Motor Company in India, which helps keep costs down, while still incorporating high-end imported components like the advanced electronics suite and premium suspension parts. It will likely be offered in two variants: a <span class="font-weight-700">Standard </span>model and a<span class="font-weight-700"> 'Pro' or 'Rallye' </span>variant, with the latter including all the electronic aids, a quickshifter, and possibly the semi-automatic gearbox option.</p>
+                <p><span class="font-weight-700">A Spectrum of Adventure (Colour Variants)</span></p>
+                <p>While official colour options will be confirmed closer to the December 2025 launch, BMW GS models are historically known for their iconic paint schemes. We can anticipate the F 450 GS to launch with at least three compelling colour variants:</p>
+                <ol start="1">
+                    <li>
+                    <span class="font-weight-700">Racing Blue:</span> A striking, sporty blue colour, often the launch colour, emphasizing its on-road dynamism and urban appeal.</li>
+                    <li>
+                    <span class="font-weight-700">Triple Black: </span>A sophisticated, stealthy combination of black, grey, and matte finishes, giving the bike a menacing, premium look favored by tourers.</li>
+                    <li>
+                    <span class="font-weight-700">Rallye: </span>The classic BMW GS colour scheme featuring white as the base with vibrant blue and red racing stripes or accents, symbolizing its off-road motorsport heritage.</li>
+                </ol>
+                <h3 class="subheading">The Battle Royale: Competitor Analysis</h3>
+                <p>The mid-capacity adventure segment is one of the most hotly contested spaces in the Indian and global two-wheeler market. The BMW F 450 GS is stepping into a ring with established champions and strong, new challengers. Its combination of a parallel-twin engine, lightweight frame, and premium electronics directly challenges the entire segment.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">Competitors Comparison Table: F 450 GS vs. The Rivals</h3>
+
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Motorcycle</th>
+                                <th class="font-weight-600 text-center">Engine Type</th>
+                                <th class="font-weight-600 text-center">Approx. Max Power (hp)</th>
+                                <th class="font-weight-600 text-center">Approx. Kerb Weight (kg)</th>
+                                <th class="font-weight-600 text-center">Estimated Price Range (Ex-showroom, ₹)</th>
+                                <th class="font-weight-600 text-center">Key Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">BMW F 450 GS (Expected)</td>
+                                <td>450cc Parallel-Twin</td>
+                                <td>48</td>
+                                <td>185</td>
+                                <td>4.00 - 4.50 Lakh</td>
+                                <td>Lightweight, Parallel-Twin Power, Premium Electronics (Cornering ABS)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Royal Enfield Himalayan 450</td>
+                                <td>452cc Single-Cylinder</td>
+                                <td>40.02</td>
+                                <td>196</td>
+                                <td>3.05 - 3.19 Lakh</td>
+                                <td>Price, 21"/17" Spoke Wheels, Dedicated Off-Road Focus</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">KTM 390 Adventure</td>
+                                <td>373cc Single-Cylinder</td>
+                                <td>46</td>
+                                <td>182</td>
+                                <td>3,67,700</td>
+                                <td>Featherlight, Highly Advanced Electronics (TFT, Quickshifter)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Honda NX500</td>
+                                <td>471cc Parallel-Twin</td>
+                                <td>47</td>
+                                <td>196</td>
+                                <td>6,33,180</td>
+                                <td>Smooth & Reliable Parallel-Twin Engine, Honda Build Quality</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The table above clearly illustrates the<span class="font-weight-700"> F 450 GS’s,</span> strategic positioning. It offers the refined power and smoothness of a parallel-twin (like the Honda NX500) but at a potentially much lighter weight and a more competitive price point. It also offers more power than both the Himalayan 450 and the KTM 390 Adventure, making it a very serious threat to the segment leader.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">BMW F 450 GS: Specifications & Features Comparison Table</h3>
+                <p>This table summarizes the core technical specifications and features that riders can expect from the production-spec BMW F 450 GS.</p><div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Category</th>
+                                <th class="font-weight-600 text-center">Specification / Feature</th>
+                                <th class="font-weight-600 text-center">Details (Expected / Rumored)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="5" class="fw-bold align-middle text-center">Engine</td>
+                                <td class="font-weight-600">Engine Type</td>
+                                <td>450 cc, Liquid-Cooled, Parallel-Twin</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>48 hp / 48.6 PS</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque</td>
+                                <td>45 Nm (Estimate)</td>
+                            </tr>
+                            <tr>
+                                <td>Transmission</td>
+                                <td>6-speed Manual</td>
+                            </tr>
+                            <tr>
+                                <td>Optional Feature</td>
+                                <td>Automated Shift Assistant (ASA) Semi-Automatic Gearbox</td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="4" class="fw-bold align-middle text-center">Chassis & Suspension</td>
+                                <td class="font-weight-600">Frame Type</td>
+                                <td>Steel Bridge Trellis Frame, Bolt-on Sub-frame</td>
+                            </tr>
+                            <tr>
+                                <td>Front Suspension</td>
+                                <td>USD (Upside-Down) Fork, Long Travel (Likely Adjustable)</td>
+                            </tr>
+                            <tr>
+                                <td>Rear Suspension</td>
+                                <td>Monoshock with Preload Adjuster</td>
+                            </tr>
+                            <tr>
+                                <td>Wheels</td>
+                                <td>Spoked Wheels (21-inch Front / 17-inch Rear anticipated for ADV variant)</td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="3" class="fw-bold align-middle text-center">Brakes & Safety</td>
+                                <td class="font-weight-600">Braking System</td>
+                                <td>Dual Disc (Front & Rear)</td>
+                            </tr>
+                            <tr>
+                                <td>ABS</td>
+                                <td>Dual-Channel ABS Pro (Cornering ABS), Switchable Off-Road Mode</td>
+                            </tr>
+                            <tr>
+                                <td>Rider Aids</td>
+                                <td>Dynamic Traction Control (DTC), Multiple Riding Modes</td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="4" class="fw-bold align-middle text-center">Features</td>
+                                <td class="font-weight-600">Instrument Cluster</td>
+                                <td>6.5-inch Color TFT Display with Connectivity</td>
+                            </tr>
+                            <tr>
+                                <td>Controls</td>
+                                <td>Multi-Controller (Jog Dial) on Handlebar</td>
+                            </tr>
+                            <tr>
+                                <td>Lighting</td>
+                                <td>All-LED Lighting System</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>~185 kg (Production Estimate Kerb Weight)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading">Final Verdict: The New Standard in Mid-Capacity Adventure</h3>
+                <p>The impending arrival of the BMW F 450 GS in December 2025 is more than just a new bike launch; it is a seismic event for the adventure motorcycling world. By blending a powerful, newly developed parallel-twin engine with a lightweight chassis, long-travel suspension, and a full suite of cutting-edge rider aids, BMW is setting a new benchmark for the segment.</p>
+                <p>This motorcycle promises to be the versatile tool that can seamlessly handle the urban commute, carve through mountain roads, and fearlessly conquer the most challenging off-road trails. For the enthusiast seeking true GS capability without the financial commitment of the litre-class models, the F 450 GS is shaping up to be the definitive answer. The wait for this German masterpiece might be long, but the promise of uncompromised adventure makes every passing month feel like an exciting prelude.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+               
+                <h3 class="subheading">10 Frequently Asked Questions (FAQs) about the BMW F 450 GS</h3>
+                <div class="container my-4">
+
+
+                    <div class="accordion" id="bmwF450GSFAQ">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                    1. What is the expected launch date of the BMW F 450 GS in India?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#bmwF450GSFAQ">
+                                <div class="accordion-body">
+                                    The BMW F 450 GS is tentatively expected to launch in India around <strong>December 2025</strong>. This will follow its global debut at a major motor show earlier in the year.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                    2. What engine type will power the F 450 GS?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#bmwF450GSFAQ">
+                                <div class="accordion-body">
+                                    The F 450 GS will be powered by an all-new <strong>450cc, liquid-cooled, parallel-twin engine</strong>. This setup promises greater refinement and power compared to the G 310 GS single-cylinder engine it replaces.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                    3. What will be the expected price of the F 450 GS in India?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#bmwF450GSFAQ">
+                                <div class="accordion-body">
+                                    The expected ex-showroom price for the BMW F 450 GS in India is estimated to be between <strong>₹4,00,000 and ₹4,50,000</strong>, depending on the variant (Standard or Pro/Rallye) and available features.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                    4. Will the F 450 GS be manufactured in India?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#bmwF450GSFAQ">
+                                <div class="accordion-body">
+                                    Yes, the BMW F 450 GS will be locally manufactured in India through <strong>BMW Motorrad’s collaboration with TVS Motor Company</strong> at the Hosur plant, helping keep the pricing competitive.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                    5. Does the F 450 GS have a semi-automatic gearbox option?
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#bmwF450GSFAQ">
+                                <div class="accordion-body">
+                                    Industry reports and patent filings suggest that the F 450 GS may offer an optional <strong>Automated Shift Assistant (ASA)</strong> — a clutch-less semi-automatic gearbox system.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                                    6. What are the main rivals of the F 450 GS?
+                                </button>
+                            </h2>
+                            <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#bmwF450GSFAQ">
+                                <div class="accordion-body">
+                                    The main competitors include the <strong>Royal Enfield Himalayan 450</strong>, <strong>KTM 390 Adventure</strong>, <strong>Honda NX500</strong>, and the <strong>CFMoto 450 MT</strong>.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                                    7. Will the F 450 GS have advanced safety features like Cornering ABS?
+                                </button>
+                            </h2>
+                            <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#bmwF450GSFAQ">
+                                <div class="accordion-body">
+                                    Yes, the F 450 GS is expected to feature <strong>Cornering ABS (ABS Pro)</strong> and <strong>Dynamic Traction Control (DTC)</strong> — offering advanced electronic safety systems consistent with BMW’s premium lineup.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                                    8. What is the expected power output of the new 450cc engine?
+                                </button>
+                            </h2>
+                            <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#bmwF450GSFAQ">
+                                <div class="accordion-body">
+                                    The new parallel-twin engine is expected to produce around <strong>48 horsepower (48.6 PS)</strong>, making it one of the most powerful models in the sub-500cc adventure category.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq9">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                                    9. What kind of wheels will the F 450 GS use for off-roading?
+                                </button>
+                            </h2>
+                            <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#bmwF450GSFAQ">
+                                <div class="accordion-body">
+                                    Adventure variants are expected to use <strong>spoked wheels</strong> — likely a <strong>21-inch front</strong> and <strong>18-inch rear</strong> — offering better off-road durability and comfort compared to alloy wheels.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq10">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                                    10. Why is the F 450 GS considered a big deal for BMW Motorrad?
+                                </button>
+                            </h2>
+                            <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#bmwF450GSFAQ">
+                                <div class="accordion-body">
+                                    The BMW F 450 GS represents the new entry point into BMW’s iconic GS lineup, replacing the G 310 GS. With a <strong>parallel-twin engine</strong> and <strong>advanced tech at an affordable price</strong>, it aims to attract a new generation of adventure riders globally.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        @await Html.PartialAsync("_AllViewComponent")
+
+    </div>
+</body>

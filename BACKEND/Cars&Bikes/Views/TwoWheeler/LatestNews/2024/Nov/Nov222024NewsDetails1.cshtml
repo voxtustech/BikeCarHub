@@ -1,0 +1,118 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "2025 Kawasaki Ninja ZX-4R Launched in India at ₹8.79 Lakh";
+}
+@section MetaTags{
+    <meta name="keywords" content="Kawasaki Ninja ZX-4R 2025, Kawasaki Ninja India price, Ninja ZX-4R specifications, Ninja ZX-4R features, Ninja ZX-4R launch India 2025" />
+    <meta name="description" content="Explore the 2025 Kawasaki Ninja ZX-4R, launched in India at ₹8.79 lakh. Discover its 399cc inline-four engine, top features, and performance-packed design." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <p>Kawasaki India has introduced the much-anticipated 2025 Ninja ZX-4R to the Indian market. Positioned as a premium lightweight supersport, the Ninja ZX-4R targets riders who seek an adrenaline-packed experience on both roads and tracks.</p>
+                <h3 class="subheading">Price in India</h3>
+                <p>The 2025 Kawasaki Ninja ZX-4R is priced at ₹8.79 lakh (ex-showroom), making it a premium offering in the lightweight supersport segment.</p>
+                <h3 class="subheading">Specifications</h3>
+                <ol>
+                    <li><span class="font-weight-700">Engine:</span> 399cc, liquid-cooled, inline-four-cylinder engine</li>
+                    <li><span class="font-weight-700">Power Output:</span> 75.9 bhp @@ 14,500 rpm</li>
+                    <li><span class="font-weight-700">Torque:</span> 39 Nm @@ 13,000 rpm</li>
+                    <li><span class="font-weight-700">Transmission:</span> 6-speed gearbox with a slipper and assist clutch</li>
+                    <li><span class="font-weight-700">Chassis:</span> Trellis frame for optimal rigidity and handling</li>
+                </ol>
+                <h3 class="subheading">Suspension:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Front:</span> Showa SFF-BP USD forks</li>
+                    <li><span class="font-weight-700">Rear:</span> Horizontal back-link mono-shock</li>
+                </ol>
+                <h3 class="subheading">Braking:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Front:</span> Dual disc brakes with radial calipers</li>
+                    <li><span class="font-weight-700">Rear:</span> Single disc</li>
+                    <li>Equipped with dual-channel ABS</li>
+                </ol>
+                <h3 class="subheading">Key Features</h3>
+                <ol>
+                    <li><span class="font-weight-700">Riding Modes:</span> Sport, Road, Rain, and customizable Rider mode</li>
+                    <li><span class="font-weight-700">Traction Control:</span> Kawasaki TRaction Control (KTRC) for enhanced safety</li>
+                    <li><span class="font-weight-700">Instrument Cluster:</span> 4.3-inch TFT display with Bluetooth connectivity</li>
+                    <li><span class="font-weight-700">Lighting:</span> Full-LED lighting setup</li>
+                    <li><span class="font-weight-700">Wheels & Tires:</span> 17-inch wheels with high-performance tires</li>
+                </ol>
+                <h3 class="subheading">Performance</h3>
+                <p>With a high-revving inline-four engine, the Ninja ZX-4R delivers an exhilarating performance that is rare in this segment. The 399cc engine ensures smooth power delivery and exceptional top-end performance, making it ideal for track enthusiasts.</p>
+                <h3 class="subheading">Design</h3>
+                <p>The bike boasts an aggressive and aerodynamic design inspired by its larger Ninja siblings, featuring a sharp front fascia, muscular fuel tank, and sporty tail section.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,208 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Best Bikes Under 2 Lakh in India for Performance, Style, and Value - 2024";
+}
+@section MetaTags{
+    <meta name="keywords" content="best bikes under 2 lakh, top bikes under 2 lakh in India, affordable bikes 2024, Bajaj Pulsar NS200, TVS Apache RTR 200 4V, Yamaha FZ25, Royal Enfield Bullet X350, Honda Hornet 2.0, budget bikes India, bikes under ₹2 lakh" />
+    <meta name="description" content="Top 5 bikes under ₹2 lakh in India for 2024! Get the perfect mix of performance, style, and value with models like Bajaj Pulsar NS200 & TVS Apache RTR 200 4V." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">1. Bajaj Pulsar NS200</h3>
+                <p>The Bajaj Pulsar NS200 remains a top pick for riders who love performance with an edge. Its powerful 199.5cc engine, producing 24.5 PS of power and 18.74 Nm of torque, promises thrilling rides with responsive acceleration. With a six-speed gearbox, dual-channel ABS, and a bold, aggressive design, this model is visually striking and delivers a high-performance experience. Starting at around ₹1.59 lakh, the <a class="for-link" asp-controller="Bajaj" asp-action="BajajPulsarNS200">Pulsar NS200</a> also offers multiple vibrant color options.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 199.5 cc, Liquid Cooled, Triple Spark, 4-Valve FI DTS-i
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 24.5 PS @@ 9750 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 18.74 Nm @@ 8000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Upside Down Forks, Suspension Rear - Nitrox Mono Shock Absorber With Canister
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 168 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bikesunder2lakhinindiaforperformancestyleandvalue/bajaj pulsar ns200.webp" alt="Bajaj Pulsar NS200" title="Bajaj Pulsar NS200" /></center></div>
+                </div>
+                <h3 class="subheading">2. TVS Apache RTR 200 4V</h3>
+                <p>
+                    The <a class="for-link" asp-controller="TVS" asp-action="TVSApacheRTR2004V">TVS Apache RTR 200 4V</a> is designed for the sporty rider who values power with style. Featuring a 197.75cc engine generating 20.82 PS power and 17.25 Nm torque, it’s equipped with TVS’s advanced RT-Fi technology for better fuel efficiency and smoother rides. The bike is available in single-channel and dual-channel ABS variants, giving riders flexibility in safety features, with prices starting at ₹1.48 lakh.
+                </p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 197.75 cc, Si, 4 Stroke, Oil Cooled, Fi
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 20.82 PS @@ 9000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 17.25 Nm @@ 7250 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Telescopic Forks with Preload Adjuster, Suspension Rear - Mono Tube - Mono Shock
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 150 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bikesunder2lakhinindiaforperformancestyleandvalue/tvs apache rtr 200 4v.webp" alt="TVS Apache RTR 200 4V" title="TVS Apache RTR 200 4V" /></center></div>
+                </div>
+                <h3 class="subheading">3. Yamaha FZ25</h3>
+                <p>
+                    For riders prioritizing comfort without compromising on power, the Yamaha FZ25 is a fantastic option. Its 249cc engine provides 20.8 PS power and 20.1 Nm of torque, making it capable for both city commuting and longer trips. Standard features include LED lighting, a digital instrument cluster, and dual-channel ABS. With a starting price of ₹1.59-1.78 lakh, it’s an ideal choice for riders seeking a balance of comfort and performance.
+                </p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 249 cc, Air cooled, 4-stroke, SOHC, 2-valve
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 20.8 PS @@ 8000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 20.1 Nm @@ 6000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Telescopic Fork, Suspension Rear - 7-Step Adjustable Monocross Suspension
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 160 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bikesunder2lakhinindiaforperformancestyleandvalue/yamaha fz25.webp" alt="Yamaha FZ25" title="Yamaha FZ25" /></center></div>
+                </div>
+                <h3 class="subheading">4. Royal Enfield Bullet 350</h3>
+                <p>
+                    The <a class="for-link" asp-controller="RoyalEnfield" asp-action="REBullet350">Royal Enfield Bullet 350</a> is the ideal bike for classic enthusiasts looking for modern functionality within a budget. Sporting an iconic, vintage-inspired design, the Bullet 350 includes a reliable UCE engine, offering good mileage and a comfortable riding posture. Priced from ₹1.74 lakh, it’s a compelling choice for those who appreciate Royal Enfield’s timeless appeal.
+                </p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 349 cc, single-cylinder, oil-cooled
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 20.4 PS @@ 6100 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 27 Nm @@ 4000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Telescopic, 41mm forks, 130 mm travel, Suspension Rear - Twin tube Emulsion shock absorbers with 6-step adjustable preload
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 160 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bikesunder2lakhinindiaforperformancestyleandvalue/royal enfield bullet 350.webp" alt="Royal Enfield Bullet 350" title="Royal Enfield Bullet 350" /></center></div>
+                </div>
+                <h3 class="subheading">5. Honda Hornet 2.0</h3>
+                <p>
+                    Sharp, stylish, and practical, the <a class="for-link" asp-controller="Honda" asp-action="HondaHornet">Honda Hornet 2.0</a> offers a BS6-compliant air-cooled engine that delivers up to 17.26 ps and 15.9 Nm of torque. With its five-speed transmission and options like the Repsol Edition, the Hornet blends performance and aesthetics effortlessly. Priced between ₹1.35 lakh and ₹1.45 lakh, it’s a versatile bike with solid value in its segment.
+                </p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 184.40 cc, single-cylinder, oil-cooled
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 17.26 PS @@ 8500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 15.9 Nm @@ 6000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Upside down Fork (USD), Suspension Rear - Monoshock
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 167 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5bikesunder2lakhinindiaforperformancestyleandvalue/honda hornet 2.0.webp" alt="Honda Hornet 2.0" title="Honda Hornet 2.0" /></center></div>
+                </div>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

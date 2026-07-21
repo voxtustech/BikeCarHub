@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Cars_Bikes.Models.TWMotorAndBattery>
+@{
+    ViewData["Title"] = "Motor and Battery List";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Index" method="get">
+    <input type="text" name="searchString" class="form-control" placeholder="Search..." />
+    <button type="submit" class="btn btn-primary mt-2 mb-2">Search</button>
+</form>
+
+<p>
+                        <a class="btn btn-success" asp-action="CreateTWMotorAndBattery">Create New</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>TW Name</th>
+            <th>Varients</th>
+            <th>Peak Power</th>
+            <th>Battery</th>
+            <th>Drive Type</th>
+            <th>Transmission</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TWName</td>
+                <td>@item.Varients</td>
+                <td>@item.PeakPower</td>
+                <td>@item.BatteryCapacity</td>
+                <td>@item.DriveType</td>
+                <td>@item.Transmission</td>
+                <td>
+                                        <a class="btn btn-primary btn-sm" asp-action="EditTWMotorAndBattery" asp-route-id="@item.TWMotorAndBatteryId">Edit</a>
+                                        <a class="btn btn-danger btn-sm" asp-action="DeleteTWMotorAndBattery" asp-route-id="@item.TWMotorAndBatteryId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

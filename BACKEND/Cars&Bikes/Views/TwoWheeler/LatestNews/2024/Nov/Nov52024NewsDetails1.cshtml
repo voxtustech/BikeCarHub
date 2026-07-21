@@ -1,0 +1,142 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Royal Enfield Flying Flea: EV Brand Launched for Electric Bikes";
+}
+@section MetaTags{
+    <meta name="keywords" content="Royal Enfield Flying Flea, electric motorcycles, Royal Enfield EV, Flying Flea price, Flying Flea features, EV bike launch, Royal Enfield electric brand" />
+    <meta name="description" content="Royal Enfield's new 'Flying Flea' brand focuses on electric motorcycles, bringing classic style to EVs. Expected price, features, and specs for urban riders." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <h1 class="heading">"Royal Enfield Launches 'Flying Flea C6' as its Dedicated Electric Vehicle Brand"</h1>
+                <h3 class="subheading">Brand Introduction</h3>
+                <p><a class="for-link" asp-controller="Home" asp-action="TWBrandDetails" asp-route-brandId="1">Royal Enfield's</a> new sub-brand, "Flying Flea C6," named after one of its historic World War II models, is dedicated to developing and producing electric motorcycles. This brand aims to attract a new generation of riders looking for eco-friendly and efficient urban commuting options, while staying true to Royal Enfield's vintage styling.</p>
+                <h3 class="subheading">Expected Price Range</h3>
+                <p>Although Royal Enfield has not yet released official prices for Flying Flea models, industry experts speculate that initial models may start around INR 2.5-3 lakh (USD 3,000-3,600) to remain competitive in the mid-range EV market.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/royalenfieldunveilsflyingfleac6evbandforelectricbikes/2.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/royalenfieldunveilsflyingfleac6evbandforelectricbikes/3.webp" /></div>
+                </div>
+                <h3 class="subheading">Design Philosophy</h3>
+                <p>Flying Flea models are expected to carry forward Royal Enfield's signature retro look, blended with streamlined, minimalistic designs unique to electric motorcycles. Early concept images suggest a neo-retro aesthetic that combines classic styling with futuristic elements.</p>
+                <h3 class="subheading">Expected Battery and Range</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Battery Type:</span> Lithium-ion, swappable options may be available.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Range:</span> Estimated range of around 100-150 km per charge, suitable for urban and short-distance rides.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Charging Time:</span> Fast-charging capabilities are expected, with approximately 2 hours to reach 80% charge.
+                    </li>
+                </ol>
+                <h3 class="subheading">Performance and Powertrain</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Motor Power:</span> Likely to feature a hub motor producing around 15-20 bhp.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Torque:</span> Instant torque delivery, ideal for city commuting.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Top Speed:</span> Expected top speed of around 90-100 km/h for city-focused models.
+                    </li>
+                </ol>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/royalenfieldunveilsflyingfleac6evbandforelectricbikes/4.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/royalenfieldunveilsflyingfleac6evbandforelectricbikes/5.webp" /></div>
+                </div>
+                <h3 class="subheading">Features and Tech</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Connectivity:</span> Flying Flea bikes may come with a smartphone-compatible digital console offering navigation, ride statistics, and remote diagnostics.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Rider Modes:</span> Multiple riding modes for efficiency and performance.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Safety Features:</span> Anti-lock Braking System (ABS), traction control, and regenerative braking for added safety and control.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Suspension and Wheels:</span> Telescopic front forks and dual rear shock absorbers, with lightweight alloy wheels for better agility in urban settings.
+                    </li>
+                </ol>
+                <h3 class="subheading">Eco-Friendly and Urban-Focused</h3>
+                <p>Flying Flea is designed primarily for urban environments, offering a clean and quiet alternative for city riders while reducing emissions and operational costs. The brand’s emphasis on swappable battery tech aligns with the growing EV infrastructure.</p>
+                <h3 class="subheading">Market Competition</h3>
+                <p>Flying Flea will enter a competitive market with brands like Revolt, Ather, and Bajaj’s EV offerings, which are currently dominating the urban EV motorcycle segment.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

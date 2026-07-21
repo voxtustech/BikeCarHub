@@ -1,0 +1,690 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Renault Kiger Facelift Launch India – Price & Specs";
+}
+@section MetaTags {
+    <meta name="keywords" content="Renault Kiger facelift 2025, Kiger facelift price India, Renault Kiger launch date, Renault Kiger turbo specs, Compact SUV under 10 lakh, Kiger vs Magnite 2025, Best SUV under 7 lakh, BikeCarHub car reviews " />
+    <meta name="description" content="Renault Kiger Facelift launches in India on 24 Aug 2025. Price from ₹6.14 lakh. Full features, specs & details. Guide by BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 19th August 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p>This detailed guide from<span class="font-weight-700"> BikeCarHub </span>takes a closer look at everything the facelift offers — from the design updates and performance options to a full breakdown of features and specifications.</p>
+
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/renaultkigerfaceliftlaunching/renault kiger 1.webp" alt="renault kiger" title="renault kiger" loading="lazy" /></div>
+                </div>
+
+                <h3 class="subheading">Exterior Design Changes</h3>
+
+                <p>While the Kiger already had a sharp, sporty stance, Renault has polished it further for 2025:</p>
+
+                <ul>
+
+                    <li><span class="font-weight-700">New Front Grille Design</span> with more premium chrome inserts. </li>
+
+                    <li><span class="font-weight-700">Updated LED DRL Signature</span> integrated with sleeker headlamps. </li>
+
+                    <li>Revised front and rear bumpers with improved aerodynamics. </li>
+
+                    <li>Fresh <span class="font-weight-700">alloy wheel designs</span> that enhance the SUV’s dynamic look. </li>
+
+                    <li>New paint shades joining the existing palette for a fresher appeal.</li>
+
+                </ul>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/renaultkigerfaceliftlaunching/renault kiger 8.webp" alt="renault kiger" title="renault kiger" loading="lazy" /></div>
+                </div>
+
+                <p>The facelift doesn’t change the overall dimensions, ensuring the same city-friendly footprint.</p>
+
+
+
+                <h3 class="subheading">Interior Enhancements</h3>
+
+                <p>Inside, the 2025 Renault Kiger feels more premium, with improved materials and added convenience features:</p>
+
+                <ul>
+
+                    <li>New  <span class="font-weight-700">upholstery patterns</span> and soft-touch finishes on key panels. </li>
+
+                    <li>Enhanced  <span class="font-weight-700">infotainment software </span>with smoother animations. </li>
+
+                    <li>Upgraded  <span class="font-weight-700">ambient lighting </span>for a richer cabin feel. </li>
+
+                    <li>Better sound insulation for quieter highway cruising. </li>
+
+                    <li>Larger storage areas for bottles, gadgets, and knick-knacks.</li>
+
+                </ul>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/renaultkigerfaceliftlaunching/renault kiger 5.webp" alt="renault kiger" title="renault kiger" loading="lazy" /></div>
+                </div>
+
+
+                <h3 class="subheading">Engine & Transmission Options</h3>
+
+                <p>Renault continues to offer two petrol engine choices:</p>
+
+                <p> <span class="font-weight-700">1.0-litre Energy Petrol (Naturally Aspirated)</span></p>
+
+                <ul>
+
+                    <li>Power: ~72 PS</li>
+
+                    <li>Torque: ~96 Nm</li>
+
+                    <li>Transmission: 5-speed Manual or AMT</li>
+
+                    <li>Smooth for city driving and efficient for daily commutes. </li>
+
+                </ul>
+
+                <p> <span class="font-weight-700">1.0-litre Turbo Petrol</span></p>
+                <ul>
+                    <li>Power: ~100 PS</li>
+
+                    <li>Torque: ~160 Nm (MT) / ~152 Nm (CVT) </li>
+
+                    <li>Transmission: 5-speed Manual or CVT</li>
+
+                    <li>Peppy acceleration for highway and spirited driving. </li>
+                </ul>
+
+
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center image-height"><img src="~/images/blogs/2025/august/renaultkigerfaceliftlaunching/renault kiger 4.webp" alt="renault kiger" title="renault kiger" loading="lazy" /></div>
+                </div>
+
+                <h3 class="subheading">Price Range</h3>
+
+                <p>As confirmed, the 2025 Kiger Facelift is priced extremely competitively:</p>
+
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+
+                                <th class="text-center">Variant Range</th>
+
+                                <th class="text-center">Starting Price (₹, Ex-showroom)</th>
+
+
+
+                            </tr>
+
+                        </thead>
+                        
+                        <tbody>
+
+                            <tr class="compare-head-text">
+
+                                <td class="font-weight-600">Standard Range</td>
+
+                                <td>₹6.14 lakh</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td class="font-weight-600">AMT Range</td>
+
+                                <td>₹7.39 lakh</td>
+
+                            </tr>
+
+                            <tr class="compare-head-text">
+
+                                <td class="font-weight-600">Turbo Range</td>
+
+                                <td>₹9.99 lakh</td>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p>Even with the facelift updates, Renault has kept pricing attractive to maintain its edge in the compact SUV market.</p>
+
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center image-height"><img src="~/images/blogs/2025/august/renaultkigerfaceliftlaunching/renault kiger 6.webp" alt="renault kiger" title="renault kiger" loading="lazy" /></div>
+                </div>
+
+                <h3 class="subheading">Safety Features</h3>
+
+                <p>Renault has loaded the facelift with safety equipment, much of which is standard across variants:</p>
+
+                <ul>
+
+                    <li><span class="font-weight-700">Dual front airbags </span>(higher trims get side and curtain airbags). </li>
+
+                    <li><span class="font-weight-700">ABS with EBD  </span>and brake assist. </li>
+
+                    <li><span class="font-weight-700">Electronic Stability Program (ESP). </span></li>
+
+                    <li><span class="font-weight-700">Hill Start Assist (HSA) </span> for smoother uphill starts. </li>
+
+                    <li>Rear parking sensors and camera with guidelines. </li>
+
+                    <li>ISOFIX child seat mounts.</li>
+
+                </ul>
+
+
+
+                <h3 class="subheading">Technology & Connectivity</h3>
+
+                <p>Renault’s brochure confirms the facelift carries forward the tech features customers love:</p>
+
+                <ul>
+
+                    <li>8-inch touchscreen infotainment system. </li>
+
+                    <li>Wireless <span class="font-weight-700">Android Auto & Apple CarPlay.</span> </li>
+
+                    <li>7-inch digital instrument cluster. </li>
+
+                    <li>Steering-mounted controls. </li>
+
+                    <li>Wireless phone charger. </li>
+
+                    <li>Voice recognition.</li>
+
+                </ul>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center image-height"><img src="~/images/blogs/2025/august/renaultkigerfaceliftlaunching/renault kiger 7.webp" alt="renault kiger" title="renault kiger" loading="lazy" /></div>
+                </div>
+
+                <h3 class="subheading">Comfort & Convenience</h3>
+
+                <p>Across trims, buyers get a mix of practical features:</p>
+
+                <ul>
+
+                    <li>Automatic climate control. </li>
+
+                    <li>Rear AC vents. </li>
+
+                    <li>Smart access card & push-button start. </li>
+
+                    <li>Height-adjustable driver’s seat. </li>
+
+                    <li>Cruise control (in turbo variants). </li>
+
+                    <li>Adjustable headrests for all passengers.</li>
+
+                </ul>
+
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center image-height"><img src="~/images/blogs/2025/august/renaultkigerfaceliftlaunching/renault kiger 2.webp" alt="renault kiger" title="renault kiger" loading="lazy" /></div>
+                </div>
+
+                <h3 class="subheading">Specifications & Features Comparison Table</h3>
+
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+
+                                <th class="text-center">Feature</th>
+
+                                <th class="text-center">Standard Petrol</th>
+
+                                <th class="text-center">AMT Petrol</th>
+
+                                <th class="text-center">Turbo Petrol</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr class="compare-head-text">
+
+                                <td class="font-weight-600">Engine Capacity</td>
+
+                                <td>999 cc</td>
+
+                                <td>999 cc</td>
+
+                                <td>999 cc Turbocharged</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td class="font-weight-600">Power Output</td>
+
+                                <td>~72 PS</td>
+
+                                <td>~72 PS</td>
+
+                                <td>~100 PS</td>
+
+                            </tr>
+
+                            <tr class="compare-head-text">
+
+                                <td class="font-weight-600">Torque</td>
+
+                                <td>~96 Nm</td>
+
+                                <td>~96 Nm</td>
+
+                                <td>~160 Nm (MT) / 152 Nm (CVT)</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td class="font-weight-600">Transmission</td>
+
+                                <td>5-speed MT</td>
+
+                                <td>5-speed MT</td>
+
+                                <td>5-speed MT / CVT</td>
+
+                            </tr>
+
+                            <tr class="compare-head-text">
+
+                                <td class="font-weight-600">Fuel Efficiency (est.)</td>
+
+                                <td>19 km/l</td>
+
+                                <td>19 km/l</td>
+
+                                <td>18 km/l</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td class="font-weight-600">Touchscreen Display</td>
+
+                                <td>8-inch</td>
+
+                                <td>8-inch</td>
+
+                                <td>8-inch with enhanced UI</td>
+
+                            </tr>
+
+                            <tr class="compare-head-text">
+
+                                <td class="font-weight-600">Airbags</td>
+
+                                <td>2 (std) / 4-6 (top)</td>
+
+                                <td>2 (std) / 4-6 (top)</td>
+
+                                <td>4-6 depending on trim</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td class="font-weight-600">ESP & HAS</td>
+
+                                <td>Higher trims</td>
+
+                                <td>Higher trims</td>
+
+                                <td>Standard on Turbo</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center image-height"><img src="~/images/blogs/2025/august/renaultkigerfaceliftlaunching/renault kiger 3.webp" alt="renault kiger" title="renault kiger" loading="lazy" /></div>
+                </div>
+
+                <h3 class="subheading">Renault Kiger vs Competitors</h3>
+
+                <p>The facelifted Kiger will go head-to-head with:</p>
+
+                <ul>
+
+                    <li><span class="font-weight-700">Nissan Magnite Facelift  </span>– Shares platform, but Kiger offers more vibrant styling. </li>
+
+                    <li><span class="font-weight-700">Hyundai Venue  </span>– Venue’s feature list is richer, but Kiger is priced more aggressively. </li>
+
+                    <li><span class="font-weight-700">Tata Nexon </span> – Nexon offers EV options; Kiger focuses on petrol efficiency. </li>
+
+                    <li><span class="font-weight-700">Kia Sonet </span>– Kiger wins on value-for-money against Sonet’s premium pricing.</li>
+
+                </ul>
+
+
+
+                <p><span class="font-weight-700">Booking & Launch Details</span></p>
+
+                <ul>
+
+                    <li>Launch date: <span class="font-weight-700">24 August 2025.</span></li>
+
+                    <li>Bookings expected to open in early August with a nominal booking amount (~₹10,000). </li>
+
+                    <li>Deliveries likely to start from September 2025. </li>
+
+                </ul>
+
+
+
+                <h3 class="subheading">Pros & Cons of 2025 Renault Kiger Facelift</h3>
+
+
+
+                <p> <span class="font-weight-700">Pros:</span></p>
+
+                <ul>
+                    <li>Attractive pricing.</li>
+                    <li>Sporty design with fresh updates. .</li>
+                    <li>Multiple powertrain & gearbox options. .</li>
+                    <li>Loaded with features for the price. .</li>
+
+                </ul>
+
+                <p> <span class="font-weight-700">Cons:</span></p>
+
+                <ul>
+                    <li>Turbo variant priced higher. .</li>
+                    <li> Rear seat width still tight for three adults. .</li>
+                </ul>
+
+
+
+
+
+                <h3 class="subheading">Conclusion</h3>
+
+                <p>The <span class="font-weight-700"> 2025 Renault Kiger Facelift</span> strengthens Renault’s position in the compact SUV segment. With a stylish exterior refresh, richer interiors, and the same fun-to-drive yet efficient engine lineup, it’s a strong contender against more expensive rivals. Most importantly, Renault has kept pricing highly competitive, starting at just ₹6.14 lakh, making it one of the best value-for-money buys of the year.</p>
+
+                <p>For more in-depth car reviews, brochure-based specs, and buyer’s guides, keep following <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub.</a></p>
+
+
+
+                <h3 class="subheading">FAQs – Renault Kiger Facelift 2025</h3>
+
+
+
+
+
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+
+                                1. What is the launch date of the Renault Kiger facelift?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">24 August 2025.</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+
+                                2. What is the starting price of the facelift?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">₹6.14 lakh (ex-showroom) for the base petrol variant.</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+
+                                3. What are the engine options?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">1.0L NA petrol & 1.0L turbo petrol..</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+
+                                4. Does the facelift get a new transmission?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">No, it retains the 5-speed MT, AMT, and CVT options.</div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+
+                                5. Are there new colour options?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">Yes, new shades are expected alongside existing colours.</div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+
+                                6. Does it have a sunroof?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">No panoramic, but an electric sunroof is likely on top trims.</div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+
+                                7. How many airbags does it have?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">2 standard, up to 6 in top trims.</div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+
+                                8. Is the Kiger facelift fuel efficient?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">Around 18–19 km/l, depending on variant.</div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+
+                                9. How does it compare to the Nissan Magnite?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">Both share a platform, but Kiger has distinct styling and slightly more features.</div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+
+                                10. Is the Kiger facelift worth buying in 2025?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">Yes, for buyers wanting an affordable, stylish, and feature-rich compact SUV.</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @* @await Html.PartialAsync("_AllBlogComponent") *@
+  @*   @await Component.InvokeAsync("AllBlog")
+    @await Component.InvokeAsync("UpcomingBikes")
+    @await Component.InvokeAsync("LatestNews")
+    @await Component.InvokeAsync("VFM")
+    @await Html.PartialAsync("_AllBrandComponent") *@
+     @await Html.PartialAsync("_AllViewComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

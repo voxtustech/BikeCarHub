@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Cars_Bikes.Models.TWDimensionsAndCapacity>
+@{
+    ViewData["Title"] = "Dimensions & Capacity List";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <form method="get" asp-action="ListTWEVDimensions">
+                        <input type="text" name="searchString" class="form-control" placeholder="Search by TW Name or Varient" />
+                        <button type="submit" class="btn btn-primary mt-1">Search</button>
+                    </form>
+
+                    <table class="table mt-3">
+                        <thead>
+                            <tr>
+                                <th>TW Name</th>
+                                <th>Varient</th>
+                                <th>Width</th>
+                                <th>Length</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.TWName</td>
+                                    <td>@item.Varients</td>
+                                    <td>@item.Width</td>
+                                    <td>@item.Length</td>
+                                    <td>
+                                        <a asp-action="EditTWEVDimensions" asp-route-id="@item.TWDimensionsAndCapacityId" class="btn btn-sm btn-warning">Edit</a>
+                                        <a asp-action="DeleteTWEVDimensions" asp-route-id="@item.TWDimensionsAndCapacityId" class="btn btn-sm btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>

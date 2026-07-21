@@ -1,0 +1,120 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Raptee HV T 30 E-Bike Launched at ₹2.39 Lakh with CCS2 Charging";
+}
+@section MetaTags{
+    <meta name="keywords" content="Raptee HV T 30, electric bike, e-bike launch, CCS2 charging, urban mobility, eco-friendly transportation, high-capacity battery, smart connectivity." />
+    <meta name="description" content="Discover the Raptee HV T 30 e-bike, launched at ₹2.39 lakh. Featuring a CCS2 charging port, this electric bike combines performance, style, and sustainability for urban commuting." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>Raptee has officially launched the HV T 30, a cutting-edge electric bike priced at ₹2.39 lakh. This e-bike is designed for those who seek a blend of performance, style, and sustainability. One of the standout features of the HV T 30 is its CCS2 (Combined Charging System) charging port, which allows for faster and more efficient charging compared to traditional methods.</p>
+                <p>The HV T 30 boasts a sleek design, making it visually appealing for urban riders. It is powered by a high-capacity battery that offers an impressive range, catering to the needs of daily commuters. The bike’s electric motor provides instant torque, ensuring a smooth and responsive ride, even in city traffic.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/raptee launches hv t 30 e bike at 2.39 lakh with ccs2 charging capability/2.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/raptee launches hv t 30 e bike at 2.39 lakh with ccs2 charging capability/3.webp" /></div>
+                </div>
+                <p>In addition to its performance capabilities, the HV T 30 is equipped with advanced safety features, including disc brakes for superior stopping power and LED lights for improved visibility. Riders can also benefit from smart connectivity options, enabling them to monitor their ride statistics and battery health through a dedicated mobile app.</p>
+                <p>Overall, the Raptee HV T 30 is positioned to redefine urban mobility by offering an eco-friendly alternative to traditional vehicles. With its competitive pricing and robust features, it aims to attract both new and experienced riders looking for a reliable and stylish electric biking option.</p>
+                <h3 class="subheading">Specifications and Features:</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Price:</span> ₹2.39 lakh
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Charging Port:</span> CCS2
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Battery Capacity:</span> High-capacity lithium-ion
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Motor:</span> High-torque electric motor
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Range:</span> Competitive range suitable for daily commuting
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Brakes:</span> Front and rear disc brakes
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Lights:</span> LED lighting system
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Smart Features:</span> Mobile app connectivity for ride tracking
+                    </li>
+                </ol>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

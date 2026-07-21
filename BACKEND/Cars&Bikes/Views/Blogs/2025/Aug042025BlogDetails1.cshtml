@@ -1,0 +1,430 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Hero vs Honda: Best Bikes Under ₹1.5 Lakh in 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Hero vs Honda bikes, bikes under ₹1.5 lakh India, best commuter bikes 2025, Hero Xtreme 160R vs Unicorn, Honda vs Hero mileage, Hero or Honda which is better" />
+    <meta name="description" content="Compare Hero vs Honda bikes under ₹1.5 lakh. Discover the best features, mileage & value in 2025 for Indian riders. Updated guide by BikeCarHub." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 11th August 2025</p>
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p>In this comparison by<span class="font-weight-700"> BikeCarHub, </span>we break down their best offerings, specs, riding experience, and more to help you make a well-informed decision in 2025.</p>
+                <h3 class="subheading">Brand Overview: Hero vs Honda</h3>
+                <h5 class="subheading">Hero MotoCorp</h5>
+                <ul>
+                    <li>World's largest two-wheeler manufacturer by volume. </li>
+                    <li>Known for affordability, high mileage, and wide service network. </li>
+                    <li>Strong presence in rural and semi-urban markets. </li>
+                    <li>Focused on practical and fuel-efficient commuters.</li>
+                </ul>
+                <h5 class="subheading">Honda Motorcycle & Scooter India (HMSI)</h5>
+                <ul>
+                    <li>Japanese engineering meets Indian affordability. </li>
+                    <li>Popular for smooth engines, refined ride quality, and solid reliability. </li>
+                    <li>Urban appeal with slightly more premium positioning. </li>
+                    <li>Consistent performance and better design elements.</li>
+                </ul>
+
+                <h3 class="subheading">Best Hero Bikes Under ₹1.5 Lakh</h3>
+                <h5 class="subheading">1. Hero Xtreme 160R</h5>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/herovshonda/hero xtreme 160R.webp" alt="Hero Xtreme 160R" title="Hero Xtreme 160R" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Price: ₹1,13,211</span></li>
+                    <li><span class="font-weight-700">Engine: </span> 163.2cc, 4 stroke, Air Cooled, 2 Valve</li>
+                    <li><span class="font-weight-700">Power: </span>15 Ps@8500rpm</li>
+                    <li><span class="font-weight-700">Torque: </span>14 NM@6500rpm</li>
+                    <li><span class="font-weight-700">Front Tyre: </span>100/80-17 Tubeless</li>
+                    <li><span class="font-weight-700">Rear Tyre: </span>130/70 R17 Tubeless</li>
+                    <li><span class="font-weight-700">Ground Clearance: </span> 167mm</li>
+                    <li><span class="font-weight-700">Kerb Weight: </span>139.5 Kg</li>
+                    <li><span class="font-weight-700">Mileage: </span>47–49 km/l</li>
+                    <li>
+                        <span class="font-weight-700">Highlights: </span>Lightweight chassis, LED lighting, digital console.
+                        Ideal for college students and urban riders who want sportiness without breaking the bank.
+                    </li>
+                </ul>
+                <h5 class="subheading">2. Hero Glamour XTEC</h5>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/herovshonda/hero glamour xtec.webp" alt="hero glamour xtec" title="hero glamour xtec" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Engine: </span>124.7cc, Air Cooled 4 stroke</li>
+                    <li><span class="font-weight-700">Power: </span>10.7 PS@7500 rpm </li>
+                    <li><span class="font-weight-700">Torque: </span>10.6 Nm@6000 rpm</li>
+                    <li><span class="font-weight-700">Features: </span> Full Digital Display, Bluetooth, Turn-by-Turn Navigation, Real-Time Mileage</li>
+                    <li><span class="font-weight-700">Transmission: </span>5-Speed</li>
+                    <li><span class="font-weight-700">Front Tyre: </span>80/100-18 (Tubeless) </li>
+                    <li><span class="font-weight-700">Rear Tyre: </span> 100/80-18 (Tubeless) </li>
+                    <li><span class="font-weight-700">Brakes: </span>240 mm front disc, 130 mm rear drum</li>
+                    <li><span class="font-weight-700">Weight: </span> 122 kg(Drum), 123 kg(Disc) </li>
+                    <li><span class="font-weight-700">Fuel Tank: </span> 10 L</li>
+                    <li><span class="font-weight-700">Price: ₹90,498 (Drum Brake), ₹95,098 (Disc Brake)</span> </li>
+                </ul>
+                <p><span class="font-weight-700">Why Choose?</span></p>
+                <p>Tech lovers will adore the<span class="font-weight-700"> Bluetooth connectivity, </span>mobile charging port, and LED headlamp. It’s a truly modern 125cc bike packed with commuter sensibility and a sporty edge.</p>
+                <h5 class="subheading">3. Hero HF Deluxe</h5>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/herovshonda/hero hF deluxe.webp" alt="Hero HF Deluxe" title="Hero HF Deluxe" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Engine: </span> 97.2cc, Air cooled, 4-stroke, Single cylinder, OHC</li>
+                    <li><span class="font-weight-700">Power: </span>5.9 Kw@8000 rpm</li>
+                    <li><span class="font-weight-700">Torque: </span>8.5 Nm@6000 rpm</li>
+                    <li><span class="font-weight-700">Transmission: </span>4-Speed</li>
+                    <li><span class="font-weight-700">Front Tyre: </span>80/100-18 M/C 47P (Tubeless) </li>
+                    <li><span class="font-weight-700">Rear Tyre: </span>80/100-18 M/C 54P (Tubeless) </li>
+                    <li><span class="font-weight-700">Brakes: </span> 130 mm front drum, 130 mm rear drum, Integrated Braking System</li>
+                    <li><span class="font-weight-700">Weight: </span>112 kg</li>
+                    <li><span class="font-weight-700">Fuel Tank: </span> 9.6 L</li>
+                    <li><span class="font-weight-700">Price Range: ₹59,998-₹73,550</span></li>
+                </ul>
+                <p><span class="font-weight-700">Why Choose?</span></p>
+                <p>The no-nonsense commuter — durable, lightweight, and delivers legendary fuel economy. Ideal for rural and daily utility riders.</p>
+
+                <h3 class="subheading">Best Honda Bikes Under ₹1.5 Lakh</h3>
+                <h5 class="subheading">1. Honda Unicorn 160</h5>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/herovshonda/honda unicorn 160.webp" alt="Honda Unicorn 160" title="Honda Unicorn 160" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Engine: </span>162.71 cc, Air cooled, 4-stroke, Single cylinder, OHC</li>
+                    <li><span class="font-weight-700">Power: </span>9.5 kW@7,500 rpm</li>
+                    <li><span class="font-weight-700">Torque: </span>14 Nm@5,500 rpm</li>
+                    <li><span class="font-weight-700">Transmission: </span>5-Speed</li>
+                    <li><span class="font-weight-700">Front Tyre: </span> 80/100-17</li>
+                    <li><span class="font-weight-700">Rear Tyre: </span>110/80-17</li>
+                    <li><span class="font-weight-700">Brakes: </span> 240 mm front Disc, 130 mm rear drum</li>
+                    <li><span class="font-weight-700">Weight: </span>140 kg</li>
+                    <li><span class="font-weight-700">Fuel Tank: </span> 13 L</li>
+                    <li><span class="font-weight-700">Price Range: ₹1,19,681</span></li>
+                    <li>
+                        <span class="font-weight-700">Highlights:</span> Long seat, great comfort, refined engine
+                        Excellent choice for comfort-focused daily riders.
+                    </li>
+                </ul>
+                <h5 class="subheading">2. Honda SP 125</h5>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/august/herovshonda/honda sP 125.webp" alt="Honda SP 125" title="Honda SP 125" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Engine: </span>123.4cc, 4-stroke, SI Engine</li>
+                    <li><span class="font-weight-700">Power: </span>8 Kw@7500 rpm</li>
+                    <li><span class="font-weight-700">Torque: </span>10.9 Nm@6000 rpm</li>
+                    <li><span class="font-weight-700">Transmission: </span> 5-Speed</li>
+                    <li><span class="font-weight-700">Front Tyre: </span>80/100-18 M/C 47P (Tubeless) </li>
+                    <li><span class="font-weight-700">Rear Tyre: </span>100/80-18 M/C 53P (Tubeless) </li>
+                    <li><span class="font-weight-700">Brakes: </span>130 mm front drum, 130 mm rear drum</li>
+                    <li><span class="font-weight-700">Weight: </span>116 kg(Drum), 117 kg(Disc) </li>
+                    <li><span class="font-weight-700">Fuel Tank: </span> 11 L</li>
+                    <li><span class="font-weight-700">Price Range: ₹92,465-₹99,998</span></li>
+                    <li><span class="font-weight-700">Features:</span>Full Digital Meter, Real-Time & Avg Fuel Efficiency, Distance-to-Empty, LED Headlamp</li>
+                </ul>
+                <p><span class="font-weight-700">Why Choose?</span></p>
+                <p>Honda SP 125 leads the pack with <span class="font-weight-700">top-notch refinement,</span> high fuel economy, and an ultra-informative digital cluster. The aggressive design is an added bonus for younger commuters.</p>
+                <h5 class="subheading">3. Honda Shine 125</h5>
+                <ul>
+                    <li><span class="font-weight-700">Engine: </span>123.94cc, 4 Stroke, SI, BS-VI Engine</li>
+                    <li><span class="font-weight-700">Power: </span> 7.93 kW@7500 rpm</li>
+                    <li><span class="font-weight-700">Torque: </span>11 Nm@6000 rpm</li>
+                    <li><span class="font-weight-700">Mileage: </span>55–65 km/l</li>
+                    <li><span class="font-weight-700">Features: </span>ACG Silent Start, Side Stand Engine Cut-off, 5-speed gearbox</li>
+                    <li><span class="font-weight-700">Front Tyre: </span> 80/100-18 M/C 47P</li>
+                    <li><span class="font-weight-700">Rear Tyre: </span>90/90-18 M/C 51P</li>
+                    <li><span class="font-weight-700">Brakes: </span>240 mm disc (F), 130 mm drum (R) </li>
+                    <li><span class="font-weight-700">Weight: </span>113 kg</li>
+                    <li><span class="font-weight-700">Fuel Tank: </span>10.5 L</li>
+                    <li><span class="font-weight-700">Price: ₹85,221-₹90,472 </span></li>
+                </ul>
+                <p><span class="font-weight-700">Why Choose?</span><p>
+                <p>Honda Shine is built for comfort, <span class="font-weight-700">longevity,</span> and reliability. With its elegant chrome accents, 5-speed transmission, and wide seating — it’s made for family and solo riders alike.</p>
+
+
+                <h3 class="subheading">Specifications & Features Comparison Table</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+
+                                <th class="text-center">Bike</th>
+                                <th class="text-center">Engine</th>
+                                <th class="text-center">Power</th>
+                                <th class="text-center">Mileage (km/l)</th>
+                                <th class="text-center">Price (₹)</th>
+                                <th class="text-center">Features</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Hero Xtreme 160R</td>
+                                <td>163.2cc</td>
+                                <td>15 PS</td>
+                                <td>47–49</td>
+                                <td>1,13,211</td>
+                                <td>LED, Digital Console, Sporty Handling</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Hero Glamour XTEC</td>
+                                <td>124.7cc</td>
+                                <td>10.7 PS</td>
+                                <td>60–63</td>
+                                <td>90,498-95,098</td>
+                                <td>Bluetooth, Navigation, USB Charging</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Hero HF Deluxe</td>
+                                <td>97.2cc</td>
+                                <td>5.9 Kw</td>
+                                <td>65–70</td>
+                                <td>59,998-73,550</td>
+                                <td>Kick/Self Start, Combi Brakes</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Honda Unicorn 160</td>
+                                <td>162.71cc</td>
+                                <td>9.5 Kw</td>
+                                <td>60</td>
+                                <td>1,19,681</td>
+                                <td>Long Seat, High Comfort, Refined Ride</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td class="font-weight-600">Honda SP 125</td>
+                                <td>123.4cc</td>
+                                <td>8 Kw</td>
+                                <td>60–65</td>
+                                <td>92,465-99,998</td>
+                                <td>Digital Meter, Silent Start, LED</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Honda Shine 125</td>
+                                <td>123.94cc</td>
+                                <td>7.93 Kw</td>
+                                <td>55-60</td>
+                                <td>85,221-90,472</td>
+                                <td>CBS Brakes, Clean Design, Great Mileage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">Hero vs Honda: Category-Wise Comparison</h3>
+                <h5 class="subheading">1. Performance & Ride Handling</h5>
+                <p>Hero’s Xtreme 160R edges out in sporty response, while Honda Unicorn is more tuned for smooth cruising. Hero gives you that quick throttle, Honda gives you the silky-smooth experience.</p>
+                <h5 class="subheading">2. Fuel Efficiency</h5>
+                <p>Both brands excel, but <a class="for-link" asp-controller="Hero" asp-action="HeroHFDeluxe"> Hero HF Deluxe </a>and <a class="for-link" asp-controller="Honda" asp-action="HondaShine125"> Honda Shine 125</a> stand out with 50–60 km/l. In city traffic, that’s a big plus.</p>
+                <h5 class="subheading">3. Comfort</h5>
+                <p> wins here. The<span class="font-weight-700"> Unicorn’s long seat </span>and plush suspension make it the ultimate daily commuter for office and college rides.</p>
+                <h5 class="subheading">4. Technology & Features</h5>
+                <p><a class="for-link" asp-controller="Hero" asp-action="HeroGLAMOURXTEC"> Hero Glamour XTEC</a> steals the show with Bluetooth, nav assist, and USB charging. Honda SP 125 offers digital tech, but not as extensive.</p>
+                <h5 class="subheading">5. Design & Appeal</h5>
+                <p>Hero’s newer designs (Xtreme 160R, Glamour XTEC) look youthful and sporty. Honda bikes, while elegant, are more conservative.</p>
+                <h5 class="subheading">6. Service & Maintenance</h5>
+                <p>Hero has a wider rural network and cheaper spares. Honda offers better finish quality and consistent reliability, especially in urban centres.</p>
+                <h5 class="subheading">7. Resale Value</h5>
+                <p>Honda tends to retain resale better in metros, but Hero has a slight edge in Tier-2 cities due to its mass presence.</p>
+
+                <h3 class="subheading">Verdict: Which One Should You Choose?</h3>
+                <p>At the end of the day, both brands cater to different segments. Here’s the breakdown:</p>
+                <p><span class="font-weight-700"> Choose Hero</span> if you want:</p>
+                <ul>
+                    <li>Aggressive styling</li>
+                    <li>Better features for less</li>
+                    <li>Lower maintenance costs</li>
+                    <li>Widespread rural support</li>
+                </ul>
+                <p><span class="font-weight-700"> Choose Honda</span> if you prefer:</p>
+                <ul>
+                <li>Ultra-smooth engine refinement</li>
+                <li>More comfort and riding ease</li>
+                <li>Higher resale value</li>
+                <li>Solid build quality</li>
+                </ul>
+                <p>Both brands offer solid choices <span class="font-weight-700"> under ₹1.5 lakh</span>. Head to your local dealership and take a test ride. For more reviews and comparisons like this, check out <a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub.</a></p>
+
+                <h3 class="subheading">Conclusion</h3>
+                <p>In the battle of <span class="font-weight-700"> Hero vs Honda under ₹1.5 lakh, </span>there's no single winner — it all depends on your priorities. Hero wins on features and affordability, while Honda leads in comfort and long-term quality. Whichever you pick, you’re riding home with a machine that’s trusted by millions of Indians.</p>
+
+
+                <h3 class="subheading">FAQs – Hero vs Honda Under ₹1.5 Lakh</h3>
+
+                <div class="accordion" id="faqTeslaModelY">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which bike offers better mileage – Honda or Hero?
+                            </button>
+                        </h3>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Hero HF Deluxe offers the highest mileage, but Honda SP 125 is close.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Which 125cc bike is best for technology features?
+                            </button>
+                        </h3>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Hero Glamour XTEC wins with Bluetooth, nav assist, and USB charging.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Are Honda engines smoother than Hero?
+                            </button>
+                        </h3>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Yes, Honda bikes are generally more refined, especially the SP 125 and Shine.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Is the SP 125 better than the Glamour XTEC?
+                            </button>
+                        </h3>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                SP 125 is better in refinement and ride quality; Glamour leads in features.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which is better for city rides – Shine or Glamour?
+                            </button>
+                        </h3>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Both perform well, but Shine is more comfortable for longer commutes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+
+                                6. Which bike is lighter – SP 125 or Glamour XTEC?
+                            </button>
+                        </h3>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+
+
+                                SP 125 is slightly lighter (116–117 kg vs 122-123 kg).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Does SP 125 have real-time fuel data?
+                            </button>
+                        </h3>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+
+                                Yes, it features real-time mileage, average mileage, and distance-to-empty.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Which bike is cheaper to maintain – Hero or Honda?
+                            </button>
+                        </h3>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                THero bikes generally have lower service costs and spare prices.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Do both brands offer 5-speed gearboxes?
+                            </button>
+                        </h3>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+
+                                Yes, all the above models except HF Deluxe offer 5-speed gearboxes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Which bike is more value for money overall?
+                            </button>
+                        </h3>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Glamour XTEC is best for features, while SP 125 is best for refinement and tech balance.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p>Looking for more comparisons, expert guides, and updates? Explore<span class="font-weight-700">  BikeCarHub </span>— your ultimate destination for all things two-wheels.<p>
+
+
+            </div>    
+            @await Component.InvokeAsync("AllBlog")
+            @await Html.PartialAsync("_AllBrandComponent")
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,25 @@
+﻿@model CompareViewModel
+
+@{
+    ViewData["Title"] = "Apache 160 4V vs Dominar 250 – Clash of Segments ";
+}
+@section MetaTags {
+    <meta name="keywords" content="Apache 160 4V vs Dominar 250, TVS Apache RTR 160 4V vs Bajaj Dominar, Dominar 250 vs Apache performance, Apache 160 4V top speed, Bajaj Dominar 250 mileage, RTR 160 4V vs Dominar 250 specs, Best 250cc bike in India 2025, TVS vs Bajaj bike comparison, Apache RTR 160 4V review 2025, Dominar 250 vs Apache 160 features, Apache vs Dominar price comparison, Dominar 250 long ride comfort, RTR 160 4V vs Dominar weight and power, Apache RTR 160 4V mileage 2025, Which is better: Apache 160 or Dominar 250? " />
+    <meta name="description" content="Compare TVS Apache RTR 160 4V and Bajaj Dominar 250 on performance, features, price, and mileage. Find out which bike suits your style and usage in 2025. " />
+}
+<div class=" ">
+    @* @Html.RenderPartial("_CompareTable", Model) *@
+
+    @await Html.PartialAsync("_CompareTable", Model)
+</div>
+<div class="google-ad">
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:1000px;height:200px"
+         data-ad-client="ca-pub-8720291170595920"
+         data-ad-slot="6204553210">
+    </ins>
+</div>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+@await Html.PartialAsync("_AllViewComponent")

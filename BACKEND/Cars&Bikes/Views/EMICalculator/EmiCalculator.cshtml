@@ -1,0 +1,202 @@
+﻿@{
+    ViewData["Title"] = "EMI Calculator:-Choose your EMI options for your Vehicle.";
+}
+@section MetaTags {
+    <meta name="keywords" content="EMI calculator, EMI options, Price breakdown, Loan calculator, Monthly installments, EMI comparison, Affordable EMI plans, Finance calculator, Vehicle loan calculator, Budget-friendly EMIs " />
+    <meta name="description" content="Explore detailed price breakdowns and the best EMI options for all variants. Calculate and compare EMIs easily to find the perfect plan for your needs." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<link href="~/css/site.css" rel="stylesheet" />
+<body id="loan-body">
+<div class=" row main-content">
+    <div class=" col-lg-6 loan-card">
+      <h2>Loan Calculator</h2>
+      <div class="form-group">
+        <label for="principal">Principal Amount (₹50,000 to ₹1,00,00,000):</label>
+        <div class="input-wrapper">
+            <span class="currency-prefix">₹</span>
+        <input type="text" id="principal" value="100000" oninput="validatePrincipal()">
+        </div>
+        <p id="principalError" class="error-message">Please enter a value between ₹50,000 and ₹1,00,00,000.</p>
+      </div>
+
+     
+      <div class="form-group">
+	
+        <label for="rateInput">Rate of Interest (1% to 18%):</label>
+	<div class="input-wrapper">
+        @* <div class="fixed-textbox-container"> *@
+          <input type="text" id="rateInput" step="0.01" min="1.00" max="18.00" value="10" oninput="updateRateFromInput()">
+                        <span class="percent-postfix">%</span>
+        </div>
+        <p id="rateError" class="error-message">Please enter a value between 1% and 18%.</p>
+                <input type="range" id="rate" step="0.01" min="1.00" max="18.00" value="10" oninput="updateRateFromSlider(this.value)" class="slider-color">
+        <div class="slider-scale">
+          <span>1%</span>
+          <span>18%</span>
+        </div>
+        <p>Selected Rate of Interest: <span id="selectedRate">10%</span></p>
+      </div>
+
+     
+      <div class="form-group">
+                    <label for="periodInput">Loan Period (1 to 7 years):</label>
+                    <div class="input-wrapper">
+                    <input type="text"
+                               id="periodInput"
+                               value="3"
+                               min="1"
+                               max="7"
+                               oninput="updatePeriodFromInput()"
+                               placeholder="Enter loan period" />
+                        <span class="year-postfix">years</span>
+                    </div>
+                    <p id="timeError" class="error-message">Please enter a value between 1 and 7.</p>
+        @* <label for="period">Loan Period (1 to 7 years):</label> *@
+                <input type="range" id="period" min="1" max="7" step="1" value="3" oninput="updatePeriodValue(this.value)" class="slider-color">
+        <div class="slider-scale">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+        </div>
+        <p>Selected Period: <span id="periodValue">3</span> year(s)</p>
+      </div>
+    </div>
+
+    <!-- Results Card -->
+    <div class="col-lg-6 results-card" id="resultsCard">
+      <h2>Calculation Results</h2>
+            <h6 class="loanhighlight">Monthly EMI:<br /> <span id="resultEMI">₹0.00</span></h6>
+
+            <p><strong>Principal Amount:</strong> <span id="resultPrincipal">₹0.00</span></p>
+            <p><strong>Total Interest Payable:</strong> <span id="resultInterest">₹0.00</span></p>
+            <p><strong>Total Amount Payable:</strong> <span id="resultTotal">₹0.00</span></p>
+    </div>
+ 
+  </div>
+  </body>
+  <script>
+    function validatePrincipal() {
+      const principalInput = document.getElementById("principal");
+      const errorElement = document.getElementById("principalError");
+      const minPrincipal = 50000;
+      const maxPrincipal = 10000000;
+
+      const principalValue = parseFloat(principalInput.value);
+
+      if (principalValue < minPrincipal || principalValue > maxPrincipal || isNaN(principalValue)) {
+        errorElement.style.display = "block";
+      } else {
+        errorElement.style.display = "none";
+        calculateEMI();
+      }
+    }
+
+    function updateRateFromSlider(value) {
+      const rateInput = document.getElementById("rateInput");
+      
+      ;
+       const formattedValue = parseFloat(value).toFixed(2).replace(',', '.');
+      document.getElementById("selectedRate").textContent = `${formattedValue}%`;
+      rateInput.value = formattedValue;
+      console.log("Original Value:", value);
+      console.log("Formatted Value:", formattedValue);
+      console.log("Text  Input Value",rateInput.value);
+ 
+    
+      //rateInput.value = formattedValue.replace(/,/g, '.');
+      document.getElementById("rateError").style.display = "none";
+      calculateEMI();
+    }
+
+
+    function updateRateFromInput() {
+      const rateInput = document.getElementById("rateInput");
+      // const rateValue = parseFloat(rateInput.value);
+      const rateValue = parseFloat(rateInput.value.replace(/,/g, '.'));
+      const slider = document.getElementById("rate");
+      const errorElement = document.getElementById("rateError");
+
+      if (rateValue >= 1 && rateValue <= 18) {
+       
+        const formattedValue = rateValue.toFixed(2); 
+        slider.value = formattedValue;
+        document.getElementById("selectedRate").textContent = `${formattedValue}%`;
+        errorElement.style.display = "none";
+        calculateEMI();
+      } else {
+        errorElement.style.display = "block";
+      }
+    }
+
+    function updatePeriodValue(value) {
+      // document.getElementById("periodValue").textContent = value;
+      const periodInput = document.getElementById("periodInput");
+      const periodValue = document.getElementById("periodValue");
+      periodInput.value = value;
+      periodValue.textContent = value;
+      calculateEMI();
+    }
+
+    function updatePeriodFromInput() {
+      const periodInput = document.getElementById("periodInput");
+      const periodSlider = document.getElementById("period");
+      const periodValue = document.getElementById("periodValue");
+      const errorElement = document.getElementById("timeError");
+
+      if (periodInput.value >= 1 && periodInput.value <= 7) {
+        periodSlider.value = periodInput.value;
+        periodValue.textContent = periodInput.value;
+        errorElement.style.display = "none";
+        calculateEMI();
+      } else {
+        errorElement.style.display = "block";
+      }
+    }
+
+
+    function calculateEMI() {
+      const principal = parseFloat(document.getElementById("principal").value);
+      const rate = parseFloat(document.getElementById("rate").value);
+      const period = parseInt(document.getElementById("period").value, 10);
+
+      if (isNaN(principal) || isNaN(rate) || isNaN(period)) return;
+      if (principal>10000000 || principal<50000 || rate<1 || rate>18 || period<1 || period >7) return;
+
+      const monthlyRate = rate / (12 * 100);
+      const months = period * 12;
+      const monthlyEMI = (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+
+      const totalAmount = monthlyEMI * months;
+      const totalInterest = totalAmount - principal;
+
+
+    // document.getElementById("resultPrincipal").textContent = `₹${principal.toLocaleString('en-IN')}`;
+    // document.getElementById("resultInterest").textContent = `₹${totalInterest.toLocaleString('en-IN')}`;
+    // document.getElementById("resultTotal").textContent = `₹${totalAmount.toLocaleString('en-IN')}`;
+    // document.getElementById("resultEMI").textContent = `₹${monthlyEMI.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+    document.getElementById("resultPrincipal").textContent = `₹${Math.round(principal).toLocaleString('en-IN')}`;
+    document.getElementById("resultInterest").textContent = `₹${Math.round(totalInterest).toLocaleString('en-IN')}`;
+   document.getElementById("resultTotal").textContent = `₹${Math.round(totalAmount).toLocaleString('en-IN')}`;
+   document.getElementById("resultEMI").textContent = `₹${Math.round(monthlyEMI).toLocaleString('en-IN')}`;
+
+
+    }
+
+    
+    calculateEMI();
+  </script>
+@* </body> *@
+@* </html> *@

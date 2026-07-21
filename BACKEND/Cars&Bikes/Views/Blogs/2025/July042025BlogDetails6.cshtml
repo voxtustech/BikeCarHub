@@ -1,0 +1,270 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Nexon vs Škoda Kylaq: India's B-Segment SUV Battle 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Tata Nexon vs Škoda Kylaq, Nexon vs Kylaq comparison 2025, Tata Nexon review 2025, Škoda Kylaq features, best sub-4 meter SUV India, Nexon vs Kylaq mileage, Tata Nexon price, Škoda Kylaq specifications, compact SUV comparison 2025, Nexon vs Kylaq safety, Nexon vs Kylaq performance, Nexon vs Kylaq interior, Nexon vs Kylaq ownership cost" />
+    <meta name="description" content="Detailed comparison of Tata Nexon and Škoda Kylaq compact SUVs in 2025. Compare design, performance, features, safety and pricing to choose the best sub-4 meter SUV for your needs." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 4th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                 <h2 class="subheading">1. Origins & Market Strategy</h2>
+
+                <h3 class="subheading">Tata Nexon</h3>
+                <ul>
+                    <li>Launched in 2017 and recently facelifted in late 2023, the Nexon is built on Tata's sturdy X1 platform—engineered for safety and resilience.</li>
+                    <li>Has sold over 800,000 units in India by 2025.</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+                <ul>
+                    <li>Revealed in November 2024 and entering production at Škoda's Pune plant in December 2024.</li>
+                    <li>Represents Škoda's first sub-4-metre SUV in India—all set for local manufacturing under the MQB-A0-IN platform.</li>
+                    <li>Positioned to attract buyers seeking edgy design and European-tech in an affordable sub-4-m segment.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">2. Exterior Styling & Road Presence</h2>
+
+                <h3 class="subheading">Tata Nexon</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/nexon-exterior.jpg" alt="Tata Nexon Exterior" title="Tata Nexon Exterior" /></div>
+                </div>
+                <p>Presents a bold, rugged identity—dual-tone roof options, diamond-cut alloys, flared wheel arches, and a refreshed grille/headlamp setup in its facelift. It leans into sporty SUV aesthetics.</p>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/kylaq-exterior.jpg" alt="Škoda Kylaq Exterior" title="Škoda Kylaq Exterior" /></div>
+                </div>
+                <p>Embraces modernity with sharp detailing: crystalline LED head and tail lights, gloss-black grille, flush roof rails, 17-inch alloys, and skid plates—all wrapped up in a clean, urban-smart silhouette.</p>
+
+                <p><span class="font-weight-700">Practical takeaway:</span> Choose the <span class="font-weight-700">Nexon</span> for a tough, road-conquering look; opt for the <span class="font-weight-700">Kylaq</span> if you want understated elegance with premium cues.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">3. Powertrains & Driveability</h2>
+
+                <h3 class="subheading">Tata Nexon</h3>
+                <ul>
+                    <li><span class="font-weight-700">Petrol:</span> 1.2 L Revotron turbo (120 PS, 170 Nm), offering 6-speed MT/AMT and a crisp 7-speed DCT.</li>
+                    <li><span class="font-weight-700">Diesel:</span> 1.5 L Revotorq (110 PS, 260 Nm), paired with manual & AMT.</li>
+                    <li><span class="font-weight-700">EV variant:</span> Nexon.ev line with up to 145 PS.</li>
+                    <li>Driving modes include Eco, City, Sport—plus paddle shifts and electronic shifters.</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+                <ul>
+                    <li>Powered by a single 1.0 L TSI petrol engine (999 cc inline-3), delivering 115 PS and 178 Nm torque—through a 6-speed manual or 6-speed auto box.</li>
+                    <li>A claimed 0-100 km/h time of 10.5 seconds with a max speed of 188 km/h.</li>
+                    <li>Fuel economy ranges from 19.05 to 19.68 kmpl—practical for urban and highway driving.</li>
+                </ul>
+
+                <h3 class="subheading">Performance standpoint:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Nexon</span> offers no match in engine variety, with petrol, diesel, and EV options.</li>
+                    <li><span class="font-weight-700">Kylaq</span> capitalizes on its turbo-petrol motor, providing refinement and efficiency at the lower end.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">4. Cabin Comfort & Tech</h2>
+
+                <h3 class="subheading">Tata Nexon</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/nexon-interior.jpg" alt="Tata Nexon Interior" title="Tata Nexon Interior" /></div>
+                </div>
+                <ul>
+                    <li>Features a digital instrument cluster and touchscreen infotainment (Harman in EV).</li>
+                    <li>Comes with iRA connected-car tech, voice-controlled sunroof, JBL sound system, and wireless charging.</li>
+                    <li>Offers ventilated leatherette seats, cooled glovebox, rear AC vents, and a 382 L boot.</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/kylaq-interior.jpg" alt="Škoda Kylaq Interior" title="Škoda Kylaq Interior" /></div>
+                </div>
+                <ul>
+                    <li>Offers premium interior cues: ambient lighting, metal accents, ventilated driver and passenger seats (power-adjustable in higher variants), and Clever design touches like ticket holders and seatback phone pockets.</li>
+                    <li>Sports a 10-inch touchscreen with wireless Apple/Android Auto, wireless phone charger, dual-zone auto climate with air purifier, and rear AC vents.</li>
+                    <li>Boot volume stands at 446 L, expandable to 1,265 L with rear seats folded.</li>
+                </ul>
+
+                <p><span class="font-weight-700">Interior takeaway:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Nexon</span> focuses more on utility and tech.</li>
+                    <li><span class="font-weight-700">Kylaq</span> steps into luxury territory with thoughtful extras and a spacious, airy cabin.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">5. Safety Assurance</h2>
+
+                <h3 class="subheading">Tata Nexon</h3>
+                <ul>
+                    <li>5-star Bharat NCAP rating (Oct 2024) with strong adult & child crash scores.</li>
+                    <li>Equipped with up to 6 airbags, ABS/EBD, ESC, and high-strength steel.</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+                <ul>
+                    <li>Also scored 5-star Bharat NCAP (Jan 2025).</li>
+                    <li>Offers standard dual front airbags, ABS, ESC, and potentially up to 6 airbags in top-end variants.</li>
+                </ul>
+
+                <p>Both thrive in safety; the choice shifts to your trust in respective after-sales networks and real-world crash safety.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">6. Dimensions & City Convenience</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Length (mm)</th>
+                                <th class="text-center">Width (mm)</th>
+                                <th class="text-center">Wheelbase (mm)</th>
+                                <th class="text-center">Ground Clearance</th>
+                                <th class="text-center">Boot (L)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Tata Nexon</td>
+                                <td>3,994</td>
+                                <td>1,804</td>
+                                <td>2,498</td>
+                                <td>~205 mm</td>
+                                <td>382</td>
+                            </tr>
+                            <tr>
+                                <td>Škoda Kylaq</td>
+                                <td>3,995</td>
+                                <td>1,783</td>
+                                <td>2,566</td>
+                                <td>189 mm</td>
+                                <td>446</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ul>
+                    <li><span class="font-weight-700">Nexon</span> is narrower—ideal for dense city traffic, with strong ground clearance.</li>
+                    <li><span class="font-weight-700">Kylaq</span>, on its slightly longer wheelbase, trades some clearance for better cabin space and boot capacity.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">7. Pricing & Variant Choice</h2>
+                <ul>
+                    <li><span class="font-weight-700">Tata Nexon:</span> ICE range begins at ₹10.99 L, rising to ~₹16 L. EV and diesel trims available.</li>
+                    <li><span class="font-weight-700">Škoda Kylaq:</span> Ex-showroom pricing spans ₹7.89 L (Classic MT) to ₹14.40 L (Prestige AT).</li>
+                </ul>
+
+                <p><span class="font-weight-700">Cost insight:</span> If fuel economy and clean petrol power are your focus, the Kylaq delivers value, especially with its lower starting price. For a broader spectrum of powertrain options (diesel, EV), Nexon remains a versatile choice.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">8. Ownership Experience & After-Sales</h2>
+                <ul>
+                    <li><span class="font-weight-700">Tata</span> enjoys a robust service network across India, offering wide dealership presence and favorable service costs.</li>
+                    <li><span class="font-weight-700">Škoda</span> is expanding rapidly (from 260 to 300+ outlets in 2025 alone) and targets 350 locations by year-end, suggesting they're bolstering support—especially with models like Kylaq now in play.</li>
+                </ul>
+
+                <p><span class="font-weight-700">Client insight:</span> Tata's well-oiled infrastructure is beneficial in semi-urban areas. Škoda appeals more in metro-centric locales and among buyers seeking a premium brand image.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">9. Real-World Feedback & Press Views</h2>
+
+                <h3 class="subheading">Kylaq user reviews:</h3>
+                <blockquote>
+                    "Turbo-petrol engine is refined and surprisingly offers strong low-end torque."<br>
+                    "Quality and consistency in fit and finish across the cabin are refreshing."
+                </blockquote>
+                <ul>
+                    <li>Owners laud the auto's smooth gear shifts and efficient fuel usage in traffic.</li>
+                    <li>While Kylaq lacks diesel or CNG, its petrol-only approach is considered strategic for urban buyers. Planned CNG variants may broaden this appeal soon.</li>
+                </ul>
+
+                <h3 class="subheading">Nexon reviews:</h3>
+                <p>Highlight its engine versatility and value, alongside occasional critiques about interior material quality in top trims.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">10. The Verdict — Choosing Based on Priorities</h2>
+
+                <h3 class="subheading">✅ Pick Tata Nexon if you want...</h3>
+                <ul>
+                    <li>A wider selection of drivetrains (diesel, petrol, EV)</li>
+                    <li>Rugged SUV looks with strong road presence</li>
+                    <li>Slightly better ground clearance for uneven terrain</li>
+                    <li>Trusted after-sales across smaller towns</li>
+                </ul>
+
+                <h3 class="subheading">✅ Choose Škoda Kylaq if you value...</h3>
+                <ul>
+                    <li>Premium interior, ambient lighting, Clever storage</li>
+                    <li>Refined turbo-petrol performance in an automatic</li>
+                    <li>Compact but roomy cabin with thoughtful ergonomics</li>
+                    <li>European badge and evolving tech like wireless connectivity</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Take</h2>
+                <p>Both the Nexon and Kylaq offer compelling packages backed by top-tier safety. The Nexon is a pragmatic, feature-rich powerhouse with option diversity, while the Kylaq shines with refinement, design and petrol efficiency. If you crave EV or diesel flexibility and rugged flair, opt for the Nexon. If touring city roads in style with turbo-smooth comfort is your priority, the Kylaq is your answer.</p>
+
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both SUVs to feel the difference yourself before making a purchase.</p>
+
+                <div class="div-line"></div>
+                <h3 class="heading">Check other vehicle guides here</h3>
+                <p>For Royal Enfield Motors <a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650">Click Here!</a></p>
+                <p>For Suzuki Motors <a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA">Click Here!</a></p>
+                <p>Check other Vehicles on <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></p>
+     
+              
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

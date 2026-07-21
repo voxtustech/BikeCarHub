@@ -1,0 +1,393 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Nexon vs Škoda Kylaq: 2025 SUV Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="Tata Nexon vs Škoda Kylaq, Nexon vs Kylaq comparison 2025, Nexon features 2025, Kylaq specifications, Best sub-4m SUV India 2025, Nexon vs Kylaq performance, Kylaq review India, Tata Nexon price 2025, Škoda Kylaq mileage, SUV comparison India 2025, Bharat NCAP 5-star SUVs, Nexon EV vs Kylaq, Affordable SUV comparison" />
+    <meta name="description" content="Compare Tata Nexon vs Škoda Kylaq in 2025. Check design, performance, features, safety, and pricing to decide which sub-4m SUV is best for your needs" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 1th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>In this detailed comparison by <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span>, we will break down every important aspect like design, performance, features, safety, and pricing to help you decide which SUV suits you best in 2025.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Origins & Market Strategy</h2>
+
+                <h3 class="subheading">Tata Nexon</h3>
+            
+                <ul>
+                    <li>Launched in 2017 and recently facelifted in late 2023</li>
+                    <li>Built on Tata's sturdy X1 platform—engineered for safety and resilience</li>
+                    <li>Has sold over 800,000 units in India by 2025</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+               
+                <ul>
+                    <li>Revealed in November 2024 and entering production at Škoda's Pune plant in December 2024</li>
+                    <li>Škoda's first sub-4-metre SUV in India</li>
+                    <li>Built on MQB-A0-IN platform for local manufacturing</li>
+                    <li>Positioned as an affordable sub-4m SUV with European-tech</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Exterior Styling & Road Presence</h2>
+
+                <h3 class="subheading">Tata Nexon</h3>
+               
+                <p>Presents a bold, rugged identity with:</p>
+                <ul>
+                    <li>Dual-tone roof options</li>
+                    <li>Diamond-cut alloys</li>
+                    <li>Flared wheel arches</li>
+                    <li>Refreshed grille/headlamp setup in facelift</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+              
+                <p>Embraces modernity with:</p>
+                <ul>
+                    <li>Crystalline LED head and tail lights</li>
+                    <li>Gloss-black grille</li>
+                    <li>Flush roof rails</li>
+                    <li>17-inch alloys</li>
+                    <li>Skid plates</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Choose the <strong>Nexon</strong> for a tough, road-conquering look; opt for the <strong>Kylaq</strong> if you want understated elegance with premium cues.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Powertrains & Driveability</h2>
+
+                <h3 class="subheading">Tata Nexon</h3>
+        
+                <ul>
+                    <li><span class="font-weight-700">Petrol:</span> 1.2L Revotron turbo (120PS, 170Nm), 6-speed MT/AMT and 7-speed DCT</li>
+                    <li><span class="font-weight-700">Diesel:</span> 1.5L Revotorq (110PS, 260Nm), manual & AMT</li>
+                    <li><span class="font-weight-700">EV variant:</span> Nexon.ev line with up to 145PS</li>
+                    <li>Driving modes: Eco, City, Sport plus paddle shifts and electronic shifters</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+            
+                <ul>
+                    <li>1.0L TSI petrol engine (115PS, 178Nm)</li>
+                    <li>6-speed manual or 6-speed auto transmission</li>
+                    <li>0-100 km/h in 10.5 seconds, top speed 188 km/h</li>
+                    <li>Fuel economy: 19.05 to 19.68 kmpl</li>
+                </ul>
+
+                <p><span class="font-weight-700">Performance standpoint:</span></p>
+                <ul>
+                    <li><strong>Nexon</strong> offers more engine variety (petrol, diesel, EV)</li>
+                    <li><strong>Kylaq</strong> provides refinement and efficiency at lower end</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Cabin Comfort & Tech</h2>
+
+                <h3 class="subheading">Tata Nexon</h3>
+            
+                <ul>
+                    <li>Digital instrument cluster and touchscreen infotainment (Harman in EV)</li>
+                    <li>iRA connected-car tech</li>
+                    <li>Voice-controlled sunroof, JBL sound system, wireless charging</li>
+                    <li>Ventilated leatherette seats, cooled glovebox, rear AC vents</li>
+                    <li>382L boot space</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+               
+                <ul>
+                    <li>Ambient lighting, metal accents</li>
+                    <li>Ventilated driver and passenger seats (power-adjustable in higher variants)</li>
+                    <li>Clever design touches like ticket holders and seatback phone pockets</li>
+                    <li>10-inch touchscreen with wireless Apple/Android Auto</li>
+                    <li>Wireless phone charger, dual-zone auto climate with air purifier</li>
+                    <li>446L boot (expandable to 1,265L)</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> <strong>Nexon</strong> focuses more on utility and tech while <strong>Kylaq</strong> steps into luxury territory with thoughtful extras.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Safety Assurance</h2>
+                <ul>
+                    <li><span class="font-weight-700">Tata Nexon:</span> 5-star Bharat NCAP rating (Oct 2024) with up to 6 airbags, ABS/EBD, ESC, and high-strength steel</li>
+                    <li><span class="font-weight-700">Škoda Kylaq:</span> 5-star Bharat NCAP (Jan 2025) with standard dual front airbags, ABS, ESC, and up to 6 airbags in top variants</li>
+                </ul>
+                <p>Both thrive in safety; the choice shifts to your trust in respective after-sales networks.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Dimensions & City Convenience</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Length (mm)</th>
+                                <th class="text-center">Width (mm)</th>
+                                <th class="text-center">Wheelbase (mm)</th>
+                                <th class="text-center">Ground Clearance</th>
+                                <th class="text-center">Boot (L)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Tata Nexon</td>
+                                <td>3,994</td>
+                                <td>1,804</td>
+                                <td>2,498</td>
+                                <td>~205 mm</td>
+                                <td>382</td>
+                            </tr>
+                            <tr>
+                                <td>Škoda Kylaq</td>
+                                <td>3,995</td>
+                                <td>1,783</td>
+                                <td>2,566</td>
+                                <td>189 mm</td>
+                                <td>446</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Nexon</span> is narrower—ideal for dense city traffic, with strong ground clearance</li>
+                    <li><span class="font-weight-700">Kylaq</span> trades some clearance for better cabin space and boot capacity</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Pricing & Variant Choice</h2>
+                <ul>
+                    <li><span class="font-weight-700">Tata Nexon:</span> ₹10.99L - ₹16L (ICE range), EV and diesel trims available</li>
+                    <li><span class="font-weight-700">Škoda Kylaq:</span> ₹7.89L (Classic MT) - ₹14.40L (Prestige AT)</li>
+                </ul>
+                <p><span class="font-weight-700">Cost insight:</span> Kylaq delivers value for petrol efficiency while Nexon offers broader powertrain options.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Ownership Experience & After-Sales</h2>
+                <ul>
+                    <li><span class="font-weight-700">Tata:</span> Robust service network across India with favorable service costs</li>
+                    <li><span class="font-weight-700">Škoda:</span> Expanding from 260 to 300+ outlets in 2025, targeting 350 by year-end</li>
+                </ul>
+                <p><span class="font-weight-700">Client insight:</span> Tata's network benefits semi-urban areas while Škoda appeals in metro-centric locales.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Real-World Feedback</h2>
+                <p>
+                    "Turbo-petrol engine is refined and surprisingly offers strong low-end torque."<br>
+                    "Quality and consistency in fit and finish across the cabin are refreshing."
+                </p>
+                <ul>
+                    <li>Kylaq owners praise smooth gear shifts and fuel efficiency</li>
+                    <li>Nexon reviews highlight engine versatility with occasional critiques about interior materials</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Which One Should You Buy?</h2>
+
+                <p><span class="font-weight-700">✅ Pick Tata Nexon if you want...</span></p>
+                <ul>
+                    <li>Wider selection of drivetrains (diesel, petrol, EV)</li>
+                    <li>Rugged SUV looks with strong road presence</li>
+                    <li>Better ground clearance for uneven terrain</li>
+                    <li>Trusted after-sales across smaller towns</li>
+                </ul>
+
+                <p><span class="font-weight-700">✅ Choose Škoda Kylaq if you value...</span></p>
+                <ul>
+                    <li>Premium interior, ambient lighting, clever storage</li>
+                    <li>Refined turbo-petrol performance in an automatic</li>
+                    <li>Compact but roomy cabin with thoughtful ergonomics</li>
+                    <li>European badge and evolving tech</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Final Verdict:</span></p>
+                <p>Both offer compelling packages backed by top-tier safety. The <strong>Nexon</strong> is a pragmatic, feature-rich powerhouse with option diversity, while the <strong>Kylaq</strong> shines with refinement, design and petrol efficiency. If you crave EV or diesel flexibility and rugged flair, opt for the Nexon. If touring city roads in style with turbo-smooth comfort is your priority, the Kylaq is your answer.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs: Tata Nexon vs Škoda Kylaq</h2>
+
+                <div class="accordion" id="faqNexonKylaq">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which SUV has better fuel efficiency?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Kylaq's 1.0L TSI petrol offers 19.05-19.68 kmpl, while Nexon's petrol variant delivers slightly lower efficiency.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Does the Nexon have an electric variant?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                Yes, the Nexon.ev line offers up to 145PS power output.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Which SUV has more cabin space?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Kylaq offers slightly more cabin space with its longer wheelbase (2,566mm vs Nexon's 2,498mm).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Which one is better for highway driving?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Kylaq's refined turbo-petrol engine and smooth automatic transmission make it excellent for highways.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which SUV has better ground clearance?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Nexon offers ~205mm ground clearance compared to Kylaq's 189mm, making it better for rough roads.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Does the Kylaq have a diesel option?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                No, the Kylaq currently only offers a 1.0L TSI petrol engine.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which SUV has more premium interior features?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Kylaq offers more premium touches like ambient lighting, ventilated front seats, and clever storage solutions.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Which is more affordable to maintain?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                Tata typically has lower maintenance costs, though Škoda is improving its service network and costs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Which SUV has better infotainment?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                Both offer good systems, but Kylaq's 10-inch touchscreen with wireless Apple/Android Auto edges ahead.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Which is better for city driving?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Nexon's narrower width (1,804mm vs Kylaq's 1,783mm) makes it slightly more maneuverable in tight city spaces.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,397 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Kia Sonet vs Tata Nexon: Full 2025 Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="Kia Sonet vs Tata Nexon, Sonet vs Nexon comparison 2025, Kia Sonet features 2025, Tata Nexon price 2025, Best subcompact SUV India 2025, Sonet vs Nexon mileage, Tata Nexon safety rating, Kia Sonet ADAS features, Best SUV under 15 lakhs, Sonet diesel vs Nexon petrol, Nexon DCA gearbox, Sonet GTX+ features, Nexon Fearless+ S review" />
+    <meta name="description" content="Compare Kia Sonet vs Tata Nexon in 2025. Check design, features, performance, safety, price, and decide which subcompact SUV is best for your needs." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 3rd July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>In this detailed comparison by <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span>, we will break down every important aspect like design, performance, features, safety, pricing, and more to help you decide which SUV suits you best in 2025.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Design & Styling</h2>
+                <p>Both SUVs have distinctive designs that appeal to different tastes.</p>
+
+                <h3 class="subheading">Kia Sonet</h3>
+                
+                <p>The 2025 Kia Sonet sports a refreshed look with updated <span class="font-weight-700">LED headlamps</span>, revised <span class="font-weight-700">tiger-nose grille</span>, and more aggressive bumpers. The <span class="font-weight-700">X-Line variant</span> adds dark chrome elements and a unique matte exterior. The Sonet retains a youthful, premium vibe, especially in its <span class="font-weight-700">GT Line</span> and <span class="font-weight-700">X-Line trims</span>.</p>
+
+                <p><span class="font-weight-700">Dimensions:</span></p>
+                <ul>
+                    <li>Length: 3995 mm</li>
+                    <li>Width: 1790 mm</li>
+                    <li>Height: 1610 mm</li>
+                    <li>Wheelbase: 2500 mm</li>
+                </ul>
+
+                <h3 class="subheading">Tata Nexon</h3>
+                
+                <p>Tata Nexon received a major facelift in late 2023, which carries into the 2025 model year. It features a bold <span class="font-weight-700">split LED headlight design</span>, <span class="font-weight-700">connected LED tail lamp</span>, and a wider, more sculpted stance. It offers a sportier, muscular look with high road presence.</p>
+
+                <p><span class="font-weight-700">Dimensions:</span></p>
+                <ul>
+                    <li>Length: 3995 mm</li>
+                    <li>Width: 1804 mm</li>
+                    <li>Height: 1620 mm</li>
+                    <li>Wheelbase: 2498 mm</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> The Nexon has a bolder, muscular design while the Sonet feels more premium and urban-focused. Both excel in design but cater to slightly different tastes.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Powertrain & Performance</h2>
+
+                <h3 class="subheading">Kia Sonet (2025) Engine Options:</h3>
+                <ul>
+                    <li><span class="font-weight-700">1.2L Petrol</span> (83 PS / 115 Nm) -- 5-speed MT</li>
+                    <li><span class="font-weight-700">1.0L Turbo Petrol</span> (120 PS / 172 Nm) -- iMT & 7DCT</li>
+                    <li><span class="font-weight-700">1.5L Diesel</span> (116 PS / 250 Nm) -- 6MT / 6AT</li>
+                </ul>
+
+                <h3 class="subheading">Tata Nexon (2025) Engine Options:</h3>
+                <ul>
+                    <li><span class="font-weight-700">1.2L Turbo Petrol</span> (120 PS / 170 Nm) -- 5MT, 6MT, 6AMT, 7DCA</li>
+                    <li><span class="font-weight-700">1.5L Diesel</span> (115 PS / 260 Nm) -- 6MT, 6AMT</li>
+                </ul>
+
+                <p>Both also offer <span class="font-weight-700">multiple drive modes</span>, but the Nexon has an edge with a smoother <span class="font-weight-700">dual-clutch automatic (DCA)</span> for petrol.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Nexon offers more transmission options and a refined turbo-petrol-DCA combo, while Sonet provides excellent diesel-automatic performance.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Features Comparison</h2>
+
+                <h3 class="subheading">Kia Sonet Key Features (Top GTX+ / X-Line):</h3>
+                <ul>
+                    <li>10.25" touchscreen infotainment</li>
+                    <li>Bose 7-speaker system</li>
+                    <li>360° camera</li>
+                    <li>Ventilated front seats</li>
+                    <li>Digital cluster with navigation</li>
+                    <li>ADAS (Advanced Driver Assistance System)</li>
+                    <li>Front parking sensors</li>
+                    <li>Air purifier with virus protection</li>
+                </ul>
+
+                <h3 class="subheading">Tata Nexon Key Features (Top Fearless+ S):</h3>
+                <ul>
+                    <li>10.25" touchscreen with wireless Android Auto/Apple CarPlay</li>
+                    <li>10.25" digital cluster</li>
+                    <li>360° camera</li>
+                    <li>JBL sound system</li>
+                    <li>Ventilated seats</li>
+                    <li>Sunroof</li>
+                    <li>Air purifier</li>
+                    <li>Arcade.ev app suite</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Feature-wise, it's a close call. Sonet scores with Bose audio and ADAS, while Nexon has a cleaner UI, better display integration, and digital cockpit feel.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Safety Features</h2>
+
+                <h3 class="subheading">Kia Sonet Safety:</h3>
+                <ul>
+                    <li>6 airbags standard across variants</li>
+                    <li>ESC, VSM, Hill Assist</li>
+                    <li>ADAS (GTX+ and X-Line only): Forward Collision Warning, Lane Keep Assist, High Beam Assist, Driver Attention Alert</li>
+                </ul>
+
+                <h3 class="subheading">Tata Nexon Safety:</h3>
+                <ul>
+                    <li>6 airbags standard</li>
+                    <li>ESP, Roll-over Mitigation, TPMS</li>
+                    <li>360° camera with dynamic guidelines</li>
+                    <li>Emergency call and breakdown call</li>
+                    <li>ISOFIX child anchors</li>
+                </ul>
+
+                <p><span class="font-weight-700">Crash Rating:</span></p>
+                <ul>
+                    <li>Previous-gen Nexon: 5-Star Global NCAP</li>
+                    <li>Sonet (new gen not yet tested under GNCAP 2024 protocol)</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Nexon has proven GNCAP safety credentials. Sonet gets ADAS, which is rare in this segment. It's a safety vs tech debate.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Specifications Comparison Table</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">Kia Sonet 2025</th>
+                                <th class="text-center">Tata Nexon 2025</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Length</td>
+                                <td>3995 mm</td>
+                                <td>3995 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Width</td>
+                                <td>1790 mm</td>
+                                <td>1804 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Height</td>
+                                <td>1610 mm</td>
+                                <td>1620 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Wheelbase</td>
+                                <td>2500 mm</td>
+                                <td>2498 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Petrol Engine</td>
+                                <td>1.2L (83 PS) / 1.0L Turbo (120 PS)</td>
+                                <td>1.2L Turbo (120 PS)</td>
+                            </tr>
+                            <tr>
+                                <td>Diesel Engine</td>
+                                <td>1.5L (116 PS)</td>
+                                <td>1.5L (115 PS)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Transmission Options</td>
+                                <td>5MT, iMT, 6MT, 6AT, 7DCT</td>
+                                <td>5MT, 6MT, 6AMT, 7DCA</td>
+                            </tr>
+                            <tr>
+                                <td>Infotainment</td>
+                                <td>10.25" touchscreen</td>
+                                <td>10.25" touchscreen</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Instrument Cluster</td>
+                                <td>Digital</td>
+                                <td>10.25" Digital</td>
+                            </tr>
+                            <tr>
+                                <td>Audio System</td>
+                                <td>Bose 7-speaker</td>
+                                <td>JBL</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Safety Features</td>
+                                <td>6 airbags, ADAS (top variants)</td>
+                                <td>6 airbags, 5-star GNCAP</td>
+                            </tr>
+                            <tr>
+                                <td>Price Range (Ex-showroom)</td>
+                                <td>₹7.99 - ₹14.74 L</td>
+                                <td>₹8.00 - ₹14.50 L</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Variant-wise Pricing</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Base Price (₹)</th>
+                                <th class="text-center">Top Variant (₹)</th>
+                                <th class="text-center">Top Features Include</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Kia Sonet</td>
+                                <td>7.99 L</td>
+                                <td>14.74 L</td>
+                                <td>ADAS, ventilated seats, 360° cam, Bose, sunroof</td>
+                            </tr>
+                            <tr>
+                                <td>Tata Nexon</td>
+                                <td>8.00 L</td>
+                                <td>14.50 L</td>
+                                <td>JBL, 360° cam, digital cockpit, air purifier, sunroof</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Prices are nearly identical across the range. Sonet offers more trims, while Nexon trims are simpler to understand and better spaced.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Fuel Efficiency</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Powertrain</th>
+                                <th class="text-center">Kia Sonet (ARAI)</th>
+                                <th class="text-center">Tata Nexon (ARAI)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>1.2L Petrol MT</td>
+                                <td>18.4 kmpl</td>
+                                <td>---</td>
+                            </tr>
+                            <tr>
+                                <td>1.0L Turbo Petrol DCT</td>
+                                <td>19.2 kmpl</td>
+                                <td>17.4 kmpl (DCA)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>1.5L Diesel MT/AT</td>
+                                <td>24.1 / 19.0 kmpl</td>
+                                <td>23.2 / 24.0 kmpl</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Sonet diesel MT is the most efficient; Nexon diesel AMT leads in city mileage.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">After-sales & Warranty</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Brand</th>
+                                <th class="text-center">Warranty</th>
+                                <th class="text-center">Service Network</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Kia</td>
+                                <td>3 yrs / 1 lakh km (5 yrs optional)</td>
+                                <td>Growing rapidly</td>
+                            </tr>
+                            <tr>
+                                <td>Tata</td>
+                                <td>3 yrs / 1 lakh km (upgradable)</td>
+                                <td>Wider rural reach</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Kia's service experience is more premium, while Tata has improved reliability and lower running costs.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Verdict -- Which One to Choose?</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Priority</th>
+                                <th class="text-center">Winner</th>
+                                <th class="text-center">Reason</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Best for diesel commuters</td>
+                                <td>Sonet</td>
+                                <td>Refined diesel AT + better mileage</td>
+                            </tr>
+                            <tr>
+                                <td>Best petrol automatic</td>
+                                <td>Nexon</td>
+                                <td>Smoother 7-speed DCA + more drive modes</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Feature-loaded experience</td>
+                                <td>Tie</td>
+                                <td>Both have 360° cam, ventilated seats, wireless features</td>
+                            </tr>
+                            <tr>
+                                <td>ADAS Technology</td>
+                                <td>Sonet</td>
+                                <td>Only one in segment offering ADAS</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Proven safety + crash rating</td>
+                                <td>Nexon</td>
+                                <td>5-star rated platform, more robust body design</td>
+                            </tr>
+                            <tr>
+                                <td>Interior experience</td>
+                                <td>Nexon</td>
+                                <td>Full-digital cockpit, connected feel</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>After-sales service</td>
+                                <td>Kia</td>
+                                <td>Premium touch, fast-growing dealership network</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Conclusion</h2>
+                <p>If you're seeking <span class="font-weight-700">premium design, top-end diesel refinement, or ADAS</span>, go for the <span class="font-weight-700">Kia Sonet</span>. But if you value <span class="font-weight-700">proven safety, punchy petrol DCA, and a futuristic interior</span>, the <span class="font-weight-700">Tata Nexon</span> is a more compelling buy in 2025.</p>
+                <p>Both are excellent SUVs—choose the one that fits your lifestyle, location, and driving needs best.</p>
+
+                <div class="div-line"></div>
+              
+      
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

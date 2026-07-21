@@ -1,0 +1,102 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "TVS Apache RR 310 Variants Launch - Performance and Style Redefined";
+}
+@section MetaTags{
+    <meta name="keywords" content="TVS Apache RR 310, new variants, sports bike, motorcycle launch, performance upgrade, motorcycle features, TVS Motors" />
+    <meta name="description" content="Discover the new variants of the TVS Apache RR 310, featuring upgraded performance, enhanced design, and smart connectivity. Perfect for both enthusiasts and daily riders." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>TVS Motors has officially launched new variants of the Apache RR 310, the brand's premium sports motorcycle, designed to elevate both performance and visual appeal. The Apache RR 310 has been a popular choice among biking enthusiasts since its inception, and the latest updates promise to enhance the riding experience even further.</p>
+                <p>The new variants feature a refined engine, retaining the 312.2cc single-cylinder unit, but now tuned for better performance and efficiency. The peak power output remains at 34 PS, but torque delivery has been optimized, resulting in smoother acceleration and enhanced throttle response. This makes the bike not only suitable for spirited rides but also practical for daily commuting.</p>
+                <p>In terms of design, the Apache RR 310 boasts a more aggressive stance with sharper lines and new color schemes that add to its sporty character. The updated variant includes an adjustable windscreen, improving aerodynamics and rider comfort during high-speed rides. TVS has also introduced a new fully digital TFT display that provides comprehensive ride data, including navigation, which is a first for this model.</p>
+                <p>Safety features have been significantly upgraded. The new variants come equipped with a dual-channel ABS system, ensuring better braking performance. Additionally, the bike features improved suspension settings for enhanced stability and control, especially in challenging road conditions.</p>
+                <p>TVS is also focusing on the tech-savvy rider with the addition of Bluetooth connectivity. This allows riders to connect their smartphones to the bike for access to call notifications, music control, and other features, making the Apache RR 310 not just a performance machine, but also a smart one.</p>
+                <p>Overall, the new variants of the Apache RR 310 are set to attract a wider audience, from seasoned riders seeking thrill to newcomers looking for a reliable and stylish motorcycle. With its competitive pricing and feature set, the Apache RR 310 aims to stand out in the crowded sports bike market.</p>
+                <h3 class="subheading">Key Points</h3>
+                <ol>
+                    <li>Launch of new variants of TVS Apache RR 310.</li>
+                    <li>Enhanced engine performance and torque delivery.</li>
+                    <li>Aggressive design with new color options.</li>
+                    <li>Adjustable windscreen for improved aerodynamics.</li>
+                    <li>Fully digital TFT display with navigation features.</li>
+                    <li>Dual-channel ABS for better safety.</li>
+                    <li>Improved suspension for stability.</li>
+                    <li>Bluetooth connectivity for smart features.</li>
+                </ol>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

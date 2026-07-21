@@ -1,0 +1,101 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "2025 Yamaha YZF-R9 Unveiled | New Supersport with CP3 Engine";
+}
+@section MetaTags{
+    <meta name="keywords" content="Yamaha YZF-R9 2025, Yamaha R9 specs, 2025 Yamaha sportbike, Yamaha R9 release, Yamaha CP3 engine" />
+    <meta name="description" content="Discover the all-new 2025 Yamaha YZF-R9, powered by a refined 890cc CP3 engine, featuring advanced electronics, a lightweight chassis, and track-inspired design. Priced at $12,499." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>
+                    The 2025 Yamaha YZF-R9 redefines the supersport class by combining exhilarating track performance with everyday street-riding practicality. Equipped with an 890cc inline three-cylinder engine, it delivers a potent 117 hp at 10,000 rpm and 93 Nm of torque at 7,000 rpm. The YZF-R9 borrows its engine from the popular MT-09, but Yamaha has optimized the fuel map and gearing for this fully-faired sportbike​.
+                </p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/yamaha unveils the all new 2025 yzf r9 a game changer in the supersport segment/2.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/oct/yamaha unveils the all new 2025 yzf r9 a game changer in the supersport segment/3.webp" /></div>
+                </div>
+                <p>
+                    The R9 is built around a gravity-cast aluminum Deltabox frame, touted as the lightest chassis in Yamaha's supersport range. The bike's aerodynamic bodywork, which includes MotoGP-inspired winglets, enhances downforce and stability at high speeds. The Brembo Stylema monobloc calipers with 320 mm front discs ensure exceptional stopping power, while fully adjustable KYB suspension provides precise handling​.
+                </p>
+                <div class="row  m-b20">
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/latestnews/2024/oct/yamaha unveils the all new 2025 yzf r9 a game changer in the supersport segment/4.webp" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/latestnews/2024/oct/yamaha unveils the all new 2025 yzf r9 a game changer in the supersport segment/5.webp" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/latestnews/2024/oct/yamaha unveils the all new 2025 yzf r9 a game changer in the supersport segment/6.webp" /></div>
+                </div>
+                <p>In terms of electronics, the R9 is packed with rider aids like a six-axis IMU, lean-sensitive traction control, slide control, and launch control, all managed via a full-color 5-inch TFT display. Smartphone connectivity through Yamaha’s Y-Connect app adds a modern touch, allowing riders to access navigation and notifications. Available in three colors, the YZF-R9 is expected to hit dealerships in mid-2025​.</p>
+             </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

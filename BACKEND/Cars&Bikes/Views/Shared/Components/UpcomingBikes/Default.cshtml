@@ -1,0 +1,78 @@
+﻿@model List<Cars_Bikes.Models.UpcomingBike>
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+
+<div class="blogs-section">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 blog-head-box">
+            <div class="blog-head">
+                <h1><a asp-controller="UpcomingBike" asp-action="TWUpcomingBikeDetails">Upcoming Bikes</a></h1>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-10 blogs-section">
+            <button class="scroll-button left" onclick="scrollContainer('upcomingContainer', -1)">&#9664;</button>
+
+
+            <div class="blogs-container" id="upcomingContainer">
+                @foreach (var bike in Model)
+                {
+                    <div class="blogs-item">
+                        <section>
+                           <a href="/@bike.ImageURL" style="text-decoration:none">
+
+                               <div class="upcoming-bike-img">
+                                   <img src="@bike.ImageFolderURL" />
+                               </div>
+
+                               <div class="upcoming-bike-name">
+                                   @*@Truncate(@bike.UpcomingBikeName, 26)*@
+                                   @Truncate(@bike.UpcomingBikeName ?? "", 26)
+                               </div>
+
+                               <div class="upcoming-bike-date">
+                                   <p>BikeCarHu | <i class="fa fa-calendar"></i> @bike.ExpectedLaunchDate</p>
+                               </div>
+
+                               @*<div class="launch-countdown"
+                                    data-launch="2026-12-01">
+
+                                   <div class="countdown-box">
+                                       <span class="days">00</span>
+                                       <small>Days</small>
+                                   </div>
+
+                                   <div class="countdown-box">
+                                       <span class="hours">00</span>
+                                       <small>Hours</small>
+                                   </div>
+
+                                   <div class="countdown-box">
+                                       <span class="minutes">00</span>
+                                       <small>Minutes</small>
+                                   </div>
+                                   <div class="countdown-box">
+                                       <span class="seconds">00</span>
+                                       <small>Seconds</small>
+                                   </div>
+                               </div>*@
+
+                           </a>
+                            <div class="ow-post-readmore">
+                                <a href="/@bike.ImageURL" rel="bookmark"> Read More <i class="fa fa-angle-right"></i></a>
+                            </div>
+
+                        </section>
+                    </div>
+                }
+            </div>
+            <button class="scroll-button right" onclick="scrollContainer('upcomingContainer', 1)">&#9654;</button>
+        </div>
+    </div>
+</div>

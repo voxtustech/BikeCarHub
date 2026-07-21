@@ -1,0 +1,517 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Apply Driving License Online India – 2025 Guide";
+}
+@section MetaTags {
+    <meta name="keywords" content="How to apply for driving license online, Driving license online application India, Parivahan Sewa driving license, Apply learner license online India, Apply permanent DL online, Driving license documents 2025, RTO online slot booking, Indian driving license fees 2025, Driving test India online process, BikeCarHub driving license guide, Download learner license Parivahan, Online driving license form filling, mParivahan license download, How to get Indian driving license, Best way to apply " />
+    <meta name="description" content="Learn how to apply for a driving license online in India. Step-by-step 2025 guide with documents, fees, process, FAQs & more at BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 3rd July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>This detailed guide from <span class="font-weight-700">BikeCarHub</span> walks you through the complete process of how to apply for a driving license online in India in 2025—whether it's a learner's license, permanent license, or even an international permit.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Why Apply for a Driving License Online?</h2>
+                <p>Applying for a driving license online offers several advantages:</p>
+                <ul>
+                    <li>Saves time and effort</li>
+                    <li>Convenient form submission and document upload</li>
+                    <li>Schedule tests at your preferred RTO and time</li>
+                    <li>Instant updates via SMS and email</li>
+                    <li>Reduced dependency on agents or middlemen</li>
+                </ul>
+                <p>The Government of India has centralized most services under the <span class="font-weight-700">Parivahan Sewa</span> portal to streamline access and improve transparency.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Types of Driving Licenses in India</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/apply driving license online india/types-of-driving-license-in-india.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p>Depending on your need and vehicle type, India offers several types of driving licenses:</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">License Type</th>
+                                <th class="text-center">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Learner's License (LL)</td>
+                                <td>Temporary license valid for <span class="font-weight-700">6 months</span> before a permanent one</td>
+                            </tr>
+                            <tr>
+                                <td>Permanent Driving License (DL)</td>
+                                <td>Issued after successful driving test</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Commercial License</td>
+                                <td>For transport and goods vehicles</td>
+                            </tr>
+                            <tr>
+                                <td>Motorcycle Without Gear (MCWOG)</td>
+                                <td>For scooters and mopeds</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Motorcycle With Gear (MCWG)</td>
+                                <td>For bikes above 50cc</td>
+                            </tr>
+                            <tr>
+                                <td>Light Motor Vehicle (LMV)</td>
+                                <td>For cars and small personal vehicles</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>International Driving Permit (IDP)</td>
+                                <td>For Indian citizens driving abroad</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Eligibility Criteria</h2>
+                <p>To apply online for a driving license, you must meet these eligibility conditions:</p>
+                <h3 class="subheading">Learner's License:</h3>
+                <ul>
+                    <li>16+ years (for gearless two-wheelers up to 50cc, with parental/guardian consent)</li>
+                    <li>18+ years (for motor vehicles with gear (excluding transport vehicles))</li>
+                </ul>
+
+                <h3 class="subheading">Permanent License:</h3>
+                <ul>
+                    <li>Must hold a valid learner's license for at least 30 days</li>
+                </ul>
+
+                <h3 class="subheading">Commercial License:</h3>
+                <ul>
+                    <li>Minimum age: 20 years</li>
+                    <li>Must have passed Class 8 (varies by state)</li>
+                </ul>
+
+                <h3 class="subheading">General Requirement:</h3>
+                <ul>
+                    <li>Applicant must be mentally and physically fit to drive</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Documents Required</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/apply driving license online india/documents-required-for-driving-license-in-delhi.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p>Before applying, keep scanned copies of the following documents ready:</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Document Type</th>
+                                <th class="text-center">Accepted Proofs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Identity Proof</td>
+                                <td>Aadhaar Card, PAN Card, Passport</td>
+                            </tr>
+                            <tr>
+                                <td>Address Proof</td>
+                                <td>Voter ID, Utility Bill, Aadhaar, Passport</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Age Proof</td>
+                                <td>Birth Certificate, School Leaving Certificate</td>
+                            </tr>
+                            <tr>
+                                <td>Photographs</td>
+                                <td>Passport-size photo</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Form 1 / 1A</td>
+                                <td>Medical self-declaration / certificate for commercial DL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+               
+                <p>Make sure all documents are clear, recent, and match the details you enter in the form.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Step-by-Step Guide to Apply Online via Parivahan Sewa</h2>
+               
+                <p>Here's how to apply for your driving license online in India in 2025:</p>
+
+                <h3 class="subheading">Step 1: Visit the Official Portal</h3>
+                <ul>
+                    <li>Visit the Parivahan website to apply for your driving licence online:</li>
+                    <li>Go to <a href="https://sarathi.parivahan.gov.in/sarathiservice/stateSelection.do" class="for-link" target="_blank">https://sarathi.parivahan.gov.in</a></li>
+                </ul>
+
+                <h3 class="subheading">Step 2: Select Your State</h3>
+                <ul>
+                    <li>Choose your state/UT to access local RTO services</li>
+                </ul>
+
+                <h3 class="subheading">Step 3: Choose the Service</h3>
+                <ul>
+                    <li>Select: <span class="font-weight-700">Apply for Learner's License</span> or <span class="font-weight-700">Apply for Driving License</span> (if you already hold LL)</li>
+                </ul>
+
+                <h3 class="subheading">Step 4: Fill the Application Form</h3>
+                <ul>
+                    <li>Enter personal details like name, address, etc.</li>
+                    <li>Choose vehicle class (MCWG, LMV, etc.)</li>
+                    <li>Provide emergency contact info</li>
+                </ul>
+
+                <h3 class="subheading">Step 5: Upload Required Documents</h3>
+                <ul>
+                    <li>Upload scanned copies of identity, address, age proof, and photo</li>
+                    <li>Upload Form 1/1A if applicable</li>
+                </ul>
+
+                <h3 class="subheading">Step 6: Book Slot for Test</h3>
+                <ul>
+                    <li>Schedule a test date and time at the nearest RTO</li>
+                </ul>
+
+                <h3 class="subheading">Step 7: Pay the Application Fee</h3>
+                <ul>
+                    <li>Use UPI, net banking, or credit/debit card</li>
+                </ul>
+
+                <h3 class="subheading">Step 8: Appear for the Test</h3>
+                <ul>
+                    <li>For Learner's License: Online written test (traffic signs, rules)</li>
+                    <li>For Permanent License: On-ground driving skill test at RTO</li>
+                </ul>
+
+                <h3 class="subheading">Step 9: Document Submission</h3>
+                <ul>
+                    <li>Carry the original documents and the receipt of the fee payment when you visit the RTO for your driving test.</li>
+                    <li>Pass the driving test to obtain a driving license.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Fee Structure (Indicative — May Vary by State)</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">License Type</th>
+                                <th class="text-center">Approx. Fee (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Learner's License</td>
+                                <td>₹150 — ₹200</td>
+                            </tr>
+                            <tr>
+                                <td>Permanent DL</td>
+                                <td>₹200 — ₹400</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Test Slot Re-booking</td>
+                                <td>₹50 — ₹100</td>
+                            </tr>
+                            <tr>
+                                <td>International Permit</td>
+                                <td>₹1,000 — ₹1,500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/apply driving license online india/how-to-get-an-international-driving-license.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+
+                <p>Here's a more detailed breakdown:</p>
+                <h3 class="subheading">Learner's License:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Fee for issuance:</span> ₹150-200</li>
+                    <li><span class="font-weight-700">Test fee:</span> ₹50 for the test or repeat test</li>
+                </ul>
+
+                <h3 class="subheading">Permanent Driving License:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Fee for issuance:</span> ₹200</li>
+                    <li><span class="font-weight-700">Smart card fee (if applicable):</span> ₹200</li>
+                    <li><span class="font-weight-700">Test fee:</span> ₹300 for the test or repeat test</li>
+                    <li><span class="font-weight-700">Addition of another class of vehicle:</span> ₹500</li>
+                </ul>
+
+                <h3 class="subheading">Other fees:</h3>
+                <ul>
+                    <li><span class="font-weight-700">International Driving Permit:</span> ₹1000</li>
+                    <li><span class="font-weight-700">Renewal of driving license:</span> ₹200 (may be higher if renewal is delayed)</li>
+                    <li><span class="font-weight-700">Renewal after grace period:</span> ₹300 with additional fees for each year of delay</li>
+                    <li><span class="font-weight-700">Duplicate license:</span> ₹200-400</li>
+                </ul>
+                <p>Check your state's fee structure before proceeding.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">How to Track Driving License Application Status</h2>
+                <p>You can easily track your DL status online using:</p>
+                <ol>
+                    <li>Application number</li>
+                    <li>Date of birth</li>
+                    <li>RTO selected</li>
+                </ol>
+                <p><span class="font-weight-700">Steps:</span></p>
+                <ul>
+                    <li>Visit Parivahan > DL Services > "Application Status"</li>
+                    <li>Enter required info to view real-time updates</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">How to Download Learner's License or Driving License</h2>
+                <ul>
+                    <li>After passing the test, your <span class="font-weight-700">LL can be downloaded</span> directly from the portal.</li>
+                    <li>Permanent DL will be <span class="font-weight-700">delivered by post</span> to your registered address.</li>
+                    <li>You can also download an e-DL via the <span class="font-weight-700">DigiLocker</span> or <span class="font-weight-700">mParivahan</span> app.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Common Mistakes to Avoid</h2>
+                <ul>
+                    <li>Uploading unclear or mismatched documents</li>
+                    <li>Incorrect address or contact details</li>
+                    <li>Missing test date or not appearing on time</li>
+                    <li>Applying without eligibility (underage or no prior LL)</li>
+                    <li>Choosing wrong vehicle category</li>
+                </ul>
+                <p><span class="font-weight-700">BikeCarHub Tip:</span> Double-check all details before final submission and arrive at the RTO with originals for verification.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Offline vs Online Application: A Quick Comparison</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Criteria</th>
+                                <th class="text-center">Online Process</th>
+                                <th class="text-center">Offline Process</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Time Taken</td>
+                                <td>Faster (15-30 mins)</td>
+                                <td>Slower (multiple visits)</td>
+                            </tr>
+                            <tr>
+                                <td>Transparency</td>
+                                <td>High</td>
+                                <td>Depends on RTO</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Payment</td>
+                                <td>Digital</td>
+                                <td>Cash / Manual</td>
+                            </tr>
+                            <tr>
+                                <td>Convenience</td>
+                                <td>Home-based</td>
+                                <td>In-person</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Agent Dependency</td>
+                                <td>None</td>
+                                <td>Often required</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">BikeCarHub's Final Advice</h2>
+                <p>Applying for a driving license online in India is simple, efficient, and fully digital in 2025. As long as you're eligible and have the right documents, the process is smooth and saves both time and energy.</p>
+                <p>Always ensure you use the official <span class="font-weight-700">Parivahan portal</span>, avoid fraudulent websites or agents, and keep a digital copy of your submitted forms and receipts.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Frequently Asked Questions (FAQs)</h2>
+
+                <div class="accordion" id="faqDrivingLicense">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Can I apply for a driving license without Aadhaar?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqDrivingLicense">
+                            <div class="accordion-body">
+                                Yes, but Aadhaar helps simplify verification. You can also use Passport, Voter ID, or utility bills as address proof.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. What if I fail the learner's or driving test?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqDrivingLicense">
+                            <div class="accordion-body">
+                                You can rebook the test through the portal after a short waiting period (usually 7 days).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Can I change my RTO after submitting the application?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqDrivingLicense">
+                            <div class="accordion-body">
+                                No. Once submitted, you need to cancel the application and reapply for a different RTO.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Is it compulsory to take driving training from a driving school?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqDrivingLicense">
+                            <div class="accordion-body">
+                                Not mandatory, but recommended—especially for new drivers appearing for the RTO test.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. How long is a learner's license valid?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqDrivingLicense">
+                            <div class="accordion-body">
+                                It is valid for 6 months. You must apply for the permanent license within that period.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Can I apply for both two-wheeler and four-wheeler licenses together?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqDrivingLicense">
+                            <div class="accordion-body">
+                                Yes, you can apply for multiple vehicle categories in one application.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. What is the minimum age for getting a license for a gear bike?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqDrivingLicense">
+                            <div class="accordion-body">
+                                18 years is the minimum age for motorcycles with gear (MCWG).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. How long does it take to receive the physical driving license?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqDrivingLicense">
+                            <div class="accordion-body">
+                                Typically, 2-4 weeks after you pass the test, depending on your local RTO's processing speed.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Can NRIs or foreign citizens apply for an Indian driving license?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqDrivingLicense">
+                            <div class="accordion-body">
+                                Yes, with valid residential proof in India and necessary visa documentation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Is digital DL (via DigiLocker) legally valid?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqDrivingLicense">
+                            <div class="accordion-body">
+                                Yes, it is officially accepted by traffic police and government agencies across India.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,107 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Electric Two-Wheelers Under ₹1.5 Lakh in India";
+}
+@section MetaTags{
+    <meta name="keywords" content="Electric scooters India, best EV bikes 2025, budget electric scooters, two-wheeler EVs, top electric bikes, e-scooters under 1.5 lakh, best e-bike, electric vehicles India, affordable electric bikes, latest EV scooters, electric bike mileage, cheapest EV bikes, electric scooter price, eco-friendly scooters, top-selling e-bikes" />
+    <meta name="description" content="Discover the top 5 electric scooters & bikes under ₹1.5 lakh in India. Compare prices, features, and range to find the best budget-friendly EV for you." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">1. Ola S1 Air</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/march/top5twowheelerelectricvehiclesunder15lakhinindia/olas1air.webp" alt="olas1air" title="olas1air" /></div>
+				</div>
+                <ul>
+                    <li><span class="font-weight-700">Price:</span> ₹1,07,499 (Ex-showroom)</li>
+                    <li><span class="font-weight-700">Range:</span> 151 km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 90 km/h</li>
+                    <li><span class="font-weight-700">Battery:</span> 3 kWh lithium-ion</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 5 hours</li>
+                </ul>
+                <p>The <span class="font-weight-700">S1 Air </span>is a stylish and budget-friendly electric scooter with a decent range and a top speed of <span class="font-weight-700">90 km/h. </span> It comes with <span class="font-weight-700">AI-based features, multiple riding modes, and app connectivity, </span> making it a great value-for-money option.</p>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">2. Ather 450S</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/march/top5twowheelerelectricvehiclesunder15lakhinindia/Ather450S.webp" alt="Ather450S" title="Ather450S" /></div>
+				</div>
+                    <ul>
+                    <li><span class="font-weight-700">Price: </span>₹1,29,999 (Ex-showroom)</li>
+                    <li><span class="font-weight-700">Range:</span> 122 km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 90 km/h</li>
+                    <li><span class="font-weight-700">Battery:</span> 2.9 kWh lithium-ion</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 5.5 hours</li>
+                    </ul>
+                <p>Ather is known for its <span class="font-weight-700">performance-focused EVs, </span> and the<span class="font-weight-700"> Ather 450S</span> is an affordable variant with a<span class="font-weight-700"> lightweight frame, sporty design, and a touchscreen display. </span> Its <span class="font-weight-700">rapid acceleration and smooth ride quality</span> make it a solid contender in this price range.</p>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">3. Bajaj Chetak 3501</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/march/top5twowheelerelectricvehiclesunder15lakhinindia/bajajchetak3501.webp" alt="bajajchetak3501" title="bajajchetak3501" /></div>
+                </div>
+                    <ul>
+                    <li><span class="font-weight-700">Price:</span> ₹1,27,243 (Ex-showroom)</li>
+                    <li><span class="font-weight-700">Range:</span> 153 km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 73 km/h</li>
+                    <li><span class="font-weight-700">Battery:</span> 3.5 kWh lithium-ion</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 3 hours</li>
+                    </ul>
+                <p>The <span class="font-weight-700">Bajaj Chetak  3501 </span>is a <span class="font-weight-700">modern classic electric scooter, </span>combining <span class="font-weight-700">premium build quality with smooth performance. </span>It is <span class="font-weight-700">ideal for city commuting, </span>offering a well-balanced ride and an efficient <span class="font-weight-700">regenerative braking system. </span></p>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">4. TVS iQube Standard</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/march/top5twowheelerelectricvehiclesunder15lakhinindia/TVSiQube.webp" alt="TVSiQube" title="TVSiQube" /></div>
+                </div>
+                    <ul>
+                    <li><span class="font-weight-700">Price:</span> ₹1,44,420 (Ex-showroom)</li>
+                    <li><span class="font-weight-700">Range:</span> 100 km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 78 km/h</li>
+                    <li><span class="font-weight-700">Battery:</span> 3.4 kWh lithium-ion</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 4.5 hours</li>
+                    </ul>
+                <p>The <span class="font-weight-700">TVS iQube Standard </span>is a feature-packed electric scooter with <span class="font-weight-700">smart connectivity, LED lights, and a digital dashboard. </span>Its <span class="font-weight-700">sturdy build, comfortable ride, and decent top speed</span> make it a great choice for daily commuters.</p>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">5. Hero Vida V2 Pro</a></h3>
+                    <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/march/top5twowheelerelectricvehiclesunder15lakhinindia/herovidav2Pro.webp" alt="herovidav2Pro" title="herovidav2Pro" /></div>
+                </div>
+                    <ul>
+                    <li><span class="font-weight-700">Price:</span> ₹1,15,300 (Ex-showroom)</li>
+                    <li><span class="font-weight-700">Range:</span> 165 km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 80 km/h</li>
+                    <li><span class="font-weight-700">Battery:</span> 3.9 kWh removable lithium-ion</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 5 hours</li>
+                    </ul>
+                <p>The <span class="font-weight-700">Hero Vida V2 Pro</span> stands out with its <span class="font-weight-700">removable battery, </span>allowing easy home charging. With a stylish design, smooth acceleration, and <span class="font-weight-700">multiple riding modes, </span>it is an excellent option for eco-conscious riders.</p>
+                <h3 class="subheading">Which One Should You Choose?</h3>
+                <p>If you need <span class="font-weight-700">long-range and tech features, </span> the<span class="font-weight-700"> Ola S1 Air</span> and <span class="font-weight-700">Ather 450S </span>are great choices. If <span class="font-weight-700">build quality and durability </span>matter more, the <span class="font-weight-700">Bajaj Chetak 3501</span> and <span class="font-weight-700">TVS iQube</span> are solid picks. For those who prefer a <span class="font-weight-700">removable battery, </span> the <span class="font-weight-700">Hero Vida V2 Pro</span> is the best option.</p>
+                <p>With <span class="font-weight-700">government subsidies and reduced maintenance costs, </span>now is the perfect time to switch to an <span class="font-weight-700">electric two-wheeler. </span>Explore these models and choose the one that suits your needs and budget!</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,408 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "TVS Ntorq 125 vs Hero Xtreme 125R – Full Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="TVS Ntorq 125 vs Hero Xtreme 125R, TVS Ntorq 125 mileage, Hero Xtreme 125R price, TVS Ntorq 125 features, Hero Xtreme 125R specifications, best 125cc scooter India, best 125cc motorcycle 2025, Ntorq vs Xtreme comparison, Hero Xtreme 125R vs TVS Ntorq" />
+    <meta name="description" content="Compare TVS Ntorq 125 and Hero Xtreme 125R for design, mileage, features, and price. Find out which 125cc bike is the best for you at BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 1th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>In this detailed comparison by <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span>helps riders understand the strengths and differences between the TVS Ntorq 125 and Hero Xtreme 125R to decide which is the better fit in 2025.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">TVS Ntorq 125 vs Hero Xtreme 125R </h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/tvs ntorq 125 vs hero xtreme 125r/ntorq-125.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+                <p>The <span class="font-weight-700">TVS Ntorq 125</span> is a sporty and feature-packed scooter that appeals to city riders and young commuters. It is known for its sharp design, Bluetooth connectivity, and peppy performance.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/tvs ntorq 125 vs hero xtreme 125r/xtreme-125r.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+                <p>The <span class="font-weight-700">Hero Xtreme 125R</span> is a stylish street commuter motorcycle offering excellent mileage, sporty looks, and comfort. It is targeted at riders looking for a budget-friendly and practical motorcycle with a premium feel.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Detailed Specifications Comparison</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">TVS Ntorq 125</th>
+                                <th class="text-center">Hero Xtreme 125R</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine</td>
+                                <td>124.8cc, Single Cylinder, 4-Stroke, SI, Air Cooled, Fuel Injected</td>
+                                <td>125cc, Air Cooled 4 Stroke</td>
+                            </tr>
+                            <tr>
+                                <td>Power</td>
+                                <td>9.5 PS@7000 rpm</td>
+                                <td>11.4 PS@8250 rpm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Torque</td>
+                                <td>10.6 Nm@5500 rpm</td>
+                                <td>10.5 Nm@6500 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Mileage (Claimed)</td>
+                                <td>47 kmpl</td>
+                                <td>66 kmpl</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Weight</td>
+                                <td>111 kg</td>
+                                <td>136 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel Tank Capacity</td>
+                                <td>5.8 litres</td>
+                                <td>10 litres</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Braking System</td>
+                                <td>CBS</td>
+                                <td>Single Channel ABS</td>
+                            </tr>
+                            <tr>
+                                <td>Variants</td>
+                                <td>TVS Ntorq 125, TVS Ntorq 125 Race Edition, TVS Ntorq 125 Super Squad, TVS Ntorq 125 Race XP, TVS Ntorq 125 XT</td>
+                                <td>XTREME 125R IBS, XTREME 125R ABS, XTREME 125R ABS SINGLE SEAT, XTREME 125R ABS OBD2B, XTREME 125R IBS OBD2B</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Colours</td>
+                                <td>Turquoise Blue, Nardo Gray, Harlequin Blue, Racing Red, Marine Blue, Stealth Black, Lightning Gray, Combat Blue, Amazing Red, Dark Black, Neon</td>
+                                <td>COBALT BLUE, FIRESTORM RED, STALLION BLACK</td>
+                            </tr>
+                            <tr>
+                                <td>Price (Ex-showroom)</td>
+                                <td>₹87,542 - ₹1,07,362</td>
+                                <td>₹96,425 - ₹1,00,100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Design and Styling: Sporty Scooter vs. Sporty Commuter</h2>
+
+                <h3 class="subheading">TVS Ntorq 125</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/tvs ntorq 125 vs hero xtreme 125r/ntorq-125-1.webp" alt="TVS Ntorq 125 design" title="TVS Ntorq 125 design" /></div>
+                </div>
+                <p>The <span class="font-weight-700">TVS Ntorq 125</span> offers a bold and aggressive scooter design. Its sharp edges, sporty graphics, and race-inspired styling make it a popular choice among young riders. It comes in attractive colour options and looks premium on city roads.</p>
+
+                <h3 class="subheading">Hero Xtreme 125R</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/tvs ntorq 125 vs hero xtreme 125r/xtreme-125r-1.webp" alt="Hero Xtreme 125R design" title="Hero Xtreme 125R design" /></div>
+                </div>
+                <p>The <span class="font-weight-700">Hero Xtreme 125R</span> follows a muscular street bike design with a sleek fuel tank, aerodynamic panels, and eye-catching LED lighting. It looks more like a premium commuter motorcycle with a sporty twist.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Both vehicles score well in styling, but the Ntorq 125 will appeal more to scooter fans, while the Xtreme 125R will attract motorcycle lovers.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Engine Performance and Riding Dynamics</h2>
+
+                <h3 class="subheading">TVS Ntorq 125 Performance</h3>
+                <p>The <span class="font-weight-700">TVS Ntorq 125</span> is tuned for quick acceleration, making it perfect for stop-and-go city traffic. The throttle response is sharp, and the scooter feels light and nimble, making daily commuting fun and effortless.</p>
+
+                <h3 class="subheading">Hero Xtreme 125R Performance</h3>
+                <p>The <span class="font-weight-700">Hero Xtreme 125R</span> offers higher power output and better stability, especially at higher speeds. It handles both city streets and occasional highway rides comfortably. Its refined engine ensures a smooth and vibration-free ride.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Ntorq 125 is perfect for city agility, while Xtreme 125R offers better highway performance.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Mileage and Fuel Efficiency Comparison</h2>
+                <p>Fuel efficiency is a crucial factor for most 125cc segment buyers.</p>
+                <ul>
+                    <li><span class="font-weight-700">TVS Ntorq 125:</span> Offers a mileage of approximately <span class="font-weight-700">47 kmpl</span> under normal city riding conditions.</li>
+                    <li><span class="font-weight-700">Hero Xtreme 125R:</span> Is more fuel-efficient, with a mileage of around <span class="font-weight-700">66 kmpl</span>, making it a more economical option for daily riders focused on long-term savings.</li>
+                </ul>
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> For those looking for better fuel efficiency, Hero Xtreme 125R is the clear winner.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Features and Technology: Who Offers More?</h2>
+
+                <h3 class="subheading">TVS Ntorq 125 Features:</h3>
+                <ul>
+                    <li>Bluetooth connectivity with SmartXonnect</li>
+                    <li>Fully digital console with navigation assist</li>
+                    <li>Call and SMS alerts</li>
+                    <li>External fuel filler</li>
+                </ul>
+
+                <h3 class="subheading">Hero Xtreme 125R Features:</h3>
+                <ul>
+                    <li>Stylish digital instrument cluster</li>
+                    <li>Single-channel ABS for better safety</li>
+                    <li>Engine cut-off on side stand</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> When it comes to technology, the Ntorq 125 is clearly ahead with its smart connectivity features, while the Xtreme 125R focuses on basic but reliable safety features.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Comfort, Practicality, and Everyday Usability</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/may/top5royalenfieldbikesinindia/RE Interceptor 650.png" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <h3 class="subheading">TVS Ntorq 125 Practicality</h3>
+                <p>Being a scooter, the Ntorq 125 offers under-seat storage, wider floorboard space, and an easy-to-handle riding position. It is perfect for short city rides and quick errands.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/may/top5royalenfieldbikesinindia/RE Interceptor 650.png" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <h3 class="subheading">Hero Xtreme 125R Practicality</h3>
+                <p>The Xtreme 125R provides better suspension comfort, larger wheels, and a more planted feel on uneven roads. It is a better fit for riders who occasionally travel longer distances or ride on mixed terrain.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Ntorq 125 wins for city convenience, while Xtreme 125R is better for varied terrain.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Price and Value for Money</h2>
+                <p>Both the TVS Ntorq 125 and Hero Xtreme 125R fall within a competitive price range.The<span class="font-weight-700"> Ntorq 125</span> is priced between<span class="font-weight-700"> ₹87,542 – ₹1,07,362</span>, while the <span class="font-weight-700">Xtreme 125R</span> is priced between <span class="font-weight-700">₹96,425 – ₹ 1,00,100</span> (ex-showroom).</p>
+               
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> If smart features and comfort are a priority, the Ntorq 125 offers good value. For those who want better mileage, sporty motorcycle styling, and highway readiness, the Xtreme 125R offers excellent value.</p>
+                <div class="div-line"></div>
+                <h2 class="subheading">Best Fit for Rider Type</h2>
+
+                <p><span class="font-weight-700">TVS Ntorq 125  is Ideal For:</span></p>
+                <ul>
+                    <li>Young city commuters</li>
+                    <li>Riders looking for smart features and Bluetooth connectivity</li>
+                    <li>Buyers who prefer the convenience of scooters</li>
+                </ul>
+
+                <p><span class="font-weight-700">Hero Xtreme 125R  is Ideal For:</span></p>
+                <ul>
+                    <li>Budget-conscious motorcycle buyers</li>
+                    <li>Riders who prioritize mileage and long-distance comfort</li>
+                    <li>Those who need better suspension and stability on rough roads</li>
+                </ul>
+
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Pros and Cons</h2>
+                <h3 class="subheading">TVS Ntorq 125</h3>
+                <p><span class="font-weight-700">Pros:</span></p>
+                <ul>
+                    <li>Smart features and Bluetooth connectivity</li>
+                    <li>Nimble handling in city traffic</li>
+                    <li>Sporty and attractive design</li>
+                </ul>
+                <p><span class="font-weight-700">Cons:</span></p>
+                <ul>
+                    <li>Lower mileage compared to rivals</li>
+                    <li>Smaller fuel tank</li>
+                </ul>
+
+                <h3 class="subheading">Hero Xtreme 125R</h3>
+                <p><span class="font-weight-700">Pros:</span></p>
+                <ul>
+                    <li>Excellent mileage (66 kmpl)</li>
+                    <li>Comfortable ride quality</li>
+                    <li>Single-channel ABS for safety</li>
+                </ul>
+                <p><span class="font-weight-700">Cons:</span></p>
+                <ul>
+                    <li>Lacks smart connectivity features</li>
+                    <li>Heavier than the Ntorq</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Verdict: Which One Should You Choose?</h2>
+                <p>The <span class="font-weight-700">TVS Ntorq 125</span> is the right choice for riders who want a smart, stylish, and convenient scooter with tech features that make commuting enjoyable.</p>
+                <p>The <span class="font-weight-700">Hero Xtreme 125R</span> is better suited for those who prefer motorcycles, want a sporty look, high fuel efficiency, and the ability to occasionally ride on highways.</p>
+                <p>Ultimately, both are solid options in the 125cc segment. Buyers should choose based on their riding style, distance, and whether they prefer a scooter or a motorcycle.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs: TVS Ntorq 125 vs Hero Xtreme 125R</h2>
+
+                <div class="accordion" id="faqNtorqXtreme">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which has better mileage, TVS Ntorq 125 or Hero Xtreme 125R?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqNtorqXtreme">
+                            <div class="accordion-body">
+                                The Hero Xtreme 125R offers better mileage at around 66 kmpl, while the TVS Ntorq 125 gives around 47 kmpl.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Does the TVS Ntorq 125 have Bluetooth connectivity?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqNtorqXtreme">
+                            <div class="accordion-body">
+                                Yes, the TVS Ntorq 125 comes with SmartXonnect Bluetooth connectivity, offering navigation assist and call alerts.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Which is better for city commuting?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqNtorqXtreme">
+                            <div class="accordion-body">
+                                The TVS Ntorq 125 is easier to handle in city traffic, thanks to its light weight and scooter convenience.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Is the Hero Xtreme 125R comfortable for long rides?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqNtorqXtreme">
+                            <div class="accordion-body">
+                                Yes, the Hero Xtreme 125R is more comfortable for longer distances due to its better suspension and larger wheels.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Does the TVS Ntorq 125 have ABS?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqNtorqXtreme">
+                            <div class="accordion-body">
+                                No, the TVS Ntorq 125 comes with a combined braking system (CBS), while the Hero Xtreme 125R offers single-channel ABS.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Which bike has better storage options?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqNtorqXtreme">
+                            <div class="accordion-body">
+                                The TVS Ntorq 125 has under-seat storage and a glove box, which makes it more practical for carrying daily items.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which has a larger fuel tank?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqNtorqXtreme">
+                            <div class="accordion-body">
+                                The Hero Xtreme 125R has a larger 10-litre fuel tank, compared to the 5.8-litre tank of the TVS Ntorq 125.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Are both models suitable for beginners?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqNtorqXtreme">
+                            <div class="accordion-body">
+                                Yes, both the Ntorq 125 and Xtreme 125R are beginner-friendly with easy-to-handle controls and balanced performance.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Which bike offers better safety features?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqNtorqXtreme">
+                            <div class="accordion-body">
+                                The Hero Xtreme 125R offers better safety with a single-channel ABS, while the Ntorq 125 has CBS.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Which is better for daily use: scooter or motorcycle?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqNtorqXtreme">
+                            <div class="accordion-body">
+                                If convenience and city agility are priorities, the scooter (TVS Ntorq 125) is better. For mileage and occasional long rides, the motorcycle (Hero Xtreme 125R) is a smarter choice.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+            <h3 class="heading">Check other brands here</h3>
+            <p>For TVS Motors<a class="for-link" asp-controller="TVS" asp-action="TVSNtorq125"> Click Here!</a></p>
+            <p>For Hero Motors<a class="for-link" asp-controller="Hero" asp-action="HeroXtreme125"> Click Here!</a></p>
+            <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

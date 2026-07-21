@@ -1,0 +1,70 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="coming-soon-main-container">
+        <div class="coming-soon-container">
+            <h1>Coming Soon</h1>
+            <p>We are working hard to bring you the best experience. Stay tuned!</p>
+           @*  <div class="countdown">
+            <div class="countdown-item">
+            <span id="days">00</span>
+            <span>Days</span>
+            </div>
+            <div class="countdown-item">
+            <span id="hours">00</span>
+            <span>Hours</span>
+            </div>
+            <div class="countdown-item">
+            <span id="minutes">00</span>
+            <span>Minutes</span>
+            </div>
+            <div class="countdown-item">
+            <span id="seconds">00</span>
+            <span>Seconds</span>
+            </div>
+            </div> *@
+            <button class="home-button"><a asp-controller="Home" asp-action="Index">Back To Home</a></button>
+        </div>
+    </div>
+    <script>
+        //debugger;
+        function countdown() {
+            const countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+            if (distance < 0) {
+                clearInterval(interval);
+                document.querySelector(".coming-soon-container").innerHTML = "<h1>We are live now!</h1>";
+            }
+        }
+
+        const interval = setInterval(countdown, 1000);
+    </script>
+</body>
+</html>
+

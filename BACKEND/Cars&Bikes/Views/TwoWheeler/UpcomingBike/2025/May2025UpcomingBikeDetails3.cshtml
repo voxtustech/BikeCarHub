@@ -1,0 +1,142 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Husqvarna Vitpilen 401 India Launch in June 2025 bikecarhub";
+}
+@section MetaTags {
+        <meta name="keywords" content="bikecarhub,Husqvarna Vitpilen 401, Vitpilen 401 launch date India, Husqvarna bikes 2025, Neo-retro bikes in India, 373cc street bikes, Vitpilen 401 specifications, Husqvarna Vitpilen features, Upcoming bikes in India 2025, OBD-2B compliant motorcycles, Best street bikes under 3 lakh, Husqvarna Vitpilen 401 price India, KTM engine Husqvarna Vitpilen" />
+        <meta name="description" content="Husqvarna Vitpilen 401 to launch in June 2025 with 373cc engine, neo-retro design, premium features, and OBD-2 compliance. Check specs and price on bikcarhub." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+    <h1 class="latest-bike-head">Upcoming Bikes</h1>
+    <div class="TWupcoming-container">
+        <div class="upcoming-bikes-details-image">
+            <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+            <div class="upcoming-bikes-details-text">
+                <h2>@Model.UpcomingBikeName</h2>
+                <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+            </div>
+        </div>
+
+        <div class="upcoming-bikes-details-content">
+            <h2>About @Model.UpcomingBikeName</h2>
+            @* <p>@Html.Raw(@Upbike.UpcomingBikeDetails.Replace("\n", "<br>"))</p> *@
+            <h3 class="subheading">Husqvarna Vitpilen 401 Set to Launch in India June 2025</h3>
+            <p>Motorcycle enthusiasts in India have something exciting to look forward to this year. The much-anticipated <span class="font-weight-700">Husqvarna Vitpilen 401</span> is finally making its way to Indian shores, with an expected <span class="font-weight-700">launch in June 2025. </span>Known globally for its unique blend of minimalistic design and punchy performance, the Vitpilen 401 is all set to bring a refreshing option to the premium street bike segment in India.</p>
+            <p>Here’s a detailed look at what riders can expect from this stylish new arrival.</p>
+            <div class="row m-b20">
+                <div class="col-lg-12 col-md-12 text-center"><img src="~/images/twowheeler/upcomming/2025/Vitpilen.webp" alt="bikecarhub&Vitpilen" title="bikecarhub&Vitpilen" /></div>
+            </div>
+            <div class="div-line"></div>
+            <h3 class="subheading">Aesthetic Excellence: Neo-Retro Design Language</h3>
+            <p>The Husqvarna Vitpilen 401 is famous for its <span class="font-weight-700">neo-retro styling,</span> which cleverly combines modern engineering with classic café racer cues. The 2025 model retains its clean, Scandinavian design with a sculpted fuel tank, minimal bodywork, clip-on handlebars, and a circular LED headlamp that gives it a unique identity on the road.</p>
+            <p>Its compact and aggressive stance, coupled with high-quality paint finishes and premium detailing, makes it stand apart from traditional street bikes.</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">Power and Performance</h3>
+            <p>At the heart of the Vitpilen 401 lies a  <span class="font-weight-700">399cc, single-cylinder, liquid-cooled engine, </span>which is the same power unit found in the KTM Duke 390. This motor is known for delivering a punchy  <span class="font-weight-700">around 42.9 bhp  </span>and  <span class="font-weight-700">39 Nm of torque, </span>mated to a  <span class="font-weight-700">6-speed gearbox </span> with  <span class="font-weight-700">slipper clutch  </span>and  <span class="font-weight-700">quick-shifter </span> (expected in the updated version).</p>
+            <p>This lightweight yet powerful setup promises exhilarating performance for both urban rides and weekend thrills.</p>
+            <div class="row m-b20">
+                <div class="col-lg-12 col-md-12 text-center"><img src="~/images/twowheeler/upcomming/2025/husqvarna.webp" alt="bikecarhub&husqvarna" title="bikecarhub&husqvarna" /></div>
+            </div>
+            <div class="div-line"></div>
+            <h3 class="subheading">Specifications</h3>
+            <ul>
+                <li><span class="font-weight-700">Displacement:</span> 399 cc</li>
+                <li><span class="font-weight-700">Max Power:</span> 42.9bhp@9000 rpm</li>
+                <li><span class="font-weight-700">Max Torque:</span> 39Nm@7000 rpm</li>
+                <li><span class="font-weight-700">Transmission:</span> 6 Speed Manual</li>
+                <li><span class="font-weight-700">Gear Shifting Pattern:</span> 1 Down 5 Up</li>
+                <li><span class="font-weight-700">Clutch:</span> Assist And Slipper Clutch</li>
+                <li><span class="font-weight-700">Cylinders:</span> 1</li>
+                <li><span class="font-weight-700">Valves Per Cylinder:</span> 4</li>
+                <li><span class="font-weight-700">Cooling System:</span> Liquid Cooled</li>
+                <li><span class="font-weight-700">Spark Plugs:</span> 1 Per Cylinder</li>
+                <li><span class="font-weight-700">Battery:</span> 12V, 8Ah</li>
+                <li><span class="font-weight-700">Emission Standard:</span> BS6 Phase 2</li>
+                <li><span class="font-weight-700">Fuel Type: </span>Petrol</li>
+            </ul>
+            <div class="div-line"></div>
+            <h3 class="subheading">Chassis and Handling</h3>
+            <p>The bike features a <span class="font-weight-700">steel trellis frame,</span> contributing to its lightweight structure and sharp handling dynamics. It also comes equipped with:</p>
+            <ul>
+                <li><span class="font-weight-700">USD front forks</span> and <span class="font-weight-700">rear mono-shock</span> by WP</li>
+                <li><span class="font-weight-700">Disc brakes with dual-channel ABS</span></li>
+                <li><span class="font-weight-700">17-inch alloy wheels</span></li>
+                <li><span class="font-weight-700">Metzeler Sportec tyres</span> for enhanced road grip</li>
+            </ul>
+            <p>This makes the Vitpilen 401 ideal for twisty roads and quick city sprints, catering to riders who value precision and responsiveness.</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">Expected Features</h3>
+            <p>While the core design and mechanicals remain consistent with global models, the India-spec 2025 Vitpilen 401 is expected to include:</p>
+            <ul>
+                <li>Fully digital LCD instrument cluster</li>
+                <li>LED lighting all around</li>
+                <li>Lightweight alloy wheels</li>
+                <li>Ride-by-wire throttle system</li>
+                <li>Bosch EFI (Electronic Fuel Injection)</li>
+                <li>Side-mounted exhaust system</li>
+            </ul>
+            <p>These features make it a contemporary machine that meets the expectations of the tech-savvy Indian motorcyclist.</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">OBD-2 Compliance and Emissions</h3>
+            <p>In line with India’s latest norms, the Husqvarna Vitpilen 401 will be  <span class="font-weight-700">OBD-2B compliant,</span> ensuring reduced emissions and efficient performance monitoring. This step aligns the model with government standards while maintaining the brand’s commitment to sustainability and innovation.</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">Expected Price and Launch Date</h3>
+            <p>As per current reports, the Vitpilen 401 is likely to be priced between <span class="font-weight-700">₹2.80 lakh to ₹3.10 lakh (ex-showroom).</span> This positions it competitively against rivals like:</p>
+            <ul>
+                <li><span class="font-weight-700">KTM Duke 390</span></li>
+                <li><span class="font-weight-700">BMW G310 R</span></li>
+                <li><span class="font-weight-700">TVS Apache RR 310</span></li>
+            </ul>
+            <p>The official<span class="font-weight-700"> launch is expected in June 2025, </span>with bookings likely to begin around the same time. Husqvarna dealerships across major Indian cities will offer test rides shortly after the launch.</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">Target Audience and Competition</h3>
+            <p>The Vitpilen 401 is targeted at riders who seek:</p>
+            <ul>
+                <li>A premium street bike</li>
+                <li>A unique design statement</li>
+                <li>Lightweight and sporty performance</li>
+                <li>Daily usability with a blend of weekend fun</li>
+            </ul>
+            <p>Its closest competitors in terms of price and performance will be the <span class="font-weight-700">KTM Duke 390, Royal Enfield Himalayan 450 (urban use), </span>and <span class="font-weight-700"> TVS Apache RTR 310.</span></p>
+            <div class="div-line"></div>
+            <h3 class="subheading">A Unique Offering in the Indian Market</h3>
+            <p>With its striking looks, sharp handling, and KTM-engineered performance, the <span class="font-weight-700">Husqvarna Vitpilen 401</span> is poised to shake up the Indian street bike scene. It’s not just a motorcycle; it’s a statement of style, minimalism, and raw performance.</p>
+            <p>For riders seeking something out of the ordinary — this bike could very well be the perfect pick in 2025.</p>
+        </div>
+    </div>
+    }
+    <!-- Bike 1 -->
+    <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allUpbike in ViewBag.allupcomingbike)
+        {
+                <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                    <div class="upcoming-bikes-details-card">
+                        <div class="upcoming-bikes-all-image">
+                            <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                        </div>
+
+                        <div class="upcoming-allbikes-details-content">
+                            <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                            <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                            <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                        </div>
+                    </div>
+                </a>
+        }
+    </div>
+    </div>
+</body>

@@ -1,0 +1,30 @@
+﻿@model Cars_Bikes.Models.TWEVEngineAndTransmission
+@{
+    ViewData["Title"] = "Delete  EV Engine & Transmission";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <div class="container mt-5">
+                        <h3 class="text-danger">Are you sure you want to delete this entry?</h3>
+                        <div class="mt-4">
+                            <form asp-action="DeleteTWEVEngine">
+                                <input type="hidden" asp-for="TWEVEngineAndTransmissionId" />
+                                <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                                <a asp-action="ListTWEngine" class="btn btn-secondary">Cancel</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

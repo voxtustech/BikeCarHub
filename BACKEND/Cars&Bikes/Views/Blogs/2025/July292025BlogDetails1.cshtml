@@ -1,0 +1,406 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top Powerful Bikes Under ₹2 Lakhs (2025)";
+}
+@section MetaTags {
+    <meta name="keywords" content="Most powerful bikes under 2 lakhs, NS200 vs Apache 200, MT-15 V2 brochure specs, Xtreme 160R 4V features, KTM Duke 125 official specs, Budget performance bikes India, Bikes under 2 lakh comparison, BikeCarHub reviews" />
+    <meta name="description" content="Explore the most powerful bikes under ₹2 lakhs with specs from official brochures. Compare features & performance. Guide by BikeCarHub." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+               
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p>In this article, <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></span> explores the <span class="font-weight-700">most powerful bikes under ₹2 lakhs in India, </span>based on engine performance, features, acceleration, and overall value for money. Whether you're a college student, a commuter with a need for speed, or a weekend warrior looking for a fun ride—this list has something for you</p>
+                                    <h3 class="subheading">Why These Bikes Are the Real Deal</h3>
+                                    <p>Each motorcycle featured here offers a unique mix of:</p>
+                                    <ul>
+                                    <li>Power-packed engines</li>
+                                    <li>Feature-rich instrumentation</li>
+                                    <li>Advanced braking & suspension systems</li>
+                                    <li>Contemporary, aggressive styling</li>
+                                    </ul>
+                                    <p>And all of them are backed by the brands’ views, making this the most <span class="font-weight-700">accurate and reliable performance roundup</span> in this category.</p>
+                                    <div class="div-line"></div>
+
+                                    <h3 class="subheading">Top 5 Powerful Bikes Under ₹2 Lakhs</h3>
+
+                <h5 class="subheading"><a class="for-link" asp-controller="Bajaj" asp-action="BajajPulsarNS200">1. Bajaj Pulsar NS200</a></h5>
+                                                    <div class="row m-b20">
+                                                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/July/most powerful bikes under two lakh/bajaj pulsar ns200.webp" alt="bajaj pulsar ns200" title="bajaj pulsar ns200" /></div>
+                                                    </div>
+                                    <p><span class="font-weight-700">Ex-showroom price:  ₹1,43,216</span></p>
+                                    <p>The <span class="font-weight-700">NS200 </span>is the streetfighter that redefined value-performance motorcycles in India. It packs a punch with its liquid-cooled DTS-i engine and perimeter frame.</p>
+                                    <p><span class="font-weight-700">Engine & Performance:</span></p>
+                                    <ul>
+                                                         <li>199.5cc, 4-valve, DTS-i engine</li>
+                                                        <li>Power: 24.5PS@9750 RPM</li>
+                                                        <li>Torque: 18.74Nm@8000 RPM</li>
+                                                        <li>Triple spark technology</li>
+                                                        <li>6-speed gearbox</li>
+                                    </ul>
+                                    <p><span class="font-weight-700">Features:</span></p>
+                                    <ul>
+                                    <li>Dual-channel ABS</li>
+                                    <li>Perimeter frame for improved handling</li>
+                                    <li>Upside Down front forks</li>
+                                    <li>Gear position indicator & distance-to-empty readout</li>
+                                    </ul>
+                                    <p><span class="font-weight-700">Why It’s Powerful:</span></p>
+                                    <p>One of the fastest accelerating bikes in its class, and now with USD forks, the NS200 brings sharper handling to match its explosive engine.</p>
+                                    <div class="div-line"></div>
+
+                <h5 class="subheading"><a class="for-link" asp-controller="TVS" asp-action="TVSApacheRTR2004V">2. TVS Apache RTR 200 4V</a></h5>
+                                                    <div class="row m-b20">
+                                                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/July/most powerful bikes under two lakh/TVS Apache RTR 200 4V.webp" alt="TVS Apache RTR 200 4V" title="TVS Apache RTR 200 4V" /></div>
+                                                    </div>
+                                    <p><span class="font-weight-700">Ex-showroom price:  ₹1,48,620(2Ch R-Mode), ₹1,53,990(USD)</span></p>
+                                    <p>TVS describes the Apache RTR 200 4V as “born on the track,” and it shows. This bike brings more features per rupee than almost anything else in its class.</p>
+                                    <p><span class="font-weight-700">Engine & Performance:</span></p>
+                                    <ul>
+                                    <li>197.75cc, oil-cooled, 4-valve engine</li>
+                                    <li>Power: 20.82 PS@9000 RPM</li>
+                                    <li>Torque: 17.25 Nm@7250 RPM</li>
+                                    <li>Ride Modes: Urban, Rain & Sport</li>
+                                    <li>Slipper clutch and GTT (Glide Through Traffic) technology</li>
+                                    </ul>
+                                    <p><span class="font-weight-700">Features:</span></p>
+                                    <ul>
+                                    <li>Adjustable front & rear suspension</li>
+                                    <li>Dual-channel ABS with RLP control</li>
+                                    <li>Fully digital Bluetooth instrument cluster</li>
+                                    <li>SmartXonnect with turn-by-turn navigation</li>
+                                    </ul>
+                                    <p><span class="font-weight-700">Why It’s Powerful:</span></p>
+                                    <p>Track-inspired DNA, race tuning, and electronic aids give the Apache 200 an edge in both performance and control.</p>
+                                    <div class="div-line"></div>
+
+                <h5 class="subheading"><a class="for-link" asp-controller="Yamaha" asp-action="YamahaMT15Ver2Point0">3. Yamaha MT-15 V2</a></h5>
+                                                    <div class="row m-b20">
+                                                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/July/most powerful bikes under two lakh/Yamaha MT15 V2.webp" alt="Yamaha MT15 V2" title="Yamaha MT15 V2" /></div>
+                                                    </div>
+                                    <p><span class="font-weight-700">Ex-showroom price: ₹1,69,550- ₹1,74,250(Based on the colour)</span></p>
+                                    <p>The <span class="font-weight-700">MT-15 V2</span> is what happens when Yamaha distills its R15 magic into a hyper-naked format. It proudly declares its night-stalking nature, and it delivers.</p>
+                                    <p><span class="font-weight-700">Engine & Performance:</span></p>
+                                    <ul>
+                                    <li>155cc, liquid-cooled, SOHC, 4-valve with VVA</li>
+                                    <li>Power: 18.4 PS@10,000 RPM</li>
+                                    <li>Torque: 14.1 Nm@7500 RPM</li>
+                                    <li>VVA (Variable Valve Actuation) for top-end surge</li>
+                                    <li>6-speed gearbox</li>
+                                    </ul>
+                                    <p><span class="font-weight-700">Features:</span></p>
+                                    <ul>
+                                    <li>Dual-channel ABS</li>
+                                    <li>LED headlight and tail lamp</li>
+                                    <li>Upside Down front forks</li>
+                                    <li>Aluminium swingarm</li>
+                                    <li>LCD instrument console</li>
+                                    <li>Y-Connect app for smart connectivity</li>
+                                                    </ul>
+                                    <p><span class="font-weight-700">Why It’s Powerful:</span></p>
+                                    <p>What it lacks in displacement, it makes up for in refinement and high-revving aggression. Lightweight and loaded with tech, it’s the perfect city sprinter.</p>
+                                    <div class="div-line"></div>
+                <h5 class="subheading"><a class="for-link" asp-controller="Hero" asp-action="HeroXtreme160R">4. Hero Xtreme 160R Single Disc</a></h5>
+                                                    <div class="row m-b20">
+                                                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/July/most powerful bikes under two lakh/Hero Xtreme 160R Single Disc.webp" alt="Hero Xtreme 160R Single Disc" title="Hero Xtreme 160R Single Disc" /></div>
+                                                    </div>
+                                    <p><span class="font-weight-700">Ex-showroom price: ₹1,40,600</span></p>
+                                    <p>Straight from Hero’s, the new <span class="font-weight-700">Xtreme 160R 4V </span>is one of the <span class="font-weight-700">fastest air-oil cooled bikes in its segment.</span> It’s not just a 160cc commuter anymore—it's a performance player.</p>
+                                    <p><span class="font-weight-700">Engine & Performance:</span></p>
+                                    <ul>
+                                    <li>163.2cc, air-oil cooled, 4-valve engine</li>
+                                    <li>Power: 16.9 PS@8500 RPM</li>
+                                    <li>Torque: 14.6 Nm@6500 RPM</li>
+                                    <li>5-speed gearbox</li>
+                                    </ul>
+                                    <p><span class="font-weight-700">Key Features:</span></p>
+                                    <ul>
+                                    <li>37mm KYB USD front forks</li>
+                                    <li>7-step adjustable monoshock</li>
+                                    <li>Dual-channel ABS</li>
+                                    <li>Segment-first Drag Timer (0–60 & quarter mile) </li>
+                                    <li>Panic Brake Alert</li>
+                                    <li>LED headlamp, winkers & tail lamp</li>
+                                    <li>LCD display with 300% improved brightness</li>
+                                    </ul>
+                                    <p><span class="font-weight-700">Why It’s Powerful:</span></p>
+                                    <p>Hero’s new avatar is sharp, sporty, and surprisingly fast. From drag timing to safety alerts, it's a bold leap forward for the Xtreme series.</p>
+                                     <div class="div-line"></div>
+                <h5 class="subheading"><a class="for-link" asp-controller="KTM" asp-action="KTM125DUKE">5. KTM 125 Duke</a></h5>
+                                                    <div class="row m-b20">
+                                                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/July/most powerful bikes under two lakh/KTM 125 Duke.webp" alt="KTM 125 Duke" title="KTM 125 Duke" /></div>
+                                                    </div>
+                                    <p><span class="font-weight-700">Ex-showroom price: ₹1,41,000</span></p>
+                                    <p>Don’t underestimate this baby Duke. As per KTM’s , the <span class="font-weight-700">125 Duke</span> has the chassis and components of its bigger siblings, giving it an unmatched ride quality for a 125cc.</p>
+                                    <p>Engine & Performance:</p>
+                                    <ul>
+                                    <li>124.7cc, liquid-cooled, 4-valve engine</li>
+                                    <li>Power: 15 HP@10,000 RPM</li>
+                                    <li>Torque: 12 Nm@7,500 RPM</li>
+                                    <li>6-speed gearbox</li>
+                                    </ul>
+                                    <p><span class="font-weight-700">Features:</span></p>
+                                    <ul>
+                                    <li>Steel trellis frame</li>
+                                    <li>LED headlamp</li>
+                                    <li>WP APEX USD forks and monoshock</li>
+                                    <li>LCD display</li>
+                                    <li>Radially mounted front brake calipers</li>
+                                    <li>Bosch single-channel ABS</li>
+                                    </ul>
+                                    <p><span class="font-weight-700">Why It’s Powerful:</span></p>
+
+                                    <p>Though smaller in displacement, the Duke 125 is high-revving and precision-tuned. It’s built like a performance bike and handles like one—ideal for first-time power junkies.</p>
+
+                                   
+                                    <div class="div-line"></div>
+                                    <h3 class="subheading">Spec Comparison Table</h3>
+                                    <div style="overflow-x: auto;">
+                                        <table class="comparison-table-content">
+                                            <thead>
+                                                <tr>
+						
+                                                    <th class="text-center">Bike Model</th>
+                                                    <th class="text-center">Engine (cc)</th>
+                                                    <th class="text-center">Power (PS)</th>
+                                                    <th class="text-center">Torque (Nm)</th>
+                                                    <th class="text-center">ABS</th>
+                                                    <th class="text-center">Suspension Type</th>
+		                                    <th class="text-center">Ex-Showroom Price (₹)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>						
+                                                <tr class="compare-head-text">
+                                                    <td class="font-weight-600">Pulsar NS200</td>
+                                                    <td>199.5</td>
+                                                    <td>24.5</td>
+                                                    <td>18.74</td>
+                                                    <td>Dual </td>
+                                                    <td>USD + Monoshock</td>
+		                                            <td class="font-weight-600">₹1,43,216</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-weight-600">Apache RTR 200 4V</td>
+                                                    <td>197.75</td>
+                                                    <td>20.82</td>
+                                                    <td>17.25</td>
+                                                    <td>Dual</td>
+                                                    <td>Adj. USD + Monoshock</td>
+                                                    <td class="font-weight-600">₹1,48,620(2Ch R-Mode), ₹1,53,990(USD)</td>
+                                                </tr>
+                                            <tr class="compare-head-text">
+                                                <td class="font-weight-600">Yamaha MT-15 V2</td>
+                                                    <td>155</td>
+                                                    <td>18.4</td>
+                                                    <td>14.1</td>
+                                                    <td>Dual</td>	
+		                                            <td>USD + Linked Mono</td>
+		                                            <td class="font-weight-600">₹1,69,550- ₹1,74,250(Based on the colour)</td>
+                                                </tr>
+                                                <tr>					
+                                                   <td class="font-weight-600">Hero Xtreme 160R 4V</td>
+                                                    <td>163.2</td>
+                                                    <td>16.9</td>
+                                                    <td>14.6</td>
+                                                    <td>Dual</td>
+                                                    <td>KYB USD + Monoshock</td>
+		                                    <td class="font-weight-600">₹1,40,600</td>
+                                                </tr>
+                                            <tr class="compare-head-text">
+                                                <td class="font-weight-600">KTM 125 Duke</td>
+                                                    <td>124.7</td>
+                                                    <td>15</td>
+                                                    <td>12</td>
+                                                    <td>Single</td>
+                                                    <td>WP APEX USD + Mono</td>
+		                                    <td class="font-weight-600">₹1,41,000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="div-line"></div>
+                                    <h3 class="subheading">Tips from BikeCarHub: Which One’s Right for You?</h3>
+                                    <ul>
+                                    <li><span class="font-weight-700">Power Performance Junkies</span> → Go for <span class="font-weight-700">Pulsar NS200</span></li>
+                                    <li><span class="font-weight-700">Tech & Track Fans </span>→ Pick the <span class="font-weight-700">Apache RTR 200 4V</span></li>
+                                                        <li><span class="font-weight-700">Urban Riders & Style Seekers</span> → Love the<span class="font-weight-700"> MT-15 V2</span></li>
+                                    <li><span class="font-weight-700">Touring Riders</span> → Choose <span class="font-weight-700">Hero Xtreme 160R 4V</span></li>
+                                    <li><span class="font-weight-700">Beginners Who Want Premium Feel</span> → Try the <span class="font-weight-700">KTM 125 Duke</span></li>
+                                    </ul>
+
+                                   
+                                    <div class="div-line"></div>
+                                    <h3 class="subheading">Final Thoughts: Brochure-Backed Speed Machines</h3>
+                                    <p>These five motorcycles are proof that power and tech don’t have to cost a fortune. Whether you’re a commuter, weekend warrior, or new rider, there’s a power-packed machine here for you—<span class="font-weight-700">and all backed by real data straight from the brands.</span></p>
+                                    <p>For more spec-based comparisons, buying guides, and rider tips, head over to BikeCarHub – your one-stop destination for everything two-wheeled.</p>
+
+                                 
+                                    <div class="div-line"></div>
+                                    <h3 class="subheading">FAQs About Powerful Bikes Under ₹2 Lakhs</h3>
+                                    <div class="accordion" id="faqTeslaModelY">
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                                    1. Which bike has the highest power output?
+                                                </button>
+                                            </h3>
+                                            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                                                <div class="accordion-body">
+                                                                    The <span class="font-weight-700">Pulsar NS200</span> leads with <span class="font-weight-700">24.5 PS.</span>.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                                   2. Which is best for touring among these?
+                                                </button>
+                                            </h3>
+                                            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                                                <div class="accordion-body">
+	                                             The <span class="font-weight-700">Xtreme 160R 4V, </span>thanks to its fairing and comfy ergonomics.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                                    3. Does KTM 125 Duke justify its price?
+                                                </button>
+                                            </h3>
+                                            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                                                <div class="accordion-body">
+                                                    Yes, for new riders wanting top-class components and brand value.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                                    4. Which bike has the best connectivity features?
+                                                </button>
+                                            </h3>
+                                            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                                                <div class="accordion-body">
+                                                    The <span class="font-weight-700">Apache RTR 200 4V </span>and<span class="font-weight-700"> MT-15 V2 </span>(Y-Connect enabled).
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                                    5. Which bike is the most lightweight?
+                                                </button>
+                                            </h3>
+                                            <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                                                <div class="accordion-body">
+                                                    The <span class="font-weight-700">MT-15 V2 </span>at just 141 kg.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                                    6. Are all these bikes BS6 compliant?
+                                                </button>
+                                            </h3>
+                                            <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                                                <div class="accordion-body">
+                                                    Yes, all 2025 models are BS6 compliant.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                                    7. Which bike gives the best mileage?
+                                                </button>
+                                            </h3>
+                                            <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                                                <div class="accordion-body">
+                                                    Likely the <span class="font-weight-700">MT-15 V2, </span>followed by the<span class="font-weight-700"> Xtreme 160R. </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                                    8. Can I use these bikes for daily commuting?
+                                                </button>
+                                            </h3>
+                                            <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                                                <div class="accordion-body">
+                                                    Absolutely, especially the <span class="font-weight-700">Apache 200</span> and <span class="font-weight-700">MT-15 V2. </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                                    9. Which one has the most aggressive looks?
+                                                </button>
+                                            </h3>
+                                            <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                                                <div class="accordion-body">
+                                                    The <span class="font-weight-700">MT-15 V2 </span>and <span class="font-weight-700">KTM Duke 125.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                                    10. Do these bikes support Bluetooth features?
+                                                </button>
+                                            </h3>
+                                            <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                                                <div class="accordion-body">
+                                                    Yes: Apache RTR 200, MT-15 (Y-Connect), Xtreme 200S.
+                                                </div>
+                                            </div>
+                                        </div>
+                    </div>
+             </div>
+            @await Component.InvokeAsync("AllBlog")
+            @await Html.PartialAsync("_AllBrandComponent")
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

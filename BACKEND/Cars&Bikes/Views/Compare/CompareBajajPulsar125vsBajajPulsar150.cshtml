@@ -1,0 +1,26 @@
+﻿@model CompareViewModel
+
+@{
+    ViewData["Title"] = "Pulsar 125 vs Pulsar 150, Full Comparison 2025 ";
+}
+@section MetaTags {
+    <meta name="keywords" content="Bajaj Pulsar 125 vs Pulsar 150, Pulsar 125 vs 150 mileage, Pulsar 125 price 2025, Pulsar 150 specifications, Pulsar 125 vs 150 performance, Best Pulsar bike under 1.5 lakh, Pulsar 125 top speed, Bajaj Pulsar 150 review, Bajaj Pulsar comparison, Pulsar 125 vs 150 features, Bajaj commuter bike comparison, Pulsar 125 vs 150 engine specs, Pulsar 125 vs 150 which is better, Pulsar 125 fuel efficiency, Pulsar 150 vs 125 power difference " />
+    <meta name="description" content="Compare Bajaj Pulsar 125 and Pulsar 150 on price, mileage, specs, and performance. Find out which Pulsar is better suited for your riding style and budget. " />
+}
+<div class=" ">
+    @* @Html.RenderPartial("_CompareTable", Model) *@
+
+    @await Html.PartialAsync("_CompareTable", Model)
+</div>
+<div class="google-ad">
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:1000px;height:200px"
+         data-ad-client="ca-pub-8720291170595920"
+         data-ad-slot="6204553210">
+    </ins>
+</div>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+@await Html.PartialAsync("_AllViewComponent")

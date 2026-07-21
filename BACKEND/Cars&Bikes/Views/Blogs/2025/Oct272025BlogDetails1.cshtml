@@ -1,0 +1,441 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Motorcycle Road Trip Prep: Maintenance & Packing Guide | bikecarhub";
+}
+@section MetaTags {
+    <meta name="keywords" content="Motorcycle road trip preparation, pre-trip motorcycle maintenance, long-distance motorcycle packing list, touring motorcycle checklist, motorcycle safety tips, how to pack a motorcycle, motorcycle tire pressure touring, long-haul motorcycle guide,bikecarhub" />
+    <meta name="description" content="The ultimate checklist for preparing your motorcycle for a long road trip at bikecarhub. Detailed guide on critical maintenance, strategic packing, and essential safety tips" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        @* <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div> *@
+        <div><h1 class="latest-bike-head">The Ultimate Road Trip Prep: Your Complete Motorcycle Maintenance and Packing Checklist for Long-Haul Adventures</h1></div>
+       
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                
+                 <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                
+                <p>Preparing a motorcycle for a long haul is a commitment, a ritual of preventative care that ensures reliability, safety, and comfort. This comprehensive checklist covers everything from the critical nuts-and-bolts maintenance to the strategic art of packing. By following these detailed steps, any rider can transform their machine into a reliable touring partner, ready to conquer thousands of miles.</p>
+                <h3 class="subheading">Part I: Pre-Trip Maintenance – The Rider's Responsibility</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/the ultimate road trip prep/bike.webp" alt="bike" title="bike" loading="lazy" /></div>
+                </div>
+
+
+                <p>Before the open road calls, a rider must first answer the call of the garage. The goal here is simple: eliminate any potential failure points before they become a real-world problem. This isn't just about changing the oil; it's a deep, systematic check of every major system on the bike.</p>
+                <p> <span class="font-weight-700">The Foundation: Engine and Fluids (The Lifeblood)</span></p>
+                <p>The engine is the heart of the journey, and its fluids are the lifeblood. Neglecting these basics is the single biggest mistake a touring rider can make.</p>
+                <p> <span class="font-weight-700">1. Engine Oil and Filter Change</span></p>
+                <ul>
+                    <li> <span class="font-weight-700">The Critical Rule: </span>Even if your oil is a few hundred miles shy of its scheduled change, <span class="font-weight-700"> change it now. </span>Starting a multi-thousand-mile trip with fresh oil and a new filter is non-negotiable. Fresh oil ensures maximum lubrication and cooling efficiency, which is vital when the engine will be running for hours on end under varying loads and temperatures.</li>
+                    <li>Highlight:  <span class="font-weight-700">Always use the manufacturer-recommended grade and specification of oil </span>(synthetic or semi-synthetic) for maximum engine protection.</li>
+                </ul>
+                <p> <span class="font-weight-700">2. Coolant and Brake Fluid</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Check Coolant:</span> For liquid-cooled bikes, ensure the coolant reservoir is topped up to the correct level and that the fluid looks clean. A flush and refill might be advisable if the coolant is nearing the end of its service interval, as overheating is a common killer on long, hot stretches.</li>
+                    <li> <span class="font-weight-700">Inspect Brake Fluid: </span>Brake fluid is hygroscopic—it absorbs moisture over time. This reduces its boiling point, leading to brake fade under heavy use, especially in mountains. Check the level in the reservoirs and, ideally, flush and replace the fluid if it hasn't been done within the last year.</li>
+                </ul>
+                <p> <span class="font-weight-700">3. Air Filter and Fuel System</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Air Filter Health: </span>A dirty air filter starves the engine of oxygen, leading to reduced performance and poor fuel economy—two things you absolutely do not want on a long trip. Clean or replace the air filter as needed.</li>
+                    <li><span class="font-weight-700">Fuel Lines and Hoses:</span> Visually inspect all fuel lines for cracks, hardening, or leaks. Ensure the throttle operates smoothly and snaps back instantly when released. A quick check of the spark plugs can also give an indication of engine health (ideal plugs should be a light tan or grey colour).</li>
+                    </ul>
+                    <p> <span class="font-weight-700">The Contact Points: Tires and Wheels (Safety First</span>)</p>
+                    <p>The tires are the only part of the motorcycle touching the ground, making them the most critical safety item. A thorough inspection here is paramount.</p>
+                    <p> <span class="font-weight-700">1. Tire Condition and Tread Depth</span></p>
+                    <ul>
+                       <li> <span class="font-weight-700">Tread Depth: </span>Check the tread depth across the entire surface of the tire. Worn tires significantly reduce grip in wet conditions. If the tread is close to the legal limit or the wear bars are showing<span class="font-weight-700">, replace the tires before the trip</span>. It is much easier to replace them in your home garage than trying to find the right size in a remote town.</li>
+                    <li> <span class="font-weight-700">Visual Inspection:</span> Look for embedded foreign objects (nails, glass), cuts, cracks in the sidewalls, or any bulging, which could indicate internal structural damage.</li>
+                    </ul>
+                <p><span class="font-weight-700">2. Tire Pressure Adjustment</span></p>
+                <ul>
+                    
+                        <li><span class="font-weight-700">The Loaded Recommendation: </span>Tire pressure must be checked when the tires are cold (before riding). Crucially, you must adjust the pressure to the
+                    <span class="font-weight-700">manufacturer's recommended setting for a fully loaded bike, </span>which accounts for your luggage and yourself (and a passenger, if applicable). This is often higher than the solo-riding pressure.</li>
+                    <li> Highlight: Incorrect pressure affects handling, safety, and tire longevity.</li>
+                    <li> <span class="font-weight-700">Underinflation is the leading cause of tire failure on long trips.</span></li>
+                    </ul>
+                    <p><span class="font-weight-700">The Power Transmission: Chain/Shaft, Brakes, and Electrical</span></p>
+                    <p>These systems manage your acceleration, stopping, and visibility—all essential for a safe journey.</p>
+                    <p><span class="font-weight-700">1. Drive Chain and Sprockets</span></p>
+                    <ul>
+                    <li><span class="font-weight-700">Tension and Alignment: </span>Check the chain tension and adjust it according to the bike's service manual specifications. An overly tight chain can damage bearings, and a loose chain can derail. Ensure the wheel is aligned properly.</li>
+                    <li><span class="font-weight-700">Lubrication and Wear: </span>Thoroughly clean the chain of old gunk and re-lubricate it with quality chain wax or lube. Inspect the front and rear sprockets for 'hooking' or sharp, pointed teeth—a sign that the sprockets (and likely the chain) need replacement.</li>
+                    <li><span class="font-weight-700">Shaft Drive:</span> For shaft-drive bikes, check for fluid leaks around the final drive housing and ensure the fluid is at the correct level (or have it serviced if due).</li>
+                </ul>
+                    <p><span class="font-weight-700">2. Brakes (Pads and Discs)</span></p>
+                    <ul>
+                        <li> <span class="font-weight-700">Pad Thickness:</span> Visually inspect the brake pads. If they are less than 2-3mm thick, replace them. Even 50% wear might not be enough for a full-length tour, especially if you plan on heavy braking or mountain riding.</li>
+                        <li> <span class="font-weight-700">Rotor/Disc Condition: </span>Check the rotors for scoring, warping, or excessive wear. They should be smooth and flat.</li>
+                        <li> <span class="font-weight-700">Functionality:</span> Test both the front and rear brakes for firm, responsive action. There should be no sponginess or excessive lever travel.</li>
+                    </ul>
+                    <p> <span class="font-weight-700"> 3. Electrical System and Battery</span></p>
+                    <ul>
+                    <li><span class="font-weight-700">Battery Check: </span>Ensure the battery terminals are clean, tight, and free of corrosion. If the battery is older (3+ years), consider a load test to ensure it can handle the continuous draw of accessories (GPS, heated gear) on the road.</li>
+                    <li>
+                        <span class="font-weight-700">All Lights and Signals: </span>Check the headlight (low and high beam), taillight, brake light (front and rear activation), and turn signals. Visibility is key. Carry spare fuses and bulbs, especially for older models.
+                    </li>
+                    <li> <span class="font-weight-700">Charging System: </span>If possible, check the output voltage of the charging system (alternator/stator and regulator/rectifier) to ensure the bike is properly recharging the battery while running.</li>
+                    </ul>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                    <h3 class="subheading">BikeCarHub Exclusive: Long-Haul Reliability Checklist</h3>
+                    <div class="row m-b20">
+                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/the ultimate road trip prep/list.webp" alt="list" title="list" loading="lazy" /></div>
+                    </div>
+
+                    <div style="overflow-x: auto;">
+
+                        <table class="comparison-table-content">
+
+                            <thead>
+
+                                <tr>
+                                    <th class="font-weight-600 text-center">Component</th>
+                                    <th class="font-weight-600 text-center">Pre-Trip Action</th>
+                                    <th class="font-weight-600 text-center">Reason for the Check</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-weight-600">Engine Oil</td>
+                                    <td>Change Oil &amp; Filter, regardless of mileage proximity.</td>
+                                    <td>Maximizes cooling and lubrication for continuous high-load running.</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-600">Tire Pressure</td>
+                                    <td>Check cold and set to <span class="font-weight-700"> Loaded </span>specifications.</td>
+                                    <td>Correct pressure prevents failure, improves handling, and maximizes tire life.</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-600">Brake Fluid</td>
+                                    <td>Check level; bleed/replace if over 1 year old.</td>
+                                    <td>Prevents brake fade by eliminating moisture absorption (hygroscopy).</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-600">Chain/Sprockets</td>
+                                    <td>Clean, lubricate, and check for correct tension.</td>
+                                    <td>Prevents derailment, extends drivetrain life, and ensures smooth power.</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-600">Suspension</td>
+                                    <td>Adjust settings for the full luggage/rider weight.</td>
+                                    <td>Essential for stable handling, cornering, and rider comfort over long distances.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                    <h3 class="subheading">Comfort and Ergonomics (Rider Health)</h3>
+                    <p>A tired rider is a dangerous rider. Small adjustments before the trip can drastically reduce fatigue.</p>
+                    <ul>
+                    <li>
+                    <span class="font-weight-700">Suspension Adjustment: </span>Adjust the suspension settings (pre-load and damping) to accommodate the extra weight of your luggage and yourself. Proper adjustment is critical for stable high-speed handling and rider comfort.</li>
+                    <li><span class="font-weight-700">Controls and Levers:</span> Ensure the clutch and brake levers, gear shifter, and foot pegs are in comfortable, easily accessible positions. A minor discomfort over a single day becomes debilitating over a week.</li>
+                    <li> <span class="font-weight-700">Wind Protection: </span>Check your windscreen for cracks and clean it thoroughly. Consider adding an auxiliary spoiler or checking a different screen height if you experience excessive buffeting, which can cause significant neck and shoulder fatigue.</li>
+                    </ul>
+                    <h3 class="subheading">Part II: The Art of Packing – Strategic Load Management</h3>
+                    <div class="row m-b20">
+                        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/oct/the ultimate road trip prep/black.webp" alt="black" title="black" loading="lazy" /></div>
+                    </div>
+                
+                    <p>Packing a motorcycle is a fine balance between necessity and physics. You have limited space, and improper weight distribution can compromise your bike's handling and safety. The fundamental rule for any journey, as often emphasized on <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a> is to be prepared, but not over-burdened.</p>
+                    <p> <span class="font-weight-700">Choosing Your Luggage System</span></p>
+                    <p>The type of luggage you use affects how you pack and how the bike handles.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                        <h3 class="subheading">Hard vs. Soft Luggage:</h3>
+                    
+                        <ul>
+                            <li><span class="font-weight-700">Hard Cases (Panniers/Top Box): </span>Offer excellent security, are lockable, and are typically waterproof. Best for on-road touring. Their downside is a slightly wider profile and a higher cost.
+                            <li> <span class="font-weight-700">Soft Luggage (Saddlebags/Dry Bags):</span> Lighter, more flexible, and better for off-road/adventure riding where a fall won't damage a metal box. The trade-off is often less security and potentially less water resistance unless using dedicated dry bags.
+                        </ul>
+                    <ul>
+                        <li>
+                            <span class="font-weight-700">Tank Bag: </span>An absolute must-have for quick-access items: documents, wallet, phone, water, snacks, and passport. <span class="font-weight-700"> Crucially, this is the best place for your heaviest items.</span>
+                </ul>
+                            
+                                <h3 class="subheading">Strategic Packing Principles</h3>
+                                <p>Weight distribution is more important than capacity. Think low, central, and equal.</p>
+                                <ol start-="1">
+                                    <li><span class="font-weight-700">Low and Central:</span> Place the heaviest items (tools, spare parts, water) as low as possible and as close to the center of the motorcycle as possible (e.g., in the bottom of saddlebags, or in the tank bag). This preserves the bike's natural center of gravity, maintaining predictable handling.</li>
+                                    <li> <span class="font-weight-700">Even Distribution:</span> Ensure the weight is balanced equally between the left and right side of the bike. Uneven loading will make the bike pull to one side and feel unstable in corners.</li>
+                                    <li><span class="font-weight-700">Use Compression: </span>Use stuff sacks, compression bags, or vacuum bags for clothing to save space and make them easier to fit into awkward luggage shapes. Roll clothes, do not fold them, to prevent creasing and save space.</li>
+                                    <li> <span class="font-weight-700">Quick-Access Items: </span>Rain gear, tire repair kits, and a basic first-aid kit should be packed last or placed in a tank bag or easily accessible tail bag. You do not want to be fumbling through a pannier in a downpour for your waterproof layer.</li>
+                                </ol>
+                                <p> <span class="font-weight-700">The Essential Packing Checklist</span></p>
+                                <p>A long road trip requires layers of preparation, from personal comfort to roadside emergency.</p>
+                                <p> <span class="font-weight-700">Riding Gear and Apparel (Never Compromise)</span></p>
+                                <ul>
+                                    <li> <span class="font-weight-700">Helmet: </span>Full-face, high-quality, and in good condition. Consider a transition visor or pinlock anti-fog insert.
+                                    <li><span class="font-weight-700">Protective Layers:</span> Armored jacket and pants (with liners for versatility).
+                                    <li> <span class="font-weight-700">Gloves: </span>Two pairs—one vented/summer pair, one  <span class="font-weight-700">waterproof/winter pair.</span>
+                                    <li>Boots: Sturdy, waterproof riding boots.
+                                    <li><span class="font-weight-700">Rain Gear:</span> A dedicated, compact rain suit. Do not rely solely on your 'water-resistant' riding gear.
+                                </ul>
+                                <p> <span class="font-weight-700">Tools, Spares, and Emergency Kit</span></p>
+                                <p>This kit is your insurance policy. The specifics depend on your bike, but the core items are universal.</p>
+                                <ul>
+                                    <li><span class="font-weight-700">Tire Repair Kit: </span>Tire plugs/patch kit (for tubeless tires), and a small portable air compressor or hand pump.</li>
+                                    <li><span class="font-weight-700">Basic Tool Kit: </span>Wrench sizes for common fasteners on your bike, screwdrivers, Allen/Torx keys, duct tape, zip ties, multi-tool, vice grips, and a small length of wire.</li>
+                                    <li> <span class="font-weight-700">Small Spares: </span>Spare key (stored separately from the primary key!), spare fuses, a length of electrical wire, and for older bikes, a spare clutch and throttle cable.</li>
+                                    <li><span class="font-weight-700">Fluids: </span>A small bottle of chain lube and, for high-mileage bikes, a travel-sized bottle of engine oil.</li>
+                                </ul>
+                <p>
+                    <span class="font-weight-700">
+                        Navigation, Electronics, and Documents
+                    </span>
+                </p>
+                                <ul>
+                                    <li><span class="font-weight-700">Documents: </span>Physical driver's license, motorcycle registration, insurance papers, roadside assistance contact info, and an emergency contact list. Keep digital copies and hard copies, stored separately.</li>
+                                    <li> <span class="font-weight-700">Navigation: </span>GPS device or a robust phone mount/case (like a Quad Lock) for a navigation app.  <span class="font-weight-700">Crucially, download offline maps </span>before you leave cell service areas.</li>
+                                    <li> <span class="font-weight-700">Power:</span> A high-capacity power bank and a multi-port USB charger connected to a fused power outlet on the bike.</li>
+                                </ul>
+                                <p><span class="font-weight-700">Personal Items and Comfort</span></p>
+                                <ul>
+                                    <li><span class="font-weight-700">Layered Clothing: </span>Focus on base layers (moisture-wicking), mid-layers (fleece/thermal), and a few quick-dry casual clothes. You can wash and re-wear.</li>
+                                    <li><span class="font-weight-700">Toiletries: </span>Travel sizes only. Include sunscreen and lip balm with SPF, as the sun exposure on a bike is relentless.</li>
+                                    <li><span class="font-weight-700">First-Aid: </span>Bandages, antiseptic wipes, pain relievers, blister treatment, and any personal prescription medications.</li>
+                                    <li> <span class="font-weight-700">Hydration:</span> A hydration pack or easily accessible water bottle is vital. Dehydration is a significant cause of rider fatigue.</li>
+                                </ul>
+                                <p><span class="font-weight-700">The Last 24 Hours: Final Checks</span></p>
+                                <p>Before you roll out of the driveway, take one last, dedicated walk-around:</p>
+                                <ol start="1">
+                                    <li> <span class="font-weight-700">F L W O C:</span> A mnemonic used by pilots and often by riders: Fuel, Lights, Oil, Water, Chassis. Run through your full checklist one last time.</li>
+                                    <li><span class="font-weight-700">Luggage Security: </span>Jiggle every bag and box. Tug on all straps, bungee cords, and mounting points. Nothing should be loose or able to interfere with the wheels or chain.</li>
+                                    <li><span class="font-weight-700">Test Ride: </span>Take the fully loaded bike for a short ride around the block. Test the brakes and get a feel for the new handling characteristics. If anything feels dramatically wrong, fix it before you commit to the open highway.</li>
+                                </ol>
+                                <p>By undertaking this meticulous preparation, a rider isn't just servicing a machine; they are investing in peace of mind. The open road is a beautiful, unpredictable place, and having a perfectly prepared motorcycle is the ultimate co-pilot for any long-haul adventure.</p>
+                <p style="text-align: right;"><span class="font-weight-700">Written by:</span> BikeCarHub Team</p>
+                <p style="text-align: right;"><span class="font-weight-700">Published on:</span> 27th October 2025</p>
+                                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                                <h3 class="subheading">Frequently Asked Questions (FAQs) for Motorcycle Touring</h3>
+                                <div class="container my-4">
+                                  
+
+                                    <div class="accordion" id="touringFAQ">
+
+                                        <!-- FAQ 1 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqHeading1">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                                    1. How far should I ride in a single day on a long trip?
+                                                </button>
+                                            </h2>
+                                            <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#touringFAQ">
+                                                <div class="accordion-body">
+                                                    A safe and realistic long-distance range is 300–450 miles (500–700 km) per day. Beginners or riders facing extreme weather,
+                                                    mountains, or traffic should aim lower. Fatigue is a major danger — stop early rather than risk a late-day crash.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 2 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqHeading2">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                                    2. How often should I check my tire pressure during a multi-day trip?
+                                                </button>
+                                            </h2>
+                                            <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#touringFAQ">
+                                                <div class="accordion-body">
+                                                    Every morning before riding, with cold tires. Temperature and altitude changes affect pressure — correct pressure is your biggest daily safety factor.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 3 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqHeading3">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                                    3. Hard or soft luggage for touring?
+                                                </button>
+                                            </h2>
+                                            <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#touringFAQ">
+                                                <div class="accordion-body">
+                                                    Hard luggage is better for road touring — secure, weatherproof, impact-resistant.
+                                                    Soft luggage suits off-road — lighter and safer in a fall.
+                                                    Many riders use a hybrid setup for the best of both.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 4 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqHeading4">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                                    4. Signs my chain needs adjustment or replacement?
+                                                </button>
+                                            </h2>
+                                            <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#touringFAQ">
+                                                <div class="accordion-body">
+                                                    Adjust if slack is outside specification. Replace if:<br>
+                                                    • Tight spots<br>
+                                                    • You can pull chain away from rear sprocket<br>
+                                                    • Hooked/pointed sprocket teeth
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 5 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqHeading5">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                                    5. Best place to store motorcycle documents?
+                                                </button>
+                                            </h2>
+                                            <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#touringFAQ">
+                                                <div class="accordion-body">
+                                                    Keep originals waterproof and quickly accessible (jacket/tank bag).
+                                                    Keep photocopies separately on the bike (like under-seat storage).
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 6 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqHeading6">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                                                    6. Prevent electronics from draining motorcycle battery?
+                                                </button>
+                                            </h2>
+                                            <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#touringFAQ">
+                                                <div class="accordion-body">
+                                                    Use switched power so accessories only draw when ignition is on.
+                                                    Unplug unnecessary devices while parked. Consider a battery tender for long trips.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 7 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqHeading7">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                                                    7. Should I service my bike before touring?
+                                                </button>
+                                            </h2>
+                                            <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#touringFAQ">
+                                                <div class="accordion-body">
+                                                    Yes — oil, fluids, filters, brakes, drivetrain.
+                                                    Avoid major performance upgrades right before a trip.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 8 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqHeading8">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                                                    8. Most common roadside failures on motorcycle tours?
+                                                </button>
+                                            </h2>
+                                            <div id="faq8" class="accordion-collapse collapse" aria-labelledby="faqHeading8" data-bs-parent="#touringFAQ">
+                                                <div class="accordion-body">
+                                                    Tire failures and chain/sprocket breakdowns.
+                                                    Prevention: tire repair kit, chain maintenance, spare cables if possible.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 9 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqHeading9">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                                                    9. Safe way to carry extra fuel?
+                                                </button>
+                                            </h2>
+                                            <div id="faq9" class="accordion-collapse collapse" aria-labelledby="faqHeading9" data-bs-parent="#touringFAQ">
+                                                <div class="accordion-body">
+                                                    Use motorcycle-specific fuel containers (e.g., RotopaX).
+                                                    Never use household bottles. Mount low, away from exhaust heat.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 10 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqHeading10">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+                                                    10. Best way to pack clothes?
+                                                </button>
+                                            </h2>
+                                            <div id="faq10" class="accordion-collapse collapse" aria-labelledby="faqHeading10" data-bs-parent="#touringFAQ">
+                                                <div class="accordion-body">
+                                                    Roll clothes, use compression bags, and choose quick-dry fabrics.
+                                                    Pack fewer items — wash overnight when needed.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+            </div>    
+        </div>
+    </div>
+    @await Html.PartialAsync("_AllViewComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

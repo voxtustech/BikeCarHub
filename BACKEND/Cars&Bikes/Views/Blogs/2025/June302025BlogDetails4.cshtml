@@ -1,0 +1,350 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Long-Range EVs in India for 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="top EV cars India 2025, longest range electric cars, Mercedes-Benz EQS 580, Lotus Emeya, Kia EV9, Mahindra BE6, Mahindra XEV9e, Tata Curvv EV, best electric vehicles India, high mileage EVs, luxury electric cars India" />
+    <meta name="description" content="Discover the top 5 electric cars with the highest range in India for 2025. Compare Mercedes-Benz EQS, Lotus Emeya, Kia EV9, Mahindra BE6/XEV9e, and Tata Curvv EV" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 1th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">1. Mercedes-Benz EQS 580 — Up to 677 km (ARAI)</h2>
+                <ul>
+                    <li><span class="font-weight-700">Range:</span> 677 km (ARAI-certified)</li>
+                    <li><span class="font-weight-700">Battery:</span> 107.8 kWh</li>
+                    <li><span class="font-weight-700">Class:</span> Luxury electric sedan</li>
+                    <li>
+                        <span class="font-weight-700">Highlights:</span>
+                        <ul>
+                            <li>Best-in-class aerodynamic design and efficiency.</li>
+                            <li>Ultra-luxurious cabin—cutting-edge tech and supreme comfort.</li>
+                            <li>Fast charging: ~30 mins (10–80% via 200 kW DC).</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-weight-700">Considerations:</span> Starting price ~₹1.55 Cr; exclusive executive segment.</li>
+                </ul>
+
+                <h2 class="subheading">2. Lotus Emeya — Approx. 610 km (WLTP)</h2>
+                <ul>
+                    <li><span class="font-weight-700">Range:</span> 610 km (WLTP)</li>
+                    <li><span class="font-weight-700">Battery:</span> ~102 kWh</li>
+                    <li><span class="font-weight-700">Class:</span> High-performance luxury sedan</li>
+                    <li>
+                        <span class="font-weight-700">Highlights:</span>
+                        <ul>
+                            <li>Dual motor AWD delivering about 600 hp.</li>
+                            <li>Sleek aerodynamic design with premium in-car experience.</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-weight-700">Considerations:</span> Premium price ~₹2.34 Cr onward; luxury positioning.</li>
+                </ul>
+
+                <h2 class="subheading">3. Kia EV9 — 561 km (WLTP)</h2>
+                <ul>
+                    <li><span class="font-weight-700">Range:</span> 561 km (WLTP)</li>
+                    <li><span class="font-weight-700">Battery:</span> 99.8 kWh</li>
+                    <li><span class="font-weight-700">Class:</span> Large luxury electric SUV</li>
+                    <li>
+                        <span class="font-weight-700">Highlights:</span>
+                        <ul>
+                            <li>Family-focused with spacious interior and 7-seater layout.</li>
+                            <li>Fast charge; dual-motor AWD option.</li>
+                            <li>Launch price ~₹1.3 Cr.</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-weight-700">Considerations:</span> Top-end luxury features, premium pricing.</li>
+                </ul>
+
+                <h2 class="subheading">4. Mahindra BE 6 / XEV 9e — 550–556 km</h2>
+                <h3 class="subheading">Mahindra BE 6</h3>
+                <ul>
+                    <li><span class="font-weight-700">Range:</span> 556 km (ARAI, 59 kWh) / 550 km (WLTP, 79 kWh)</li>
+                    <li><span class="font-weight-700">Price:</span> ₹18.9–26.9 L</li>
+                </ul>
+                <h3 class="subheading">Mahindra XEV 9e</h3>
+                <ul>
+                    <li><span class="font-weight-700">Range:</span> 542 km (ARAI, 59 kWh) / 533 km (WLTP, 79 kWh)</li>
+                    <li><span class="font-weight-700">Price:</span> ₹21.9–30.5 L</li>
+                </ul>
+                <p><span class="font-weight-700">Highlights:</span></p>
+                <ul>
+                    <li>India-focused engineering from ₹19 L upward.</li>
+                    <li>Feature-rich SUVs with spacious cabins and fast-charging.</li>
+                    <li>BE 6 undercuts XEV 9e on price with similar range.</li>
+                </ul>
+                <p><span class="font-weight-700">Considerations:</span> Relative new entrants; rapidly expanding MXUV lineup.</p>
+
+                <h2 class="subheading">5. Tata Curvv EV — 502–585 km (ARAI)</h2>
+                <ul>
+                    <li><span class="font-weight-700">Range:</span> 502 km (45 kWh) / 585 km (55 kWh)</li>
+                    <li><span class="font-weight-700">Battery Options:</span> 45 kWh & 55 kWh LFP</li>
+                    <li><span class="font-weight-700">Class:</span> Coupe-SUV</li>
+                    <li><span class="font-weight-700">Price:</span> ~₹17.5 L (Creative 45 variant)</li>
+                    <li>
+                        <span class="font-weight-700">Highlights:</span>
+                        <ul>
+                            <li>Attractive range for price; strong 0–100 km/h in ~8.6 s.</li>
+                            <li>Fast charging 10–80% in ~40 mins at 70 kW.</li>
+                            <li>Modern design and practical interiors.</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-weight-700">Considerations:</span> FWD only; premium trim cost yet to be confirmed.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Detailed Comparison</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Battery (kWh)</th>
+                                <th class="text-center">Range (ARAI/WLTP)</th>
+                                <th class="text-center">Price (Ex-Showroom)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>EQS 580</td>
+                                <td>107.8</td>
+                                <td>677 km (ARAI)</td>
+                                <td>₹1.55 Cr+</td>
+                            </tr>
+                            <tr>
+                                <td>Lotus Emeya</td>
+                                <td>~102</td>
+                                <td>610 km (WLTP)</td>
+                                <td>₹2.34 Cr+</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Kia EV9</td>
+                                <td>99.8</td>
+                                <td>561 km (WLTP)</td>
+                                <td>₹1.30 Cr</td>
+                            </tr>
+                            <tr>
+                                <td>BE 6 (59/79 kWh)</td>
+                                <td>59 / 79</td>
+                                <td>556 / 550 km</td>
+                                <td>₹18.9–26.9 L</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>XEV 9e (59/79 kWh)</td>
+                                <td>59 / 79</td>
+                                <td>542 / 533 km</td>
+                                <td>₹21.9–30.5 L</td>
+                            </tr>
+                            <tr>
+                                <td>Tata Curvv EV</td>
+                                <td>45 / 55</td>
+                                <td>502 / 585 km (ARAI)</td>
+                                <td>~₹17.5 L</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Driving Experience & Tech</h2>
+                <h3 class="subheading">Luxury Range Leaders (EQS, Emeya, EV9)</h3>
+                <ul>
+                    <li>Sleek design, early-stage fast charging (200 kW+).</li>
+                    <li>Advanced tech, ADAS features, high-grade interiors.</li>
+                    <li>Ideal for premium buyers with long-range needs.</li>
+                </ul>
+
+                <h3 class="subheading">Performance vs. Value EVs (BE6, XEV9e)</h3>
+                <ul>
+                    <li>Competitive ranges over 500 km with robust packaging.</li>
+                    <li>Fast-charging capable (~140–175 kW).</li>
+                    <li>Price starting under ₹20 L makes them compelling for wide adoption.</li>
+                </ul>
+
+                <h3 class="subheading">Coupé-SUV Value Proposition (Curvv)</h3>
+                <ul>
+                    <li>Excellent urban/highway balance with 585 km on higher battery.</li>
+                    <li>Sub-₹20 L pricing with fast charge and modern features.</li>
+                    <li>Efficient midsize SUV for family buyers.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Charging Infrastructure & Usability</h2>
+                <ul>
+                    <li><span class="font-weight-700">Fast charging ecosystems:</span> EQS, Emeya, EV9 leverage 200–350 kW DC; BE6/XEV9e around 140–175 kW; Curvv at 70 kW.</li>
+                    <li><span class="font-weight-700">Real-world range</span> may vary due to terrain, AC usage, and payload—expect 85–90% of certified numbers.</li>
+                    <li><span class="font-weight-700">Government support</span> under FAME III continues to boost affordability and adoption.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Choosing the Right Long-Range EV</h2>
+                <ol>
+                    <li><span class="font-weight-700">Luxury Comfort & Prestige:</span> Choose EQS, Emeya, or EV9—these offer unmatched refinement and range.</li>
+                    <li><span class="font-weight-700">Value-Priced Long Range:</span> The BE6 and XEV9e deliver real 500+ km at mass-market prices.</li>
+                    <li><span class="font-weight-700">Balanced Daily Use:</span> Curvv EV fits well as a stylish yet practical family EV with substantial range.</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <h2 class="subheading">✅ Final Takeaway</h2>
+                    <p>2025 in India is the <span class="font-weight-700">Year of Long-Range EVs</span>. From <span class="font-weight-700">₹18 L BE6</span> delivering over <span class="font-weight-700">550 km</span>, to ultra-luxury sedans like the <span class="font-weight-700">EQS580</span> offering <span class="font-weight-700">677 km</span>, there's an EV for every budget. As charging infrastructure grows and manufacturers focus on real-world performance, range anxiety is finally becoming a thing of the past.</p>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Why Choose an EV Over an ICE Vehicle?</h2>
+                <p>Here's why choosing an EV over an ICE (internal combustion engine) vehicle is a smart move—covering cost, performance, environment, convenience, and long-term value:</p>
+
+                <h3 class="subheading">1. Much Lower Operating & Maintenance Costs</h3>
+                <ul>
+                    <li><span class="font-weight-700">Fuel running cost:</span> In India, EVs typically consume ₹1–2/km, while petrol/diesel cars cost around ₹5–7/km.</li>
+                    <li><span class="font-weight-700">Maintenance savings:</span> EVs have far fewer moving parts—no oil/filter changes, fewer brake replacements—which translates to 40–60% lower service costs.</li>
+                </ul>
+                <p><span class="font-weight-700">Bottom line:</span> Smaller daily expenses and less frequent servicing make EVs significantly more affordable over their lifetime.</p>
+
+                <h3 class="subheading">2. Greater Energy Efficiency & Performance</h3>
+                <ul>
+                    <li><span class="font-weight-700">Efficient energy use:</span> EV motors convert ~80% of electricity to wheel power compared to ~15–30% for ICE engines.</li>
+                    <li><span class="font-weight-700">Instant torque & smooth ride:</span> Electric motors deliver instant acceleration from zero RPM, offering swift responses and quiet driving.</li>
+                    <li><span class="font-weight-700">Regenerative braking:</span> Captures braking energy—reducing waste and extending range by up to 20%.</li>
+                </ul>
+                <p><span class="font-weight-700">Bottom line:</span> EVs are not just efficient—they're responsive and fun to drive.</p>
+
+                <h3 class="subheading">3. Environmental & Health Benefits</h3>
+                <ul>
+                    <li><span class="font-weight-700">Zero tailpipe emissions:</span> EVs reduce urban air pollution drastically by eliminating local exhaust pollutants and greenhouse gases.</li>
+                    <li><span class="font-weight-700">Lower lifecycle emissions:</span> Even accounting for battery production and power generation, EVs emit 19–56% less CO₂ over their life in India—and up to ~52% less globally.</li>
+                    <li><span class="font-weight-700">Reduced brake dust:</span> Regenerative braking cuts brake wear, leading to less particulate pollution.</li>
+                </ul>
+                <p><span class="font-weight-700">Bottom line:</span> EVs help improve air quality and reduce CO₂ emissions at every stage—from manufacturing to recycling.</p>
+
+                <h3 class="subheading">4. Convenience & Grid Integration</h3>
+                <ul>
+                    <li><span class="font-weight-700">Smart charging:</span> EVs can be charged at night at lower rates, and future vehicle-to-grid (V2G) capabilities may help balance power demand.</li>
+                    <li><span class="font-weight-700">Pre-conditioning comfort:</span> Use apps to heat or cool your EV before you enter—no idling engines needed.</li>
+                </ul>
+                <p><span class="font-weight-700">Bottom line:</span> EVs integrate seamlessly into modern smart energy systems and offer lifestyle perks that ICE vehicles can't match.</p>
+
+                <h3 class="subheading">5. Energy Security & Policy Incentives</h3>
+                <ul>
+                    <li><span class="font-weight-700">Reduced oil dependency:</span> EVs lessen reliance on imported oil, aiding national energy security.</li>
+                    <li><span class="font-weight-700">Government benefits:</span> Subsidies like India's FAME scheme, tax breaks, and lower registration fees make EVs more affordable.</li>
+                </ul>
+                <p><span class="font-weight-700">Bottom line:</span> EV adoption aligns with both national agendas and individual savings, offering financial and strategic advantages.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">EVs vs ICE Cars: Summary Comparison</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Advantage Area</th>
+                                <th class="text-center">EVs</th>
+                                <th class="text-center">ICE Cars</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Fuel Cost</td>
+                                <td>₹1–2/km</td>
+                                <td>₹5–7/km</td>
+                            </tr>
+                            <tr>
+                                <td>Maintenance</td>
+                                <td>40–60% cheaper, fewer moving parts</td>
+                                <td>Regular oil, filters, etc.</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Energy Efficiency</td>
+                                <td>~80% efficient</td>
+                                <td>~15–30% efficient</td>
+                            </tr>
+                            <tr>
+                                <td>Acceleration</td>
+                                <td>Instant torque, smooth, quiet</td>
+                                <td>Slower torque response, noisy</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Emissions</td>
+                                <td>Zero tailpipe, lower lifecycle CO₂</td>
+                                <td>High CO₂ & pollutant output</td>
+                            </tr>
+                            <tr>
+                                <td>Convenience Features</td>
+                                <td>App controls, V2G potential</td>
+                                <td>Limited to traditional functions</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Policy Benefits</td>
+                                <td>Subsidies, tax incentives</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>Energy Independence</td>
+                                <td>Boosts use of domestic electricity</td>
+                                <td>Relies on imported oil</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <div class="highlight-box">
+                    <h2 class="subheading">✅ Final Verdict</h2>
+                    <p><span class="font-weight-700">Choose an EV if</span> you care about long-term costs, environmental impact, driving enjoyment, and seamless tech integration.</p>
+                    <p><span class="font-weight-700">Choose an ICE</span> only if your priority is ultra-long-range travel in areas without reliable charging or if your upfront budget is ultra-constrained.</p>
+                    <p>Between the lines, EVs offer a compelling package for the future—saving money, reducing emissions, and providing smoother, smarter driving.</p>
+                </div>
+         
+
+
+
+
+        <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+        <h3 class="heading">Check other brands here</h3>
+        <p>For Skoda Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="SkodaKylaq1"> Click Here!</a></p>
+        <p>For Suzuki Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1"> Click Here!</a></p>
+        <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+    </div>
+    </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

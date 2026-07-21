@@ -1,0 +1,1563 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Compare your two wheeler here";
+}
+@section MetaTags {
+    <meta name="keywords" content="bike comparison, two wheeler comparison, comparison between bikes, scooter comparison, electric vehicle comparison, ev comparison, comparison blogs, comparison bikes" />
+    <meta name="description" content="Here you can compare your two wheeler and find the best bike for you. Get the detailed comparison with bikecarhub." />
+}
+
+@model TwoWheeler
+@*<div class="header-img"><img src="~/images/main-slider/header.png" />
+    </div>*@
+<h1 class="latest-bike-head">Comparing Bikes and Scooters</h1>
+<div class="compare-container">
+    <h3>Find Your Perfect Ride by Comparing Bikes and Scooters Side by Side!</h3>
+    <p>Whether you're looking for fuel efficiency, performance, or the latest in electric vehicle technology, our comparison tool lets you evaluate multiple models at once. Easily compare key specifications like mileage, engine type, and braking systems to make an informed decision.</p>
+    <div class="compare-box">
+        <div class="compare-card">
+            @* <img src="~/images/twowheeler/bicycle.png" alt="Bike logo" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" class="img-fluid" /> *@
+            <img class="twImage1" src="" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/bicycle.webp")';" />
+            <h4>Add to compare</h4>
+            <div class="compare-ddl">
+                <select id="brandDropdown1" class="ddlcompare" asp-items="ViewBag.BrandList">
+                    <option value="">--Select Brand--</option>
+                </select>
+            </div>
+
+            <div class="compare-ddl">
+                @* <label for="twoWheelerDropdown1">Select TwoWheeler 1:</label> *@
+                <select id="twoWheelerDropdown1" class="ddlcompare">
+                    <option value="">--Select Model--</option>
+                </select>
+            </div>
+
+            <div class="compare-ddl">
+                @* <label for="variantDropdown1">Select Variant 1:</label> *@
+                <select id="variantDropdown1" class="ddlcompare">
+                    <option value="">--Select Variant--</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="compare-card">
+            @* <img src="~/images/twowheeler/bicycle.png" alt="Bike logo" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" class="img-fluid" /> *@
+            <img class="twImage2" src="" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/bicycle.webp")';" />
+            <h4>Add to compare</h4>
+            <div class="compare-ddl">
+                @* <label for="brandDropdown2">Select Brand:</label> *@
+                <select id="brandDropdown2" class="ddlcompare" asp-items="ViewBag.BrandList">
+                    <option value="">--Select Brand--</option>
+                </select>
+            </div>
+            <div class="compare-ddl">
+                <!-- TwoWheeler and Variant Dropdown for the second vehicle -->
+                @* <label for="twoWheelerDropdown2">Select TwoWheeler 2:</label> *@
+                <select id="twoWheelerDropdown2" class="ddlcompare">
+                    <option value="">--Select Model--</option>
+                </select>
+            </div>
+            <div class="compare-ddl">
+                @* <label for="variantDropdown2">Select Variant 2:</label> *@
+                <select id="variantDropdown2" class="ddlcompare">
+                    <option value="">--Select Variant--</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <button type="button"
+                id="addBikeBtn"
+                class="contact-form-button">
+            + Add Bike
+        </button>
+    </div>
+    <div class="compareButton"><button class="contact-form-button m-t20" id="compareButton">Compare</button></div>@* </div> *@
+    <!-- Display comparison section -->
+    <div class="comparison-table" id="comparisonTable" style="display:none;">
+        <div class="compare-table-container for-tick">
+            <table class="comparison-table-content m-t20">
+                <thead>
+                    <tr>
+                        <th>Overview</th>
+                        <th id="comparisonColumn1" class="IdTWName1" style="display:none; text-align:center"></th>
+                        <th id="comparisonColumn2" class="IdTWName2" style="display:none; text-align:center"></th>
+                        <th id="comparisonColumn3" class="IdTWName3" style="display:none; text-align:center"></th>
+                        <th id="comparisonColumn4" class="IdTWName4" style="display:none; text-align:center"></th>
+                        <th id="comparisonColumn5" class="IdTWName5" style="display:none; text-align:center"></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div class="compare-table-container">
+            <table class="comparison-table-content m-t20">
+                <thead>
+                    <tr>
+                        @* <th>Overview</th> *@
+                        <th id="comparisonColumn1" class="IdTWName1" style="display:none; text-align:center"></th>
+                        <th id="comparisonColumn2" class="IdTWName2" style="display:none; text-align:center"></th>
+                        <th class="IdTWName3" style="display:none; text-align:center"></th>
+                        <th class="IdTWName4" style="display:none; text-align:center"></th>
+                        <th class="IdTWName5" style="display:none; text-align:center"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th><div class="Compare-img"><img class="twImage1" src="" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" /></div></th>
+                        <th><div class="Compare-img"><img class="twImage2" src="" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" /></div></th>
+                        <th><div class="Compare-img"><img class="twImage3" src="" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" /></div></th>
+                        <th><div class="Compare-img"><img class="twImage4" src="" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" /></div></th>
+                        <th><div class="Compare-img"><img class="twImage5" src="" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" /></div></th>
+                    </tr>
+                    <tr class="compare-head-text">
+                        <th>Mileage</th>
+                        <td class="milageColumn1"></td>
+                        <td class="milageColumn2"></td>
+                        <td class="milageColumn3"></td>
+                        <td class="milageColumn4"></td>
+                        <td class="milageColumn5"></td>
+                    </tr>
+                    <tr>
+                        <th>Fuel Capacity</th>
+                        <td class="fuelCapacity1"></td>
+                        <td class="fuelCapacity2"></td>
+                        <td class="fuelCapacity3"></td>
+                        <td class="fuelCapacity4"></td>
+                        <td class="fuelCapacity5"></td>
+                    </tr>
+                    <tr class="compare-head-text">
+                        <th>Body Type</th>
+                        <td class="bodyType1"></td>
+                        <td class="bodyType2"></td>
+                        <td class="bodyType3"></td>
+                        <td class="bodyType4"></td>
+                        <td class="bodyType5"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="compare-table-container">
+            <div class="expandable-header" onclick="toggleSection('specificationsContent', this)">
+                <h5>
+                    Specifications
+                </h5>
+                <i class="bi bi-chevron-down toggle-icon"></i>
+            </div>
+            <div id="specificationsContent" style="display: none;">
+                <table class="comparison-table-content">
+                    <tbody>
+                        <tr>
+                            <th>Mileage</th>
+                            <td class="milageColumn1"></td>
+                            <td class="milageColumn2"></td>
+                            <td class="milageColumn3"></td>
+                            <td class="milageColumn4"></td>
+                            <td class="milageColumn5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Front Brake</th>
+                            <td id="frontBrakeColumn1"></td>
+                            <td id="frontBrakeColumn2"></td>
+                            <td id="frontBrakeColumn3"></td>
+                            <td id="frontBrakeColumn4"></td>
+                            <td id="frontBrakeColumn5"></td>
+                        </tr>
+                        <tr>
+                            <th>Rear Brake</th>
+                            <td id="rearBrake1"></td>
+                            <td id="rearBrake2"></td>
+                            <td id="rearBrake3"></td>
+                            <td id="rearBrake4"></td>
+                            <td id="rearBrake5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Fuel Capacity</th>
+                            <td class="fuelCapacity1"></td>
+                            <td class="fuelCapacity2"></td>
+                            <td class="fuelCapacity3"></td>
+                            <td class="fuelCapacity4"></td>
+                            <td class="fuelCapacity5"></td>
+                        </tr>
+                        <tr>
+                            <th>Body Type</th>
+                            <td class="bodyType1"></td>
+                            <td class="bodyType2"></td>
+                            <td class="bodyType3"></td>
+                            <td class="bodyType4"></td>
+                            <td class="bodyType5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="compare-table-container">
+            <div class="expandable-header" onclick="toggleSection('engineTransmissionContent', this)">
+                <h5>
+                    Engine & Transmission
+                </h5>
+                <i class="bi bi-chevron-down toggle-icon"></i>
+            </div>
+            <div id="engineTransmissionContent" style="display: none;">
+                <table class="comparison-table-content">
+                    <tbody>
+                        <tr>
+                            <th>Engine Type</th>
+                            <td id="engineTypeColumn1"></td>
+                            <td id="engineTypeColumn2"></td>
+                            <td id="engineTypeColumn3"></td>
+                            <td id="engineTypeColumn4"></td>
+                            <td id="engineTypeColumn5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Displacement</th>
+                            <td id="displacement1"></td>
+                            <td id="displacement2"></td>
+                            <td id="displacement3"></td>
+                            <td id="displacement4"></td>
+                            <td id="displacement5"></td>
+                        </tr>
+                        <tr>
+                            <th>Max Torque</th>
+                            <td id="maxTorqueColumn1"></td>
+                            <td id="maxTorqueColumn2"></td>
+                            <td id="maxTorqueColumn3"></td>
+                            <td id="maxTorqueColumn4"></td>
+                            <td id="maxTorqueColumn5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Number Of Cylinders</th>
+                            <td id="numOfCylinders1"></td>
+                            <td id="numOfCylinders2"></td>
+                            <td id="numOfCylinders3"></td>
+                            <td id="numOfCylinders4"></td>
+                            <td id="numOfCylinders5"></td>
+                        </tr>
+                        <tr>
+                            <th>Cooling System</th>
+                            <td id="coolingSystem1"></td>
+                            <td id="coolingSystem2"></td>
+                            <td id="coolingSystem3"></td>
+                            <td id="coolingSystem4"></td>
+                            <td id="coolingSystem5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Value Per Cylinder</th>
+                            <td id="valvePerCylinder1"></td>
+                            <td id="valvePerCylinder2"></td>
+                            <td id="valvePerCylinder3"></td>
+                            <td id="valvePerCylinder4"></td>
+                            <td id="valvePerCylinder5"></td>
+                        </tr>
+                        <tr>
+                            <th>Starting</th>
+                            <td id="starting1"></td>
+                            <td id="starting2"></td>
+                            <td id="starting3"></td>
+                            <td id="starting4"></td>
+                            <td id="starting5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Fuel Supply</th>
+                            <td id="fuelSupply1"></td>
+                            <td id="fuelSupply2"></td>
+                            <td id="fuelSupply3"></td>
+                            <td id="fuelSupply4"></td>
+                            <td id="fuelSupply5"></td>
+                        </tr>
+                        <tr>
+                            <th>Clutch</th>
+                            <td id="clutch1"></td>
+                            <td id="clutch2"></td>
+                            <td id="clutch3"></td>
+                            <td id="clutch4"></td>
+                            <td id="clutch5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Gear Box</th>
+                            <td id="gearBox1"></td>
+                            <td id="gearBox2"></td>
+                            <td id="gearBox3"></td>
+                            <td id="gearBox4"></td>
+                            <td id="gearBox5"></td>
+                        </tr>
+                        <tr>
+                            <th>Emission Type</th>
+                            <td id="emissionType1"></td>
+                            <td id="emissionType2"></td>
+                            <td id="emissionType3"></td>
+                            <td id="emissionType4"></td>
+                            <td id="emissionType5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Compression Ratio</th>
+                            <td id="compressionRatio1"></td>
+                            <td id="compressionRatio2"></td>
+                            <td id="compressionRatio3"></td>
+                            <td id="compressionRatio4"></td>
+                            <td id="compressionRatio5"></td>
+                        </tr>
+                        <tr>
+                            <th>Ignition</th>
+                            <td id="ignition1"></td>
+                            <td id="ignition2"></td>
+                            <td id="ignition3"></td>
+                            <td id="ignition4"></td>
+                            <td id="ignition5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="compare-table-container">
+            <div class="expandable-header" onclick="toggleSection('featuresContent', this)">
+                <h5>
+                    Features
+                </h5>
+                <i class="bi bi-chevron-down toggle-icon"></i>
+            </div>
+            <div id="featuresContent" style="display: none;">
+                <table class="comparison-table-content">
+                    <tbody>
+                        <tr>
+                            <th>ABS</th>
+                            <td id="abs1"></td>
+                            <td id="abs2"></td>
+                            <td id="abs3"></td>
+                            <td id="abs4"></td>
+                            <td id="abs5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Speedometer</th>
+                            <td id="speedometer1"></td>
+                            <td id="speedometer2"></td>
+                            <td id="speedometer3"></td>
+                            <td id="speedometer4"></td>
+                            <td id="speedometer5"></td>
+                        </tr>
+                        <tr>
+                            <th>Tripmeter</th>
+                            <td id="tripmeter1"></td>
+                            <td id="tripmeter2"></td>
+                            <td id="tripmeter3"></td>
+                            <td id="tripmeter4"></td>
+                            <td id="tripmeter5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Tachometer</th>
+                            <td id="tachometer1"></td>
+                            <td id="tachometer2"></td>
+                            <td id="tachometer3"></td>
+                            <td id="tachometer4"></td>
+                            <td id="tachometer5"></td>
+                        </tr>
+                        <tr>
+                            <th>LED Tail Light</th>
+                            <td id="ledTailLight1"></td>
+                            <td id="ledTailLight2"></td>
+                            <td id="ledTailLight3"></td>
+                            <td id="ledTailLight4"></td>
+                            <td id="ledTailLight5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Odometer</th>
+                            <td id="odometer1"></td>
+                            <td id="odometer2"></td>
+                            <td id="odometer3"></td>
+                            <td id="odometer4"></td>
+                            <td id="odometer5"></td>
+                        </tr>
+                        <tr>
+                            <th>Fuel Gauge</th>
+                            <td id="fuelGauge1"></td>
+                            <td id="fuelGauge2"></td>
+                            <td id="fuelGauge3"></td>
+                            <td id="fuelGauge4"></td>
+                            <td id="fuelGauge5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Instrument Console</th>
+                            <td id="instrumentConsole1"></td>
+                            <td id="instrumentConsole2"></td>
+                            <td id="instrumentConsole3"></td>
+                            <td id="instrumentConsole4"></td>
+                            <td id="instrumentConsole5"></td>
+                        </tr>
+                        <tr>
+                            <th>Seat Type</th>
+                            <td id="seatType1"></td>
+                            <td id="seatType2"></td>
+                            <td id="seatType3"></td>
+                            <td id="seatType4"></td>
+                            <td id="seatType5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Body Graphics</th>
+                            <td id="bodyGraphics1"></td>
+                            <td id="bodyGraphics2"></td>
+                            <td id="bodyGraphics3"></td>
+                            <td id="bodyGraphics4"></td>
+                            <td id="bodyGraphics5"></td>
+                        </tr>
+                        <tr>
+                            <th>Clock</th>
+                            <td id="clock1"></td>
+                            <td id="clock2"></td>
+                            <td id="clock3"></td>
+                            <td id="clock4"></td>
+                            <td id="clock5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Passenger Footrest</th>
+                            <td id="passengerFootrest1"></td>
+                            <td id="passengerFootrest2"></td>
+                            <td id="passengerFootrest3"></td>
+                            <td id="passengerFootrest4"></td>
+                            <td id="passengerFootrest5"></td>
+                        </tr>
+                        <tr>
+                            <th>Additional Features Of Variant</th>
+                            <td id="additionalFeaturesOfVariant1"></td>
+                            <td id="additionalFeaturesOfVariant2"></td>
+                            <td id="additionalFeaturesOfVariant3"></td>
+                            <td id="additionalFeaturesOfVariant4"></td>
+                            <td id="additionalFeaturesOfVariant5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Distance To Empty Indicator</th>
+                            <td id="distanceToEmptyIndicator1"></td>
+                            <td id="distanceToEmptyIndicator2"></td>
+                            <td id="distanceToEmptyIndicator3"></td>
+                            <td id="distanceToEmptyIndicator4"></td>
+                            <td id="distanceToEmptyIndicator5"></td>
+                        </tr>
+                        <tr>
+                            <th>Adjustable Windshield</th>
+                            <td id="adjustableWindshield1"></td>
+                            <td id="adjustableWindshield2"></td>
+                            <td id="adjustableWindshield3"></td>
+                            <td id="adjustableWindshield4"></td>
+                            <td id="adjustableWindshield5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="compare-table-container">
+            <div class="expandable-header" onclick="toggleSection('safetyContent', this)">
+                <h5>
+                    Safety
+                </h5>
+                <i class="bi bi-chevron-down toggle-icon"></i>
+            </div>
+
+            <div id="safetyContent" style="display: none;">
+
+                <table class="comparison-table-content">
+
+                    <tbody>
+
+                        <tr>
+                            <th>Pass Switch</th>
+                            <td id="passSwitch1"></td>
+                            <td id="passSwitch2"></td>
+                            <td id="passSwitch3"></td>
+                            <td id="passSwitch4"></td>
+                            <td id="passSwitch5"></td>
+                        </tr>
+
+                        <tr class="compare-head-text">
+                            <th>Engine Kill Switch</th>
+                            <td id="engineKillSwitch1"></td>
+                            <td id="engineKillSwitch2"></td>
+                            <td id="engineKillSwitch3"></td>
+                            <td id="engineKillSwitch4"></td>
+                            <td id="engineKillSwitch5"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Display</th>
+                            <td id="display1"></td>
+                            <td id="display2"></td>
+                            <td id="display3"></td>
+                            <td id="display4"></td>
+                            <td id="display5"></td>
+                        </tr>
+
+                        <tr class="compare-head-text">
+                            <th>Riding Modes</th>
+                            <td id="ridingModes1"></td>
+                            <td id="ridingModes2"></td>
+                            <td id="ridingModes3"></td>
+                            <td id="ridingModes4"></td>
+                            <td id="ridingModes5"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Traction Control</th>
+                            <td id="tractionControl1"></td>
+                            <td id="tractionControl2"></td>
+                            <td id="tractionControl3"></td>
+                            <td id="tractionControl4"></td>
+                            <td id="tractionControl5"></td>
+                        </tr>
+
+                        <tr class="compare-head-text">
+                            <th>Additional Safety Features</th>
+                            <td id="additionalSafetyFeatures1"></td>
+                            <td id="additionalSafetyFeatures2"></td>
+                            <td id="additionalSafetyFeatures3"></td>
+                            <td id="additionalSafetyFeatures4"></td>
+                            <td id="additionalSafetyFeatures5"></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+        <div class="compare-table-container">
+            <div class="expandable-header" onclick="toggleSection('mileageContent', this)">
+                <h5>
+                    Mileage & Performance
+                </h5>
+                <i class="bi bi-chevron-down toggle-icon"></i>
+            </div>
+            <div id="mileageContent" style="display: none;">
+                <table class="comparison-table-content">
+                    <tbody>
+                        <tr>
+                            <th>Overall Mileage</th>
+                            <td id="overallMileage1"></td>
+                            <td id="overallMileage2"></td>
+                            <td id="overallMileage3"></td>
+                            <td id="overallMileage4"></td>
+                            <td id="overallMileage5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>City Mileage</th>
+                            <td id="cityMileage1"></td>
+                            <td id="cityMileage2"></td>
+                            <td id="cityMileage3"></td>
+                            <td id="cityMileage4"></td>
+                            <td id="cityMileage5"></td>
+                        </tr>
+                        <tr>
+                            <th>Highway Mileage</th>
+                            <td id="highwayMileage1"></td>
+                            <td id="highwayMileage2"></td>
+                            <td id="highwayMileage3"></td>
+                            <td id="highwayMileage4"></td>
+                            <td id="highwayMileage5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="compare-table-container">
+            <div class="expandable-header" onclick="toggleSection('dimensionsContent', this)">
+                <h5>
+                    Dimensions & Capacity
+                </h5>
+                <i class="bi bi-chevron-down toggle-icon"></i>
+            </div>
+            <div id="dimensionsContent" style="display: none;">
+                <table class="comparison-table-content">
+                    <tbody>
+                        <tr>
+                            <th>Width</th>
+                            <td id="width1"></td>
+                            <td id="width2"></td>
+                            <td id="width3"></td>
+                            <td id="width4"></td>
+                            <td id="width5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Length</th>
+                            <td id="length1"></td>
+                            <td id="length2"></td>
+                            <td id="length3"></td>
+                            <td id="length4"></td>
+                            <td id="length5"></td>
+                        </tr>
+                        <tr>
+                            <th>Height</th>
+                            <td id="height1"></td>
+                            <td id="height2"></td>
+                            <td id="height3"></td>
+                            <td id="height4"></td>
+                            <td id="height5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Fuel Capacity</th>
+                            <td id="fuelCapacityDim1"></td>
+                            <td id="fuelCapacityDim2"></td>
+                            <td id="fuelCapacityDim3"></td>
+                            <td id="fuelCapacityDim4"></td>
+                            <td id="fuelCapacityDim5"></td>
+                        </tr>
+                        <tr>
+                            <th>Ground Clearance</th>
+                            <td id="groundClearance1"></td>
+                            <td id="groundClearance2"></td>
+                            <td id="groundClearance3"></td>
+                            <td id="groundClearance4"></td>
+                            <td id="groundClearance5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Wheelbase</th>
+                            <td id="wheelbase1"></td>
+                            <td id="wheelbase2"></td>
+                            <td id="wheelbase3"></td>
+                            <td id="wheelbase4"></td>
+                            <td id="wheelbase5"></td>
+                        </tr>
+                        <tr>
+                            <th>Kerb Weight</th>
+                            <td id="kerbWeight1"></td>
+                            <td id="kerbWeight2"></td>
+                            <td id="kerbWeight3"></td>
+                            <td id="kerbWeight4"></td>
+                            <td id="kerbWeight5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Fuel Reserve</th>
+                            <td id="fuelReserve1"></td>
+                            <td id="fuelReserve2"></td>
+                            <td id="fuelReserve3"></td>
+                            <td id="fuelReserve4"></td>
+                            <td id="fuelReserve5"></td>
+                        </tr>
+                        <tr>
+                            <th>Saddle Height</th>
+                            <td id="saddleHeight1"></td>
+                            <td id="saddleHeight2"></td>
+                            <td id="saddleHeight3"></td>
+                            <td id="saddleHeight4"></td>
+                            <td id="saddleHeight5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="compare-table-container">
+            <div class="expandable-header" onclick="toggleSection('electricalsContent', this)">
+                <h5>
+                    Electricals
+                </h5>
+                <i class="bi bi-chevron-down toggle-icon"></i>
+            </div>
+            <div id="electricalsContent" style="display: none;">
+                <table class="comparison-table-content">
+                    <tbody>
+                        <tr>
+                            <th>Headlight</th>
+                            <td id="headlight1"></td>
+                            <td id="headlight2"></td>
+                            <td id="headlight3"></td>
+                            <td id="headlight4"></td>
+                            <td id="headlight5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Tail Light</th>
+                            <td id="tailLight1"></td>
+                            <td id="tailLight2"></td>
+                            <td id="tailLight3"></td>
+                            <td id="tailLight4"></td>
+                            <td id="tailLight5"></td>
+                        </tr>
+                        <tr>
+                            <th>Turn Signal Lamp</th>
+                            <td id="turnSignalLamp1"></td>
+                            <td id="turnSignalLamp2"></td>
+                            <td id="turnSignalLamp3"></td>
+                            <td id="turnSignalLamp4"></td>
+                            <td id="turnSignalLamp5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Led Tail Lights</th>
+                            <td id="ledTailLights1"></td>
+                            <td id="ledTailLights2"></td>
+                            <td id="ledTailLights3"></td>
+                            <td id="ledTailLights4"></td>
+                            <td id="ledTailLights5"></td>
+                        </tr>
+                        <tr>
+                            <th>Low Fuel Indicator</th>
+                            <td id="lowFuelIndicator1"></td>
+                            <td id="lowFuelIndicator2"></td>
+                            <td id="lowFuelIndicator3"></td>
+                            <td id="lowFuelIndicator4"></td>
+                            <td id="lowFuelIndicator5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Pilot Lamps</th>
+                            <td id="pilotLamps1"></td>
+                            <td id="pilotLamps2"></td>
+                            <td id="pilotLamps3"></td>
+                            <td id="pilotLamps4"></td>
+                            <td id="pilotLamps5"></td>
+                        </tr>
+                        <tr>
+                            <th>Distance To Empty Indicator Electricals</th>
+                            <td id="distanceToEmptyIndicatorElectricals1"></td>
+                            <td id="distanceToEmptyIndicatorElectricals2"></td>
+                            <td id="distanceToEmptyIndicatorElectricals3"></td>
+                            <td id="distanceToEmptyIndicatorElectricals4"></td>
+                            <td id="distanceToEmptyIndicatorElectricals5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>DRLs</th>
+                            <td id="drls1"></td>
+                            <td id="drls2"></td>
+                            <td id="drls3"></td>
+                            <td id="drls4"></td>
+                            <td id="drls5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="compare-table-container">
+            <div class="expandable-header" onclick="toggleSection('tyresContent', this)">
+                <h5>
+                    Tyres & Brakes
+                </h5>
+                <i class="bi bi-chevron-down toggle-icon"></i>
+            </div>
+            <div id="tyresContent" style="display: none;">
+                <table class="comparison-table-content">
+                    <tbody>
+                        <tr>
+                            <th>Front Brake Diameter</th>
+                            <td id="frontBrakeDiameter1"></td>
+                            <td id="frontBrakeDiameter2"></td>
+                            <td id="frontBrakeDiameter3"></td>
+                            <td id="frontBrakeDiameter4"></td>
+                            <td id="frontBrakeDiameter5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Rear Brake Diameter</th>
+                            <td id="rearBrakeDiameter1"></td>
+                            <td id="rearBrakeDiameter2"></td>
+                            <td id="rearBrakeDiameter3"></td>
+                            <td id="rearBrakeDiameter4"></td>
+                            <td id="rearBrakeDiameter5"></td>
+                        </tr>
+                        <tr>
+                            <th>Radial Tyre</th>
+                            <td id="radialTyre1"></td>
+                            <td id="radialTyre2"></td>
+                            <td id="radialTyre3"></td>
+                            <td id="radialTyre4"></td>
+                            <td id="radialTyre5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Front Suspension</th>
+                            <td id="frontSuspension1"></td>
+                            <td id="frontSuspension2"></td>
+                            <td id="frontSuspension3"></td>
+                            <td id="frontSuspension4"></td>
+                            <td id="frontSuspension5"></td>
+                        </tr>
+                        <tr>
+                            <th>Rear Suspension</th>
+                            <td id="rearSuspension1"></td>
+                            <td id="rearSuspension2"></td>
+                            <td id="rearSuspension3"></td>
+                            <td id="rearSuspension4"></td>
+                            <td id="rearSuspension5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="compare-table-container">
+            <div class="expandable-header" onclick="toggleSection('motorContent', this)">
+                <h5>
+                    Motor & Battery
+                </h5>
+                <i class="bi bi-chevron-down toggle-icon"></i>
+            </div>
+            <div id="motorContent" style="display: none;">
+                <table class="comparison-table-content">
+                    <tbody>
+                        <tr>
+                            <th>Peak Power</th>
+                            <td id="peakPower1"></td>
+                            <td id="peakPower2"></td>
+                            <td id="peakPower3"></td>
+                            <td id="peakPower4"></td>
+                            <td id="peakPower5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Drive Type</th>
+                            <td id="driveType1"></td>
+                            <td id="driveType2"></td>
+                            <td id="driveType3"></td>
+                            <td id="driveType4"></td>
+                            <td id="driveType5"></td>
+                        </tr>
+                        <tr>
+                            <th>Transmission</th>
+                            <td id="transmission1"></td>
+                            <td id="transmission2"></td>
+                            <td id="transmission3"></td>
+                            <td id="transmission4"></td>
+                            <td id="transmission5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Battery Capacity</th>
+                            <td id="batteryCapacity1"></td>
+                            <td id="batteryCapacity2"></td>
+                            <td id="batteryCapacity3"></td>
+                            <td id="batteryCapacity4"></td>
+                            <td id="batteryCapacity5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="compare-table-container">
+            <div class="expandable-header" onclick="toggleSection('underpinningsContent', this)">
+                <h5>
+                    Underpinnings
+                </h5>
+                <i class="bi bi-chevron-down toggle-icon"></i>
+            </div>
+            <div id="underpinningsContent" style="display: none;">
+                <table class="comparison-table-content">
+                    <tbody>
+                        <tr>
+                            <th>Suspension Front</th>
+                            <td id="suspensionFront1"></td>
+                            <td id="suspensionFront2"></td>
+                            <td id="suspensionFront3"></td>
+                            <td id="suspensionFront4"></td>
+                            <td id="suspensionFront5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Suspension Rear</th>
+                            <td id="suspensionRear1"></td>
+                            <td id="suspensionRear2"></td>
+                            <td id="suspensionRear3"></td>
+                            <td id="suspensionRear4"></td>
+                            <td id="suspensionRear5"></td>
+                        </tr>
+                        <tr>
+                            <th>Brakes Front</th>
+                            <td id="brakesFront1"></td>
+                            <td id="brakesFront2"></td>
+                            <td id="brakesFront3"></td>
+                            <td id="brakesFront4"></td>
+                            <td id="brakesFront5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Brakes Rear</th>
+                            <td id="brakesRear1"></td>
+                            <td id="brakesRear2"></td>
+                            <td id="brakesRear3"></td>
+                            <td id="brakesRear4"></td>
+                            <td id="brakesRear5"></td>
+                        </tr>
+                        <tr>
+                            <th>Tyre Size</th>
+                            <td id="tyreSize1"></td>
+                            <td id="tyreSize2"></td>
+                            <td id="tyreSize3"></td>
+                            <td id="tyreSize4"></td>
+                            <td id="tyreSize5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Wheel Size</th>
+                            <td id="wheelSize1"></td>
+                            <td id="wheelSize2"></td>
+                            <td id="wheelSize3"></td>
+                            <td id="wheelSize4"></td>
+                            <td id="wheelSize5"></td>
+                        </tr>
+                        <tr>
+                            <th>Wheel Type</th>
+                            <td id="wheelType1"></td>
+                            <td id="wheelType2"></td>
+                            <td id="wheelType3"></td>
+                            <td id="wheelType4"></td>
+                            <td id="wheelType5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Tubeless Tyre</th>
+                            <td id="tubelessTyre1"></td>
+                            <td id="tubelessTyre2"></td>
+                            <td id="tubelessTyre3"></td>
+                            <td id="tubelessTyre4"></td>
+                            <td id="tubelessTyre5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="compare-table-container">
+            <div class="expandable-header" onclick="toggleSection('chargingContent', this)">
+                <h5>
+                    Charging
+                </h5>
+                <i class="bi bi-chevron-down toggle-icon"></i>
+            </div>
+            <div id="chargingContent" style="display: none;">
+                <table class="comparison-table-content">
+                    <tbody>
+                        <tr>
+                            <th>Charging At Home</th>
+                            <td id="chargingAtHome1"></td>
+                            <td id="chargingAtHome2"></td>
+                            <td id="chargingAtHome3"></td>
+                            <td id="chargingAtHome4"></td>
+                            <td id="chargingAtHome5"></td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <th>Charging At Charging Station</th>
+                            <td id="chargingAtChargingStation1"></td>
+                            <td id="chargingAtChargingStation2"></td>
+                            <td id="chargingAtChargingStation3"></td>
+                            <td id="chargingAtChargingStation4"></td>
+                            <td id="chargingAtChargingStation5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Function to load TwoWheelers based on the selected brand
+        function loadTwoWheelers(brandDropdownId, twoWheelerDropdownId) {
+            var selectedBrandId = $(brandDropdownId).val();
+            if (selectedBrandId) {
+                $.ajax({
+                    url: '@Url.Action("GetTwoWheelersByBrandId", "Compare")', // Controller action to get TwoWheelers by BrandId
+                    type: 'GET',
+                    data: { brandId: selectedBrandId },
+                    success: function (data) {
+                        var twoWheelerDropdown = $(twoWheelerDropdownId);
+                        twoWheelerDropdown.empty();
+                        twoWheelerDropdown.append('<option value="">--Select Model--</option>');
+                        $.each(data, function (index, item) {
+                            twoWheelerDropdown.append(new Option(item.twoWheelerName, item.twoWheelerId));
+                        });
+                    }
+                });
+            }
+        }
+
+        // Handle Brand Dropdown change event for TwoWheeler 1
+        $('#brandDropdown1').change(function () {
+            loadTwoWheelers('#brandDropdown1', '#twoWheelerDropdown1');
+        });
+
+        $('#brandDropdown2').change(function () {
+            loadTwoWheelers('#brandDropdown2', '#twoWheelerDropdown2');
+        });
+
+        $('#brandDropdown3').change(function () {
+            loadTwoWheelers('#brandDropdown3', '#twoWheelerDropdown3');
+        });
+
+        $('#brandDropdown4').change(function () {
+            loadTwoWheelers('#brandDropdown4', '#twoWheelerDropdown4');
+        });
+
+        $('#brandDropdown5').change(function () {
+            loadTwoWheelers('#brandDropdown5', '#twoWheelerDropdown5');
+        });
+
+
+        // Function to load variants based on selected TwoWheeler
+        function loadVariants(twoWheelerDropdownId, variantDropdownId) {
+            var selectedTwoWheelerId = $(twoWheelerDropdownId).val();
+            if (selectedTwoWheelerId) {
+                $.ajax({
+                    url: '@Url.Action("GetVariantsByTwoWheelerId", "Compare")',
+                    type: 'GET',
+                    data: { twoWheelerId: selectedTwoWheelerId },
+                    success: function (data) {
+                        debugger;
+                        var variantDropdown = $(variantDropdownId);
+                        variantDropdown.empty();
+                        variantDropdown.append('<option value="">--Select Variant--</option>');
+                        $.each(data, function (index, item) {
+                            variantDropdown.append(new Option(item.varients, item.twVarientId));
+                        });
+                    }
+                });
+            }
+        }
+
+        // Handle TwoWheeler Dropdown change events
+        $('#twoWheelerDropdown1').change(function () {
+            loadVariants('#twoWheelerDropdown1', '#variantDropdown1');
+        });
+
+        $('#twoWheelerDropdown2').change(function () {
+            loadVariants('#twoWheelerDropdown2', '#variantDropdown2');
+        });
+
+        $('#twoWheelerDropdown3').change(function () {
+            loadVariants('#twoWheelerDropdown3', '#variantDropdown3');
+        });
+
+        $('#twoWheelerDropdown4').change(function () {
+            loadVariants('#twoWheelerDropdown4', '#variantDropdown4');
+        });
+
+        $('#twoWheelerDropdown5').change(function () {
+            loadVariants('#twoWheelerDropdown5', '#variantDropdown5');
+        });
+
+        // Compare button click event
+        $('#compareButton').click(function () {
+            var variantId1 = $('#variantDropdown1').val();
+            var variantId2 = $('#variantDropdown2').val();
+            var variantId3 = $('#variantDropdown3').val();
+            var variantId4 = $('#variantDropdown4').val();
+            var variantId5 = $('#variantDropdown5').val();
+
+            // Hide all columns initially
+            // $('th, td').hide();
+
+            if (variantId1 && variantId2) {
+                // Show the comparison table
+                $('#comparisonTable').show();
+
+                // // Load data for both variants into the comparison table
+                // loadVariantData(variantId1, 1); // Pass 1 for TwoWheeler 1 column
+                // loadVariantData(variantId2, 2); // Pass 2 for TwoWheeler 2 column
+                // loadVariantData(variantId3, 3); // Pass 2 for TwoWheeler 2 column
+                // Check and display columns for the selected variants
+                if (variantId1) {
+                    loadVariantData(variantId1, 1); // Load data for TwoWheeler 1
+                    $('#comparisonColumn1').show(); // Show TwoWheeler 1 column
+                    $('.milageColumn1, .frontBrakeColumn1, .engineTypeColumn1, .maxTorqueColumn1').show(); // Show related data cells
+                }
+                if (variantId2) {
+                    loadVariantData(variantId2, 2); // Load data for TwoWheeler 2
+                    $('#comparisonColumn2').show(); // Show TwoWheeler 2 column
+                    $('.milageColumn2, .frontBrakeColumn2, .engineTypeColumn2, .maxTorqueColumn2').show(); // Show related data cells
+                }
+                if (variantId3) {
+
+                    loadVariantData(variantId3, 3);
+
+                    $('#comparisonColumn3').show();
+
+                    $('.milageColumn3, .frontBrakeColumn3, .engineTypeColumn3, .maxTorqueColumn3').show();
+
+                }
+                if (variantId4) {
+
+                    loadVariantData(variantId4, 4);
+
+                    $('#comparisonColumn4').show();
+
+                    $('.milageColumn4, .frontBrakeColumn4, .engineTypeColumn4, .maxTorqueColumn4').show();
+
+                }
+
+                if (variantId5) {
+
+                    loadVariantData(variantId5, 5);
+
+                    $('#comparisonColumn5').show();
+
+                    $('.milageColumn5, .frontBrakeColumn5, .engineTypeColumn5, .maxTorqueColumn5').show();
+
+                }
+            } else {
+                //alert('Please select at least one TwoWheeler and Variant.');
+                alert('Please select at least 2 vehicles to compare.');
+            }
+        });
+
+        // Function to load data for a specific variant and update the comparison table
+        function loadVariantData(variantId, columnNumber) {
+            $.ajax({
+                url: '@Url.Action("GetTWSpecData", "Compare")',
+                type: 'GET',
+                data: { variantId: variantId },
+                success: function (data) {
+                    debugger;
+                    // Update the relevant comparison column in the table
+                    $('.milageColumn' + columnNumber).text(data.specs.milage ? data.specs.milage + ' kmpl' : 'N/A');
+                    $('#frontBrakeColumn' + columnNumber).text(data.specs.frontBrake || 'N/A');
+                    $('#rearBrake' + columnNumber).text(data.specs.rearBrake || 'N/A');
+                    $('.fuelCapacity' + columnNumber).text(data.specs.fuelCapacity ? data.specs.fuelCapacity + ' L' : 'N/A');
+                    $('.bodyType' + columnNumber).text(data.specs.bodyType || 'N/A');
+                    $('.IdTWName' + columnNumber).text(data.specs.twoWheeler.twoWheelerName || 'N/A');
+                    $('.twImage' + columnNumber).attr('src',data.specs.twoWheeler.twImage || 'N/A');
+
+                    // Update TWEngineAndTransmission data
+
+                    $('#engineTypeColumn' + columnNumber).text(data.engineAndTransmission.engineType || 'N/A');
+                    $('#maxTorqueColumn' + columnNumber).text(data.engineAndTransmission.maxTorque || 'N/A');
+                    $('#displacement' + columnNumber).text(data.engineAndTransmission.displacement ? data.engineAndTransmission.displacement + ' cc' : 'N/A');
+                    $('#numOfCylinders' + columnNumber).text(data.engineAndTransmission.numOfCylinders || 'N/A');
+                    $('#coolingSystem' + columnNumber).text(data.engineAndTransmission.coolingSystem || 'N/A');
+                    $('#valvePerCylinder' + columnNumber).text(data.engineAndTransmission.valvePerCylinder || 'N/A');
+                    $('#starting' + columnNumber).text(data.engineAndTransmission.starting || 'N/A');
+                    $('#fuelSupply' + columnNumber).text(data.engineAndTransmission.fuelSupply || 'N/A');
+                    $('#clutch' + columnNumber).text(data.engineAndTransmission.clutch || 'N/A');
+                    $('#gearBox' + columnNumber).text(data.engineAndTransmission.gearBox || 'N/A');
+                    $('#emissionType' + columnNumber).text(data.engineAndTransmission.emissionType || 'N/A');
+                    $('#compressionRatio' + columnNumber).text(data.engineAndTransmission.compressionRatio || 'N/A');
+                    $('#ignition' + columnNumber).text(data.engineAndTransmission.ignition || 'N/A');
+
+                    // Update TWFeatures data
+                    $('#abs' + columnNumber).text(data.features.abs || 'N/A');
+                    $('#speedometer' + columnNumber).text(data.features.speedometer || 'N/A');
+                    $('#tripmeter' + columnNumber).text(data.features.tripmeter || 'N/A');
+                    $('#tachometer' + columnNumber).text(data.features.tachometer || 'N/A');
+                    $('#ledTailLight' + columnNumber).text(data.features.ledTailLight || 'N/A');
+                    $('#odometer' + columnNumber).text(data.features.odometer || 'N/A');
+                    $('#fuelGauge' + columnNumber).text(data.features.fuelGauge || 'N/A');
+                    $('#instrumentConsole' + columnNumber).text(data.features.instrumentConsole || 'N/A');
+                    $('#seatType' + columnNumber).text(data.features.seatType || 'N/A');
+                    $('#bodyGraphics' + columnNumber).text(data.features.bodyGraphics || 'N/A');
+                    $('#clock' + columnNumber).text(data.features.clock || 'N/A');
+                    $('#passengerFootrest' + columnNumber).text(data.features.passengerFootrest || 'N/A');
+                    $('#additionalFeaturesOfVariant' + columnNumber).text(data.features.additionalFeaturesOfVariant || 'N/A');
+                    $('#distanceToEmptyIndicator' + columnNumber).text(data.features.distanceToEmptyIndicator || 'N/A');
+                    $('#adjustableWindshield' + columnNumber).text(data.features.adjustableWindshield || 'N/A');
+
+                    // Update TWSafety data
+                    $('#passSwitch' + columnNumber).text(data.safety.passSwitch || 'N/A');
+                    $('#engineKillSwitch' + columnNumber).text(data.safety.engineKillSwitch || 'N/A');
+                    $('#display' + columnNumber).text(data.safety.display || 'N/A');
+                    $('#ridingModes' + columnNumber).text(data.safety.ridingModes || 'N/A');
+                    $('#tractionControl' + columnNumber).text(data.safety.tractionControl || 'N/A');
+                    $('#additionalSafetyFeatures' + columnNumber).text(data.safety.additionalFeatures || 'N/A');
+
+                    // Update mileage and performance
+                    $('#overallMileage' + columnNumber).text(data.mileageAndPerformance.overallMileage ? data.mileageAndPerformance.overallMileage + ' kmpl' : 'N/A');
+                    $('#cityMileage' + columnNumber).text(data.mileageAndPerformance.cityMileage ? data.mileageAndPerformance.cityMileage + ' kmpl' : 'N/A');
+                    $('#highwayMileage' + columnNumber).text(data.mileageAndPerformance.highwayMileage ? data.mileageAndPerformance.highwayMileage + ' kmpl' : 'N/A');
+
+                    // Update dimensions and capacity
+                    $('#width' + columnNumber).text(data.dimensionsAndCapacity.width ? data.dimensionsAndCapacity.width + ' mm' : 'N/A');
+                    $('#length' + columnNumber).text(data.dimensionsAndCapacity.length ? data.dimensionsAndCapacity.length + ' mm' : 'N/A');
+                    $('#height' + columnNumber).text(data.dimensionsAndCapacity.height ? data.dimensionsAndCapacity.height + ' mm' : 'N/A');
+                    $('#fuelCapacityDim' + columnNumber).text(data.dimensionsAndCapacity.fuelCapacity ? data.dimensionsAndCapacity.fuelCapacity + ' L' : 'N/A');
+                    $('#groundClearance' + columnNumber).text(data.dimensionsAndCapacity.groundClearance ? data.dimensionsAndCapacity.groundClearance + ' mm' : 'N/A');
+                    $('#wheelbase' + columnNumber).text(data.dimensionsAndCapacity.wheelbase ? data.dimensionsAndCapacity.wheelbase + ' mm' : 'N/A');
+                    $('#kerbWeight' + columnNumber).text(data.dimensionsAndCapacity.kerbWeight ? data.dimensionsAndCapacity.kerbWeight + ' kg' : 'N/A');
+                    $('#fuelReserve' + columnNumber).text(data.dimensionsAndCapacity.fuelReserve ? data.dimensionsAndCapacity.fuelReserve + ' L' : 'N/A');
+                    $('#saddleHeight' + columnNumber).text(data.dimensionsAndCapacity.saddleHeight ? data.dimensionsAndCapacity.saddleHeight + ' mm' : 'N/A');
+
+                    // Update electricals
+                    $('#headlight' + columnNumber).text(data.electricals.headlight || 'N/A');
+                    $('#tailLight' + columnNumber).text(data.electricals.tailLight || 'N/A');
+                    $('#turnSignalLamp' + columnNumber).text(data.electricals.turnSignalLamp || 'N/A');
+                    $('#ledTailLights' + columnNumber).text(data.electricals.ledTailLights || 'N/A');
+                    $('#lowFuelIndicator' + columnNumber).text(data.electricals.lowFuelIndicato || 'N/A');
+                    $('#pilotLamps' + columnNumber).text(data.electricals.pilotLamps || 'N/A');
+                    $('#distanceToEmptyIndicatorElectricals' + columnNumber).text(data.electricals.distanceToEmptyIndicator || 'N/A');
+                    $('#drls' + columnNumber).text(data.electricals.drLs || 'N/A');
+
+                    // Update tyres and brakes
+                    $('#frontBrakeDiameter' + columnNumber).text(data.tyresAndBrakes.frontBrakeDiameter ? data.tyresAndBrakes.frontBrakeDiameter + ' mm' : 'N/A');
+                    $('#rearBrakeDiameter' + columnNumber).text(data.tyresAndBrakes.rearBrakeDiameter ? data.tyresAndBrakes.rearBrakeDiameter + ' mm' : 'N/A');
+                    $('#radialTyre' + columnNumber).text(data.tyresAndBrakes.radialTyre || 'N/A');
+                    $('#frontSuspension' + columnNumber).text(data.tyresAndBrakes.frontSuspension || 'N/A');
+                    $('#rearSuspension' + columnNumber).text(data.tyresAndBrakes.rearSuspension || 'N/A');
+
+                    // Update motor and battery
+                    $('#peakPower' + columnNumber).text(data.motorAndBattery.peakPower || 'N/A');
+                    $('#driveType' + columnNumber).text(data.motorAndBattery.driveType || 'N/A');
+                    $('#transmission' + columnNumber).text(data.motorAndBattery.transmission || 'N/A');
+                    $('#batteryCapacity' + columnNumber).text(data.motorAndBattery.batteryCapacity || 'N/A');
+
+                    // Update underpinning
+                    $('#suspensionFront' + columnNumber).text(data.underpinning.suspensionFront || 'N/A');
+                    $('#suspensionRear' + columnNumber).text(data.underpinning.suspensionRear || 'N/A');
+                    $('#brakesFront' + columnNumber).text(data.underpinning.brakesFront || 'N/A');
+                    $('#brakesRear' + columnNumber).text(data.underpinning.brakesRear || 'N/A');
+                    $('#tyreSize' + columnNumber).text(data.underpinning.tyreSize || 'N/A');
+                    $('#wheelSize' + columnNumber).text(data.underpinning.wheelSize || 'N/A');
+                    $('#wheelType' + columnNumber).text(data.underpinning.wheelType || 'N/A');
+                    $('#tubelessTyre' + columnNumber).text(data.underpinning.tubelessTyre || 'N/A');
+
+                    // Update charging
+                    $('#chargingAtHome' + columnNumber).text(data.charging.chargingAtHome || 'N/A');
+                    $('#chargingAtChargingStation' + columnNumber).text(data.charging.chargingAtChargingStation || 'N/A');
+                }
+            });
+        }
+    });
+</script>
+
+<!--For Expandable/collapsible-->
+<script>function toggleSection(sectionId, header) {
+        var content = document.getElementById(sectionId);
+        var icon = header.querySelector('.toggle-icon');
+
+        if (content.style.display === "none") {
+            content.style.display = "block";
+            icon.classList.remove("bi-chevron-down");
+            icon.classList.add("bi-chevron-up");
+        } else {
+            content.style.display = "none";
+            icon.classList.remove("bi-chevron-up");
+            icon.classList.add("bi-chevron-down");
+        }
+    }</script>
+<!--For comparing 2 bikes -->
+<!--<script>
+        function setDropdownAndTrigger(variantId, variantDropdownId, twoWheelerDropdownId, brandDropdownId, imageClass, nameClass, milageClass, fuelClass, bodyClass, columnId) {
+        if (!variantId) return;
+
+        $.ajax({
+            url: '@Url.Action("TWCompareTwoBike", "Compare")',
+            type: 'GET',
+            data: { variantId: variantId },
+            success: function (data) {
+                // Set Brand
+                $(brandDropdownId).val(data.brandId).trigger('change');
+
+                // Wait for model dropdown to populate
+                setTimeout(function () {
+                    $(twoWheelerDropdownId).val(data.modelId).trigger('change');
+
+                    // Wait for variant dropdown to populate
+                    setTimeout(function () {
+                        $(variantDropdownId).val(variantId);
+                        // Fill comparison section if needed
+                        $(imageClass).attr("src", data.imageUrl);
+                        $(nameClass).text(data.modelName);
+                        $(milageClass).text(data.milage);
+                        $(fuelClass).text(data.fuelCapacity);
+                        $(bodyClass).text(data.bodyType);
+                        $(columnId).show();
+                        $('#comparisonTable').show();
+                    }, 1000);
+                }, 1000);
+            }
+        });
+    }
+
+    // Call this on page load if query params exist
+    $(function () {
+        var variant1 = '@ViewBag.Variant1';
+        var variant2 = '@ViewBag.Variant2';
+
+        if (variant1 && variant2) {
+            setDropdownAndTrigger(variant1, '#variantDropdown1', '#twoWheelerDropdown1', '#brandDropdown1', '.twImage1', '.IdTWName1', '.milageColumn1', '.fuelCapacity1', '.bodyType1', '#comparisonColumn1');
+            setDropdownAndTrigger(variant2, '#variantDropdown2', '#twoWheelerDropdown2', '#brandDropdown2', '.twImage2', '.IdTWName2', '.milageColumn2', '.fuelCapacity2', '.bodyType2', '#comparisonColumn2');
+        }
+    });
+
+</script>-->
+<!--For comparing 2 bikes -->
+<script>
+    function setDropdownAndTrigger(
+        variantId,
+        variantDropdownId,
+        twoWheelerDropdownId,
+        brandDropdownId,
+        imageClass,
+        nameClass,
+        milageClass,
+        fuelClass,
+        bodyClass,
+        columnId
+    ) {
+
+        if (!variantId) return;
+
+        $.ajax({
+            url: '@Url.Action("TWCompareTwoBike", "Compare")',
+            type: 'GET',
+            data: { variantId: variantId },
+
+            success: function (data) {
+
+                // Set Brand
+                $(brandDropdownId).val(data.brandId).trigger('change');
+
+                // Wait for model dropdown to populate
+                setTimeout(function () {
+
+                    $(twoWheelerDropdownId)
+                        .val(data.modelId)
+                        .trigger('change');
+
+                    // Wait for variant dropdown to populate
+                    setTimeout(function () {
+
+                        $(variantDropdownId).val(variantId);
+
+                        // Fill comparison section
+                        $(imageClass).attr("src", data.imageUrl);
+
+                        $(nameClass).text(data.modelName);
+
+                        $(milageClass).text(data.milage);
+
+                        $(fuelClass).text(data.fuelCapacity);
+
+                        $(bodyClass).text(data.bodyType);
+
+                        $(columnId).show();
+
+                        $('#comparisonTable').show();
+
+                    }, 1000);
+
+                }, 1000);
+
+            }
+        });
+    }
+
+    // Call this on page load if query params exist
+    $(function () {
+
+        var variant1 = '@ViewBag.Variant1';
+        var variant2 = '@ViewBag.Variant2';
+        var variant3 = '@ViewBag.Variant3';
+        var variant4 = '@ViewBag.Variant4';
+        var variant5 = '@ViewBag.Variant5';
+
+        // Vehicle 1
+        if (variant1) {
+
+            setDropdownAndTrigger(
+                variant1,
+                '#variantDropdown1',
+                '#twoWheelerDropdown1',
+                '#brandDropdown1',
+                '.twImage1',
+                '.IdTWName1',
+                '.milageColumn1',
+                '.fuelCapacity1',
+                '.bodyType1',
+                '#comparisonColumn1'
+            );
+
+        }
+
+        // Vehicle 2
+        if (variant2) {
+
+            setDropdownAndTrigger(
+                variant2,
+                '#variantDropdown2',
+                '#twoWheelerDropdown2',
+                '#brandDropdown2',
+                '.twImage2',
+                '.IdTWName2',
+                '.milageColumn2',
+                '.fuelCapacity2',
+                '.bodyType2',
+                '#comparisonColumn2'
+            );
+
+        }
+
+        // Vehicle 3
+        if (variant3) {
+
+            setDropdownAndTrigger(
+                variant3,
+                '#variantDropdown3',
+                '#twoWheelerDropdown3',
+                '#brandDropdown3',
+                '.twImage3',
+                '.IdTWName3',
+                '.milageColumn3',
+                '.fuelCapacity3',
+                '.bodyType3',
+                '#comparisonColumn3'
+            );
+
+        }
+        // Vehicle 4
+        if (variant4) {
+
+            setDropdownAndTrigger(
+                variant4,
+                '#variantDropdown4',
+                '#twoWheelerDropdown4',
+                '#brandDropdown4',
+                '.twImage4',
+                '.IdTWName4',
+                '.milageColumn4',
+                '.fuelCapacity4',
+                '.bodyType4',
+                '#comparisonColumn4'
+            );
+
+        }
+        // Vehicle 5
+        if (variant5) {
+
+            setDropdownAndTrigger(
+                variant5,
+                '#variantDropdown5',
+                '#twoWheelerDropdown5',
+                '#brandDropdown5',
+                '.twImage5',
+                '.IdTWName5',
+                '.milageColumn5',
+                '.fuelCapacity5',
+                '.bodyType5',
+                '#comparisonColumn5'
+            );
+
+        }
+
+    });
+
+</script>
+<script>document.addEventListener("DOMContentLoaded", function () {
+
+        let bikeCount = 2;
+        const maxBikes = 5;
+
+        const addBikeBtn = document.getElementById("addBikeBtn");
+        const compareBox = document.querySelector(".compare-box");
+
+        addBikeBtn.addEventListener("click", function () {
+
+            bikeCount++;
+
+            // STOP AFTER 5
+            if (bikeCount > maxBikes) return;
+
+            // HIDE BUTTON AT 5
+            if (bikeCount === maxBikes) {
+                addBikeBtn.style.display = "none";
+            }
+
+            const newCard = document.createElement("div");
+
+            newCard.classList.add("compare-card");
+
+            newCard.innerHTML = `
+
+            <img class="twImage${bikeCount}"
+                 src=""
+                 alt="Bike Image"
+                 onerror="this.onerror=null; this.src='/images/twowheeler/bicycle.webp';" />
+
+            <h4>Add to compare</h4>
+
+            <div class="compare-ddl">
+                <select id="brandDropdown${bikeCount}" class="ddlcompare">
+                    <option value="">--Select Brand--</option>
+                </select>
+            </div>
+
+            <div class="compare-ddl">
+                <select id="twoWheelerDropdown${bikeCount}" class="ddlcompare">
+                    <option value="">--Select Model--</option>
+                </select>
+            </div>
+
+            <div class="compare-ddl">
+                <select id="variantDropdown${bikeCount}" class="ddlcompare">
+                    <option value="">--Select Variant--</option>
+                </select>
+            </div>
+
+        `;
+
+            compareBox.appendChild(newCard);
+
+            const firstBrandDropdown =
+                document.getElementById("brandDropdown1");
+
+            const newBrandDropdown =
+                document.getElementById(`brandDropdown${bikeCount}`);
+
+            const newModelDropdown =
+                document.getElementById(`twoWheelerDropdown${bikeCount}`);
+
+            const newVariantDropdown =
+                document.getElementById(`variantDropdown${bikeCount}`);
+
+            // COPY BRAND OPTIONS
+            newBrandDropdown.innerHTML =
+                firstBrandDropdown.innerHTML;
+            newBrandDropdown.addEventListener("change", function () {
+
+                const brandId = this.value;
+
+                fetch('/Compare/GetTwoWheelersByBrandId?brandId=' + brandId)
+
+                    .then(response => response.json())
+
+                    .then(data => {
+
+                        newModelDropdown.innerHTML =
+                            '<option value="">--Select Model--</option>';
+
+                        data.forEach(item => {
+
+                            newModelDropdown.innerHTML +=
+                                `<option value="${item.twoWheelerId}">
+                                ${item.twoWheelerName}
+                            </option>`;
+
+                        });
+
+                        // RESET VARIANTS
+                        newVariantDropdown.innerHTML =
+                            '<option value="">--Select Variant--</option>';
+
+                    });
+
+            });
+            newModelDropdown.addEventListener("change", function () {
+
+                const bikeId = this.value;
+
+                fetch('/Compare/GetVariantsByTwoWheelerId?twoWheelerId=' + bikeId)
+
+                    .then(response => response.json())
+
+                    .then(data => {
+
+                        newVariantDropdown.innerHTML =
+                            '<option value="">--Select Variant--</option>';
+
+                        data.forEach(item => {
+
+                            newVariantDropdown.innerHTML +=
+                                `<option value="${item.twVarientId}">
+                                ${item.varients}
+                            </option>`;
+
+                        });
+
+                    });
+
+            });
+
+        });
+
+    });</script>

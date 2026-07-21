@@ -1,0 +1,90 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Curvv Achieves 5-Star Safety Rating in Global NCAP Tests";
+}
+@section MetaTags{
+    <meta name="keywords" content="Tata Curvv, 5-Star Safety Rating, Global NCAP, SUV, Electric Vehicle, Tata Motors" />
+    <meta name="description" content="Tata Motors' much-anticipated Tata Curvv SUV has secured a prestigious 5-star safety rating in the Global NCAP crash tests. This milestone reflects the automaker's dedication to safety, ensuring robust protection for both drivers and passengers. The Curvv, equipped with cutting-edge safety features, has raised the benchmark in the Indian automotive industry." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>Tata Motors' commitment to safety is once again in the spotlight with the Tata Curvv earning a 5-star rating in the latest round of Global NCAP crash tests. The Tata Curvv, an SUV concept designed with futuristic styling and electric powertrain options, has set new standards for safety in the Indian market.</p>
+                <p>The Global NCAP rating process rigorously tests vehicles for adult and child occupant protection during frontal, side, and pedestrian crashes. The Tata Curvv excelled in all parameters, thanks to its reinforced structure and advanced safety technologies like multiple airbags, ABS with EBD, electronic stability control, and a high-strength body shell.</p>
+                <p>Pratap Bose, VP of Design at Tata Motors, expressed his pride, saying, "Safety has always been a core value at Tata Motors, and this recognition for the Tata Curvv reinforces our commitment to bringing safe and stylish vehicles to Indian roads."</p>
+                <p>The Curvv is not just about safety—it also combines Tata Motors' next-gen design philosophy with a premium cabin, offering features such as an advanced infotainment system, connected car technology, and AI-driven enhancements. Positioned as a crossover SUV, the Tata Curvv will come in both ICE (internal combustion engine) and EV (electric vehicle) variants, catering to a wide audience in India.</p>
+                <p>The success of the Tata Curvv further establishes Tata Motors as a frontrunner in the Indian automotive industry, especially in the growing segment of electric mobility. With its top-notch safety features and innovative design, the Curvv is expected to make a strong impact when it hits the market.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

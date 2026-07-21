@@ -1,0 +1,145 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Brixton Motorcycles India Launch on Nov 18: Models & Prices";
+}
+@section MetaTags{
+    <meta name="keywords" content="Brixton Motorcycles India, Brixton Cromwell, Brixton Crossfire, retro motorcycles India, Brixton bike launch India, Brixton specs, Brixton price" />
+    <meta name="description" content="Brixton Motorcycles debuts in India on Nov 18 with retro-themed bikes. Expected price ₹2.5-3.5 lakh. Discover models, features, and specs." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <h3 class="subheading">Highlights</h3>
+                <ol>
+                    <li>Brixton to launch four motorcycles in India</li>
+                    <li>To operate in 13 major cities in India initially</li>
+                    <li>Crossfire 500 and Cromwell 1200 models to be launched</li>
+                </ol>
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">News Details</h3>
+                <p>Brixton Motorcycles is gearing up for its much-anticipated launch in India on November 18, marking its entry into one of the world’s largest two-wheeler markets. The brand, which has gained a loyal following in Europe for its classic, British-inspired designs, plans to introduce models that blend vintage aesthetics with modern engineering, targeting India's mid-range motorcycle market.</p>
+                <p>
+                    While specific models for the launch are yet to be officially confirmed, Brixton’s international lineup includes popular models like the Brixton Cromwell and the Crossfire.
+                    The company will launch four models in India, including the Crossfire 500X, Crossfire 500XC, Cromwell 1200, and Cromwell 1200X.
+                </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <img src="~/images/latestnews/2024/nov/brixtonmotorcyclestodebutinindiaonnovember18keydetailsrevealed/2.webp" alt="Brixton Motorcycles India Launch 1" />
+                    </div>
+                </div>
+                <p>These motorcycles are known for their iconic retro designs, advanced technology, and robust build, appealing to both seasoned riders and those new to the retro motorcycle trend. The company’s entry is expected to provide direct competition to brands like <a class="for-link" asp-controller="Home" asp-action="TWBrandDetails" asp-route-brandId="18">Royal Enfield</a>, <a class="for-link" asp-controller="Home" asp-action="TWBrandDetails" asp-route-brandId="17">Jawa</a>, and <a class="for-link" asp-controller="Home" asp-action="TWBrandDetails" asp-route-brandId="23">Yezdi</a> in India.</p>
+                <p>Brixton’s models are likely to feature single-cylinder engines in the 500cc to 1200cc range, designed for comfortable urban commuting and highway cruising. Key features may include LED lighting, ABS braking, digital instrument clusters, and fuel injection. Expected to be competitively priced, Brixton aims to capture the attention of India’s motorcycle enthusiasts.</p>
+                <h3 class="subheading">Price in India (Expected)</h3>
+                <p>Starting at ₹2.5 lakh and up to ₹3.5 lakh for top models, depending on specifications and engine size.</p>
+                <h3 class="subheading">Specifications (Expected for Brixton Cromwell and Crossfire models)</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Engine Options:</span> 500cc – 1200cc, Single-cylinder, 4-stroke
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Power:</span> 46 BHP to 82 HP depending on model
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Transmission:</span> 5-speed / 6-speed
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Fuel System:</span> Electronic Fuel Injection
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Braking System:</span> Disc brakes with ABS
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Suspension:</span> Telescopic forks (front), twin shock absorbers (rear)
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Fuel Capacity:</span> 14L – 17L
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Seat Height:</span> 770mm – 810mm
+                    </li>
+                </ol>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <img src="~/images/latestnews/2024/nov/brixtonmotorcyclestodebutinindiaonnovember18keydetailsrevealed/1.webp" alt="Brixton Motorcycles India Launch 2" />
+                    </div>
+                </div>
+                <h3 class="subheading">Features</h3>
+                <ol>
+                    <li>Retro styling with modern elements</li>
+                    <li>LED headlamps and taillights</li>
+                    <li>Digital instrument console</li>
+                    <li>ABS for enhanced safety</li>
+                    <li>Comfortable seating for city and highway rides</li>
+                </ol>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

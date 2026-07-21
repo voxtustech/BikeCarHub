@@ -1,0 +1,108 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+ @model TWCombinedViewModel 
+
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <h2 class="text-center mb-4">Add New Brand</h2>
+
+                    <form asp-action="CreateSpecandSafety" method="post">
+                        @*
+                        <h4>TW Specifications</h4>
+                        <div class="form-group">
+                            <label asp-for="Spec.TWName"></label>
+                            <input asp-for="Spec.TWName" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Spec.Varients"></label>
+                            <input asp-for="Spec.Varients" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Spec.Milage"></label>
+                            <input asp-for="Spec.Milage" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Spec.FrontBrake"></label>
+                            <input asp-for="Spec.FrontBrake" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Spec.RearBrake"></label>
+                            <input asp-for="Spec.RearBrake" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Spec.FuelCapacity"></label>
+                            <input asp-for="Spec.FuelCapacity" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Spec.BodyType"></label>
+                            <input asp-for="Spec.BodyType" class="form-control" />
+                        </div>
+                        *@
+                        <h4 class="mt-4">TW Safety</h4>
+                        <div class="form-group">
+                            <label asp-for="Safety.TWName"></label>
+                            <input asp-for="Safety.TWName" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Safety.Varients"></label>
+                            <input asp-for="Safety.Varients" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Safety.PassSwitch"></label>
+                            <input asp-for="Safety.PassSwitch" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Safety.EngineKillSwitch"></label>
+                            <input asp-for="Safety.EngineKillSwitch" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Safety.Display"></label>
+                            <input asp-for="Safety.Display" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Safety.RidingModes"></label>
+                            <input asp-for="Safety.RidingModes" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Safety.TractionControl"></label>
+                            <input asp-for="Safety.TractionControl" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Safety.AdditionalFeatures"></label>
+                            <input asp-for="Safety.AdditionalFeatures" class="form-control" />
+                        </div>
+                        @*
+                        <div class="form-group">
+                            <label>Select Two Wheeler</label>
+                            <select asp-for="Spec.TwoWheelerId" class="form-control" asp-items="Model.TwoWheelers">
+                                <option value="">-- Select --</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Select Variant</label>
+                            <select asp-for="Spec.TWVarientId" class="form-control" asp-items="Model.TWVarients">
+                                <option value="">-- Select --</option>
+                            </select>
+                        </div>
+                        *@
+                        <input type="hidden" name="TwoWheelerId" value="@ViewBag.TwoWheelerId" />
+                        <input type="hidden" name="TWVarientId" value="@ViewBag.TWVarientId" />
+                        <div class="form-group mt-2">
+                            <button type="submit" class="btn btn-primary">Submit All</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

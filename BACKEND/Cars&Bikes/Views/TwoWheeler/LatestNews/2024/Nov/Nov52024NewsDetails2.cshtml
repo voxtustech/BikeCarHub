@@ -1,0 +1,139 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "KTM 390 Adventure : India Launch, Price, Specs & Features";
+}
+@section MetaTags{
+    <meta name="keywords" content="KTM 390 Adventure, KTM India launch, adventure bike, KTM 390 price, 390 Adventure specs, KTM 390 features, adventure touring bike, India KTM launch" />
+    <meta name="description" content="KTM 390 Adventure set to launch in India on Nov 14,2024. Discover its price, features, performance, and tech upgrades in this new adventure touring model." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class 
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <h1 class="heading">"KTM 390 Adventure Set for India Launch on November 14: Price, Features, and Specs"</h1>
+                <h3 class="subheading">Launch Date</h3>
+                <p>The <a class="for-link" asp-controller="KTM" asp-action="KTM390Adventure">KTM 390 Adventure</a> is set to launch on November 14, 2025, aiming to capture the growing adventure bike segment in India.</p>
+                <h3 class="subheading">Expected Price</h3>
+                <p>The price for the 2025 KTM 390 Adventure is anticipated to be around INR 3.5 lakh , positioning it competitively against other adventure bikes in India.</p>
+                <h3 class="subheading">Design and Build</h3>
+                <p>The model features refined aesthetics, including a redesigned front fairing, a new LED headlight setup, and an updated color scheme. Its robust build combines KTM’s signature orange and black palette, designed for both rugged terrain and on-road use. The adjustable windscreen and new seat cushioning improve rider comfort on long journeys.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/latestnews/2024/nov/ktm390adventureindialaunchanticipatedonnovember14/2.webp" /></div>
+                </div>
+                <h3 class="subheading">Engine and Performance</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Engine:</span> 399cc single-cylinder, liquid-cooled engine
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Power Output:</span> 45.3 bhp @@ 8,500 rpm
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Torque:</span> 39 Nm @@ 6,500
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Transmission:</span> 6-speed gearbox with slipper clutch
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Performance:</span> Capable of handling challenging terrains with improved low-end torque, making it ideal for off-road adventures and highway cruising.
+                    </li>
+                </ol>
+                <h3 class="subheading">Key Features and Technology</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Ride Modes:</span> Multiple ride modes, including Off-Road and Street, to adapt to various terrains.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Traction Control:</span> Improved traction control for enhanced safety on rough paths.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Display:</span> TFT digital display with Bluetooth connectivity, navigation, call notifications, and music control.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">ABS:</span> Dual-channel ABS with switchable off-road mode, offering more braking control on loose surfaces.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Suspension:</span> Fully adjustable WP Apex suspension on both front and rear, allowing riders to customize the suspension to match their preferred riding style.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Tyres:</span> Dual-purpose tyres suited for both tarmac and gravel.
+                    </li>
+                </ol>
+                <h3 class="subheading">Comfort and Safety Enhancements</h3>
+                <p>With enhanced ergonomics, the 390 Adventure offers a more upright riding posture and a taller seat height. The advanced suspension, coupled with improved ABS and traction control, provides safety and stability even on challenging terrains.</p>
+                <h3 class="subheading">Mileage and Efficiency</h3>
+                <p>Expected fuel efficiency is approximately 25-28 km/l, suitable for adventure riding without frequent fuel stops.</p>
+                <h3 class="subheading">Market Competition</h3>
+                <p>The KTM 390 Adventure will compete with models like the Royal Enfield Himalayan, BMW G 310 GS, and Honda CB500X, catering to adventure enthusiasts in India.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

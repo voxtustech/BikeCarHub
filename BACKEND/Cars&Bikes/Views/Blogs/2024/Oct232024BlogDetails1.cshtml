@@ -1,0 +1,273 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Electric Scooters with Longest Range in India – Specs, Features & Price (2024)";
+}
+@section MetaTags{
+    <meta name="keywords" content="longest range electric scooters India, best electric scooters 2024, electric scooter range comparison, Ola S1 Pro, Simple One, Ather 450X, TVS iQube ST, Bajaj Chetak, electric scooter price India, top 5 electric scooters" />
+    <meta name="description" content="Explore the top 5 electric scooters with the longest range in India. Compare specs, features, and prices for Ola S1 Pro, Simple One, Ather 450X, TVS iQube, and Bajaj Chetak. Find the best electric scooter for your needs in 2024." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. Ola S1 Pro</h3>
+                        <p><span class="font-weight-700">Cost:</span> ₹1,14,999 (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Range:</span> 195 km (ARAI Certified)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Motor:</span> 5.5 kW, Mid-drive IPM motor
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Battery:</span> 4 kWh lithium-ion
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Top Speed:</span> 120 km/h
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Charging Time:</span> 6.5 hours (0-100%)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Brakes:</span> Front and rear disc with CBS (Combined Braking System)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Weight:</span> 116 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>Touchscreen display with GPS navigation</li>
+                            <li>Multiple riding modes (Eco, Normal, Sport, Hyper)</li>
+                            <li>Hill hold assist, reverse mode</li>
+                            <li>Voice-activated controls</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5longestrangeelectricscootersinindiafor2024/ola s1 pro.webp" alt="Ola S1 Pro" title="Ola S1 Pro" /></center></div>
+                </div>
+                <p>The Ola S1 Pro is a performance-packed electric scooter offering one of the best ranges in the market. It's perfect for those looking for a premium experience with a plethora of features.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. Simple One</h3>
+                        <p><span class="font-weight-700">Cost:</span> ₹ 1.45 lakh (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Range:</span> 212 km (ARAI Certified)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Motor:</span> 8.5 kW, PMSM motor
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Battery:</span> 5 kWh lithium-ion (split battery pack)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Top Speed:</span> 105 km/h
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Charging Time:</span> 4.5 hours
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Brakes:</span> Front and rear disc with CBS
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Weight:</span> 134 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>7-inch TFT touchscreen with 4G connectivity</li>
+                            <li>Fast charging capability (0-80% in 1 hour)</li>
+                            <li>Multiple riding modes (Eco, Ride, Dash)</li>
+                            <li>Removable battery pack</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5longestrangeelectricscootersinindiafor2024/simple one.webp" alt="Simple One" title="Simple One" /></center></div>
+                </div>
+                <p>The Simple One is currently the electric scooter with the longest range in India. It stands out with its removable battery pack for easy home charging and an advanced TFT display.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">3. Ather 450X Gen 3</h3>
+                        <p><span class="font-weight-700">Cost:</span> ₹ 1,40,599 (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Range:</span> 150 km (ARAI Certified)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Motor:</span> 6.4 kW, PMSM motor
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Battery:</span> 3.7 kWh lithium-ion
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Top Speed:</span> 90 km/h
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Charging Time:</span> 4.5 hours (0-100%)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Brakes:</span> Front and rear disc with CBS
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Weight:</span> 111.6 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>7-inch touchscreen dashboard with Bluetooth</li>
+                            <li>Over-the-air (OTA) updates</li>
+                            <li>Built-in navigation, music, and call controls</li>
+                            <li>Warp mode for high-speed riding</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5longestrangeelectricscootersinindiafor2024/ather 450x gen 3.webp" alt="Ather 450X Gen 3" title="Ather 450X Gen 3" /></center></div>
+                </div>
+                <p>The Ather 450X Gen 3 is known for its tech-savvy features and excellent build quality. It also includes over-the-air software updates, ensuring it stays up to date with the latest features.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">4. TVS iQube ST</h3>
+                        <p><span class="font-weight-700">Cost:</span> ₹ 1.85 lakh (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Range:</span> 150 km (ARAI Certified)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Motor:</span> 3 kW BLDC hub motor
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Battery:</span> 5.1 kWh lithium-ion
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Top Speed:</span> 82 km/h
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Charging Time:</span> 4-5 hours
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Brakes:</span> Front disc, rear drum with CBS
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Weight:</span> 129.7 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>7-inch TFT touchscreen display with Alexa integration</li>
+                            <li>SmartXonnect app support for navigation, geo-fencing</li>
+                            <li>USB charging port</li>
+                            <li>Multiple ride modes (Eco, Power)</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5longestrangeelectricscootersinindiafor2024/tvs iqube st.webp" alt="TVS iQube ST" title="TVS iQube ST" /></center></div>
+                </div>
+                <p>The TVS iQube ST brings an excellent combination of range and smart connectivity features, making it a top choice for riders seeking a reliable, feature-rich electric scooter.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">5. Bajaj Chetak Electric</h3>
+                        <p><span class="font-weight-700">Cost:</span> ₹ 99,998 (ex-showroom)</p>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Range:</span> 123 km (Real-world range)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Motor:</span> 4.2 kW, BLDC motor
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Battery:</span> 3 kWh lithium-ion
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Top Speed:</span> 63 km/h
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Charging Time:</span> 4 hours (0-100%)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Brakes:</span> Front disc, rear drum with CBS
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Weight:</span> 132 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>Retro-modern design</li>
+                            <li>Fully digital LCD console</li>
+                            <li>Keyless start/stop</li>
+                            <li>High-quality metal body panels</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/top5longestrangeelectricscootersinindiafor2024/bajaj chetak electric.webp" alt="Bajaj Chetak Electric" title="Bajaj Chetak Electric" /></center></div>
+                </div>
+                <p>The Bajaj Chetak Electric offers a retro charm with modern electric performance. Its metal body gives it a solid, premium feel, and it's great for urban commutes with a respectable range.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            } *@
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

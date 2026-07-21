@@ -1,0 +1,391 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @foreach (var brand in ViewBag.Tag)
+    {
+        ViewData["Title"] = @brand.TitleTag;
+    }
+}
+
+@section MetaTags {
+    @foreach (var brand in ViewBag.Tag)
+    {
+        <meta name="keywords" content="@brand.MetaKeywords" />
+        <meta name="description" content="@brand.MetaDescription" />
+    }
+}
+@foreach (var brand in ViewBag.Tag)
+{
+    <div class=" ">
+        <h1 class="latest-bike-head">@brand.BrandName Bikes</h1>
+            @*<h2 class="latest-bike-description p-b20">@brand.Discription</h2>*@
+        <div class="brand-info-container">
+            <div class="brand-info-content">
+
+                <h3>TVS Bikes in India: Models, Price List, Mileage & More (2025)</h3>
+
+                <p class="brand-info-short">
+                    TVS Motor Company is one of India’s most trusted and innovative two-wheeler brands. With a legacy that stretches over four decades, TVS has earned a special place in the hearts of Indian riders—thanks to its consistent focus on quality, performance, affordability, and technology.
+
+                    Whether you're looking for a reliable commuter motorcycle, a performance-oriented street machine, or a comfortable cruiser for weekend getaways, TVS offers a versatile lineup for every kind of rider. From the humble TVS Sport to the sporty Apache RR 310 and the modern-retro Ronin, TVS continues to make waves across urban, rural, and even international markets.
+
+                    In this article, we’ll explore the latest TVS bikes in India for 2025, including pricing, mileage, touring options, and what makes the brand so popular.
+                </p>
+                <div class="brand-info-full" id="tvsMoreText">
+                    <h3>TVS Bikes Price List 2025 in India</h3>
+                    <p>
+                        Here’s an updated list of the most popular TVS motorcycles, along with their ex-showroom prices and mileage figures:
+                    </p>
+
+                    <div class="brand-table-wrapper">
+                        <table class="brand-info-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Ex-Showroom Price</th>
+                                    <th>Mileage</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>TVS Sport</td>
+                                    <td>₹60,000 – ₹70,000</td>
+                                    <td>70–75 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>TVS Radeon</td>
+                                    <td>₹72,000 – ₹80,000</td>
+                                    <td>65–68 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>TVS Star City Plus</td>
+                                    <td>₹75,000 – ₹82,000</td>
+                                    <td>67–70 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>TVS Apache RTR 160 2V</td>
+                                    <td>₹1.19 lakh – ₹1.25 lakh</td>
+                                    <td>45–50 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>TVS Apache RTR 160 4V</td>
+                                    <td>₹1.24 lakh – ₹1.30 lakh</td>
+                                    <td>42–47 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>TVS Apache RTR 180</td>
+                                    <td>₹1.32 lakh – ₹1.35 lakh</td>
+                                    <td>40–45 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>TVS Apache RTR 200 4V</td>
+                                    <td>₹1.50 lakh – ₹1.55 lakh</td>
+                                    <td>35–40 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>TVS Ronin</td>
+                                    <td>₹1.49 lakh – ₹1.69 lakh</td>
+                                    <td>35–40 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>TVS Apache RR 310</td>
+                                    <td>₹2.72 lakh – ₹2.79 lakh</td>
+                                    <td>30–35 km/l</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <i>Note: Prices and mileage are indicative and may vary by city, riding style, and variant.</i>
+                    </p>
+                    <h3>Which TVS Is Best for Long Rides?</h3>
+
+                    <p>
+                        TVS motorcycles aren't just built for daily city commutes—they are increasingly being used
+                        for weekend touring and long-distance adventures. The brand offers several motorcycles that
+                        cater to highway riders who value comfort, performance, and reliability.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Top TVS Models for Long Rides:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>TVS Ronin</strong>
+                            <ul>
+                                <li>Engineered with a relaxed, upright riding position and wide handlebars</li>
+                                <li>Offers versatile performance with a torquey engine</li>
+                                <li>Great for city rides that extend into highway cruising</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>TVS Apache RTR 200 4V</strong>
+                            <ul>
+                                <li>Sporty handling, advanced ride modes, and Showa-tuned suspension</li>
+                                <li>Ideal for riders who want agility with long-distance comfort</li>
+                                <li>Dual-channel ABS ensures safer braking on varied terrains</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>TVS Apache RR 310</strong>
+                            <ul>
+                                <li>The flagship sports tourer co-developed with BMW</li>
+                                <li>Aerodynamic design, cushioned seating, and slipper clutch</li>
+                                <li>Perfect for riders seeking high-speed performance with touring capability</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        If you're someone who enjoys weekend getaways or long road trips,
+                        these motorcycles offer a balanced combination of comfort,
+                        performance, control, and touring capability.
+                    </p>
+                    <h3>Which TVS Has the Best Mileage?</h3>
+
+                    <p>
+                        TVS is widely appreciated for producing fuel-efficient motorcycles that help reduce
+                        daily commuting costs. If mileage is your top priority, TVS offers several excellent options
+                        designed for affordability, reliability, and efficiency.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">TVS Mileage Kings:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>TVS Sport</strong>
+                            <ul>
+                                <li>Claimed mileage: 70–75 km/l</li>
+                                <li>Lightweight, durable, and budget-friendly</li>
+                                <li>Perfect for students, delivery riders, and office commuters</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>TVS Star City Plus</strong>
+                            <ul>
+                                <li>Claimed mileage: 67–70 km/l</li>
+                                <li>Refined Ecothrust engine and comfortable seating</li>
+                                <li>A great choice for riders wanting mileage with modern styling</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>TVS Radeon</strong>
+                            <ul>
+                                <li>Claimed mileage: 65–68 km/l</li>
+                                <li>Heavy-duty commuter styling with strong low-end torque</li>
+                                <li>Performs well on city roads as well as semi-rural terrains</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        These motorcycles not only offer excellent fuel economy but also come with
+                        low maintenance costs, making them ideal for everyday commuting and practical ownership.
+                    </p>
+                    <h3>Why Is TVS Famous?</h3>
+
+                    <p>
+                        TVS Motor Company is one of the most respected two-wheeler manufacturers in India.
+                        Over the years, the company has evolved from a commuter-focused brand into a complete
+                        motorcycle manufacturer offering scooters, performance motorcycles, electric vehicles,
+                        and race-bred machines.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Key Reasons Why TVS is So Popular:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Wide Range of Bikes</strong>
+                            <ul>
+                                <li>From commuters to performance motorcycles and electric scooters, TVS caters to every category of Indian riders.</li>
+                                @*<li>The brand offers products for students, commuters, touring enthusiasts, and performance-focused riders.</li>*@
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Racing Pedigree</strong>
+                            <ul>
+                                <li>The Apache series was developed with insights from TVS Racing, one of the oldest racing teams in India. The result? Bikes that feel fast, sharp, and responsive. </li>
+                                @*<li>This racing heritage results in motorcycles that feel sharp, responsive, and performance-oriented.</li>*@
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Affordable and Reliable</strong>
+                            <ul>
+                                <li>TVS products are known for their excellent value, low maintenance, and solid after-sales support. </li>
+                                @*<li>Low maintenance costs and dependable after-sales service make them practical for daily ownership.</li>*@
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Innovation and Technology</strong>
+                            <ul>
+                                <li>TVS introduced India’s first connected scooter (NTorq 125) and is continuously innovating with ride modes, ABS, and app connectivity—even in budget bikes.</li>
+                                @*<li>The company continues to innovate with ride modes, Bluetooth connectivity, ABS, and advanced rider features.</li>*@
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Global Presence</strong>
+                            <ul>
+                                <li>TVS exports to over 60 countries and has strategic partnerships (like with BMW Motorrad) to co-develop world-class bikes. </li>
+                                @*<li>The brand also partners with companies like BMW Motorrad to co-develop premium motorcycles.</li>*@
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Strong Service Network</strong>
+                            <ul>
+                                <li>TVS has thousands of dealerships and service centers across India, ensuring easy support in both urban and rural areas.</li>
+                                @*<li>This ensures convenient support for customers in both urban and rural regions.</li>*@
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <h3>Final Thoughts</h3>
+
+                    <p>
+                        TVS Motor Company is a name synonymous with trust, innovation, and efficiency. As we move into 2025, TVS continues to evolve by delivering feature-rich, stylish, and fuel-efficient motorcycles that cater to riders from every walk of life.
+                        Whether you’re a commuter looking for unbeatable mileage, a student buying your first bike, or a rider looking for a reliable companion on the open road—TVS has something for you.
+                    <p>
+                        Their consistent quality, customer-first approach, and wide network ensure that you’re not just buying a two-wheeler—you’re buying confidence on two wheels.
+                    </p>
+                    <h3>Top 10 FAQs About TVS Bikes (2025)</h3>
+
+                    <div class="faq-container">
+
+                        <div class="faq-item">
+                            <h4>1. Which TVS bike is best for daily commuting?</h4>
+                            <p>
+                                The TVS Sport and TVS Star City Plus are excellent options for daily commuters
+                                because of their impressive mileage, comfortable seating, and affordable maintenance.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>2. Is the TVS Apache RR 310 good for touring?</h4>
+                            <p>
+                                Yes. The Apache RR 310 offers strong highway performance,
+                                comfortable ergonomics, aerodynamic styling, and advanced rider technology,
+                                making it suitable for long-distance touring.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>3. Which TVS bike gives the best mileage?</h4>
+                            <p>
+                                The TVS Sport is currently among the highest mileage motorcycles in the TVS lineup,
+                                delivering up to 75 km/l under ideal riding conditions.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>4. Does TVS offer electric bikes or scooters?</h4>
+                            <p>
+                                Yes. TVS offers the TVS iQube electric scooter,
+                                and the company is expected to expand its EV lineup in the coming years.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>5. What is the price range of TVS bikes in 2025?</h4>
+                            <p>
+                                TVS motorcycles start from around ₹60,000 for entry-level commuters
+                                and go up to approximately ₹2.8 lakh for premium models like the Apache RR 310.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>6. Is TVS a reliable brand?</h4>
+                            <p>
+                                Absolutely. TVS motorcycles are known for their reliability,
+                                smooth engine refinement, fuel efficiency, and cost-effective servicing.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>7. Which is the most powerful TVS bike?</h4>
+                            <p>
+                                The TVS Apache RR 310 is currently the most powerful motorcycle
+                                in the company’s lineup.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>8. Are TVS bikes good for beginners?</h4>
+                            <p>
+                                Yes. Models like the TVS Sport, Radeon, and Star City Plus
+                                are beginner-friendly because of their lightweight handling
+                                and easy riding characteristics.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>9. What is TVS Racing?</h4>
+                            <p>
+                                TVS Racing is India’s oldest factory racing team and plays
+                                a major role in shaping the performance and handling characteristics
+                                of the Apache series motorcycles.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>10. Does TVS have scooters too?</h4>
+                            <p>
+                                Yes. Popular TVS scooters include the Jupiter,
+                                NTorq 125, Zest, and the electric iQube.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="brand-read-btn"
+                        onclick="toggleBrandInfo('tvsMoreText', this)">
+                    Read More
+                </button>
+            </div>
+        </div>
+        <script>function toggleBrandInfo(contentId, button) {
+
+                const content = document.getElementById(contentId);
+
+                if (content.style.display === "block") {
+
+                    content.style.display = "none";
+                    button.innerText = "Read More";
+
+                } else {
+
+                    content.style.display = "block";
+                    button.innerText = "Read Less";
+                }
+            }</script>
+    </div>
+}
+@await Html.PartialAsync("_BrandComponent")
+@await Html.PartialAsync("_AllComponent")

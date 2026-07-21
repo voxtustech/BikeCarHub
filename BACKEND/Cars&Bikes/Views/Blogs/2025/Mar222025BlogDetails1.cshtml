@@ -1,0 +1,118 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Komaki Hi-Speed Electric Scooters: Best Models & Prices";
+}
+@section MetaTags{
+    <meta name="keywords" content="Komaki electric scooters, Komaki X3 price, Komaki SE-Pro range, Komaki SE-Ultra specs, Komaki SE-Max features, Komaki MG-PRO battery, best electric scooters, hi-speed electric scooters India, Komaki EV price, long-range electric scooters, eco-friendly scooters, electric two-wheeler India, Komaki scooter mileage, top EV scooters, best e-scooters India" />
+    <meta name="description" content="Explore Komaki's best hi-speed electric scooters—X3, SE-Pro, SE-Ultra, SE-Max, and MG-Pro+. Compare prices, features, battery range, and performance in India." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">1. Komaki X3 – Affordable & Stylish Hi-Speed Electric Scooter</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/march/KomakiHiSpeedElectricScootersBestModels&Prices/KomakiX3.webp" alt="KomakiX3" title="KomakiX3" /></div>
+				</div>
+                <ul>
+                    <li><span class="font-weight-700">Battery:</span> LiPO4</li>
+                    <li><span class="font-weight-700">Range:</span> 75 to 100 km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 52-55 km/h</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 4-5 hours</li>
+                    <li><span class="font-weight-700">Price:</span> Rs.52,999</li>
+                </ul>
+                <p>The <span class="font-weight-700">Komaki X3 </span>is a budget-friendly<span class="font-weight-700"> hi-speed electric scooter</span> that combines <span class="font-weight-700">style and performance. </span>With a 75 to <span class="font-weight-700">100 km range, </span>it is perfect for <span class="font-weight-700">daily city commutes. </span>The sleek design, <span class="font-weight-700">comfortable seating, </span>and <span class="font-weight-700">advanced display panel </span>make it a great entry-level e-scooter.</p>
+                <div class="div-line"></div>                
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">2. Komaki SE-Pro – Premium Performance & Smart Features</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/march/KomakiHiSpeedElectricScootersBestModels&Prices/KomakiSEPro.webp" alt="KomakiSEPro" title="KomakiSEPro" /></div>
+				</div>
+                    <ul>
+                    <li><span class="font-weight-700">Battery:</span> LiPO4(2.75 kw GRAPHENE)</li>
+                    <li><span class="font-weight-700">Range:</span>  110 to 120 km km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 75 km/h</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 4-5 hours</li>
+                    <li><span class="font-weight-700">Price:</span> Rs.67,999</li>
+                    </ul>
+                <p>The <span class="font-weight-700">Komaki SE-Pro </span>offers <span class="font-weight-700">premium performance </span>with its powerful motor and <span class="font-weight-700">smart features like app connectivity, LED lighting, and digital speedometer. </span>Ideal for urban riders who need a <span class="font-weight-700">long-range electric scooter with advanced tech. </span></p>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">3. Komaki SE-Ultra – Long-Range Electric Scooter for Daily Use</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/march/KomakiHiSpeedElectricScootersBestModels&Prices/KomakiSEUltra.webp" alt="KomakiSEUltra" title="KomakiSEUltra" /></div>
+                </div>
+                    <ul>
+                    <li><span class="font-weight-700">Battery:</span>2.75 kw LIPO4</li>
+                    <li><span class="font-weight-700">Range:</span> 130-140  km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 80 km/h</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 5 hours</li>
+                    <li><span class="font-weight-700">Price:</span> Rs.76,999</li>
+                    </ul>
+                <p>If you need a  <span class="font-weight-700">long-range e-scooter, .</span>the  <span class="font-weight-700">Komaki SE-Ultra.</span> delivers an impressive  <span class="font-weight-700">140 km per charge, .</span> making it perfect for daily commuting. It features  <span class="font-weight-700">strong suspension, regenerative braking, and multiple riding modes.</span></p>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">4. Komaki SE-Max – Best Electric Scooter for Comfort & Utility</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/march/KomakiHiSpeedElectricScootersBestModels&Prices/KomakiSEMax.webp" alt="KomakiSEMax" title="KomakiSEMax" /></div>
+                </div>
+                    <ul>
+                    <li><span class="font-weight-700">Battery:</span> 4.2 kw LIPO4</li>
+                    <li><span class="font-weight-700">Charger:</span>Dual Charger</li>
+                    <li><span class="font-weight-700">Range:</span> 200+ km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span>85 km/h</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 5-6 hours</li>
+                    <li><span class="font-weight-700">Price:</span> Rs.1,10,000</li>
+                    </ul>
+                <p>The <span class="font-weight-700">Komaki SE-Max </span>offers a <span class="font-weight-700">high-range battery with comfort-focused features, </span> making it one of the best choices for long rides. Its <span class="font-weight-700">ergonomic design, spacious storage, and smart connectivity </span> set it apart from the competition.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">5. Komaki MG-PRO+ – Powerful Motor & Maximum Performance</a></h3>
+                    <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/march/KomakiHiSpeedElectricScootersBestModels&Prices/KomakiMGPRO.webp" alt="KomakiMGPRO" title="KomakiMGPRO" /></div>
+                </div>
+                    <ul>
+                    <li><span class="font-weight-700">Battery:</span> 2.7 kw LIPO4</li>
+                    <li><span class="font-weight-700">Range:</span> 150+ km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span>90 km/h</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 6 hours</li>
+                    <li><span class="font-weight-700">Price:</span> Rs.74,999</li>
+                    </ul>
+                <p>The <span class="font-weight-700">Komaki MG-PRO </span>is the <span class="font-weight-700">flagship model, </span> offering <span class="font-weight-700">maximum performance </span> with a <span class="font-weight-700">high-speed motor, durable frame, and extended battery range. </span>It is the best choice for those who need <span class="font-weight-700">power, speed, and efficiency in an electric two-wheeler. </span></p>
+                <h3 class="subheading">Final Verdict: Which Komaki Electric Scooter is Right for You?</h3>
+                <ul>
+                    <li><span class="font-weight-700">Budget-Friendly & Stylish: </span>Komaki X3</li>
+                    <li><span class="font-weight-700">Smart Features & Connectivity:</span> Komaki SE-Pro</li>
+                    <li><span class="font-weight-700">Long-Range Daily Use:</span> Komaki SE-Ultra (140 km)</li>
+                    <li><span class="font-weight-700">Comfort & Utility:</span>Komaki SE-Max (200 km)</li>
+                    <li><span class="font-weight-700">Best Power & Speed:</span> Komaki MG-PRO+ (150 km)</li>
+                </ul>
+                <p><span class="font-weight-700">Komaki's electric scooters </span>offer the <span class="font-weight-700">perfect balance of performance, price, and sustainability. </span> Whether you need a <span class="font-weight-700">daily commuter or a high-speed EV, </span>Komaki has an option for every rider.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

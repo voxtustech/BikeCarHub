@@ -1,0 +1,107 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Exciting October 2024 Discounts on Popular Indian Cars: Maruti, Hyundai, Tata, and More!";
+}
+@section MetaTags{
+    <meta name="keywords" content="October 2024 car discounts, Indian car offers, festive car deals 2024, Maruti car discounts, Hyundai discounts 2024, Tata Motors festive offers, Mahindra car deals, buy car in October" />
+    <meta name="description" content="Explore the best October 2024 car discounts in India! Top brands like Maruti, Hyundai, Tata, and Mahindra are offering festive deals with up to ₹75,000 in savings. Shop now and drive home your dream car at a great price." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <h3 class="subheading">Exciting Discounts on Indian Cars This October 2024!</h3>
+                <p>In a festive treat for car buyers across India, automakers have rolled out massive discounts on popular models this October 2024. With the festive season around the corner, major car manufacturers like Maruti Suzuki, Hyundai, Tata Motors, and Mahindra are offering discounts, exchange bonuses, and additional benefits to boost sales and enhance the joy of purchasing a new car.</p>
+                <h3 class="subheading">Key Highlights of October 2024 Car Discounts:</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Maruti Suzuki:</span>Maruti Suzuki is offering discounts of up to ₹50,000 on its top-selling hatchbacks like the Swift and Baleno. Special benefits for first-time buyers and attractive exchange bonuses on models like the Dzire and Brezza are also part of the package.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Hyundai:</span>Hyundai has rolled out up to ₹75,000 discounts on models such as the Grand i10 Nios and i20. Its compact SUV, the Venue, also comes with benefits worth ₹60,000, making it a hot pick this season.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Tata Motors:</span>Tata Motors is offering discounts up to ₹70,000 on the Tiago, Tigor, and Harrier models. Buyers opting for the Nexon can avail benefits of ₹50,000, making it a perfect time to bring home the stylish and robust SUV.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Mahindra:</span>Mahindra’s popular models like the XUV300 and Bolero Neo are available with discounts up to ₹65,000, while the Thar comes with added benefits on specific variants.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Kia Motors:</span>Kia is providing attractive offers on the Seltos and Sonet, with discounts up to ₹40,000, making these feature-rich SUVs even more appealing.
+                    </li>
+                </ol>
+                <p><span class="font-weight-700">Special Festive Bonuses:</span> Customers can enjoy additional perks such as loyalty bonuses, exchange schemes, and reduced interest rates on car loans. With Diwali just around the corner, car showrooms across the country are buzzing with special offers and customized deals for early birds.</p>
+                <p><span class="font-weight-700">Don't Miss Out!</span> These October 2024 discounts make this the perfect time to buy your dream car. Visit your nearest dealership or check online for exclusive deals and offers!</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,78 @@
+﻿@model Cars_Bikes.Models.TWEVEngineAndTransmission
+
+@{
+    ViewData["Title"] = "Add  EV Engine and Transmission";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+
+                    <div class="container mt-4">
+                        <h2 class="text-center mb-4">Add Engine and Transmission Details</h2>
+                        <form asp-action="CreateTWEVEngineAndTransmission" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                            <div class="form-group">
+                                <label asp-for="TwoWheelerId"></label>
+                                <select asp-for="TwoWheelerId" asp-items="ViewBag.TwoWheelers" class="form-control"></select>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="TWVarientId"></label>
+                                <select asp-for="TWVarientId" asp-items="ViewBag.TWVarients" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="NumOfBattries"></label>
+                                <input asp-for="NumOfBattries" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="MotorPower"></label>
+                                <input asp-for="MotorPower" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="RangeEcoMode"></label>
+                                <input asp-for="RangeEcoMode" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="RangeNormalMode"></label>
+                                <input asp-for="RangeNormalMode" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="RangeSportsMode"></label>
+                                <input asp-for="RangeSportsMode" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="CoolingSystem"></label>
+                                <input asp-for="CoolingSystem" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="MotorIPRating"></label>
+                                <input asp-for="MotorIPRating" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Starting"></label>
+                                <input asp-for="Starting" class="form-control" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,454 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Check RC, Insurance & Challan Online India 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Check RC online India, How to check insurance validity, Check vehicle challan online, Parivahan RC status check, mParivahan app guide 2025, Traffic challan online payment, Vehicle insurance status check India, DigiLocker RC validity, eChallan parivahan portal, How to track traffic fines online, VAHAN RC info lookup, Check driving record online India, Online RTO document check India, Check PUC certificate online, BikeCarHub RC and challan guide" />
+    <meta name="description" content="Learn how to check your RC, vehicle insurance & challan online in India. Easy 2025 guide with portals, steps, tips & FAQs by BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 4th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+
+                <p>Whether you're buying a used vehicle, preparing for a long ride, or just want to avoid traffic penalties, this guide by <span class="font-weight-700">BikeCarHub</span> will show you exactly how to check RC, insurance, and challans online—without visiting the RTO.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Why It's Important to Check RC, Insurance & Challan Regularly</h2>
+                <ul>
+                    <li>Avoid fines due to expired insurance or unpaid challans</li>
+                    <li>Stay updated with your vehicle's documentation status</li>
+                    <li>Useful during police checks, resale, loan application</li>
+                    <li>Promotes responsible ownership and legal compliance</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Key Platforms for Vehicle Information</h2>
+                <p>Before we dive into the steps, here are the <span class="font-weight-700">official platforms and apps</span> that make it possible:</p>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Platform/App</th>
+                                <th class="text-center">Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Parivahan Sewa</td>
+                                <td>Vehicle registration, insurance, challan data</td>
+                            </tr>
+                            <tr>
+                                <td>VAHAN Portal</td>
+                                <td>Unified vehicle registry database</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>e-Challan Portal</td>
+                                <td>View and pay traffic challans</td>
+                            </tr>
+                            <tr>
+                                <td>mParivahan App</td>
+                                <td>Mobile access to all vehicle-related data</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>DigiLocker App</td>
+                                <td>Store and show digital RC/Insurance/PUC</td>
+                            </tr>
+                            <tr>
+                                <td>State RTO Portals</td>
+                                <td>Localised services for challan and verification</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">How to Check RC (Registration Certificate) Online</h2>
+                <p>RC (Registration Certificate) is proof that your vehicle is legally registered with the RTO.</p>
+
+                <h3 class="subheading">Using VAHAN/Parivahan Portal:</h3>
+                <p><span class="font-weight-700">Steps:</span></p>
+                <ol>
+                    <li> Go to <a href="https://parivahan.gov.in/parivahan/" class="for-link">https://parivahan.gov.in/parivahan/</a></li>
+                    <li> Click on Informational Services then click on "Know Your Vehicle Details"</li>
+                    <li> Create Account / Login (Enter Mobile Number & Verification Code & Captcha)</li>
+                    <li> Enter your <span class="font-weight-700">vehicle registration number</span> (e.g., MH12AB1234)</li>
+                    <li> Submit the <span class="font-weight-700">captcha code</span></li>
+                    <li> View RC details: Owner name (masked), vehicle class, registration date, fuel type, fitness, and expiry</li>
+                </ol>
+
+                <h3 class="subheading">Using mParivahan App:</h3>
+                <ol>
+                    <li> Install from Google Play or App Store</li>
+                    <li> Open and enter vehicle number</li>
+                    <li> Save vehicle under "My Garage"</li>
+                    <li> Access RC details instantly</li>
+                </ol>
+                <p><span class="font-weight-700">BikeCarHub Tip:</span> Use the app offline once the vehicle is added.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">How to Check Vehicle Insurance Status Online</h2>
+
+                <h3 class="subheading">Using Parivahan Insurance Check:</h3>
+                <ol>
+                    <li> Visit <a href="https://vahan.parivahan.gov.in/nrservices" class="for-link">vahan.parivahan.gov.in/nrservices</a></li>
+                    <li> Click "Know your vehicle details"</li>
+                    <li> Enter registration number</li>
+                    <li> Scroll to see <span class="font-weight-700">insurance status</span>, policy expiry, and insurer name</li>
+                </ol>
+
+                <h3 class="subheading">Through Insurance Provider Portals:</h3>
+                <ul>
+                    <li>Login using policy number</li>
+                    <li>View or download policy documents</li>
+                </ul>
+
+                <h3 class="subheading">Using mParivahan:</h3>
+                <ul>
+                    <li>View vehicle profile under "Garage"</li>
+                    <li>Insurance status is visible under details</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">How to Check Traffic Challan Online</h2>
+
+                <h3 class="subheading">Using e-Challan Parivahan Portal:</h3>
+                <ol>
+                    <li><span class="step-number">1.</span> Visit <a href="https://echallan.parivahan.gov.in/" class="for-link">echallan.parivahan.gov.in</a></li>
+                    <li><span class="step-number">2.</span> Click on Check Online Services and then click on "Check Challan Status"</li>
+                    <li>
+                        <span class="step-number">3.</span> Enter either:
+                        <ul>
+                            <li>Vehicle number</li>
+                            <li>Driving License number</li>
+                            <li>Challan number</li>
+                        </ul>
+                    </li>
+                    <li><span class="step-number">4.</span> View pending challans, date, location of violation, and fine amount</li>
+                </ol>
+
+                <h3 class="subheading">Using mParivahan:</h3>
+                <ul>
+                    <li>Go to "Challan" section</li>
+                    <li>Enter vehicle number</li>
+                    <li>View summary of all challans</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Comparison Table -- Best Platforms to Use</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Platform/App</th>
+                                <th class="text-center">RC Status</t>
+                                <th class="text-center">Insurance Check</th>
+                                <th class="text-center">Challan Status</th>
+                                <th class="text-center">Mobile App</th>
+                                <th class="text-center">Download Docs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>VAHAN Portal</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                            </tr>
+                            <tr>
+                                <td>Parivahan e-Challan</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>mParivahan App</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Insurance Provider Sites</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>DigiLocker</td>
+                                <td>✅</td>
+                                <td>✅ (if linked)</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Additional Services You Can Access</h2>
+                <ul>
+                    <li>
+                        <span class="font-weight-700">Pollution Under Control (PUC) Certificate</span>
+                        <ul>
+                            <li>Check and download via Parivahan or DigiLocker</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Vehicle Fitness & Tax Status</span>
+                        <ul>
+                            <li>Useful for commercial vehicle owners</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Owner History (for used vehicles)</span>
+                        <ul>
+                            <li>Limited data available through VAHAN or app</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Common Errors and Fixes</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Problem</th>
+                                <th class="text-center">Reason</th>
+                                <th class="text-center">Solution</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>RC details not found</td>
+                                <td>Data not updated in VAHAN</td>
+                                <td>Visit RTO or wait 3-5 working days</td>
+                            </tr>
+                            <tr>
+                                <td>Insurance not visible</td>
+                                <td>Delay in insurer's data sync</td>
+                                <td>Check directly on insurance portal</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>False Challan</td>
+                                <td>Plate cloned or error</td>
+                                <td>Contact local traffic police office</td>
+                            </tr>
+                            <tr>
+                                <td>Expired documents</td>
+                                <td>Lapsed insurance or PUC</td>
+                                <td>Renew online ASAP to avoid fines</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Why You Should Check Vehicle Info Regularly</h2>
+                <ul>
+                    <li>To <span class="font-weight-700">renew expiring insurance</span> on time</li>
+                    <li>Avoid <span class="font-weight-700">penalties</span> for unpaid traffic challans</li>
+                    <li>To confirm <span class="font-weight-700">document validity</span> during resale or transfer</li>
+                    <li>For peace of mind during long rides, police stops, or travel</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">BikeCarHub's Recommendation</h2>
+                <p>For daily checks or frequent riders, the <span class="font-weight-700">mParivahan App</span> is the most convenient all-in-one tool. It's government-backed, reliable, and allows you to store virtual copies of your RC and insurance—acceptable by traffic police across India.</p>
+                <p>For detailed document verification (especially for second-hand buyers), use the <span class="font-weight-700">Parivahan and VAHAN portals</span> for the most authentic source data.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">10 Frequently Asked Questions (FAQs)</h2>
+
+                <div class="accordion" id="faqRCGuide">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Is the mParivahan RC accepted by traffic police?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqRCGuide">
+                            <div class="accordion-body">
+                                Yes, the digital RC and insurance displayed on mParivahan are legally valid across India.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. How can I download my RC and Insurance?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqRCGuide">
+                            <div class="accordion-body">
+                                Use the DigiLocker app or mParivahan to store and download your documents digitally.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. What should I do if I see a false challan?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqRCGuide">
+                            <div class="accordion-body">
+                                Visit your nearest traffic police station with vehicle documents and request verification.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Can I pay challans directly from the portal?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqRCGuide">
+                            <div class="accordion-body">
+                                Yes, most challans can be paid online via the Parivahan or state police portal using UPI, cards, or net banking.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. What if my insurance isn't showing on Parivahan?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqRCGuide">
+                            <div class="accordion-body">
+                                It may take a few days to sync. Alternatively, check on your insurer's website or app.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Do I need to carry a physical copy of RC and Insurance?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqRCGuide">
+                            <div class="accordion-body">
+                                No. Digital versions via DigiLocker or mParivahan are accepted under the Motor Vehicle Act, 1988.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. How often should I check for challans?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqRCGuide">
+                            <div class="accordion-body">
+                                Monthly checks are recommended to catch any unnoticed violations.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Is my vehicle's owner name public?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqRCGuide">
+                            <div class="accordion-body">
+                                No. Only partial names are shown online for privacy reasons.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Can I check someone else's vehicle details?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqRCGuide">
+                            <div class="accordion-body">
+                                Yes, using the registration number, you can see limited details like model, fitness, and insurance status.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Can I link my RC and insurance in DigiLocker?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqRCGuide">
+                            <div class="accordion-body">
+                                Yes. Log in with your Aadhaar and link using your registration number.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

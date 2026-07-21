@@ -1,0 +1,124 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Best five Longest Range Electric Scooters in India";
+}
+@section MetaTags {
+    <meta name="keywords" content="longest range electric scooter, best EV scooters India, top electric scooters, high battery capacity scooters, best mileage EV scooter, electric bike range, best electric scooter under 2 lakh, Simple One range, Ola S1 Pro mileage, Ather 450X top speed, Hero Vida V1 battery, TVS iQube ST range, best e-scooters India, high-speed electric scooters, top EV two-wheelers, Komaki SE Max, Ozotec Bheem" />
+    <meta name="description" content="Discover the top 5 electric scooters in India with the highest battery capacity and longest range per charge. Compare specs, price, and mileage before you buy." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">1. Simple One – Highest Range Electric Scooter in India</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <img src="~/images/blogs/2025/march/best5electricscootersinindiawith200kmrange/simpleone.webp" alt="simpleone" title="simpleone" />
+                    </div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Battery Capacity:</span> 5 kWh (Fixed + Removable)	</li>
+                    <li><span class="font-weight-700">Range (IDC Claimed):</span> 248 km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 105 km/h</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 5 hours</li>
+                </ul>
+                <p>The <span class="font-weight-700">Simple One</span> is India's <span class="font-weight-700">highest-range electric scooter, </span> offering an <span class="font-weight-700">impressive 248 km range</span> with its<span class="font-weight-700"> dual battery setup. </span> This EV is a perfect combination of <span class="font-weight-700">long battery life, top speed, and advanced features, </span>making it an ideal choice for urban and highway rides.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">2. Ola S1 Pro+ Gen 3 – Best High-Tech Long-Range Scooter</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <img src="~/images/blogs/2025/march/best5electricscootersinindiawith200kmrange/OlaS1ProGen3.webp" alt="OlaS1Pro+Gen3" title="OlaS1Pro+Gen3" />
+                    </div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Battery Capacity:</span>4 kWh Lithium-ion</li>
+                    <li><span class="font-weight-700">Range (IDC Claimed):</span> 320 km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 141 km/h</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 6.5 hours</li>
+                </ul>
+                <p>The <span class="font-weight-700">Ola S1 Pro+ Gen 3 ,</span>is one of the <span class="font-weight-700">best-selling premium electric ,</span>scooters in India, featuring <span class="font-weight-700">fast acceleration, cruise control, multiple riding modes, and AI-powered connectivity. ,</span> It offers up to<span class="font-weight-700"> 320 km per charge,</span> making it a great option for long-distance riders.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">3. Ola S1 X+ Gen 3– Best Long-Range Electric Scooter for Utility</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <img src="~/images/blogs/2025/march/best5electricscootersinindiawith200kmrange/OlaS1XGen3.webp" alt="OlaS1X+Gen3.webp" title="OlaS1X+Gen3.webp" />
+                    </div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Battery Capacity:</span> 4 kWh Lithium-ion</li>
+                    <li><span class="font-weight-700">Range (IDC Claimed):</span> 242 km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 125 km/h</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 6.5 hours</li>
+                </ul>
+                <p>The <span class="font-weight-700">Ola S1 X+ Gen 3</span> is a <span class="font-weight-700">rugged and practical electric scooter, </span>offering <span class="font-weight-700">242 km range per charge. </span> Designed for daily and heavy users, it comes with<span class="font-weight-700"> large storage capacity, robust build quality, and an eligent design. </span></p>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">4. Ozotec Bheem– Best Scooter With Long Range</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <img src="~/images/blogs/2025/march/best5electricscootersinindiawith200kmrange/OzotecBheem.webp" alt="OzotecBheem" title="OzotecBheem" />
+                    </div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Battery Capacity: </span>5 kWh Lithium-ion </li>
+                    <li><span class="font-weight-700">Range (IDC Claimed):</span> 515 km per charge</li>
+                    <li><span class="font-weight-700">Top Speed:</span> 65 km/h</li>
+                    <li><span class="font-weight-700">Charging Time: </span>4.5 hours</li>
+                </ul>
+                <p>The <span class="font-weight-700">Ozotec Bheem </span>is one of the <span class="font-weight-700">few long-range electric scooters with a 5 kWh battery, </span>making it a great choice for riders without a fixed charging station. With a <span class="font-weight-700">515 km range, </span>strong motor performance, and it stands out in the market.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading"><a class="for-link" asp-controller="Home" asp-action="Index">5. Komaki SE Max– Budget-Friendly Long-Range EV Scooter</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <img src="~/images/blogs/2025/march/best5electricscootersinindiawith200kmrange/KomakiSEMax.webp" alt="KomakiSEMax" title="KomakiSEMax" />
+                    </div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Battery Capacity:</span>4.2 KW LIPO4</li>
+                    <li><span class="font-weight-700">Range (IDC Claimed):</span> 200+ km per charge</li>
+                    <li><span class="font-weight-700">No. of Charger:</span> 2</li>
+                    <li><span class="font-weight-700">No. of Battery:</span>1</li>
+                </ul>
+                <p>The  <span class="font-weight-700">Komaki SE Max  </span>is a  <span class="font-weight-700">budget-friendly long-range electric scooter, </span>offering a <span class="font-weight-700"> 200+ km range on a single charge. </span>It is designed for  <span class="font-weight-700">urban and semi-urban, </span> featuring  <span class="font-weight-700">a lightweight frame, fast-charging capability, and decent speed. </span></p>
+                <div class="div-line"></div>
+                <h3 class="subheading">Final Thoughts: Which 200+ km Range Scooter Should You Buy?</h3>
+                <ul>
+                    <li>If you want <span class="font-weight-700">the highest range,</span> go for <span class="font-weight-700">Ozotec Bheem (515 km). </span></li>
+                    <li>If you prefer <span class="font-weight-700"> tech-loaded features, </span> the <span class="font-weight-700">Ola S1 Pro+ Gen 3 (320 km) </span> is a great choice.</li>
+                    <li>For <span class="font-weight-700">rugged utility and storage, </span>the <span class="font-weight-700">Ola S1 X+ Gen 3 (242 km) </span> is ideal.</li>
+                    <li>If you need a <span class="font-weight-700"> better battery, </span>opt for <span class="font-weight-700">Simple One (248 km). </span></li>
+                    <li>If you're looking for a <span class="font-weight-700">budget-friendly long-range option, </span> choose <span class="font-weight-700"> Komaki SE Max (200+ km). </span></li>
+                </ul>
+                <p>Switching to an <span class="font-weight-700">electric scooter with a high range </span>can save fuel costs and reduce carbon emissions. Choose wisely based on your <span class="font-weight-700">budget, charging convenience, and daily usage! </span></p>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

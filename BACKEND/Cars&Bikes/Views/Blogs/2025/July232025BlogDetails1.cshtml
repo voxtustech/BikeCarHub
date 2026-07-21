@@ -1,0 +1,605 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tesla Model Y India Review, Range, Price & Features";
+}
+@section MetaTags {
+    <meta name="keywords" content="Tesla Model Y India, Tesla Model Y Price, Tesla EV SUV Review, Model Y WLTP Range, Tesla India Booking, Tesla Model Y Interior 2025, Full Self-Driving Tesla, Tesla India Features, Electric SUV under 70 lakh" />
+    <meta name="description" content="Explore the 2025 Tesla Model Y in India – Price, WLTP range, specs, tech, and new features. A complete guide to the premium all-electric SUV." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="~/images/blogs/2025/july/tesla model y india review/model y.webp" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+            
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 23rd July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <p>If you're looking for the perfect electric crossover for Indian roads — this guide from <span class="font-weight-700">BikeCarHub</span> covers everything you need: <span class="font-weight-700">pricing, range, performance, features, trims, tech, and more</span>.</p>
+
+                <h2 class="subheading">Tesla Model Y: Overview at a Glance</h2>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">Rear-Wheel Drive</th>
+                                <th class="text-center">Long Range Rear-Wheel Drive</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>WLTP Range</td>
+                                <td>500 km</td>
+                                <td>622 km</td>
+                            </tr>
+                            <tr>
+                                <td>Top Speed</td>
+                                <td>201 km/h</td>
+                                <td>201 km/h</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>0-100 km/h</td>
+                                <td>5.9 sec</td>
+                                <td>5.6 sec</td>
+                            </tr>
+                            <tr>
+                                <td>Charging (15 mins)</td>
+                                <td>Up to 238 km</td>
+                                <td>Up to 267 km</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Price (Ex-showroom)</td>
+                                <td>₹59,89,000</td>
+                                <td>₹67,89,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 class="subheading">New Design Upgrades in Model Y</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/tesla model y india review/blue colour.webp" alt="Tesla Model Y 2025 Design" title="Tesla Model Y 2025 Design" /></div>
+                </div>
+                <p>Tesla's 2025 Model Y refresh brings <span class="font-weight-700">style and function</span> together with multiple design changes that boost <span class="font-weight-700">aerodynamics, efficiency, and comfort</span>.</p>
+
+                <h3 class="subheading">What's New:</h3>
+                <ul>
+                    <li><span class="font-weight-700">New Front & Rear Lightbars</span>: Sleek, aerodynamic design to reduce drag</li>
+                    <li><span class="font-weight-700">Refined Interior</span>: Soft-touch finishes, wrap-around ambient lighting, and aluminum detailing</li>
+                    <li><span class="font-weight-700">Retuned Suspension</span>: For smoother handling, better comfort, and a quieter cabin</li>
+                    <li><span class="font-weight-700">Acoustic Glass</span>: Enhances cabin silence, isolates outside road noise</li>
+                    <li><span class="font-weight-700">Improved Connectivity</span>: Faster calls, better Wi-Fi and cellular signal</li>
+                    <li><span class="font-weight-700">Power Recline 2nd Row</span>: Comfort from every angle, fold-flat seats for cargo flexibility</li>
+                    <li><span class="font-weight-700">15.4" Main + 8" Rear Touchscreen</span>: Front + rear passengers get full control</li>
+                </ul>
+
+                <h2 class="subheading">Interior: Premium, Minimal, and Connected</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/tesla model y india review/model y.webp" alt="Tesla Model Y Interior 2025" title="Tesla Model Y Interior 2025" /></div>
+                </div>
+                <p>The new Model Y interior is a blend of <span class="font-weight-700">premium materials and functional technology</span>:</p>
+
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Included</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15.4" Front Touchscreen</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>8" Rear Touchscreen</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Heated & Ventilated Front Seats</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Power-Recline, Heated Rear Seats</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Wrap-Around Ambient Lighting</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Aluminum & Soft-Touch Finishes</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Laminated Safety Glass</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Power-Actuated Air Vents (Front/Rear)</td>
+                                <td>✅</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Tesla's signature <span class="font-weight-700">glass roof</span> continues to offer <span class="font-weight-700">UV and infrared protection</span>, flooding the cabin with natural light while keeping it cool.</p>
+
+                <h2 class="subheading">Performance & Range (WLTP Tested)</h2>
+                <p>India's Model Y variants come with WLTP-rated range figures, tailored to urban commutes and highway runs alike.</p>
+
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-center">Performance Metric</th>
+                                <th class="text-center">RWD Model Y</th>
+                                <th class="text-center">Long Range RWD</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>WLTP Range</td>
+                                <td>500 km</td>
+                                <td>622 km</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Top Speed</td>
+                                <td>201 km/h</td>
+                                <td>201 km/h</td>
+                            </tr>
+                            <tr>
+                                <td>0-100 km/h Acceleration</td>
+                                <td>5.9 sec</td>
+                                <td>5.6 sec</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Supercharging (15 min)</td>
+                                <td>+238 km</td>
+                                <td>+267 km</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Tesla's <span class="font-weight-700">Auto Charge Planning</span> helps optimize charging stops enroute — a feature built right into the navigation system.</p>
+
+                <h2 class="subheading">Charging & Efficiency</h2>
+                <h3 class="subheading">Charging Times:</h3>
+                <ul>
+                    <li><span class="font-weight-700">15 minutes</span> at a Supercharger = Up to <span class="font-weight-700">267 km</span></li>
+                    <li>Supports Tesla's V3 Superchargers with <span class="font-weight-700">up to 250 kW</span></li>
+                    <li>Full home charging via <span class="font-weight-700">Wall Connector</span> or 11kW AC systems</li>
+                </ul>
+
+                <p>With <span class="font-weight-700">auto pre-conditioning</span>, Model Y warms or cools the battery for optimal charging speed based on your route.</p>
+
+                <h2 class="subheading">Exterior Colours & Customization</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/tesla model y india review/model-y-2-feature-carousel-slide-1-map-desktop.webp" alt="Tesla Model Y Color Options" title="Tesla Model Y Color Options" /></div>
+                </div>
+                <p>Tesla India offers a beautiful palette of <span class="font-weight-700">6 colour options</span>, with matching wheel and interior packages.</p>
+
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-center">Exterior Colour Options</th>
+                                <th class="text-center">Interior Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Stealth Grey (Included)</td>
+                                <td>All Black (Standard)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Pearl White Multi-Coat</td>
+                                <td>Black & White Interior</td>
+                            </tr>
+                            <tr>
+                                <td>Diamond Black</td>
+                                <td></td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Glacier Blue</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Quicksilver</td>
+                                <td></td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Ultra Red</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 class="subheading">Safety & Autopilot</h2>
+                <p>Model Y includes a full suite of <span class="font-weight-700">active safety technologies</span> as standard:</p>
+
+                <h3 class="subheading">Active Safety Features:</h3>
+                <ul>
+                    <li>Automatic Emergency Braking</li>
+                    <li>Blind Spot Collision Warning</li>
+                    <li>Lane Departure Avoidance</li>
+                    <li>Forward Collision Warning</li>
+                </ul>
+
+                <h3 class="subheading">Autopilot & Full Self-Driving:</h3>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Autopilot</th>
+                                <th class="text-center">Full Self-Driving</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Traffic-Aware Cruise Control</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Autosteer on Highways</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Navigate on Autopilot</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Auto Lane Change</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Smart Summon</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>AutoPark</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Tesla's FSD features require <span class="font-weight-700">driver supervision</span> and are <span class="font-weight-700">dependent on regulatory approval</span> in each market.</p>
+
+                <h2 class="subheading">Cargo & Utility</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/tesla model y india review/model-y-2-feature-carousel-slide-6-app-desktop.webp" alt="Tesla Model Y Cargo Space" title="Tesla Model Y Cargo Space" /></div>
+                </div>
+                <p>Whether you're packing for a family trip or just loading groceries, Model Y's utility is hard to beat.</p>
+
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-center">Cargo Area</th>
+                                <th class="text-center">Capacity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rear Trunk (2nd Row Up)</td>
+                                <td>822 L</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Rear Trunk (2nd Row Folded)</td>
+                                <td>2022 L</td>
+                            </tr>
+                            <tr>
+                                <td>Frunk (Front Trunk)</td>
+                                <td>117 L</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Max Combined Cargo</td>
+                                <td>2138 L (75.5 cu ft)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/tesla model y india review/tyre.webp" alt="Tesla Model Y Cargo Space" title="Tesla Model Y Cargo Space" /></div>
+                </div>
+
+                <p>Hands full? Use the <span class="font-weight-700">hands-free power tailgate</span> which opens automatically as you approach with the key or phone.</p>
+
+                <h2 class="subheading">Entertainment, Comfort & Connectivity</h2>
+                <p>Tesla has loaded the new Model Y with <span class="font-weight-700">smarter hardware</span> and expanded entertainment features.</p>
+
+                <h3 class="subheading">Entertainment:</h3>
+                <ul>
+                    <li>Tesla Theater (Netflix, YouTube, Twitch, etc.)</li>
+                    <li>Tesla Arcade (in-cabin gaming support)</li>
+                    <li>9-Speaker Premium Audio</li>
+                    <li>Rear display media controls</li>
+                </ul>
+
+                <h3 class="subheading">Tech & Comfort:</h3>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Included</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tesla Mobile App Remote Control</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Heated Steering Wheel</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Air Filtration System</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Custom Driver Profiles</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Dashcam & Sentry Mode</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Auto Route Planning for Charging</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Phone Key with Extended Range</td>
+                                <td>✅</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Bonus: The rear 8" touchscreen allows passengers to control <span class="font-weight-700">media, temperature, and airflow</span> — a rarity in this segment.</p>
+
+                <h2 class="subheading">Running Cost Advantage</h2>
+                <p>Compared to a petrol SUV, the Tesla Model Y can <span class="font-weight-700">save over ₹3,40,000 in fuel over 5 years</span>. Here's how:</p>
+
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-center">Comparison Metric</th>
+                                <th class="text-center">ICE SUV</th>
+                                <th class="text-center">Tesla Model Y</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fuel / Energy Cost</td>
+                                <td>₹7-10/km</td>
+                                <td>₹1.5-2/km (avg.)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Annual Maintenance Cost</td>
+                                <td>₹20,000+</td>
+                                <td>₹5,000-₹8,000</td>
+                            </tr>
+                            <tr>
+                                <td>Road Tax (Delhi)</td>
+                                <td>Standard rates</td>
+                                <td>0% for EVs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Tesla EVs require <span class="font-weight-700">minimal maintenance</span> due to no oil changes, no timing belts, and fewer moving parts.</p>
+
+                <h2 class="subheading">Why Choose Model Y for India?</h2>
+                <ul>
+                    <li><span class="font-weight-700">Ideal for metro + highway travel</span></li>
+                    <li><span class="font-weight-700">Zero tailpipe emissions</span></li>
+                    <li>Eligible for <span class="font-weight-700">state EV incentives</span></li>
+                    <li>Superior <span class="font-weight-700">tech and convenience</span></li>
+                    <li>Built for <span class="font-weight-700">low maintenance + long-term reliability</span></li>
+                    <li>Large trunk + frunk = SUV practicality</li>
+                    <li>Tesla's <span class="font-weight-700">OTA updates</span> keep the car fresh for years</li>
+                </ul>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/tesla model y india review/side image.webp" alt="Tesla Model Y Cargo Space" title="Tesla Model Y Cargo Space" /></div>
+                </div>
+
+                <h2 class="subheading">Final Verdict by BikeCarHub</h2>
+                <p>The <span class="font-weight-700">Tesla Model Y (India)</span> is the EV to beat — offering a <span class="font-weight-700">perfect blend of range, tech, comfort, and performance</span>, now with a more luxurious cabin and longer range. Whether you're buying for status, sustainability, or smart commuting — this is the <span class="font-weight-700">most complete electric SUV in India's premium segment</span>.</p>
+
+                <p>With zero emissions, low running costs, and top-tier tech, the Model Y is <span class="font-weight-700">ready for your future</span>. Are you?</p>
+
+                <h2 class="subheading">Frequently Asked Questions – Tesla Model Y (India)</h2>
+
+                <div class="accordion" id="faqTeslaModelY">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. What is the starting price of Tesla Model Y in India?
+                            </button>
+                        </h3>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The <span class="font-weight-700">Rear-Wheel Drive</span> variant starts at <span class="font-weight-700">₹59,89,000 (ex-showroom)</span>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. What is the real-world range of the Tesla Model Y?
+                            </button>
+                        </h3>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The Long Range RWD can achieve up to <span class="font-weight-700">622 km (WLTP)</span>. Real-world may vary between <span class="font-weight-700">500-580 km</span>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Is the Tesla Model Y a 5- or 7-seater?
+                            </button>
+                        </h3>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The India version comes as a <span class="font-weight-700">5-seater</span>, but global versions offer a 7-seater option.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Does the Model Y support fast charging?
+                            </button>
+                        </h3>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Yes. With Superchargers, you can add up to <span class="font-weight-700">267 km of range in just 15 minutes</span>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. What is the difference between Autopilot and FSD?
+                            </button>
+                        </h3>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Autopilot includes lane centering and cruise control. FSD (₹6,00,000 extra) adds advanced features like <span class="font-weight-700">Auto Lane Change</span> and <span class="font-weight-700">Navigate on Autopilot</span>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Can I charge the Model Y at home?
+                            </button>
+                        </h3>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Yes, it supports home charging via a <span class="font-weight-700">Tesla Wall Connector</span> or standard AC outlets.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Is the Model Y good for long drives?
+                            </button>
+                        </h3>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Absolutely. With over <span class="font-weight-700">600 km range</span>, Tesla Navigation, and fast charging, it's perfect for intercity travel.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. What is included in the Tesla Mobile App?
+                            </button>
+                        </h3>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                The app allows remote <span class="font-weight-700">lock/unlock, pre-conditioning, charging control</span>, and even <span class="font-weight-700">Summon mode</span> for parking.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. What's new in the 2025 Model Y?
+                            </button>
+                        </h3>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Refined interior, upgraded suspension, acoustic glass, rear touchscreen, and new ambient lighting setup.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Does the Model Y qualify for EV incentives in India?
+                            </button>
+                        </h3>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqTeslaModelY">
+                            <div class="accordion-body">
+                                Yes, EVs like the Model Y are eligible for <span class="font-weight-700">reduced road tax and registration fees</span>, especially in Delhi and Maharashtra.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p>Stay updated with more automotive content at <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub.com</a> — India's trusted voice for premium automotive journalism.</p>
+                <p>Also checkout other brands here </p>
+                <p> <a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiNexaIgnis_2">Suzuki</a></p>
+                <p>  <a class="for-link" asp-controller="ValueForMoney" asp-action="SkodaKylaq1">Skoda</a></p>
+            </div>
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

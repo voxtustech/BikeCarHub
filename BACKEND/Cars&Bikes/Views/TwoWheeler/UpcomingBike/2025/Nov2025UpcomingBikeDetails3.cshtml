@@ -1,0 +1,412 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Ducati Panigale V2 2025: Specs, Price & Launch in India";
+}
+@section MetaTags {
+    <meta name="keywords" content="Ducati Panigale V2 2025, Panigale V2 Price India, Panigale V2 Launch Date, 890cc V2 Engine, Panigale V2 Specs, Panigale V2 S, Ducati Superbike, Kawasaki ZX-10R Rival, BMW S 1000 RR, Ducati Electronics, Desmodromic change, BikeCarHub." />
+    <meta name="description" content="Get the full scoop on the 2025 Ducati Panigale V2's new 890cc engine, India price (₹20L+), launch timeline, and key feature and competitor comparisons." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">The Evolution of Excellence: Decoding the All-New 2025 Ducati Panigale V2</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/ducati panigale v2/ducati panigale v21.webp"
+                             alt="Ducati Panigale V2" title="Ducati Panigale V2" loading="lazy" />
+                    </div>
+                </div>
+
+                <p>Ducati, the name synonymous with raw emotion, racing heritage, and exquisite Italian design, is gearing up to redefine the middleweight superbike segment. The highly anticipated 2025 Ducati Panigale V2 is not just an update; it represents a significant evolution, charting a new course that emphasizes rideability, advanced technology, and a distinct character that sets it apart from its predecessor. Moving away from the high-strung nature of the Superquadro engine, the new V2 is expected to be a more accessible, yet equally thrilling, machine for both road and track enthusiasts. For all the Ducatisti in India and passionate readers of <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a>, here is a deep dive into the expected specifications, pricing, launch details, and a comparison with its formidable rivals.</p>
+                <h3 class="subheading">A New Heart: The Game-Changing V2 Engine</h3>
+                <p>The biggest and most revolutionary change for the 2025 Panigale V2 is under the fairings: an all-new 890cc, 90-degree V-twin engine. This is a bold move by the Italian marque, as this new engine is set to replace the existing 955cc Superquadro. What makes this new V2 so significant is that it moves away from Ducati's traditional Desmodromic valve actuation, opting instead for a conventional spring-valve system, a characteristic it shares with the Granturismo V4 engine.</p>
+                <p>This design shift, while potentially controversial for purists, is calculated to enhance thermal comfort, reduce weight, and significantly extend maintenance intervals, making the Panigale V2 a more user-friendly and practical superbike. Ducati claims this new V2 is one of the lightest twin-cylinder engines they have ever produced.</p>
+                <p>The engine is expected to be tuned for a broader, more usable powerband, with a focus on low-to-mid-range torque, making it incredibly exciting on the road. Despite a slight reduction in peak horsepower compared to the outgoing model, the power delivery is designed to be more engaging and less peaky. The new motor is also Euro 5+ compliant, which directly correlates to India's BS6 emission norms.</p>
+                <h3 class="subheading">Expected Engine & Performance Specifications</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                            <tr>
+                                <th class="font-weight-600 text-center">Specification</th>
+                                <th class="font-weight-600 text-center">Details (Expected for 2025 Panigale V2)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engine Type</td>
+                                <td>New 90-degree V-twin, Liquid-cooled, 4 valves per cylinder</td>
+                            </tr>
+                            <tr>
+                                <td>Displacement</td>
+                                <td>890 cc (Approx.)</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>120 bhp at 10,750 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque</td>
+                                <td>93.3 Nm at 8,250 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Valve Actuation</td>
+                                <td>Conventional Spring-Valve System (No Desmodromic)</td>
+                            </tr>
+                            <tr>
+                                <td>Transmission</td>
+                                <td>6-speed with Ducati Quick Shift (DQS) up/down EVO 2</td>
+                            </tr>
+                            <tr>
+                                <td>Clutch</td>
+                                <td>Hydraulically controlled wet multiplate slipper and self-servo clutch</td>
+                            </tr>
+                            <tr>
+                                <td>Emissions</td>
+                                <td>Euro 5+ / BS6 compliant</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The emphasis on low-end torque is further highlighted by Ducati's claim that a substantial amount of the peak torque will be available from as low as 3,000 rpm. This is the heart of the "New Panigale V2" philosophy: a high-performance machine that is genuinely exhilarating and easier to manage in real-world riding conditions.</p>
+                <h3 class="subheading">Aesthetics and Ergonomics: Sharp Design, Friendlier Ride</h3>
+                <p>The visual cues of the 2025 Panigale V2 are expected to draw heavily from its Panigale V4 sibling, ensuring it retains that unmistakable Ducati superbike flair. The design will be sharper, more aggressive, and aerodynamically refined.</p>
+                <p>A key highlight is the focus on <span class="font-weight-700">thermal comfort</span>. Ducati has reportedly redesigned the air-flow system with new fairing ducts and channels to better dissipate engine heat away from the rider, a major improvement over the outgoing model.</p>
+                <p>In terms of ergonomics, the new Panigale V2 is anticipated to be slightly more street-friendly. The clip-ons are rumored to be mounted higher than its predecessor, providing a less aggressive, yet still sporty, riding position. This small but significant change will greatly improve rider comfort during city commutes and long rides, without compromising its capability on the racetrack.</p>
+                <p>The bike is also expected to feature a new, compact, and lighter aluminum monocoque frame, contributing to a substantial weight reduction—potentially by as much as 17 kg (dry weight) compared to the previous version, bringing the total kerb weight to around 179 kg (standard model). This dramatic weight loss will be a major factor in improving agility and handling.</p>
+                <h3 class="subheading">Benchmark Electronics and Rider Aids</h3>
+                <p>Ducati has always been at the forefront of motorcycle electronics, and the 2025 Panigale V2 is no exception. It is expected to come equipped with a full suite of modern, six-axis Inertial Measurement Unit (IMU)-managed rider aids, similar to the Panigale V4.</p>
+                <h3 class="subheading">Key Electronic Features</h3>
+                <ul>
+                    <li><span class="font-weight-700">5-inch Full-Color TFT Display:</span> A new, intuitive high-resolution display with different layouts (Road, Road Pro, Race) and a refined user interface.</li>
+                    <li><span class="font-weight-700">Ducati Quick Shift (DQS) up/down EVO 2:</span> Seamless, clutchless shifting for both upshifts and downshifts.</li>
+                    <li><span class="font-weight-700">Bosch Cornering ABS EVO:</span> Allows for hard braking even when leaned over, with a 'slide-by-brake' function for track use.</li>
+                    <li><span class="font-weight-700">Ducati Traction Control (DTC) EVO 3:</span> Sophisticated traction control with a predictive strategy for maximum grip and safety.</li>
+                    <li><span class="font-weight-700">Ducati Wheelie Control (DWC) EVO:</span> Managed by the IMU to ensure maximum acceleration without unwanted front-wheel lift.</li>
+                    <li><span class="font-weight-700">Engine Brake Control (EBC) EVO:</span> Helps maintain stability during aggressive downshifts and corner entry.</li>
+                    <li><span class="font-weight-700">Riding Modes:</span> Multiple selectable Riding Modes (Race, Sport, Road, Wet) with customizable power delivery and rider aid parameters.</li>
+                </ul>
+                <p>These electronic aids are not just safety nets; they are performance enhancers, allowing riders of all skill levels to push the boundaries of the motorcycle with confidence and precision.</p>
+                <h3 class="subheading">Expected Price and Launch Timeline in India</h3>
+                <p>The Ducati Panigale V2 is a premium product, and its pricing reflects the Italian craftsmanship, performance, and advanced technology it embodies. The new engine and significant weight reduction, along with the updated electronics, suggest a moderate price increase over the current model.</p>
+                <ul>
+                    <li class="font-weight-600">Expected Price (Ex-Showroom, India): ₹19.00 Lakh to ₹21.00 Lakh.</li>
+                    <li class="font-weight-600">Expected Launch Timeline (India): Nov 2025 (Tentative).</li>
+                </ul>
+                <p>The V2 will likely be brought into India as a Completely Built Unit (CBU), which always attracts higher import duties, placing it firmly in the premium superbike category. While the official confirmation is awaited, the anticipation suggests Ducati will want to bring this crucial model to the Indian market soon after its global debut.</p>
+                <h3 class="subheading">Head-to-Head: Competitors Comparison Table</h3>
+                <p>The middleweight to litre-class superbike segment is populated by some of the most technologically advanced and powerful machines in the world. The 2025 Panigale V2 will face tough competition, primarily from its Japanese and European rivals.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature</th>
+                                <th class="font-weight-600 text-center">Ducati Panigale V2 (2025) (Expected)</th>
+                                <th class="font-weight-600 text-center">Kawasaki Ninja ZX-10R (2024)</th>
+                                <th class="font-weight-600 text-center">BMW S 1000 RR (2024)</th>
+                                <th class="font-weight-600 text-center">Aprilia RS 660 (2024)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engine</td>
+                                <td>890cc V2 Twin (New)</td>
+                                <td>998cc Inline-4</td>
+                                <td>998cc Inline-4</td>
+                                <td>659cc Parallel-Twin</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>120 hp</td>
+                                <td>200.21 bhp</td>
+                                <td>210 hp</td>
+                                <td>105 hp</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque</td>
+                                <td>93.3 Nm</td>
+                                <td>114.9 Nm</td>
+                                <td>113 Nm</td>
+                                <td>70 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Kerb Weight</td>
+                                <td>179 kg (Standard)</td>
+                                <td>207 kg</td>
+                                <td>197 kg</td>
+                                <td>183 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Front Suspension</td>
+                                <td>43mm Marzocchi USD (Standard) / Öhlins NIX30 (S)</td>
+                                <td>43mm Showa BFF USD</td>
+                                <td>45mm Marzocchi USD</td>
+                                <td>41mm Kayaba USD</td>
+                            </tr>
+                            <tr>
+                                <td>Electronics</td>
+                                <td>Full IMU Suite, Cornering ABS, DQS EVO 2</td>
+                                <td>Full IMU Suite, Traction Control, Quickshifter</td>
+                                <td>Full IMU Suite, DDC (Optional), Quickshifter</td>
+                                <td>Full APRC Suite, Cornering ABS, Quickshifter</td>
+                            </tr>
+                            <tr>
+                                <td>Ex-Showroom Price (Approx.)</td>
+                                <td>₹19.00 - ₹21.00 Lakh</td>
+                                <td>₹19,77,917</td>
+                                <td>₹22.76 Lakh</td>
+                                <td>₹17.74 Lakh</td>
+                            </tr>
+                            <tr>
+                                <td>Key Highlight</td>
+                                <td>Lightweight, Torque-rich V2, Advanced Electronics</td>
+                                <td>Brutal Power, World Superbike DNA, Value</td>
+                                <td>Ultimate Performance, Dynamic Damping Control</td>
+                                <td>Mid-Capacity Agility, Excellent Electronics Package</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The comparison clearly shows the shift in the Panigale V2's positioning. It is no longer competing for peak horsepower with the litre-class superbikes like the ZX-10R and S 1000 RR. Instead, the 2025 V2 focuses on providing a more refined, lighter, and supremely agile package that still delivers exhilarating performance on the road and track. Its V2 engine provides a unique character and torque curve that the inline-fours cannot match, while its advanced electronics put it on par with, or even ahead of, the competition.</p>
+                <h3 class="subheading">Specifications & Features Comparison Table (Standard vs. 'S' Model)</h3>
+                <p>In line with Ducati’s tradition, the new Panigale V2 is expected to be launched in two variants: a standard model and a higher-spec ‘S’ variant. This comparison highlights the key differences:</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Specification/Feature</th>
+                                <th class="font-weight-600 text-center">Panigale V2 (2025) Standard (Expected)</th>
+                                <th class="font-weight-600 text-center">Panigale V2 S (2025) (Expected)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engine</td>
+                                <td>890cc V2 Twin (New)</td>
+                                <td>890cc V2 Twin (New)</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power / Torque</td>
+                                <td>120 hp / 93.3 Nm</td>
+                                <td>120 hp / 93.3 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Front Suspension</td>
+                                <td>43mm fully adjustable Marzocchi USD Fork</td>
+                                <td>43mm fully adjustable Öhlins NIX30 USD Fork</td>
+                            </tr>
+                            <tr>
+                                <td>Rear Suspension</td>
+                                <td>Fully adjustable Kayaba Monoshock</td>
+                                <td>Fully adjustable Öhlins TTX36 Monoshock</td>
+                            </tr>
+                            <tr>
+                                <td>Front Brakes</td>
+                                <td>Twin 320 mm discs with Brembo M4.32 Monobloc Calipers</td>
+                                <td>Twin 320 mm discs with Brembo M50 Monobloc Calipers</td>
+                            </tr>
+                            <tr>
+                                <td>Wheels</td>
+                                <td>Lightweight Cast Aluminium</td>
+                                <td>Lighter Forged Aluminium Wheels</td>
+                            </tr>
+                            <tr>
+                                <td>Battery</td>
+                                <td>Conventional Acid Battery</td>
+                                <td>Lighter Lithium-Ion Battery</td>
+                            </tr>
+                            <tr>
+                                <td>Seating</td>
+                                <td>Biposto (Rider + Pillion Seat)</td>
+                                <td>Monoposto (Single Seat) with optional pillion kit</td>
+                            </tr>
+                            <tr>
+                                <td>Kerb Weight</td>
+                                <td>179 kg</td>
+                                <td>176 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Features</td>
+                                <td>Full IMU Electronics, DQS EVO 2, Cornering ABS</td>
+                                <td>All Standard Features + Ducati Power Launch (DPL) and Pit Lane Limiter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The "S" model is clearly aimed at the track-day enthusiast who demands the absolute best in componentry, especially with the high-performance Öhlins suspension providing superior feedback and adjustability. The weight saving from the lithium-ion battery and forged wheels further enhances the ‘S’ model’s track-focused nature.</p>
+                <h3 class="subheading">Conclusion: A Masterpiece Reimagined</h3>
+                <p>The 2025 Ducati Panigale V2 is shaping up to be a masterstroke from Borgo Panigale. It’s a superbike that understands the modern rider’s desire for thrilling performance that is also manageable, technologically sophisticated, and more comfortable. The new 890cc V2 engine, with its focus on mid-range torque and reduced maintenance, is a sign that Ducati is listening to its customers, creating a machine that is as rewarding on a winding mountain road as it is on a fast racetrack.</p>
+                <p>Its aggressive Panigale V4-inspired styling, coupled with the latest generation of electronic rider aids, ensures that the V2 will continue to be a head-turner and a benchmark for its segment. The significant weight reduction and more forgiving ergonomics make it a compelling choice, especially for those who found the previous model too extreme for everyday use. For the enthusiasts who trust <span class="font-weight-700">BikeCarHub</span> for the latest and most accurate motorcycle insights, keep your eyes peeled—the arrival of this Italian masterpiece in India is set to ignite the roads and the track. The 20 lakh superbike bracket is about to get a whole lot hotter. The <span class="font-weight-700">Panigale V2</span> is not just a machine; it's an experience, and the new iteration is poised to deliver that experience in its most refined form yet.</p>
+                <h3 class="subheading">FAQs about the Ducati Panigale V2 [2025]</h3>
+                <p>Here are 10 of the most common questions riders have about the upcoming Yamaha NMax 155, along with detailed answers.</p>
+                <div class="accordion accordion-flush" id="accordionNmax155">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                1. Is the 2025 Ducati Panigale V2 an all-new model?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                Yes, it is considered a significant new generation, featuring an all-new 890cc V2 engine, a new chassis, revised ergonomics, and major updates to the electronics package.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                2. Why is the engine capacity smaller in the 2025 model?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                The new 890cc engine is designed to be lighter, more torquey at lower RPMs, and more road-friendly by moving away from the very high-revving nature of the previous Superquadro. The focus is on usable, exhilarating power delivery.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                3. Does the new V2 engine still have Desmodromic valves?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                No, the new 890cc V2 engine is expected to use a conventional spring-valve system, a major technical shift aimed at reducing maintenance complexity and cost, and extending service intervals.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                4. What is the expected price range for the 2025 Panigale V2 in India?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                The expected ex-showroom price is estimated to be between ₹19.00 Lakh and ₹21.00 Lakh.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                5. When is the 2025 Ducati Panigale V2 expected to launch in India?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                The launch is tentatively scheduled for the Nov 2025.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                                6. Will the new Panigale V2 be more comfortable than the old model?
+                            </button>
+                        </h2>
+                        <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                Yes, reports suggest that the new model has improved thermal comfort and revised, slightly higher-mounted clip-ons for a less aggressive and more comfortable riding posture, making it better for daily use.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                                7. Does the Panigale V2 [2025] have a full suite of electronic rider aids?
+                            </button>
+                        </h2>
+                        <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                Yes, it comes with a complete six-axis IMU-based electronics package, including Cornering ABS, Traction Control, Wheelie Control, Engine Brake Control, and Ducati Quick Shift (DQS) EVO 2.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                                8. What are the key differences between the V2 Standard and the V2 S?
+                            </button>
+                        </h2>
+                        <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                The main differences are in the suspension (Marzocchi/Kayaba on Standard vs. Öhlins on S), brakes (M4.32 vs. M50 Calipers on S), wheel type (Cast vs. Forged on S), and the 'S' version's inclusion of a Lithium-Ion battery and Monoposto seating.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                                9. Will the new V2 be a good track-day bike?
+                            </button>
+                        </h2>
+                        <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                Absolutely. Despite the shift in focus, its lightweight construction, powerful brakes, and race-derived electronics make it an exceptionally capable and rewarding machine on the racetrack.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                                10. What are the main competitors for the new Panigale V2?
+                            </button>
+                        </h2>
+                        <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#accordionNmax155">
+                            <div class="accordion-body">
+                                Its key rivals include the Kawasaki Ninja ZX-10R, BMW S 1000 RR, and the Aprilia RS 660, each offering a different mix of power and technology.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        @await Html.PartialAsync("_AllViewComponent")
+    </div>
+</body>

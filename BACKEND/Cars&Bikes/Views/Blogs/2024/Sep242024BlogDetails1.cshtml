@@ -1,0 +1,289 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top Indian Cars Under ₹10 Lakh On-Road Price (2024) – Best Picks for Your Budget";
+}
+@section MetaTags{
+    <meta name="keywords" content="Best cars under ₹10 lakh, Affordable cars India 2024, Top cars below 10 lakh, Budget cars India, Best hatchbacks under ₹10 lakh, Best sedans under ₹10 lakh, Best SUVs under ₹10 lakh, Tata Nexon XM, Maruti Suzuki Brezza LXI, Hyundai i20 Sportz" />
+    <meta name="description" content="Explore the best cars under ₹10 lakh on-road in India for 2024. Check out top variants of hatchbacks, sedans, and SUVs, including the Tata Nexon, Maruti Brezza, and more." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p>Best cars under ₹10 lakh on-road price in India for 2024, with specific variants that offer the best features and value within this budget:</p>
+                <div class="div-line"></div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. Tata Nexon XM</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹9.99 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.2L Turbo-petrol, 118 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 17-18 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>5-star Global NCAP safety rating</li>
+                                    <li>Harman infotainment system with steering-mounted controls</li>
+                                    <li>Electronic stability program and hill assist</li>
+                                    <li>Dual airbags and ABS with EBD</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarstobuyunder10lakhonroadprice(2024)/tata nexon xm.webp" alt="Tata Nexon XM" title="Tata Nexon XM" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Tata Nexon XM</span> is one of the safest compact SUVs in India, making it a great choice for families. Its robust build quality and advanced features set it apart, and it comes loaded with everything you need for urban and highway driving.</p>
+                <div class="div-line"></div>
+
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. Hyundai i20 Sportz</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹9.80 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.2L Petrol, 82 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 20 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>8-inch touchscreen infotainment system with Apple CarPlay and Android Auto</li>
+                                    <li>Wireless phone charger</li>
+                                    <li>Rear parking sensors and camera</li>
+                                    <li>LED DRLs and projector headlights</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarstobuyunder10lakhonroadprice(2024)/hyundai i20 sportz.webp" alt="Hyundai i20 Sportz" title="Hyundai i20 Sportz" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">i20 Sportz</span> variant is a premium hatchback packed with tech features and modern styling. It's a fantastic option for those who prioritize comfort, connectivity, and a smooth driving experience.</p>
+                <div class="div-line"></div>
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">3. Maruti Suzuki Brezza LXI</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹9.75 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.5L Petrol, 103 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 18 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>SmartPlay Studio infotainment system</li>
+                                    <li>ABS with EBD and dual airbags</li>
+                                    <li>Automatic climate control</li>
+                                    <li>Projector headlamps</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarstobuyunder10lakhonroadprice(2024)/maruti suzuki brezza lxi.webp" alt="Maruti Suzuki Brezza LXI" title="Maruti Suzuki Brezza LXI" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Brezza LXI</span> offers SUV-like looks and high ground clearance. It's an ideal option for those seeking a practical and reliable vehicle with decent performance and fuel efficiency.</p>
+                <div class="div-line"></div>
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">4. Kia Sonet HTK</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹9.90 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.2L Petrol, 82 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 18 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>8-inch touchscreen infotainment system with wireless Android Auto and Apple CarPlay</li>
+                                    <li>Rear parking sensors and camera</li>
+                                    <li>Automatic climate control</li>
+                                    <li>High seating position with SUV appeal</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarstobuyunder10lakhonroadprice(2024)/kia sonet htk.webp" alt="Kia Sonet HTK" title="Kia Sonet HTK" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Kia Sonet HTK</span> delivers SUV styling in a compact form, offering excellent features, a spacious cabin, and a premium feel. It’s a great choice for those who want a stylish and feature-rich compact SUV under ₹10 lakh.</p>
+                <div class="div-line"></div>
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">5. Honda Amaze S</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹9.30 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.2L Petrol, 89 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 18 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>Cruise control</li>
+                                    <li>ABS with EBD, rear parking sensors</li>
+                                    <li>Electrically adjustable ORVMs</li>
+                                    <li>Touchscreen infotainment system</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarstobuyunder10lakhonroadprice(2024)/honda amaze s.webp" alt="Honda Amaze S" title="Honda Amaze S" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Honda Amaze S</span> is an excellent compact sedan with a premium interior and reliable engine performance. It’s a perfect choice for those looking for comfort and a smooth driving experience in a sedan.</p>
+                <div class="div-line"></div>
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">6. Renault Kiger RXT</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹9.45 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.0L Turbo-petrol, 99 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 20 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>8-inch touchscreen infotainment system with Android Auto and Apple CarPlay</li>
+                                    <li>Push-button start/stop</li>
+                                    <li>LED DRLs and taillights</li>
+                                    <li>Dual-tone exterior design</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarstobuyunder10lakhonroadprice(2024)/renault kiger rxt.webp" alt="Renault Kiger RXT" title="Renault Kiger RXT" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Kiger RXT</span> offers a bold SUV design at a budget price, making it a great option for those seeking an affordable SUV with modern features and a spacious cabin.</p>
+                <div class="div-line"></div>
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">7. Toyota Glanza G</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹9.80 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.2L Petrol, 89 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 22 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>SmartPlay Cast with Apple CarPlay and Android Auto</li>
+                                    <li>Dual airbags and ABS with EBD</li>
+                                    <li>16-inch alloy wheels</li>
+                                    <li>Push-button start/stop</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarstobuyunder10lakhonroadprice(2024)/toyota glanza g.webp" alt="Toyota Glanza G" title="Toyota Glanza G" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Toyota Glanza G</span> offers reliability and low maintenance costs along with a well-equipped cabin, making it a top choice for premium hatchback lovers who want Toyota’s durability.</p>
+                <div class="div-line"></div>
+
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">8. Mahindra XUV300 W4</h3>
+                        <ul>
+                            <li><span class="font-weight-700">On-road price:</span> ~₹9.90 lakh</li>
+                            <li><span class="font-weight-700">Engine:</span> 1.2L Turbo-petrol, 110 BHP</li>
+                            <li><span class="font-weight-700">Mileage:</span> 17 kmpl</li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Key Features:
+                                </span>
+                                <ul>
+                                    <li>5-star Global NCAP safety rating</li>
+                                    <li>Dual-zone automatic climate control</li>
+                                    <li>All 4 disc brakes</li>
+                                    <li>ABS with EBD and dual airbags</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/bestindiancarstobuyunder10lakhonroadprice(2024)/mahindra xuv300 w4.webp" alt="Mahindra XUV300 W4" title="Mahindra XUV300 W4" /></center></div>
+                </div>
+                <p>The <span class="font-weight-700">Mahindra XUV300 W4</span> offers excellent safety and performance. With a powerful turbocharged engine and solid build quality, it’s perfect for those seeking a premium feel in a compact SUV.</p>
+                <div class="div-line"></div>
+
+                <h3 class="subheading">Conclusion</h3>
+                <br />
+                <p>The 2024 lineup of cars under ₹10 lakh on-road provides a wide variety of options, from the robust <span class="font-weight-700">Tata Nexon</span> to the feature-rich <span class="font-weight-700">Hyundai i20</span> and the versatile <span class="font-weight-700">Maruti Suzuki Brezza</span>. Whether you’re looking for a stylish hatchback, a tech-packed sedan, or a rugged compact SUV, these models deliver the best value for your money, with a focus on safety, performance, and features.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

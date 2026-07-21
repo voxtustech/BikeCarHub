@@ -1,0 +1,495 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Honda Shine vs Hero Splendor Plus: Full 2025 Comparison Guide";
+}
+@section MetaTags {
+    <meta name="keywords" content="Honda Shine vs Hero Splendor  Plus, Shine vs Splendor Plus comparison 2025, Honda Shine 125 mileage, Hero Splendor Plus features 2025, Best commuter bike in India 2025, Shine vs Splendor Plus performance, Splendor Plus mileage comparison, Honda Shine specifications, Hero Splendor specifications, Shine vs Splendor Plus which is better, 100cc vs 125cc bike comparison, Honda vs Hero review, Affordable bikes in India 2025, Best bike for daily commute 2025" />
+    <meta name="description" content="Compare Honda Shine 125 vs Hero Splendor Plus in 2025. Check mileage, features, price, performance and decide which commuter bike is best for your needs." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 3rd July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>But if you're planning to buy a bike in 2025, you might be wondering -- which one is better: Honda Shine or Hero Splendor Plus?</p>
+                <p>In this detailed comparison by <span class="font-weight-700">BikeCarHub</span>, we will break down every important aspect like engine performance, mileage, features, pricing, and more to help you decide which bike suits you best in 2025.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Overview of the Bikes</h2>
+
+                <h3 class="subheading"><a class="for-link" asp-controller="Hero" asp-action="HeroSplendorPlus">Hero Splendor+</a></h3>
+                <p>A 100cc icon with a reputation for durability, simplicity, and top-tier mileage. The Splendor+ has been updated for 2025 with BS6-2.0 compliance while maintaining its core values of affordability and reliability.</p>
+
+                <h3 class="subheading"><a class="for-link" asp-controller="Honda" asp-action="HondaShine125">Honda Shine 125</a></h3>
+                <p>A refined 125cc bike offering more power, style, and Honda's reliable engine technology. The 2025 model comes with improved features while retaining its comfortable ride quality.</p>
+
+                <p>Both bikes have been updated over the years and remain best-sellers in their segments.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Engine & Performance</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">Hero Splendor+</th>
+                                <th class="text-center">Honda Shine 125</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine Capacity</td>
+                                <td>97.2cc, Air-cooled</td>
+                                <td>123.94cc, Air-cooled</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>6.15 kW@8000 rpm</td>
+                                <td>7.93 kW@7500 rpm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Max Torque</td>
+                                <td>8.05 Nm@5000 RPM</td>
+                                <td>11 Nm@6000 RPM</td>
+                            </tr>
+                            <tr>
+                                <td>Gearbox</td>
+                                <td>4-speed manual</td>
+                                <td>5-speed manual</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Battery</td>
+                                <td>MF Battery, 12V - 3Ah</td>
+                                <td>12V, 5Ah</td>
+                            </tr>
+                            <tr>
+                                <td>Emission Type</td>
+                                <td>BS6-2.0</td>
+                                <td>BS6-2.0</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Top Speed</td>
+                                <td>87 kmph</td>
+                                <td>90 kmph</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><span class="font-weight-700">Hero Splendor+</span> is built for city commuting with moderate power and smooth pickup. Its 97.2cc engine is tuned for efficiency rather than performance.</p>
+                <p><span class="font-weight-700">Honda Shine</span> offers more torque and power from its 125cc engine, making it suitable for both city and occasional highway rides. The extra gear (5-speed vs 4-speed) also helps in highway cruising.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Shine wins for performance. Splendor is sufficient for basic daily rides.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Mileage & Fuel Efficiency</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Bike</th>
+                                <th class="text-center">Claimed Mileage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Hero Splendor+</td>
+                                <td>70 km/l</td>
+                            </tr>
+                            <tr>
+                                <td>Honda Shine 125</td>
+                                <td>55 km/l</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><span class="font-weight-700">Hero Splendor+</span> offers best-in-class mileage, ideal for cost-conscious users who prioritize fuel efficiency above all else.</p>
+                <p><span class="font-weight-700">Honda Shine</span> is also efficient but burns slightly more fuel due to its larger engine. The trade-off comes in the form of better performance.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Hero Splendor is the clear mileage king.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Features & Comfort</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Hero Splendor+</th>
+                                <th class="text-center">Honda Shine 125</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>i3S (Start-Stop)</td>
+                                <td>✅ Yes</td>
+                                <td>❌ No</td>
+                            </tr>
+                            <tr>
+                                <td>Digital Meter</td>
+                                <td>❌ No</td>
+                                <td>✅ Yes (in Shine Smart)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Silent Start (ACG motor)</td>
+                                <td>❌ No</td>
+                                <td>✅ Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Tubeless Tyres</td>
+                                <td>✅ Yes</td>
+                                <td>✅ Yes</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Combined Braking System</td>
+                                <td>✅ Yes</td>
+                                <td>✅ Yes</td>
+                            </tr>
+                            <tr>
+                                <td>USB Charging</td>
+                                <td>❌ No</td>
+                                <td>✅ Yes</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Additional Features</td>
+                                <td>XSENS Advantage Technology</td>
+                                <td>Eco Indicator, Silent Start with ACG</td>
+                            </tr>
+                            <tr>
+                                <td>Kill Switch</td>
+                                <td>❌ No</td>
+                                <td>✅ Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><span class="font-weight-700">Honda Shine</span> offers a smoother ride and comes with modern features like ACG motor (silent start) and optional semi-digital cluster in Smart variant. The addition of a USB charging port is useful for smartphone users.</p>
+                <p><span class="font-weight-700">Hero Splendor+</span> keeps it simple but practical with i3S for fuel-saving during stop-and-go traffic. The XSENS technology helps with efficient fuel injection.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Shine wins for comfort and features, especially for daily riders who appreciate modern conveniences.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Price Comparison (Ex-showroom Delhi)</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Variant</th>
+                                <th class="text-center">Price (Approx)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>
+                                    SPLENDOR+ DRUM BRAKE OBD2B
+                                </td>
+                                <td><span class="text-highlight">₹ 79,426</span></td>
+                            </tr>
+                            <tr>
+                                <td>SPLENDOR+ I3S OBD2B</td>
+                                <td><span class="text-highlight">₹ 80,676</span></td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>SPLENDOR+ I3S BLACK and ACCENT OBD2B</td>
+                                <td> <span class="text-highlight">₹ 80,676</span></td>
+                            </tr>
+                            <tr >
+                                <td>Honda Shine Drum</td>
+                                <td><span class="text-highlight">₹85,590</span></td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Honda Shine Disc</td>
+                                <td><span class="text-highlight">₹90,341</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>The Hero Splendor+ is available in multiple variants with slight price variations based on features like i3S and color options. The Honda Shine comes in fewer variants but with more standard features.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Hero Splendor + is more affordable, but Shine offers more value for slightly higher price.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Maintenance & Reliability</h2>
+
+                <p><span class="font-weight-700">Hero Splendor+</span> wins in affordability and availability of spare parts, especially in rural areas. The simple mechanicals make it easy and inexpensive to maintain.</p>
+                <p><span class="font-weight-700">Honda Shine</span> has great long-term reliability and smoother engine performance but slightly higher service costs due to more complex features.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Both are reliable, but Splendor is cheaper to maintain.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Comparison Summary</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Criteria</th>
+                                <th class="text-center">Hero Splendor+</th>
+                                <th class="text-center">Honda Shine 125</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine Power</td>
+                                <td>97.2cc - 8.36 PS</td>
+                                <td>123.94cc - 10.74 PS</td>
+                            </tr>
+                            <tr>
+                                <td>Mileage</td>
+                                <td>70 km/l</td>
+                                <td>60 km/l</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Comfort & Features</td>
+                                <td>Basic</td>
+                                <td>Modern & Smooth</td>
+                            </tr>
+                            <tr>
+                                <td>Ride Quality</td>
+                                <td>City-focused</td>
+                                <td>City + Short Highway</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Price Range</td>
+                                <td> ₹ 79,426 -₹ 80,676 </td>
+                                <td>₹85,590-₹90,341</td>
+                            </tr>
+                            <tr>
+                                <td>Maintenance Cost</td>
+                                <td>Very Low</td>
+                                <td>Low</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Fuel Tank Capacity</td>
+                                <td>9.8 Litre</td>
+                                <td>10.5 Litre</td>
+                            </tr>
+                            <tr>
+                                <td>Kerb Weight</td>
+                                <td>112 kg</td>
+                                <td>113 kg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Who Should Buy What?</h2>
+
+                <h3 class="subheading">✅ Buy Hero Splendor+ if:</h3>
+                <ul>
+                    <li>You want maximum mileage</li>
+                    <li>Your commute is mostly short & inside the city</li>
+                    <li>You want a low-maintenance, tried-and-tested bike</li>
+                    <li>Budget is a top priority</li>
+                </ul>
+
+                <h3 class="subheading">✅ Buy Honda Shine if:</h3>
+                <ul>
+                    <li>You ride longer distances or want more comfort</li>
+                    <li>You want a slightly powerful engine</li>
+                    <li>You can spend a bit more for added features & refinement</li>
+                    <li>You appreciate modern features like digital console and USB charging</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Conclusion - Shine vs Splendor in 2025</h2>
+
+                <p>Both bikes are excellent and dominate India's commuter segment for a reason.</p>
+                <p> <span class="font-weight-700">Hero Splendor Plus</span> is best for those who want economy, reliability, and simplicity.</p>
+                <p><span class="font-weight-700">Honda Shine</span> is ideal for those who want power, comfort, and modern features with decent mileage.</p>
+                <p>In the end, it comes down to your budget, riding distance, and feature preferences. We recommend test riding both bikes before making your final decision.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs:Honda Shine vs Hero Splendor Plus </h2>
+
+                <div class="accordion" id="faqNexonKylaq">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which bike has better mileage: Honda Shine or Hero Splendor Plus?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Hero Splendor Plus is known for its excellent mileage, offering around<span class="font-weight-700"> 70-80 kmpl,</span> making it one of the most fuel-efficient bikes in India. The Honda Shine provides a mileage of 55-65 kmpl, which is good but slightly less than the Splendor Plus.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Which bike has better engine performance?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Honda Shine comes with a <span class="font-weight-700">124cc engine, </span>producing 10.74 PS of power, making it more powerful than the Hero Splendor Plus, which has a <span class="font-weight-700">97.2cc engine</span> producing 8.02 PS. For city commuting with a bit more punch, the Honda Shine performs better.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. What is the price difference between Honda Shine and Hero Splendor Plus?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                As of 2025, the Hero Splendor Plus starts at around ₹75,000 (ex-showroom), while the Honda Shine starts at around ₹80,000 to ₹85,000 (ex-showroom) depending on the variant. The Shine is slightly more expensive due to its larger engine and premium feel.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Which bike is better for daily commuting?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                If fuel economy and low maintenance are your top priorities, the Hero Splendor Plus is ideal. If you want more power, smoother performance, and are okay spending a bit more, the Honda Shine is a better daily commuter.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which bike has better build quality and design?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Honda Shine is considered more premium in terms of build quality and has a more modern design with sharper lines. The Splendor Plus retains a classic and simple look, which appeals to traditional commuters.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Does either bike offer a 5-speed gearbox?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                Yes, the Honda Shine features a 5-speed gearbox, which allows for better cruising at higher speeds. The Hero Splendor Plus comes with a 4-speed gearbox, which is enough for city use but less refined for highway riding.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which bike has a smoother engine and ride feel?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Honda Shine’s engine is smoother thanks to Honda’s Enhanced Smart Power (eSP) technology. It also features a silent start system. The Hero Splendor Plus, while reliable, has a more basic engine feel and slightly more vibrations at higher speeds.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Which bike comes with more modern features?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Honda Shine offers more up-to-date features like an engine start/stop switch, silent start with ACG, and a more informative instrument cluster. The Hero Splendor Plus offers i3S (Idle Stop-Start System), but overall is more basic in features.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Which bike has lower maintenance costs?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                The Hero Splendor Plus wins in terms of lower maintenance and service costs. It's built for durability and ease of service, making it a favorite for budget-conscious users.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Who should buy the Honda Shine and who should choose Hero Splendor Plus?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqNexonKylaq">
+                            <div class="accordion-body">
+                                <p>Choose the Hero Splendor Plus if you're a budget-focused rider looking for maximum fuel efficiency and low running costs.</p>
+                                <p>Go for the Honda Shine if you want a balance of power, smooth performance, and modern features for a slightly higher budget.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

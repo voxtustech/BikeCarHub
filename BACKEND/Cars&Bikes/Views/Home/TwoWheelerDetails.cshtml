@@ -1,0 +1,1404 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model TwoWheeler
+@* @model IEnumerable<YourNamespace.Models.TwoWheeler> *@
+@* @model IEnumerable<TwoWheeler> *@
+@* @model Tuple<List<Cars_Bikes.TwoWheeler>, List<Cars_Bikes.TWSpec>> *@
+@* @{
+        var twoWheelers = ViewBag.TwoWheelers as List<Cars_Bikes.Models.TwoWheeler>;
+    } *@
+@*<link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/style.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" /> *@
+<body>
+
+    <!-- Content -->
+    <!-- inner page banner -->
+    @*<div class="header-img"> <img src="~/images/main-slider/header.png" /></div>*@
+    <!-- Breadcrumb row END -->
+
+    <div class="container-fluid section-full p-t30 bg-white content-inner-2">
+        <div class="container-fluid">
+
+            <div class="row">
+                <!-- Side bar start -->
+                <div class="col-md-8">
+                    @* @foreach (var twoWheeler in Model.Item1) *@
+                    @* @foreach (var twoWheeler in ViewBag.TwoWheelers)
+                        {  *@
+                    <div class="car-dl-info m-b30">
+                        <h1 class="h3 m-t0 price IdTWName" id=""> </h1>
+                        <ul class="used-car-dl-info">
+                            <li id="IdTWBrand"><i class="fa fa-bank"></i>  </li>
+                            @* <li><i class="fa fa-calendar"></i> @twoWheeler.LaunchDate?.ToString("d MMM yyyy")</li> *@
+                            <li id="IdTWLaunchdate"><i class="fa fa-calendar"></i></li>
+                            <li id="IdTWMileage"><i class="fa fa-list"></i></li>
+                        </ul>
+                        @foreach (var item in ViewBag.TwoWheelers)
+                        {
+                            if (item.IsActive == false)
+                            {
+                                <p class="tw-notes">DISCONTINUED<br>@item.NotesOrComments</p>
+                            }
+                        }
+                        <div class="tw-img m-t20"><center><img id="IdTWimage" src="" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("/images/twowheeler/default.jpg")';" class="img-fluid" /></center></div>
+                    </div>
+                    <div class="modal fade lead-form-modal" id="car-details" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="modal-body clearfix">
+                                    <div class="pull-letf max-width-300"></div>
+                                    <div class="lead-form">
+                                        <form>
+                                            <h3 class="m-t0">Personal Details</h3>
+                                            <div class="form-group">
+                                                <input value="" class="form-control" placeholder="Name" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input value="" class="form-control" placeholder="Mobile Number" />
+                                            </div>
+                                            <div class="clearfix">
+                                                <button type="button" class="btn-primary site-button btn-block">Submit </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Side bar END -->
+                <div class="col-md-4 ">
+                    <div class="car-dl-info m-b30">
+                        @*  @foreach (var twoWheeler in ViewBag.TwoWheelers)
+                            { *@
+                        <div class="price">
+                            <h3 class="m-t0 m-b5" id="Idprice"></h3>
+                            <span class="IdTWName"></span>
+                        </div>
+
+
+                    </div>
+                    <div class="clearfix m-b30 m-t30">
+                        <div class="sideboxdetails">
+                            <h6>Brand</h6>
+                            <i class="bi bi-award"></i>
+                            <h5 id="IdTWbrand"></h5>
+                        </div>
+                        <div class="sideboxdetails">
+                            <h6>Launch Year</h6>
+                            <i class="bi bi-calendar-event"></i>
+                            <h5 id="IdTWlaunchdate"></h5>
+                        </div>
+                        <div class="sideboxdetails">
+                            <h6>Mileage</h6>
+                            <i class="bi bi-speedometer"></i>
+                            <h5 id="IdTWmileage"></h5>
+                        </div>
+                        <div class="sideboxdetails">
+                            <h6>Body Type</h6>
+                            <i class="bi bi-scooter"></i>
+                            <h5 id="IdTWbodytype"></h5>
+                        </div>
+
+                        <div class="sideboxdetails">
+                            <h6>Fuel Capacity</h6>
+                            <i class="bi bi-fuel-pump"></i>
+                            <h5 id="IdTWfuelCapacity"></h5>
+                        </div>
+                        <div class="sideboxdetails">
+                            <h6>Starting</h6>
+                            <i class="bi bi-tools"></i>
+                            <h5 id="Idstarting"></h5>
+                        </div>
+                        <div class="sideboxdetails">
+                            <h6>Displacement</h6>
+                            <i class="bi bi-arrows-move"></i>
+                            <h5 id="Iddisplacement"></h5>
+                        </div>
+                        <div class="sideboxdetails">
+                            <h6>Fuel Supply</h6>
+                            <i class="bi bi-truck"></i>
+                            <h5 id="IdfuelSupply"></h5>
+                        </div>
+                        <div class="sideboxdetails">
+                            <h6>Gear Box</h6>
+                            <i class="bi bi-gear-wide-connected"></i>
+                            <h5 id="IdgearBox"></h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="linkmaincontainer">
+        <select class="ddnvarient" asp-items="ViewBag.Varient" id="varientId">
+            <option value="" disabled>Select Varient</option>
+        </select>
+        <div class="linkcontainer shadow rounded-6">
+
+
+            <div class="highlight">
+
+                <ul>
+                    <li data-target="specifications">Specifications</li>
+                    <li data-target="engineTransmission">Engine & Transmission</li>
+                    <li data-target="features">Features</li>
+                    <li data-target="safety">Safety</li>
+                    <li data-target="mileageandperformance">Mileage & Performance</li>
+                    @* <li data-target="chassisAndSuspension">Chassis & Suspension</li> *@
+                    <li data-target="dimensionsAndCapacity">Dimensions & Capacity</li>
+                    <li data-target="electricals">Electricals</li>
+                    <li data-target="tyresAndBrakes">Tyres & Brakes</li>
+                    <li data-target="motorAndBatteries">Motor & Battery</li>
+                    <li data-target="underpinnings">Underpinnings</li>
+                    @foreach (var item in ViewBag.TwoWheelers)
+                    {
+                        if (item.IsEV == true)
+                        {
+                            <li data-target="chargings">Chargings</li>
+                        }
+                    }
+                </ul>
+            </div>
+            <div class="content" id="content">
+                <section id="specifications">
+                    <h4 class="contentheading">Specifications</h4>
+                    <div id="specificationsContainer">
+                        @* @foreach (var spec in ViewBag.Specs)
+                            { *@
+                        <div class="container-fluid">
+                            <table class="contenttable">
+                                <tr>
+                                    <th><h4>Varient :- </h4></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Mileage</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Front Brake</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Rear Brake</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Fuel Capacity</th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        @*  } *@
+                    </div>
+                </section>
+                <section id="engineTransmission">
+                    <h4 class="contentheading">Engine & Transmission</h4>
+                    <div id="engineTransmissionContainer">
+                        @* @foreach (var engineandtransmission in ViewBag.EngineAndTransmission)
+                            { *@
+                        <div class="container-fluid">
+                            <table class="contenttable">
+                                <tr>
+                                    <th><h4>Varient :- </h4></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Engine Type</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Displacement</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Max Torque</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>No. of Cylinders</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Cooling System</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Valve Per Cylinder</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Starting</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Fuel Supply</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Clutch</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Gear Box</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Emission Type</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Compression Ratio</th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        @* } *@
+                    </div>
+                </section>
+                <section id="features">
+                    <h4 class="contentheading">Features</h4>
+                    <div id="featuresContainer">
+                        @* @foreach (var features in ViewBag.Features)
+                            { *@
+                        <div class="container-fluid">
+                            <table class="contenttable">
+                                <tr>
+                                    <th><h4>Varient :-</h4></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>ABS</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Speedometer</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Tripmeter</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Tachometer</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>LED Tail Light</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Odometer</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Fuel gauge</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Instrument Console</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Seat Type</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Body Graphics</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Clock</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Passenger Footrest</th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        @* } *@
+                    </div>
+                </section>
+                <section id="safety">
+                    <h4 class="contentheading">Safety</h4>
+                    <div id="safetyContainer">
+                        @* @foreach (var safety in ViewBag.Safety)
+                            { *@
+                        <div class="container-fluid">
+                            <table class="contenttable">
+                                <tr>
+                                    <th><h4>Varient :- </h4></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Pass Switch</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Engine Kill Switch</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Display</th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        @* } *@
+                    </div>
+                </section>
+                <section id="mileageandperformance">
+                    <h4 class="contentheading">Mileage & Performance</h4>
+                    <div id="mileageAndPerformanceContainer">
+                        @* @foreach (var mileageandperformance in ViewBag.MileageAndPerformance)
+                            { *@
+                        <div class="container-fluid">
+                            <table class="contenttable">
+                                <tr>
+                                    <th><h4>Varient :- </h4></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Overall Mileage</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>City Mileage</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Highway Mileage</th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        @* } *@
+                    </div>
+                </section>
+                <section id="dimensionsAndCapacity">
+                    <h4 class="contentheading">Dimensions & Capacity</h4>
+                    <div id="dimensionsAndCapacityContainer">
+                        @* @foreach (var dimensionsAndCapacity in ViewBag.DimensionsAndCapacity)
+                            { *@
+                        <div class="container-fluid">
+                            <table class="contenttable">
+                                <tr>
+                                    <th><h4>Varient :- </h4></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Width</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Length</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Height</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Fuel Capacity</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Ground Clearance</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Wheelbase</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Kerb Weight</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Fuel Reserve</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Saddle Height</th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        @* } *@
+                    </div>
+                </section>
+                <section id="electricals">
+                    <h4 class="contentheading">Electricals</h4>
+                    <div id="electricalsContainer">
+                        @* @foreach (var electricals in ViewBag.Electricals)
+                            { *@
+                        <div class="container-fluid">
+                            <table class="contenttable">
+                                <tr>
+                                    <th><h4>Varient :- </h4></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Headlight</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Tail Light</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Turn Signal Lamp</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>LED Tail Lights</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Low Fuel Indicato</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Pilot Lamps</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Distance to Empty Indicator</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>DRLs</th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        @* } *@
+                    </div>
+                </section>
+                <section id="tyresAndBrakes">
+                    <h4 class="contentheading">Tyres & Brakes</h4>
+                    <div id="tyresAndBrakesContainer">
+                        @* @foreach (var tyresAndBrakes in ViewBag.TyresAndBrakes)
+                            { *@
+                        <div class="container-fluid">
+                            <table class="contenttable">
+                                <tr>
+                                    <th><h4>Varient :- </h4></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Front Brake Diameter</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Rear Brake Diameter</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Radial Tyre</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Front Suspension</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Rear Suspension</th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        @* } *@
+                    </div>
+                </section>
+                <section id="motorAndBatteries">
+                    <h4 class="contentheading">Motor & Battery</h4>
+                    <div id="motorAndBatteryContainer">
+                        @* @foreach (var motorAndBatteries in ViewBag.MotorAndBatteries)
+                            { *@
+                        <div class="container-fluid">
+                            <table class="contenttable">
+                                <tr>
+                                    <th><h4>Varient :- </h4></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Peak Power</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Drive Type</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Transmission</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Battery Capacity</th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        @* } *@
+                    </div>
+                </section>
+                <section id="underpinnings">
+                    <h4 class="contentheading">Underpinnings</h4>
+                    <div id="underpinningContainer">
+                        @* @foreach (var underpinnings in ViewBag.Underpinnings)
+                            { *@
+                        <div class="container-fluid">
+                            <table class="contenttable">
+                                <tr>
+                                    <th><h4>Varient :- </h4></th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Suspension Front</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Suspension Rear</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Brakes Front</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Brakes Rear</th>
+                                    <td></td>
+                                <tr>
+                                    <th>Tyre Size</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Wheel Size</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Wheel Type</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Tubeless Tyre</th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        @* } *@
+                    </div>
+                </section>
+                @foreach (var item in ViewBag.TwoWheelers)
+                {
+                    if (item.IsEV == true)
+                    {
+                        <section id="chargings">
+                            <h4 class="contentheading">chargings</h4>
+                            <div id="chargingContainer">
+                                @* @foreach (var chargings in ViewBag.Chargings)
+                                    { *@
+                                <div class="container-fluid">
+                                    <table class="contenttable">
+                                        <tr>
+                                            <th><h4>Varient :- </h4></th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Charging At Home</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Charging At Charging Station</th>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>}
+                }
+                }
+            </div>
+        </div>
+    </div>
+   
+    <!-- Content END-->
+    <button class="scroltop fa fa-chevron-up"></button>
+    @* </div> *@
+
+    <!--For Highlisght the scorllspy part-->
+    @*<script>document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.highlight li');
+            const sections = document.querySelectorAll('section');
+            const content = document.getElementById('content');
+
+            function changeActiveLink() {
+                let index = sections.length;
+
+                while (--index && content.scrollTop + 50 < sections[index].offsetTop - content.offsetTop) { }
+
+                navLinks.forEach((link) => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
+            }
+
+            changeActiveLink();
+            content.addEventListener('scroll', changeActiveLink);
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    const targetId = this.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+                    const topOffset = targetElement.offsetTop - content.offsetTop;
+                    content.scrollTo({ top: topOffset, behavior: 'smooth' });
+                });
+            });
+        });</script>*@
+    <script>document.addEventListener('DOMContentLoaded', function () {
+
+            const navLinks = document.querySelectorAll('.highlight li');
+            const sections = document.querySelectorAll('section');
+            const content = document.getElementById('content');
+
+            if (!content || navLinks.length === 0 || sections.length === 0) {
+                return;
+            }
+
+            function changeActiveLink() {
+
+                let currentIndex = -1;
+
+                sections.forEach((section, index) => {
+
+                    if (!section) return;
+
+                    const sectionTop = section.offsetTop;
+
+                    if (content.scrollTop + 80 >= sectionTop - content.offsetTop) {
+                        currentIndex = index;
+                    }
+
+                });
+
+                navLinks.forEach(link => {
+                    if (link) {
+                        link.classList.remove('active');
+                    }
+                });
+
+                if (currentIndex >= 0 && navLinks[currentIndex]) {
+                    navLinks[currentIndex].classList.add('active');
+                }
+            }
+
+            changeActiveLink();
+
+            content.addEventListener('scroll', changeActiveLink);
+
+            navLinks.forEach(link => {
+
+                if (!link) return;
+
+                link.addEventListener('click', function () {
+
+                    const targetId = this?.getAttribute('data-target');
+
+                    if (!targetId) return;
+
+                    const targetElement = document.getElementById(targetId);
+
+                    if (!targetElement) return;
+
+                    const topOffset =
+                        targetElement.offsetTop - content.offsetTop;
+
+                    content.scrollTo({
+                        top: topOffset,
+                        behavior: 'smooth'
+                    });
+
+                });
+
+            });
+
+        });</script>
+    <!--Display the data according to varients-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Fetch specs on dropdown change
+            $('#varientId').change(function () {
+                var varientId = $(this).val();
+                //alert(varientId);
+                if (varientId) {
+                    fetchSpec(varientId);
+                }
+            });
+
+            // Fetch specs function using $.getJSON
+            function fetchSpec(varientId) {
+                $.getJSON('@Url.Action("GetTWSpecByVarients", "Home")', { varientId: $("#varientId").val() }, function (data) {
+                    //alert(JSON.stringify(data));
+
+                    // Update specifications table
+                    var specificationsContainer = $('#specificationsContainer');
+                    specificationsContainer.empty(); // Clear existing content
+                    //debugger;
+                    $.each(data.specs, function (index, item) {
+                        var row = '<div class="container-fluid">' +
+                            '<table class="contenttable">' +
+                            // '<tr>' +
+                            // '<th><h4>Varient :- ' + (item.varients || 'N/A') + '</h4></th>' +
+                            // '<td></td>' +
+                            // '</tr>' +
+                            '<tr>' +
+                            '<th>Mileage</th>' +
+                            '<td>' + (item.milage ? item.milage + ' kmpl' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Front Brake</th>' +
+                            '<td>' + (item.frontBrake || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Rear Brake</th>' +
+                            '<td>' + (item.rearBrake || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Fuel Capacity</th>' +
+                            '<td>' + (item.fuelCapacity ? item.fuelCapacity + ' L' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '</table>' +
+                            '</div>';
+                        specificationsContainer.append(row);
+                    });
+
+                    // Update engine and transmission table
+                    var engineTransmissionContainer = $('#engineTransmissionContainer');
+                    engineTransmissionContainer.empty(); // Clear existing content
+                    $.each(data.engine, function (index, item) {
+                        var row = '<div class="container-fluid">' +
+                            '<table class="contenttable">' +
+                            // '<tr>' +
+                            // '<th><h4>Varient :- ' + (item.varients || 'N/A') + '</h4></th>' +
+                            // '<td></td>' +
+                            // '</tr>' +
+                            '<tr>' +
+                            '<th>Engine Type</th>' +
+                            '<td>' + (item.engineType || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Displacement</th>' +
+                            '<td>' + (item.displacement ? item.displacement + ' cc' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Max Torque</th>' +
+                            '<td>' + (item.maxTorque || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Number of Cylinders</th>' +
+                            '<td>' + (item.numOfCylinders || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Cooling System</th>' +
+                            '<td>' + (item.coolingSystem || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Valve Per Cylinder</th>' +
+                            '<td>' + (item.valvePerCylinder || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Starting</th>' +
+                            '<td>' + (item.starting || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Fuel Supply</th>' +
+                            '<td>' + (item.fuelSupply || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Clutch</th>' +
+                            '<td>' + (item.clutch || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Gear Box</th>' +
+                            '<td>' + (item.gearBox || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Emission Type</th>' +
+                            '<td>' + (item.emissionType || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Compression Ratio</th>' +
+                            '<td>' + (item.compressionRatio || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Ignition</th>' +
+                            '<td>' + (item.ignition || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '</table>' +
+                            '</div>';
+                        engineTransmissionContainer.append(row);
+                    });
+
+                    // Update safety table
+                    var safetyContainer = $('#safetyContainer');
+                    safetyContainer.empty(); // Clear existing content
+                    $.each(data.safety, function (index, item) {
+                        var row = '<div class="container-fluid">' +
+                            '<table class="contenttable">' +
+                            // '<tr>' +
+                            // '<th><h4>Varient :- ' + (item.varients || 'N/A') + '</h4></th>' +
+                            // '<td></td>' +
+                            // '</tr>' +
+                            '<tr>' +
+                            '<th>Pass Switch</th>' +
+                            '<td>' + (item.passSwitch || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Engine Kill Switch</th>' +
+                            '<td>' + (item.engineKillSwitch || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Display</th>' +
+                            '<td>' + (item.display || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Riding Modes</th>' +
+                            '<td>' + (item.ridingModes || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Traction Control</th>' +
+                            '<td>' + (item.tractionControl || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Additional Features</th>' +
+                            '<td>' + (item.additionalFeatures || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '</table>' +
+                            '</div>';
+                        safetyContainer.append(row);
+                    });
+
+                    // Update features table
+                    var featuresContainer = $('#featuresContainer');
+                    featuresContainer.empty(); // Clear existing content
+                    $.each(data.features, function (index, item) {
+                        var row = '<div class="container-fluid">' +
+                            '<table class="contenttable">' +
+                            // '<tr>' +
+                            // '<th><h4>Varient :- ' + (item.varients || 'N/A') + '</h4></th>' +
+                            // '<td></td>' +
+                            // '</tr>' +
+                            '<tr>' +
+                            '<th>ABS</th>' +
+                            '<td>' + (item.abs || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Speedometer</th>' +
+                            '<td>' + (item.speedometer || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Tripmeter</th>' +
+                            '<td>' + (item.tripmeter || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Tachometer</th>' +
+                            '<td>' + (item.tachometer || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>LED Tail Light</th>' +
+                            '<td>' + (item.ledTailLight || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Odometer</th>' +
+                            '<td>' + (item.odometer || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Fuel Gauge</th>' +
+                            '<td>' + (item.fuelGauge || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Instrument Console</th>' +
+                            '<td>' + (item.instrumentConsole || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Seat Type</th>' +
+                            '<td>' + (item.seatType || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Body Graphics</th>' +
+                            '<td>' + (item.bodyGraphics || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Clock</th>' +
+                            '<td>' + (item.clock || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Passenger Footrest</th>' +
+                            '<td>' + (item.passengerFootrest || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Additional Features Of Variant</th>' +
+                            '<td>' + (item.additionalFeaturesOfVariant || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Distance To Empty Indicator</th>' +
+                            '<td>' + (item.distanceToEmptyIndicator || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Adjustable Windshield</th>' +
+                            '<td>' + (item.adjustableWindshield || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '</table>' +
+                            '</div>';
+                        featuresContainer.append(row);
+                    });
+
+                    // Update mileage and performance table
+                    var mileageAndPerformanceContainer = $('#mileageAndPerformanceContainer');
+                    mileageAndPerformanceContainer.empty(); // Clear existing content
+                    $.each(data.mileageAndPerformance, function (index, item) {
+                        var row = '<div class="container-fluid">' +
+                            '<table class="contenttable">' +
+                            '<tr>' +
+                            '<th>Overall Mileage</th>' +
+                            '<td>' + (item.overallMileage ? item.overallMileage + ' kmpl' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>City Mileage</th>' +
+                            '<td>' + (item.cityMileage ? item.cityMileage + ' kmpl' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Highway Mileage</th>' +
+                            '<td>' + (item.highwayMileage ? item.highwayMileage + ' kmpl' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '</table>' +
+                            '</div>';
+                        mileageAndPerformanceContainer.append(row);
+                    });
+
+                    // Update dimensions and capacity table
+                    var dimensionsAndCapacityContainer = $('#dimensionsAndCapacityContainer');
+                    dimensionsAndCapacityContainer.empty(); // Clear existing content
+                    $.each(data.dimensionsAndCapacity, function (index, item) {
+                        var row = '<div class="container-fluid">' +
+                            '<table class="contenttable">' +
+                            '<tr>' +
+                            '<th>Width</th>' +
+                            '<td>' + (item.width ? item.width + ' mm' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Length</th>' +
+                            '<td>' + (item.length ? item.length + ' mm' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Height</th>' +
+                            '<td>' + (item.height ? item.height + ' mm' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Fuel Capacity</th>' +
+                            '<td>' + (item.fuelCapacity ? item.fuelCapacity + ' L' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Ground Clearance</th>' +
+                            '<td>' + (item.groundClearance ? item.groundClearance + ' mm' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Wheelbase</th>' +
+                            '<td>' + (item.wheelbase ? item.wheelbase + ' mm' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Kerb Weight</th>' +
+                            '<td>' + (item.kerbWeight ? item.kerbWeight + ' kg' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Fuel Reserve</th>' +
+                            '<td>' + (item.fuelReserve ? item.fuelReserve + ' L' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Saddle Height</th>' +
+                            '<td>' + (item.saddleHeight ? item.saddleHeight + ' mm' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '</table>' +
+                            '</div>';
+                        dimensionsAndCapacityContainer.append(row);
+                    });
+
+                    // Update electricals table
+                    var electricalsContainer = $('#electricalsContainer');
+                    electricalsContainer.empty(); // Clear existing content
+                    $.each(data.electricals, function (index, item) {
+                        var row = '<div class="container-fluid">' +
+                            '<table class="contenttable">' +
+                            '<tr>' +
+                            '<th>Headlight</th>' +
+                            '<td>' + (item.headlight || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Tail Light</th>' +
+                            '<td>' + (item.tailLight || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Turn Signal Lamp</th>' +
+                            '<td>' + (item.turnSignalLamp || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>LED Tail Lights</th>' +
+                            '<td>' + (item.ledTailLights || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Low Fuel Indicator</th>' +
+                            '<td>' + (item.lowFuelIndicato || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Pilot Lamps</th>' +
+                            '<td>' + (item.pilotLamps || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Distance To Empty Indicator</th>' +
+                            '<td>' + (item.distanceToEmptyIndicator || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>DRLs</th>' +
+                            '<td>' + (item.drLs || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '</table>' +
+                            '</div>';
+                        electricalsContainer.append(row);
+                    });
+
+                    // Update tyres and brakes table
+                    var tyresAndBrakesContainer = $('#tyresAndBrakesContainer');
+                    tyresAndBrakesContainer.empty(); // Clear existing content
+                    $.each(data.tyresAndBrakes, function (index, item) {
+                        var row = '<div class="container-fluid">' +
+                            '<table class="contenttable">' +
+                            '<tr>' +
+                            '<th>Front Brake Diameter</th>' +
+                            '<td>' + (item.frontBrakeDiameter ? item.frontBrakeDiameter + ' mm' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Rear Brake Diameter</th>' +
+                            '<td>' + (item.rearBrakeDiameter ? item.rearBrakeDiameter + ' mm' : 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Radial Tyre</th>' +
+                            '<td>' + (item.radialTyre || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Front Suspension</th>' +
+                            '<td>' + (item.frontSuspension || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Rear Suspension</th>' +
+                            '<td>' + (item.rearSuspension || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '</table>' +
+                            '</div>';
+                        tyresAndBrakesContainer.append(row);
+                    });
+
+                    // Update motor and battery table
+                    var motorAndBatteryContainer = $('#motorAndBatteryContainer');
+                    motorAndBatteryContainer.empty(); // Clear existing content
+                    $.each(data.motorAndBattery, function (index, item) {
+                        var row = '<div class="container-fluid">' +
+                            '<table class="contenttable">' +
+                            '<tr>' +
+                            '<th>Peak Power</th>' +
+                            '<td>' + (item.peakPower || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Drive Type</th>' +
+                            '<td>' + (item.driveType || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Transmission</th>' +
+                            '<td>' + (item.transmission || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Battery Capacity</th>' +
+                            '<td>' + (item.batteryCapacity || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '</table>' +
+                            '</div>';
+                        motorAndBatteryContainer.append(row);
+                    });
+
+                    // Update underpinning table
+                    var underpinningContainer = $('#underpinningContainer');
+                    underpinningContainer.empty(); // Clear existing content
+                    $.each(data.underpinning, function (index, item) {
+                        var row = '<div class="container-fluid">' +
+                            '<table class="contenttable">' +
+                            '<tr>' +
+                            '<th>Suspension Front</th>' +
+                            '<td>' + (item.suspensionFront || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Suspension Rear</th>' +
+                            '<td>' + (item.suspensionRear || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Brakes Front</th>' +
+                            '<td>' + (item.brakesFront || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Brakes Rear</th>' +
+                            '<td>' + (item.brakesRear || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Tyre Size</th>' +
+                            '<td>' + (item.tyreSize || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Wheel Size</th>' +
+                            '<td>' + (item.wheelSize || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Wheel Type</th>' +
+                            '<td>' + (item.wheelType || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Tubeless Tyre</th>' +
+                            '<td>' + (item.tubelessTyre || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '</table>' +
+                            '</div>';
+                        underpinningContainer.append(row);
+                    });
+
+                    // Update charging table
+                    var chargingContainer = $('#chargingContainer');
+                    chargingContainer.empty(); // Clear existing content
+                    $.each(data.charging, function (index, item) {
+                        var row = '<div class="container-fluid">' +
+                            '<table class="contenttable">' +
+                            '<tr>' +
+                            '<th>Charging At Home</th>' +
+                            '<td>' + (item.chargingAtHome || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<th>Charging At Charging Station</th>' +
+                            '<td>' + (item.chargingAtChargingStation || 'N/A') + '</td>' +
+                            '</tr>' +
+                            '</table>' +
+                            '</div>';
+                        chargingContainer.append(row);
+                    });
+                    // display two table data combine
+                    if (data.specs && data.specs.length > 0) {
+
+                        var item = data.specs[0];
+
+                        $('#IdTWbrand').text(item.twoWheeler?.brand || 'N/A');
+
+                        $('#Idprice').text(item.twoWheeler?.price || 'N/A');
+
+                        $('#IdTWmileage').html(
+                            '<i class="bi bi-speedometer"></i> ' +
+                            (item.milage ? item.milage + ' kmpl' : 'N/A')
+                        );
+
+                        $('#IdTWbodytype').text(item.bodyType || 'N/A');
+
+                        if (item.twoWheeler?.launchDate) {
+
+                            var launchDate = new Date(item.twoWheeler.launchDate);
+
+                            var formattedDate = launchDate.toLocaleDateString('en-GB', {
+                                day: '2-digit',
+                                month: 'short',
+                                year: 'numeric'
+                            });
+
+                            $('#IdTWlaunchdate').text(formattedDate);
+
+                        } else {
+
+                            $('#IdTWlaunchdate').text('N/A');
+
+                        }
+
+                        $('#IdTWfuelCapacity').text(
+                            item.fuelCapacity ? item.fuelCapacity + ' L' : 'N/A'
+                        );
+
+                        $('.IdTWName').text(
+                            item.twoWheeler?.twoWheelerName || 'N/A'
+                        );
+
+                        $('#IdTWBrand').html(
+                            '<i class="bi bi-award"></i> ' +
+                            (item.twoWheeler?.brand || 'N/A')
+                        );
+
+                        $('#IdTWimage').attr(
+                            'src',
+                            item.twoWheeler?.twImage || ''
+                        );
+
+                        const vehicleData = {
+
+                            name: item.twoWheeler?.twoWheelerName || '',
+
+                            image: item.twoWheeler?.twImage || '',
+
+                            url: window.location.href
+
+                        };
+
+                        let recentVehicles =
+                            JSON.parse(localStorage.getItem("recentVehicles")) || [];
+
+                        recentVehicles =
+                            recentVehicles.filter(v => v.name !== vehicleData.name);
+
+                        recentVehicles.unshift(vehicleData);
+
+                        recentVehicles = recentVehicles.slice(0, 6);
+
+                        localStorage.setItem(
+                            "recentVehicles",
+                            JSON.stringify(recentVehicles)
+                        );
+
+                        console.log("RECENT VEHICLE SAVED");
+
+                    } else {
+
+                        $('#IdTWbrand').text('N/A');
+                        $('#Idprice').text('N/A');
+                        $('#IdTWmileage').text('N/A');
+                        $('#IdTWbodytype').text('N/A');
+                        $('#IdTWlaunchdate').text('N/A');
+                        $('#IdTWfuelCapacity').text('N/A');
+                        $('.IdTWName').text('N/A');
+
+                    }
+                    //if (data.specs && data.specs.length > 0) {
+                    //    var item = data.specs[0]; // Assuming the data array contains one object
+                    //    $('#IdTWbrand').text(item.twoWheeler.brand || 'N/A');
+                    //    $('#Idprice').text(item.twoWheeler.price || 'N/A');
+                    //    $('#IdTWmileage').text(item.milage ? item.milage + ' kmpl' : 'N/A');
+                    //    $('#IdTWbodytype').text(item.bodyType || 'N/A');
+
+                    //    // Format launch date
+                    //    if (item.twoWheeler && item.twoWheeler.launchDate) {
+                    //        var launchDate = new Date(item.twoWheeler.launchDate);
+                    //        var formattedDate = launchDate.toLocaleDateString('en-GB', {
+                    //            day: '2-digit',
+                    //            month: 'short',
+                    //            year: 'numeric'
+                    //        });
+                    //            $('#IdTWlaunchdate').text(formattedDate);
+                    //    } else {
+                    //        $('#IdTWlaunchdate').text('N/A');
+                    //    }
+
+                    //    $('#IdTWfuelCapacity').text(item.fuelCapacity ? item.fuelCapacity + ' L' : 'N/A');
+                    //        $('#IdTWMileage').html('<i class="bi bi-speedometer"></i> ' + (item.milage ? item.milage + ' kmpl' : 'N/A'));
+                    //    //$('.IdTWName').text(item.twoWheeler.twoWheelerName || 'N/A');
+                    //    $('.IdTWName').text(item.twoWheeler?.twoWheelerName || 'N/A');
+                    //        $('#IdTWBrand').html('<i class="bi bi-award"></i> ' + item.twoWheeler?.brand || 'N/A');
+                    //    //$('#IdTWimage').attr('src', item.twoWheeler.twImage || 'N/A');
+                    //    $('#IdTWimage').attr('src', item.twoWheeler?.twImage || '');
+                    //    const vehicleData = {
+                    //        //name: item.twoWheeler.twoWheelerName,
+                    //        //image: item.twoWheeler.twImage,
+                    //        name: item.twoWheeler?.twoWheelerName || '',
+                    //        image: item.twoWheeler?.twImage || '',
+                    //        url: window.location.href
+                    //    };
+
+                    //    let recentVehicles = JSON.parse(localStorage.getItem("recentVehicles")) || [];
+
+                    //    recentVehicles = recentVehicles.filter(v => v.name !== vehicleData.name);
+
+                    //    recentVehicles.unshift(vehicleData);
+
+                    //    recentVehicles = recentVehicles.slice(0, 6);
+
+                    //    localStorage.setItem("recentVehicles", JSON.stringify(recentVehicles));
+                    //    console.log("RECENT VEHICLE SAVED");
+                    //} else {
+                    //    // Handle case where no data is returned
+                    //    $('#IdTWbrand').text('N/A');
+                    //    $('#Idprice').text('N/A');
+                    //    $('#IdTWmileage').text('N/A');
+                    //    $('#IdTWbodytype').text('N/A');
+                    //    $('#IdTWlaunchdate').text('N/A');
+                    //    $('#IdTWfuelCapacity').text('N/A');
+                    //    $('#IdTWMileage').text('N/A');
+                    //    $('#IdTWName').text('N/A');
+                    //        $('#IdTWBrand').html('N/A');
+                    //        $('#IdTWimage').attr('src', ''); // Set to a default or empty image
+                    //    }
+
+                        // display engine
+                        if (data.engine && data.engine.length > 0) {
+                            var item = data.engine[0]; // Assuming the data array contains one object
+                            $('#Idstarting').text(item.starting || 'N/A');
+                            $('#Iddisplacement').text(item.displacement ? item.displacement + 'cc' : 'N/A');
+                            $('#IdfuelSupply').text(item.fuelSupply || 'N/A');
+                            $('#IdgearBox').text(item.gearBox || 'N/A');
+
+                        // Format launch date
+                        if (item.twoWheeler && item.twoWheeler.launchDate) {
+                            var launchDate = new Date(item.twoWheeler.launchDate);
+                            var formattedDate = launchDate.toLocaleDateString('en-GB', {
+                                day: '2-digit',
+                                month: 'short',
+                                year: 'numeric'
+                            });
+                            $('#IdTWLaunchdate').html('<i class="fa fa-calendar"></i> ' + formattedDate);
+                        } else {
+                            $('#IdTWLaunchdate').text('N/A');
+                        }
+                    } else {
+                        // Handle case where no data is returned
+                            $('#engineType').text('N/A');
+                        $('#IdTWLaunchdate').html('N/A');
+                    }
+                }).fail(function (xhr, status, error) {
+                    console.error(xhr.responseText);
+                });
+            }
+
+            // Trigger specs fetch on page load
+            var initialVarientId = $('#varientId').val();
+            if (initialVarientId) {
+                fetchSpec(initialVarientId);
+            }
+        });
+    </script>
+    <script>$(document).ready(function () {
+
+            const recentVehicles = JSON.parse(localStorage.getItem("recentVehicles")) || [];
+
+            let html = '';
+
+            recentVehicles.forEach(vehicle => {
+
+                html += `
+                                                <a href="${vehicle.url}" class="recent-card">
+                                                    <img src="${vehicle.image}" alt="${vehicle.name}">
+                                                    <h4>${vehicle.name}</h4>
+                                                </a>
+                                            `;
+            });
+
+            $('#recentVehicleContainer').html(html);
+
+        });</script>
+</body>

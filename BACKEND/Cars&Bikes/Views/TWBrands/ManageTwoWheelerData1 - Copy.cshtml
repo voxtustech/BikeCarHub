@@ -1,0 +1,158 @@
+﻿@{
+    ViewData["Title"] = "Manage Two-Wheeler Data";
+}
+
+<h4>Filter by Brand and Variant</h4>
+
+<div class="row mb-3  ">
+    <div class="col-md-3">
+        <label>Select Two-Wheeler</label>
+        <select id="brandDropdown" class="form-select">
+            <option value="">-- Select Brand --</option>
+            @foreach (var item in ViewBag.BrandList)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+
+    <div class="col-md-3">
+        <label>Select Variant</label>
+        <select id="variantDropdown" class="form-select">
+            <option value="">-- Select Variant --</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label>Select Form Type</label>
+        <select id="formTypeDropdown" class="form-select" disabled>
+            <option value="">-- Select Form Type --</option>
+            <option value="spec">Specification</option>
+            <option value="features">Features</option>
+            <option value="safety">Safety</option>
+            <option value="charging">Charging</option>
+            <option value="chasis">Chasis and Suspension</option>
+            <option value="engine">Engine</option>
+            <option value="imageColor">ImageColorPrice</option>
+            <option value="dimensions">Dimensions</option>
+            <option value="electricals">Electricals</option>
+            <option value="mileage">MileageandPerformance</option>
+            <option value="motor">MotorandBattery</option>
+            <option value="tyre">TyreandBrake</option>
+            <option value="underpinning">Underpinning</option>
+        </select>
+    </div>
+</div>
+@*
+<div class="row mb-3">
+    <div class="col-md-4">
+        <label>Select Form Type</label>
+        <select id="formTypeDropdown" class="form-select" disabled>
+            <option value="">-- Select Form Type --</option>
+            <option value="spec">Specification</option>
+            <option value="features">Features</option>
+            <option value="safety">Safety</option>
+        </select>
+    </div>
+</div>
+*@
+<!-- Container where partial form will be loaded -->
+<div id="specContent" class="mt-3 border p-3">Please select a brand and variant first.</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    let selectedVariantId = null;
+
+    $(document).ready(function () {
+
+        // Load Variants on Brand change
+        $('#brandDropdown').change(function () {
+            const brandId = $(this).val();
+            $('#variantDropdown').empty().append('<option value="">Loading...</option>');
+            $('#formTypeDropdown').prop('disabled', true);
+            selectedVariantId = null;
+
+            if (brandId) {
+                $.get('/TWBrands/GetVariants', { twoWheelerId: brandId }, function (data) {
+                    $('#variantDropdown').empty().append('<option value="">-- Select Variant --</option>');
+                    $.each(data, function (i, item) {
+                        $('#variantDropdown').append(`<option value="${item.tWVarientId}">${item.varients}</option>`);
+                    });
+                });
+            }
+        });
+
+        // Enable Form Type dropdown on Variant change
+        $('#variantDropdown').change(function () {
+            selectedVariantId = $(this).val();
+            if (selectedVariantId) {
+                $('#formTypeDropdown').prop('disabled', false);
+                $('#specContent').html('Now select form type to load the form...');
+            } else {
+                $('#formTypeDropdown').prop('disabled', true);
+                $('#specContent').html('Please select a variant.');
+            }
+        });
+
+        // Load form when Form Type is selected
+        $('#formTypeDropdown').change(function () {
+            const formType = $(this).val();
+
+            if (!selectedVariantId || !formType) {
+                $('#specContent').html('Please select both variant and form type.');
+                return;
+            }
+
+            let url = '';
+
+            switch (formType) {
+                case 'spec':
+                    url = `/TWBrands/GetByVariant/${selectedVariantId}`;
+                    break;
+                case 'features':
+                    url = `/TW/EditTWFeatures/${selectedVariantId}`;
+                    break;
+                case 'safety':
+                    url = `/TW/EditTWSafety/${selectedVariantId}`;
+                    break;
+                case 'charging':
+                    url = `/TW/EditTWCharging/${selectedVariantId}`;
+                    break;
+                case 'chasis':
+                    url = `/TW/EditTWChassis/${selectedVariantId}`;
+                    break;
+                case 'engine':
+                    url = `/TW/EditTWEngine/${selectedVariantId}`;
+                    break;
+                case 'dimensions':
+                    url = `/TW/EditTWDimensions/${selectedVariantId}`;
+                    break;
+                case 'electricals':
+                    url = `/TW/EditTWElectricals/${selectedVariantId}`;
+                    break;
+                case 'mileage':
+                    url = `/TW/EditTWMileageAndPerformance/${selectedVariantId}`;
+                    break;
+                case 'motor':
+                    url = `/TW/EditTWMotorAndBattery/${selectedVariantId}`;
+                    break;
+                case 'tyre':
+                    url = `/TW/EditTWTyreAndBrakes/${selectedVariantId}`;
+                    break;
+                case 'underpinning':
+                    url = `/TW/EditTWUnderpinning/${selectedVariantId}`;
+                    break;
+                default:
+                    $('#specContent').html('Invalid selection.');
+                    return;
+            }
+
+            $('#specContent').html('Loading...');
+            $('#specContent').load(url, function (response, status, xhr) {
+                if (status === "error") {
+                    $('#specContent').html(`<p class="text-danger">Failed to load form. (${xhr.statusText})</p>`);
+                }
+            });
+        });
+    });
+</script>
+

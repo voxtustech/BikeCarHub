@@ -1,0 +1,277 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Best Cars Under ₹10 Lakh in India (2025) – Top Picks for Mileage, Safety & Features";
+}
+@section MetaTags {
+    <meta name="keywords" content="Best cars under 10 lakh 2025, Maruti Suzuki Swift vs Tata Punch, mileage cars under 10 lakh, safest cars under 10 lakh, Tata Altroz vs Hyundai Aura, CNG cars under 10 lakh, budget SUV under 10 lakh, electric cars under 10 lakh, Maruti Celerio review, Mahindra XUV 3XO price, best hatchback India 2025, BikeCarHub car comparison" />
+    <meta name="description" content="Looking for the best car under ₹10 lakh in 2025? Compare top models like Maruti Swift, Tata Punch, Hyundai Aura & more. Expert analysis on mileage, safety, features & budget SUVs. Find your perfect ride now!" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 24th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>  
+
+                   
+
+                    <div class="div-line"></div>
+                    <h2 class="subheading">🚗 Top Cars Under ₹10 Lakh (Ex-Showroom)</h2>
+                    <div style="overflow-x: auto;">
+                        <table class="comparison-table-content">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Model</th>
+                                <th class="text-center">Ex-Showroom Price</th>
+                                <th class="text-center">Engine / Mileage</th>
+                                <th class="text-center">Highlights</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="compare-head-text">
+                                    <td><span class="font-weight-700">Maruti Suzuki Celerio</span></td>
+                                    <td>₹5.64 - 7.37 L</td>
+                                    <td>1.0L petrol/CNG, 25.24 kmpl petrol, 34.4 km/kg CNG</td>
+                                    <td>Mileage king—AMT option, 6 airbags in higher trims</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="font-weight-700"><a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiSwift2025_1">Maruti Suzuki Swift</a></span></td>
+                                    <td>₹6.49 - 9.64 L</td>
+                                    <td>1.2L petrol/CNG, 24.8 kmpl</td>
+                                    <td>Sporty styling, smooth drive, strong resale</td>
+                                </tr>
+                            <tr class="compare-head-text">
+                                    <td><span class="font-weight-700">Tata Tiago</span></td>
+                                    <td>₹5.00 - 8.45 L</td>
+                                    <td>1.2L petrol/CNG, ~20.09 kmpl</td>
+                                    <td>Solid build, 6 airbags, smart interior</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="font-weight-700">Hyundai Aura</span></td>
+                                    <td>₹6.54 - 9.11 L</td>
+                                    <td>1.2L petrol/CNG, 20-21 kmpl</td>
+                                    <td>Classy sedan with AMT, digital dash, premium feel</td>
+                                </tr>
+                            <tr class="compare-head-text">
+                                    <td><span class="font-weight-700">Tata Punch</span></td>
+                                    <td>₹6.20 - 10.32 L</td>
+                                    <td>1.2L petrol/CNG, ~20 kmpl</td>
+                                    <td>SUV-inspired design, high ground clearance, built tough</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="font-weight-700"><a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_1">Tata Altroz</a></span></td>
+                                    <td>From ₹6.89 L</td>
+                                    <td>1.2L petrol/1.5L diesel/CNG</td>
+                                    <td>Best-in-class safety, spacious cabin, premium vibe</td>
+                                </tr>
+                            <tr class="compare-head-text">
+                                    <td><span class="font-weight-700">Mahindra XUV 3XO</span></td>
+                                    <td>₹7.99 L onwards</td>
+                                    <td>1.2L turbo petrol, ~18 kmpl</td>
+                                    <td>Bold design, high-tech cabin, strong road presence</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="font-weight-700">Maruti Suzuki Brezza</span></td>
+                                    <td>₹8.69 L onwards</td>
+                                    <td>1.5L petrol, ~19.8 kmpl</td>
+                                    <td>Trusted compact SUV, SmartPlay infotainment, refined</td>
+                                </tr>
+                            <tr class="compare-head-text">
+                                    <td><span class="font-weight-700">Tata Nexon</span></td>
+                                    <td>₹8.00 L onwards</td>
+                                    <td>1.2L turbo petrol / 1.5L diesel + EV trims</td>
+                                    <td>Multiple powertrains, 5-star safety, commanding feel</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="div-line"></div>
+                    <h2 class="subheading">🧠 Deep Dive: Which Car for Whom?</h2>
+
+                    <h3 class="subheading">🚀 1. Mileage Matters Most?</h3>
+                    <p>Go for <span class="font-weight-700">Maruti Suzuki Celerio</span> if you want jaw-dropping fuel efficiency. It's the mileage maestro, especially in CNG mode. The AMT version makes city traffic a breeze—great for daily office commutes or zipping through metro traffic.</p>
+                    <p>If you prefer a sedan with great mileage and a touch of premium, <span class="font-weight-700">Hyundai Aura</span> with CNG or AMT options is another solid pick.</p>
+                    <p><span class="font-weight-700">✅ Top mileage pick:</span> Celerio (CNG/Petrol), Aura (CNG)</p>
+
+                    <h3 class="subheading">🎯 2. Driving Fun & Sporty Feel?</h3>
+                    <p>The new-gen <span class="font-weight-700">Maruti Swift</span> continues its legacy as the go-to hatchback for enthusiastic drivers. The 1.2L petrol engine is zippy, the gear shifts are smooth, and the fresh design feels youthful.</p>
+                    <p>Looking for something bolder? The <span class="font-weight-700">XUV 3XO's</span> turbo petrol engine delivers punchy performance with a touch of SUV muscle.</p>
+                    <p><span class="font-weight-700">✅ Performance picks:</span> Swift (manual or AMT), XUV 3XO (turbo)</p>
+
+                    <h3 class="subheading">🛡️ 3. Prioritize Safety Above All?</h3>
+                    <p><span class="font-weight-700">Tata Altroz</span> and <span class="font-weight-700">Tata Nexon</span> are your best bets—both come with 5-star Global NCAP ratings. You also get thick body panels, solid stability at high speeds, and lots of features (like iRA connected tech in Nexon).</p>
+                    <p><span class="font-weight-700">Tata Tiago</span> and <span class="font-weight-700">Tata Punch</span> also offer <span class="font-weight-700">6 airbags</span> as standard now, which is unheard of in their price brackets.</p>
+                    <p><span class="font-weight-700">✅ Safety first picks:</span> Altroz, Nexon, Punch, Tiago</p>
+
+                    <h3 class="subheading">🏙️ 4. Daily City Commute & Easy Parking?</h3>
+                    <p>Compact, efficient, and effortless to park—<span class="font-weight-700">Tiago</span>, <span class="font-weight-700">Swift</span>, and <span class="font-weight-700">Celerio</span> shine in urban scenarios. The clutch-free AMT variants are ideal for bumper-to-bumper traffic. These cars are also easy on the pocket when it comes to running costs and servicing.</p>
+                    <p><span class="font-weight-700">✅ City smart picks:</span> Tiago AMT, Swift AMT, Celerio AMT</p>
+
+                    <h3 class="subheading">🚙 5. SUV Styling Under Budget?</h3>
+                    <p>Love the commanding stance of an SUV but don't want the size or price tag of one? <span class="font-weight-700">Tata Punch</span>, <span class="font-weight-700">Mahindra XUV 3XO</span>, and <span class="font-weight-700">Maruti Brezza</span> bring that SUV look and practicality under ₹10 lakh. You get high ground clearance, rugged looks, and all the city + weekend functionality.</p>
+                    <p><span class="font-weight-700">✅ Mini SUV picks:</span> Punch, XUV 3XO, Brezza</p>
+
+                    <h3 class="subheading">⚡ 6. Want an Electric Option?</h3>
+                    <p>Tata Nexon EV's entry-level variants now flirt with the ₹10 lakh range post subsidies (check your state's EV policy). It's India's favorite EV for a reason: real-world range of ~300km, great ride quality, and fast charging options.</p>
+                    <p><span class="font-weight-700">✅ Green tech pick:</span> Nexon EV (check specific variants)</p>
+
+                    <div class="div-line"></div>
+                    <h2 class="subheading">🧩 Feature Checklist: What You Get in This Budget</h2>
+                    <p>In 2025, ₹10 lakh can get you:</p>
+                    <ul>
+                        <li>6 airbags (Tiago, Punch, Altroz)</li>
+                        <li>AMT or CVT auto options (Celerio, Aura, Swift)</li>
+                        <li>Connected car tech (Nexon, XUV 3XO)</li>
+                        <li>CNG dual-fuel efficiency (Celerio, Tiago, Swift, Aura)</li>
+                        <li>Premium touches like digital instrument clusters, cruise control, and rear cameras</li>
+                        <li>Solid build and 5-star safety ratings (Tata range)</li>
+                    </ul>
+                    <p>What you might <span class="font-weight-700">miss</span>: bigger diesel engines, top-tier EVs, panoramic sunroofs, ADAS tech—these are just above the budget, usually in the ₹11-15 lakh zone.</p>
+
+                    <div class="div-line"></div>
+                    <h2 class="subheading">📊 Quick Comparison Table</h2>
+                    <div style="overflow-x: auto;">
+                        <table class="comparison-table-content feature-table">
+                            <thead>
+                                <tr>
+                                <th class="text-centre">Feature \ Car</th>
+                                <th class="text-centre">Mileage Champion</th>
+                                <th class="text-centre">Safest Pick</th>
+                                <th class="text-centre">Best for City</th>
+                                <th class="text-centre">SUV Looks</th>
+                                <th class="text-centre">Most Tech-Savvy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="compare-head-text">
+                                    <td><span class="font-weight-700">Celerio</span></td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="font-weight-700">Swift</span></td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                </tr>
+                            <tr class="compare-head-text">
+                                    <td><span class="font-weight-700">Tiago</span></td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="font-weight-700">Punch</span></td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                </tr>
+                            <tr class="compare-head-text">
+                                    <td><span class="font-weight-700">Altroz</span></td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="font-weight-700">XUV 3XO</span></td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                </tr>
+                            <tr class="compare-head-text">
+                                    <td><span class="font-weight-700">Brezza</span></td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="font-weight-700">Nexon (Petrol/Diesel/EV)</span></td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="div-line"></div>
+                    <h2 class="subheading">✅ Final Pick (June 2025)</h2>
+                    <p>There's no one-car-fits-all. It all depends on what <span class="font-weight-700">you</span> prioritize. Here's how to decide:</p>
+                    <ul>
+                        <li><span class="font-weight-700">Tight budget + low running cost?</span> 👉 <span class="font-weight-700">Celerio (Petrol or CNG)</span></li>
+                        <li><span class="font-weight-700">Fun + versatility?</span> 👉 <span class="font-weight-700">Maruti Swift</span></li>
+                        <li><span class="font-weight-700">Safety + reliability for family?</span> 👉 <span class="font-weight-700">Tata Tiago or Punch</span></li>
+                        <li><span class="font-weight-700">SUV stance without SUV size?</span> 👉 <span class="font-weight-700">Brezza or XUV 3XO</span></li>
+                        <li><span class="font-weight-700">Top-tier safety + tech?</span> 👉 <span class="font-weight-700">Tata Altroz or Nexon</span></li>
+                        <li><span class="font-weight-700">EV lover on a budget?</span> 👉 <span class="font-weight-700">Nexon EV (check deals!)</span></li>
+                    </ul>
+
+                    <div class="div-line"></div>
+                    <h2 class="subheading">🎯 Conclusion</h2>
+                    <p>In June 2025, buying a car under ₹10 lakh no longer means compromising. You can get stylish designs, premium features, smart fuel choices (CNG + EV), and even 5-star safety—all while staying on budget.</p>
+                    <p>So whether you're hunting for your first ride, upgrading from an older car, or just want more tech and safety, this list should steer you in the right direction.</p>
+                    <p>Want help comparing two models or figuring out the best variant for your lifestyle? Drop a message—we'll help you shortlist like a pro.</p>
+
+                    <div class="div-line"></div>
+                <p>For more car comparisons and expert reviews, keep visiting <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a>—your trusted source for all things bikes and cars!</p>
+                    
+                </div>
+            </div>
+                
+        </<div>
+        </div>
+    </div>
+    
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

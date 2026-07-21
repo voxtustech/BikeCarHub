@@ -1,0 +1,65 @@
+﻿@model Cars_Bikes.Models.TWTyresAndBrakes
+@{
+    ViewData["Title"] = "Add Tyres and Brakes";
+}
+
+
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <h2 class="text-center mb-4">Add Tyres and Brakes</h2>
+<form asp-action="CreateTWTyresAndBrakes" method="post">
+    <div class="form-group">
+        <label asp-for="TwoWheelerId"></label>
+        <select asp-for="TwoWheelerId" class="form-control" asp-items="ViewBag.TwoWheelers">
+            <option value="">-- Select Two Wheeler --</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TWVarientId"></label>
+        <select asp-for="TWVarientId" class="form-control" asp-items="ViewBag.TWVarients">
+            <option value="">-- Select Varient --</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FrontBrakeDiameter"></label>
+        <input asp-for="FrontBrakeDiameter" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RearBrakeDiameter"></label>
+        <input asp-for="RearBrakeDiameter" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RadialTyre"></label>
+        <input asp-for="RadialTyre" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FrontSuspension"></label>
+        <input asp-for="FrontSuspension" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RearSuspension"></label>
+        <input asp-for="RearSuspension" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form>
+</div>
+</div>
+        </div>
+    </div>
+</body>

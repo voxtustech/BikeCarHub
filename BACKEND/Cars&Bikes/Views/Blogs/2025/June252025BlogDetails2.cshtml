@@ -1,0 +1,264 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Maruti Brezza vs Tata Nexon: Detailed Comparison of India’s Top Sub-4m SUVs";
+}
+@section MetaTags {
+    <meta name="keywords" content="Maruti Brezza vs Tata Nexon, Brezza vs Nexon comparison, best sub-4m SUV India, Maruti Brezza 2025 review, Tata Nexon facelift, compact SUV comparison, Brezza mileage, Nexon safety rating, Brezza vs Nexon price, BikeCarHub SUV comparison" />
+    <meta name="description" content="Compare Maruti Brezza vs Tata Nexon on performance, mileage, safety, features & price. Find the best compact SUV for your needs with BikeCarHub's expert analysis" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 25th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+
+                <p>In this detailed comparison, <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></span> explores every aspect—from powertrains and space to safety, features, driving experience, and real-world ownership—to help you choose the right compact SUV.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">1.Engine & Performance</h2>
+
+                <h3 class="subheading">Maruti Brezza</h3>
+
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 1.5L K-series DualJet petrol with SHVS mild-hybrid</li>
+                    <li><span class="font-weight-700">Power:</span> 100.6 bhp@6,000 rpm</li>
+                    <li><span class="font-weight-700">Torque:</span> 137.1 Nm@4,400 rpm</li>
+                    <li><span class="font-weight-700">Transmission:</span> 5-speed manual, 6-speed automatic</li>
+                </ul>
+                <p>This naturally aspirated engine delivers punchy, linear performance with the mild-hybrid system aiding low-end driveability and fuel efficiency.</p>
+
+                <h3 class="subheading">Tata Nexon</h3>
+
+                <ul>
+                    <li><span class="font-weight-700">Petrol:</span> 1.2L Revotron turbo-petrol: 120 PS (~118 bhp) and 170 Nm torque</li>
+                    <li><span class="font-weight-700">Diesel:</span> 1.5L Revotorq turbo-diesel: 115 PS (113 bhp) and 260 Nm torque</li>
+                    <li><span class="font-weight-700">Transmission:</span> Manual, AMT, and 7-speed dual-clutch automatic (turbo petrol)</li>
+                </ul>
+                <p>The turbo-petrol offers crisp mid-range pull, while the diesel exudes strong torque. However, Nexon's AMT is sometimes criticized for lag.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">2.Fuel Efficiency</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza ARAI:</span> 19.8 kmpl (petrol)</li>
+                    <li><span class="font-weight-700">Brezza Real-world:</span> Around 13-17 kmpl mixed conditions</li>
+                    <li><span class="font-weight-700">Nexon Petrol ARAI:</span> ~17 kmpl</li>
+                    <li><span class="font-weight-700">Nexon Diesel ARAI:</span> ~24.1 kmpl</li>
+                    <li><span class="font-weight-700">Nexon User reports:</span> City ~16-18 kmpl (petrol automatic); Diesel around 20-22 kmpl</li>
+                </ul>
+                <p><span class="font-weight-700">Verdict:</span> Brezza leads in petrol efficiency thanks to its mild-hybrid tech. The Nexon diesel offers good fuel economy but petrol trim trails behind.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">3.Dimensions & Practical Space</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Maruti Brezza</th>
+                                <th class="text-center">Tata Nexon</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Length</td>
+                                <td>3,995 mm</td>
+                                <td>3,995 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Width</td>
+                                <td>1,790 mm</td>
+                                <td>1,804 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Height</td>
+                                <td>1,685 mm</td>
+                                <td>1,620 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Wheelbase</td>
+                                <td>2,500 mm</td>
+                                <td>2,498 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Ground Clearance</td>
+                                <td>198 mm</td>
+                                <td>208 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Boot Space</td>
+                                <td>328 L</td>
+                                <td>382 L (up to 690 L folded)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Both cars share nearly identical lengths/wheelbases. Nexon is slightly wider, and its diesel variant is 65 kg heavier. Nexon's superior ground clearance and boot space give it a practical edge.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">4.Safety & Ratings</h2>
+
+                <h3 class="subheading">Maruti Brezza</h3>
+                <ul>
+                    <li><span class="font-weight-700">Features:</span> ESP, dual front airbags, hill-start assist, rear parking sensors, six airbags on top trim</li>
+                    <li><span class="font-weight-700">Safety rating:</span> 4★ GNCAP (previous-gen); latest model not tested yet</li>
+                </ul>
+
+                <h3 class="subheading">Tata Nexon</h3>
+                <ul>
+                    <li><span class="font-weight-700">Features:</span> Standard 6 airbags, ABS, EBD, ESC, hill hold, ISOFIX, 360° camera, ventilated seats, and driver modes</li>
+                    <li><span class="font-weight-700">Ratings:</span> 5★ Global NCAP; 5★ Bharat NCAP; facelift adds 10.25″ digital cluster, improved safety</li>
+                </ul>
+                <p><span class="font-weight-700">Verdict:</span> Nexon leads on safety—full features and top crash test results. Brezza remains safe, but lacks a current rating and some top-end features.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">5.Features & Comfort</h2>
+
+                <h3 class="subheading">Maruti Brezza</h3>
+
+                <ul>
+                    <li>9″ infotainment w/ wireless Android Auto/Apple CarPlay</li>
+                    <li>Heads-up display, sunroof, rear AC vents, cruise control, ventilated seats (top trims), 360° camera</li>
+                </ul>
+
+                <h3 class="subheading">Tata Nexon</h3>
+
+                <ul>
+                    <li>10.25″ infotainment + 10.25″ digital instrument cluster, Harman audio</li>
+                    <li>Connected tech (IRA 2.0), multiple drive modes, sunroof, ventilated seats, wireless charger, 360° camera</li>
+                </ul>
+                <p><span class="font-weight-700">Verdict:</span> Nexon's cabin feels more premium with bigger screens, U-connect features, and enhanced comfort options.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">6.Ride & Handling</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza:</span> MacPherson front suspension, twist-beam rear—delivers predictable, comfortable ride suited to Indian roads. Mild-hybrid adds smooth acceleration.</li>
+                    <li><span class="font-weight-700">Nexon:</span> Independent front, twist-beam rear, 208 mm clearance—firm yet composed, with good steering feedback. Turbo offers strong mid-range.</li>
+                </ul>
+                <p><span class="font-weight-700">Real-world feedback:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Brezza</span> owners mention reliability and budget maintenance.</li>
+                    <li><span class="font-weight-700">Nexon</span> users praise handling and comfort but flag AMT lag and after-sales concerns.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">7.Ownership & Service</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza:</span> Maruti's massive service network ensures low maintenance costs and ready availability of parts.</li>
+                    <li><span class="font-weight-700">Nexon:</span> Tata owners cite good ride and design, but express service delays, slow turnaround, and occasional quality issues.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">8.Price & Value</h2>
+                <ul>
+                    <li><span class="font-weight-700">Brezza:</span> ₹8.64 - ₹13.98 L ex-showroom</li>
+                    <li><span class="font-weight-700">Nexon:</span> ₹8 - ₹15.60 L ex-showroom (diesel/petrol/AMT/DCT)</li>
+                </ul>
+                <p>Both overlap in pricing; Nexon offers broader engine & transmission choices including diesel and DCT.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Verdict: Which One Should You Buy?</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Priority</th>
+                                <th class="text-center">Choose Brezza</th>
+                                <th class="text-center">Choose Nexon</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Fuel Economy (petrol)</td>
+                                <td>✅ Best mileage with mild-hybrid</td>
+                                <td>⚠️ Petrol lags; diesel is efficient</td>
+                            </tr>
+                            <tr>
+                                <td>Boot and Ground Clearance</td>
+                                <td>✅ 198 mm GC, 328 L boot</td>
+                                <td>✅ Slightly better clearance & 350 L boot</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Engine & Driving Fun</td>
+                                <td>⚠️ Smooth & linear</td>
+                                <td>✅ Turbo punch & diesel torque</td>
+                            </tr>
+                            <tr>
+                                <td>Safety</td>
+                                <td>✅ 4★ GNCAP older model</td>
+                                <td>✅ 5★ Global & Bharat NCAP</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Cabin Tech & Features</td>
+                                <td>✅ Good features, smaller screen</td>
+                                <td>✅ Bigger screens & connected tech</td>
+                            </tr>
+                            <tr>
+                                <td>Maintenance & Service</td>
+                                <td>✅ Low cost, vast network</td>
+                                <td>⚠️ More issues reported after-sales</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Price Options</td>
+                                <td>✅ Simple petrol strategy</td>
+                                <td>✅ More variants including diesel & DCT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><span class="font-weight-700">Choose the Brezza</span> if you prioritize fuel efficiency, reliability, smooth driving, and after-sales convenience with mild-hybrid fuel savings.</p>
+                <p><span class="font-weight-700">Choose the Nexon</span> if you value safety, turbo/diesel power, premium tech, and are comfortable trading slightly higher ownership complexity for performance and features.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Word</h2>
+                <ul>
+                    <li><span class="font-weight-700">Maruti Brezza</span> is the go-to compact SUV for budget-conscious, eco-savvy buyers seeking reliability, efficiency, and peace of mind.</li>
+                    <li><span class="font-weight-700">Tata Nexon</span> appeals to those seeking dynamic driving, top safety credentials, and a feature-rich package—even if it means navigating AMT quirks and after-sales reviews.</li>
+                </ul>
+                <h3 class="subheading">Check your brands here</h3>
+                <p>For Maruti Suzuki Motors <a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1">Click here!</a></p>
+                <p>For TATA Motors <a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_1">Click here!</a></p>
+            </div>
+           
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

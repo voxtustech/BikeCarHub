@@ -1,0 +1,370 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @foreach (var brand in ViewBag.Tag)
+    {
+        ViewData["Title"] = @brand.TitleTag;
+    }
+}
+
+@section MetaTags {
+    @foreach (var brand in ViewBag.Tag)
+    {
+        <meta name="keywords" content="@brand.MetaKeywords" />
+        <meta name="description" content="@brand.MetaDescription" />
+    }
+}
+@foreach (var brand in ViewBag.Tag)
+{
+    <div class=" ">
+        <h1 class="latest-bike-head">@brand.BrandName Bikes</h1>
+        @*<h2 class="latest-bike-description p-b20">@brand.Discription</h2>*@
+        <div class="brand-info-container">
+            <div class="brand-info-content">
+
+                <h3>KTM Bikes in India 2025: Price, Mileage, Long Ride Picks & More</h3>
+
+                <p class="brand-info-short">
+                    When it comes to raw performance, razor-sharp styling, and a thrilling riding experience, KTM is a name that instantly excites motorcycle enthusiasts. Originating in Austria, KTM (Kronreif & Trunkenpolz Mattighofen) is globally renowned for building motorcycles with race-inspired DNA. With its entry into the Indian market through a strategic partnership with Bajaj Auto, KTM redefined what affordable performance could mean for Indian riders.
+                    From aggressive streetfighters like the Duke 390 to hardcore adventure bikes like the Adventure 390, KTM has a wide range of machines built for speed, stability, and spirit. Whether you're a beginner seeking a stylish first bike or an experienced rider looking for corner-carving excellence or long-distance touring, KTM’s 2025 lineup has something to ignite your riding passion.
+                    Let’s explore the latest KTM bike price list, their fuel efficiency, and the best models for long rides, all updated for 2025.
+                </p>
+
+                <div class="brand-info-full" id="ktmMoreText">
+                    <h3>KTM Bikes Price List 2025 in India</h3>
+
+                    <p>
+                        Here’s an updated list of KTM’s 2025 motorcycles available in India, with their respective ex-showroom prices and mileage figures:
+                    </p>
+
+                    <div class="brand-table-wrapper">
+                        <table class="brand-info-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Ex-Showroom Price (₹)</th>
+                                    <th>Mileage (km/l)</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>KTM Duke 125</td>
+                                    <td>₹1.79 lakh – ₹1.82 lakh</td>
+                                    <td>40–45 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>KTM RC 125</td>
+                                    <td>₹1.89 lakh – ₹1.93 lakh</td>
+                                    <td>38–42 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>KTM Duke 200</td>
+                                    <td>₹1.96 lakh – ₹2.05 lakh</td>
+                                    <td>35–40 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>KTM RC 200</td>
+                                    <td>₹2.17 lakh – ₹2.25 lakh</td>
+                                    <td>30–35 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>KTM Duke 250</td>
+                                    <td>₹2.38 lakh – ₹2.48 lakh</td>
+                                    <td>30–35 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>KTM RC 390</td>
+                                    <td>₹3.18 lakh – ₹3.24 lakh</td>
+                                    <td>25–30 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>KTM Duke 390</td>
+                                    <td>₹3.11 lakh – ₹3.16 lakh</td>
+                                    <td>28–32 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>KTM Adventure 250</td>
+                                    <td>₹2.47 lakh – ₹2.53 lakh</td>
+                                    <td>30–35 km/l</td>
+                                </tr>
+
+                                <tr>
+                                    <td>KTM Adventure 390</td>
+                                    <td>₹3.37 lakh – ₹3.43 lakh</td>
+                                    <td>28–32 km/l</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <i>Note: Prices and mileage are approximate and can vary by location and variant.</i>
+                    </p>
+                    <h3>Which KTM Is Best for Long Rides?</h3>
+
+                    <p>
+                        While KTMs are known for their sporty aggression, the brand has also developed a strong lineup of touring-ready motorcycles. These bikes are built for performance on highways and offer a comfortable setup for longer journeys.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Top KTM Bikes for Long-Distance Riding:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>KTM Adventure 390</strong>
+                            <ul>
+                                <li>373cc liquid-cooled engine with ride-by-wire</li>
+                                <li>Long-travel WP suspension (170 mm front, 177 mm rear)</li>
+                                <li>6-speed gearbox with slipper clutch and Quickshifter+</li>
+                                <li>TFT display, cornering ABS, traction control, and off-road mode</li>
+                                <li>Perfect for serious tourers, off-road lovers, and adventure seekers</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>KTM Adventure 250</strong>
+                            <ul>
+                                <li>Same chassis as the 390 Adventure with a smaller 248cc engine</li>
+                                <li>More accessible for riders on a budget or looking for less aggressive power</li>
+                                <li>Great for occasional touring, light trails, and everyday use</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>KTM Duke 390 (2024 Gen)</strong>
+                            <ul>
+                                <li>Updated ergonomics, better pillion comfort</li>
+                                <li>399cc engine with strong mid-range grunt</li>
+                                <li>Ideal for fast highway cruising and weekend rides</li>
+                                <li>Now more refined and practical than ever</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        These bikes offer a great balance of tech, comfort, and performance for riders who want more from the open road.
+                    </p>
+                    <h3>Which KTM Has the Best Mileage?</h3>
+
+                    <p>
+                        KTM bikes are performance-focused, but the company has managed to maintain decent fuel efficiency, especially in its entry-level models.
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Top Mileage KTM Models:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>KTM Duke 125</strong>
+                            <ul>
+                                <li>Mileage: 40–45 km/l</li>
+                                <li>Ideal for beginners or those who want KTM styling without high fuel costs</li>
+                                <li>Lightweight chassis and smooth engine</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>KTM RC 125</strong>
+                            <ul>
+                                <li>Mileage: 38–42 km/l</li>
+                                <li>Offers full-faired sports styling with good efficiency</li>
+                                <li>Best suited for young urban riders</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>KTM Duke 200</strong>
+                            <ul>
+                                <li>Mileage: 35–40 km/l</li>
+                                <li>Peppy engine that doesn’t compromise much on economy</li>
+                                <li>Delivers sporty performance with daily usability</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        If mileage is a concern but you still crave that KTM edge, these models offer the best blend of performance and efficiency.
+                    </p>
+                    <h3>Why Is KTM Famous?</h3>
+
+                    <p>
+                        KTM has developed a cult-like following globally and in India. Here’s why:
+                    </p>
+
+                    <p>
+                        <strong class="brand-sub-heading">Reasons for KTM’s Popularity:</strong>
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Racing Heritage:</strong>
+                            <ul>
+                                <li>KTM has won multiple Dakar Rally titles and excels in off-road racing and Moto3.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Sharp Design Language:</strong>
+                            <ul>
+                                <li>Known for its minimalistic trellis frames, LED lights, bold graphics, and muscular bodywork.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>High Power-to-Weight Ratios:</strong>
+                            <ul>
+                                <li>KTM bikes are light, nimble, and pack serious punch for their segment.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Advanced Technology:</strong>
+                            <ul>
+                                <li>Features like ride-by-wire, Quickshifter+, cornering ABS, Supermoto ABS, TFT displays, and slipper clutch make KTM bikes feel premium and rider-focused.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Accessible Performance:</strong>
+                            <ul>
+                                <li>Thanks to Bajaj’s local manufacturing, KTM delivers world-class machines at competitive prices in India.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Adventure DNA:</strong>
+                            <ul>
+                                <li>The Adventure series brought true off-road ability to the Indian middleweight segment, creating a new category of adventure touring.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <h3>Final Thoughts</h3>
+
+                    <p>
+                        In 2025, KTM continues to be the go-to choice for riders who value excitement, tech, and style. Whether you want an entry-level sports bike, a sharp city machine, or an adventure-ready tourer, KTM has you covered.
+                        The brand’s global reputation, combined with local assembly and support from Bajaj, makes KTM a powerful player in India’s mid-range performance bike market. With new designs, better refinement, and growing rider communities, KTM’s orange spirit is only getting brighter.
+                    </p>
+
+                    <p>
+                        If you're looking for aggressive styling, cutting-edge tech, and heart-racing performance, KTM is your answer.
+                    </p>
+                    <h3>Top 10 FAQs About KTM Bikes in India (2025)</h3>
+
+                    <div class="faq-container">
+
+                        <div class="faq-item">
+                            <h4>1. Which KTM bike gives the best mileage?</h4>
+                            <p>
+                                The KTM Duke 125 offers the best mileage at around 40–45 km/l.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>2. Is the KTM Adventure 390 good for long rides?</h4>
+                            <p>
+                                Yes, it’s built for long-distance touring with advanced rider aids and comfort features.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>3. Which KTM is best for beginners?</h4>
+                            <p>
+                                The KTM Duke 125 is lightweight and easy to handle, perfect for first-time sportbike riders.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>4. Are KTM bikes expensive to maintain?</h4>
+                            <p>
+                                While premium, KTM maintenance is manageable and service centers are widely available in India.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>5. Does KTM make off-road bikes in India?</h4>
+                            <p>
+                                The Adventure 250 and 390 are ADV-style bikes suitable for light off-roading and long rides.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>6. Is KTM RC 200 good for daily use?</h4>
+                            <p>
+                                It can be used for daily rides but has a committed riding posture better suited for short distances or track days.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>7. Which KTM is best for city traffic?</h4>
+                            <p>
+                                The Duke 200 or Duke 125 are agile and compact, making them great for city use.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>8. What’s the top speed of KTM Duke 390?</h4>
+                            <p>
+                                The KTM Duke 390 can reach up to 167 km/h in real-world conditions.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>9. Are KTM bikes good for pillion riders?</h4>
+                            <p>
+                                Recent models like the Duke 390 Gen-3 have improved pillion seats, but RC models are less comfortable.
+                            </p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>10. Is KTM planning electric bikes?</h4>
+                            <p>
+                                Yes, KTM and Bajaj are reportedly working on electric versions, expected in the near future.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="brand-read-btn"
+                        onclick="toggleBrandInfo('ktmMoreText', this)">
+                    Read More
+                </button>
+            </div>
+        </div>
+        <script>function toggleBrandInfo(contentId, button) {
+
+                const content = document.getElementById(contentId);
+
+                if (content.style.display === "block") {
+
+                    content.style.display = "none";
+                    button.innerText = "Read More";
+
+                } else {
+
+                    content.style.display = "block";
+                    button.innerText = "Read Less";
+                }
+            }</script>
+    </div>
+}
+@await Html.PartialAsync("_BrandComponent")
+@await Html.PartialAsync("_AllComponent")

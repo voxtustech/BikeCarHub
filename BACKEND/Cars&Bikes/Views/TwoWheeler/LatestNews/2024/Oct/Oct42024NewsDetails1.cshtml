@@ -1,0 +1,103 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Suzuki GSX-8R Launched in India at ₹9.25 Lakh - Features & Specifications";
+}
+@section MetaTags{
+    <meta name="keywords" content="Suzuki GSX-8R India, Suzuki GSX-8R price, GSX-8R features, Suzuki sportbike launch, GSX-8R specifications, Suzuki motorcycle India, GSX-8R middleweight bike, new Suzuki bike 2025, GSX-8R India launch." />
+    <meta name="description" content="Suzuki has launched the GSX-8R sportbike in India at ₹9.25 lakh. Equipped with an 800cc engine, dual-channel ABS, quick-shifter, and advanced features, the GSX-8R blends performance with style." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <p>Suzuki Motorcycle India has officially launched the new GSX-8R at a price of ₹9.25 lakh (ex-showroom). The GSX-8R is a middleweight sportbike designed for those seeking a blend of daily usability and high-performance thrills. As part of Suzuki’s iconic GSX lineup, this latest addition aims to appeal to sportbike enthusiasts who value technology, performance, and sleek design.</p>
+                <p>The Suzuki GSX-8R comes with an 800cc parallel-twin engine capable of delivering impressive power, ensuring an exhilarating riding experience. The engine produces around 82 PS of peak power at 8500 rpm and a maximum torque of 78 Nm at 6800 rpm. The bike is equipped with a 6-speed manual transmission featuring a bi-directional quick-shifter for a smooth and engaging ride.</p>
+                <p>In terms of design, the GSX-8R embodies Suzuki’s aggressive sports styling with sharp aerodynamic fairings, a split LED headlamp setup, and an aerodynamic windshield for reduced wind resistance. The digital instrument cluster provides a range of useful data, including speed, fuel levels, gear position, and more, contributing to a highly user-friendly experience. With its fully-adjustable KYB front forks and a monoshock rear suspension, the GSX-8R is built for stability, performance, and comfort, both on the track and regular roads.</p>
+                <p>Additional features include dual-channel ABS, multiple riding modes, and traction control, ensuring safety at all speeds. The dual-disc front brakes and single-disc rear brake provide exceptional braking power, which is critical for spirited riding. The GSX-8R is also equipped with lightweight alloy wheels and tubeless radial tyres for excellent grip and handling.</p>
+                <p>The launch of the GSX-8R at ₹9.25 lakh places it in direct competition with other popular middleweight sportbikes, offering a compelling package of performance, technology, and iconic Suzuki reliability.</p>
+                <h3 class="subheading">Features and Specifications:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Engine:</span> 800cc, parallel-twin, liquid-cooled.</li>
+                    <li><span class="font-weight-700">Power Output:</span> 82 PS @@ 8500 rpm.</li>
+                    <li><span class="font-weight-700">Torque:</span> 78 Nm @@ 6800 rpm.</li>
+                    <li><span class="font-weight-700">Transmission:</span> 6-speed manual with bi-directional quick-shifter.</li>
+                    <li><span class="font-weight-700">Suspension:</span> KYB fully adjustable front forks, monoshock rear suspension.</li>
+                    <li><span class="font-weight-700">Brakes:</span> Dual front disc brakes, single rear disc brake, dual-channel ABS.</li>
+                    <li><span class="font-weight-700">Tyres:</span> Radial, tubeless.</li>
+                    <li><span class="font-weight-700">Riding Modes:</span> Multiple riding modes with adjustable traction control.</li>
+                    <li><span class="font-weight-700">Lighting:</span> Full LED lighting including headlamps, tail lamps, and indicators.</li>
+                    <li><span class="font-weight-700">Instrument Console:</span> Fully digital with multiple readouts like gear position, fuel levels, and trip data. </li>
+                </ol>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

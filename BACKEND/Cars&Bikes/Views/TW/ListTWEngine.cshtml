@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Cars_Bikes.Models.TWEngineAndTransmission>
+@{
+    ViewData["Title"] = "Engine & Transmission List";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+<div class="container mt-5">
+    <h2 class="text-center">Engine & Transmission Records</h2>
+
+    <form method="get" asp-action="ListTWEngine" class="form-inline my-3">
+        <input type="text" name="search" class="form-control mr-2" placeholder="Search..." />
+        <button type="submit" class="btn btn-outline-primary">Search</button>
+    </form>
+
+    <table class="table table-bordered text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Varient</th>
+                <th>Engine Type</th>
+                <th>Displacement</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TWName</td>
+                    <td>@item.Varients</td>
+                    <td>@item.EngineType</td>
+                    <td>@item.Displacement</td>
+                    <td>
+                        <a asp-action="EditTWEngine" asp-route-id="@item.TWEngineAndTransmissionId" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-action="DeleteTWEngine" asp-route-id="@item.TWEngineAndTransmissionId" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

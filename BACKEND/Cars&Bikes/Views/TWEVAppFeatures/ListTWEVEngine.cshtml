@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Cars_Bikes.Models.TWEVEngineAndTransmission>
+@{
+    ViewData["Title"] = "EV Engine & Transmission List";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <div class="container mt-5">
+                        <h2 class="text-center">Engine & Transmission Records</h2>
+
+                        <form method="get" asp-action="ListTWEVEngine" class="form-inline my-3">
+                            <input type="text" name="search" class="form-control mr-2" placeholder="Search..." />
+                            <button type="submit" class="btn btn-outline-primary">Search</button>
+                        </form>
+
+                        <table class="table table-bordered text-center">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Varient</th>
+                                    <th>Engine Type</th>
+                                    <th>Displacement</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.EVName</td>
+                                        <td>@item.Varients</td>
+                                        <td>@item.NumOfBattries</td>
+                                        <td>@item.CoolingSystem</td>
+                                        <td>
+                                            <a asp-action="EditTWEVEngine" asp-route-id="@item.TWEVEngineAndTransmissionId" class="btn btn-warning btn-sm">Edit</a>
+                                            <a asp-action="DeleteTWEVEngine" asp-route-id="@item.TWEVEngineAndTransmissionId" class="btn btn-danger btn-sm">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

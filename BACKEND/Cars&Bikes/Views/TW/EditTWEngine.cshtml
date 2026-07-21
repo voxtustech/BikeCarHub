@@ -1,0 +1,44 @@
+﻿@model Cars_Bikes.Models.TWEngineAndTransmission
+@{
+    ViewData["Title"] = "Edit Engine & Transmission";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Edit Engine & Transmission</h2>
+    <form asp-action="EditTWEngine" method="post">
+        <input type="hidden" asp-for="TWEngineAndTransmissionId" />
+        <div class="form-group">
+            <label asp-for="TwoWheelerId"></label>
+            <select asp-for="TwoWheelerId" class="form-control" asp-items="ViewBag.TwoWheelers"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="TWVarientId"></label>
+            <select asp-for="TWVarientId" class="form-control" asp-items="ViewBag.TWVarients"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="EngineType"></label>
+            <input asp-for="EngineType" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Displacement"></label>
+            <input asp-for="Displacement" class="form-control" />
+        </div>
+        <!-- Add other fields similarly -->
+        <button type="submit" class="btn btn-primary mt-3">Save</button>
+    </form>
+</div>
+</div>
+</div>
+        </div>
+    </div>
+</body>

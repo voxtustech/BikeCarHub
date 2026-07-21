@@ -1,0 +1,176 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top Cruiser Bikes in India for Long Rides | Best Picks 2024";
+}
+@section MetaTags{
+    <meta name="keywords" content="cruiser bikes India, best cruiser bikes 2024, long-distance bikes, bikes for travel, touring motorcycles, comfortable bikes, Indian cruiser bikes, top bikes for riders, bike reviews India, long-ride bikes, best bikes for highway, cruiser motorcycles, adventure bikes, road trip bikes, two-wheelers India." />
+    <meta name="description" content="Explore the top 5 cruiser bikes in India for long-distance rides. Find the best options for comfort, style, and performance tailored for travel enthusiasts." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p><span class="font-weight-700">Royal Enfield Meteor 350:</span> A modern classic that has captured the hearts of many, the Royal Enfield Meteor 350 combines retro styling with contemporary features. Its robust engine and comfortable seating make it one of the best cruiser bikes in India for long-distance travel.</p>
+                <p><span class="font-weight-700">Bajaj Avenger Cruise 220:</span> Known for its laid-back riding posture and smooth handling, the Bajaj Avenger Cruise 220 is perfect for those who enjoy leisurely rides across vast distances. Its affordability and reliability add to its appeal as a leading choice among long-distance bikes.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/topfivecruiserbikesinindiaforlongdistanceriders/royal enfield meteor 350.webp" alt="Royal Enfield Meteor 350" title="Royal Enfield Meteor 350" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/topfivecruiserbikesinindiaforlongdistanceriders/bajaj avenger cruise 220.webp" alt="Bajaj Avenger Cruise 220" title="Bajaj Avenger Cruise 220" /></div>
+                </div>
+                <p><span class="font-weight-700">Honda H’ness CB350:</span> With a perfect blend of old-school charm and new-age technology, Honda’s H’ness CB350 offers an exceptional riding experience. Its powerful engine ensures you can tackle any journey with ease while enjoying superior comfort on longer routes.</p>
+                <p><span class="font-weight-700">Jawa Perak:</span> For riders who appreciate vintage aesthetics coupled with modern engineering, Jawa Perak delivers on all fronts. This bobber-style bike not only looks stunning but also performs admirably on extended tours across diverse terrains.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/topfivecruiserbikesinindiaforlongdistanceriders/honda hness cb350.webp" alt="Honda H’ness CB350" title="Honda H’ness CB350" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/topfivecruiserbikesinindiaforlongdistanceriders/jawa perak.webp" alt="Jawa Perak" title="Jawa Perak" /></div>
+                </div>
+                <p><span class="font-weight-700">Suzuki Intruder 150:</span> Compact yet mighty, the Suzuki Intruder 150 is ideal for those seeking agility without compromising on comfort during lengthy rides. Its advanced features make it one of the most sought-after options in India's cruiser segment.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2024/topfivecruiserbikesinindiaforlongdistanceriders/suzuki intruder 150.webp" alt="Suzuki Intruder 150" title="Suzuki Intruder 150" /></div>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Name</th>
+                                <th class="text-center">Price</th>
+                                <th class="text-center">Engine</th>
+                                <th class="text-center">Power</th>
+                                <th class="text-center">Torque</th>
+                                <th class="text-center">Suspension</th>
+                                <th class="text-center">Ground Clearance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Royal Enfield Meteor 350</td>
+                                <td>₹2.06 - 2.30 Lakh</td>
+                                <td>Single-Cylinder, 4 Stroke, Air-Oil Cooled Engine</td>
+                                <td>20.4 PS @@ 6100 rpm</td>
+                                <td>27 Nm @@ 4000 rpm</td>
+                                <td>
+                                    Suspension Front:-  Telescopic, 41 mm forks, 130 mm travel,<br />
+                                    Suspension Rear:-  Twin tube emulsion Shock absorbers with 6-step adjustable preload
+                                </td>
+                                <td>170 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Bajaj Avenger Cruise 220</td>
+                                <td>₹1.43 Lakh</td>
+                                <td>Single cylinder, Oil cooled, Twin Spark DTS-i , Fuel Injected, 4 stroke, SOHC, 2 valve</td>
+                                <td>19.03 PS @@ 8500 rpm</td>
+                                <td>17.55 Nm @@ 7000 rpm</td>
+                                <td>
+                                    Suspension Front:-  Telescopic with double anti friction bush,<br />
+                                    Suspension Rear:-   5 step adjustable Twin shock absorber
+                                </td>
+                                <td>169 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Honda H’ness CB350</td>
+                                <td>₹2.10 - 2.16 Lakh</td>
+                                <td>4 Stroke, SI Engine</td>
+                                <td>21.07 PS @@ 5500 rpm</td>
+                                <td>29.4 Nm @@ 3000 rpm</td>
+                                <td>
+                                    Suspension Front:-  Telescopic,<br />
+                                    Suspension Rear:- Twin - Hydraulic
+                                </td>
+                                <td>165 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Jawa Perak</td>
+                                <td>₹2.13 Lakh</td>
+                                <td>Single Cylinder, 4 Stroke, Liquid Cooled, DOHC</td>
+                                <td>39.9 PS</td>
+                                <td>30 Nm</td>
+                                <td>
+                                    Suspension Front:-  Telescopic Fork , ø 35 mm,<br />
+                                    Suspension Rear:-  Mono Shock Absorber, Gas Filled With 7 Step Adjustable preload
+                                </td>
+                                <td>145mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Suzuki Intruder 150</td>
+                                <td>₹1.16 lakhs</td>
+                                <td>4-stroke, 1-cylinder, Air-cooled</td>
+                                <td>14.8 PS @@ 8000 rpm</td>
+                                <td>14 Nm @@ 6000 rpm</td>
+                                <td>
+                                    Suspension Front:-  Telescopic,<br />
+                                    Suspension Rear:-  Swing Arm Type
+                                </td>
+                                <td>170 mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Choosing any of these top-tier cruiser bikes will undoubtedly enhance your long-distance riding adventures across India’s breathtaking landscapes while ensuring you do so in style and comfort.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

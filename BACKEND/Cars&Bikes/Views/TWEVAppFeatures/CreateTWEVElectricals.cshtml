@@ -1,0 +1,33 @@
+﻿ @model Cars_Bikes.Models.TWEVElectricals
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+
+
+                    <form asp-action="CreateTWEVElectricals" method="post">
+                        <select asp-for="TwoWheelerId" asp-items="ViewBag.TwoWheelers" class="form-control"></select>
+                        <select asp-for="TWVarientId" asp-items="ViewBag.TWVarients" class="form-control"></select>
+                        <input asp-for="TWName" class="form-control" placeholder="TW Name" />
+                        <input asp-for="Varients" class="form-control" placeholder="Varients" />
+                        <input asp-for="Headlight" class="form-control" placeholder="Headlight" />
+                        <input asp-for="TailLight" class="form-control" placeholder="Tail Light" />
+                        <input asp-for="TurnSignalLamp" class="form-control" placeholder="Turn Signal Lamp" />
+                        <input asp-for="LEDTailLights" class="form-control" placeholder="LED Tail Lights" />
+                        <input asp-for=" LowBatteryIndicator" class="form-control" placeholder=" Low Battery Indicator" />
+                        <button type="submit" class="btn btn-success mt-2">Save</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

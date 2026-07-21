@@ -1,0 +1,88 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Suzuki Burgman Street Electric Scooter – Specs & Features";
+}
+@section MetaTags{
+    <meta name="keywords" content="Suzuki Burgman Street Electric, Electric scooter specs, Burgman Street EV range, Suzuki electric scooter features, Eco-friendly scooters, Urban electric scooters" />
+    <meta name="description" content="Explore the Suzuki Burgman Street Electric scooter. Check its specs, range, features, and why it's a top choice for eco-friendly urban rides." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="overlay-black-middle" style=" background:linear-gradient(#475372, #78829A, #9EA3AD, #fff); margin:0;">
+    <img src="~/images/background/banner.png" />
+</div> *@
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" /></div> *@
+<!-- Breadcrumb row END -->
+@* <div class="car-details-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="nav">
+                    <ul>
+                        <li><a></a></li>
+                        <li class="active"><a href="car-details-overview.html">Overview</a></li>
+                        <li><a href="car-detail-specifications.html">Specifications</a></li>
+                        <li><a href="car-detail-price.html">Price</a></li>
+                        <li><a href="car-detail-compare.html">Compare</a></li>
+                        <li><a href="car-detail-pictures.html">Pictures</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+<body>
+    <div class=" ">
+    <h1 class="latest-bike-head">Upcoming Bikes</h1>
+    <div class="TWupcoming-container">
+        <div class="upcoming-bikes-details-image">
+            <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+            <div class="upcoming-bikes-details-text">
+                <h2>@Model.UpcomingBikeName</h2>
+                <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+            </div>
+        </div>
+
+        <div class="upcoming-bikes-details-content">
+            <h2>About @Model.UpcomingBikeName</h2>
+            @* <p>@Html.Raw(@Upbike.UpcomingBikeDetails.Replace("\n", "<br>"))</p> *@
+            <p>Suzuki Burgman Street Electric is expected to launch in India in September 2024 in the expected price range of ₹ 1,05,000 to ₹ 1,20,000. Currently available bikes which are similar to Burgman Street Electric are iVOOMi Jeet X, Kinetic Green Zulu & Odysse Racer. Another bike similar to Burgman Street Electric is Suzuki Access Electric which is launching in September 2024 in India.</p>
+            <p>Suzuki is readying itself to enter the Indian electric two-wheeler market with the electric version of its existing Burgman Street 125 petrol-powered scooter. It has been spied a couple of times until now, revealing some details ahead of its official launch.</p>
+            <p>The test mules of Suzuki’s electric scooter sported the design identical to its ICE counterpart. Everything from the bulbous front apron to the long free-flowing tail section has been retained. The only difference is the white and blue dual-tone colour scheme that’s not available in the conventional scooter.</p>
+            <p>Technical details of the Burgman Street electric aren’t known yet. It will most likely be a close rival to the likes of the TVS iQube and the Bajaj Chetak. Hence, expect a battery range to be in the ballpark of 60-80km with a similar top speed. It might also be as feature-loaded as its rivals with things like Bluetooth connectivity for pairing it with a smartphone. It remains to be seen if it supports fast-charging and gets battery-swapping functionality.</p>
+            <p>We expect the price of the Suzuki Burgman Street electric version to be close to the Rs1 lakh mark, maybe even lesser if it’s eligible for the FAME II subsidy.</p>
+        </div>
+    </div>
+    }
+    <!-- Bike 1 -->
+    <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allUpbike in ViewBag.allupcomingbike)
+        {
+            <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                <div class="upcoming-bikes-details-card">
+                    <div class="upcoming-bikes-all-image">
+                        <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                    </div>
+
+                    <div class="upcoming-allbikes-details-content">
+                        <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                        <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                        <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+    </div>
+</body>

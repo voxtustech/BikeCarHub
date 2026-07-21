@@ -1,0 +1,265 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Nexon vs Hyundai Venue: Compact SUV Face-Off 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Tata Nexon vs Hyundai Venue, Nexon vs Venue comparison 2025, best compact SUV India 2025, Tata Nexon price 2025, Hyundai Venue features 2025, Nexon vs Venue mileage, Nexon safety rating, Venue turbo petrol review, sub-4 meter SUV comparison, Tata vs Hyundai SUVs" />
+    <meta name="description" content="Detailed comparison of Tata Nexon vs Hyundai Venue in 2025. Compare engines, features, safety, prices and decide which compact SUV is best for your needs." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 3rd July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>Debuted in India in 2019 with a facelift in 2022, the Venue remains one of the most feature-rich compact SUVs. Available with petrol (NA and turbo) and diesel engines, it leverages Hyundai's Bluelink connected technology and handling-focused dynamics.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Engine & Powertrain Options</h2>
+
+                <h3 class="subheading">Tata Nexon</h3>
+                <ul>
+                    <li><span class="font-weight-700">Petrol (1.2L Revotron):</span> 1,199cc, 3-cyl turbo petrol delivering 120PS and 170Nm, with 6-speed MT, AMT, or 7-speed DCT</li>
+                    <li><span class="font-weight-700">Diesel (1.5L Revotorq):</span> 1,497cc, 4-cyl turbo diesel producing 115PS and 260Nm, with 6-speed MT or AMT</li>
+                    <li><span class="font-weight-700">CNG (1.2L):</span> Same petrol engine tuned to CNG, offering ~99PS</li>
+                </ul>
+
+                <h3 class="subheading">Hyundai Venue</h3>
+                <ul>
+                    <li><span class="font-weight-700">1.2L NA petrol (Kappa):</span> 1,197cc, 4-cyl, 83PS and 114Nm; 5-speed MT</li>
+                    <li><span class="font-weight-700">1.0L turbo petrol (Kappa T-GDi):</span> 998cc, 3-cyl turbo petrol delivering 118PS and 172Nm; 6-speed MT or 7-speed DCT</li>
+                    <li><span class="font-weight-700">1.5L diesel:</span> 1,493cc, producing 114PS and 250Nm; 6-speed MT</li>
+                </ul>
+
+                <p><span class="font-weight-700">Takeaway:</span> The Nexon's petrol and diesel offer strong performance with more torque and DCT for refinement. The Venue's turbo petrol is peppy and NA petrol is entry-level; diesel is only MT.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Fuel Efficiency (ARAI)</h2>
+                <ul>
+                    <li>
+                        <span class="font-weight-700">Nexon:</span>
+                        <ul>
+                            <li>Diesel: ~24 kmpl</li>
+                            <li>Petrol (manual/turbo): ~17 kmpl</li>
+                            <li>CNG: ~16.5-18 km/kg</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Venue:</span>
+                        <ul>
+                            <li>NA/Turbo petrol: ~17.5-18.3 kmpl</li>
+                            <li>Diesel: ~23.4 kmpl</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">Verdict:</span> Nexon diesel and Venue diesel deliver near-identical mileage. Venue's petrol trims are slightly more efficient, while Nexon CNG is economical for dual-fuel users.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Dimensions & Practicality</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Spec</th>
+                                <th class="text-center">Tata Nexon</th>
+                                <th class="text-center">Hyundai Venue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Length</td>
+                                <td>3,995mm</td>
+                                <td>3,995mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Width</td>
+                                <td>1,804mm</td>
+                                <td>1,770mm</td>
+                            </tr>
+                            <tr>
+                                <td>Wheelbase</td>
+                                <td>2,498mm</td>
+                                <td>2,500mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Ground Clearance</td>
+                                <td>208mm</td>
+                                <td>195mm</td>
+                            </tr>
+                            <tr>
+                                <td>Boot Space</td>
+                                <td>382L</td>
+                                <td>350L</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><span class="font-weight-700">Takeaway:</span> The Nexon offers better ground clearance and a larger boot—suiting road trips and rougher surfaces—while Venue has a compact, city-friendly size.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Safety & Features</h2>
+
+                <h3 class="subheading">Tata Nexon</h3>
+                <ul>
+                    <li>5-star Global NCAP rating</li>
+                    <li>6 airbags standard on top variants</li>
+                    <li>ABS + EBD, ESC, ISOFIX child seat anchors</li>
+                    <li>360° camera, hill hold assist</li>
+                    <li>Ventilated front seats, sunroof</li>
+                    <li>Wireless charger, connected IRA tech</li>
+                </ul>
+
+                <h3 class="subheading">Hyundai Venue</h3>
+                <ul>
+                    <li>6 airbags on top variants</li>
+                    <li>ABS + EBD, ESC, HAC (Hill Assist Control), VSM (Vehicle Stability Management)</li>
+                    <li>Rear camera/sensors, electro-chromic IRVM on select trims</li>
+                    <li>Bluelink connected services (60+ functions, voice control)</li>
+                    <li>Ambient lighting, air purifier, Bose audio (N Line)</li>
+                    <li>Sunroof, dual cameras (N Line), multiple drive modes</li>
+                </ul>
+
+                <p><span class="font-weight-700">Judgment:</span> Both are packed with tech and safety gear. Nexon's crash rating, ventilated seats, and digital cluster make it stand out; Venue counters with premium connected features and driving aids.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Ride & Handling</h2>
+                <h3 class="subheading">Tata Nexon</h3>
+                <p>Independent front suspension and twist beam rear; firm and secure with good feedback. The 208mm clearance helps handle potholes and inclines. Drive modes enhance versatility.</p>
+
+                <h3 class="subheading">Hyundai Venue</h3>
+                <p>MacPherson front, coupled rear; comfortable ride tuned for city roads. Turbo petrol and diesel offer lively drive; iMT provides smooth gearshifts; DCT is quick though occasional jerk noted.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Price (Ex-showroom India)</h2>
+                <ul>
+                    <li><span class="font-weight-700">Nexon:</span> ₹7.99 - ₹15.60L (varies across petrol, diesel, CNG; manual, AMT, DCT)</li>
+                    <li><span class="font-weight-700">Venue:</span> ₹7.94 - ₹13.62L for regular trims; N Line from ~₹12.14L; diesel max ~₹16.20L</li>
+                </ul>
+                <p><span class="font-weight-700">Bottom Line:</span> Venue's base models start lower but Nexon spans into higher ranges due to premium diesel/CNG and features. Venue offers better entry-level pricing.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Real-World Appeal & Sales</h2>
+                <ul>
+                    <li><span class="font-weight-700">Nexon:</span> Tata's best-selling SUV with over 168k units sold in 2022, thanks to its strong safety, feature set, and driving feel.</li>
+                    <li><span class="font-weight-700">Venue:</span> More than 120k units sold in 2022; praised for its tech and youthful appeal.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Verdict: Choose What Suits You</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Priority</th>
+                                <th class="text-center">Choose Tata Nexon</th>
+                                <th class="text-center">Choose Hyundai Venue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Safety rating & protective gear</td>
+                                <td>5★ GNCAP, 360° cam, ventilated seats</td>
+                                <td>6 airbags, ESC, HAC, VSM</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Ground clearance & boot space</td>
+                                <td>208mm, 382L boot — rugged & spacious</td>
+                                <td>195mm, 350L boot — compact & city-friendly</td>
+                            </tr>
+                            <tr>
+                                <td>Engine flexibility</td>
+                                <td>Petrol, diesel, CNG + DCT/AMT</td>
+                                <td>NA/turbo petrol, diesel options + iMT/DCT</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Fuel efficiency</td>
+                                <td>Diesel ~24kmpl, CNG way up</td>
+                                <td>Diesel ~23.4kmpl; petrol ~17-18kmpl</td>
+                            </tr>
+                            <tr>
+                                <td>Connected tech & features</td>
+                                <td>Robust features, digital cluster, sunroof</td>
+                                <td>Bluelink, ambient lighting, Bose, dual cams</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Price range</td>
+                                <td>Covers ₹9-15L — packs options</td>
+                                <td>Starts ₹7.9L & competitive trims</td>
+                            </tr>
+                            <tr>
+                                <td>After-sales & servicing</td>
+                                <td>Growing Tata network, slightly fewer than Hyundai</td>
+                                <td>Hyundai's established global network</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Takeaway</h2>
+                <p><span class="font-weight-700">Choose the Tata Nexon if you:</span></p>
+                <ul>
+                    <li>Prioritize top-tier safety (5★ Global NCAP)</li>
+                    <li>Want turbo petrol/diesel power or CNG flexibility with DCT refinement</li>
+                    <li>Need higher ground clearance and more boot space</li>
+                </ul>
+
+                <p><span class="font-weight-700">Opt for the Hyundai Venue if you:</span></p>
+                <ul>
+                    <li>Prefer lower starting price and compact city dimensions</li>
+                    <li>Want advanced connected car tech (Bluelink)</li>
+                    <li>Prefer smoother turbo/diesel experience with DCT option</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <p><span class="font-weight-700">BikeCarHub</span> recommends test driving both SUVs to experience their differences firsthand before making your purchase decision.</p>
+                <p>Check other vehicle comparisons on <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></p>
+
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

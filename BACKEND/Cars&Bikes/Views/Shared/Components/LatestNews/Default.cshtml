@@ -1,0 +1,43 @@
+﻿@model List<Cars_Bikes.Models.TWLatestNews>
+
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+
+<div class="blogs-section">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 blog-head-box">
+            <div class="blog-head">
+                <h1><a asp-controller="LatestNews" asp-action="Index">Latest News</a></h1>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-10 blogs-section">
+            <button class="scroll-button left" onclick="scrollContainer('lnContainer', -1)">&#9664;</button>
+            <div class="blogs-container" id="lnContainer">
+                @foreach (var news in Model)
+                {
+                    <div class="blogs-item">
+
+                       
+                        <center> <div class="upcoming-bike-img"><img src="@news.ImageFolderURL" alt="@news.NewsHeading" loading="lazy" title="@news.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("/images/twowheeler/default.jpg")';" /></div></center>
+                        <div class="latest-news-content">
+                            <div class="latest-news-heading"><a href="/@news.ImageURL" title="Bike post" style="text-decoration:none;"><p>@Truncate(news.NewsHeading, 77)</p></a> </div>
+                            <div class="latest-news-summary"><p>BikeCarHub | <i class="fa fa-calendar"></i>  @news.Date?.ToString("d MMM yyyy")</p></div>
+                            <div class="ow-post-readmore">
+                                <a href="/@news.ImageURL" rel="bookmark"> Read More <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+            </div>
+            <button class="scroll-button right" onclick="scrollContainer('lnContainer', 1)">&#9654;</button>
+        </div>
+    </div>
+</div>

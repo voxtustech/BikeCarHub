@@ -1,0 +1,283 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "New Driving Rules in India 2025 | Complete Guide for Drivers";
+}
+@section MetaTags {
+    <meta name="keywords" content="new driving rules in India 2025, India traffic rules 2025, fines for speed limit India, digital driving license India, helmet rules 2025, e-challan India 2025, traffic rule changes India, seat belt fine India" />
+    <meta name="description" content="Stay updated with new driving rules in India 2025. Learn about speed limits, fines, helmet rules, digital licenses, and safety tips. Full guide by BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 4th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+
+
+                <p>This detailed guide by BikeCarHub provides an easy-to-understand overview of all the<span class="font-weight-700"> latest driving rules in India in 2025.</span> Whether someone is a daily commuter, a long-distance traveler, or a new driver, this article will help them stay compliant with the law and avoid unnecessary penalties.</p>
+
+                <h2 class="subheading">Why New Driving Rules Were Introduced in 2025</h2>
+                <ul>
+                    <li><span class="font-weight-700">Increase in Road Accidents:</span> The number of road accidents in India continues to rise, pushing authorities to enforce stricter safety measures.</li>
+                    <li><span class="font-weight-700">Pollution Control:</span> Vehicle fitness and scrappage policies have been introduced to reduce pollution levels, especially from older vehicles.</li>
+                    <li><span class="font-weight-700">Digitalization:</span> The transport department is moving towards digital processes like e-challans and paperless documents to make enforcement smoother.</li>
+                    <li><span class="font-weight-700">Traffic Discipline:</span> The government is aiming to create a culture of responsible and law-abiding drivers on Indian roads.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Key New Driving Rules in India 2025</h2>
+               
+
+                <h3 class="subheading">1. Stricter Speed Limit Enforcement</h3>
+                <p>New AI-based speed cameras have been installed across highways and cities to automatically detect speed violations. Speeding fines have been significantly increased, and repeat offenders may face license suspension.</p>
+
+                <h3 class="subheading">2. Mandatory Seat Belt for All Passengers</h3>
+                <p>It is now compulsory for rear-seat passengers to wear seat belts. Failing to follow this rule can result in hefty fines for both the passenger and the driver.</p>
+
+                <h3 class="subheading">3. Heavy Penalties for Mobile Phone Usage While Driving</h3>
+                <p>Using mobile phones while driving is now a serious offence. The fines have doubled in 2025, and in some cases, the driver's license may be temporarily suspended for repeated violations.</p>
+
+                <h3 class="subheading">4. New Helmet Rules for Two-Wheeler Riders</h3>
+                <p>Both the rider and pillion on two-wheelers must wear BIS-certified helmets. Non-compliance will lead to immediate fines, and using substandard helmets is also punishable.</p>
+
+                <h3 class="subheading">5. Revised Learner's License Process</h3>
+                <p>Getting a learner's license in 2025 has become easier with online application and testing. However, the new system is stricter, ensuring drivers understand road safety before getting a permanent license.</p>
+
+                <h3 class="subheading">6. Changes in Vehicle Registration and Fitness Validity</h3>
+                <p>Old vehicles now need to pass regular fitness tests. If a vehicle fails the test, it may need to be scrapped under the new vehicle scrappage policy. Private vehicles older than 15 years must undergo mandatory inspections.</p>
+
+                <h3 class="subheading">7. Digital Driving License and RC Validity</h3>
+                <p>Drivers can now legally carry digital copies of their driving license and RC using government apps like mParivahan and DigiLocker. Physical copies are no longer mandatory if verified through these apps.</p>
+
+                <h3 class="subheading">8. Electric Vehicle (EV) Friendly Policies</h3>
+                <p>Some cities in India are introducing special lanes and parking spots for electric vehicles. Additionally, EV owners may receive discounts on toll charges and road tax.</p>
+
+                <div class="div-line"></div>
+                <h3 class="subheading">Penalties and Fine Structure in 2025</h3>
+                <p>The fines for traffic violations have been updated. Below is a quick look at some of the key fines as per the 2025 driving rules:</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/new driving rules/fine amount.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <div class="div-line"></div>
+                <h2 class="subheading">Technology-Driven Enforcement in 2025</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/new driving rules/hefty fine.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p>The transport authorities in India have upgraded their traffic enforcement systems in 2025. New technologies now play a major role in catching violators quickly.</p>
+                <ul>
+                    <li><span class="font-weight-700">AI-Based Speed Cameras:</span> Automatically detect and record over-speeding.</li>
+                    <li><span class="font-weight-700">Automated Number Plate Recognition (ANPR):</span> Instantly identifies vehicles breaking the rules.</li>
+                    <li><span class="font-weight-700">E-Challan System:</span> Paperless fines are directly sent to the violator's registered mobile number.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">How to Adapt to the New Driving Rules</h2>
+                <ul>
+                    <li><span class="font-weight-700">Stay Updated:</span> Regularly follow official transport websites and apps for rule changes.</li>
+                    <li><span class="font-weight-700">Use Digital Apps:</span> Apps like mParivahan and DigiLocker help store legal digital documents.</li>
+                    <li><span class="font-weight-700">Practice Responsible Driving:</span> Avoid distractions, always follow speed limits, and prioritize safety.</li>
+                    <li><span class="font-weight-700">Check Vehicle Fitness:</span> Especially for older vehicles, timely fitness checks are now essential to avoid fines.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Benefits of the New Driving Rules for Indian Roads</h2>
+                <ul>
+                    <li><span class="font-weight-700">Safer Roads:</span> Stricter enforcement will help reduce accidents.</li>
+                    <li><span class="font-weight-700">Cleaner Environment:</span> New vehicle fitness rules will help control pollution.</li>
+                    <li><span class="font-weight-700">Digital Convenience:</span> Digital documents reduce paperwork and make compliance easier.</li>
+                    <li><span class="font-weight-700">Better Traffic Management:</span> Technology-driven enforcement ensures traffic rules are followed more seriously.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Stay Updated, Stay Safe – BikeCarHub’s Advice</h2>
+                <p>The <span class="font-weight-700">new driving rules in India 2025</span> reflect the government’s serious efforts to improve road safety, traffic management, and environmental sustainability. By following these updated guidelines, drivers can not only avoid heavy fines but also contribute to safer roads for everyone.</p>
+                <p> <span class="font-weight-700">BikeCarHub</span> encourages all drivers to stay informed, use digital tools, and prioritize safe driving habits. Staying compliant is not just about avoiding penalties—it’s about protecting lives.</p>
+                <h2 class="subheading">FAQs - New Driving Rules in India 2025</h2>
+
+                <div class="accordion" id="faqDrivingRules">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Are digital driving licenses valid in India in 2025?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqDrivingRules">
+                            <div class="accordion-body">
+                                Yes, digital licenses stored in mParivahan or DigiLocker are legally valid.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. What is the new speed limit in Indian cities?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqDrivingRules">
+                            <div class="accordion-body">
+                                The speed limit varies by city and road type but is now strictly enforced using AI-based cameras.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Is wearing a helmet mandatory for pillion riders?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqDrivingRules">
+                            <div class="accordion-body">
+                                Yes, both the rider and the pillion must wear BIS-certified helmets.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Can I drive an old vehicle in 2025?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqDrivingRules">
+                            <div class="accordion-body">
+                                Yes, but the vehicle must pass fitness tests and comply with scrappage policy guidelines.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. What is the fine for using a mobile phone while driving?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqDrivingRules">
+                            <div class="accordion-body">
+                                The fine for using a mobile phone while driving is ₹5,000, and repeated violations may lead to license suspension.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Are rear seat belts mandatory in 2025?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqDrivingRules">
+                            <div class="accordion-body">
+                                Yes, wearing seat belts is now mandatory for all passengers, including those in the back seat.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. How can I pay traffic fines in 2025?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqDrivingRules">
+                            <div class="accordion-body">
+                                Fines can be paid online via the e-challan portal or mParivahan app.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Do I need to carry physical copies of documents?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqDrivingRules">
+                            <div class="accordion-body">
+                                No, digital copies in government-approved apps are accepted by traffic police.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Are there any benefits for electric vehicle owners?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqDrivingRules">
+                            <div class="accordion-body">
+                                Yes, EV owners may enjoy reduced toll charges and exclusive parking benefits in some cities.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Can I apply for a learner's license online?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqDrivingRules">
+                            <div class="accordion-body">
+                                Yes, the learner's license process is now fully online with digital tests.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Stay Updated, Stay Safe - BikeCarHub's Advice</h2>
+                <p>The <span class="font-weight-700">new driving rules in India 2025</span> reflect the government's serious efforts to improve road safety, traffic management, and environmental sustainability. By following these updated guidelines, drivers can not only avoid heavy fines but also contribute to safer roads for everyone.</p>
+                <p><span class="font-weight-700">BikeCarHub</span> encourages all drivers to stay informed, use digital tools, and prioritize safe driving habits. Staying compliant is not just about avoiding penalties—it's about protecting lives.</p>
+
+                <div class="div-line"></div>
+                
+                <p></p>
+                <p><span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+              
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

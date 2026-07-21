@@ -1,0 +1,52 @@
+﻿@model Cars_Bikes.Models.TWSafety
+
+@{
+    ViewData["Title"] = "Edit Two Wheeler Safety";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-lg p-4" style="width: 600px;">
+        <h2 class="text-center mb-4">Edit Safety Features</h2>
+
+        <form asp-action="EditTWSafety" method="post">
+            <input type="hidden" asp-for="TWSafetyId" />
+
+            <div class="form-group">
+                <label asp-for="TwoWheelerId"></label>
+                <select asp-for="TwoWheelerId" class="form-control" asp-items="ViewBag.TwoWheelers"></select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TWVarientId"></label>
+                <select asp-for="TWVarientId" class="form-control" asp-items="ViewBag.TWVarients"></select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PassSwitch"></label>
+                <input asp-for="PassSwitch" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EngineKillSwitch"></label>
+                <input asp-for="EngineKillSwitch" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Display"></label>
+                <input asp-for="Display" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AdditionalFeatures"></label>
+                <input asp-for="AdditionalFeatures" class="form-control" />
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success px-4">Save Changes</button>
+                <a asp-action="ListTWSafety" class="btn btn-secondary ml-2">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>

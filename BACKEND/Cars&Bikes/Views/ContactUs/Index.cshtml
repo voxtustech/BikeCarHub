@@ -1,0 +1,225 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model TWOrFWContactUs
+@{
+    ViewData["Title"] = "Contact BikeCarHub";
+}
+@section MetaTags {
+    <meta name="keywords" content="Contact bikecarhub, Contact for bike,Contact for  new bikes,Contact for  bike comparison,Contact for bikes prices" />
+    <meta name="description" content="If you want to know about the  latest bikes and cars  contact BikeCarHub." />
+    }
+@if (TempData["success"] != null)
+{
+    @TempData["success"];
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    @*<div class="aboutus-text m-t70">*@
+    <!--<div class="container aboutus-text m-t70">
+        <h1>Contact BikeCarHub</h1>
+        <p>Have questions, feedback, or suggestions? We'd love to hear from you. Use the contact form below or reach us directly by email.<br /><br /><span class="font-weight-700">Email:</span> <a href="mailto:info@bikecarhub.com">info@bikecarhub.com</a> <br /><span class="font-weight-700">Support Hours: </span>Monday to Friday, 10:00 AM – 6:00 PM IST</p>
+        <div class="row contact-details-container">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class=" contact-details-info">
+                            <i class="bi bi-geo-alt"></i>
+                            <h3>Our Address</h3>
+                            <p>
+                                Lane No 5F, Shivraj Nagar,
+                                Badonwala, Uttarakhand, 248007
+                                India
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class=" contact-details-info">
+                            <i class="bi bi-envelope"></i>
+                            <h3>Email Us</h3>
+                            <p>info@voxtus.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class=" contact-details-info">
+                            <i class="bi bi-telephone"></i>
+                            <h3>Call Us</h3>
+                            <p>+918630235507<br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+    @*<div class="col-lg-6 p-5">*@
+    <!--<div class="col-lg-6 mt-4 mt-lg-0 ps-lg-4">
+                <p class="text-center">@TempData["success"]</p>
+                <p><span class="font-weight-700">Send Us a Message</span><br />(Please fill out the following details)</p>
+                <form asp-action="Index" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhoneNo"></label>
+                        <input asp-for="PhoneNo" class="form-control" />
+                        <span asp-validation-for="PhoneNo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Message"></label>
+                        <textarea asp-for="Message" class="form-control"></textarea>
+                        <span asp-validation-for="Message" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="contact-form-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>-->
+    <div class="container aboutus-text">
+
+        <div class="contact-page-header">
+            <h1>Contact BikeCarHub</h1>
+
+            <p class="contact-subtitle">
+                Have questions about bikes, cars, comparisons, pricing, or suggestions?
+                Our team is here to help you with the latest updates, vehicle information,
+                and support related to BikeCarHub.
+            </p>
+
+            <p class="contact-subtitle">
+                Whether you're looking for bike or car information, comparing vehicles,
+                checking prices, or exploring the latest automotive updates,
+                our team is here to assist you with accurate and reliable guidance.
+                At BikeCarHub, we focus on delivering simple, trustworthy,
+                and user-friendly automotive content to help users make smarter decisions.
+                Feel free to reach out with your questions, feedback, or suggestions.
+            </p>
+            <div class="contact-mini-info">
+                <p>
+                    <strong>Email:</strong>
+                    info@bikecarhub.com
+                </p>
+
+                <p>
+                    <strong>Support Hours:</strong>
+                    Monday – Friday | 10:00 AM – 6:00 PM IST
+                </p>
+            </div>
+        </div>
+
+        <div class="row contact-details-container">
+
+            <!-- LEFT SIDE -->
+            <div class="col-lg-6 ps-lg-5">
+
+                <div class="row g-4">
+
+                    <div class="col-12">
+                        <div class="contact-details-info">
+                            <i class="bi bi-geo-alt"></i>
+
+                            <h3>Our Office Address</h3>
+
+                            <p>
+                                Lane No 5F, Shivraj Nagar,Badonwala, Uttarakhand – 248007, India
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="contact-details-info">
+                            <i class="bi bi-envelope"></i>
+
+                            <h3>Email Support</h3>
+
+                            <p>
+                                info@bikecarhub.com<br />
+                                Reply within 24 hours
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="contact-details-info">
+                            <i class="bi bi-telephone"></i>
+
+                            <h3>Call Us</h3>
+
+                            <p>
+                                +91 8630235507<br />
+                                Mon – Fri Support
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="col-lg-6 mt-4 mt-lg-0 ps-lg-5">
+
+                <div class="contact-form-wrapper">
+
+                    <div class="form-header">
+                        <h2>Send Us a Message</h2>
+                        <p>
+                            Fill out the form below and our team will get back to you shortly.
+                        </p>
+                    </div>
+
+                    <form asp-action="Index" method="post" class="contact-form">
+
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" class="form-control"
+                                   placeholder="Enter your full name" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PhoneNo"></label>
+                            <input asp-for="PhoneNo" class="form-control"
+                                   placeholder="Enter your phone number" />
+                            <span asp-validation-for="PhoneNo" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" class="form-control"
+                                   placeholder="Enter your email address" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Message"></label>
+                            <textarea asp-for="Message"
+                                      class="form-control"
+                                      rows="5"
+                                      placeholder="Write your message here..."></textarea>
+
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="contact-form-button">
+                            Submit Message
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- ======= Map Section ======= -->
+
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.698022623495!2d77.95684897436816!3d30.302657306292677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092b8e81ce4f09%3A0xf5e6934c439d9ddd!2sVoxtus%20Technologies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1687276744381!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        @* <iframe src="https://www.google.com/maps/d/embed?mid=1_PaWhMud5q-PyzyvwaB_FEEs_ZfBSNo&ehbc=2E312F" width="640" height="480"></iframe> *@
+    </div>
+    <!-- End Map Section -->
+</body>

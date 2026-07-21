@@ -1,0 +1,31 @@
+﻿@model CompareViewModel
+
+@{
+    ViewData["Title"] = "Apache RR310 vs Bullet 350 – Style vs Power";
+}
+@section MetaTags {
+    <meta name="keywords" content="TVS Apache RR310 vs Bullet 350, RR310 vs Bullet 350 comparison, Apache RR310 specs 2025, Bullet 350 vs RR310 mileage, Royal Enfield Bullet 350 review, Apache RR310 top speed, Bullet 350 vs Apache RR310 performance, Modern bike vs retro bike comparison, RR310 vs Bullet 350 which is better, Apache RR310 vs Royal Enfield features, Bullet 350 2025 model price, Apache RR310 vs Bullet comfort, TVS vs Royal Enfield bikes, Best 300cc bike in India 2025, Bullet 350 vs RR310 ride quality " />
+    <meta name="description" content="Compare TVS Apache RR310 and Royal Enfield Bullet 350 on specs, mileage, features & price. Find out which bike fits your personality and purpose in 2025. " />
+}
+<div class=" ">
+    
+    <!-- Use shared comparison table -->
+    @Html.PartialAsync("_CompareTable", Model)
+</div>
+<p>first paragraph</p>
+@* <div class="google-ad">
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:1000px;height:200px"
+         data-ad-client="ca-pub-8720291170595920"
+         data-ad-slot="6204553210">
+    </ins>
+</div>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script> *@
+
+<p>second paragraph</p>
+@await Component.InvokeAsync("AllBlog")
+@await Html.PartialAsync("_AllComponent")
+@* @await Html.PartialAsync("_AllViewComponent")   *@
+<p>third paragraph</p>

@@ -1,0 +1,123 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model TwoWheelerBrand
+
+@{
+    ViewData["Title"] = "Add Brand";
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+
+
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <h2 class="text-center mb-4">Add New Brand</h2>
+
+                    <form asp-action="Create" method="post">
+
+                        <div class="mb-3">
+                            <label asp-for="BrandName" class="form-label">Brand Name</label>
+                            <input asp-for="BrandName" class="form-control" required />
+                            <span asp-validation-for="BrandName" class="text-danger"></span>
+                        </div>
+                        @*
+                        <div class="form-check mb-3">
+                            <input asp-for="IsPetrol" class="form-check-input" type="checkbox" />
+                            <label asp-for="IsPetrol" class="form-check-label">Is Petrol?</label>
+                            <span asp-validation-for="BrandName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input asp-for="IsEV" class="form-check-input" type="checkbox" />
+                            <label asp-for="IsEV" class="form-check-label">Is EV?</label>
+                            <span asp-validation-for="BrandName" class="text-danger"></span>
+                        </div>
+                        *@
+                        <div class="form-check mb-3">
+                            <input name="IsPetrol" class="form-check-input" type="checkbox" value="true" @(Model?.IsPetrol == true ? "checked" : "") />
+                            <label class="form-check-label">Is Petrol?</label>
+                            <span asp-validation-for="IsPetrol" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input name="IsEV" class="form-check-input" type="checkbox" value="true" @(Model?.IsEV == true ? "checked" : "") />
+                            <label class="form-check-label">Is EV?</label>
+                            <span asp-validation-for="IsEV" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="BrandLogoURL" class="form-label">Brand Logo URL</label>
+                            <input asp-for="BrandLogoURL" class="form-control" />
+                            <span asp-validation-for="BrandName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Discription" class="form-label">Description</label>
+                            <textarea asp-for="Discription" class="form-control"></textarea>
+                            <span asp-validation-for="BrandName" class="text-danger"></span>
+                        </div>
+                        @*
+                        <div class="form-check mb-3">
+                            <input asp-for="IsFWBrand" class="form-check-input" type="checkbox" />
+                            <label asp-for="IsFWBrand" class="form-check-label">Is FW Brand?</label>
+                            <span asp-validation-for="BrandName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input asp-for="IsTWBrand" class="form-check-input" type="checkbox" />
+                            <label asp-for="IsTWBrand" class="form-check-label">Is TW Brand?</label>
+                            <span asp-validation-for="BrandName" class="text-danger"></span>
+                        </div>
+                        *@
+                        <div class="form-check mb-3">
+                            <input name="IsFWBrand" class="form-check-input" type="checkbox" value="true" @(Model?.IsFWBrand == true ? "checked" : "") />
+                            <label class="form-check-label">Is FW Brand?</label>
+                            <span asp-validation-for="IsFWBrand" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input name="IsTWBrand" class="form-check-input" type="checkbox" value="true" @(Model?.IsTWBrand == true ? "checked" : "") />
+                            <label class="form-check-label">Is TW Brand?</label>
+                            <span asp-validation-for="IsTWBrand" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="MetaDescription" class="form-label">Meta Description</label>
+                            <input asp-for="MetaDescription" class="form-control" />
+                            <span asp-validation-for="BrandName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="MetaKeywords" class="form-label">Meta Keywords</label>
+                            <input asp-for="MetaKeywords" class="form-control" />
+                            <span asp-validation-for="BrandName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="TitleTag" class="form-label">Title Tag</label>
+                            <input asp-for="TitleTag" class="form-control" />
+                            <span asp-validation-for="BrandName" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">Save Brand</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>

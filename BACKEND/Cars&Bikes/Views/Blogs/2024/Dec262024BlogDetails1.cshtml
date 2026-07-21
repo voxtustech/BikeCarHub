@@ -1,0 +1,149 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "The All-New Kia Syros: A Comprehensive Review";
+}
+@section MetaTags{
+    <meta name="keywords" content="Kia Syros, Kia SUV, Kia Syros Review, SUV Features, Kia Syros Pricing, Fuel Efficiency, SUV Safety" />
+    <meta name="description" content="Discover the standout features of the Kia Syros, including its bold design, luxurious interiors, advanced safety, and performance options. A perfect blend of style and practicality for SUV enthusiasts." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                 <h3 class="subheading">Table of Contents-</h3>
+                <ol>
+                    <li>Introduction</li>
+                    <li>Exterior Design</li>
+                    <li>Interior Features</li>
+                    <li>Performance and Engine Options</li>
+                    <li>Safety and Technology</li>
+                    <li>Fuel Efficiency</li>
+                    <li>Pricing and Variants</li>
+                    <li>Conclusion</li>
+                </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/theallnewkiasyrosacomprehensivereview/main.webp" alt="Kia Syros" title="Kia Syros" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading">1. Introduction</h3>
+                <p>Kia has unveiled its latest SUV, the Kia Syros, which promises to redefine the driving experience with a blend of modern design, advanced technology, and reliable performance. Designed to cater to urban adventurers and families alike, the Syros stands out in a competitive market with its unique offerings. This blog dives deep into what makes the Kia Syros a game-changer.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">2. Exterior Design</h3>
+                <p>The Kia Syros features a bold and futuristic design. Its signature tiger-nose grille, coupled with sleek LED headlamps and dynamic lines, makes a striking first impression. The SUV also boasts 18-inch alloy wheels, a panoramic sunroof, and sporty accents that give it a premium look. With multiple color options, including metallic and dual-tone finishes, the Syros is designed to turn heads on every road.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/theallnewkiasyrosacomprehensivereview/exterior design.webp" alt="Exterior Design" title="Exterior Design" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/theallnewkiasyrosacomprehensivereview/sunroof.webp" alt="Sunroof" title="Sunroof" /></div>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading">3. Interior Features</h3>
+                <p>Step inside the Kia Syros, and you’re greeted with a spacious, luxurious cabin. The SUV is equipped with plush leather seats, ambient lighting, and a customizable infotainment system. Key features include a 10.25-inch touchscreen display, Apple CarPlay, Android Auto, and wireless charging. With ample legroom and cargo space, the Syros ensures comfort for long journeys and daily commutes alike.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/theallnewkiasyrosacomprehensivereview/interior features1.webp" alt="Interior Features1" title="Interior Features1" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/theallnewkiasyrosacomprehensivereview/interior features2.webp" alt="Interior Features2" title="Interior Features2" /></div>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading">4. Performance and Engine Options</h3>
+                <p>Under the hood, the Kia Syros offers multiple engine options to cater to varied driving preferences. The base variant comes with a 1.5L petrol engine, while the higher trims offer a 1.4L turbocharged petrol and a 1.6L diesel engine. Both manual and automatic transmission options are available, ensuring a seamless driving experience. The Syros also includes driving modes such as Eco, Sport, and Comfort to adapt to different terrains and conditions.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2024/theallnewkiasyrosacomprehensivereview/performance and engine options.webp" alt="Performance and Engine Options" title="Performance and Engine Options" /></div>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading">5. Safety and Technology</h3>
+                <p>Safety is a top priority for Kia, and the Syros is no exception. It is equipped with advanced safety features like:</p>
+                <ul>
+                    <li>Six airbags</li>
+                    <li>ABS with EBD</li>
+                    <li>Lane Keep Assist</li>
+                    <li>Blind Spot Monitoring</li>
+                    <li>360-degree camera</li>
+                </ul>
+                <p>Additionally, the Syros incorporates cutting-edge technology, including a voice command system, adaptive cruise control, and over-the-air software updates.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2024/theallnewkiasyrosacomprehensivereview/safety and technology1.webp" alt="Safety and Technology1" title="Safety and Technology1" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2024/theallnewkiasyrosacomprehensivereview/safety and technology2.webp" alt="Safety and Technology2" title="Safety and Technology2" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2024/theallnewkiasyrosacomprehensivereview/safety and technology3.webp" alt="Safety and Technology3" title="Safety and Technology3" /></div>
+                </div>
+                <div class="div-line"></div>
+                <h3 class="subheading">6. Fuel Efficiency</h3>
+                <p>The Kia Syros delivers impressive fuel efficiency, making it an economical choice for daily drivers. The petrol variant provides an average mileage of 18 km/l, while the diesel engine offers up to 22 km/l, depending on driving conditions. These figures ensure that the Syros is both environmentally friendly and cost-effective.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">7. Pricing and Variants</h3>
+                <p>The Kia Syros is available in multiple trims to suit diverse budgets and needs. Here’s a breakdown of the pricing:</p>
+                <ul>
+                    <li><span class="font-weight-700">Base Variant:</span> Starting at 10 Lakhs</li>
+                    <li><span class="font-weight-700">Mid Variant:</span> Starting at 13 Lakhs</li>
+                    <li><span class="font-weight-700">Top Variant:</span> Starting at 16 Lakhs</li>
+                </ul>
+                <p>With competitive pricing and a plethora of features, the Syros offers great value for money.</p>
+                <div class="div-line"></div>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

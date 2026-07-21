@@ -1,0 +1,192 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Kawasaki KLX 230 vs Hero Xpulse 200 4V – Specs, Features, and Price Comparison in India";
+}
+@section MetaTags{
+    <meta name="keywords" content="Kawasaki KLX 230 vs Hero Xpulse 200 4V, adventure bike comparison India, dual-sport bikes India, Kawasaki KLX 230 price, Hero Xpulse 200 4V specs, off-road motorcycles India, best adventure bikes India 2024" />
+    <meta name="description" content="Compare the Kawasaki KLX 230 and Hero Xpulse 200 4V in terms of specifications, features, hardware, and cost in India. Discover the key differences and find out which adventure bike is best suited for you." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. Kawasaki KLX 230</h3>
+                        <p><span class="font-weight-700">Price:</span> ₹ 2,50,000 (ex-showroom)</p>
+                        <p>The Kawasaki KLX 230 is a purpose-built dual-sport motorcycle designed for hardcore off-roaders. It's a lightweight bike, excelling in off-road performance, but comes at a premium price.</p>
+                        <h3 class="subheading">Specifications:</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 233 cc, single-cylinder, air-cooled, SOHC
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 18.1 PS @@ 8000 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 18.3 Nm @@ 6400 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Transmission:</span> 6-speed gearbox
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Tank Capacity:</span> 7.6 litres
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Seat Height:</span> 880 mm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 265 mm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Kerb Weight:</span> 139 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>Full digital instrument cluster</li>
+                            <li>Long-travel suspension (front telescopic fork, rear mono-shock)</li>
+                            <li>Lightweight frame optimized for off-road use</li>
+                            <li>High ground clearance for better obstacle handling</li>
+                            <li>Electric start</li>
+                            <li>Enduro-style design</li>
+                        </ol>
+                        <h3 class="subheading">Hardware:</h3>
+                        <ol>
+                            <li><span class="font-weight-700">Brakes:</span> Front and rear petal disc brakes (ABS)</li>
+                            <li><span class="font-weight-700">Suspension:</span> Front - 37 mm telescopic fork, Rear - Uni-Trak adjustable monoshock</li>
+                            <li><span class="font-weight-700">Tyres:</span> Off-road-focused tyres (21-inch front, 18-inch rear)</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/latestnews/2024/oct/kawasaki klx 230 vs hero xpulse 200 4v a complete specifications, features, and cost comparison in india/kawasaki klx 230.webp" /></center></div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. Hero Xpulse 200 4V</h3>
+                        <p><span class="font-weight-700">Price:</span> ₹ 1,47,391 (ex-showroom)</p>
+                        <p>The Hero Xpulse 200 4V is an entry-level adventure motorcycle aimed at riders who want a versatile, budget-friendly machine capable of handling both city roads and off-road trails.</p>
+                        <h3 class="subheading">Specifications:</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 199.6 cc, oil-cooled, single-cylinder, 4-valve
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 19.17 PS @@ 8500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 17.35 Nm @@ 6500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Transmission:</span> 5-speed gearbox
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Fuel Tank Capacity:</span> 13 litres
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Seat Height:</span> 825 mm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 220 mm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Kerb Weight:</span> 159 kg
+                            </li>
+                        </ol>
+                        <h3 class="subheading">Features:</h3>
+                        <ol>
+                            <li>Full-LED headlamp and tail lamp</li>
+                            <li>Bluetooth-enabled instrument cluster with navigation</li>
+                            <li>Adjustable rear suspension</li>
+                            <li>Multiple ride modes (Rally kit available as an upgrade)</li>
+                            <li>Single-channel ABS</li>
+                            <li>Dual-purpose tyres for mixed terrain</li>
+                        </ol>
+                        <h3 class="subheading">Hardware:</h3>
+                        <ol>
+                            <li><span class="font-weight-700">Brakes:</span> Front and rear disc brakes with single-channel ABS</li>
+                            <li><span class="font-weight-700">Suspension:</span> Front - 37 mm telescopic fork with 190 mm travel, Rear - 10-step adjustable monoshock with 170 mm travel</li>
+                            <li><span class="font-weight-700">Tyres:</span> Dual-purpose tyres (21-inch front, 18-inch rear)</li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/latestnews/2024/oct/kawasaki klx 230 vs hero xpulse 200 4v a complete specifications, features, and cost comparison in india/hero xpulse 200 4v.webp" /></center></div>
+                </div>
+                <h3 class="subheading">Key Differences:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Price:</span> The Kawasaki KLX 230 is significantly more expensive than the Hero Xpulse 200 4V, almost four times the price.</li>
+                    <li><span class="font-weight-700">Power and Performance:</span> The KLX 230 offers a slight edge in power and torque, making it more suited for aggressive off-road riding.</li>
+                    <li><span class="font-weight-700">Suspension and Off-Road Capability:</span> The KLX 230 has higher ground clearance and more off-road-oriented suspension, while the Xpulse 200 4V is more versatile for both city and light off-roading.</li>
+                    <li><span class="font-weight-700">Features:</span> While the KLX is purely focused on off-road utility, the Xpulse 200 4V offers more tech-savvy features like Bluetooth connectivity and a larger fuel tank for longer rides.</li>
+                </ul>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

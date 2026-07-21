@@ -1,0 +1,305 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Hyundai Venue vs Škoda Kylaq: Full 2025 Compact SUV Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="BikeCarHub,Hyundai Venue vs Škoda Kylaq, Venue vs Kylaq comparison 2025, Hyundai Venue price 2025, Škoda Kylaq features 2025, Best compact SUV in India 2025, Venue vs Kylaq mileage, Hyundai Venue specifications, Škoda Kylaq specifications, Venue vs Kylaq which is better, Compact SUV comparison India 2025, Hyundai vs Škoda review, Affordable SUVs in India 2025, Best SUV for city driving 2025" />
+    <meta name="description" content="BikeCarHub,Compare Hyundai Venue vs Škoda Kylaq in 2025. Check design, mileage, features, price, safety and decide which compact SUV is best for your needs." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 1th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Positioning & Pricing</h2>
+
+                <h3 class="subheading">Hyundai Venue (2025)</h3>
+                <ul>
+                    <li>Price range: ₹7.94 L to ₹13.62 L ex-showroom (including petrol, turbo petrol, diesel variants)</li>
+                    <li>A trendsetter in connected features, versatile powertrains, and urban dynamics</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq (2025)</h3>
+                <ul>
+                    <li>Launch price starts at ₹8.25 L up to ₹13.99 L ex-showroom</li>
+                    <li>Škoda India's first sub-4m SUV, built on the MQB-A0-IN platform, focused on safety and style</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Venue offers slightly more affordable entry pricing, while Kylaq positions itself as a premium offering.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Engine & Powertrain</h2>
+
+                <h3 class="subheading">Hyundai Venue</h3>
+               
+                <ul>
+                    <li><span class="font-weight-700">1.2L NA Petrol:</span> 83 PS / 114 Nm -5-speed MT</li>
+                    <li><span class="font-weight-700">1.0L Turbo Petrol (Kappa T-GDi):</span> 118 PS / 172 Nm -6-speed MT, 7-speed DCT, or iMT</li>
+                    <li><span class="font-weight-700">1.5L Diesel (Smartstream D1.5 VGT):</span> 115 PS / 255 Nm - 6-speed MT</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+
+                <ul>
+                    <li><span class="font-weight-700">1.0L TSI Turbo Petrol:</span> 115 PS / 178 Nm - 6-speed MT or torque-converter AT</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Venue offers more engine and transmission versatility; Kylaq focuses on a refined, turbocharged petrol setup.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Fuel Efficiency (ARAI)</h2>
+                <ul>
+                    <li>
+                        <span class="font-weight-700">Venue:</span>
+                        <ul>
+                            <li>NA petrol: ~17.5 kmpl</li>
+                            <li>Turbo petrol: ~18.3 kmpl</li>
+                            <li>Diesel: ~23.4 kmpl</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Kylaq:</span>
+                        <ul>
+                            <li>Manual petrol: 19.68 kmpl</li>
+                            <li>Automatic petrol: 19.05 kmpl</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Kylaq leads in petrol efficiency; Venue is more efficient in diesel.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Dimensions & Practicality</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">Hyundai Venue</th>
+                                <th class="text-center">Škoda Kylaq</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Length × Width × Height</td>
+                                <td>3,995×1,770×1,610 mm</td>
+                                <td>3,995×1,783×1,619 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Wheelbase</td>
+                                <td>2,500 mm</td>
+                                <td>2,566 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Ground Clearance</td>
+                                <td>~195 mm</td>
+                                <td>189 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Boot Space</td>
+                                <td>350 L</td>
+                                <td>446 L (up to 1,265 L)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><span class="font-weight-700">Insight:</span> Kylaq offers more usable interior space and better cargo capacity; Venue provides a well-balanced footprint for urban use.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Safety & Build Quality</h2>
+
+                <h3 class="subheading">Hyundai Venue Safety Features:</h3>
+                <ul>
+                    <li>6 airbags, ESC, HAC, VSM, TPMS, ISOFIX</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq Safety Features:</h3>
+                <ul>
+                    <li>5-star Bharat NCAP with crash-proven structure</li>
+                    <li>Over 25 safety systems including ESC, ABS, hill-hold, rollover protection, EDL, six airbags</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Kylaq edges ahead with stronger passive safety credentials and crash ratings, while Venue is competent with full active safety coverage.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Design & Exterior Styling</h2>
+
+                <h3 class="subheading">Hyundai Venue</h3>
+                
+                <p>Fresh facelift boasts LED headlights, bold chrome grille, athletic front bumper.</p>
+
+                <h3 class="subheading">Škoda Kylaq</h3>
+                
+                <p>Modern Solid design language, split LED DRLs, hexagonal cladding, EU styling cues, available in premium colors including Olive Gold.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Venue leans sporty and youthful; Kylaq projects a premium, rugged look subtle yet sophisticated.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Interior & Technology</h2>
+
+                <h3 class="subheading">Hyundai Venue Highlights:</h3>
+                <ul>
+                    <li>8″ touchscreen, wireless Apple/Android Auto, Bluelink connected car with 60+ features</li>
+                    <li>Ambient lighting, sunroof, ventilated seats, dual-zone AC, Bose audio on top trims</li>
+                </ul>
+
+                <h3 class="subheading">Škoda Kylaq Highlights:</h3>
+                <ul>
+                    <li>10.1″ touchscreen + 8″ digital driver display (top trims)</li>
+                    <li>Ventilated power seats, single-pane sunroof, auto-climate, wireless charging, premium materials</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Venue shines in connected features and audio; Kylaq emphasizes ergonomic comfort and spacious, premium setup.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Drive & Handling</h2>
+                <ul>
+                    <li><span class="font-weight-700">Venue:</span> Offers a nimble ride, light steering, choice of engines and transmissions to suit city or highway use; turbo MT and DCT offer performance layers.</li>
+                    <li><span class="font-weight-700">Kylaq:</span> Built on a stable MQB platform—delivers composed ride with solid suspension tuning and European handling feel.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Variant & Pricing Overview</h2>
+
+                <h3 class="subheading">Hyundai Venue:</h3>
+                <p>Multiple trims: E, S, S+, SX Executive, SX, SX Turbo/Diesel, SX(O) Knight/N Line, and Turbo DCT -- spanning ₹7.94-13.62 L</p>
+
+                <h3 class="subheading">Škoda Kylaq:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Classic:</span> ₹7.89 L (MT only)</li>
+                    <li><span class="font-weight-700">Signature:</span> ₹9.59 L (MT), ₹10.59 L (AT)</li>
+                    <li><span class="font-weight-700">Signature+:</span> ₹11.40 L (MT), ₹12.40 L (AT)</li>
+                    <li><span class="font-weight-700">Prestige:</span> ₹13.35 L (MT), ₹14.40 L (AT)</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Venue offers more powertrain combinations; Kylaq positions itself as a premium single-engine model with potent safety and design.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Ownership Experience</h2>
+                <ul>
+                    <li><span class="font-weight-700">Hyundai:</span> Extensive dealer, service network and connected feature updates via Bluelink; cost-effective servicing.</li>
+                    <li><span class="font-weight-700">Škoda:</span> Gaining traction in metro areas, strong service feedback; premium ownership perks but limited coverage outside major cities; 3-year/100,000 km warranty.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Verdict: Who Should Buy Which?</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Priority</th>
+                                <th class="text-center">Hyundai Venue</th>
+                                <th class="text-center">Škoda Kylaq</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine & Transmission Options</td>
+                                <td>✔ varied lineup</td>
+                                <td>Single turbo petrol</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel Efficiency</td>
+                                <td>Diesel leads</td>
+                                <td>Petrol excels</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Interior Connectivity & Audio</td>
+                                <td>Bluelink, Bose ✔</td>
+                                <td>Premium comfort, basic tech</td>
+                            </tr>
+                            <tr>
+                                <td>Crash Safety</td>
+                                <td>Safety-packed ✔</td>
+                                <td>5★ BNCAP + features ✔</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Space & Practicality</td>
+                                <td>Good city usability</td>
+                                <td>Best-in-class boot & space</td>
+                            </tr>
+                            <tr>
+                                <td>Ride & Handling</td>
+                                <td>Agile city drive</td>
+                                <td>Stable European feel</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Pricing Versatility</td>
+                                <td>Broad trim range</td>
+                                <td>Premium focused lineup</td>
+                            </tr>
+                            <tr>
+                                <td>After-sales & Resale</td>
+                                <td>Widest network</td>
+                                <td>Premium but fewer outlets</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ul>
+                    <li><span class="font-weight-700">Choose the Venue</span> if you want versatile powertrain options, strong connected tech, and broad service support.</li>
+                    <li><span class="font-weight-700">Choose the Kylaq</span> if your focus is top-tier safety, premium space, and solidity within a compact SUV.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Summary</h2>
+                <p>Both the <span class="font-weight-700">Hyundai Venue</span> and <span class="font-weight-700">Škoda Kylaq</span> present compelling offerings in 2025:</p>
+                <ul>
+                    <li><span class="font-weight-700">Venue:</span> More powertrain options, connected features, well-rounded urban appeal.</li>
+                    <li><span class="font-weight-700">Kylaq:</span> Safety-first European build quality, spacious interior, single engine with focus.</li>
+                </ul>
+                <p>Picking your SUV depends on what matters most: <span class="font-weight-700">versatility & tech</span> (Venue) or <span class="font-weight-700">safety & refinement</span> (Kylaq).</p>
+
+                <div class="div-line"></div>
+
+            
+            <p></p>
+            <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+            <h3 class="heading">Check other brands here</h3>
+            <p>For Skoda Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="SkodaKylaq1"> Click Here!</a></p>
+            <p>For Suzuki Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1"> Click Here!</a></p>
+            <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+            </div>
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

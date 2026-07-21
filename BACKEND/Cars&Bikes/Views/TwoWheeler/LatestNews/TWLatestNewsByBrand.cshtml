@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+<div><h1 class="latest-bike-head p-b20">Latest Bike News</h1></div>
+<div class=" latest-bike-container ">
+    @* <h2>@ViewBag.TWNews.NewsHeading</h2> *@
+    @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+
+
+    <div class="detail-div">
+        @foreach (var newsdata in ViewBag.newsbybrand)
+        {
+            <div class="latest-bike-card">
+                <h2>@Truncate(@newsdata.NewsHeading, 36)</h2>
+                <a href="/@newsdata.ImageURL">
+                    <div class="latest-allbike-image ">
+                        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("/images/twowheeler/default.jpg")';" />
+                        <div class="latest-bikes-details-text">
+                            <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                            <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,224 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "News: Best Cars Under ₹11 Lakh in India – Specific Variants Offering Great Value in 2024";
+}
+@section MetaTags{
+    <meta name="keywords" content="Cars under 11 lakh, Best cars in India, Affordable cars India 2024, Tata Nexon XZ+, Hyundai Venue S+, Maruti Brezza VXi, Kia Sonet HTX iMT, Mahindra XUV300 W6, Toyota Glanza G Hybrid, Honda Amaze VX CVT" />
+    <meta name="description" content="Discover the best cars under ₹11 lakh in India with specific variants offering top features. Explore Tata Nexon, Hyundai Venue, Maruti Brezza, Kia Sonet, and more to find your perfect car in 2024." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p>As the automobile industry in India continues to evolve, manufacturers are constantly innovating to offer feature-rich cars at affordable prices. For buyers looking to own a car under ₹11 lakh, here are some of the best models available in 2024 with their specific variants:</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. Tata Nexon (XZ+ Petrol)</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹10.99 lakh (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1.2L Turbocharged Petrol
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Key Features:</span> 7-inch infotainment system with Android Auto & Apple CarPlay, connected car features, dual front airbags, ABS with EBD, and iRA-connected technology.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span> The Tata Nexon offers a robust build, a powerful turbo-petrol engine, and class-leading features in this budget.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/newsbestcarsunder11lakhinindiaspecificvariantsofferinggreatvaluein2024/tata nexon.webp" alt="Tata Nexon (XZ+ Petrol)" title="Tata Nexon (XZ+ Petrol)" /></center></div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. Hyundai Venue (S+ Diesel)</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹10.85 lakh (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1.5L CRDi Diesel
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Key Features:</span> Projector headlamps, wireless phone charger, rear parking camera, and Hyundai's Bluelink connectivity features.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span> Hyundai Venue’s diesel variant is fuel-efficient and offers excellent features, making it ideal for those seeking a tech-loaded compact SUV.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/newsbestcarsunder11lakhinindiaspecificvariantsofferinggreatvaluein2024/hyundai venue.webp" alt="Hyundai Venue (S+ Diesel)" title="Hyundai Venue (S+ Diesel)" /></center></div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">3. Maruti Suzuki Brezza (VXi Petrol)</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹10.49 lakh (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1.5L K15B Petrol
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Key Features:</span> 7-inch touchscreen infotainment system, automatic climate control, LED headlamps, and safety features like dual airbags, ABS with EBD.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span> With Maruti's trusted reliability, Brezza VXi offers excellent mileage and features within the budget.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/newsbestcarsunder11lakhinindiaspecificvariantsofferinggreatvaluein2024/maruti suzuki brezza.webp" alt="Maruti Suzuki Brezza (VXi Petrol)" title="Maruti Suzuki Brezza (VXi Petrol)" /></center></div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">4. Kia Sonet (HTX iMT Petrol)</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹10.89 lakh (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1.0L Turbocharged Petrol with iMT
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Key Features:</span> 10.25-inch infotainment, wireless Apple CarPlay/Android Auto, sunroof, UVO connectivity features, and cruise control.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span> The HTX variant offers a premium feel with cutting-edge features and the convenience of an iMT transmission.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/newsbestcarsunder11lakhinindiaspecificvariantsofferinggreatvaluein2024/kia sonet.webp" alt="Kia Sonet (HTX iMT Petrol)" title="Kia Sonet (HTX iMT Petrol)" /></center></div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">5. Mahindra XUV3X0 (W6 Petrol)</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹10.95 lakh (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1.2L Turbocharged Petrol
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Key Features:</span> Dual-zone climate control, 7-inch touchscreen infotainment system, rear parking sensors, and top-notch safety features with a 5-star Global NCAP rating.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span> The Mahindra XUV3X0 offers a combination of safety, space, and comfort, making it a great choice for families. Its turbocharged engine delivers a smooth yet powerful driving experience, perfect for both city commutes and long road trips.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/newsbestcarsunder11lakhinindiaspecificvariantsofferinggreatvaluein2024/mahindra xuv3x0.webp" alt="Mahindra XUV3X0 (W6 Petrol)" title="Mahindra XUV3X0 (W6 Petrol)" /></center></div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">6. Toyota Glanza (G Hybrid)</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹10.50 lakh (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1.2L Dual VVT-i Petrol with Mild Hybrid System
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Key Features:</span> 6 airbags, hybrid technology for better fuel efficiency, smart playcast touchscreen with Android Auto & Apple CarPlay, and LED projector headlamps.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span> For those looking for a fuel-efficient, feature-packed hatchback, Glanza G Hybrid is a smart choice within the ₹11 lakh range.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/newsbestcarsunder11lakhinindiaspecificvariantsofferinggreatvaluein2024/toyota glanza.webp" alt="Toyota Glanza (G Hybrid)" title="Toyota Glanza (G Hybrid)" /></center></div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">7. Honda Amaze (VX CVT Petrol)</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price:</span> ₹10.60 lakh (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1.2L i-VTEC Petrol
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Key Features:</span> CVT automatic transmission, rear parking camera, dual airbags, 7-inch touchscreen infotainment system, and cruise control.
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Why Buy?</span> The Amaze VX CVT offers smooth automatic driving, ample space, and Honda’s reputation for reliability.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/newsbestcarsunder11lakhinindiaspecificvariantsofferinggreatvaluein2024/honda amaze.webp" alt="Honda Amaze (VX CVT Petrol)" title="Honda Amaze (VX CVT Petrol)" /></center></div>
+                </div>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+       @*  <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

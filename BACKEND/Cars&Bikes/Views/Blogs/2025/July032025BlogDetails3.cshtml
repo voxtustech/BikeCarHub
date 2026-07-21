@@ -1,0 +1,564 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Best Electric Scooters India 2025: Full Comparison Guide";
+}
+@section MetaTags {
+    <meta name="keywords" content="Best electric scooters in India 2025, Bajaj Chetak 3501 vs TVS iQube vs Ola S1 Pro+, Ather Rizta s specifications, Honda Activa electric scooter, Ola S1 Pro+ features and price, Electric scooter comparison India, Affordable electric scooters 2025, BikeCarHub electric scooter review, EV scooter range comparison, Smart features electric scooters" />
+    <meta name="description" content="Compare Bajaj Chetak 3501, TVS iQube, Ather Rizta s, Honda Activa e, and Ola S1 Pro+. Find India’s top electric scooters with BikeCarHub’s expert review." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 3rd July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>But which one is the best fit for you? In this in-depth comparison from <span class="font-weight-700">BikeCarHub</span>, we'll explore everything from design, performance, battery range, smart features, and pricing to help you make an informed decision.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Brand Profiles: Trusted Names in the EV Game</h2>
+
+                <ul>
+                    <li><span class="font-weight-700">Bajaj Auto</span> is an iconic brand known for its legendary scooters and motorcycles. The Bajaj Chetak 3501 carries a legacy that dates back to the 1970s, now electrified for the modern era.</li>
+                    <li><span class="font-weight-700">TVS Motor Company</span> has built its reputation on reliability and practicality. The TVS iQube is their smart, future-ready electric scooter.</li>
+                    <li><span class="font-weight-700">Ather Energy</span> is the new-age disruptor. The Ather Rizta s is their latest family-focused electric scooter with a tech-forward mindset.</li>
+                    <li><span class="font-weight-700">Honda</span>, the most recognized scooter brand in India, is now entering the electric race with the <span class="font-weight-700">Honda Activa e</span>, set to build on the success of the petrol Activa.</li>
+                    <li><span class="font-weight-700">Ola Electric</span> made waves with the Ola S1 Pro+, combining bold design, high-speed capability, and smart connectivity.</li>
+                </ul>
+
+                <p>Each brand brings unique strengths to the table, which is why this comparison is so exciting.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Design and Build Quality: Retro vs Futuristic vs Practical</h2>
+
+                <h3 class="subheading"><a class="for-link" asp-controller="Bajaj" asp-action="BajajChetak3501">Bajaj Chetak 3501</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/best electric scooter in india/bajaj chetak 3501-1.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <p>The Bajaj Chetak 3501 stands out with its <span class="font-weight-700">retro-modern design</span>, premium paintwork, and metal body. It appeals to riders who love timeless elegance.</p>
+
+                <h3 class="subheading">TVS iQube</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/best electric scooter in india/tvs iqube.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <p>The TVS iQube is practical and minimalist. It focuses on functionality with a clean, simple design. The fibre body makes it lightweight and easy to handle.</p>
+
+                <h3 class="subheading">Ather Rizta s</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/best electric scooter in india/ather rizta s.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <p>The Ather Rizta s features a <span class="font-weight-700">bold yet family-friendly look</span>. It's larger, more spacious, and packs Ather's signature sharp styling cues.</p>
+
+                <h3 class="subheading">Honda Activa e</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/best electric scooter in india/honda activa electric-1.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <p>Expected to carry forward the trusted Activa silhouette, the Honda Activa e will likely stick to <span class="font-weight-700">simple, commuter-friendly styling</span>, keeping comfort and ease of use as priorities.</p>
+
+                <h3 class="subheading"><a class="for-link" asp-controller="OlaElectric" asp-action="OlaS1Pro">Ola S1 Pro+</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/best electric scooter in india/ola s1 pro.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <p>The Ola S1 Pro+ goes all-in with <span class="font-weight-700">futuristic, curvy design lines</span> and a fully covered body. It feels modern, fun, and dynamic.</p>
+
+                <p>At <span class="font-weight-700">BikeCarHub</span>, it's clear that your design choice will depend on whether you prefer retro charm, practical everyday use, or futuristic flair.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Performance Comparison: Power Meets Practicality</h2>
+
+                <h3 class="subheading">Motor Power and Top Speed</h3>
+                <ul>
+                    <li><span class="font-weight-700">Bajaj Chetak 3501:</span> 4.2 kW | 73 km/h top speed</li>
+                    <li><span class="font-weight-700">TVS iQube:</span> 4.4 kW | 78 km/h top speed</li>
+                    <li><span class="font-weight-700">Ather Rizta s:</span> 4.3 kW | 80 km/h top speed</li>
+                    <li><span class="font-weight-700">Honda Activa e:</span> 6 kW | 80 km/h top speed</li>
+                    <li><span class="font-weight-700">Ola S1 Pro+:</span> 4 kW/5.3 kW | 141 km/h top speed</li>
+                </ul>
+
+                <p>The <span class="font-weight-700">Ola S1 Pro+ clearly dominates performance</span> with its high-speed capability, while the other four scooters are more suited for urban commuting.</p>
+
+                <h3 class="subheading">Acceleration (0-40 km/h)</h3>
+                <ul>
+                    <li><span class="font-weight-700">Ola S1 Pro+:</span> 2.1 sec/2.3 sec</li>
+                    <li><span class="font-weight-700">Ather Rizta s:</span> 4.7 seconds</li>
+                    <li><span class="font-weight-700">TVS iQube:</span> 4.2 seconds</li>
+                    <li><span class="font-weight-700">Bajaj Chetak 3501:</span> 4.5 seconds</li>
+                    <li><span class="font-weight-700">Honda Activa e:</span> 4.0 - 4.5 seconds</li>
+                </ul>
+
+                <p>For zippy city starts, <span class="font-weight-700">Ola S1 Pro+ and TVS iQube</span> lead the pack.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Battery, Range, and Charging: The Daily Distance Factor</h2>
+
+                <h3 class="subheading">Bajaj Chetak 3501</h3>
+                <ul>
+                    <li><span class="font-weight-700">Battery:</span> 3.5 kWh Lithium-ion</li>
+                    <li><span class="font-weight-700">Range:</span> Up to 153 km</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 3 hours (0-80%)</li>
+                </ul>
+
+                <h3 class="subheading">TVS iQube</h3>
+                <ul>
+                    <li><span class="font-weight-700">Battery:</span> 3.5 kWh Lithium-ion</li>
+                    <li><span class="font-weight-700">Claimed Range:</span> 145 km</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 4hr 30m (0-80%)</li>
+                </ul>
+
+                <h3 class="subheading">Ather Rizta s</h3>
+                <ul>
+                    <li><span class="font-weight-700">Battery:</span> 4.3 kWh</li>
+                    <li><span class="font-weight-700">Real-world Range:</span> 123 km</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 6hr 30m (0-80%), 8hr 30m (0-80%)</li>
+                </ul>
+
+                <h3 class="subheading">Honda Activa e</h3>
+                <ul>
+                    <li><span class="font-weight-700">Battery:</span> 1.5*2 kWh Swappable Lithium-ion Battery</li>
+                    <li><span class="font-weight-700">Range:</span> Around 102 km</li>
+                    <li><span class="font-weight-700">Charging Time:</span> 4-5 hours (For Fully Charge)</li>
+                </ul>
+
+                <h3 class="subheading">Ola S1 Pro+</h3>
+                <ul>
+                    <li><span class="font-weight-700">Battery:</span> 5.3/4kWh</li>
+                    <li><span class="font-weight-700">Real:</span> 320 km per charge/242km per charge</li>
+                    <li><span class="font-weight-700">Charging Time:</span> Around 7 hours</li>
+                </ul>
+
+                <p>The <span class="font-weight-700">Ola S1 Pro+ and Bajaj Chetak 3501</span> offer the best range, while Arther, TVS, and Honda remain strong city options.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Smart Features and Technology: Which Scooter is the Smartest?</h2>
+
+                <ul>
+                    <li><span class="font-weight-700">Bajaj Chetak 3501:</span> Bluetooth app, navigation, reverse assist, regenerative braking.</li>
+                    <li><span class="font-weight-700">TVS iQube:</span> SmartXonnect app, navigation, geo-fencing, multiple ride modes, reverse mode.</li>
+                    <li><span class="font-weight-700">Ather Rizta s:</span> Advanced dashboard, multiple riding modes, app integration, over-the-air (OTA) updates, smart battery management.</li>
+                    <li><span class="font-weight-700">Honda Activa e:</span> Basic digital display, expected Bluetooth and app features, combi-braking system.</li>
+                    <li><span class="font-weight-700">Ola S1 Pro+:</span> Massive touchscreen, keyless unlock, cruise control, hill hold, proximity unlock, voice control, reverse mode, OTA updates.</li>
+                </ul>
+
+                <p>According to <span class="font-weight-700">BikeCarHub</span>, if you're a <span class="font-weight-700">tech enthusiast, the Ola S1 Pro+ and Ather Rizta s are unmatched.</span> For basic commuting, the Honda Activa e might be more suitable.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Practicality and Everyday Usability: Storage and Comfort</h2>
+
+                <h3 class="subheading">Under-seat Storage:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Bajaj Chetak 3501:</span> 35L</li>
+                    <li><span class="font-weight-700">TVS iQube:</span> 32L</li>
+                    <li><span class="font-weight-700">Ather Rizta s:</span> 34L</li>
+                    <li><span class="font-weight-700">Honda Activa e:</span> 18L</li>
+                    <li><span class="font-weight-700">Ola S1 Pro+:</span> 36L (Largest)</li>
+                </ul>
+
+                <h3 class="subheading">Weight:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Chetak 3501:</span> 133 kg</li>
+                    <li><span class="font-weight-700">iQube:</span> 119.1 kg</li>
+                    <li><span class="font-weight-700">Rizta:</span> 125 kg</li>
+                    <li><span class="font-weight-700">Activa e:</span> 118 kg</li>
+                    <li><span class="font-weight-700">S1 Pro+:</span> 116 kg</li>
+                </ul>
+
+                <p>The <span class="font-weight-700">Ola S1 Pro+ and Bajaj Chetak 3501 win big on storage space</span>, while TVS iQube remains one of the easiest scooters to maneuver.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Pricing and Variants: Which One Fits Your Budget?</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Price Range (Ex-Showroom)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bajaj Chetak 3501</td>
+                                <td>₹1,22,500 (Starting)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>TVS iQube</td>
+                                <td>₹1,32,863 (starting)</td>
+                            </tr>
+                            <tr>
+                                <td>Ather Rizta s</td>
+                                <td>₹99,999 (Ex-Showroom)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Honda Activa e</td>
+                                <td>₹1,17,428 (Starting)</td>
+                            </tr>
+                            <tr>
+                                <td>Ola S1 Pro +</td>
+                                <td>₹1,88,200 (Starting-5.3 kW)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Ather Rizta s and Honda Activa e are <span class="font-weight-700">more budget-friendly</span> options, while the <span class="font-weight-700">Ola S1 Pro+ is feature-loaded but slightly premium.</span></p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Maintenance and After-Sales Service</h2>
+
+                <ul>
+                    <li><span class="font-weight-700">Bajaj and TVS</span> offer growing electric service networks with affordable maintenance.</li>
+                    <li><span class="font-weight-700">Ather Energy</span> has EV-specialized service centers, but limited to metro cities.</li>
+                    <li><span class="font-weight-700">Honda Activa e</span> will likely benefit from Honda's extensive service coverage.</li>
+                    <li><span class="font-weight-700">Ola Electric</span> is improving service touchpoints but still expanding.</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub's tip:</span> Check your local dealership support before purchasing.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Market Trends and Resale Value</h2>
+
+                <ul>
+                    <li>Bajaj Chetak 3501 and TVS iQube have <span class="font-weight-700">strong resale potential</span> due to brand trust.</li>
+                    <li>Ola S1 Pro+ is in high demand, expected to retain good resale value.</li>
+                    <li>Ather Rizta's growing brand is appealing to younger buyers.</li>
+                    <li>Honda's entry in the EV market will likely mirror the petrol Activa's resale success.</li>
+                </ul>
+
+                <p>All scooters qualify for <span class="font-weight-700">FAME-II subsidies</span> and state-level EV benefits.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Specifications & Features Comparison Table</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Chetak 3501</th>
+                                <th class="text-center">iQube</th>
+                                <th class="text-center">Rizta s</th>
+                                <th class="text-center">Activa e</th>
+                                <th class="text-center">Ola S1 Pro+</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Motor Power</td>
+                                <td>4.2 kW</td>
+                                <td>4.4 kW</td>
+                                <td>4.3 kW</td>
+                                <td>6 kW</td>
+                                <td>4/5.3 kW</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Top Speed</td>
+                                <td>73 km/h</td>
+                                <td>78 km/h</td>
+                                <td>80 km/h</td>
+                                <td>80 km/h</td>
+                                <td>141 km/h</td>
+                            </tr>
+                            <tr>
+                                <td>Range</td>
+                                <td>153 km</td>
+                                <td>145 km</td>
+                                <td>123 km</td>
+                                <td>102 km</td>
+                                <td>242/320 km</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Charging Time</td>
+                                <td>3 hrs</td>
+                                <td>4hr 30m</td>
+                                <td>6hr 30m</td>
+                                <td>4-5 hrs</td>
+                                <td>7 hrs</td>
+                            </tr>
+                            <tr>
+                                <td>Storage Capacity</td>
+                                <td>35L</td>
+                                <td>32L</td>
+                                <td>34L</td>
+                                <td>18L</td>
+                                <td>36L</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Smart Features</td>
+                                <td>Basic App</td>
+                                <td>SmartXonnect</td>
+                                <td>Advanced App</td>
+                                <td>Basic App</td>
+                                <td>Full Smart</td>
+                            </tr>
+                            <tr>
+                                <td>Cruise Control</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Reverse Mode</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Expected</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Price Range</td>
+                                <td>₹1,22,500</td>
+                                <td>₹1,32,863</td>
+                                <td>₹99,999</td>
+                                <td>₹1,17,428</td>
+                                <td>₹1,88,200</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Pros and Cons</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Pros</th>
+                                <th class="text-center">Cons</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bajaj Chetak 3501</td>
+                                <td>Premium design, solid build</td>
+                                <td>Lower top speed</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>TVS iQube</td>
+                                <td>Practical, affordable, light</td>
+                                <td>Limited tech features</td>
+                            </tr>
+                            <tr>
+                                <td>Ather Rizta s</td>
+                                <td>Spacious, family-friendly, tech</td>
+                                <td>Limited service network</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Honda Activa e</td>
+                                <td>Reliable, affordable</td>
+                                <td>Basic tech, average speed</td>
+                            </tr>
+                            <tr>
+                                <td>Ola S1 Pro</td>
+                                <td>High speed, rich features</td>
+                                <td>Premium pricing, growing support</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">BikeCarHub's Expert Verdict: Which Scooter Wins?</h2>
+
+                <ul>
+                    <li><span class="font-weight-700">For performance seekers:</span> Ola S1 Pro+</li>
+                    <li><span class="font-weight-700">For practical city riders:</span> TVS iQube or Honda Activa e</li>
+                    <li><span class="font-weight-700">For family use:</span> Ather Rizta s</li>
+                    <li><span class="font-weight-700">For style lovers:</span> Bajaj Chetak 3501</li>
+                    <li><span class="font-weight-700">For tech enthusiasts:</span> Ola S1 Pro+ or Ather Rizta s</li>
+                </ul>
+
+                <p>Ultimately, <span class="font-weight-700">BikeCarHub recommends that buyers test-ride these scooters</span> to see which one best fits their lifestyle and comfort preferences.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Conclusion</h2>
+
+                <p>India's electric scooter market has matured with a variety of options catering to different rider profiles. Whether you prefer premium designs, advanced smart features, or affordable city commuters, there's something for everyone.</p>
+
+                <p>From the charming <span class="font-weight-700">Bajaj Chetak 3501</span> to the <span class="font-weight-700">feature-loaded Ola S1 Pro+,</span> this list has India's best electric scooters of 2025. To stay updated with the latest reviews and expert comparisons, keep following <span class="font-weight-700">BikeCarHub</span>—your reliable destination for car and bike insights.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Frequently Asked Questions (FAQs)</h2>
+
+                <div class="accordion" id="faqElectricScooters">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which electric scooter offers the best range?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqElectricScooters">
+                            <div class="accordion-body">
+                                Ola S1 Pro+ offers the best real-world range at around 242 km per charge.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Which scooter has the fastest top speed?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqElectricScooters">
+                            <div class="accordion-body">
+                                The <span class="font-weight-700">Ola S1 Pro+</span> leads with a top speed of 141 km/h.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Which is the most affordable scooter in this comparison?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqElectricScooters">
+                            <div class="accordion-body">
+                                <span class="font-weight-700">Arther Rizta s</span> is expected to have the lowest starting price.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Which scooter is best for heavy traffic commutes?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqElectricScooters">
+                            <div class="accordion-body">
+                                TVS iQube is light, easy to handle, and perfect for busy city traffic.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which scooter has the largest storage space?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqElectricScooters">
+                            <div class="accordion-body">
+                                <span class="font-weight-700">Ola S1 Pro+</span> and <span class="font-weight-700">Chetak 3501</span> offer the largest under-seat storage capacities.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Which scooter has fast charging?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqElectricScooters">
+                            <div class="accordion-body">
+                                <span class="font-weight-700">Chetak 3501</span> currently supports fast charging.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which is best for families?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqElectricScooters">
+                            <div class="accordion-body">
+                                Ather Rizta s is spacious and practical for family use.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Are FAME-II subsidies available for all these scooters?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqElectricScooters">
+                            <div class="accordion-body">
+                                Yes, all five scooters are eligible for FAME-II and state EV subsidies.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Which scooter has the best smart features?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqElectricScooters">
+                            <div class="accordion-body">
+                                Ola S1 Pro+ leads with touchscreen, cruise control, voice commands, and OTA updates.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Which scooter has the best service network?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqElectricScooters">
+                            <div class="accordion-body">
+                                TVS and Honda currently offer the most extensive service networks in India.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

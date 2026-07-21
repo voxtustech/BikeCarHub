@@ -1,0 +1,1257 @@
+﻿@model TwoWheeler
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+@*<div class="container-fluid section-full bg-white content-inner-2">*@
+<div class="container-fluid section-full bg-white m-t20">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Side bar start -->
+            <div class="col-md-8">
+                <div class="car-dl-info m-b30">
+                    <h1 class="h3 m-t0 price">@Model.TwoWheelerName</h1>
+                    <ul class="used-car-dl-info">
+                        <li><i class="fa fa-bank"></i>  @Model.Brand</li>
+                        <li id="batteryCapacity"></li>
+                        <li id="topSpeed"></li>
+                    </ul>
+                    @if (Model.IsActive == false)
+                    {
+                        <p class="tw-notes">DISCONTINUED<br>@Model.NotesOrComments</p>
+                    }
+                    <div class="tw-img m-t20"><center><img src="@Model.TWImage" alt="@Model.TwoWheelerName" title="@Model.TwoWheelerName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" class="img-fluid" /></center></div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                @* <div class="car-dl-info m-b30"> *@
+                <div class="bike-dl">
+                    <div class="dl">
+                        <h3 class="m-t0 m-b5">@Model.Price</h3>
+                        <span>@Model.TwoWheelerName</span>
+                        <div class="mt-2">
+
+                            <span class="fw-bold text-warning">
+                                ⭐ @(ViewBag.AverageRating != null
+                                ? Math.Round((double)ViewBag.AverageRating, 1)
+                                : 0)
+                            </span>
+
+                            <a href="#"
+                               data-bs-toggle="modal"
+                               data-bs-target="#allReviewsModal"
+                               class="text-decoration-none fw-bold ms-1">
+                                (@(ViewBag.ReviewCount ?? 0) Reviews)
+                            </a>
+
+                            <span class="ms-3">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    @if (ViewBag.UserReview != null)
+                                    {
+                                        <div class="user-review-status">
+
+                                            <div class="user-review-stars">
+                                                @for (int i = 0; i < ((Review)ViewBag.UserReview).Rating; i++)
+                                                {
+                                                    <span>★</span>
+                                                }
+                                            </div>
+
+                                            <div class="user-review-text">
+                                                Your Review
+                                            </div>
+
+                                            <small class="text-muted">
+                                                You reviewed this bike on
+                                                @(((Review)ViewBag.UserReview).CreatedAt.ToString("dd MMM yyyy"))
+                                            </small>
+
+                                            <div class="mt-2">
+                                                <a href="#"
+                                                   class="edit-review-link"
+                                                   data-bs-toggle="modal"
+                                                   data-bs-target="#reviewModal">
+                                                    Edit Review
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <a href="#"
+                                           data-bs-toggle="modal"
+                                           data-bs-target="#reviewModal"
+                                           class="text-primary fw-bold text-decoration-none">
+                                            Write Review
+                                        </a>
+                                    }
+                                }
+                                else
+                                {
+                                    <a asp-controller="Account"
+                                       asp-action="Login"
+                                       class="text-primary fw-bold text-decoration-none">
+                                        Login to Review
+                                    </a>
+                                }
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="  clearfix m-b30">
+                    @* <div class="m-b30"> *@
+                    <div class="sideboxdetails">
+                        <h6>Brand</h6>
+                        <i class="bi bi-award"></i>
+                        <h5>@Model.Brand</h5>
+                    </div>
+                    @* @foreach (var spec in Model.TWSpecs)
+                        { *@
+                    <div class="sideboxdetails">
+                        <h6>Claimed Range</h6>
+                        <i class="bi bi-speedometer"></i>
+                        <h5 class="ClaimedRange">@* @spec.Milage *@</h5>
+                    </div>
+                    <div class="sideboxdetails">
+                        <h6>Body Type</h6>
+                        <i class="bi bi-scooter"></i>
+                        <h5 class="BodyType">@* @spec.BodyType *@</h5>
+                    </div>
+                    <div class="sideboxdetails">
+                        <h6>Battery Capacity</h6>
+                        <i class="bi bi-battery-charging"></i>
+                        <h5 class="BatteryCapacity">@* @spec.FuelCapacity *@</h5>
+                    </div>@* } *@
+                    <div class="sideboxdetails">
+                        <h6>Starting</h6>
+                        <i class="bi bi-tools"></i>
+                        <h5 class="starting"></h5>
+                    </div>
+                    <div class="sideboxdetails">
+                        <h6>Top Speed</h6>
+                        <i class="bi bi-speedometer2"></i>
+                        <h5 class="TopSpeed"></h5>
+                    </div>
+                    <div class="sideboxdetails">
+                        <h6>Motor Power</h6>
+                        <i class="bi bi-power"></i>
+                        <h5 class="MotorPower"></h5>
+                    </div>
+                    <div class="sideboxdetails">
+                        <h6>Headlight</h6>
+                        <i class="bi bi-lightbulb"></i>
+                        <h5 class="headlight"></h5>
+                    </div>
+                    <div class="sideboxdetails">
+                        <h6>Transmission</h6>
+                        <i class="bi bi-gear-wide-connected"></i>
+                        <h5 class="Transmission"></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fixed">
+    <div class="highlight nav horizontal-nav " id="horizontalNav">
+        <ul>
+            <li data-target="engineTransmission">Engine & Transmission</li>
+            <li data-target="features">Features</li>
+            <li data-target="safety">Safety</li>
+            <li data-target="chassisAndSuspension">Chassis & Suspension</li>
+            <li data-target="dimensionsAndCapacity">Dimensions & Capacity</li>
+            <li data-target="electricals">Electricals</li>
+            <li data-target="tyresAndBrakes">Tyres & Brakes</li>
+            <li data-target="performances">Performances</li>
+            <li data-target="motorAndBatteries">Motor & Battery</li>
+            <li data-target="ranges">Ranges</li>
+            <li data-target="underpinnings">Underpinnings</li>
+            @if (Model.IsEV == true)
+            {
+                <li data-target="chargings">Chargings</li>
+            }
+            <li data-target="appfeatures">App Features</li>
+        </ul>
+    </div>
+</div>
+<div class="recently-viewed-section container-fluid mt-5">
+    <h2 class="mb-4">Recently Viewed Bikes</h2>
+    <div class="recent-wrapper">
+        <button class="recent-arrow left">&#10094;</button>
+        <div id="recentVehicleContainer" class="recent-vehicle-grid"></div>
+        <button class="recent-arrow right">&#10095;</button>
+    </div>
+</div>
+<div class="linkmaincontainer">
+    <select class="ddnvarient" id="variantId">
+        <option value="" disabled>Select Varient</option>
+        @foreach (var variant in Model.TWVarients)
+        {
+            <option value="@variant.TWVarientId">@variant.Varients</option>
+
+        }
+    </select>
+    <div class="linkcontainer shadow rounded-6">
+
+
+        <div class="highlight nav" id="verticalNav">
+
+            <ul>
+                <li data-target="engineTransmission">Engine & Transmission</li>
+                <li data-target="features">Features</li>
+                <li data-target="safety">Safety</li>
+                <li data-target="chassisAndSuspension">Chassis & Suspension</li>
+                <li data-target="dimensionsAndCapacity">Dimensions & Capacity</li>
+                <li data-target="electricals">Electricals</li>
+                <li data-target="tyresAndBrakes">Tyres & Brakes</li>
+                <li data-target="performances">Performances</li>
+                <li data-target="motorAndBatteries">Motor & Battery</li>
+                <li data-target="ranges">Ranges</li>
+                <li data-target="underpinnings">Underpinnings</li>
+                @if (Model.IsEV == true)
+                {
+                    <li data-target="chargings">Chargings</li>
+                }
+                <li data-target="appfeatures">App Features</li>
+            </ul>
+        </div>
+        <div class="content" id="content">
+            <section id="engineTransmission">
+                <h4 class="contentheading">Engine & Transmission</h4>
+                <div id="engineTransmissionContainer">
+                    @* @foreach (var engineandtransmission in ViewBag.EngineAndTransmission)
+                        { *@
+                    <div class="container-fluid">
+                        <table class="contenttable">
+                            <tr>
+                                <th>No. of Battries</th>
+                                <td id="NumOfBattries"></td>
+                            </tr>
+                            <tr>
+                                <th>Cooling System</th>
+                                <td id="CoolingSystem"></td>
+                            </tr>
+                            <tr>
+                                <th>Motor Power</th>
+                                <td class="MotorPower"></td>
+                            </tr>
+                            <tr>
+                                <th>Range (Eco Mode)</th>
+                                <td id="RangeEcoMode"></td>
+                            </tr>
+                            <tr>
+                                <th>Range (Normal Mode)</th>
+                                <td id="RangeNormalMode"></td>
+                            </tr>
+                            <tr>
+                                <th>Range (Sports Mode)</th>
+                                <td id="RangeSportsMode"></td>
+                            </tr>
+                            <tr>
+                                <th>Starting</th>
+                                <td class="starting"></td>
+                            </tr>
+                            <tr>
+                                <th>Motor IP Rating</th>
+                                <td id="MotorIPRating"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    @* } *@
+                </div>
+            </section>
+            <section id="features">
+                <h4 class="contentheading">Features</h4>
+                <div id="featuresContainer">
+                    @* @foreach (var features in ViewBag.Features)
+                        { *@
+                    <div class="container-fluid">
+                        <table class="contenttable">
+                            <tr>
+                                <th>Instrument Console</th>
+                                <td id="InstrumentConsole"></td>
+                            </tr>
+                            <tr>
+                                <th>Bluetooth Connectivity</th>
+                                <td id="BluetoothConnectivity"></td>
+                            </tr>
+                            <tr>
+                                <th>Navigation</th>
+                                <td id="Navigation"></td>
+                            </tr>
+                            <tr>
+                                <th>Call / SMS Alerts</th>
+                                <td id="CallSMSAlerts"></td>
+                            </tr>
+                            <tr>
+                                <th>Roadside Assistance</th>
+                                <td id="RoadsideAssistance"></td>
+                            </tr>
+                            <tr>
+                                <th>Anti Theft Alarm</th>
+                                <td id="AntiTheftAlarm"></td>
+                            </tr>
+                            <tr>
+                                <th>USB Charging Port</th>
+                                <td id="USBChargingPort"></td>
+                            </tr>
+                            <tr>
+                                <th>Music Control</th>
+                                <td id="MusicControl"></td>
+                            </tr>
+                            <tr>
+                                <th>OTA</th>
+                                <td id="OTA"></td>
+                            </tr>
+                            <tr>
+                                <th>Speedometer</th>
+                                <td id="Speedometer"></td>
+                            </tr>
+                            <tr>
+                                <th>Tripmeter</th>
+                                <td id="Tripmeter"></td>
+                            </tr>
+                            <tr>
+                                <th>Odometer</th>
+                                <td id="Odometer"></td>
+                            </tr>
+                            <tr>
+                                <th>Additional Features of Variant</th>
+                                <td id="additionalFeaturesOfVariant"></td>
+                            </tr>
+                            <tr>
+                                <th>Seat Type</th>
+                                <td id="SeatType"></td>
+                            </tr>
+                            <tr>
+                                <th>Clock</th>
+                                <td id="Clock"></td>
+                            </tr>
+                            <tr>
+                                <th>Passenger Footrest</th>
+                                <td id="PassengerFootrest"></td>
+                            </tr>
+                            <tr>
+                                <th>Carry Hook</th>
+                                <td id="CarryHook"></td>
+                            </tr>
+                            <tr>
+                                <th>Underseat Storage</th>
+                                <td id="UnderseatStorage"></td>
+                            </tr>
+                            <tr>
+                                <th>Charger Output</th>
+                                <td id="ChargerOutput"></td>
+                            </tr>
+                            <tr>
+                                <th>Regenerative Braking</th>
+                                <td id="RegenerativeBraking"></td>
+                            </tr>
+                            <tr>
+                                <th>Hill Hold</th>
+                                <td id="HillHold"></td>
+                            </tr>
+                            <tr>
+                                <th>Keyless Ignition</th>
+                                <td id="KeylessIgnition"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    @* } *@
+                </div>
+            </section>
+            <section id="safety">
+                <h4 class="contentheading">Safety</h4>
+                <div id="safetyContainer">
+                    @* @foreach (var safety in ViewBag.Safety)
+                        { *@
+                    <div class="container-fluid">
+                        <table class="contenttable">
+                            <tr>
+                                <th>Braking Type</th>
+                                <td id="BrakingType"></td>
+                            </tr>
+                            <tr>
+                                <th>Charging Point</th>
+                                <td id="ChargingPoint"></td>
+                            </tr>
+                            <tr>
+                                <th>Fast Charging</th>
+                                <td id="FastCharging"></td>
+                            </tr>
+                            <tr>
+                                <th>Mobile Application</th>
+                                <td id="MobileApplication"></td>
+                            </tr>
+                            <tr>
+                                <th>Internet Connectivity</th>
+                                <td id="InternetConnectivity"></td>
+                            </tr>
+                            <tr>
+                                <th>Operating System</th>
+                                <td id="OperatingSystem"></td>
+                            </tr>
+                            <tr>
+                                <th>Processor</th>
+                                <td id="Processor"></td>
+                            </tr>
+                            <tr>
+                                <th>Gradeability</th>
+                                <td id="Gradeability"></td>
+                            </tr>
+                            <tr>
+                                <th>Service Due Indicator</th>
+                                <td id="ServiceDueIndicator"></td>
+                            </tr>
+                            <tr>
+                                <th>Riding Modes</th>
+                                <td id="RidingModes"></td>
+                            </tr>
+                            <tr>
+                                <th>Display</th>
+                                <td id="Display"></td>
+                            </tr>
+                            <tr>
+                                <th>Switchable ABS</th>
+                                <td id="SwitchableABS"></td>
+                            </tr>
+                            <tr>
+                                <th>EBS</th>
+                                <td id="EBS"></td>
+                            </tr>
+                            <tr>
+                                <th>Seat Opening Switch</th>
+                                <td id="SeatOpeningSwitch"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    @* } *@
+                </div>
+            </section>
+            <section id="chassisAndSuspension">
+                <h4 class="contentheading">Chassis & Suspension</h4>
+                @* @foreach (var chassisAndSuspension in ViewBag.ChassisAndSuspension)
+                    { *@
+                <div class="container-fluid">
+                    <table class="contenttable">
+                        <tr>
+                            <th>Body Type</th>
+                            <td class="BodyType"></td>
+                        </tr>
+                    </table>
+                </div>
+                @*  } *@
+            </section>
+            <section id="dimensionsAndCapacity">
+                <h4 class="contentheading">Dimensions & Capacity</h4>
+                <div id="dimensionsAndCapacityContainer">
+                    @* @foreach (var dimensionsAndCapacity in ViewBag.DimensionsAndCapacity)
+                        { *@
+                    <div class="container-fluid">
+                        <table class="contenttable">
+                            <tr>
+                                <th>Width</th>
+                                <td id="width"></td>
+                            </tr>
+                            <tr>
+                                <th>Length</th>
+                                <td id="length"></td>
+                            </tr>
+                            <tr>
+                                <th>Height</th>
+                                <td id="height"></td>
+                            </tr>
+                            <tr>
+                                <th>Saddle Height</th>
+                                <td id="saddleHeight"></td>
+                            </tr>
+                            <tr>
+                                <th>Ground Clearance</th>
+                                <td id="groundClearance"></td>
+                            </tr>
+                            <tr>
+                                <th>Wheelbase</th>
+                                <td id="wheelbase"></td>
+                            </tr>
+                            <tr>
+                                <th>Kerb Weight</th>
+                                <td id="kerbWeight"></td>
+                            </tr>
+                            <tr>
+                                <th>Additional Storage</th>
+                                <td id="AdditionalStorage"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    @* } *@
+                </div>
+            </section>
+            <section id="electricals">
+                <h4 class="contentheading">Electricals</h4>
+                <div id="electricalsContainer">
+                    @* @foreach (var electricals in ViewBag.Electricals)
+                        { *@
+                    <div class="container-fluid">
+                        <table class="contenttable">
+                            <tr>
+                                <th>Headlight</th>
+                                <td class="headlight"></td>
+                            </tr>
+                            <tr>
+                                <th>Tail Light</th>
+                                <td id="tailLight"></td>
+                            </tr>
+                            <tr>
+                                <th>Turn Signal Lamp</th>
+                                <td id="turnSignalLamp"></td>
+                            </tr>
+                            <tr>
+                                <th>LED Tail Lights</th>
+                                <td id="ledTailLights"></td>
+                            </tr>
+                            <tr>
+                                <th>Low Battery Indicator</th>
+                                <td id="LowBatteryIndicator"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    @* } *@
+                </div>
+            </section>
+            <section id="tyresAndBrakes">
+                <h4 class="contentheading">Tyres & Brakes</h4>
+                <div id="tyresAndBrakesContainer">
+                    @* @foreach (var tyresAndBrakes in ViewBag.TyresAndBrakes)
+                        { *@
+                    <div class="container-fluid">
+                        <table class="contenttable">
+                            <tr>
+                                <th>Front Brake Diameter</th>
+                                <td id="frontBrakeDiameter"></td>
+                            </tr>
+                            <tr>
+                                <th>Rear Brake Diameter</th>
+                                <td id="rearBrakeDiameter"></td>
+                            </tr>
+                            <tr>
+                                <th>Front Tyre Pressure (Rider)</th>
+                                <td id="FrontTyrePressureRider"></td>
+                            </tr>
+                            <tr>
+                                <th>Front Tyre Pressure (Rider And Pillion)</th>
+                                <td id="FrontTyrePressureRiderAndPillion"></td>
+                            </tr>
+                            <tr>
+                                <th>Rear Tyre Pressure (Rider)</th>
+                                <td id="RearTyrePressureRider"></td>
+                            </tr>
+                            <tr>
+                                <th>Rear Tyre Pressure (Rider And Pillion)</th>
+                                <td id="RearTyrePressureRiderAndPillion"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    @* } *@
+                </div>
+            </section>
+            <section id="performances">
+                <h4 class="contentheading">Performances</h4>
+                <div id="performancesContainer">
+                    @* @foreach (var motorAndBatteries in ViewBag.MotorAndBatteries)
+                        { *@
+                    <div class="container-fluid">
+                        <table class="contenttable">
+                            <tr>
+                                <th>Scooter Speed</th>
+                                <td id="ScooterSpeed"></td>
+                            </tr>
+                            <tr>
+                                <th>0-40 Kmph</th>
+                                <td id="ZeroTo40Kmphsec"></td>
+                            </tr>
+                            <tr>
+                                <th>Top Speed</th>
+                                <td class="TopSpeed"></td>
+                            </tr>
+                            <tr>
+                                <th>0-100 Kmph</th>
+                                <td id="ZeroTo100Kmphsec"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    @* } *@
+                </div>
+            </section>
+            <section id="motorAndBatteries">
+                <h4 class="contentheading">Motor & Battery</h4>
+                <div id="motorAndBatteryContainer">
+                    @* @foreach (var motorAndBatteries in ViewBag.MotorAndBatteries)
+                        { *@
+                    <div class="container-fluid">
+                        <table class="contenttable">
+                            <tr>
+                                <th>Motor Type</th>
+                                <td id="MotorType"></td>
+                            </tr>
+                            <tr>
+                                <th>Torque (Motor)</th>
+                                <td id="TorqueMotor"></td>
+                            </tr>
+                            <tr>
+                                <th>Peak Power</th>
+                                <td id="PeakPower"></td>
+                            </tr>
+                            <tr>
+                                <th>Battery Type</th>
+                                <td id="BatteryType"></td>
+                            </tr>
+                            <tr>
+                                <th>Battery Capacity</th>
+                                <td class="BatteryCapacity"></td>
+                            </tr>
+                            <tr>
+                                <th>Battery Warranty</th>
+                                <td id="BatteryWarranty"></td>
+                            </tr>
+                            <tr>
+                                <th>Water Proof Rating</th>
+                                <td id="WaterProofRating"></td>
+                            </tr>
+                            <tr>
+                                <th>Reverse Assist</th>
+                                <td id="ReverseAssist"></td>
+                            </tr>
+                            <tr>
+                                <th>Transmission</th>
+                                <td class="Transmission"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    @* } *@
+                </div>
+            </section>
+            <section id="ranges">
+                <h4 class="contentheading">Range</h4>
+                <div id="rangesContainer">
+                    @* @foreach (var motorAndBatteries in ViewBag.MotorAndBatteries)
+                        { *@
+                    <div class="container-fluid">
+                        <table class="contenttable">
+                            <tr>
+                                <th>Claimed Range</th>
+                                <td class="ClaimedRange"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    @* } *@
+                </div>
+            </section>
+            <section id="underpinnings">
+                <h4 class="contentheading">Underpinnings</h4>
+                <div id="underpinningContainer">
+                    @* @foreach (var underpinnings in ViewBag.Underpinnings)
+                        { *@
+                    <div class="container-fluid">
+                        <table class="contenttable">
+                            <tr>
+                                <th>Suspension Front</th>
+                                <td id="suspensionFront"></td>
+                            </tr>
+                            <tr>
+                                <th>Suspension Rear</th>
+                                <td id="suspensionRear"></td>
+                            </tr>
+                            <tr>
+                                <th>Brakes Front</th>
+                                <td id="brakesFront"></td>
+                            </tr>
+                            <tr>
+                                <th>Brakes Rear</th>
+                                <td id="brakesRear"></td>
+                            </tr>
+                            <tr>
+                                <th>ABS</th>
+                                <td id="ABS"></td>
+                            </tr>
+                            <tr>
+                                <th>Tyre Size</th>
+                                <td id="tyreSize"></td>
+                            </tr>
+                            <tr>
+                                <th>Wheel Size</th>
+                                <td id="wheelSize"></td>
+                            </tr>
+                            <tr>
+                                <th>Wheel Type</th>
+                                <td id="wheelType"></td>
+                            </tr>
+                            <tr>
+                                <th>Frame</th>
+                                <td id="Frame"></td>
+                            </tr>
+                            <tr>
+                                <th>Tubeless Tyre</th>
+                                <td id="tubelessTyre"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    @* } *@
+                </div>
+            </section>
+            @if (Model.IsEV == true)
+            {
+                <section id="chargings">
+                    <h4 class="contentheading">chargings</h4>
+                    <div id="chargingContainer">
+                        @* @foreach (var chargings in ViewBag.Chargings)
+                            { *@
+                        <div class="container-fluid">
+                            <table class="contenttable">
+                                <tr>
+                                    <th>Charging At Home</th>
+                                    <td id="chargingAtHome"></td>
+                                </tr>
+                                <tr>
+                                    <th>Charging At Charging Station</th>
+                                    <td id="chargingAtChargingStation"></td>
+                                </tr>
+                                <tr>
+                                    <th>Charging Time(0-80%)</th>
+                                    <td id="ChargingTimeZeroTo80Percent"></td>
+                                </tr>
+                                <tr>
+                                    <th>Charging Time(0-100%)</th>
+                                    <td id="ChargingTimeZeroTo100Percent"></td>
+                                </tr>
+                                <tr>
+                                    <th>Charging Network / Battery Swapping Network</th>
+                                    <td id="ChargingNetworkBatterySwappingNetwork"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        @* } *@
+                    </div>
+                </section>
+            }
+            <section id="appfeatures">
+                <h4 class="contentheading">App Features</h4>
+                <div id="appfeaturesContainer">
+                    @* @foreach (var motorAndBatteries in ViewBag.MotorAndBatteries)
+                        { *@
+                    <div class="container-fluid">
+                        <table class="contenttable">
+                            <tr>
+                                <th>Charging Station Locate</th>
+                                <td id="ChargingStationLocate"></td>
+                            </tr>
+                            <tr>
+                                <th>Geo-Fencing</th>
+                                <td id="Geofencing"></td>
+                            </tr>
+                            <tr>
+                                <th>Anti Theft Alarm</th>
+                                <td id="antiTheftAlarm"></td>
+                            </tr>
+                            <tr>
+                                <th>Calls & Messaging</th>
+                                <td id="CallsAndMessaging"></td>
+                            </tr>
+                            <tr>
+                                <th>Navigation Assis</th>
+                                <td id="NavigationAssis"></td>
+                            </tr>
+                            <tr>
+                                <th>Low Battery Alert</th>
+                                <td id="LowBatteryAlert"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    @* } *@
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="modal"
+     id="reviewModal"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Write a Review
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+                @{
+                    var userReview = ViewBag.UserReview as Cars_Bikes.Models.Review;
+                }
+                @if (TempData["ReviewError"] != null)
+                {
+                    <div class="alert alert-danger">
+                        @TempData["ReviewError"]
+                    </div>
+                }
+                <form asp-controller="Review"
+                      asp-action="AddReview"
+                      method="post">
+
+                    <input type="hidden"
+                           name="twoWheelerId"
+                           value="@Model.TwoWheelerId" />
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Rating
+                        </label>
+                        <select name="rating"
+                                class="form-control"
+                                required>
+
+                            <option value="">Select Rating</option>
+
+                            @if (userReview?.Rating == 5)
+                            {
+                                <option value="5" selected>★★★★★ Excellent</option>
+                            }
+                            else
+                            {
+                                <option value="5">★★★★★ Excellent</option>
+                            }
+
+                            @if (userReview?.Rating == 4)
+                            {
+                                <option value="4" selected>★★★★ Very Good</option>
+                            }
+                            else
+                            {
+                                <option value="4">★★★★ Very Good</option>
+                            }
+
+                            @if (userReview?.Rating == 3)
+                            {
+                                <option value="3" selected>★★★ Good</option>
+                            }
+                            else
+                            {
+                                <option value="3">★★★ Good</option>
+                            }
+
+                            @if (userReview?.Rating == 2)
+                            {
+                                <option value="2" selected>★★ Average</option>
+                            }
+                            else
+                            {
+                                <option value="2">★★ Average</option>
+                            }
+
+                            @if (userReview?.Rating == 1)
+                            {
+                                <option value="1" selected>★ Poor</option>
+                            }
+                            else
+                            {
+                                <option value="1">★ Poor</option>
+                            }
+
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Your Review
+                        </label>
+
+                        @*<textarea name="reviewText"
+                            rows="5"
+                            class="form-control"
+                            required>@userReview?.ReviewText</textarea>*@
+                        <textarea name="reviewText"
+                                  rows="5"
+                                  class="form-control"
+                                  minlength="10"
+                                  maxlength="1000"
+                                  required>@userReview?.ReviewText</textarea>
+
+                        <small class="text-muted">
+                            Minimum 10 characters.
+                        </small>
+                    </div>
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-primary">
+                            Submit Review
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal"
+     id="allReviewsModal"
+     tabindex="-1">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Customer Reviews
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                @if (ViewBag.Reviews != null &&
+       ((List<Review>)ViewBag.Reviews).Any())
+                {
+                    foreach (var review in (List<Review>)ViewBag.Reviews)
+                    {
+                        <div class="review-card">
+
+                            <div class="d-flex align-items-start">
+
+                                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center flex-shrink-0"
+                                     style="width:45px;height:45px;font-weight:600;">
+                                    @review.Username.Substring(0, 1).ToUpper()
+                                </div>
+
+                                <div class="ms-3">
+
+                                    <div class="review-user">
+                                        @review.Username
+                                    </div>
+
+                                    @*<div class="text-warning mb-2">*@
+                                    <div class="review-rating">
+                                        @for (int i = 0; i < review.Rating; i++)
+                                        {
+                                            <span>★</span>
+                                        }
+                                    </div>
+
+                                    <div class="review-text">
+                                        @review.ReviewText
+                                    </div>
+
+                                    <div class="review-date mt-2">
+                                        @review.CreatedAt.ToString("dd MMM yyyy")
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>No reviews available.</p>
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!--For Highlisght the scorllspy part-->
+<script>document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('.highlight li');
+        const sections = document.querySelectorAll('section');
+        const content = document.getElementById('content');
+        const navLink = document.querySelectorAll('.horizontal-nav li');
+
+        function changeActiveLink() {
+            let index = sections.length;
+
+            while (--index && content.scrollTop + 50 < sections[index].offsetTop - content.offsetTop) { }
+
+            // Remove 'active' from all links in both menus
+            document.querySelectorAll('.highlight li').forEach((link) => link.classList.remove('active'));
+
+            // Get target data attribute from one of the lists and update both
+            const target = navLinks[index].getAttribute('data-target');
+            document.querySelectorAll(`.highlight li[data-target="${target}"]`).forEach(item => {
+                item.classList.add('active');
+            });
+            // **Scroll to active list item automatically**
+            navLink[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+
+        changeActiveLink();
+        content.addEventListener('scroll', changeActiveLink);
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+                const topOffset = targetElement.offsetTop - content.offsetTop;
+
+                // Scroll to section
+                content.scrollTo({ top: topOffset, behavior: 'smooth' });
+
+                // Remove active class from all links in both menus
+                document.querySelectorAll('.highlight li').forEach(item => item.classList.remove('active'));
+
+                // Add active class to both menus for the clicked item
+                document.querySelectorAll(`.highlight li[data-target="${targetId}"]`).forEach(item => {
+                    item.classList.add('active');
+                });
+            });
+        });
+    });</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Function to load data based on variant ID
+        function loadVariantData(variantId) {
+            $.ajax({
+                url: '@Url.Action("GetTWSpecData", "AtherEnergy")',
+                type: 'GET',
+                data: { variantId: variantId },
+                success: function (data) {
+
+                    // Update TWEVEngineAndTransmission data
+                    $('#NumOfBattries').text(data.engineAndTransmission.numOfBattries || 'N/A');
+                    $('#CoolingSystem').text(data.engineAndTransmission.coolingSystem || 'N/A');
+                    $('.MotorPower').text(data.engineAndTransmission.motorPower ? data.engineAndTransmission.motorPower + ' kW' : 'N/A');
+                    $('#RangeEcoMode').text(data.engineAndTransmission.rangeEcoMode || 'N/A');
+                    $('#RangeNormalMode').text(data.engineAndTransmission.rangeNormalMode || 'N/A');
+                    $('#RangeSportsMode').text(data.engineAndTransmission.rangeSportsMode || 'N/A');
+                    $('.starting').text(data.engineAndTransmission.starting || 'N/A');
+                    $('#MotorIPRating').text(data.engineAndTransmission.motorIPRating || 'N/A');
+
+                    // Update TWFeatures data
+                    $('#InstrumentConsole').text(data.features.instrumentConsole || 'N/A');
+                    $('#BluetoothConnectivity').text(data.features.bluetoothConnectivity || 'N/A');
+                    $('#Navigation').text(data.features.navigation || 'N/A');
+                    $('#CallSMSAlerts').text(data.features.callSMSAlerts || 'N/A');
+                    $('#RoadsideAssistance').text(data.features.roadsideAssistance || 'N/A');
+                    $('#AntiTheftAlarm').text(data.features.antiTheftAlarm || 'N/A');
+                    $('#USBChargingPort').text(data.features.usBChargingPort || 'N/A');
+                    $('#MusicControl').text(data.features.musicControl || 'N/A');
+                    $('#OTA').text(data.features.otA || 'N/A');
+                    $('#Speedometer').text(data.features.speedometer || 'N/A');
+                    $('#Tripmeter').text(data.features.tripmeter || 'N/A');
+                    $('#Odometer').text(data.features.odometer || 'N/A');
+                    $('#additionalFeaturesOfVariant').text(data.features.additionalFeaturesOfVariant || 'N/A');
+                    $('#SeatType').text(data.features.seatType || 'N/A');
+                    $('#Clock').text(data.features.clock || 'N/A');
+                    $('#PassengerFootrest').text(data.features.passengerFootrest || 'N/A');
+                    $('#CarryHook').text(data.features.carryHook || 'N/A');
+                    $('#UnderseatStorage').text(data.features.underseatStorage ? data.features.underseatStorage + ' L' : 'N/A');
+                    $('#ChargerOutput').text(data.features.chargerOutput || 'N/A');
+                    $('#RegenerativeBraking').text(data.features.regenerativeBraking || 'N/A');
+                    $('#HillHold').text(data.features.hillHold || 'N/A');
+                    $('#KeylessIgnition').text(data.features.keylessIgnition || 'N/A');
+
+                    // Update TWSafety data
+                    $('#BrakingType').text(data.safety.brakingType || 'N/A');
+                    $('#ChargingPoint').text(data.safety.chargingPoint || 'N/A');
+                    $('#FastCharging').text(data.safety.fastCharging || 'N/A');
+                    $('#MobileApplication').text(data.safety.mobileApplication || 'N/A');
+                    $('#InternetConnectivity').text(data.safety.internetConnectivity || 'N/A');
+                    $('#OperatingSystem').text(data.safety.operatingSystem || 'N/A');
+                    $('#Processor').text(data.safety.processor || 'N/A');
+                    $('#Gradeability').text(data.engineAndTransmission.gradeability ? data.engineAndTransmission.gradeability + ' Degree' : 'N/A');
+                    $('#ServiceDueIndicator').text(data.safety.serviceDueIndicator || 'N/A');
+                    $('#RidingModes').text(data.safety.ridingModes || 'N/A');
+                    $('#Display').text(data.safety.display || 'N/A');
+                    $('#SwitchableABS').text(data.safety.switchableABS || 'N/A');
+                    $('#EBS').text(data.safety.ebS || 'N/A');
+                    $('#SeatOpeningSwitch').text(data.safety.seatOpeningSwitch || 'N/A');
+
+                    // Update chassis and suspension
+                    $('.BodyType').text(data.chassisAndSuspension.bodyType || 'N/A');
+
+                    // Update dimensions and capacity
+                    $('#width').text(data.dimensionsAndCapacity.width ? data.dimensionsAndCapacity.width + ' mm' : 'N/A');
+                    $('#length').text(data.dimensionsAndCapacity.length ? data.dimensionsAndCapacity.length + ' mm' : 'N/A');
+                    $('#height').text(data.dimensionsAndCapacity.height ? data.dimensionsAndCapacity.height + ' mm' : 'N/A');
+                    $('#saddleHeight').text(data.dimensionsAndCapacity.saddleHeight || 'N/A');
+                    $('#groundClearance').text(data.dimensionsAndCapacity.groundClearance ? data.dimensionsAndCapacity.groundClearance + ' mm' : 'N/A');
+                    $('#wheelbase').text(data.dimensionsAndCapacity.wheelbase ? data.dimensionsAndCapacity.wheelbase + ' mm' : 'N/A');
+                    $('#kerbWeight').text(data.dimensionsAndCapacity.kerbWeight ? data.dimensionsAndCapacity.kerbWeight + ' kg' : 'N/A');
+                    $('#AdditionalStorage').text(data.dimensionsAndCapacity.additionalStorage || 'N/A');
+
+                    // Update electricals
+                    $('.headlight').text(data.electricals.headlight || 'N/A');
+                    $('#tailLight').text(data.electricals.tailLight || 'N/A');
+                    $('#turnSignalLamp').text(data.electricals.turnSignalLamp || 'N/A');
+                    $('#ledTailLights').text(data.electricals.ledTailLights || 'N/A');
+                    $('#LowBatteryIndicator').text(data.electricals.lowBatteryIndicator || 'N/A');
+
+                    // Update tyres and brakes
+                    $('#frontBrakeDiameter').text(data.tyresAndBrakes.frontBrakeDiameter ? data.tyresAndBrakes.frontBrakeDiameter + ' mm' : 'N/A');
+                    $('#rearBrakeDiameter').text(data.tyresAndBrakes.rearBrakeDiameter ? data.tyresAndBrakes.rearBrakeDiameter + ' mm' : 'N/A');
+                    $('#FrontTyrePressureRider').text(data.tyresAndBrakes.frontTyrePressureRider ? data.tyresAndBrakes.frontTyrePressureRider + ' psi' : 'N/A');
+                    $('#FrontTyrePressureRiderAndPillion').text(data.tyresAndBrakes.frontTyrePressureRiderAndPillion ? data.tyresAndBrakes.frontTyrePressureRiderAndPillion + ' psi' : 'N/A');
+                    $('#RearTyrePressureRider').text(data.tyresAndBrakes.rearTyrePressureRider ? data.tyresAndBrakes.rearTyrePressureRider + ' psi' : 'N/A');
+                    $('#RearTyrePressureRiderAndPillion').text(data.tyresAndBrakes.rearTyrePressureRiderAndPillion ? data.tyresAndBrakes.rearTyrePressureRiderAndPillion + ' psi' : 'N/A');
+
+                    // Update performances
+                    $('#ScooterSpeed').text(data.performances.scooterSpeed || 'N/A');
+                    $('#ZeroTo40Kmphsec').text(data.performances.zeroTo40Kmphsec ? data.performances.zeroTo40Kmphsec + ' sec' : 'N/A');
+                    $('.TopSpeed').text(data.performances.topSpeed ? data.performances.topSpeed + ' km/Hr' : 'N/A');
+                    $('#ZeroTo100Kmphsec').text(data.performances.zeroTo100Kmphsec ? data.performances.zeroTo100Kmphsec + ' sec' : 'N/A');
+                    $('#topSpeed').html('<i class="bi bi-speedometer2"></i> ' + (data.performances.topSpeed ? data.performances.topSpeed + ' km/Hr' : 'N/A'));
+
+                    // Update motor and battery
+                    $('#MotorType').text(data.motorAndBattery.motorType || 'N/A');
+                    $('#TorqueMotor').text(data.motorAndBattery.torqueMotor ? data.motorAndBattery.torqueMotor + ' Nm' : 'N/A');
+                    $('#PeakPower').text(data.motorAndBattery.peakPower ? data.motorAndBattery.peakPower + ' kW' : 'N/A');
+                    $('.BatteryCapacity').text(data.motorAndBattery.batteryCapacity ? data.motorAndBattery.batteryCapacity + ' Kwh' : 'N/A');
+                    $('#BatteryType').text(data.motorAndBattery.batteryType || 'N/A');
+                    $('#BatteryWarranty').text(data.motorAndBattery.batteryWarranty || 'N/A');
+                    $('#WaterProofRating').text(data.motorAndBattery.waterProofRating || 'N/A');
+                    $('#ReverseAssist').text(data.motorAndBattery.reverseAssist || 'N/A');
+                    $('.Transmission').text(data.motorAndBattery.transmission || 'N/A');
+                    $('#batteryCapacity').html('<i class="bi bi-battery-charging"></i> ' + (data.motorAndBattery.batteryCapacity ? data.motorAndBattery.batteryCapacity + ' Kwh' : 'N/A'));
+
+                    // Update ranges
+                    $('.ClaimedRange').text(data.ranges.claimedRange || 'N/A');
+
+                    // Update underpinning
+                    $('#suspensionFront').text(data.underpinning.suspensionFront || 'N/A');
+                    $('#suspensionRear').text(data.underpinning.suspensionRear || 'N/A');
+                    $('#brakesFront').text(data.underpinning.brakesFront || 'N/A');
+                    $('#brakesRear').text(data.underpinning.brakesRear || 'N/A');
+                    $('#ABS').text(data.underpinning.abS || 'N/A');
+                    $('#tyreSize').text(data.underpinning.tyreSize || 'N/A');
+                    $('#wheelSize').text(data.underpinning.wheelSize || 'N/A');
+                    $('#wheelType').text(data.underpinning.wheelType || 'N/A');
+                    $('#Frame').text(data.underpinning.frame || 'N/A');
+                    $('#tubelessTyre').text(data.underpinning.tubelessTyre || 'N/A');
+
+                    // Update charging
+                    $('#chargingAtHome').text(data.charging.chargingAtHome || 'N/A');
+                    $('#chargingAtChargingStation').text(data.charging.chargingAtChargingStation || 'N/A');
+                    $('#ChargingTimeZeroTo80Percent').text(data.charging.chargingTimeZeroTo80Percent || 'N/A');
+                    $('#ChargingTimeZeroTo100Percent').text(data.charging.chargingTimeZeroTo100Percent || 'N/A');
+                    $('#ChargingNetworkBatterySwappingNetwork').text(data.charging.chargingNetworkBatterySwappingNetwork || 'N/A');
+
+                    // Update app features
+                    $('#ChargingStationLocate').text(data.appfeatures.chargingStationLocate || 'N/A');
+                    $('#Geofencing').text(data.appfeatures.geofencing || 'N/A');
+                    $('#antiTheftAlarm').text(data.appfeatures.antiTheftAlarm || 'N/A');
+                    $('#CallsAndMessaging').text(data.appfeatures.callsAndMessaging || 'N/A');
+                    $('#NavigationAssis').text(data.appfeatures.navigationAssis || 'N/A');
+                    $('#LowBatteryAlert').text(data.appfeatures.lowBatteryAlert || 'N/A');
+                }
+            });
+        }
+
+        // Load data for the first option by default
+        var firstVariantId = $('#variantId option:eq(1)').val();
+        if (firstVariantId) {
+            loadVariantData(firstVariantId);
+            $('#variantId').val(firstVariantId);
+        }
+
+        // Change event for dropdown
+        $('#variantId').change(function () {
+            var selectedVariantId = $(this).val();
+            if (selectedVariantId) {
+                loadVariantData(selectedVariantId);
+            }
+        });
+    });
+</script>
+<script>$(document).ready(function () {
+
+        const vehicleData = {
+            name: $('h1').first().text().trim(),
+            image: $('.img-fluid').first().attr('src'),
+            url: window.location.href
+        };
+
+        if (!vehicleData.name) return;
+
+        let recentVehicles = JSON.parse(localStorage.getItem("recentVehicles")) || [];
+
+        recentVehicles = recentVehicles.filter(v => v.name !== vehicleData.name);
+
+        recentVehicles.unshift(vehicleData);
+
+        recentVehicles = recentVehicles.slice(0, 6);
+
+        localStorage.setItem("recentVehicles", JSON.stringify(recentVehicles));
+
+        //let html = '';
+
+        //recentVehicles.forEach(vehicle => {
+
+        //    html += `
+        //        <a href="${vehicle.url}" class="recent-card">
+        //            <img src="${vehicle.image}" alt="${vehicle.name}">
+        //            <h4>${vehicle.name}</h4>
+        //        </a>
+        //    `;
+        //});
+        let html = '';
+
+        const currentUrl = window.location.href;
+
+        recentVehicles
+            .filter(vehicle => vehicle.url !== currentUrl)
+            .forEach(vehicle => {
+
+                html += `
+            <a href="${vehicle.url}" class="recent-card">
+                <img src="${vehicle.image}" alt="${vehicle.name}">
+                <h4>${vehicle.name}</h4>
+            </a>
+        `;
+            });
+
+        $('#recentVehicleContainer').html(html);
+        $('#recentVehicleContainer').html(html);
+
+    });</script>
+<script>$('.recent-arrow.right').click(function () {
+        $('#recentVehicleContainer').animate({
+            scrollLeft: '+=300'Projects
+        }, 400);
+    });
+
+    $('.recent-arrow.left').click(function () {
+        $('#recentVehicleContainer').animate({
+            scrollLeft: '-=300'
+        }, 400);
+    });</script>
+<script>document.addEventListener("DOMContentLoaded", function () {
+
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.get("editReview") === "true") {
+
+            const reviewModal =
+                document.getElementById("reviewModal");
+
+            if (reviewModal) {
+                new bootstrap.Modal(reviewModal).show();
+            }
+        }
+    });</script>

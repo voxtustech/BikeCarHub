@@ -1,0 +1,164 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Toyota Taisor vs Maruti Fronx - Design, Features, Performance, and Price Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="Toyota Taisor, Maruti Fronx, subcompact SUVs, SUV comparison, Toyota vs Maruti, Taisor design, Fronx features, Taisor pricing, Fronx performance, affordable SUVs" />
+    <meta name="description" content=": Explore the comprehensive comparison between Toyota Taisor and Maruti Fronx. Compare design, features, engine performance, safety, and pricing to choose your ideal subcompact SUV." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            
+            
+            
+            <div class="div-line"></div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">1. Design and Aesthetics</h3>
+                <p><span class="font-weight-700">Toyota Taisor:</span> The Taisor embodies Toyota's signature robust styling, with a bold grille, sharp LED headlamps, and sporty alloys. Its aggressive design gives it a road presence that aligns with Toyota’s global SUV lineup. The Taisor also features a floating roofline and cladding for a rugged appearance, making it look more premium.</p>
+                <p><span class="font-weight-700">Maruti Fronx:</span> The Fronx boasts a futuristic design inspired by its elder sibling, the Baleno. With its coupe-like roofline, Nexa’s signature front grille, and LED DRLs, the Fronx exudes a youthful charm. The rear design is equally striking with connected LED taillights, which add a sense of sophistication.</p>
+                <p><i>Verdict:</i> The Taisor leans towards ruggedness, while the Fronx’s design is aimed at young and style-conscious buyers.</p>
+                
+                <div class="div-line"></div>
+                <div class="row m-b20  d-flex justify-content-center align-items-center">
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <figure>
+                        <img src="~/images/blogs/2025/jan/toyotataisorvsmarutifronxadetailedcomparison/taisorimg/frontview.png" alt="taisorfront" title="taisorfront" />
+                            <figcaption>Toyota Taisor</figcaption>
+                        </figure>
+                    </div>
+                        <div class="col-lg-6 col-md-6 text-center">
+                            <figure>
+                        <img src="~/images/blogs/2025/jan/toyotataisorvsmarutifronxadetailedcomparison/fronximg/frontview.webp" alt="fronxfront" title="fronxfront" />
+                            <figcaption>Maruti Fronx</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <h3 class="subheading">2. Interior and Features</h3>
+                <p><span class="font-weight-700">Toyota Taisor:</span> Inside, the Taisor emphasizes comfort and practicality. The dashboard layout is functional, with premium materials used in touchpoints. It comes equipped with a touchscreen infotainment system, wireless Android Auto and Apple CarPlay, automatic climate control, and connected car tech. The seats offer excellent support for long drives.</p>
+                <p><span class="font-weight-700">Maruti Fronx:</span> The Fronx’s interiors are modern and tech-savvy. It features a larger 9-inch SmartPlay Pro+ infotainment system, heads-up display, a 360-degree camera, and wireless charging. The use of dual-tone upholstery adds to its aesthetic appeal</p>
+                <p><i>Verdict:</i> The Fronx edges ahead in terms of advanced features, while the Taisor scores on comfort and practicality.</p>
+
+                <div class="div-line"></div>
+                <div class="row m-b20  d-flex justify-content-center align-items-center">
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <figure>
+                            <img src="~/images/blogs/2025/jan/toyotataisorvsmarutifronxadetailedcomparison/taisorimg/engine.jpg" alt="taisorengine" title="taisorengine" />
+                            <figcaption>Toyota Taisor</figcaption>
+                        </figure>
+                        </div>
+                        <div class="col-lg-6 col-md-6 text-center">
+                            <figure>
+                    <img src="~/images/blogs/2025/jan/toyotataisorvsmarutifronxadetailedcomparison/fronximg/engine1.webp" alt="fronxengine" title="fronxengine" />
+                            <figcaption>Maruti Fronx</figcaption>
+                        </figure>
+                </div>
+                </div>
+
+                <h3 class="subheading">3. Engine and Performance</h3>
+                <p><span class="font-weight-700">Toyota Taisor:</span> The Taisor is expected to offer two engine options: a 1.0L turbo-petrol engine and a 1.2L naturally aspirated petrol engine. These engines provide a balance between performance and fuel efficiency. Toyota’s tried-and-tested reliability is an added bonus.</p>
+                <p><span class="font-weight-700">Maruti Fronx:</span> The Fronx also comes with a 1.0L Boosterjet turbo-petrol engine, delivering an exciting driving experience. Additionally, it offers a 1.2L K-Series petrol engine for those prioritizing fuel efficiency. Both manual and automatic transmissions are available.</p>
+                <p><i>Verdict:</i> Both vehicles are neck-and-neck in performance, but the Fronx’s Boosterjet engine offers a slight edge for enthusiasts.</p>
+
+                <div class="div-line"></div>
+    
+                <h3 class="subheading">4. Safety</h3>
+                <p><span class="font-weight-700">Toyota Taisor:</span>Safety features include multiple airbags, ABS with EBD, hill hold assist, and a sturdy body structure. Toyota’s reputation for safety gives it an edge.</p>
+                <p><span class="font-weight-700">Maruti Fronx:</span>The Fronx is equipped with 6 airbags, ESP, ABS with EBD, and hill hold assist. Built on Maruti’s Heartect platform, it focuses on occupant protection.</p>
+                <p><i>Verdict:</i> Both models offer comprehensive safety packages, making them suitable for family buyers.</p>
+
+                <div class="div-line"></div>
+                <h3 class="subheading">5. Pricing and Value for Money</h3>
+                <div class="row m-b20  d-flex justify-content-center align-items-center">
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <figure>
+                            <img src="~/images/blogs/2025/jan/toyotataisorvsmarutifronxadetailedcomparison/taisorimg/header.jpeg" alt="taisorheader" title="taisorheader" />
+                            <figcaption>Toyota Taisor</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <figure>
+                            <img src="~/images/blogs/2025/jan/toyotataisorvsmarutifronxadetailedcomparison/fronximg/front.webp" alt="fronxheader" title="fronxheader" />
+                            <figcaption>Maruti Fronx</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <p>While official pricing for the Toyota Taisor is yet to be announced, it is expected to be slightly more premium than the Maruti Fronx, given Toyota’s brand positioning and additional features. On the other hand, the Maruti Fronx is aimed at budget-conscious buyers looking for a stylish, feature-packed car.</p>
+                <p><i>Verdict:</i> Both models offer comprehensive safety packages, making them suitable for family buyers.</p>
+
+                <div class="div-line"></div>
+                <h3 class="subheading">Final Thoughts</h3>
+                <p>
+                    The Toyota Taisor and Maruti Fronx bring unique offerings to the subcompact SUV segment. If you prioritize rugged looks, comfort, and Toyota’s reliability, the Taisor is the car for you. However, if you’re looking for a feature-rich, futuristic design at a more affordable price, the Maruti Fronx makes a compelling case.
+                    Ultimately, your choice will depend on your budget, preferences, and the driving experience you seek.
+                </p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

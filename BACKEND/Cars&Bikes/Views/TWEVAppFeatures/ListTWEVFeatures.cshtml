@@ -1,0 +1,51 @@
+﻿@model IEnumerable<TWEVFeatures>
+@{
+    ViewBag.Title = "List TW  EV Features";
+}
+
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <div class="container mt-4">
+                        <h3>List of TW Features</h3>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>TW Name</th>
+                                    <th>Variant</th>
+                                    <th>ABS</th>
+                                    <th>Speedometer</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.EVName</td>
+                                        <td>@item.Varients</td>
+                                        <td>@item.Clock</td>
+                                        <td>@item.Speedometer</td>
+                                        <td>
+                                            <a asp-action="EditTWEVFeatures" asp-route-id="@item.TWEVFeaturesId" class="btn btn-warning btn-sm">Edit</a>
+                                            <a asp-action="DeleteTWEVFeatures" asp-route-id="@item.TWEVFeaturesId" class="btn btn-danger btn-sm">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>

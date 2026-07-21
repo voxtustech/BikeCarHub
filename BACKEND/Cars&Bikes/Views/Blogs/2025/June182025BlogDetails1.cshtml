@@ -1,0 +1,467 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Hyundai i20 vs Tata Altroz 2025 Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="Hyundai i20 vs Tata Altroz 2025, i20 vs Altroz comparison 2025, Tata Altroz vs Hyundai i20 features, Hyundai i20 vs Altroz mileage, Best hatchback 2025 India, Hyundai i20 vs Tata Altroz safety, Hyundai i20 2025 review, Tata Altroz 2025 review, Altroz vs i20 price comparison, Premium hatchback comparison 2025, Tata Altroz vs Hyundai i20 design, Best family hatchback 2025 India, Hyundai i20 vs Tata Altroz interior, i20 vs Altroz performance 2025, Hyundai i20 or Tata Altroz which is better" />
+    <meta name="description" content="Compare Hyundai i20 vs Tata Altroz 2025 on price, features, mileage, safety, and performance to find the best premium hatchback for your needs this year." />
+}
+
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p> *@
+
+
+
+                <p>Written by: BikeCarHub Editorial Team</p>
+                <p>Published on: 18th June 2025</p>
+                <div class="div-line"></div>
+
+                @* <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/june/hundaii10vsaltroz/altroz vs i20.webp" alt="bikecarhubi10vsaltroz" title="bikecarhubi10vsaltroz" /></div>
+                </div> *@
+
+                <h3 class="subheading">1. Powertrain & Performance</h3>
+                <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                        <thead>
+                    <tr>
+                     <th class="text-center">Feature</th>
+                     <th class="text-center">Hyundai i20</th>
+                     <th class="text-center">Tata Altroz (2025 Facelift)</th>
+                    </tr>
+                        </thead>
+                        <tr class="compare-head-text">
+                            <td><span class="font-weight-600">Engine Options</span></td>
+                        <td>1.2 L NA Petrol (83 PS, 115 Nm)</td>
+                        <td>1.2 L NA Petrol (88 PS, 115 Nm)<br>1.2 L Turbo Petrol (110 PS, 140 Nm)<br>1.5 L Diesel (90 PS, 200 Nm)<br>CNG Option (73.5 PS)</td>
+                    </tr>
+                    <tr>
+                            <td><span class="font-weight-600">Transmission</span></td>
+                        <td>5-speed MT / CVT</td>
+                        <td>5-speed MT / AMT / 6-speed DCT</td>
+                    </tr>
+                        <tr class="compare-head-text">
+                            <td><span class="font-weight-600">Ride</span></td>
+                        <td>Smooth, city-focused, quiet</td>
+                        <td>Balanced for city & highway (turbo/diesel)</td>
+                    </tr>
+                    <tr>
+                            <td><span class="font-weight-600">Efficiency (ARAI)</span></td>
+                        <td>16 km/l (MT), 20 km/l (CVT)</td>
+                        <td>17-18 km/l (Petrol), 21-22 km/l (Diesel), 26-27 km/kg (CNG)</td>
+                    </tr>
+                        <tr class="compare-head-text">
+                            <td><span class="font-weight-600">Verdict</span></td>
+                        <td>i20 for smoother city commutes</td>
+                            <td>Altroz for turbocharged punch & fuel options</td>
+                    </tr>
+                </table>
+                </div>
+               
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">2. Design, Build & Space</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                    <tr>
+                         <th class="text-center">Feature</th>
+                         <th class="text-center">Hyundai i20</th>
+                         <th class="text-center">Tata Altroz</th>
+                    </tr>
+                        </thead>
+                        <tr class="compare-head-text">
+                            <td><span class="font-weight-600">Platform</span></td>
+                        <td>K-series Hyundai platform</td>
+                        <td>ALFA-ARC (Tata)</td>
+                    </tr>
+                    <tr>
+                            <td><span class="font-weight-600">Dimensions (mm)</span></td>
+                        <td>3995 × 1775 × 1505</td>
+                        <td>3990 × 1755 × 1523</td>
+                    </tr>
+                        <tr class="compare-head-text">
+                            <td><span class="font-weight-600">Boot Space</span></td>
+                        <td>311 L</td>
+                        <td>345 L</td>
+                    </tr>
+                    <tr>
+                            <td><span class="font-weight-600">Styling</span></td>
+                        <td>Cascading grille, LED DRLs, shark-fin antenna</td>
+                        <td>Twin-pod DRLs, blacked-out roof, flush handles</td>
+                    </tr>
+                        <tr class="compare-head-text">
+                            <td><span class="font-weight-600">Interior Feel</span></td>
+                        <td>Premium materials, glovebox cooling</td>
+                        <td>Wider cabin, ergonomic seating</td>
+                    </tr>
+                </table>
+                </div>
+               
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">3. Features & Technology</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                    <tr>
+                        <th class="text-center">Feature</th>
+                        <th class="text-center">Hyundai i20</th>
+                        <th class="text-center">Tata Altroz</th>
+                    </tr>
+                        </thead>
+                        <tr class="compare-head-text">
+                            <td><span class="font-weight-600">Infotainment</span></td>
+                        <td>10.25″ touchscreen</td>
+                        <td>10.25″ touchscreen</td>
+                    </tr>
+                    <tr>
+                            <td><span class="font-weight-600">Connectivity</span></td>
+                        <td>Bluelink connected car tech</td>
+                        <td>iRA connected car tech</td>
+                    </tr>
+                        <tr class="compare-head-text">
+                            <td><span class="font-weight-600">Convenience</span></td>
+                        <td>Wireless CarPlay, wireless charging, rear AC vents, digital cluster, sunroof</td>
+                        <td>Cruise control, ambient lighting, 360° camera, air purifier, rear AC vents</td>
+                    </tr>
+                    <tr>
+                            <td><span class="font-weight-600">Safety Tech</span></td>
+                        <td>ESC, hill-hold, TPMS, 6 airbags</td>
+                        <td>6 airbags standard, ISOFIX, stability control</td>
+                    </tr>
+                        <tr class="compare-head-text">
+                            <td><span class="font-weight-600">Verdict</span></td>
+                            <td>i20 wins on tech & polish</td>
+                            <td>Altroz wins on practicality & safety value</td>
+                        </tr>
+                </table>
+               
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">4. Safety & Build Quality</h3>
+                    <div style="overflow-x: auto;">
+                        <table class="comparison-table-content">
+                            <thead>
+                    <tr>
+                        <th class="text-center">Feature</th>
+                        <th class="text-center">Hyundai i20</th>
+                        <th class="text-center">Tata Altroz</th>
+                    </tr>
+                            </thead>
+                     <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Safety Rating</span></td>
+                        <td>4-Star (Global NCAP)</td>
+                        <td>5-Star (Global NCAP — Adult Occupant)</td>
+                    </tr>
+                    <tr>
+                                <td><span class="font-weight-600">Airbags</span></td>
+                        <td>6 (top variants)</td>
+                        <td>6 (standard across range)</td>
+                    </tr>
+                    <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Structure</span></td>
+                        <td>66% high-strength steel</td>
+                        <td>ALFA-ARC frame</td>
+                    </tr>
+                    <tr>
+                                <td><span class="font-weight-600">Extra Safety</span></td>
+                        <td>ESC, TPMS, rear camera</td>
+                        <td>Corner stability control, ESP, ISOFIX</td>
+                    </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Verdict</span></td>
+                         <td>i20 is feature-rich</td>
+                         <td>Altroz has stronger safety reputation</td>
+                       </tr>
+                </table>
+                </div>
+          
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">5. Ride Quality & Comfort</h3>
+                        <div style="overflow-x: auto;">
+                            <table class="comparison-table-content">
+                                <thead>
+                    <tr>
+                        <th class="text-center">Feature</th>
+                        <th class="text-center">Hyundai i20</th>
+                        <th class="text-center">Tata Altroz</th>
+                    </tr>
+                            </thead>
+                     <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Suspension Feel</span></td>
+                        <td>Soft, great for city</td>
+                        <td>Firm, great for highways</td>
+                    </tr>
+                    <tr>
+                                <td><span class="font-weight-600">Rear Seat</span></td>
+                        <td>Raised floor</td>
+                        <td>Flat floor, wider cabin</td>
+                    </tr>
+                    <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Highway Stability</span></td>
+                        <td>Moderate</td>
+                        <td>Excellent with diesel/turbo</td>
+                    </tr>
+                    <tr>
+                                <td><span class="font-weight-600">Cabin Insulation</span></td>
+                        <td>Refined</td>
+                        <td>Improved in 2025 facelift</td>
+                    </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Verdict</span></td>
+                       <td>Best for urban ease</td>
+                       <td>Best for long drives & rear passenger</td>
+                    </tr>
+                </table>
+                </div>
+                
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">6. Fuel Efficiency</h3>
+                  <div style="overflow-x: auto;">
+                  <table class="comparison-table-content">
+                      <thead>
+                    <tr>
+                        <th class="text-center">Variant</th>
+                        <th class="text-center">Hyundai i20</th>
+                        <th class="text-center">Tata Altroz</th>
+                    </tr>
+                            </thead>
+                   <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Petrol (NA)</span></td>
+                        <td>16-17 km/l</td>
+                        <td>17-18 km/l</td>
+                    </tr>
+                    <tr>
+                                <td><span class="font-weight-600">CVT (Petrol)</span></td>
+                        <td>~20 km/l</td>
+                        <td>Not available</td>
+                    </tr>
+                     <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Diesel</span></td>
+                        <td>Not offered</td>
+                        <td>21-22 km/l</td>
+                    </tr>
+                    <tr>
+                                <td><span class="font-weight-600">CNG</span></td>
+                        <td>Not offered</td>
+                        <td>26-27 km/kg</td>
+                    </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Verdict</span></td>
+                     <td>CVT efficient in i20</td>
+                     <td>Altroz diesel/CNG best for long-term savings</td>
+                     </tr>
+                </table>
+               </div>
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">7. Pricing (Ex-Showroom, Delhi — 2025)</h3>
+                     <div style="overflow-x: auto;">
+                     <table class="comparison-table-content">
+                         <thead>
+                    <tr>
+                        <th class="text-center">Variant</th>
+                        <th class="text-center">Hyundai i20 (₹)</th>
+                        <th class="text-center">Tata Altroz (₹)</th>
+                    </tr>
+                            </thead>
+                    <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Base Petrol (MT)</span></td>
+                        <td>7.04 — 7.79 L</td>
+                        <td>6.89 — 7.30 L</td>
+                    </tr>
+                    <tr>
+                                <td><span class="font-weight-600">Top Petrol (CVT/Auto)</span></td>
+                        <td>10.18 — 11.25 L</td>
+                        <td>11.45 — 12.50 L (Turbo DCT)</td>
+                    </tr>
+                     <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Diesel</span></td>
+                        <td>Not Available</td>
+                        <td>7.49 — 9.49 L</td>
+                    </tr>
+                    <tr>
+                                <td><span class="font-weight-600">CNG</span></td>
+                        <td>Not Available</td>
+                        <td>8.50 — 9.50 L</td>
+                    </tr>
+                   <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Verdict</span></td>
+                     <td>Premium pricing for features</td>
+                     <td>Better value,more fuel options</td>
+                     </tr>
+                </table>
+                </div>
+              
+                <div class="div-line"></div>
+
+                <h3 class="subheading">8. Ownership Insights</h3>
+                <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                            <thead>
+                    <tr>
+                        <th class="text-center">Factor</th>
+                        <th class="text-center">Hyundai i20</th>
+                        <th class="text-center">Tata Altroz</th>
+                    </tr>
+                            </thead>
+                <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Owner Feedback</span></td>
+                        <td>Smooth, reliable, some feature cuts in 2025</td>
+                        <td>Solid highway performer, minor quality issues in base NA trims</td>
+                    </tr>
+                    <tr>
+                                <td><span class="font-weight-600">Service Experience</span></td>
+                        <td>Widespread Hyundai network</td>
+                        <td>Improving Tata ASS with digital support</td>
+                    </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-600">Long-Term Satisfaction</span></td>
+                        <td>High among CVT buyers</td>
+                        <td>High among diesel/turbo buyers</td>
+                    </tr>
+                    <tr>
+                                <td><span class="font-weight-600">Verdict</span></td>
+                        <td>High among CVT buyers</td>
+                        <td>Value-packed with versatility</td>
+                    </tr>
+                </table>
+               </div>
+
+              
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">9. Final Verdict — Which One Should You Buy?</h3>
+                <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                    <thead>
+                    <tr>
+                        <th class="text-center">Choose Hyundai i20 If...</th>
+                        <th class="text-center">Choose Tata Altroz If...</th>
+                    </tr>
+                            </thead>
+                        <tr class="compare-head-text">
+                        <td>You want a smooth, polished city car</td>
+                        <td>You want the safest hatchback in India</td>
+                    </tr>
+                    <tr>
+                        <td>You prefer tech features and CVT</td>
+                        <td>You want diesel/CNG options</td>
+                    </tr>
+                    <tr class="compare-head-text">
+                        <td>You're okay with a higher price for refinement</td>
+                        <td>You want more value for money and rear space</td>
+                    </tr>
+                </table>
+                </div>
+                <div class="div-line"></div>
+
+                <h3 class="subheading">FAQs</h3>
+
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                Is Altroz safer than i20?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                 Yes. Altroz has a 5-star NCAP safety rating; i20 has 4 stars.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                Which has better rear seat comfort?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                 Altroz — thanks to its flat floor and wider cabin.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Is i20 CVT reliable?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                 Yes — smooth, low maintenance, and efficient.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                Is Altroz good for highways?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                 Yes — especially diesel and turbo petrol variants.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-line"></div>
+                    <a class="for-link" asp-controller="Home" asp-action="Index"><span class="font-weight-700">BikeCarHub</span></a>
+
+                <h3 class="subheading">Conclusion</h3>
+                <p>So here's the tea : If you're all about city comfort, smooth auto drives, and a cabin that screams 'bougie on a budget,' the Hyundai i20 is your perfect match. But if safety is your non-negotiable, fuel options matter, and you want to save some serious  over time, the Tata Altroz might just be your soulmate hatch. Either way, both are strong contenders—but only one fits your lifestyle. Choose smart, drive proud, and yes... enjoy the flex when your friends ask for a ride.</p>
+
+                    <p>If you want to know more about Tata Altroz feature and specification<a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_2"> Click Here</a></p>
+
+                    <p>If you want to know more about Tata Altroz Value for money<a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_1"> Click Here</a></p>
+           </div>
+          </div>
+            @await Html.PartialAsync("_AllBrandComponent")
+         </div>
+      </div>
+    
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

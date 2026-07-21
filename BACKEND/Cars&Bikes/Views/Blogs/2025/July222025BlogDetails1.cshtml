@@ -1,0 +1,431 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Super Bikes in India 2025 – BikeCarHub Official";
+}
+@section MetaTags {
+    <meta name="keywords" content="Top super bikes in India, Best superbikes 2025, Super bikes price in India, Fastest bikes in India, Suzuki Hayabusa 2025, Aprilia RSV4 India review, BMW M 1000 RR specs, Ducati Panigale V4 2025, Kawasaki Ninja H2R India, Superbikes comparison 2025, Superbike buying guide India, Top speed motorcycles, Best performance bikes, High-end bikes in India, BikeCarHub reviews" />
+    <meta name="description" content="Explore the top 5 superbikes in India for 2025. Specs, speed, price & expert insights by BikeCarHub. Get your ultimate thrill ride now!" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 22th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2> 
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                    <p>India's roads are no stranger to fast machines—but if you're looking for the <span class="font-weight-700">pinnacle of two-wheeled engineering</span>, then this blog is your ultimate ride. Super bikes aren't just motorcycles—they're <span class="font-weight-700">engineering symphonies</span> created for speed, control, and sheer drama.</p>
+
+                <p>Whether you're a hardcore motorhead or a weekend rider with a thirst for torque, this guide from <span class="font-weight-700">BikeCarHub</span> is your pit lane to glory. Based on the latest official manuals and real-world market analysis, we break down the <span class="font-weight-700">Top 5 Super Bikes in India</span> for 2025.</p>
+                
+                <h2 class="subheading">1. Aprilia RSV4 1100 Factory — Italy's Racing Royalty</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 5 super bikes in india/aprilia rsv4 1100 factory.webp" alt="Aprilia RSV4 1100 Factory" title="Aprilia RSV4 1100 Factory" /></div>
+                </div>
+                <p><span class="font-weight-700">Aprilia</span> doesn't do subtle. The <span class="font-weight-700">RSV4 1100 Factory</span> is a high-strung, electronically bristling, track-honed machine made street-legal by nothing more than clever compliance.</p>
+                
+                <h3 class="subheading">Engine & Performance:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Engine</span>: 1,099cc V4 (65°), 4 valves per cylinder, liquid-cooled with Ride-By-Wire</li>
+                    <li><span class="font-weight-700">Max Power</span>: 220 HP 161.8 kW@13,000 rpm</li>
+                    <li><span class="font-weight-700">Torque</span>: 127 Nm@10,800 rpm</li>
+                    <li><span class="font-weight-700">Top Speed</span>: 300+ km/h</li>
+                    <li><span class="font-weight-700">Dry/Wet Weight</span>: 177 kg / 204 kg</li>
+                    <li><span class="font-weight-700">Ride Modes</span>: Sport, Race, Track</li>
+                    <li><span class="font-weight-700">Suspension</span>: Öhlins Smart EC 2.0 (Front & Rear)</li>
+                    <li><span class="font-weight-700">Electronics</span>: APRC (Traction, Wheelie, Launch, Cornering ABS)</li>
+                </ul>
+                
+                <p>With <span class="font-weight-700">three riding modes (Sport, Race, Track)</span> and APRC electronic suite, the RSV4 1100 isn't just fast—it's smart. It knows when to hold back and when to push forward. On the track, it's your personal missile. On the road, it's surprisingly tame... until you twist the throttle past 8000 RPM.</p>
+                
+                <h3 class="subheading">Electronics:</h3>
+                <p>The RSV4 is a tech-lover's fantasy:</p>
+                <ul>
+                    <li><span class="font-weight-700">Aprilia Performance Ride Control (APRC)</span> with traction, wheelie, and launch control</li>
+                    <li><span class="font-weight-700">Cornering ABS</span>, <span class="font-weight-700">cruise control</span>, <span class="font-weight-700">pit limiter</span>, and a bi-directional quickshifter</li>
+                    <li><span class="font-weight-700">Smart EC 2.0</span> semi-active suspension by Öhlins</li>
+                </ul>
+                
+                <h3 class="subheading">Maintenance:</h3>
+                <p>With Euro 4 compliance and modern tech, the RSV4 is relatively manageable for city riding—but shines best on high-speed roads or track days. Parts can be premium-priced.</p>
+                
+                <p><span class="font-weight-700">Price in India</span>: <span class="font-weight-700">₹31,26,000</span></p>
+                
+                <div class="div-line"></div>
+                
+                <h2 class="subheading">2. Suzuki Hayabusa — The Legend Reborn</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 5 super bikes in india/suzuki hayabusa.webp" alt="Suzuki Hayabusa 2025" title="Suzuki Hayabusa 2025" /></div>
+                </div>
+                <p>The <span class="font-weight-700">Suzuki Hayabusa</span> is more than a motorcycle—it's a cultural icon. First launched in 1999, it redefined what a production bike could be. Fast forward to 2025, and the modern Hayabusa blends legendary performance with 21st-century finesse.</p>
+                
+                <h3 class="subheading">Engine & Performance:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Engine</span>: 1,340cc Inline-4, DOHC</li>
+                    <li><span class="font-weight-700">Max Power</span>: 190 HP@9,700 rpm</li>
+                    <li><span class="font-weight-700">Torque</span>: 150 Nm@7,000 rpm</li>
+                    <li><span class="font-weight-700">Top Speed</span>: 299+ km/h (Electronically Limited)</li>
+                    <li><span class="font-weight-700">Weight</span>: 266 kg</li>
+                    <li><span class="font-weight-700">Ride Modes</span>: Custom via S.I.R.S (Suzuki Intelligent Ride System)</li>
+                    <li><span class="font-weight-700">Electronics</span>: Traction Control, Bi-directional Quickshifter, Launch Control, ABS</li>
+                </ul>
+                
+                <p>What makes the 2025 model special is the <span class="font-weight-700">low- to mid-range grunt</span>, enhanced by the updated combustion system and new ride-by-wire throttle that ensures <span class="font-weight-700">smoother torque delivery</span> across the rev range.</p>
+                
+                <h3 class="subheading">Tech & Safety:</h3>
+                <p>The Hayabusa now comes equipped with the <span class="font-weight-700">Suzuki Intelligent Ride System (S.I.R.S)</span>:</p>
+                <ul>
+                    <li><span class="font-weight-700">Traction Control</span>, <span class="font-weight-700">Launch Control</span>, and <span class="font-weight-700">Hill Hold Assist</span></li>
+                    <li><span class="font-weight-700">Motion Track Brake System</span> (ABS in corners)</li>
+                    <li><span class="font-weight-700">Bi-directional Quickshifter</span>, <span class="font-weight-700">Cruise Control</span>, and <span class="font-weight-700">Low RPM Assist</span></li>
+                </ul>
+                
+                <h3 class="subheading">Real-World Use:</h3>
+                <p>Thanks to a comfortable seat height, generous wind protection, and a relatively relaxed riding posture, the Hayabusa is a <span class="font-weight-700">grand tourer disguised as a speed demon</span>.</p>
+                
+                <p><span class="font-weight-700">Price in India</span>: <span class="font-weight-700">₹16,90,000 (Ex-showroom Price-Delhi)</span></p>
+                <p><span class="font-weight-700">Fun Fact</span>: "Hayabusa" translates to "Peregrine Falcon"—a bird that dives at over 300 km/h.</p>
+                
+                <div class="div-line"></div>
+                
+                <h2 class="subheading">3. BMW M 1000 RR — The Precision Rocket</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 5 super bikes in india/bmw m 1000 rr.webp" alt="BMW M 1000 RR" title="BMW M 1000 RR" /></div>
+                </div>
+                <p>With the <span class="font-weight-700">M 1000 RR</span>, BMW Motorrad has created a road-legal race bike engineered for outright domination. Derived from the S 1000 RR, this M version isn't just a tune-up—it's a complete metamorphosis with carbon everything and race DNA coursing through its veins.</p>
+                
+                <h3 class="subheading">Engine & Performance:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Engine</span>: 999cc In-line 4-cylinder, BMW ShiftCam</li>
+                    <li><span class="font-weight-700">Max Power</span>: 212 HP@14,500 rpm</li>
+                    <li><span class="font-weight-700">Max Torque</span>: 113 Nm@11,000 rpm</li>
+                    <li><span class="font-weight-700">Top Speed</span>: +300 km/h</li>
+                    <li><span class="font-weight-700">Weight</span>: 192 kg (wet)</li>
+                    <li><span class="font-weight-700">Ride Modes</span>: Rain, Road, Dynamic, Race</li>
+                    <li><span class="font-weight-700">Brakes</span>: Radial calipers, carbon wheels</li>
+                    <li><span class="font-weight-700">Electronics</span>: ABS Pro, Dynamic Traction Control, Wheelie Control, Launch Control</li>
+                </ul>
+                
+                <p>This motorcycle is an <span class="font-weight-700">engineering triumph</span>. ShiftCam tech delivers seamless power, while titanium valves and forged pistons help it scream up to 15,000 rpm.</p>
+                
+                <h3 class="subheading">Features & Rider Aids:</h3>
+                <ul>
+                    <li><span class="font-weight-700">ABS Pro</span>, <span class="font-weight-700">Dynamic Traction Control</span>, <span class="font-weight-700">Wheelie & Slide Control</span></li>
+                    <li><span class="font-weight-700">Riding Modes Pro</span> with programmable engine braking and throttle response</li>
+                    <li><span class="font-weight-700">M Carbon Wheels</span>, <span class="font-weight-700">M Winglets</span>, <span class="font-weight-700">GPS Lap Trigger</span>, <span class="font-weight-700">Heated Grips</span></li>
+                </ul>
+                
+                <h3 class="subheading">Build Quality:</h3>
+                <p>Everything screams premium—from the 6.5" TFT to the featherweight carbon components. Designed in wind tunnels, the bike is <span class="font-weight-700">sculpted for downforce</span> and corner stability.</p>
+                
+                <p><span class="font-weight-700">Price in India</span>: <span class="font-weight-700">₹49,00,000 (Starting Price)</span></p>
+                <p><span class="font-weight-700">Fun Fact</span>: It's one of the few superbikes homologated for World SBK straight from the factory.</p>
+                
+                <div class="div-line"></div>
+                
+                <h2 class="subheading">4. Ducati Panigale V4 — MotoGP Soul, Street Style</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 5 super bikes in india/ducati panigale v4.webp" alt="Ducati Panigale V4" title="Ducati Panigale V4" /></div>
+                </div>
+                <p>If passion had a sound, it would be the <span class="font-weight-700">Desmosedici Stradale V4</span> engine echoing through the rev range. Ducati's Panigale V4 isn't just art—it's kinetic sculpture, honed for racetrack brutality and Italian flair.</p>
+                
+                <h3 class="subheading">Engine & Performance:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Engine</span>: 1,103cc Desmosedici Stradale V4</li>
+                    <li><span class="font-weight-700">Max Power</span>: 216 HP@13,500 rpm</li>
+                    <li><span class="font-weight-700">Max Torque</span>: 120.9 Nm@11,250 rpm</li>
+                    <li><span class="font-weight-700">Top Speed</span>: 299+ km/h</li>
+                    <li><span class="font-weight-700">Weight</span>: 198 kg (wet)</li>
+                    <li><span class="font-weight-700">Riding Modes</span>: Race A, Race B, Sport, Street</li>
+                    <li><span class="font-weight-700">Electronics</span>: Slide Control, DQS, Cornering ABS, Wheelie Control, DTC EVO 3</li>
+                </ul>
+                
+                <p>It uses <span class="font-weight-700">counter-rotating crankshaft</span> tech from MotoGP to reduce gyroscopic effects, making this monster <span class="font-weight-700">ridiculously nimble</span>.</p>
+                
+                <h3 class="subheading">Rider Tech:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Riding Modes</span>: Race A, Race B, Sport, Street</li>
+                    <li><span class="font-weight-700">Ducati Traction Control EVO 3</span>, <span class="font-weight-700">Slide Control</span>, <span class="font-weight-700">Wheelie Control</span>, <span class="font-weight-700">Power Launch</span></li>
+                    <li><span class="font-weight-700">Ducati Quick Shifter EVO 2</span> and <span class="font-weight-700">Cornering ABS</span></li>
+                </ul>
+                
+                <h3 class="subheading">On the Road:</h3>
+                <p>Not the easiest to live with in traffic, but drop into Race mode on an open road, and you'll meet <span class="font-weight-700">motorcycle nirvana</span>. Every component, from the TFT to the frame geometry, is <span class="font-weight-700">purpose-built</span>.</p>
+                
+                <p><span class="font-weight-700">Price in India</span>: <span class="font-weight-700">₹29,99,000 (Starting Price)</span></p>
+                <p><span class="font-weight-700">Fun Fact</span>: The Panigale V4 is the first mass-produced Ducati with a V4 engine—until then, all road bikes were V-twins.</p>
+                
+                <div class="div-line"></div>
+                
+                <h2 class="subheading">5. Kawasaki Ninja H2R — The Supercharged Apocalypse</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/top 5 super bikes in india/kawasaki ninja h2r.webp" alt="Kawasaki Ninja H2R" title="Kawasaki Ninja H2R" /></div>
+                </div>
+                <p>This isn't a motorcycle. It's a <span class="font-weight-700">rolling ballistic missile</span>. The <span class="font-weight-700">Kawasaki Ninja H2R</span> is a <span class="font-weight-700">track-only weapon</span> that's banned from public roads for a good reason—it'll eat highways and shred air molecules in its path.</p>
+                
+                <h3 class="subheading">Engine & Performance:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Engine</span>: 998cc Supercharged Inline-4</li>
+                    <li><span class="font-weight-700">Max Power</span>: 310 HP (326 HP with Ram Air)</li>
+                    <li><span class="font-weight-700">Max Torque</span>: 165 Nm@12,500 rpm</li>
+                    <li><span class="font-weight-700">Top Speed</span>: 400 km/h</li>
+                    <li><span class="font-weight-700">Weight</span>: 216 kg (dry)</li>
+                    <li><span class="font-weight-700">Suspension</span>: KYB AOS-II Racing Forks, Öhlins TTX36 Rear</li>
+                    <li><span class="font-weight-700">Frame</span>: Trellis Frame with Single-sided Swingarm</li>
+                    <li><span class="font-weight-700">Brakes</span>: Brembo M50</li>
+                </ul>
+                
+                <p>Engineered by Kawasaki's <span class="font-weight-700">Aerospace Division</span>, the H2R's supercharger can move <span class="font-weight-700">200 litres of air per second</span>—and it's cooled by titanium and aerospace-inspired airflow channels.</p>
+                
+                <h3 class="subheading">Tech Marvels:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Kawasaki Cornering Management Function (KCMF)</span></li>
+                    <li><span class="font-weight-700">KTRC (9-mode Traction Control)</span></li>
+                    <li><span class="font-weight-700">KLCM (Launch Control)</span></li>
+                    <li><span class="font-weight-700">KIBS (ABS with Corner Braking Control)</span></li>
+                    <li><span class="font-weight-700">Öhlins TTX36 rear shock</span>, Brembo M50 brakes, and single-sided swingarm</li>
+                </ul>
+                
+                <h3 class="subheading">Important:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Not street legal</span></li>
+                    <li>Requires <span class="font-weight-700">track-only tires and maintenance every 15 hours</span> of use above 8000 rpm</li>
+                    <li>Emits 120+ dB exhaust note—ear protection is non-negotiable</li>
+                </ul>
+                
+                <p><span class="font-weight-700">Price in India</span>: <span class="font-weight-700">₹75.8 lakh</span></p>
+                <p><span class="font-weight-700">Fun Fact</span>: No production motorcycle has ever come close to the <span class="font-weight-700">H2R's 400 km/h mark</span>, and it holds the unofficial record in the hands of pro riders.</p>
+                
+                <div class="div-line"></div>
+                
+                <h2 class="subheading">Final Thoughts from BikeCarHub</h2>
+                <p>Each of these superbikes is a marvel in its own right. But the best bike isn't just about numbers—it's about <span class="font-weight-700">how it makes you feel</span> when you're leaned into a curve at 200 km/h, or simply admiring it in your garage.</p>
+                
+                <h2 class="subheading">Specifications Comparison Table</h2>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-center">Bike</th>
+                                <th class="text-center">Power</th>
+                                <th class="text-center">Top Speed</th>
+                                <th class="text-center">Type</th>
+                                <th class="text-center">Price (₹ Lakhs)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td><a class="for-link" asp-controller="Aprilia" asp-action="ApriliaRSV4Factory1100">Aprilia RSV4 1100</a></td>
+                                <td>220 HP</td>
+                                <td>300+ km/h</td>
+                                <td>Track-Focused</td>
+                                <td>31.26</td>
+                            </tr>
+                            <tr>
+                                <td><a class="for-link" asp-controller="Suzuki" asp-action="SuzukiHayabusa">Suzuki Hayabusa</a></td>
+                                <td>190 HP</td>
+                                <td>299+ km/h</td>
+                                <td>Sport Tourer</td>
+                                <td>16.90</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td><a class="for-link" asp-controller="BMW" asp-action="BMWM1000RR">BMW M 1000 RR</a></td>
+                                <td>212 HP</td>
+                                <td>300+ km/h</td>
+                                <td>Race Legal</td>
+                                <td>49.00</td>
+                            </tr>
+                            <tr>
+                                <td><a class="for-link" asp-controller="Ducati" asp-action="DucatiPanigale">Ducati Panigale V4</a></td>
+                                <td>216 HP</td>
+                                <td>299+ km/h</td>
+                                <td>MotoGP DNA</td>
+                                <td>29.99</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Kawasaki Ninja H2R</td>
+                                <td>310 HP</td>
+                                <td>400 km/h</td>
+                                <td>Track-Only</td>
+                                <td>75.80</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+               
+                
+                
+                <h2 class="subheading">Frequently Asked Questions – Answered</h2>
+                
+                <div class="accordion" id="faqSuperbikes">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which is the fastest superbike in India right now?
+                            </button>
+                        </h3>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqSuperbikes">
+                            <div class="accordion-body">
+                                Kawasaki Ninja H2R holds the crown as the fastest superbike in India—with an unofficial top speed of over 400 km/h. However, it's not road legal. Among street-legal options, the BMW M 1000 RR and Aprilia RSV4 1100 Factory are the quickest.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Are any of these superbikes beginner-friendly?
+                            </button>
+                        </h3>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqSuperbikes">
+                            <div class="accordion-body">
+                                Not really. These machines are designed for experienced riders due to their high power, weight, and aggressive throttle response. Suzuki Hayabusa, with its smoother power delivery and comfort, is the most forgiving of the lot.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Is the Kawasaki Ninja H2R legal to ride on Indian roads?
+                            </button>
+                        </h3>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqSuperbikes">
+                            <div class="accordion-body">
+                                No. The H2R is track-only and not road-legal due to its excessive noise levels, lack of headlights and indicators, and supercharged power output. The Ninja H2 (non-R) variant is road legal.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. What is the service interval for Ducati Panigale V4?
+                            </button>
+                        </h3>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqSuperbikes">
+                            <div class="accordion-body">
+                                Ducati recommends a Desmo service every 24,000 km (15,000 miles), and oil changes every 12,000 km or 12 months—whichever comes first. Maintenance must be done at authorized Ducati service centers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which of these bikes is the most comfortable for long rides?
+                            </button>
+                        </h3>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqSuperbikes">
+                            <div class="accordion-body">
+                                The Suzuki Hayabusa wins this category hands down. With its upright ergonomics, wide seat, and excellent wind protection, it's perfect for touring at triple-digit speeds without killing your back.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Can I use the Aprilia RSV4 1100 Factory for city commutes?
+                            </button>
+                        </h3>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqSuperbikes">
+                            <div class="accordion-body">
+                                You can, but it's not ideal. The RSV4 has a tall seat height, aggressive ergonomics, and runs hot in traffic. It's better suited for open highways or weekend rides.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which bike is the best for track racing in India?
+                            </button>
+                        </h3>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqSuperbikes">
+                            <div class="accordion-body">
+                                The BMW M 1000 RR is designed for racing, with carbon winglets, advanced telemetry, and electronics calibrated for superbike circuits. The Aprilia RSV4 and Ducati Panigale V4 are also track-focused and competitive.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. What's the resale value of these superbikes in India?
+                            </button>
+                        </h3>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqSuperbikes">
+                            <div class="accordion-body">
+                                Superbikes generally depreciate faster than commuter bikes, but models like the Hayabusa and Panigale V4 hold better value due to brand popularity and demand. Limited edition models like the M 1000 RR and H2R may even become collector's items.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. What is the most affordable superbike on this list?
+                            </button>
+                        </h3>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqSuperbikes">
+                            <div class="accordion-body">
+                                The 2025 Suzuki Hayabusa is the most affordable among the five, priced between ₹16 to ₹19 lakh (ex-showroom based on the city). Despite its lower price, it offers premium performance and tech.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Where can I buy and service these superbikes in India?
+                            </button>
+                        </h3>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqSuperbikes">
+                            <div class="accordion-body">
+                                Most major cities have authorized showrooms for Ducati, Suzuki, BMW Motorrad, Kawasaki, and Aprilia. Always buy from official dealers to ensure proper servicing, warranty, and access to original parts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p>Stay updated with more thrilling automotive content only at <a class="for-link" href="https://www.bikecarhub.com/">BikeCarHub.com</a>—India's trusted voice for high-octane motorcycle journalism.</p>
+            </div>
+        </div>
+    </div>
+      
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

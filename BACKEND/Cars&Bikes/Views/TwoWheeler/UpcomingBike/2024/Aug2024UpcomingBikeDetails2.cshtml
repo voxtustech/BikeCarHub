@@ -1,0 +1,88 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Triumph Daytona 660: Milage, Performance & Specs";
+}
+@section MetaTags{
+    <meta name="keywords" content="Triumph Daytona 660, Daytona 660 specs, Triumph sports bike, Triumph Daytona features, Daytona 660 price, Triumph 660cc motorcycle, New Triumph Daytona" />
+    <meta name="description" content="Explore the Triumph Daytona 660 with its powerful 660cc triple engine, sporty dynamics, and advanced tech. Discover performance, features, and price details." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="overlay-black-middle" style=" background:linear-gradient(#475372, #78829A, #9EA3AD, #fff); margin:0;">
+    <img src="~/images/background/banner.png" />
+</div> *@
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" /></div> *@
+<!-- Breadcrumb row END -->
+@* <div class="car-details-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="nav">
+                    <ul>
+                        <li><a></a></li>
+                        <li class="active"><a href="car-details-overview.html">Overview</a></li>
+                        <li><a href="car-detail-specifications.html">Specifications</a></li>
+                        <li><a href="car-detail-price.html">Price</a></li>
+                        <li><a href="car-detail-compare.html">Compare</a></li>
+                        <li><a href="car-detail-pictures.html">Pictures</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+<body>
+    <div class=" ">
+    <h1 class="latest-bike-head">Upcoming Bikes</h1>
+    <div class="TWupcoming-container">
+        <div class="upcoming-bikes-details-image">
+            <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+            <div class="upcoming-bikes-details-text">
+                <h2>@Model.UpcomingBikeName</h2>
+                <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+            </div>
+        </div>
+
+        <div class="upcoming-bikes-details-content">
+            <h2>About @Model.UpcomingBikeName</h2>
+            @* <p>@Html.Raw(@Upbike.UpcomingBikeDetails.Replace("\n", "<br>"))</p> *@
+            <p>Triumph Daytona 660 is expected to launch in India in August 2024 in the expected price range of ₹ 11,00,000 to ₹ 12,00,000. Currently available bikes which are similar to Daytona 660 are Kawasaki Ninja ZX-4RR, Kawasaki Ninja 650 & Kawasaki Z650. Another bike similar to Daytona 660 is Yamaha YZF-R7 which is launching in October 2024 in India.</p>
+            <p>After introducing the Trident 660 and the Tiger Sport 660, it was a no-brainer when Triumph Motorcycles was spotted testing the Daytona 660 that is expected to be introduced sometime next year.</p>
+            <p>The motorcycle is to be based on the 660 platform to reduce developmental costs and is clear that it uses the same 660cc engine with 81bhp, as well as the same mirrors, wheels and cycle parts as its naked and touring versions.</p>
+            <p>The spy images also suggest that the Triumph Daytona 660 could use the same instrumentation as the Trident 660 and offer similar features. Moreover, the riding ergonomics are also pretty relaxed but the styling is relatively more aggressive and similar to the previous-gen Daytona.</p>
+            <p>We can expect Triumph to launch the Daytona 660 in India a few months after its global unveil and be positioned as the most expensive model in the 660 range. It will compete against the Honda CBR650R and the Kawasaki Ninja 650.</p>
+        </div>
+    </div>
+    }
+    <!-- Bike 1 -->
+    <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allUpbike in ViewBag.allupcomingbike)
+        {
+            <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                <div class="upcoming-bikes-details-card">
+                    <div class="upcoming-bikes-all-image">
+                        <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                    </div>
+
+                    <div class="upcoming-allbikes-details-content">
+                        <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                        <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                        <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+    </div>
+</body>

@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Blogs";
+}
+@* @section MetaTags{
+    <meta name="keywords" content="Maruti Suzuki Alto K10, Alto K10 2024, Alto K10 price, Alto K10 mileage, Alto K10 features, Maruti Alto K10 review, compact cars under 7 lakhs, budget cars India, Alto K10 petrol engine, affordable city cars India, best small cars in India, Maruti Suzuki cars, Alto K10 VXI price, Alto K10 specifications, Alto K10 design, cars for small families, fuel-efficient cars India, Alto K10 on-road price, Alto K10 safety features, Alto K10 interiors, Alto K10 comparison, Alto K10 user reviews, Alto K10 EMI options, value-for-money cars India, cars with touchscreen, Alto K10 infotainment system, low-maintenance cars India, Maruti Suzuki service network." />
+    <meta name="description" content="Explore the Maruti Suzuki Alto K10 VXI, a budget-friendly car with a powerful 1.0L engine, excellent mileage, and advanced features. On-road price starts at ₹6.50 lakhs in India." />
+} *@
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" /></div> *@
+<!-- Breadcrumb row END --> 
+<div class="m-t10">
+<h1 class="for-h1">Blogs</h1>
+<div class="upcoming-bikes-details-row">
+    @foreach (var allBlogs in ViewBag.allBlogs)
+    {
+        <a href="/@allBlogs.URL" style="text-decoration:none;">
+            <div class="upcoming-bikes-details-card">
+                <div class="upcoming-bikes-all-image">
+                    <img src="@allBlogs.ImageURL" alt="@allBlogs.BlogHeading" title="@allBlogs.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                </div>
+
+                @* <a href="@Url.Action("TWUpcomingBikeDetails", "Home", new { id = allUpbike.UpcomingBikeId })"style="text-decoration:none;"> *@
+            <div class="upcoming-allbikes-details-content">
+                @*<h2>@Truncate(@allBlogs.BlogHeading, 22)</h2>*@
+                <h2>@allBlogs.BlogHeading</h2>
+                <p><i class="fa fa-calendar"></i>  @allBlogs.Date.ToString("d MMM yyyy")</p>
+                <a href="/@allBlogs.URL" class="details-button" style="text-decoration:none;">View Details</a>
+            </div>
+                @* </a> *@
+            </div>
+        </a>
+    }
+</div>
+</div>
+

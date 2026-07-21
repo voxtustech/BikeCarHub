@@ -1,0 +1,400 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "OLA Diamondhead: Price, Specs & Launch";
+}
+@section MetaTags {
+    <meta name="keywords" content="OLA Diamondhead, OLA electric motorcycle, OLA Diamondhead price, OLA Diamondhead launch, electric bike, performance EV, Ultraviolette F77 competitor, BikeCarHub, future of motorcycles, OLA EV, Diamondhead specs, electric sports bike." />
+    <meta name="description" content="Get the latest on the OLA Diamondhead. Discover its expected price, 2027 launch timeline, groundbreaking specs, and how it compares to rivals." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">The Future is Here: Unpacking the Revolutionary OLA Diamondhead Electric Motorcycle</h3>
+                <h3 class="subheading">Introduction: A Diamond in the Rough, a Glimpse into the Future</h3>
+                <p>The Indian electric two-wheeler market has been dominated by scooters, but that is all set to change. OLA Electric, a company that has already disrupted the scooter segment, is now setting its sights on a new frontier: high-performance electric motorcycles. At the vanguard of this ambitious plan is the OLA Diamondhead, a machine that is less of a motorcycle and more of a work of art. First revealed as a concept, the Diamondhead has captured the imagination of enthusiasts with its radical, futuristic design and promises of supercar-level performance. It is a bold statement from a brand that believes in pushing boundaries and redefining what is possible on two wheels. The Diamondhead is not just a glimpse into OLA's future; it's a testament to the future of motorcycling itself. We at <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a> are here to give you all the details on this groundbreaking machine, from its expected performance to its launch timeline.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/ola diamondhead/ola diamondhead left.webp"
+                             alt="OLA Diamondhead Left" title="OLA Diamondhead Left" loading="lazy" />
+                    </div>
+                </div>
+                <h3 class="subheading">A Design That Defies Convention</h3>
+                <p>The OLA Diamondhead’s design is a striking departure from anything seen on Indian roads. Its name, "Diamondhead," is a direct reference to its sharp, faceted, and minimalist aesthetic. The bike looks like it was sculpted from a single piece of material, with clean lines and an almost fully-faired body that hides its mechanical components. The most prominent design feature is the integrated front and rear lighting, which are sleek LED strips that give the bike a sci-fi feel. The absence of a conventional front fork, replaced by what appears to be a hub-center steering system, is a revolutionary design choice that promises both a clean look and potentially superior handling.<br /><br />
+                    This design philosophy extends to the entire motorcycle. The handlebars are clip-on, and the footpegs are positioned for an aggressive, sport-oriented riding stance. The single-sided swingarm at the rear, a feature often seen on high-end superbikes, adds to the premium and futuristic appeal. The Diamondhead is a showcase of OLA's "Made in India" engineering and design prowess, and it is clear that they are not just building an electric bike but a symbol of technological innovation. It is a bike that will turn heads not just with its silence but with its sheer, breathtaking presence.
+                </p>
+                <h3 class="subheading">Expected Price and Launch Timeline: The Wait for a Game-Changer</h3>
+                <p>The OLA Diamondhead is not a product of today but a vision for tomorrow. According to official announcements from OLA, the production version of the Diamondhead is a work in progress, and the company is targeting a launch date of <span class="font-weight-700">October 2025.</span> This timeline gives OLA the necessary time to refine the technology, test its components, and ensure the final product meets the high expectations it has set.<br /><br />
+                    As for the price, the Diamondhead is expected to be a premium offering, reflecting its advanced technology and high-performance nature. While the initial concept had a much lower price tag, the working prototype and its advanced features have led to a revised estimate. The expected ex-showroom price is likely to be in the ballpark of <span class="font-weight-700">₹5 lakh.</span> This price point would place it in a niche segment, positioning it as a direct competitor to other high-performance electric motorcycles and even some mid-range petrol-powered sports bikes.
+                </p>
+                <h3 class="subheading">Deep Dive into the Expected Specifications</h3>
+                <p>The OLA Diamondhead is not just about looks; it's about performance that matches its aggressive stance. The company has teased some astonishing performance figures, setting a new benchmark for electric two-wheelers in India.</p>
+                <ul>
+                    <li><span class="font-weight-700">Motor and Performance:</span> The Diamondhead is expected to be a performance powerhouse. OLA has hinted at a blistering <span class="font-weight-700">0-100 km/h acceleration in just 2 seconds.</span> This places it in the league of supercars and hyperbikes, a feat that would be a first for any Indian-made motorcycle. The top speed is rumored to be around <span class="font-weight-700">160-170 km/h</span>, making it one of the fastest electric motorcycles to be built in India. The motorcycle will likely use a powerful mid-drive motor, as a hub motor might not be able to achieve such high performance figures.</li>
+                    <li><span class="font-weight-700">Battery and Range:</span> The Diamondhead is expected to be powered by OLA's in-house developed "Bharat Cell 4680" battery, a testament to the company's commitment to vertical integration. The battery capacity is rumored to be a substantial <span class="font-weight-700">7-8 kWh,</span> which would be necessary to power the high-performance motor. The true riding range on a single charge is expected to be an impressive <span class="font-weight-700">200-250 km,</span> a figure that would quell any range anxiety for riders.</li>
+                    <li><span class="font-weight-700">Chassis and Suspension:</span> The most talked-about feature of the Diamondhead is its hub-center steering. This unconventional setup, while complex, can offer superior stability and handling. The bike is also expected to feature adaptive suspension and active ergonomics, which would allow the handlebars and footpegs to adjust for a more comfortable and in-control riding position. The frame is expected to be made from lightweight, high-strength materials like space-grade aluminum and carbon fiber to keep the weight down and improve performance.</li>
+                    <li><span class="font-weight-700">Advanced Features:</span> The Diamondhead is not just an electric bike; it's a smart machine. It is rumored to be equipped with a host of advanced features, including a full suite of ADAS (Advanced Driver-Assistance Systems), traction control, and an integrated AI system. OLA has also teased a "Smart AR" helmet and other wearables that would seamlessly integrate with the bike, creating a complete ecosystem for the rider.</li>
+                </ul>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/ola diamondhead/ola diamondhead right.webp"
+                             alt="OLA Diamondhead Right" title="OLA Diamondhead Right" loading="lazy" />
+                    </div>
+                </div>
+                <h3 class="subheading">Competitors Comparison: A New Breed of EV</h3>
+                <p>The OLA Diamondhead will not have many direct competitors in the Indian market, as it is creating a new segment. However, it will compete with other high-performance electric motorcycles and some sports bikes in a similar price range.</p>
+                <h3 class="subheading">Competitors Comparison Table</h3>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Model</th>
+                                <th class="font-weight-600 text-center">Expected Price (Ex-showroom, Delhi)</th>
+                                <th class="font-weight-600 text-center">Key Feature</th>
+                                <th class="font-weight-600 text-center">Advantage Over OLA Diamondhead (Expected)</th>
+                                <th class="font-weight-600 text-center">Disadvantage vs. OLA Diamondhead (Expected)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OLA Diamondhead</td>
+                                <td>₹5.00 lakh</td>
+                                <td>Supercar-level acceleration, hub-center steering</td>
+                                <td>Revolutionary design, groundbreaking performance</td>
+                                <td>Unproven brand in this segment, long launch timeline</td>
+                            </tr>
+                            <tr>
+                                <td>Ultraviolette F77</td>
+                                <td>₹2,99,000</td>
+                                <td>Established electric performance bike, race pedigree</td>
+                                <td>Already on the market, proven track record, multiple variants</td>
+                                <td>Lower top speed, more conventional design</td>
+                            </tr>
+                            <tr>
+                                <td>Orxa Mantis</td>
+                                <td>₹3.60 lakh</td>
+                                <td>Streetfighter design, lightweight</td>
+                                <td>More affordable, conventional design for comfort</td>
+                                <td>Lower range, less powerful</td>
+                            </tr>
+                            <tr>
+                                <td>Kawasaki Ninja 400</td>
+                                <td>₹5.24 lakh</td>
+                                <td>Proven petrol-powered sports bike</td>
+                                <td>Extensive service network, established brand, petrol engine sound</td>
+                                <td>Requires a lot of maintenance, not an EV</td>
+                            </tr>
+                            <tr>
+                                <td>Aprilia RS 457</td>
+                                <td>₹4.20 lakh</td>
+                                <td>Track-focused design, lightweight</td>
+                                <td>Italian brand value, twin-cylinder performance</td>
+                                <td>Petrol-powered, not a direct EV competitor</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">A Human-Written Perspective: Riding the Lightning</h3>
+                <p>
+                    Riding the OLA Diamondhead will be an experience unlike any other. The hub-center steering and adaptive suspension will make it feel planted and stable at high speeds, while the instant torque from the electric motor will provide a spine-tingling acceleration that few other vehicles can match. It will be a silent beast, a motorcycle that speaks with its performance rather than with the roar of an engine.<br /><br />
+                    The Diamondhead is a bike for the passionate rider, the one who craves cutting-edge technology and a riding experience that is truly unique. The integrated smart features will make it a part of the rider's digital life, and the focus on rider ergonomics and safety will make it a machine that is both thrilling and reassuring to ride. OLA's commitment to using its in-house battery and developing a completely new platform for this bike shows that it is not just trying to make a motorcycle but an icon. At <span class="font-weight-700">BikeCarHub,</span> we believe that the Diamondhead has the potential to become a symbol of India's technological prowess and a beacon for the future of electric mobility.
+                </p>
+                <h3 class="subheading">Specifications & Features Comparison Table</h3>
+                <p>Here is a detailed breakdown of the <span class="font-weight-700">OLA Diamondhead's</span> expected specifications compared to its closest rivals, both electric and petrol-powered.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature</th>
+                                <th class="font-weight-600 text-center">OLA Diamondhead (Expected)</th>
+                                <th class="font-weight-600 text-center">Ultraviolette F77 (Assault)</th>
+                                <th class="font-weight-600 text-center">Orxa Mantis</th>
+                                <th class="font-weight-600 text-center">Aprilia RS 457</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Motor Type</td>
+                                <td>Mid-drive (Expected)</td>
+                                <td>Permanent Magnet Synchronous Motor (PMSM)</td>
+                                <td>BLDC Motor</td>
+                                <td>Parallel Twin</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>N/A (Expected to be high)</td>
+                                <td>40.2 hp</td>
+                                <td>27.5 hp</td>
+                                <td>47.6 bhp</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque</td>
+                                <td>N/A (Expected to be very high)</td>
+                                <td>100 Nm</td>
+                                <td>93 Nm</td>
+                                <td>48 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Acceleration (0-100 km/h)</td>
+                                <td>2 seconds (Claimed)</td>
+                                <td>8 seconds</td>
+                                <td>8.9 seconds</td>
+                                <td>6.7 seconds (Approx.)</td>
+                            </tr>
+                            <tr>
+                                <td>Top Speed</td>
+                                <td>160-170 km/h (Expected)</td>
+                                <td>155 km/h</td>
+                                <td>135 km/h</td>
+                                <td>185 km/h</td>
+                            </tr>
+                            <tr>
+                                <td>True Range</td>
+                                <td>200-250 km (Expected)</td>
+                                <td>323 km</td>
+                                <td>221 km</td>
+                                <td>300-350 km (Petrol)</td>
+                            </tr>
+                            <tr>
+                                <td>Battery Capacity</td>
+                                <td>7-8 kWh (Expected)</td>
+                                <td>10.3 kWh</td>
+                                <td>8.9 kWh</td>
+                                <td>N/A (13-litre fuel tank)</td>
+                            </tr>
+                            <tr>
+                                <td>Charging Time</td>
+                                <td>Under 1 hour for 80% (Expected)</td>
+                                <td>5 hours 15 mins (Standard)</td>
+                                <td>5 hours</td>
+                                <td>N/A (Petrol)</td>
+                            </tr>
+                            <tr>
+                                <td>Kerb Weight</td>
+                                <td>N/A (Expected to be low)</td>
+                                <td>207 kg</td>
+                                <td>182 kg</td>
+                                <td>175 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Suspension</td>
+                                <td>Adaptive (Expected)</td>
+                                <td>USD front, Monoshock rear</td>
+                                <td>USD front, Monoshock rear</td>
+                                <td>USD front, Monoshock rear</td>
+                            </tr>
+                            <tr>
+                                <td>Brakes</td>
+                                <td>Dual Discs front, Single Disc rear</td>
+                                <td>Dual Discs front, Single Disc rear</td>
+                                <td>Dual Discs front, Single Disc rear</td>
+                                <td>Dual Discs front, Single Disc rear</td>
+                            </tr>
+                            <tr>
+                                <td>Connectivity</td>
+                                <td>ADAS, AI, Smart AR helmet</td>
+                                <td>GPS, app connectivity</td>
+                                <td>App connectivity, digital dash</td>
+                                <td>Bluetooth, ABS, Ride Modes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">FAQs: Your Top Questions Answered</h3>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                1. What is the OLA Diamondhead?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The OLA Diamondhead is an upcoming high-performance electric motorcycle from OLA Electric, known for its radical, futuristic design and promised supercar-level performance.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                2. When is the OLA Diamondhead expected to launch in India?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The OLA Diamondhead is a project for the future, with a target launch timeline of October 2025.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                3. What is the expected price of the OLA Diamondhead?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The ex-showroom price is expected to be around ₹5 lakh, placing it in the premium performance segment.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                4. How fast will the OLA Diamondhead accelerate?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                OLA has claimed that the Diamondhead will accelerate from 0 to 100 km/h in just 2 seconds.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                5. What is the expected riding range of the Diamondhead?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The motorcycle is rumored to have a true riding range of 200-250 km on a single charge.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                6. What makes the design of the Diamondhead so unique?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Its unique features include a hub-center steering, a fully-faired, minimalist body with sharp lines, and an integrated lighting system.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                7. Will the OLA Diamondhead have advanced features?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Yes, it is expected to have a suite of advanced features, AI integration, and possibly active aerodynamics and adaptive ergonomics.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                                8. What kind of battery will the Diamondhead use?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                It is expected to be powered by OLA's in-house "Bharat Cell 4680" battery, which is designed and manufactured in India.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                                9. Who are the main competitors of the OLA Diamondhead?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Its primary competitors will be other high-performance electric motorcycles like the Ultraviolette F77 and Orxa Mantis, as well as some petrol-powered sports bikes in a similar price bracket.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                                10.	Is OLA Diamondhead a concept or a real bike?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                OLA has showcased a functional prototype of the Diamondhead, indicating that it is a serious project that they intend to bring to production.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        }
+        @*
+        <!-- Bike 1 -->
+        <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+        <div class="upcoming-bikes-details-row">
+            @foreach (var allUpbike in ViewBag.allupcomingbike)
+            {
+                <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                    <div class="upcoming-bikes-details-card">
+                        <div class="upcoming-bikes-all-image">
+                            <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                        </div>
+
+                        <div class="upcoming-allbikes-details-content">
+                            <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                            <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                            <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+        *@
+        @await Html.PartialAsync("_AllViewComponent")
+    </div>
+</body>

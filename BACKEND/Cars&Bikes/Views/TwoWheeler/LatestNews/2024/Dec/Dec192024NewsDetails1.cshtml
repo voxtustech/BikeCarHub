@@ -1,0 +1,104 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Latest Trends and Launches in the Automotive Industry: December 2024 Highlights";
+}
+@section MetaTags{
+    <meta name="keywords" content="Automotive news, electric vehicles, SUVs, India Bike Week 2024, custom motorcycles, Tata Safari updates, Jeep Compass Black Shark, Honda Activa Electric, Ola S1 Z, Ducati Panigale V4, upcoming bikes, latest car launches, sustainable mobility." />
+    <meta name="description" content="Stay updated with the latest in the automotive world! From electric scooters like the Honda Activa Electric to premium SUVs like the Tata Safari and Jeep Compass Black Shark Edition, explore the newest innovations, sustainable mobility trends, and upcoming launches redefining the industry." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.NewsHeading" title="@Model.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                @* <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p> *@             
+                <h3 class="subheading">Bikes:</h3>
+                <p><span class="font-weight-700">India Bike Week 2024 Highlights:</span> Custom Royal Enfield models showcased unique designs and modifications, drawing significant attention from enthusiasts. The event also unveiled the Ducati Panigale V4 Tricolore, flaunting an Italian flag-inspired livery</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/latestnews/2024/dec/latestupdatesintheautomotiveindustry/ducati panigale v4 tricolore.webp" alt="Ducati Panigale V4 Tricolore" title="Ducati Panigale V4 Tricolore" /></div>
+                </div>
+                <p><span class="font-weight-700">Upcoming Launches:</span> TVS revealed the 2025 Ronin DS and its advanced RT-XD4 300cc engine at MotoSoul 2024. These models focus on bridging performance and affordability for Indian bikers</p>
+                <p><span class="font-weight-700">Electric Revolution:</span> Honda recently introduced the Activa Electric, catering to urban riders seeking sustainability. Additionally, Ola expanded its lineup with the S1 Z series, offering improved range and affordability</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/dec/latestupdatesintheautomotiveindustry/activa electric.webp" alt="Activa Electric" title="Activa Electric" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/dec/latestupdatesintheautomotiveindustry/rt-xd4 300cc engine.webp" alt="RT-XD4 300cc Engine" title="RT-XD4 300cc Engine" /></div>
+                </div>
+                <h3 class="subheading">Cars:</h3>
+                <p><span class="font-weight-700">SUV Innovations:</span> Jeep introduced the new Compass Black Shark Edition, which combines rugged aesthetics with premium features. Similarly, Tata Motors unveiled updated versions of its Safari and Harrier SUVs, incorporating ADAS and a more refined cabin</p>
+                <p><span class="font-weight-700">Compact Car Competition:</span> Maruti Suzuki teased updates for its Baleno and Swift models, focusing on hybrid technology integration, enhancing both performance and fuel efficiency</p>
+                <p><span class="font-weight-700">EV Expansion:</span> Hyundai showcased its Ioniq 5 EV with ultra-fast charging technology, targeting long-distance commuters. Meanwhile, MG Motors expanded its ZS EV lineup with affordable variants to attract mass-market buyers</p>
+                <h3 class="subheading">Key Trends:</h3>
+                <ol>
+                    <li>The push for <span class="font-weight-700">sustainable mobility</span> is evident with electric models gaining prominence across two-wheeler and four-wheeler segments.</li>
+                    <li><span class="font-weight-700">Customization and premium offerings</span> are gaining traction, particularly in motorcycles, as manufacturers cater to niche markets.</li>
+                </ol>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

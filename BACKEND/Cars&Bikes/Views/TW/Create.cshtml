@@ -1,0 +1,126 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Cars_Bikes.Models.TwoWheeler
+@{
+    ViewData["Title"] = "Add Two Wheeler";
+}
+<body>
+    @*<div class="header-img"> <img src="~/images/main-slider/header.png" /></div>*@
+
+
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <h2 class="text-center mb-4">Add New Brand</h2>
+
+                    <form asp-action="Create" method="post">
+
+                        <div class="mb-3">
+                            <label asp-for="TwoWheelerName" class="form-label"></label>
+                            <input asp-for="TwoWheelerName" class="form-control" />
+                            <span asp-validation-for="TwoWheelerName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Price" class="form-label"></label>
+                            <input asp-for="Price" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="BasePrice" class="form-label"></label>
+                            <input asp-for="BasePrice" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="TopPrice" class="form-label"></label>
+                            <input asp-for="TopPrice" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Brand" class="form-label"></label>
+                            <input asp-for="Brand" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Type" class="form-label"></label>
+                            <input asp-for="Type" class="form-control" />
+                        </div>
+                        @*
+                        <div class="mb-3">
+                            <label asp-for="TwoWBrandId" class="form-label"></label>
+                            <input asp-for="TwoWBrandId" class="form-control" />
+                        </div>
+                        *@
+                        <div class="mb-3">
+                            <label asp-for="TWImage" class="form-label"></label>
+                            <input asp-for="TWImage" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="LaunchDate" class="form-label"></label>
+                            <input asp-for="LaunchDate" class="form-control" />
+                        </div>
+                        @*
+                        <div class="form-check mb-3">
+                            <input asp-for="IsEV" class="form-check-input"  type="checkbox"/>
+                            <label asp-for="IsEV" class="form-check-label"></label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input asp-for="IsActive" class="form-check-input" type="checkbox"/>
+                            <label asp-for="IsActive" class="form-check-label"></label>
+                        </div>
+                        *@
+                        <div class="form-check mb-3">
+                            <input type="checkbox" name="IsEV" value="true" class="form-check-input"
+                            @(Model?.IsEV == true ? "checked" : "") />
+                            <label class="form-check-label" for="IsEV">Is EV</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input type="checkbox" name="IsActive" value="true" class="form-check-input"
+                            @(Model?.IsActive == true ? "checked" : "") />
+                            <label class="form-check-label" for="IsActive">Is Active</label>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="NotesOrComments" class="form-label"></label>
+                            <textarea asp-for="NotesOrComments" class="form-control"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Discription" class="form-label"></label>
+                            <textarea asp-for="Discription" class="form-control"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="TwoWBrandId" class="form-label"></label>
+                            <select asp-for="TwoWBrandId" class="form-select" asp-items="ViewBag.BrandList">
+                                <option value="">-- Select a Brand --</option>
+                            </select>
+                            <span asp-validation-for="TwoWBrandId" class="text-danger"></span>
+                        </div>
+
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

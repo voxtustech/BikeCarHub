@@ -1,0 +1,88 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "BSA Gold Star 650: Price, Milage & Specs";
+}
+@section MetaTags{
+    <meta name="keywords" content="BSA Gold Star 650, BSA Gold Star 650 price, BSA Gold Star motorcycle, BSA retro bikes, Gold Star 650 specs, British classic bikes, BSA Gold Star review, Modern classic motorcycles" />
+    <meta name="description" content="The BSA Gold Star 650 blends British heritage with modern power. Discover its iconic design, 652cc single-cylinder engine, specs, and performance features." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="overlay-black-middle" style=" background:linear-gradient(#475372, #78829A, #9EA3AD, #fff); margin:0;">
+    <img src="~/images/background/banner.png" />
+</div> *@
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" /></div> *@
+<!-- Breadcrumb row END -->
+@* <div class="car-details-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="nav">
+                    <ul>
+                        <li><a></a></li>
+                        <li class="active"><a href="car-details-overview.html">Overview</a></li>
+                        <li><a href="car-detail-specifications.html">Specifications</a></li>
+                        <li><a href="car-detail-price.html">Price</a></li>
+                        <li><a href="car-detail-compare.html">Compare</a></li>
+                        <li><a href="car-detail-pictures.html">Pictures</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+<body>
+    <div class=" ">
+    <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+            <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                <h2>@Model.UpcomingBikeName</h2>
+                <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+            <h2>About @Model.UpcomingBikeName</h2>
+                @* <p>@Html.Raw(@Upbike.UpcomingBikeDetails.Replace("\n", "<br>"))</p> *@
+                <p>BSA GoldStar 650 is expected to launch in India in August 2024 in the expected price range of ₹ 3,00,000 to ₹ 3,30,000. Currently available bikes which are similar to GoldStar 650 are Royal Enfield Interceptor 650, Royal Enfield Shotgun 650 & Royal Enfield Super Meteor 650. Another bike similar to GoldStar 650 is Royal Enfield Bullet 650 which is launching in October 2026 in India.</p>
+                <p>The Gold Star is a modern classic bike from BSA that has a rich heritage in India as well as in a few other countries. Mahindra owns this brand through Classic Legends and is now relaunching BSA in India on August 15th. </p>
+                <p>From the pictures, it is clear that the Gold Star is heavily inspired by the original bike. The bike can be seen with curved fenders and a classic fuel tank. There's also a lot of chrome all over the bike. As for hardware, the motorcycle has a cradle frame with a telescopic fork up front and twin springs at the rear. The bike rides on wire-spoke wheels. Meanwhile, braking duties are taken care of by a single disc at both ends and ABS are fitted as standard.</p>
+                <p>The Gold Star gets its power from a 652cc, single-cylinder, liquid-cooled engine which makes 45bhp and 55Nm. The engine is paired with a five-speed gearbox. These specs are quite similar to its nearest competitor - the Royal Enfield Interceptor 650. </p>
+                <p>In terms of pricing, there's a high chance the company could undercut the Interceptor 650 by a decent number. We expect the price of the bike to be around Rs. 3 lakh to Rs. 3.3 lakh.</p>
+            </div>
+        </div>
+    }
+    <!-- Bike 1 -->
+    <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allUpbike in ViewBag.allupcomingbike)
+        {
+            <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                <div class="upcoming-bikes-details-card">
+                    <div class="upcoming-bikes-all-image">
+                        <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                    </div>
+
+                    <div class="upcoming-allbikes-details-content">
+                        <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                        <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                        <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+    </div>
+</body>

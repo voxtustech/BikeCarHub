@@ -1,0 +1,513 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = " Benelli Leoncino 800 (2025) Specs, Price & Launch Date | BikeCarHub";
+}
+@section MetaTags {
+    <meta name="keywords" content="Benelli Leoncino 800, Leoncino 800 price, 750cc Benelli, Leoncino 800 specs, 2025 motorcycle launch, Benelli neo-retro, fully adjustable suspension, Leoncino 800 review, Italian motorcycle, Benelli parallel twin, Leoncino 800 torque, 50 mm USD forks, BikeCarHub, Leoncino 800 competitor,bikecarhub." />
+    <meta name="description" content="Deep analysis of the Benelli Leoncino 800 2025 expected launch. Specs: 754cc Parallel-Twin, 76 PS, fully adjustable 50 mm USD forks, and price at bikecarhub." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">Italian Heart, Wild Soul: Expected Specifications and Deep Dive into the Benelli Leoncino 800 (2025)</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/benelli leoncino 800/black.webp" alt="black" title="black" loading="lazy" /></div>
+                </div>
+                
+                <p>The name Benelli evokes a rich history of Italian passion, performance, and distinctive design. In the modern era, the brand, now under the Qianjiang Group, has successfully balanced its storied heritage with accessible, feature-rich motorcycling. Few models embody this duality better than the <span class="font-weight-700">Leoncino </span>(Italian for "Lion Cub") series. With the middleweight segment heating up globally, the arrival of the full-fledged <span class="font-weight-700">Benelli Leoncino 800</span> is one of the most exciting prospects on the horizon.</p>
+                <p>Scheduled for an expected launch in <span class="font-weight-700">December 2025,</span> the Leoncino 800 is positioned to be Benelli’s flagship neo-retro roadster, competing directly with high-capacity models from Europe and Japan. It aims to offer a step-up experience from the popular Leoncino 500, delivering more power, better components, and a greater sense of occasion. For premium motorcycle enthusiasts tracking the latest launches on platforms like <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a>  this motorcycle promises a powerful blend of classic scrambler aesthetics and modern, spirited performance.</p>
+                <p>This comprehensive analysis delves into the expected specifications, anticipated performance characteristics, projected pricing, and the key features that will allow the Leoncino 800 to command attention in the competitive landscape. Every detail here is based on industry insights and Benelli’s global model strategy, offering an exciting preview of this upcoming Italian machine.</p>
+                <h3 class="subheading">Design and Aesthetic Identity: The Roaring Lion Cub</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/benelli leoncino 800/blue.webp" alt="blue" title="blue" loading="lazy" /></div>
+                </div>
+                <p>The Leoncino family is defined by its clean, timeless design that cleverly integrates modern elements without sacrificing its retro charm. The Leoncino 800 will inherit this DNA but with a bulkier, more substantial presence befitting its engine capacity.</p>
+                <p><span class="font-weight-700">Signature Styling and Presence</span></p>
+                <p>The key design element that defines the Leoncino aesthetic will remain: the small, proud <span class="font-weight-700">Lion of Pesaro</span> emblem mounted on the front fender. The 800 model will amplify the existing design language:</p>
+                <ul>
+                    <li><span class="font-weight-700">Round LED Headlamp:</span> A signature round headlamp unit featuring a sophisticated, integrated <span class="font-weight-700">LED Daytime Running Light (DRL) </span>ring. This ensures a classic front profile with modern illumination performance.</li>
+                    <li><span class="font-weight-700">Muscular Fuel Tank: </span>The tank capacity is expected to be generous, around 15 Litres, with deep knee recesses for better rider grip and a sculpted look that emphasizes the bike's powerful stance.</li>
+                    <li><span class="font-weight-700">Minimalist Seat:</span> A flat, single-piece or slightly stepped seat with quality upholstery (often black or brown) will be used, maintaining the scrambler/roadster purity.</li>
+                    <li><span class="font-weight-700">Exposed Trellis Frame</span>: The use of a visible <span class="font-weight-700">Steel Trellis Frame, </span>painted in a contrasting colour, will be a core design feature, showcasing the bike’s mechanical elegance—a true nod to Italian naked bike design.</li>
+                </ul>
+                <p><span class="font-weight-700">Ergonomics for Performance and Comfort</span></p>
+                <p>The riding posture of the Leoncino 800 is expected to be a balanced compromise, offering a comfortable, slightly upright stance suitable for daily commutes and light touring, yet aggressive enough for spirited riding.</p>
+                <ul>
+                    <li><span class="font-weight-700">Handlebar Position: </span>Wide, slightly raised handlebars (often referred to as 'fat bars') will provide excellent leverage for quick steering and a classic scrambler feel.</li>
+                    <li><span class="font-weight-700">Footpeg Placement: </span>Mid-set footpegs will ensure a natural knee angle and allow the rider to easily shift weight during hard cornering.</li>
+                    <li><span class="font-weight-700">High-Mounted Exhaust:</span> Similar to other scrambler offerings, a <span class="font-weight-700">high-mounted twin exhaust </span>system with stacked mufflers is a distinct possibility, enhancing both the look and the ground clearance.</li>
+                </ul>
+                <h3 class="subheading">Engine and Performance: The 754cc Parallel-Twin Powerhouse</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/benelli leoncino 800/front.webp" alt="front" title="front" loading="lazy" /></div>
+                </div>
+                <p>The heart of the<span class="font-weight-700"> Benelli Leoncino 800</span> is already known globally: the powerful <span class="font-weight-700">754cc liquid-cooled, parallel-twin engine. </span>This engine is the same unit that powers the Benelli 752S and its siblings, tuned specifically for a broader, torque-rich powerband suitable for a versatile roadster.</p>
+                <p><span class="font-weight-700">Performance Specifications</span></p>
+                <p>This engine is expected to be a performance leader in the mid-to-high capacity neo-retro segment, providing exhilarating acceleration and cruising speed.</p><div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature</th>
+                                <th class="font-weight-600 text-center">Expected Specification</th>
+                                <th class="font-weight-600 text-center">Benelli Context</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Engine Type</td>
+                                <td>754cc, Liquid-cooled, 8-Valve, DOHC, Parallel-Twin</td>
+                                <td>Shared core platform with 752S</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Power Output (Peak)</td>
+                                <td>76.2 HP@8500 rpm</td>
+                                <td>Excellent power-to-weight ratio</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Torque Output (Peak)</td>
+                                <td>67 Nm@6500 rpm</td>
+                                <td>Strong mid-range grunt</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Engine Configuration</td>
+                                <td>360-degree or 270-degree firing order</td>
+                                <td>270-degree expected for V-twin-like sound and torque</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Transmission</td>
+                                <td>6-Speed</td>
+                                <td>Standard</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>The choice of a 270-<span class="font-weight-700">degree crank </span>is a crucial element often used in modern parallel twins to mimic the sound, feel, and power delivery of a V-twin engine. This configuration ensures a characterful engine note and excellent low-to-mid range torque, making the bike both fun in the city and capable on the highway.</p>
+                <p><span class="font-weight-700">Drivetrain and Refinement</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Slipper and Assist Clutch (SAC):</span> A slipper clutch is expected to be standard, reducing clutch effort in city traffic and preventing wheel hop during aggressive downshifts, enhancing safety and rideability.</li>
+                    <li><span class="font-weight-700">Gearbox:</span> A smooth, precise 6-speed gearbox will manage the power delivery effectively.</li>
+                </ul>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">Chassis, Suspension, and Braking Confidence</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/benelli leoncino 800/road.webp" alt="road" title="road" loading="lazy" /></div>
+                </div>
+                <p>To handle the potent <span class="font-weight-700">76.2 HP engine, the Leoncino 800</span> will be built on a high-specification chassis, featuring top-tier components that are a hallmark of Benelli’s premium offerings.</p>
+                <p><span class="font-weight-700">Frame and Weight</span></p>
+                <p>The use of a sturdy <span class="font-weight-700">Steel Trellis Frame </span>is critical for providing the necessary rigidity and feedback.</p>
+                <ul>
+                    <li><span class="font-weight-700">Wet Weight:</span> Given the large engine, chassis, and premium components, the Leoncino 800 will be substantial, likely weighing around 234 kg wet. This weight contributes to stability at high speeds but requires careful management.</li>
+                </ul>
+                <p><span class="font-weight-700">High-Spec Suspension</span></p>
+                <p>The suspension is where Benelli typically outperforms its rivals in terms of quality and adjustability.</p>
+                <ul>
+                    <li><span class="font-weight-700">Front Suspension:</span> High-performance <span class="font-weight-700">50 mm Marzocchi Upside Down (USD) Forks. </span>These are expected to be<span class="font-weight-700"> fully adjustable</span> (preload, compression, and rebound), offering the rider a high degree of customization for different terrains and riding styles—a truly premium feature.</li>
+                    <li><span class="font-weight-700">Rear Suspension:</span> A single, centrally mounted <span class="font-weight-700">Monoshock Absorber</span> with linkage, likely adjustable for preload and rebound. This offers superior damping and stability compared to twin shock setups.</li>
+                </ul>
+                <p><span class="font-weight-700">Braking Excellence</span></p>
+                <p>Stopping power will be equally impressive, ensuring safety and confidence under all conditions.</p>
+                <ul>
+                    <li><span class="font-weight-700">Front Brakes: </span>Dual 320 mm floating discs, clamped by high-specification <span class="font-weight-700">Brembo or J.Juan radial-mount calipers.</span> This setup provides phenomenal stopping power and feel.</li>
+                    <li><span class="font-weight-700">Rear Brakes:</span> Single 260 mm disc.</li>
+                    <li><span class="font-weight-700">Safety: Dual-Channel ABS </span>will be standard across all variants.</li>
+                </ul>
+                <p><span class="font-weight-700">Wheels and Tires</span></p>
+                <p>The <span class="font-weight-700">Leoncino 800</span> is a road-biased scrambler, meaning it needs robust components for light off-roading but must maintain excellent on-road handling.</p>
+                <ul>
+                    <li><span class="font-weight-700">Wheels: Spoked wheels </span>are standard for a scrambler, sized at 17′′ <span class="font-weight-700">both front and rear,</span> fitted with road-biased but block-pattern dual-purpose tires to hint at its versatile capability.</li>
+                </ul>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">Technology and Rider Aids: The Connected Italian</h3>
+                The 2025 <span class="font-weight-700">Leoncino 800</span> will need to feature a contemporary electronics package to justify its premium segment positioning.
+                <p><span class="font-weight-700">Instrumentation and Display</span></p>
+                <p>The bike will be equipped with a high-visibility, full-colour <span class="font-weight-700">TFT instrument cluster.</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Display Features: </span>The TFT screen will offer multiple display modes (e.g., retro vs. modern), displaying essential information like gear position, fuel level, clock, and average speed.</li>
+                    <li><span class="font-weight-700">Connectivity: Bluetooth connectivity </span>for pairing with a smartphone, offering call alerts, music control, and possibly <span class="font-weight-700">basic turn-by-turn navigation</span> via a mobile app.</li>
+                </ul>
+                <p><span class="font-weight-700">Advanced Electronic Features</span></p>
+                <p>While Benelli often focuses on core mechanical quality, essential rider aids are expected:</p>
+                <ul>
+                    <li><span class="font-weight-700">Ride-by-Wire (RbW): </span>The use of RbW is expected, which is necessary for precise throttle control and the implementation of electronic rider aids.</li>
+                    <li><span class="font-weight-700">Riding Modes: </span>At least two distinct riding modes<span class="font-weight-700"> (Road and Rain) </span>are anticipated, which would adjust throttle sensitivity and ABS intervention.</li>
+                    <li><span class="font-weight-700">LED Lighting: </span>Full LED lighting across the board—headlamp, tail lamp, and turn indicators.</li>
+                </ul>
+                <p>This high level of electronic integration, particularly the fully adjustable suspension and the powerful braking system, places the<span class="font-weight-700"> Benelli Leoncino 800 </span>as a strong technical contender in the segment, a point of pride for riders reading <span class="font-weight-700">BikeCarHub.</span></p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">Specifications & Features Comparison Table (Projected)</h3>
+                This table outlines the projected key technical specifications and premium features expected on the <span class="font-weight-700"> 2025 Leoncino 800.</span><div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature / Component</th>
+                                <th class="font-weight-600 text-center">Benelli Leoncino 800 (2025 Expected)</th>
+                                <th class="font-weight-600 text-center">Premium Segment Standard</th>
+                                <th class="font-weight-600 text-center">Leoncino Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Engine Capacity</td>
+                                <td>754cc Parallel-Twin</td>
+                                <td>650cc to 900cc</td>
+                                <td>High power output</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Power Output</td>
+                                <td>76.2 HP</td>
+                                <td>65 PS to 95 PS</td>
+                                <td>Excellent top-end power</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Peak Torque</td>
+                                <td>67 Nm</td>
+                                <td>60 Nm to 90 Nm</td>
+                                <td>Strong performance at mid-RPMs</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Front Suspension</td>
+                                <td class="font-weight-600">50 mm USD Forks</td>
+                                <td>43 mm USD Forks</td>
+                                <td>Larger, more rigid forks</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Suspension Adjustability</td>
+                                <td class="font-weight-600">Fully Adjustable (Front)</td>
+                                <td>Preload and Rebound only</td>
+                                <td>Superior customization</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Front Brakes</td>
+                                <td>Dual 320 mm Discs, Radial Calipers</td>
+                                <td>Dual 300 mm Discs</td>
+                                <td>Excellent stopping power</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Wheels</td>
+                                <td class="font-weight-600">17′′ Front / 17′′ Rear (Spoked)</td>
+                                <td>17′′/17′′ Alloy or Spoked</td>
+                                <td>True neo-retro aesthetics</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Key Electronic Aid</td>
+                                <td class="font-weight-600">Slipper Clutch, Dual ABS</td>
+                                <td>Dual ABS</td>
+                                <td>Reliable safety features</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">Expected Pricing, Variants, and Colour Palette</h3>
+                <p>Benelli’s pricing strategy is typically aggressive, aiming to undercut European rivals while offering competitive components. The 800cc class commands a significant premium.</p>
+                <p><span class="font-weight-700"> Estimated Pricing Strategy</span></p>
+                <p>The Leoncino 800 will be positioned as a performance and component step-up from the existing Leoncino 500 and Benelli TRK 502.</p>
+                <ul>
+                    <li><span class="font-weight-700"> Expected Price Range (Ex-Showroom, India):</span> The <span class="font-weight-700"> Benelli Leoncino 800 i</span>s projected to start between<span class="font-weight-700">  Rs 8.00 Lakh and Rs 8.50 Lakh.</span></li>
+                    <li><span class="font-weight-700"> Variants:</span> Benelli might offer two variants, a <span class="font-weight-700"> Standard </span>roadster model, and potentially a <span class="font-weight-700"> Trail/Scrambler </span>version with wire-spoked wheels, a high fender, and slightly longer suspension travel, though the focus here remains on the base roadster/scrambler model.</li>
+                </ul>
+                <p><span class="font-weight-700"> Projected Colour Variants</span></p>
+                <p>Benelli colour schemes are often deep, metallic, and reflective of Italian style.</p>
+                <ol start="1">
+                    <li><span class="font-weight-700"> Rosso Corsa (Racing Red):</span> A deep, rich metallic red that is synonymous with Italian performance bikes.</li>
+                    <li><span class="font-weight-700"> Grigio Scuro (Dark Grey/Graphite):</span> A sophisticated, dark matte grey that highlights the exposed trellis frame.</li>
+                    <li><span class="font-weight-700"> Verde Metallico (Metallic Green): </span>A deep, forest metallic green that gives the bike an instant classic, premium look.</li>
+                </ol>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">The Competitive Landscape: Benelli Leoncino 800 vs. Rivals</h3>
+                <p>The 800cc roadster segment is rapidly expanding, with bikes that offer high power but remain manageable for everyday use. The<span class="font-weight-700"> Leoncino 800's</span> key advantages will be its premium suspension and braking components, combined with a characterful twin engine and aggressive pricing.</p>
+                <p><span class="font-weight-700">Competitors Comparison Table</span></p><div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Specification</th>
+                                <th class="font-weight-600 text-center">Benelli Leoncino 800 (Expected)</th>
+                                <th class="font-weight-600 text-center">Ducati Scrambler Icon</th>
+                                <th class="font-weight-600 text-center">Triumph Scrambler 900</th>
+                                <th class="font-weight-600 text-center">BMW F 900 R</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Engine Type</td>
+                                <td>754cc Parallel-Twin</td>
+                                <td>803cc Air-Cooled V-Twin</td>
+                                <td>900cc Parallel-Twin</td>
+                                <td>895cc Parallel-Twin</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Power (Approx.)</td>
+                                <td>76.2 HP</td>
+                                <td>73 HP</td>
+                                <td>65 PS</td>
+                                <td>103.25 bhp</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Torque (Approx.)</td>
+                                <td>67 Nm</td>
+                                <td>65.2 Nm</td>
+                                <td>80 Nm</td>
+                                <td>92 Nm</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Front Suspension</td>
+                                <td class="font-weight-600">50 mm Fully Adjustable USD</td>
+                                <td>41 mm USD (Non-Adjustable)</td>
+                                <td>41 mm Cartridge Forks</td>
+                                <td>43 mm USD</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Dry/Wet Weight (Approx.)</td>
+                                <td>234 kg Wet</td>
+                                <td>176 kg Dry</td>
+                                <td>223 kg Wet</td>
+                                <td>211 kg Wet</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Key Advantage</td>
+                                <td>High-Spec Components, Power/Price Ratio</td>
+                                <td>Lightweight, Iconic Brand Status</td>
+                                <td>High Torque, Strong Heritage</td>
+                                <td>High Power, Advanced Electronics</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><span class="font-weight-700">Strategic Positioning Analysis</span></p>
+                <p>The <span class="font-weight-700">Benelli Leoncino 800 </span>is expected to directly target the <span class="font-weight-700">Ducati Scrambler</span> on style and the <span class="font-weight-700">Triumph Scrambler</span> 900 on presence, while offering technical specifications (like the 50 mm fully adjustable USD forks) that are demonstrably superior to its closest price competitors. Although the <span class="font-weight-700">BMW F 900 R </span>is more powerful and electronically advanced, the Leoncino provides a massive 76 PS output at a more accessible price point, combining Italian roadster aggression with excellent value. Its powerful engine and premium, often oversized, components will make it a very attractive choice for riders looking for a performance-oriented neo-retro machine.</p>
+                <h3 class="subheading">Conclusion: A Strong Contender in the Premium Neo-Retro Space</h3>
+                <p>The anticipated launch of the<span class="font-weight-700"> Benelli Leoncino 800 (2025) </span>is poised to shake up the premium middleweight segment. Benelli is clearly aiming for a knockout punch by combining a powerful, characterful 754cc parallel-twin engine with componentry typically seen on much higher-priced European machines—notably the 50 mm <span class="font-weight-700">fully adjustable Marzocchi USD forks.</span></p>
+                <p>The Leoncino 800 promises to be a motorcycle that not only looks classically beautiful but rides with a modern, exhilarating intensity. Its strong 76 PS power delivery, combined with the excellent stopping power of its high-spec brakes, ensures that the bike is far more than just a style statement. If the final pricing is as competitive as expected, the Leoncino 800 will be a force to reckon with, offering riders a slice of Italian flair and a whole lot of riding pleasure. We eagerly await its official debut!</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">Frequently Asked Questions (FAQs) about the Benelli Leoncino 800</h3>
+                <div class="container my-4">
+                    <h3 class="mb-3 text-center">Benelli Leoncino 800 – Frequently Asked Questions (FAQ)</h3>
+
+                    <div class="accordion" id="leoncinoAccordion">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                                    1. When is the Benelli Leoncino 800 officially expected to launch?
+                                </button>
+                            </h2>
+                            <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#leoncinoAccordion">
+                                <div class="accordion-body">
+                                    The Benelli Leoncino 800 is currently expected to be launched and officially go on sale in the Indian market in <strong>December 2025</strong>, with deliveries likely commencing in early 2026.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                                    2. What kind of engine powers the Leoncino 800?
+                                </button>
+                            </h2>
+                            <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#leoncinoAccordion">
+                                <div class="accordion-body">
+                                    It will be powered by a robust, liquid-cooled, <strong>754cc parallel-twin engine</strong>. This engine balances mid-range tractability with high top-end power.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                                    3. What is the expected power and torque output of the engine?
+                                </button>
+                            </h2>
+                            <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#leoncinoAccordion">
+                                <div class="accordion-body">
+                                    The engine is projected to produce around <strong>76.2 HP</strong> and approximately <strong>67 Nm</strong> of peak torque, making it one of the most powerful motorcycles in its segment.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">
+                                    4. What is the expected ex-showroom price of the Leoncino 800 in India?
+                                </button>
+                            </h2>
+                            <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#leoncinoAccordion">
+                                <div class="accordion-body">
+                                    The base model is expected to be priced between <strong>₹8.00 Lakh and ₹8.50 Lakh</strong> (ex-showroom), considering its high-spec components like Brembo/J.Juan brakes and Marzocchi forks.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false" aria-controls="a5">
+                                    5. Will the suspension be adjustable?
+                                </button>
+                            </h2>
+                            <div id="a5" class="accordion-collapse collapse" aria-labelledby="q5" data-bs-parent="#leoncinoAccordion">
+                                <div class="accordion-body">
+                                    Yes, the Leoncino 800 will feature <strong>fully adjustable 50 mm Marzocchi USD forks</strong> (preload, compression, and rebound), providing superior handling customization.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6" aria-expanded="false" aria-controls="a6">
+                                    6. Does the Leoncino 800 feature connectivity and a TFT display?
+                                </button>
+                            </h2>
+                            <div id="a6" class="accordion-collapse collapse" aria-labelledby="q6" data-bs-parent="#leoncinoAccordion">
+                                <div class="accordion-body">
+                                    Yes, it comes with a <strong>full-colour TFT display</strong> featuring Bluetooth connectivity for smartphone pairing, music control, and navigation support.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a7" aria-expanded="false" aria-controls="a7">
+                                    7. What kind of braking system will the bike use?
+                                </button>
+                            </h2>
+                            <div id="a7" class="accordion-collapse collapse" aria-labelledby="q7" data-bs-parent="#leoncinoAccordion">
+                                <div class="accordion-body">
+                                    The Leoncino 800 will feature <strong>dual 320 mm front discs</strong> with radial-mount calipers from brands like <strong>Brembo or J.Juan</strong>, paired with standard Dual-Channel ABS.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a8" aria-expanded="false" aria-controls="a8">
+                                    8. Is the Leoncino 800 more road-focused or off-road focused?
+                                </button>
+                            </h2>
+                            <div id="a8" class="accordion-collapse collapse" aria-labelledby="q8" data-bs-parent="#leoncinoAccordion">
+                                <div class="accordion-body">
+                                    It is mainly a <strong>road-focused neo-retro roadster</strong> with scrambler styling. Though capable of light trails, its 17″ wheel setup prioritizes agile tarmac performance.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q9">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a9" aria-expanded="false" aria-controls="a9">
+                                    9. What are the key competitor bikes for the Benelli Leoncino 800?
+                                </button>
+                            </h2>
+                            <div id="a9" class="accordion-collapse collapse" aria-labelledby="q9" data-bs-parent="#leoncinoAccordion">
+                                <div class="accordion-body">
+                                    Major competitors include the <strong>Ducati Scrambler Icon</strong>, <strong>Triumph Scrambler 900</strong>, <strong>BMW F 900 R</strong>, and <strong>Moto Morini Seiemmezzo Scrambler</strong>.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="q10">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a10" aria-expanded="false" aria-controls="a10">
+                                    10. What kind of tires are expected on the Leoncino 800?
+                                </button>
+                            </h2>
+                            <div id="a10" class="accordion-collapse collapse" aria-labelledby="q10" data-bs-parent="#leoncinoAccordion">
+                                <div class="accordion-body">
+                                    The 17″ spoked wheels are expected to come fitted with <strong>dual-purpose block-pattern tires</strong> offering both rugged looks and excellent asphalt grip.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        @await Html.PartialAsync("_AllViewComponent")
+
+    </div>
+</body>

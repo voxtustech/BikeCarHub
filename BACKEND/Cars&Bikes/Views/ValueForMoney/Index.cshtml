@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Value For Money";
+}
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<div class=" m-t10">
+    <h1 class="for-h1 mb-5">Value For Money</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allVFM in ViewBag.allVFM)
+        {
+            <a href="/@allVFM.ImageURL" style="text-decoration:none;">
+                <div class="upcoming-bikes-details-card">
+                    <div class="upcoming-bikes-all-image">
+                        <img src="@allVFM.ImageURL" alt="@allVFM.VFMHeading" title="@allVFM.VFMHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                    </div>
+
+                    @* <a href="@Url.Action("TWUpcomingBikeDetails", "Home", new { id = allUpbike.UpcomingBikeId })"style="text-decoration:none;"> *@
+                    <div class="upcoming-allbikes-details-content">
+                        <h2>@Truncate(@allVFM.VFMHeading, 22)</h2>
+                        <p><i class="fa fa-calendar"></i>  @allVFM.Date.ToString("d MMM yyyy")</p>
+                        <a href="/@allVFM.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                    </div>
+                    @* </a> *@
+                </div>
+            </a>
+        }
+    </div>
+</div>
+

@@ -1,0 +1,101 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "KTM 250 Duke Price Cut: Now Available at ₹2.25 Lakh";
+}
+@section MetaTags{
+    <meta name="keywords" content="KTM 250 Duke price cut, KTM Duke ₹2.25 Lakh, KTM bike discount 2024, 250 Duke features, KTM Duke specs, KTM 250 festive offer, Ktm duke 250 price drop in india, Duke 250 price Delhi 2024, Duke 250 on Road Price in Delhi, Duke 250 Old model Price, Duke 250 BS6 Price, KTM 250 Duke on Road Price, KTM Duke 250 BS6" />
+    <meta name="description" content="KTM 250 Duke now costs ₹2.25 lakh after a ₹20,000 discount. This festive offer is valid till Dec 31. Check features, specs, and rivals here." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.NewsHeading" title="@Model.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <p>The KTM 250 Duke recently received updates, borrowing the TFT display and advanced headlight design from the <a class="for-link" asp-controller="KTM" asp-action="KTM390Duke">KTM 390 Duke</a>. Priced at ₹2.45 lakh earlier, it now costs ₹2.25 lakh after a price reduction. The updated model includes two riding modes: Road and Track, alongside turn-by-turn navigation and music playback functionality when connected to a smartphone.</p>
+                <p>Mechanically, the bike retains its 249cc, liquid-cooled, single-cylinder engine, delivering 31hp at 9,250rpm and 25Nm torque at 7,250rpm. A 6-speed gearbox with a slipper clutch and bidirectional quickshifter ensures a smooth riding experience. The bike is available in Dark Galvano, Electronic Orange, and Atlantic Blue colors, providing a stylish appearance.</p>
+                <p>With its revised price, the 250 Duke is just ₹8,000 more expensive than the Husqvarna Vitpilen 250, offering superior equipment for the segment.</p>
+                <h3 class="subheading">Features and Specifications:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Engine:</span> 249cc, liquid-cooled, single-cylinder engine with 31hp and 25 Nm torque.</li>
+                    <li><span class="font-weight-700">Transmission:</span> 6-speed gearbox with slipper and assist clutch.</li>
+                    <li><span class="font-weight-700">Display:</span> 5-inch TFT color screen supporting Bluetooth connectivity for navigation and music.</li>
+                    <li><span class="font-weight-700">Safety:</span> Dual-channel ABS, front and rear disc brakes.</li>
+                    <li><span class="font-weight-700">Design:</span> Aggressive styling with boomerang-shaped LED DRLs, 17-inch alloy wheels, and an underbelly exhaust.</li>
+                    <li><span class="font-weight-700">Suspension:</span> USD front forks and rear mono-shock suspension.</li>
+                </ol>
+                <h3 class="subheading">Key Highlights:</h3>
+                <ol>
+                    <li><span class="font-weight-700">Discount Period:</span> Until December 31, 2024, or while stocks last.</li>
+                    <li><span class="font-weight-700">Rivals:</span> Competes with <a class="for-link" asp-controller="Bajaj" asp-action="BajajDominar250">Bajaj Dominar 250</a> and <a class="for-link" asp-controller="Suzuki" asp-action="SuzukiGixxer250">Suzuki Gixxer 250</a>.</li>
+                </ol>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,364 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Best Electric Cars in India Under ₹15 Lakh (2025)";
+}
+@section MetaTags {
+    <meta name="keywords" content="Best electric cars under 15 lakh India 2025, Affordable electric cars India 2025, Budget EVs in India 2025, Top EVs under ₹15 lakh India, Cheapest electric cars India 2025, Electric cars for middle class India, Best EV cars India 2025, Electric hatchbacks under 15 lakh, Upcoming electric cars under 15 lakh, EV buying guide India 2025, Mid 2025 affordable electric cars, Best EVs for city driving India, Long range EVs under 15 lakh, Entry level electric cars India, Best family electric cars India 2025" />
+    <meta name="description" content="Explore the best electric cars in India under ₹15 lakh (Mid 2025). Compare features, range, and prices of affordable EVs perfect for budget-conscious buyers." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 20th June 2025</p>
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">1. Tata Tiago EV (₹7.99 - 11.14 Lakh)</h3>
+
+                <h5 class="subheading">Battery & Performance</h5>
+                <ul>
+                    <li><span class="font-weight-700">Battery options:</span> 19.2 kWh (Medium-Range) and 24 kWh (Long-Range)</li>
+                    <li><span class="font-weight-700">Range:</span> 223 km (medium; MIDC) / 293 km (long; MIDC)</li>
+                    <li><span class="font-weight-700">Motor power:</span> ~60 bhp (19.2 kWh) / ~74 bhp (24 kWh)</li>
+                    <li><span class="font-weight-700">Charging:</span> 7.2 kW AC (0-100% in ~6.9 hrs), 25 kW DC (0-80% in ~58 min)</li>
+                </ul>
+
+                <h5 class="subheading">Why choose the Tiago EV</h5>
+                <ul>
+                    <li>Most affordable Tata EV; excellent for urban daily use</li>
+                    <li>Refreshed 2025 model brings a 10.25″ touchscreen, voice assistant, cruise control, and Android/Apple CarPlay</li>
+                    <li>Decent safety: dual airbags, ESP, hill-hold, TPMS — scored 4★ adult safety in Global NCAP</li>
+                </ul>
+
+                <h5 class="subheading">Considerations</h5>
+                <ul>
+                    <li>Town car only — 315 km MIDC translates to ~250-260 km real range</li>
+                    <li>Limited AC fast charging (7.2 kW only) — DC fast only at 25 kW</li>
+                </ul>
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">2. Tata Tigor EV (₹12.49 - 13.75 Lakh)</h3>
+
+                <h5 class="subheading">Battery & Performance</h5>
+                <ul>
+                    <li>26 kWh battery, ~315 km MIDC range</li>
+                    <li>Motor: ~75 bhp and 170 Nm torque, 0-60 km/h in ~5.7 s</li>
+                </ul>
+
+                <h5 class="subheading">Why choose the Tigor EV</h5>
+                <ul>
+                    <li>Sedan form factor with a 316 L boot — practical for small families</li>
+                    <li>Maintains same proven safety and features as Tiago EV</li>
+                    <li>Slightly sportier aesthetics than the Tiago</li>
+                </ul>
+                <h5 class="subheading">Considerations</h5>
+                <ul>
+                    <li>Slightly pricier; cabin is similar to Tiago's</li>
+                    <li>Real-world range ~250 km</li>
+                </ul>
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">3. Tata Punch EV (₹9.99 - 14.44 Lakh)</h3>
+
+                <h5 class="subheading">Battery & Performance</h5>
+                <ul>
+                    <li>Offers 25 kWh (315 km MIDC) and 35 kWh (421 km MIDC) batteries</li>
+                    <li>Medium-range motor ~80 bhp; long-range motor ~121 bhp, torque 190 Nm</li>
+                    <li>Fast-charging: 0-80% in ~56 min</li>
+                </ul>
+
+                <h5 class="subheading">Why pick the Punch EV</h5>
+                <ul>
+                    <li>Micro-SUV design with good under-thigh support, ventilated front seats, 360° camera, and 10.25″ Harman Kardon sound—premium feel</li>
+                    <li>Multiple variants: ideal to choose based on driving needs</li>
+                    <li>One of India's best-selling electric cars in early 2025</li>
+                </ul>
+
+                <h5 class="subheading">Considerations</h5>
+                <ul>
+                    <li>The long-range trim approaches ₹14.5 L, leaving little room in the ₹15 L cap</li>
+                    <li>Real-world herbal range ~350 km for LR version</li>
+                </ul>
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">4. Tata Nexon EV (₹12.49 - 15 Lakh cap for MR trims)</h3>
+
+                <h5 class="subheading">Battery & Performance</h5>
+                <ul>
+                    <li><span class="font-weight-700">Medium-Range:</span> 30 kWh → ~312-325 km MIDC, 95 kW motor (≈127 bhp)</li>
+                    <li><span class="font-weight-700">Long-Range (EV Max):</span> 40.5 kWh → ~437 km MIDC, 106.6 kW motor</li>
+                    <li><span class="font-weight-700">Charging:</span> 7.2 kW AC (~4.3 hrs full), 25 kW DC fast (~56 min for 10-80%)</li>
+                </ul>
+
+                <h5 class="subheading">Why choose the Nexon EV</h5>
+                <ul>
+                    <li>Compact SUV with ample interior and 350-400 L boot</li>
+                    <li>Premium features: sunroof, 10.25″ infotainment, finger-print entry (in higher trims)</li>
+                    <li>Excellent safety: 5★ Global NCAP rating</li>
+                    <li>High torque, suitable for highways and city alike</li>
+                </ul>
+
+                <h5 class="subheading">Considerations</h5>
+                <ul>
+                    <li>MR variant fits 15 L limit; EV Max doesn't</li>
+                    <li>Heavier than hatchbacks — efficiency slightly lower in stop-start traffic</li>
+                </ul>
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">5. MG Comet EV (₹7.35 - 9.83 Lakh)</h3>
+
+                <p><em>Note: MG Comet isn't listed on MG's official India EV site but is widely discussed and priced under ₹10 L with battery-as-a-service (BaaS).</em></p>
+
+                <h5 class="subheading">Battery & Performance</h5>
+                <ul>
+                    <li>17.3 kWh battery, ~230 km range (city-focused)</li>
+                    <li>42 PS (≈40 bhp), 110 Nm torque</li>
+                    <li>7.4kW Charge Full charge in 3.5 hrs</li>
+                    <li>3.3kW Charge AC full charge in 7-8 hrs</li>
+                </ul>
+
+                <h5 class="subheading">Highlights</h5>
+                <ul>
+                    <li>Super-compact city runabout, easy to park</li>
+                    <li>Very low running cost; BaaS option keeps upfront cost low</li>
+                </ul>
+
+                <h5 class="subheading">Drawbacks</h5>
+                <ul>
+                    <li>Short range, no fast-charging</li>
+                    <li>Basic interior and minimal features</li>
+                </ul>
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">6. Citroën eC3 (₹12.90 - 13.54 Lakh)</h3>
+
+                <h5 class="suheading">Battery & Performance</h5>
+                <ul>
+                    <li>29.2 kWh battery, ~320 km MIDC range</li>
+                    <li>57 PS (≈56 bhp), 143 Nm torque</li>
+                    <li>10.5 hrs on AC; 0-80% DC in ~57 min</li>
+                </ul>
+
+                <h5 class="subheading">Why choose it</h5>
+                <ul>
+                    <li>Styles as a compact SUV with a pragmatic cabin</li>
+                    <li>Good battery size for stable daily commuting</li>
+                </ul>
+
+                <h5 class="subheading">Considerations</h5>
+                <ul>
+                    <li>Performance is modest; slower acceleration than Tata or MG</li>
+                    <li>Limited dealer/after-sales reach compared to Tata</li>
+                </ul>
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">7. MG Windsor EV (~₹13.99 - 14 L with Battery)</h3>
+
+                <p>MG offers Windsor EV under BaaS at ₹9.99 L (+ rental) or ₹13.99 L including battery.</p>
+
+                <h5 class="subheading">Battery & Performance</h5>
+                <ul>
+                    <li>38 kWh battery, ~331-332 km MIDC range, 134 kW motor respectively</li>
+                    <li>DC fast charge ~55 min (10-80%)</li>
+                </ul>
+
+                <h5 class="subheading">Highlights</h5>
+                <ul>
+                    <li>Most powerful and highest battery-capacity vehicle on this list under ₹15 L</li>
+                    <li>Spacious, modern interior, with robust feature set</li>
+                </ul>
+
+                <h5 class="">Considerations</h5>
+                <ul>
+                    <li>Highest running costs if battery rented; upfront price teeters at ₹14 L</li>
+                    <li>MG's charging network is improving but still lags Tata</li>
+                </ul>
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">Feature & Specs at a Glance</h3>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-centre">Model</th>
+                                <th class="text-centre">Ex-Showroom Price</th>
+                                <th class="text-centre">Battery Size</th>
+                                <th class="text-centre">MIDC Range</th>
+                                <th class="text-centre">Fast Charging</th>
+                                <th class="text-centre">Body Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Tiago EV</td>
+                                <td>₹7.99-11.14 L</td>
+                                <td>19.2 / 24 kWh</td>
+                                <td>250 / 315 km</td>
+                                <td>25 kW DC</td>
+                                <td>Hatchback</td>
+                            </tr>
+                            <tr>
+                                <td>Tigor EV</td>
+                                <td>₹12.49-13.75 L</td>
+                                <td>26 kWh</td>
+                                <td>315 km</td>
+                                <td>25 kW DC</td>
+                                <td>Compact Sedan</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Punch EV</td>
+                                <td>₹9.99-14.44 L</td>
+                                <td>25 / 35 kWh</td>
+                                <td>315 / 421 km</td>
+                                <td>50 kW DC</td>
+                                <td>Micro-SUV</td>
+                            </tr>
+                            <tr>
+                                <td>Nexon EV (MR)</td>
+                                <td>₹12.49-15 L</td>
+                                <td>30 kWh</td>
+                                <td>312-325 km</td>
+                                <td>25 kW DC</td>
+                                <td>Compact SUV</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>MG Comet EV</td>
+                                <td>₹6.98-9.99 L</td>
+                                <td>17.3 kWh</td>
+                                <td>~230 km</td>
+                                <td>No fast-charge</td>
+                                <td>City EV</td>
+                            </tr>
+                            <tr>
+                                <td>Citroën eC3</td>
+                                <td>₹12.76-13.56 L</td>
+                                <td>29.2 kWh</td>
+                                <td>320 km</td>
+                                <td>~56 min DC</td>
+                                <td>Hatch/SUV</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>MG Windsor EV</td>
+                                <td>~₹14 L (battery incl.)</td>
+                                <td>38 kWh</td>
+                                <td>~332 km</td>
+                                <td>~55 min DC</td>
+                                <td>Compact EV</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+
+                <h2>Which One's Right for You?</h2>
+                <ol>
+                    <li><span class="font-weight-700">Budget-conscious urban driver</span> → <em>Tiago EV</em> or <em>MG Comet</em></li>
+                    <li><span class="font-weight-700">Family sedan with boot space</span> → <em>Tigor EV</em> is ideal</li>
+                    <li><span class="font-weight-700">Small SUV comfort & style</span> → <em>Punch EV</em> offers a perfect balance</li>
+                    <li><span class="font-weight-700">High-power, high-features, highway-ready</span> → <em>Nexon EV MR</em> is top-pick; <em>Windsor EV</em> if you prioritize power</li>
+                    <li><span class="font-weight-700">Practical hatch with long-ish range</span> → <em>eC3</em> delivers simplicity and decent battery</li>
+                </ol>
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">Total Cost of Ownership (TCO)</h3>
+                <ul>
+                    <li><span class="font-weight-700">Subsidies & waivers:</span> Many states (incl. Uttarakhand) waive VAT/road tax; central FAME incentives available. Check local government portals</li>
+                    <li><span class="font-weight-700">Battery-as-a-Service (MG):</span> May reduce upfront cost, but monthly rental applies</li>
+                    <li><span class="font-weight-700">Home charging:</span> 7 kW AC charger (~₹40k installed) — ~₹200 per full 24 kWh charge, cheaper than petrol</li>
+                    <li><span class="font-weight-700">Public fast-charging costs:</span> Estimate ₹10-12 per kWh; a full charge ~₹350-₹450</li>
+                </ul>
+
+                <h3 class="subheading">Ownership Tips</h3>
+                <ul>
+                    <li><span class="font-weight-700">Test-drive before deciding:</span> Feel for cabin quietness, regen braking, tech UI</li>
+                    <li><span class="font-weight-700">Plan with charger access:</span> Tata often provides home and public charger offers (e.g., 6-month free charging offer in 2024)</li>
+                    <li><span class="font-weight-700">Battery warranty:</span> Usually 8 years / 1.6 lakh km. Full coverage for major failures</li>
+                </ul>
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">Final Verdict</h3>
+                <p>All listed EVs deliver strong value for under ₹15 lakh. Here's a snapshot takeaway:</p>
+                <ul>
+                    <li><span class="font-weight-700">Best Budget Hatch:</span> Tata Tiago EV</li>
+                    <li><span class="font-weight-700">Compact Sedan:</span> Tata Tigor EV</li>
+                    <li><span class="font-weight-700">Small SUV:</span> Tata Punch EV</li>
+                    <li><span class="font-weight-700">All-Rounder SUV:</span> Tata Nexon EV MR</li>
+                    <li><span class="font-weight-700">City-only Option:</span> MG Comet EV</li>
+                    <li><span class="font-weight-700">Power & Space:</span> MG Windsor EV</li>
+                    <li><span class="font-weight-700">Balanced Hatch/SUV:</span> Citroën eC3</li>
+                </ul>
+                <p>India's EV market is maturing rapidly. Tata dominates with broad range and service reach. MG offers attractive specs but consider BaaS tradeoffs. Citroën eC3 delivers practicality with a fresh brand perspective.</p>
+
+                <div class="div-line"></div>
+
+                <h3 class="subheading">Before You Buy</h3>
+                <ol>
+                    <li><span class="font-weight-700">Check local on-road pricing & incentives</span> — VAT and state subsidies (including Uttarakhand) significantly alter real costs</li>
+                    <li><span class="font-weight-700">Visit showrooms</span> — Compare real-world cabins and tech for each trim</li>
+                    <li><span class="font-weight-700">Evaluate use-case</span> — Daily city use? Go Comet or Tiago. Family/day-trippers — Punch or Nexon</li>
+                    <li><span class="font-weight-700">Plan charging infrastructure</span> — Home charger + public fast network coverage</li>
+                </ol>
+
+                <h3 class="subheading">If you want to know more about EV:</h3>
+                <p><a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_1">Click here</a> for more vehicle from TATA</p>
+
+                <p><a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1">Click here</a> for more vehicle from Maruti Suzuki.</p>
+
+                <p>For more visit <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></p>
+            </div>
+            @await Component.InvokeAsync("AllBlog")
+            @await Html.PartialAsync("_AllBrandComponent")
+            </div>
+
+        </div>
+
+
+    
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

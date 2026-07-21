@@ -1,0 +1,170 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Hero Vida VX2 Launch in India on 1st July 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Hero Vida VX2, Hero electric scooter, Upcoming electric bikes 2025, Electric scooter launch July, Best electric scooter India, Hero Vida scooter specifications, Hero VX2 price in India, Hero EV launch 2025, Affordable electric scooter, Urban electric commuting India" />
+    <meta name="description" content="Discover the Hero Vida VX2 electric scooter launching on 1st July 2025. Explore specs, features, price, range, and comparison with competitors." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" /></div> *@
+<body>
+    <div class=" ">
+    <h1 class="latest-bike-head">Upcoming Bikes</h1>
+    <div class="TWupcoming-container">
+        <div class="upcoming-bikes-details-image">
+            <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+            <div class="upcoming-bikes-details-text">
+                <h2>@Model.UpcomingBikeName</h2>
+                <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+            </div>
+        </div>
+
+        <div class="upcoming-bikes-details-content">
+            <h2>About @Model.UpcomingBikeName</h2>
+            @* <p>@Html.Raw(@Upbike.UpcomingBikeDetails.Replace("\n", "<br>"))</p> *@
+            <h3 class="subheading">Hero Vida VX2 Launching on July 1st: Everything You Need to Know</h3>
+            <h3 class="subheading">Introduction</h3>
+            <p>India’s electric two-wheeler segment is buzzing with excitement as Hero MotoCorp prepares to launch its latest offering—<span class="font-weight-700">Hero Vida VX2—on 1st July 2025</span>. Positioned as a smart and eco-friendly alternative for urban commuters, the VX2 is expected to bring a balanced mix of performance, features, and affordability.</p>
+            <div class="row m-b20">
+                <div class="col-lg-12 col-md-12 text-center"><img src="~/images/twowheeler/upcomming/2025/vida.webp" alt="vida" title="vida" /></div>
+			</div>
+            <div class="div-line"></div>
+            <h3 class="subheading">Overview of Hero Vida VX2</h3>
+            <p>The Hero Vida VX2 is Hero MotoCorp’s newest entrant in its Vida EV lineup, aimed at urban riders looking for stylish and efficient mobility. Following the launch of the Vida V1, the VX2 is expected to offer more accessibility without compromising on the essential features that define the Vida brand.</p>
+            <div class="row m-b20">
+                <div class="col-lg-12 col-md-12 text-center"><img src="~/images/twowheeler/upcomming/2025/vidaz.webp" alt="vidaz" title="vidaz" /></div>
+            </div>
+            <div class="div-line"></div>
+            <h3 class="subheading">Key Specifications (Expected)</h3>
+            <ul>
+                <li><span class="font-weight-700">Battery Capacity:</span> ~3.44 kWh (detachable dual battery setup)</li>
+                <li><span class="font-weight-700">Range:</span> Around 100–120 km per charge</li>
+                <li><span class="font-weight-700">Top Speed:</span> Approx. 80 km/h</li>
+                <li><span class="font-weight-700">Charging Time:</span> 5 to 6 hours (standard) / 65 mins (fast charging)</li>
+                <li><span class="font-weight-700">Motor Type:</span> Hub motor with 6000W peak power</li>
+                <li><span class="font-weight-700">Brakes:</span> Front and rear disc with CBS</li>
+                <li><span class="font-weight-700">Weight:</span> ~115–120 kg</li>
+                <li><span class="font-weight-700">Suspension:</span> Telescopic front, monoshock rear</li>
+            </ul>
+            <div class="div-line"></div>
+            <h3 class="subheading">Design and Styling</h3>
+            <p>Expect the Hero Vida VX2 to maintain a modern, sharp, and practical design. The scooter may include:</p>
+            <ul>
+                <li>LED lighting</li>
+                <li>Flush-fitted grab rails</li>
+                <li>Digital instrument console</li>
+                <li>Spacious footboard and storage</li>
+            </ul>
+            <p>The design will likely be minimalist yet sporty, in line with EV aesthetics.</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">Features to Watch Out For</h3>
+            <ul>
+                <li><span class="font-weight-700">Connectivity:</span> Bluetooth and app support for diagnostics and trip tracking</li>
+                <li><span class="font-weight-700">Geo-Fencing and Anti-Theft Alerts</span></li>
+                <li><span class="font-weight-700">Multiple Riding Modes:</span> Eco, Ride, Sport</li>
+                <li><span class="font-weight-700">Regenerative Braking System</span></li>
+                <li><span class="font-weight-700">Keyless Start and Remote Locking</span></li>
+                <li><span class="font-weight-700">Over-the-air (OTA) updates</span> for firmware</li>
+            </ul>
+            <div class="div-line"></div>
+            <h3 class="subheading">Expected Launch Date and Availability</h3>
+            <ul>
+                <li><span class="font-weight-700">Official Launch:</span> 1st July 2025</li>
+                <li><span class="font-weight-700">Availability:</span> Expected to be available in major Tier 1 and Tier 2 cities across India in phases.</li>
+                <li><span class="font-weight-700">Bookings:</span> May open mid-June through the official Vida website and Hero dealerships.</li>
+            </ul>
+            <div class="div-line"></div>
+            <h3 class="subheading">Price Expectations</h3>
+            <p>While Hero MotoCorp has not officially announced the price, industry experts estimate the VX2 will be priced around:</p>
+            <ul>
+                <li><span class="font-weight-700">₹85,000 to ₹1,35,000 (ex-showroom),</span> making it competitive with offerings from Ola, Ather, and TVS.</li>
+            </ul>
+            <div class="div-line"></div>
+            <h3 class="subheading">Comparison With Competitors</h3>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Model</th>
+                            <th class="text-center">Top Speed</th>
+                            <th class="text-center">Range</th>
+                            <th class="text-center">Price (Est.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>Hero Vida VX2</td>
+                            <td>~80 km/h</td>
+                            <td>100–120km</td>
+                            <td>₹85,000 – ₹1,35,000</td>
+                        </tr>
+                        <tr>
+                            <td>Ola S1 Air</td>
+                            <td>~85 km/h</td>
+                            <td>125km</td>
+                            <td>₹84,999</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td> TVS iQube</td>
+                            <td>~78 km/h</td>
+                            <td>100km</td>
+                            <td>₹94,999</td>
+                        </tr>
+                        <tr>
+                            <td> Ather 450S</td>
+                            <td>~90 km/h</td>
+                            <td>115km</td>
+                            <td>₹97,500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Hero's trusted network and after-sales service could be the VX2’s key advantage.</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">Who Should Buy Hero Vida VX2?</h3>
+            <p>The VX2 is ideal for:</p>
+            <ul>
+                <li>Daily city commuters</li>
+                <li>Students or working professionals</li>
+                <li>Eco-conscious riders</li>
+                <li>First-time EV buyers looking for reliability and low maintenance</li>
+            </ul>
+            <div class="div-line"></div>
+            <h3 class="subheading">Final Verdict</h3>
+            <p>With a solid balance of performance, practicality, and price, the Hero Vida VX2 is all set to heat up the 2025 EV market. Backed by Hero’s expansive service network and innovative features, the VX2 has the potential to be a segment leader in the budget electric scooter category.</p>
+        </div>
+    </div>
+    }
+    <!-- Bike 1 -->
+    <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allUpbike in ViewBag.allupcomingbike)
+        {
+            <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                <div class="upcoming-bikes-details-card">
+                    <div class="upcoming-bikes-all-image">
+                        <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                    </div>
+
+                    <div class="upcoming-allbikes-details-content">
+                        <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                        <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                        <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+    </div>
+</body>

@@ -1,0 +1,12 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@await Component.InvokeAsync("AllBlog")
+@await Component.InvokeAsync("UpcomingBikes")
+@await Component.InvokeAsync("LatestNews")
+@await Component.InvokeAsync("VFM")
+@await Html.PartialAsync("_AllBrandComponent")
+@await Html.PartialAsync("_CompareBikes")

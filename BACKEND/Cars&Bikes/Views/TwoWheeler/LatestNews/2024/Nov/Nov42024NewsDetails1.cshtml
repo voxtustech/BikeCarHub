@@ -1,0 +1,136 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Royal Enfield Bear 650 Launch: Price, Features & Specs";
+}
+@section MetaTags{
+    <meta name="keywords" content="Royal Enfield Bear 650, Royal Enfield launch, Bear 650 specs, Bear 650 features, Royal Enfield price, 650cc bike launch, new Royal Enfield model" />
+    <meta name="description" content="Discover the all-new Royal Enfield Bear 650, launching tomorrow with 650cc power, safety features, and a competitive price. Perfect for both city and touring." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Html.Raw(@Model.NewsSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">Launch Date</h3>
+                <p>Scheduled for official unveiling tomorrow, Royal Enfield’s Bear 650 has generated considerable excitement within the motorcycle community.</p>
+                <h3 class="subheading">Expected Price</h3>
+                <p>The Royal Enfield Bear 650 is anticipated to have a starting price of around INR 3.5 lakh, positioning it as a competitive option within the mid-capacity segment.</p>
+                <h3 class="subheading">Design</h3>
+                <p>True to <a class="for-link" asp-controller="Home" asp-action="TWBrandDetails" asp-route-brandId="18">Royal Enfield’s</a> style, the Bear 650 combines vintage aesthetics with a rugged look, ideal for those who appreciate classic design. Featuring round headlights, minimalistic bodywork, and a stance made for both urban and off-road environments, it’s designed to attract both city commuters and adventure seekers.</p>
+                <div class="row  m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/royalenfieldbear650tolaunchtomorrowpricespecsrevealed/1.webp" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/latestnews/2024/nov/royalenfieldbear650tolaunchtomorrowpricespecsrevealed/2.webp" /></div>
+                </div>
+                <h3 class="subheading">Engine and Performance</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">Engine:</span> 648cc parallel-twin engine
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Power Output:</span> Estimated 47 bhp @@ 7240 rpm
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Torque:</span> Around 56.5 Nm @@ 5150 rpm
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Transmission:</span> 6-speed gearbox
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Performance:</span> The Bear 650 is built to deliver a balanced ride, making it suitable for both city riding and long-distance touring.
+                    </li>
+                </ol>
+                <h3 class="subheading">Features</h3>
+                <ol>
+                    <li>
+                        <span class="font-weight-700">ABS:</span> Dual-channel ABS for enhanced braking and safety.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Suspension:</span> Upside-down forks in the front and twin shock absorbers at the rear, providing stability on various terrains.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Tech:</span> Semi-digital instrument console with essential readouts like speed, fuel gauge, and trip meter.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Tires:</span> Dual-purpose tires for all-terrain capabilities.
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Ergonomics:</span> A comfortable riding posture, ideal for both short commutes and longer journeys.
+                    </li>
+                </ol>
+                <h3 class="subheading">Safety and Comfort</h3>
+                <p>The bike includes essential safety features like dual-channel ABS, ergonomic seating, and an accessible seat height, catering to a variety of riders.</p>
+                <h3 class="subheading">Mileage and Fuel Efficiency</h3>
+                <p>Expected fuel efficiency is around 22-25 km/l, suitable for long trips without frequent refueling stops.</p>
+                <h3 class="subheading">Market Competition</h3>
+                <p>The Bear 650 will likely compete with models like the Kawasaki Vulcan S, Honda Rebel 500, and other middle-weight cruisers.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

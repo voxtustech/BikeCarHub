@@ -1,0 +1,160 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Electric vs Petrol Bikes: Comparison and Better Option";
+}
+@section MetaTags{
+    <meta name="keywords" content="Electric bikes vs petrol bikes, two-wheeler comparison, electric scooters, petrol motorcycles, eco-friendly bikes, bike performance, EV bikes, Electric bike vs petrol bike running cost, Electric bike vs petrol bike in India" />
+    <meta name="description" content="Electric or petrol bike? Compare costs, performance, range, and environmental impact to decide the best two-wheeler for your needs." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">Details:-</h3>
+                <ul>
+                    <li>When it comes to choosing between electric bikes and petrol bikes, the decision can be quite pivotal. Let's delve into why electric bikes might just be the better choice for you.</li>
+                    <li>Electric bikes offer significant advantages over their petrol counterparts, starting with environmental impact. EV bikes produce zero emissions, making them a cleaner choice that contributes to reducing air pollution and combating climate change. If you're conscious about your carbon footprint, electric is undoubtedly the way to go.</li>
+                    <li>Cost efficiency is another compelling factor. While the initial purchase price of an electric bike might seem higher, consider the long-term savings on fuel and maintenance. Electric bikes are powered by electricity, which is cheaper than petrol in most regions. Moreover, they have fewer moving parts compared to petrol engines, leading to lower maintenance costs over time.</li>
+                    <li>Additionally, EV bikes provide a quieter ride experience—no more roaring engines disturbing your peace or that of your neighbors. This quiet operation doesn't just enhance personal comfort but also contributes positively to reducing noise pollution in urban areas.</li>
+                </ul>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2024/electricvspetroltwowheelerswhichisbetterforyou/electric vs petrol.webp" alt="Electric vs Petrol" title="Electric vs Petrol" /></div>
+                </div>
+                <h3 class="subheading">Electric vs Petrol Two-Wheelers Comparison</h3>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Aspect</th>
+                                <th class="text-center">Electric Two-Wheelers</th>
+                                <th class="text-center">Petrol Two-Wheelers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Cost</td>
+                                <td>Higher upfront cost but lower running expenses</td>
+                                <td>Lower upfront cost but higher running expenses.</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel/Energy Cost</td>
+                                <td>~₹15-25 per full charge (depends on electricity rates).</td>
+                                <td>~₹100-150 per litre of petrol.</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Maintenance</td>
+                                <td>Minimal (fewer moving parts, no engine oil needed).</td>
+                                <td>Regular servicing (engine oil, filters, etc.).</td>
+                            </tr>
+                            <tr>
+                                <td>Performance</td>
+                                <td>Instant torque, smooth acceleration.</td>
+                                <td>Better top speed, ideal for long-distance rides.</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Charging/Refueling Time</td>
+                                <td>4-8 hours (fast chargers can reduce time).</td>
+                                <td>~5 minutes at petrol stations.</td>
+                            </tr>
+                            <tr>
+                                <td>Environmental Impact</td>
+                                <td>Zero emissions during use; eco-friendly.</td>
+                                <td>Emits CO2 and other pollutants.</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Infrastructure</td>
+                                <td>Requires charging stations (still limited).</td>
+                                <td>Well-established fuel stations everywhere.</td>
+                            </tr>
+                            <tr>
+                                <td>Noise</td>
+                                <td>Virtually silent.</td>
+                                <td>Engine noise, often preferred by enthusiasts.</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Lifespan</td>
+                                <td>Battery degradation over 5-8 years.</td>
+                                <td>Engine life can exceed 15 years with care.</td>
+                            </tr>
+                            <tr>
+                                <td>Range</td>
+                                <td>~50-150 km per charge (varies by model and battery).</td>
+                                <td>~400-600 km per tank (depending on mileage).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li>Finally, governments worldwide are increasingly offering incentives for purchasing electric vehicles as part of their green initiatives. These can include tax breaks or rebates that make switching even more financially attractive.</li>
+                    <li>In summary, while both types have their merits depending on individual needs and circumstances, electric bikes stand out with their environmental benefits, cost savings potential, quieter operation, and additional incentives—making them an excellent choice for forward-thinking riders ready to embrace the future of transportation today.</li>
+                </ul>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @* <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,634 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "New Tata Harrier Petrol: Price, Variants & Features | BikeCarHub";
+}
+@section MetaTags {
+    <meta name="keywords" content="New Tata Harrier Petrol, Tata Harrier Petrol Price, Tata Harrier Petrol Variants, Tata Harrier Petrol Features, Tata Harrier Petrol Review, BikeCarHub Tata Harrier, Tata Harrier Petrol Specifications" />
+    <meta name="description" content="Explore the New Tata Harrier Petrol with prices, variants, features, specs, FAQs, and detailed comparison. Read full review on BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+
+
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <h3 class="subheading">Introduction: A New Chapter for Tata Harrier</h3>
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p> 
+                <p>Designed on the <span class="font-weight-700">OMEGARC architecture </span>derived from Land Rover’s D8 platform, the Harrier Petrol brings together <span class="font-weight-700">hyper-efficient performance, modern technology, and a commanding design language</span>As highlighted across <span class="font-weight-700">BikeCarHub, </span>this petrol-powered Harrier is not just an alternative to the diesel variant—it is a well-thought-out SUV that caters to urban users, highway cruisers, and families looking for refinement and advanced features. </p>
+                <p>This article takes a deep dive into the <span class="font-weight-700">New Tata Harrier Petrol, </span>covering its variants, prices, specifications, features, driving appeal, and overall value proposition, based on the official brochure and variant-wise details. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/sunlight.webp" alt="sunlight" title="sunlight" loading="lazy" /></div>
+                </div>
+
+
+                <h3 class="subheading">New Tata Harrier Petrol: Engine & Performance Overview</h3>
+                <p>At the heart of the new petrol version lies Tata’s <span class="font-weight-700">1.5-litre Hyperion Turbo-GDI petrol engine. </span>This powertrain has been engineered to deliver strong performance while maintaining efficiency and refinement. </p>
+                <p> <span class="font-weight-700">Key Engine Highlights</span></p>
+                <ul>
+                    <li> <span class="font-weight-700">Engine Type: </span> 1.5L Hyperion Turbo-GDI Petrol</li>
+                    <li> <span class="font-weight-700">Maximum Power: </span>170 PS</li>
+                    <li> <span class="font-weight-700">Maximum Torque: </span> 280 Nm</li>
+                    <li>
+                        <span class="font-weight-700">Transmission Options: </span>
+                        <ul>
+                            <li>6-speed Manual</li>
+                            <li>6-speed Automatic (from Pure X onwards) </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>This petrol engine offers <span class="font-weight-700">smooth acceleration, responsive throttle input, and reduced noise levels, </span>making it particularly suitable for city driving as well as long highway journeys. <span class="font-weight-700">BikeCarHub </span>notes that the petrol Harrier is expected to attract customers who prioritize silent operation and smoother performance over traditional diesel characteristics. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/red.webp" alt="red" title="red" loading="lazy" /></div>
+                </div>
+
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">Design Philosophy: Majestic and Commanding</h3>
+                <p>The New Tata Harrier Petrol continues to showcase the brand’s<span class="font-weight-700"> Impact Design 2.0, </span>which gives the SUV a bold and muscular stance. </p>
+                <p> <span class="font-weight-700">Exterior Design Highlights</span></p>
+                <ul>
+                    <li>LED Projector Headlamps</li>
+                    <li>Sequential LED DRLs</li>
+                    <li>LED Tail Lamps</li>
+                    <li>R17 to R19 Alloy Wheels (variant dependent) </li>
+                    <li>Strong shoulder lines and sculpted bonnet</li>
+                    <li>Dual-tone roof options (select variants) </li>
+                </ul>
+                <p>The Harrier’s road presence remains one of its strongest attributes. Whether parked or in motion, it commands attention—a point frequently emphasized by automotive enthusiasts on BikeCarHub. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/roof.webp" alt="roof" title="roof" loading="lazy" /></div>
+                    <div class="col-lg-6 col-md-6 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/led.webp" alt="led" title="led" loading="lazy" /></div>
+
+                </div>
+
+
+                <h3 class="subheading">Interior Experience: Premium, Spacious & Tech-Focused</h3>
+                <p>Step inside the New Tata Harrier Petrol, and the cabin immediately reflects a <span class="font-weight-700">premium and modern SUV experience. </span>Tata Motors has focused on comfort, technology, and practicality. </p>
+                <p> <span class="font-weight-700">Interior Highlights</span></p>
+                <ul>
+                    <li>Dual-tone themed dashboard</li>
+                    <li>Ambient and mood lighting (select variants) </li>
+                    <li>Leatherette upholstery options</li>
+                    <li>Spacious second-row seating with excellent legroom</li>
+                    <li>Large panoramic sunroof with voice assistance (Pure X onwards) </li>
+                </ul>
+                <p>The cabin feels well-insulated, making the petrol version especially appealing for buyers who value a quieter driving experience. </p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">Variant-Wise Overview & Pricing</h3>
+                <p>The New Tata Harrier Petrol is offered in multiple trims, but this article focuses on the three key variants provided in the prompt: <span class="font-weight-700">Smart, Pure X, and Adventure X. </span> </p>
+
+                <h3 class="subheading">1. Tata Harrier Smart (Petrol)</h3>
+                <p> <span class="font-weight-700">Price: ₹12,89,000</span></p>
+                <p>The Smart variant serves as the entry point into the Harrier Petrol lineup while still offering strong safety and comfort features. </p>
+                <p> <span class="font-weight-700">Key Features</span></p>
+                <ul>
+                    <li>R17 Alloy Wheels</li>
+                    <li>Fully Automatic Temperature Control</li>
+                    <li>17.78 cm Digital Instrument Cluster</li>
+                    <li>LED Projector Headlamps</li>
+                    <li>Front LED DRLs</li>
+                    <li>LED Tail Lamps</li>
+                    <li>Advanced Electronic Stability Program (ESP) with 16 functionalities</li>
+                    <li>6 Airbags</li>
+                </ul>
+                <p>Despite being the base variant, the Smart trim delivers excellent value, making it ideal for buyers who want Harrier’s design and safety without stretching their budget. BikeCarHub considers this variant a strong contender in its price segment. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/tyre.webp" alt="tyre" title="tyre" loading="lazy" /></div>
+                </div>
+
+
+                <h3 class="subheading">2. Tata Harrier Pure X (Petrol) </h3>
+                <p> <span class="font-weight-700">Price: ₹15,99,990</span></p>
+                <p>The Pure X variant introduces a significant leap in technology and convenience, making it one of the most balanced options in the petrol lineup. </p>
+                <p> <span class="font-weight-700">Key Features</span></p>
+                <ul>
+                    <li>Voice-Assisted Panoramic Sunroof</li>
+                    <li>360° HD Surround View System</li>
+                    <li>Ultra View 26.03 cm HD Harman™ Infotainment System</li>
+                    <li>Ultra View 26.03 cm HD Digital Instrument Cluster</li>
+                    <li>Cruise Control</li>
+                    <li>Push Button Start with Smart Key</li>
+                    <li>Wireless Android Auto™ & Apple CarPlay™</li>
+                    <li>Remote Central Locking</li>
+                    <li>Rear Wiper with Washer</li>
+                    <li>Electrically Adjustable ORVMs with Fold</li>
+                    <li>250+ Native Natural Voice Commands</li>
+                </ul>
+                <p>This variant is perfect for tech-savvy users who enjoy connected features and premium infotainment. According to BikeCarHub, <span class="font-weight-700">Pure X</span>  is expected to be the <span class="font-weight-700">most popular petrol variant </span> due to its feature-to-price ratio. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/screen.webp" alt="screen" title="sunlight" loading="lazy" /></div>
+                </div>
+
+
+                <h3 class="subheading">3. Tata Harrier Adventure X (Petrol)</h3>
+                <p> <span class="font-weight-700">Price: ₹16,86,490</span> </p>
+                <p>Adventure X is designed for buyers who want a rugged personality combined with luxury and driving adaptability. </p>
+                <p> <span class="font-weight-700">Key Features</span> </p>
+                <ul>
+                    <li>Ergo Lux 6-Way Powered Driver Seat</li>
+                    <li>Onyx Trail Leatherette Interiors</li>
+                    <li>Ultra View 26.03 cm HD Harman™ Infotainment System</li>
+                    <li>Ultra View 26.03 cm HD Digital Instrument Cluster</li>
+                    <li>Multi Drive Modes (City, Sport & Eco) </li>
+                    <li>Trail Response Modes (Normal, Rough, Wet) </li>
+                    <li>Trail Sense Auto Headlamps</li>
+                    <li>Aqua Sense Rain-Sensing Wipers</li>
+                    <li>Rear Defogger</li>
+                </ul>
+                <p>This variant enhances both comfort and control, making it suitable for long-distance touring and rough road conditions. BikeCarHub highlights Adventure X as the ideal choice for enthusiasts who want versatility.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/seats.webp" alt="seats" title="seats" loading="lazy" /></div>
+                </div>
+
+
+                <h3 class="subheading">4) Tata Harrier Adventure X+ (Petrol)</h3>
+                <p> <span class="font-weight-700">Price: ₹17,13,590</span> </p>
+                <p>The <span class="font-weight-700">Adventure X+ </span> variant builds upon the rugged and comfort-focused Adventure X trim by introducing <span class="font-weight-700">advanced driver assistance systems and enhanced safety technology. </span> </p>
+                <p> <span class="font-weight-700">Key Highlights</span> </p>
+                <ul>
+                    <li> <span class="font-weight-700">ADAS Level 2 </span> with Autonomous Emergency Braking</li>
+                    <li>Adaptive Steering Assist</li>
+                    <li>Trail Hold Electronic Parking Brake (EPB) with Auto Hold</li>
+                    <li>Advanced ESP with Driver Doze-off Alert</li>
+                    <li>Ergo Lux 6-Way Powered Driver Seat</li>
+                    <li>Onyx Trail Leatherette Interiors</li>
+                    <li>Trail Response Modes: Normal, Rough & Wet</li>
+                    <li>Trail Sense Auto Headlamps</li>
+                    <li>Aqua Sense Rain-Sensing Wipers</li>
+                    <li>Multi Drive Modes: City, Sport & Eco</li>
+                    <li>R17 Titan Forged Alloy Wheels</li>
+                    <li>Rear Defogger</li>
+                </ul>
+                <p>According to BikeCarHub, Adventure X+ is ideal for buyers who want <span class="font-weight-700">advanced safety without stepping into luxury pricing territory. </span> </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/side.webp" alt="side" title="side" loading="lazy" /></div>
+                </div>
+
+
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">5) Tata Harrier Fearless X (Petrol)</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/steering.webp" alt="steering" title="steering" loading="lazy" /></div>
+                </div>
+
+                <p> <span class="font-weight-700">Price: ₹19,99,990</span> </p>
+                <p>The <span class="font-weight-700">Fearless X </span> variant marks the beginning of the Harrier’s premium-luxury zone, blending sophisticated interiors with a high-end technology suite. </p>
+                <p> <span class="font-weight-700">Key Highlights</span> </p>
+                <ul>
+                    <li>Ultra View <span class="font-weight-700">31.24 cm HD Harman™ Touchscreen Infotainment</span> </li>
+                    <li>9 JBL™ Speakers with Subwoofer</li>
+                    <li>Ventilated Front Row Seats (Driver & Co-Driver) </li>
+                    <li>R18 Alloy Wheels</li>
+                    <li>Voice-Assisted Dual-Zone Fully Automatic Climate Control</li>
+                    <li>Winged Comfort Headrests for 2nd Row</li>
+                    <li>2nd Row Roll-Up Sun Blinds</li>
+                    <li>Front & Rear Connected Lamps with Sequential Turn Indicators</li>
+                    <li>Dashboard Mood Lighting</li>
+                    <li>Tyre Pressure Monitoring System (TPMS) </li>
+                    <li>Wireless Charger</li>
+                </ul>
+                <p>BikeCarHub highlights Fearless X as a <span class="font-weight-700">perfect balance between luxury and performance, </span> making it attractive for premium SUV buyers. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/interior.webp" alt="interior" title="interior" loading="lazy" /></div>
+                </div>
+
+
+                <h3 class="subheading">6) Tata Harrier Fearless X+ (Petrol)</h3>
+                <p><span class="font-weight-700">Price: ₹22,11,990</span> </p>
+                <p>The <span class="font-weight-700">Fearless X+ </span> variant enhances both <span class="font-weight-700">safety and connectivity, </span> positioning itself as a tech-forward flagship for daily comfort and long journeys. </p>
+                <p><span class="font-weight-700">Key Highlights</span> </p>
+                <ul>
+                    <li>10 JBL™ Speaker System with Central Speaker & Subwoofer</li>
+                    <li>Gesture-Controlled Powered Tailgate</li>
+                    <li>Alexa™ Voice Commands with Car-to-Home Functionality</li>
+                    <li>Harman™ AudioworX Advanced with 13 JBL Audio Modes</li>
+                    <li>Ergo Lux Powered Co-Driver Seat</li>
+                    <li>Connected Vehicle Technology with iRA 2.0</li>
+                    <li>Bejeweled Terrain Response Mode Selector with Display</li>
+                    <li><span class="font-weight-700">7 Airbags </span> (including Driver Knee Airbag) </li>
+                    <li>Emergency Call & Breakdown Call Assist</li>
+                    <li>Air Purifier</li>
+                    <li>Welcome & Goodbye Light Animation</li>
+                </ul>
+                <p>As noted by<span class="font-weight-700"> BikeCarHub, </span> Fearless X+ is designed for customers who expect <span class="font-weight-700">flagship-level features with everyday usability. </span> </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/trail.webp" alt="trail" title="trail" loading="lazy" /></div>
+                </div>
+
+
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">7) Tata Harrier Fearless Ultra (Petrol)</h3>
+                <p><span class="font-weight-700">Price: ₹22,71,990</span> </p>
+                <p>The <span class="font-weight-700">Fearless Ultra </span> variant sits at the top of the Tata Harrier Petrol lineup and represents Tata Motors’ most advanced SUV offering in this segment. </p>
+                <p><span class="font-weight-700">Key Highlights</span> </p>
+                <ul>
+                    <li>
+                        <span class="font-weight-700">
+                            36.9 cm Cinematic Infotainment Screen by Harman™
+                            (Powered by Samsung Neo QLED)
+                        </span>
+                    </li>
+                    <li><span class="font-weight-700">ADAS Level 2+ with Intelligent Speed Assist and 22 Features</span></li>
+                    <li>Gesture-Controlled Powered Tailgate</li>
+                    <li>Harman™ AudioworX Advanced with 13 JBL Audio Modes</li>
+                    <li><span class="font-weight-700">Dolby Atmos™ Cinematic Audio Experience</span> </li>
+                    <li>VisioneX E-IRVM with Built-in DVR</li>
+                    <li>Signature Oyster White & Titan Brown Interior Theme</li>
+                    <li>Arcade App Suite (Amazon Prime Video, JioHotstar, etc.) </li>
+                    <li>Built-in Navigation with Mappls Auto</li>
+                    <li>Sliding Armrest</li>
+                    <li>Alexa™ Home2Car & Car2Home Connectivity</li>
+                    <li>VisionSync Memory ORVM with Auto Reverse Dip</li>
+                    <li>ClearView Dual-Camera Washer</li>
+                    <li>SlideShade Visor</li>
+                </ul>
+                <p>BikeCarHub describes Fearless Ultra as <span class="font-weight-700">one of the most technologically advanced petrol SUVs currently available in India. </span> </p>
+
+
+                <h3 class="subheading">New Tata Harrier Petrol – All Variants Comparison Table</h3>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Variant</th>
+                                <th class="font-weight-600 text-center">Price (₹)</th>
+                                <th class="font-weight-600 text-center">Key Highlights</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Smart</td>
+                                <td>₹12,89,000</td>
+                                <td>6 Airbags, ESP, LED Headlamps, Digital Cluster</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Pure X</td>
+                                <td>₹15,99,990</td>
+                                <td>Panoramic Sunroof, 360° Camera, Harman™ Infotainment</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Adventure X</td>
+                                <td>₹16,86,490</td>
+                                <td>Drive Modes, Powered Driver Seat, Rugged Interiors</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Adventure X+</td>
+                                <td>₹17,13,590</td>
+                                <td>ADAS Level 2, EPB with Auto Hold, Driver Doze-off Alert</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Fearless X</td>
+                                <td>₹19,99,990</td>
+                                <td>Ventilated Seats, 31.24 cm Screen, Premium Comfort</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Fearless X+</td>
+                                <td>₹22,11,990</td>
+                                <td>7 Airbags, Alexa™, Powered Tailgate, iRA 2.0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Fearless Ultra</td>
+                                <td>₹22,71,990</td>
+                                <td>36.9 cm Neo QLED Screen, ADAS 2+, Dolby Atmos™</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">How These Variants Strengthen the Harrier Petrol Lineup</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/rear.webp" alt="rear" title="rear" loading="lazy" /></div>
+                </div>
+
+                <p>With the inclusion of <span class="font-weight-700">Adventure X+, Fearless X, Fearless X+, and Fearless Ultra, </span> the New Tata Harrier Petrol now covers: <p>
+                    <ul>
+                        <li>Entry-level safety-focused buyers</li>
+                        <li>Technology-oriented urban users</li>
+                        <li>Luxury SUV customers</li>
+                        <li>ADAS-focused safety seekers</li>
+                    </ul>
+                <p>As consistently highlighted by <span class="font-weight-700">BikeCarHub, </span> this wide variant spread ensures the Harrier Petrol competes strongly against rivals like the Jeep Compass, Hyundai Tucson, and MG Hector Plus. </p>
+
+                <h3 class="subheading">Safety: Built with Trust</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/music.webp" alt="music" title="music" loading="lazy" /></div>
+                </div>
+
+                <p>Safety has always been Tata Motors’ strong suit, and the New Tata Harrier Petrol continues this legacy. </p>
+                <p><span class="font-weight-700">Safety Highlights</span> </p>
+                <ul>
+                    <li>6 Airbags (Standard) </li>
+                    <li>Advanced ESP with multiple functions</li>
+                    <li>Traction Control</li>
+                    <li>Hill Assist</li>
+                    <li>Rear Parking Sensors</li>
+                    <li>Strong OMEGARC body structure</li>
+                </ul>
+                <p>BikeCarHub strongly emphasizes that the Harrier’s safety-focused engineering adds immense confidence for family buyers. </p>
+
+                <h3 class="subheading">Technology & Connectivity</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/gear.webp" alt="gear" title="gear" loading="lazy" /></div>
+                </div>
+
+                <p>The petrol Harrier offers a tech-rich environment that aligns with modern expectations. </p>
+                <ul>
+                    <li>Harman™ Infotainment with HD display</li>
+                    <li>JBL™ audio system (variant dependent) </li>
+                    <li>Wireless smartphone connectivity</li>
+                    <li>Voice commands for vehicle controls</li>
+                    <li>Digital instrument cluster</li>
+                </ul>
+                <p>These features ensure that every journey feels engaging and effortless. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/yellow.webp" alt="yellow" title="yellow" loading="lazy" /></div>
+                </div>
+
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">Driving Experience & Ride Quality</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/front.webp" alt="front" title="front" loading="lazy" /></div>
+                </div>
+
+                <p>The petrol engine delivers smooth power delivery, especially noticeable during city driving. On highways, the Harrier remains stable and planted, while its suspension setup absorbs bumps effectively. </p>
+                <p>BikeCarHub notes that the petrol Harrier feels<span class="font-weight-700"> more refined and silent, </span> making it ideal for users who prioritize comfort over outright torque. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/engine.webp" alt="engine" title="engine" loading="lazy" /></div>
+                </div>
+
+
+                <h3 class="subheading">Who Should Buy the New Tata Harrier Petrol?</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/charger.webp" alt="charger" title="charger" loading="lazy" /></div>
+                </div>
+
+                <ul>
+                    <li>Urban SUV buyers looking for refinement</li>
+                    <li>Families prioritizing safety and comfort</li>
+                    <li>Buyers who prefer petrol over diesel</li>
+                    <li>Long-distance travelers seeking premium features</li>
+                </ul>
+
+
+                <h3 class="subheading">Conclusion: A Strong Petrol SUV Contender</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2026/jan/tata harrier/sunroof.webp" alt="sunroof" title="sunroof" loading="lazy" /></div>
+                </div>
+
+                <p>The<span class="font-weight-700"> New Tata Harrier in Petrol Version </span>successfully blends premium design, modern technology, refined performance, and strong safety. With well-spaced variants like Smart, Pure X, and Adventure X, Tata Motors has ensured that buyers can choose a Harrier that fits their lifestyle and budget. </p>
+                <p>As consistently highlighted by <span class="font-weight-700">BikeCarHub,</span> the Harrier Petrol stands as a compelling option in the mid-size SUV segment, offering a premium experience without compromise. </p>
+
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <h3 class="subheading">10 Frequently Asked Questions (FAQs)</h3>
+                <div class="accordion" id="harrierPetrolAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                                1. Is the Tata Harrier Petrol engine powerful enough?
+                            </button>
+                        </h2>
+                        <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#harrierPetrolAccordion">
+                            <div class="accordion-body">
+                                Yes, the 1.5L Turbo-GDI petrol engine produces 170 PS, offering strong performance for city and highway use.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                                2. Does the Harrier Petrol come with automatic transmission?
+                            </button>
+                        </h2>
+                        <div id="a2" class="accordion-collapse collapse" data-bs-parent="#harrierPetrolAccordion">
+                            <div class="accordion-body">
+                                Yes, automatic transmission is available from the Pure X variant onwards.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+                                3. How many airbags are offered in Harrier Petrol?
+                            </button>
+                        </h2>
+                        <div id="a3" class="accordion-collapse collapse" data-bs-parent="#harrierPetrolAccordion">
+                            <div class="accordion-body">
+                                All variants come with 6 airbags as standard.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">
+                                4. Is the panoramic sunroof available in the base variant?
+                            </button>
+                        </h2>
+                        <div id="a4" class="accordion-collapse collapse" data-bs-parent="#harrierPetrolAccordion">
+                            <div class="accordion-body">
+                                No, it is available from the Pure X variant onwards.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5">
+                                5. What is the mileage of Tata Harrier Petrol?
+                            </button>
+                        </h2>
+                        <div id="a5" class="accordion-collapse collapse" data-bs-parent="#harrierPetrolAccordion">
+                            <div class="accordion-body">
+                                Official figures may vary, but it is tuned for a balance of performance and efficiency.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6">
+                                6. Is Harrier Petrol suitable for long drives?
+                            </button>
+                        </h2>
+                        <div id="a6" class="accordion-collapse collapse" data-bs-parent="#harrierPetrolAccordion">
+                            <div class="accordion-body">
+                                Yes, thanks to its comfortable suspension, spacious cabin, and smooth engine.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a7">
+                                7. Does it support wireless Android Auto and Apple CarPlay?
+                            </button>
+                        </h2>
+                        <div id="a7" class="accordion-collapse collapse" data-bs-parent="#harrierPetrolAccordion">
+                            <div class="accordion-body">
+                                Yes, from the Pure X variant.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a8">
+                                8. How many drive modes are available?
+                            </button>
+                        </h2>
+                        <div id="a8" class="accordion-collapse collapse" data-bs-parent="#harrierPetrolAccordion">
+                            <div class="accordion-body">
+                                Adventure X offers City, Sport, and Eco drive modes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a9">
+                                9. Is Harrier Petrol safe for families?
+                            </button>
+                        </h2>
+                        <div id="a9" class="accordion-collapse collapse" data-bs-parent="#harrierPetrolAccordion">
+                            <div class="accordion-body">
+                                Absolutely, with strong build quality, ESP, and 6 airbags.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a10">
+                                10. Is the Harrier Petrol worth buying over diesel?
+                            </button>
+                        </h2>
+                        <div id="a10" class="accordion-collapse collapse" data-bs-parent="#harrierPetrolAccordion">
+                            <div class="accordion-body">
+                                For buyers prioritizing refinement and city usage, the petrol version is an excellent choice.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <p></p>
+                <p>For  <a class="for-link" asp-controller="Blogs" asp-action="Nov102025BlogDetails4">Mahindra BE 6 Formula E Edition</a></p>
+                <p>For <a class="for-link" asp-controller="Blogs" asp-action="Nov102025BlogDetails3">Tata Sierra</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    @await Html.PartialAsync("_AllViewComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

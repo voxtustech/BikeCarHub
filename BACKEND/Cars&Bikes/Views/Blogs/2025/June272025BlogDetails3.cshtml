@@ -1,0 +1,247 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Tata Nexon EV vs Mahindra XUV400 EV – Detailed Comparison 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Tata Nexon EV vs Mahindra XUV400 EV, Nexon EV range, XUV400 EV features, Nexon EV price, XUV400 charging time, best electric SUVs in India 2025, Nexon vs XUV400 comparison, electric car buying guide" />
+    <meta name="description" content="Compare Tata Nexon EV and Mahindra XUV400 EV for range, performance, features, and pricing. Find out which electric SUV suits your needs in 2025 with BikeCarHub" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 27th June 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Why Choose an EV?</h2>
+                <p>Going electric isn't a decision—it's a change of mind for a brighter tomorrow. Electric cars provide a greener, smarter, and more sustainable drive. Consider it: no noisy engine, no fumes, and no weekly trips to the petrol station. What you do get is smooth, quiet journeys and the added convenience of charging at home. EVs are cheaper to operate per kilometre, and with fewer components than petrol or diesel engines, there's much less to go wrong—so you save a fortune on maintenance as well.</p>
+                <p>But the biggest win? You're doing your bit for the planet. EVs produce zero tailpipe emissions, helping reduce air pollution in our already-crowded cities. As India ramps up renewable energy, your EV becomes even cleaner. And let's be honest—there's something exciting about owning a vehicle that reflects innovation, responsibility, and modern living. In 2025, an EV isn't just better than a fuel car—it's the smart, responsible, and future-ready choice.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Detailed Specifications Comparison</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">Tata Nexon EV</th>
+                                <th class="text-center">Mahindra XUV400 EV</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Battery Options</td>
+                                <td>30 kWh / 45 kWh</td>
+                                <td>34.5 kWh / 39.4 kWh</td>
+                            </tr>
+                            <tr>
+                                <td>Power / Torque</td>
+                                <td>127-143 PS, 215 Nm</td>
+                                <td>148 PS, 310 Nm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>ARAI Range</td>
+                                <td>312 km / 489 km</td>
+                                <td>375 km / 456 km</td>
+                            </tr>
+                            <tr>
+                                <td>0-100 km/h</td>
+                                <td>~9.9 seconds</td>
+                                <td>Better acceleration</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Charging (0-80% DC Fast)</td>
+                                <td>40-60 minutes</td>
+                                <td>~50 minutes</td>
+                            </tr>
+                            <tr>
+                                <td>Length × Width × Height</td>
+                                <td>3993×1811×1606 mm</td>
+                                <td>4200×1821×1634 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Boot Space</td>
+                                <td>350 L</td>
+                                <td>368-378 L</td>
+                            </tr>
+                            <tr>
+                                <td>Safety Rating</td>
+                                <td>5★ Bharat NCAP</td>
+                                <td>5★ Bharat NCAP</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Starting Price</td>
+                                <td>₹12.49 L</td>
+                                <td>₹15.49 L</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Powertrain & Performance</h2>
+                <h3 class="subheading">Tata Nexon EV</h3>
+               
+                <ul>
+                    <li><span class="font-weight-700">Battery & Motor (Standard)</span>: 30 kWh lithium‑ion, single synchronous motor delivering ~127 PS and 215 Nm torque</li>
+                    <li>Nexon.ev Max variant ups power to 143 PS, same torque, with a 45 kWh pack</li>
+                    <li><span class="font-weight-700">0-100 km/h</span>: ~9.9 seconds</li>
+                    <li><span class="font-weight-700">Drive Modes</span>: Drive & Sport, regenerative braking levels</li>
+                </ul>
+
+                <h3 class="subheading">Mahindra XUV400 EV</h3>
+              
+                <ul>
+                    <li><span class="font-weight-700">Battery Pack</span>: 34.5 kWh or 39.4 kWh LFP batteries</li>
+                    <li><span class="font-weight-700">Motor Output</span>: Approx. 148 PS (110-110 kW) with 310 Nm torque</li>
+                    <li><span class="font-weight-700">Drive Modes</span>: Fun, Fast, Fearless + regen modes for single-pedal driving</li>
+                </ul>
+
+                <p><span class="font-weight-700">Verdict</span>: Nexon EV offers a lighter, agile feel with modest power; XUV400 EV delivers stronger acceleration and torque—better for spirited driving.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Range & Charging</h2>
+                <h3 class="subheading">Nexon EV</h3>
+                <ul>
+                    <li><span class="font-weight-700">ARAI Range</span>: 312 km (30 kWh); 489 km (45 kWh)</li>
+                    <li>
+                        <span class="font-weight-700">Charging Times</span>:
+                        <ul>
+                            <li>15 A home plug: ~10.5-17.5 hrs</li>
+                            <li>Fast AC (7.2 kW): ~4-6.5 hrs</li>
+                            <li>DC fast (50 kW): ~40-60 min (0-80%)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3 class="subheading">XUV400 EV</h3>
+                <ul>
+                    <li><span class="font-weight-700">ARAI Range</span>: 375 km (34.5 kWh) / 456 km (39.4 kWh)</li>
+                    <li>
+                        <span class="font-weight-700">Charging Times</span>:
+                        <ul>
+                            <li>3.3 kW: ~13.5 hrs</li>
+                            <li>7.2 kW: ~6.5 hrs</li>
+                            <li>50 kW DC: ~50 min (0-80%)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><span class="font-weight-700">Verdict</span>: XUV400 EV offers significantly better range in both packs; both charge similarly fast with DC, though XUV400's bigger battery covers more ground per charge.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Features & Technology</h2>
+                <h3 class="subheading">Tata Nexon EV</h3>
+                <ul>
+                    <li>12.3" HD touchscreen + 10.25" digital cluster</li>
+                    <li>JBL 9-speaker system</li>
+                    <li>Sunroof, air purifier, ventilated seats</li>
+                    <li>Vehicle-to-Load (V2L) for gadgets</li>
+                    <li>Adventure+ versions include dual-tone paint, digital DRL, drive modes, 360° camera, ESP</li>
+                </ul>
+
+                <h3 class="subheading">Mahindra XUV400 EV</h3>
+                <ul>
+                    <li>10.25" infotainment + 10.25" digital driver display</li>
+                    <li>Dual-zone climate, sunroof, wireless charging, push-button start</li>
+                    <li>Dual-cam dashcam</li>
+                    <li>Drive modes, regen adjust, electronic gear selector</li>
+                </ul>
+
+                <p>
+                    <span class="font-weight-700">Convenience Comparison</span>:
+                    <ul>
+                        <li>Both offer advanced connectivity (Bluelink vs Blue Sense)</li>
+                        <li>XUV400's dual-cam dashcam is unique</li>
+                        <li>Nexon has V2L—useful in emergencies</li>
+                    </ul>
+
+                    <div class="div-line"></div>
+                    <h2 class="subheading">Safety & Ratings</h2>
+                    <h3 class="subheading">Tata Nexon EV</h3>
+                    <ul>
+                        <li>6 airbags, ESP, EBD, hill hold, TPMS, 360° camera</li>
+                        <li><span class="font-weight-700">5★ Bharat NCAP</span> (adult & child)</li>
+                    </ul>
+
+                    <h3 class="subheading">Mahindra XUV400 EV</h3>
+                    <ul>
+                        <li>6 airbags, ESP, TPMS, hill-hold, rear camera</li>
+                        <li><span class="font-weight-700">5★ Bharat NCAP</span> (adult & child)</li>
+                    </ul>
+
+                <p><span class="font-weight-700">Verdict</span>: Both offer top-rated crash protection and necessary safety aids. Nexon adds V2L and airbag standardization.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Pricing & Variants</h2>
+                <h3 class="subheading">Tata Nexon EV</h3>
+                <ul>
+                    <li>Starts at ₹12.49 L (30 kWh)</li>
+                    <li>Nexon.ev Max (45 kWh) is higher—exact prices vary regionally</li>
+                    <li>Single variants with consistent features across packs</li>
+                </ul>
+
+                <h3 class="subheading">Mahindra XUV400 EV</h3>
+                <ul>
+                    <li>EC Pro (34.5 kWh): ₹15.49 L</li>
+                    <li>EL Pro (34.5 kWh DT): ₹16.74 L</li>
+                    <li>EL Pro DT (39.4 kWh): ₹17.69 L</li>
+                </ul>
+
+                <p><span class="font-weight-700">Verdict</span>: Nexon EV is more budget-friendly initially; XUV400 starts higher but offers larger batteries and range—worth the premium for range-conscious buyers.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Verdict</h2>
+                <p><span class="font-weight-700">Choose Tata Nexon EV</span> if you want affordability, V2L use, agile city driving, and proven safety with JBL comfort.</p>
+                <p><span class="font-weight-700">Choose Mahindra XUV400 EV</span> if range matters most—longer trips without stress, extra cabin space, dual-cam dash.</p>
+                <p>Both are compelling, but your choice comes down to <span class="font-weight-700">budget vs range</span> and your specific daily use case.</p>
+
+                <div class="div-line"></div>
+
+                <h3 class="heading">Check other brands here</h3>
+                <p>For Tata Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="TataAltrozFacelift_1"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+          
+                </div>
+            </div>
+        </div>
+    
+
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

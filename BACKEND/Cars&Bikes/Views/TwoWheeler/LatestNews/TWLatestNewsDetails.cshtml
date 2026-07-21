@@ -1,0 +1,151 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="page-wraper"> *@
+    @* <div id="loading-area"></div> *@
+    <!-- Content -->
+    @* <div class="page-content"> *@
+    <!-- inner page banner -->
+    @* <div class="dlab-bnr-inr overlay-black-middle container-fluid" style="background-image:url(~/images/banner.png);">
+    <div class="">
+    <div class="dlab-bnr-inr-entry">
+    <h1 class="text-white">Bike Details</h1>
+    </div>
+    </div>
+    </div> *@
+    <!-- inner page banner END -->
+    <!-- Breadcrumb row -->
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    @* <div class="container-fluid" style="background:linear-gradient(#23335A,#475372,#78829A,#9EA3AD);padding: 10px 0;">
+    <div class="container">
+    <ul style="color:#fff; display:flex; list-style:none">
+    <li style="padding-left:4px;padding-right:4px;"><a href="#">Home</a></li>
+    <li style="padding-left:4px;padding-right:4px;">Latest News</li>
+    </ul>
+    </div>
+    </div> *@
+    <!-- Breadcrumb row END -->
+    @*  <div class="car-details-info">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12 ">
+    <div class="nav">
+    <ul><li><a></a></li>
+    <li class="active"><a href="car-details-overview.html">Overview</a></li>
+    <li><a href="car-detail-specifications.html">Specifications</a></li>
+    <li><a href="car-detail-price.html">Price</a></li>
+    <li><a href="car-detail-compare.html">Compare</a></li>
+    <li><a href="car-detail-pictures.html">Pictures</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div> *@
+    @*     <div class="container-fluid" style="backdrop-filter:blur(4px);height:160px;background:linear-gradient(#23335A,#475372,#78829A,#9EA3AD);background-image:src(@Model.ImageURL)"></div>
+    *@           @*  <div class="conntainer-fluid bg-black" style="height:55px; padding-top:0;">
+    <div class="container">
+    <h2 class="text-white fs-5">Latest News</h2>
+    </div>
+    </div>
+    <div class="conntainer-fluid p-t20">
+    <div class="container">
+    <ul class="list-inline">
+    <li><a href="#">Home</a></li>/
+    <li>Latest News</li>
+    </ul>
+    </div>
+    </div>
+    <div class="car-details-info">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12 ">
+    <div class="nav">
+    <ul>
+    <li class="active"><a href="car-details-overview.html">Overview</a></li>
+    <li><a href="car-detail-specifications.html">Specifications</a></li>
+    <li><a href="car-detail-price.html">Price</a></li>
+    <li><a href="car-detail-compare.html">Compare</a></li>
+    <li><a href="car-detail-pictures.html">Pictures</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div> *@
+    <div class="">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@ViewBag.TWNews.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@ViewBag.TWNews.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("/images/twowheeler/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @ViewBag.TWNews.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content"> <p>@Html.Raw(@ViewBag.TWNews.NewsDetail.Replace("\n", "<br>"))</p></div>
+
+        </div>
+        <div class="div-row">
+            <div class="big-div both-div">
+                <div class="detail-div latest-bike-container">
+                    @foreach (var newsdata in ViewBag.AllNews)
+                    {
+                        <div class="latest-bike-card">
+                            <h2>@Truncate(@newsdata.NewsHeading, 36)</h2>
+                            <a href="/@newsdata.ImageURL)">
+                                <div class="latest-allbike-image ">
+                                    <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("/images/twowheeler/default.jpg")';" />
+                                    <div class="latest-bikes-details-text">
+                                        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                        <p>@Truncate(@newsdata.NewsSummary, 150)</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="small-div both-div latest-bike-container">
+                @* <div class=""> *@
+                <h2>Search Latest News by Brand</h2>
+                @foreach (var brand in ViewBag.Brand)
+                {
+                    <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+                        <div class="side-brand">
+                            <div class="side-brand-img">
+                                <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+                                <i class="bi bi-award fallback-icon"></i>
+                            </div>
+                            <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+                        </div>
+                    </a>
+                }
+                @* </div> *@
+            </div>
+        </div>
+        @* <div class="container-fluid p-t20 car-dl-info"><p>@Model.NewsDetail</p></div> *@
+    </div>
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

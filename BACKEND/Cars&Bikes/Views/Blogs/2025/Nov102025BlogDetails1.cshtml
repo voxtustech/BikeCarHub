@@ -1,0 +1,575 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Hyundai VENUE: Price, Specs & ADAS Features | BikeCarHub";
+}
+@section MetaTags {
+    <meta name="keywords" content="Hyundai VENUE, all new VENUE price, VENUE ADAS, VENUE SmartSense, Hyundai VENUE specifications, 1.0 Turbo DCT, VENUE diesel AT, VENUE interior, BikeCarHub." />
+    <meta name="description" content="Explore the all-new Hyundai VENUE's prices, dual 12.3 display, ADAS (SmartSense) features, and engine specs at bikecarhub . The ultimate guide for the new urban icon." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div> 
+        
+
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <h3 class="subheading">A Legacy of Leadership: Hyundai's Vision for the Compact SUV Segment</h3>
+               
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                
+                <p>The compact SUV segment in India is characterized by fierce competition, demanding a delicate balance between aggressive pricing and feature-rich offerings. Hyundai, with its "Sensuous Sportiness" design language and a reputation for packing its vehicles with segment-first technology, has consistently set the benchmark. The original VENUE was instrumental in defining the segment's focus on connected car technology, and the all-new model elevates this premise to new heights. It represents a comprehensive evolution, moving beyond mere cosmetic updates to embody a complete package of engineering excellence, design innovation, and a premium cabin experience. This car is not just designed to compete; it is engineered to lead, catering to the aspirational Indian buyer who demands performance, efficiency, and cutting-edge technology in equal measure.</p>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/new hyundai venue/front.webp" alt="front" title="front" loading="lazy" /></div>
+                </div>
+
+
+                <h3 class="subheading">Bold Looks, Distinctive Presence: An Exterior Designed to Impress</h3>
+                <p>The design philosophy behind the new Hyundai VENUE is centered on establishing a strong, distinctive presence on the road. The first thing that commands attention is the front fascia, characterized by the striking <span class="font-weight-700">Dark Chrome Radiator Grille. </span>This bold, parametric grille design integrates seamlessly with the new lighting elements, giving the VENUE an imposing and sophisticated look.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/new hyundai venue/side2.webp" alt="side2" title="side2" loading="lazy" /></div>
+                </div>
+
+                <p>The lighting system is a masterpiece of modern automotive illumination. The VENUE features<span class="font-weight-700"> Quad beam LED headlamps</span> that provide powerful, widespread light for superior visibility. These are complemented by signature <span class="font-weight-700">Twin horn LED DRLs </span>and the innovative<span class="font-weight-700"> Horizon LED positioning lamp, </span>which stretches across the front, creating a distinctive light signature that is instantly recognizable. In conjunction with the <span class="font-weight-700">LED turn indicators,</span> the front-end offers a futuristic and premium aesthetic that belies its compact dimensions.</p>
+                <div>
+                <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/new hyundai venue/rear.webp" alt="rear" title="rear" loading="lazy" /></div>
+            </div>
+
+            <p>Moving to the side profile, the VENUE maintains a muscular stance. The <span class="font-weight-700"> R16 (D 405.6 mm) Diamond cut alloy wheels</span> fill the wheel arches assertively, underscoring the SUV's rugged character. The practical elements of the design, such as the <span class="font-weight-700"> Bridge type roof rails, </span>not only add to the visual appeal but also enhance utility for adventurous owners. The subtle yet crucial details like the<span class="font-weight-700">  Bold skid plate (Front & Rear) </span>and <span class="font-weight-700"> Bold side cladding </span>emphasize its SUV credentials, providing a sense of protection and readiness for various terrains.</p>
+            <div>
+            <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/new hyundai venue/tyre3.webp" alt="tyre3" title="tyre3" loading="lazy" /></div>
+        </div>
+
+        <p>The rear of the VENUE is equally impressive, anchored by the stunning <span class="font-weight-700">Rear horizon LED tail lamp. </span>This connected light bar design provides a wide, stable visual impression. The <span class="font-weight-700">Aerodynamic spoiler with LED high mounted stop lamp </span>and the<span class="font-weight-700"> Signature C-pillar garnish</span> add a touch of sporty elegance. The commitment to detail is further evident in the subtle <span class="font-weight-700">In-glass VENUE emblem, </span>a small flourish that speaks volumes about the meticulous attention given to every element of the car’s design. From any angle, the all-new Hyundai VENUE successfully projects a sense of rugged capability merged with urban sophistication.</p>
+        <div>
+        <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/new hyundai venue/roof4.webp" alt="roof4" title="roof4" loading="lazy" /></div>
+    </div>
+
+
+    <h3 class="subheading">The Powerhouse: Unmatched Drivetrain Versatility</h3>
+    <p>One of the most compelling aspects of the Hyundai VENUE is the sheer versatility and quality of its powertrain options. The car is offered with three distinct engines, each meticulously tuned to cater to different driving needs and preferences, ensuring there is a VENUE for every type of buyer.</p>
+    <p><span class="font-weight-700">1. The Efficient Commuter: 1.2 Kappa Petrol MT</span></p>
+    <p>The entry point into the VENUE family is the reliable and frugal <span class="font-weight-700">1.2 Kappa Petrol </span>engine paired with a Manual Transmission (MT). This naturally aspirated four-cylinder engine is the workhorse of the lineup, known for its smooth power delivery and exceptional fuel efficiency. It is the perfect choice for the urban driver, offering adequate power for city commutes and a relaxed, easy-to-manage driving experience. Variants like the <span class="font-weight-700">VENUE 1.2 Kappa Petrol MT HX2 and HX6T</span> showcase this engine’s broad appeal across different feature levels.</p>
+    <p><span class="font-weight-700">2. The Performance Enthusiast: 1.0 Turbo Petrol MT & DCT</span></p>
+    <p>For those who crave a more spirited performance, the <span class="font-weight-700">1.0 Turbo Petro</span>l engine is the star of the show. This three-cylinder, turbocharged unit delivers a punchy performance, offering quick acceleration and strong mid-range torque, making highway driving and quick overtakes a joyous experience. The Turbo engine is available with two transmission choices:</p>
+    <ul>
+        <li><span class="font-weight-700">Manual Transmission (MT): </span>Offering the pure engagement of a manual gearbox for the enthusiast.</li>
+        <li><span class="font-weight-700">Dual-Clutch Transmission (DCT): </span>The advanced DCT offers lightning-fast, seamless gear shifts, combining the efficiency of a manual with the convenience of an automatic. The <span class="font-weight-700">VENUE 1.0 Turbo Petrol DCT HX10 </span>variant stands as the flagship of this lineup, delivering the ultimate blend of performance and luxury.</li>
+    </ul>
+    <p><span class="font-weight-700">3. The Long-Distance Cruiser: 1.5 CRDi Diesel MT & AT</span></p>
+    <p>Catering to the touring enthusiast and those with high mileage requirements, the<span class="font-weight-700">1.5 CRDi Diesel </span>engine is a highly refined and efficient option. This engine is renowned for its excellent torque output, making it an effortless cruiser on highways. Hyundai has paired this engine with a Manual Transmission (MT), and for the top-end models like the <span class="font-weight-700">VENUE 1.5 CRDi Diesel AT DSL HX10, </span>an Automatic Transmission (AT) is available, offering the convenience of a clutch-free drive while retaining the diesel’s inherent efficiency benefits. The diesel variants provide a compelling blend of power, refinement, and fuel economy, making them ideal for long-distance travel across the diverse terrains of India.</p>
+    <h3 class="subheading">A Technological Marvel: The Cabin and Infotainment</h3>
+    <p>The interior of the new Hyundai VENUE is where its true transformation shines, pivoting the compact SUV toward a more premium and future-forward positioning. The cabin is designed to be a technology hub, offering an unparalleled level of connectivity and driver-focused features.</p>
+    <p>The centerpiece of the dashboard is the brand-new, segment-redefining<span class="font-weight-700"> Dual 62.5 cm (12.3" + 12.3") curved panoramic display.</span> This curved integrated display, combining the infotainment screen and the digital instrument cluster, is a feature typically reserved for luxury segments, and its presence in the VENUE completely transforms the cabin's ambiance, lending it a sleek, ultra-modern look. The multi-information display provides the driver with comprehensive vehicle data, navigation prompts, and driving mode information with crystal-clear clarity.</p>
+    <div>
+    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/new hyundai venue/seat5.webp" alt="seat5" title="seat5" loading="lazy" /></div>
+    </div>
+    <p>Complementing this display is the <span class="font-weight-700">Hyundai Bluelink </span>connectivity suite, an essential component of the modern VENUE experience. Bluelink offers over 60 connected features, including remote engine start/stop, climate control, vehicle tracking, geo-fencing, and emergency assistance. It’s an ecosystem designed to keep the owner connected to their car at all times. The system supports <span class="font-weight-700">OTA (Over-The-Air) updates, </span>ensuring that the software and features remain current without the need for a service visit. As is essential for all modern tech-savvy drivers, the system is designed to facilitate functionality and control. However, users should be aware, as mentioned on <span class="font-weight-700">BikeCarHub, </span>that Bluelink functionality is dependent on adequate power supply and uninterrupted network connectivity. While the subscription is complimentary for the first three years, it will be available on a paid basis thereafter, a small price to pay for the immense convenience it offers.</p>
+    <p>Further adding to the cabin’s convenience are features like the<span class="font-weight-700"> Wireless charger,</span> ensuring occupants’ phones remain powered on long journeys, and the inclusion of <span class="font-weight-700">Hyundai SmartSense, </span>which represents the pinnacle of safety technology.</p>
+    <h3 class="subheading">Safety Redefined: Hyundai SmartSense (ADAS)</h3>
+    <div>
+    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/new hyundai venue/interior.webp" alt="interior" title="interior" loading="lazy" /></div>
+    </div>
+
+    <p>In a highly competitive segment, the new VENUE makes an undeniable case for safety by integrating <span class="font-weight-700">Hyundai SmartSense,</span> the company’s Advanced Driver Assistance System (ADAS). While it is crucial to remember that ADAS is not a substitute for safe and attentive driving, as the brochure clearly states, its presence significantly enhances the active safety net.</p>
+    <p>The availability of specific ADAS features may differ by variant, but the system is engineered to assist the driver in complex driving situations, mitigating the risk of accidents. Key functions typically found in the SmartSense suite include:</p>
+    <ul>
+        <li><span class="font-weight-700">Forward Collision-Avoidance Assist (FCA):</span> Helps to detect and warn the driver of a potential collision with a car, pedestrian, or cyclist ahead.</li>
+        <li><span class="font-weight-700">Lane Keeping Assist (LKA): </span>Actively assists the driver in keeping the vehicle centered in its lane.</li>
+        <li><span class="font-weight-700">Driver Attention Warning (DAW): </span>Monitors driving patterns and provides an audible and visual alert if the system detects signs of driver fatigue or inattention.</li>
+        <li><span class="font-weight-700">High Beam Assist (HBA):</span> Automatically switches between high and low beams based on approaching traffic and road conditions.</li>
+    </ul>
+    <p>Beyond ADAS, the VENUE is built with a high-strength steel body structure, and standard safety features like multiple airbags, ABS with EBD, Electronic Stability Control (ESC), Vehicle Stability Management (VSM), and Hill Assist Control (HAC) are integrated to provide a comprehensive safety package across the lineup.</p>
+    <div class="google-ad">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:1000px;height:200px"
+             data-ad-client="ca-pub-8720291170595920"
+             data-ad-slot="6204553210">
+        </ins>
+    </div>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <h3 class="subheading">Detailed Key Features: The Small Details That Matter</h3>
+    <div>
+    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/new hyundai venue/rightside.webp" alt="rightside" title="rightside" loading="lazy" /></div>
+    </div>
+
+    <p>The extensive feature list is what distinguishes the VENUE from its peers. Beyond the large-format screens and ADAS, a host of thoughtful features make the daily driving experience superior:</p>
+
+    <div style="overflow-x: auto;">
+
+        <table class="comparison-table-content">
+
+            <thead>
+                <tr>
+                    <th class="font-weight-600 text-center">Feature Category</th>
+                    <th class="font-weight-600 text-center">Feature Detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-weight-600">Exterior Lighting</td>
+                    <td>Quad beam LED Headlamps, Twin horn LED DRLs, Horizon LED Positioning Lamp, Rear Horizon LED Tail Lamp, LED Turn Indicators.</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Design Elements</td>
+                    <td>Dark Chrome Radiator Grille, R16 Diamond Cut Alloy Wheels, Bold Skid Plates (F&R), Bridge Type Roof Rails, Signature C-Pillar Garnish.</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Infotainment & Connectivity</td>
+                    <td>Dual 12.3" Curved Panoramic Display, Hyundai Bluelink (with OTA updates, 3-year subscription), Wireless Charger, Apple CarPlay & Android Auto.</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Convenience & Comfort</td>
+                    <td>Automatic Climate Control, Electric Sunroof, Cooled Glove Box, Rear AC Vents, Cruise Control.</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Safety & Security</td>
+                    <td>Hyundai SmartSense (ADAS), Multiple Airbags, ABS with EBD, ESC, VSM, HAC, Tyre Pressure Monitoring System (TPMS).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="google-ad">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:1000px;height:200px"
+             data-ad-client="ca-pub-8720291170595920"
+             data-ad-slot="6204553210">
+        </ins>
+    </div>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <h3 class="subheading">The Full Lineup: Variants and Pricing (Ex-Showroom New Delhi)</h3>
+    <div>
+    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/new hyundai venue/steering.webp" alt="steering" title="steering" loading="lazy" /></div>
+    </div>
+
+    <p>The all-new Hyundai VENUE is offered in a staggering 25 variants, allowing customers to precisely select the combination of engine, transmission, and features that suit their budget and requirements. The pricing strategy is aggressive, positioning the VENUE across a wide spectrum of the compact SUV market.</p>
+
+
+    <div style="overflow-x: auto;">
+
+        <table class="comparison-table-content">
+
+            <thead>
+                <tr>
+                    <th class="font-weight-600 text-center">Variant</th>
+                    <th class="font-weight-600 text-center">Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>VENUE 1.2 Kappa Petrol MT HX2</td><td>7,89,900</td></tr>
+                <tr><td>VENUE 1.2 Kappa Petrol MT HX4</td><td>8,79,900</td></tr>
+                <tr><td>VENUE 1.0 Turbo Petrol MT HX2</td><td>8,79,900</td></tr>
+                <tr><td>VENUE 1.2 Kappa Petrol MT HX5</td><td>9,14,900</td></tr>
+                <tr><td>VENUE 1.0 Turbo Petrol MT HX5</td><td>9,74,400</td></tr>
+                <tr><td>VENUE 1.2 Kappa Petrol MT HX6</td><td>10,42,900</td></tr>
+                <tr><td>VENUE 1.2 Kappa Petrol MT HX6 DT</td><td>10,60,900</td></tr>
+                <tr><td>VENUE 1.0 Turbo Petrol DCT HX5</td><td>10,66,900</td></tr>
+                <tr><td>VENUE 1.2 Kappa Petrol MT HX6T</td><td>10,70,400</td></tr>
+                <tr><td>VENUE 1.2 Kappa Petrol MT HX6T DT</td><td>10,88,400</td></tr>
+                <tr><td>VENUE 1.0 Turbo Petrol MT HX8</td><td>11,80,700</td></tr>
+                <tr><td>VENUE 1.0 Turbo Petrol DCT HX6</td><td>11,97,800</td></tr>
+                <tr><td>VENUE 1.0 Turbo Petrol MT HX8 DT</td><td>11,98,700</td></tr>
+                <tr><td>VENUE 1.0 Turbo Petrol DCT HX6 DT</td><td>12,15,800</td></tr>
+                <tr><td>VENUE 1.0 Turbo Petrol DCT HX8</td><td>12,84,700</td></tr>
+                <tr><td>VENUE 1.0 Turbo Petrol DCT HX8 DT</td><td>13,02,700</td></tr>
+                <tr><td>VENUE 1.0 Turbo Petrol DCT HX10</td><td>14,56,200</td></tr>
+                <tr><td>VENUE 1.0 Turbo Petrol DCT HX10 DT</td><td>14,74,200</td></tr>
+                <tr><td>VENUE 1.5 CRDi Diesel MT DSL HX2</td><td>9,69,900</td></tr>
+                <tr><td>VENUE 1.5 CRDi Diesel MT DSL HX5</td><td>10,63,900</td></tr>
+                <tr><td>VENUE 1.5 CRDi Diesel AT DSL HX5</td><td>11,58,400</td></tr>
+                <tr><td>VENUE 1.5 CRDi Diesel MT DSL HX7</td><td>12,51,100</td></tr>
+                <tr><td>VENUE 1.5 CRDi Diesel MT DSL HX7 DT</td><td>12,69,100</td></tr>
+                <tr><td>VENUE 1.5 CRDi Diesel AT DSL HX10</td><td>15,51,100</td></tr>
+                <tr><td>VENUE 1.5 CRDi Diesel AT DSL HX10 DT</td><td>15,69,100</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <h3 class="subheading">Detailed Technical Specifications</h3>
+                <div>
+    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/new hyundai venue/wheel.webp" alt="wheel" title="wheel" loading="lazy" /></div>
+    </div>
+
+    <p>While the full technical blueprint of the all-new VENUE has many intricate details, the core specifications defining its performance and structure are essential for any potential buyer.</p>
+    <div style="overflow-x: auto;">
+
+        <table class="comparison-table-content">
+
+            <thead>
+
+                <tr>
+                    <th class="font-weight-600 text-center">Specification</th>
+                    <th class="font-weight-600 text-center">1.2L Kappa Petrol</th>
+                    <th class="font-weight-600 text-center">1.0L Turbo Petrol</th>
+                    <th class="font-weight-600 text-center">1.5L CRDi Diesel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-weight-600">Engine Type</td>
+                    <td>4-Cylinder, Naturally Aspirated</td>
+                    <td>3-Cylinder, Turbocharged, GDi</td>
+                    <td>4-Cylinder, Turbocharged, CRDi</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Displacement (cc)</td>
+                    <td>Approx. 1197</td>
+                    <td>Approx. 998</td>
+                    <td>Approx. 1493</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Fuel Type</td>
+                    <td>Petrol</td>
+                    <td>Petrol</td>
+                    <td>Diesel</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Max Power (PS)</td>
+                    <td>Approx. 83</td>
+                    <td>Approx. 120</td>
+                    <td>Approx. 115</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Max Torque (Nm)</td>
+                    <td>Approx. 114</td>
+                    <td>Approx. 172</td>
+                    <td>Approx. 250</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Transmission</td>
+                    <td>5-Speed MT</td>
+                    <td>6-Speed MT / 7-Speed DCT</td>
+                    <td>6-Speed MT / AT</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Drivetrain</td>
+                    <td>2WD (Front Wheel Drive)</td>
+                    <td>2WD (Front Wheel Drive)</td>
+                    <td>2WD (Front Wheel Drive)</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Front Suspension</td>
+                    <td>McPherson Strut with Coil Spring</td>
+                    <td>McPherson Strut with Coil Spring</td>
+                    <td>McPherson Strut with Coil Spring</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Rear Suspension</td>
+                    <td>Coupled Torsion Beam Axle</td>
+                    <td>Coupled Torsion Beam Axle</td>
+                    <td>Coupled Torsion Beam Axle</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Brakes (Front/Rear)</td>
+                    <td>Disc / Drum</td>
+                    <td>Disc / Drum (or Disc)</td>
+                    <td>Disc / Drum (or Disc)</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Overall Length</td>
+                    <td>Approx. 3995 mm</td>
+                    <td>Approx. 3995 mm</td>
+                    <td>Approx. 3995 mm</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Tyre Size</td>
+                    <td>R16 (Diamond Cut Alloys on higher trims)</td>
+                    <td>R16 (Diamond Cut Alloys on higher trims)</td>
+                    <td>R16 (Diamond Cut Alloys on higher trims)</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Fuel Tank Capacity</td>
+                    <td>Approx. 45 Litres</td>
+                    <td>Approx. 45 Litres</td>
+                    <td>Approx. 45 Litres</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="google-ad">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:1000px;height:200px"
+             data-ad-client="ca-pub-8720291170595920"
+             data-ad-slot="6204553210">
+        </ins>
+    </div>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <h3 class="subheading">Comparison Table: VENUE vs. The Competition</h3>
+    <p>The compact SUV segment is crowded with talented rivals, but the new Hyundai VENUE aims to stand out by offering a technology and feature package that is hard to match at its price point. Here is how the VENUE (top-end variant) stacks up against its key competitors in the Indian market:</p>
+    <div style="overflow-x: auto;">
+
+        <table class="comparison-table-content">
+
+            <thead>
+
+                <tr>
+                    <th class="font-weight-600 text-center">Feature</th>
+                    <th class="font-weight-600 text-center">All New Hyundai VENUE</th>
+                    <th class="font-weight-600 text-center">Maruti Suzuki Brezza</th>
+                    <th class="font-weight-600 text-center">Tata Nexon</th>
+                    <th class="font-weight-600 text-center">Kia Sonet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-weight-600">ADAS (SmartSense)</td>
+                    <td class="font-weight-600">Yes</td>
+                    <td class="font-weight-600">Level 1 ADAS</td>
+                    <td class="font-weight-600">Level 1 ADAS</td>
+                    <td class="font-weight-600">Level 1 ADAS</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Engine Options</td>
+                    <td>1.2L Petrol, 1.0L Turbo Petrol, 1.5L Diesel</td>
+                    <td>1.5L Petrol</td>
+                    <td>1.2L Turbo Petrol, 1.5L Diesel</td>
+                    <td>1.2L Petrol, 1.0L Turbo Petrol, 1.5L Diesel</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Transmission Options</td>
+                    <td>MT, DCT, AT</td>
+                    <td>MT, 6-Speed AT (Torque Converter)</td>
+                    <td>MT, AMT</td>
+                    <td>MT, iMT, DCT, AT</td>
+                </tr>
+                <tr>
+                        <td class="font-weight-600">Infotainment Screen</td>
+                    <td class="font-weight-600">Dual 12.3" Curved Panoramic Display</td>
+                    <td>Large Floating Touchscreen (e.g., 9")</td>
+                    <td>Floating Touchscreen (e.g., 10.25")</td>
+                    <td>Large Floating Touchscreen (e.g., 10.25")</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Connected Tech</td>
+                    <td>Hyundai Bluelink (OTA capable)</td>
+                    <td>Suzuki Connect</td>
+                    <td>iRA Connected Car Tech</td>
+                    <td>Kia Connect</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Cabin USP</td>
+                    <td class="font-weight-600">Premium Dual Screen Layout</td>
+                    <td>Strong Hybrid Option (Mild)</td>
+                    <td>5-Star NCAP Safety Rating</td>
+                    <td>Ventilated Seats</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-600">Safety Standard</td>
+                    <td>Multiple Airbags + High Strength Steel</td>
+                    <td>Multiple Airbags + High Strength Steel</td>
+                    <td>Multiple Airbags + High Strength Steel</td>
+                    <td>Multiple Airbags + High Strength Steel</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>The Hyundai VENUE’s proposition is clear: to offer the most futuristic and luxurious cabin experience in the segment, primarily driven by the introduction of the dual panoramic display and the revolutionary ADAS suite. For buyers prioritizing cutting-edge technology and a premium feel, the VENUE is arguably the top choice.</p>
+    <div class="google-ad">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:1000px;height:200px"
+             data-ad-client="ca-pub-8720291170595920"
+             data-ad-slot="6204553210">
+        </ins>
+    </div>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <h3 class="subheading">Warranty and Peace of Mind</h3>
+    <p>Hyundai has always been committed to providing its customers with complete peace of mind, and the new VENUE comes with an industry-leading warranty package. The core warranty covers the vehicle for <span class="font-weight-700">3 Years / Unlimited Kilometers,</span> offering robust protection against manufacturing defects.</p>
+    <p>However, recognizing the needs of long-term owners, Hyundai offers an exceptional <span class="font-weight-700">Upto 7 Years Extended Warranty </span>option, valid for up to 7 years or 1,40,000 kilometers, whichever comes earlier. This is a significant indicator of the company’s confidence in the build quality and engineering of the new VENUE.</p>
+    <p>In addition to the physical warranty, the car is backed by:</p>
+    <ul>
+        <li><span class="font-weight-700">3 Years Bluelink Subscription: </span>Complimentary access to the full suite of connected car services.</li>
+        <li><span class="font-weight-700">Shield of Trust Bodycare:</span> A maintenance and care package designed to protect the vehicle's bodywork and interior, ensuring it retains its pristine condition over years of ownership.</li>
+    </ul>
+    <p>This comprehensive approach to warranty and ownership packages ensures that the VENUE is not just a purchase but a long-term, stress-free investment.</p>
+    <h3 class="subheading">Conclusion: The Compact SUV that Redefines the Segment</h3>
+    <p>The all-new Hyundai VENUE is more than just a model update; it is a compact SUV that has fundamentally redefined the expectations of its segment. By introducing premium features like the Dual 12.3" curved panoramic display and the advanced Hyundai SmartSense ADAS suite, it has successfully bridged the gap between the mass-market and the luxury segments. The choice of three highly capable engines—the efficient 1.2L Petrol, the spirited 1.0L Turbo Petrol, and the torque-rich 1.5L Diesel—coupled with multiple transmission options, ensures that the VENUE caters to every conceivable driving requirement.</p>
+    <p>The meticulous attention to detail in the design, from the sleek Horizon LED tail lamps to the bold diamond-cut alloys, reinforces its status as an urban icon. Backed by a strong warranty and a comprehensive connected technology ecosystem through Bluelink, the VENUE offers a package that is extremely difficult to overlook. For the discerning buyer seeking a vehicle that blends high-tech features, dynamic performance, and unparalleled value, the Hyundai VENUE stands as the definitive choice in the compact SUV space.</p>
+
+    <p style="text-align: right;"><span class="font-weight-700">Written by:</span> BikeCarHub Team</p>
+    <p style="text-align: right;"><span class="font-weight-700">Published on:</span> 27th October 2025</p>
+
+    <div class="google-ad">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:1000px;height:200px"
+             data-ad-client="ca-pub-8720291170595920"
+             data-ad-slot="6204553210">
+        </ins>
+    </div>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <h3 class="subheading">Frequently Asked Questions (FAQs)</h3>
+    <div class="accordion" id="venueAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                    1. What is the biggest technological upgrade in the new Hyundai VENUE?
+                </button>
+            </h2>
+            <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#venueAccordion">
+                <div class="accordion-body">
+                    The most significant upgrade is the introduction of the Dual 62.5 cm (12.3" + 12.3") curved panoramic display for the infotainment and instrument cluster, a feature commonly found in premium segments.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                    2. Does the Hyundai VENUE come with ADAS features?
+                </button>
+            </h2>
+            <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#venueAccordion">
+                <div class="accordion-body">
+                    Yes, the new VENUE includes the Hyundai SmartSense suite, which comprises Advanced Driver Assistance System (ADAS) features like Forward Collision-Avoidance Assist (FCA) and Lane Keeping Assist (LKA) in select high-end variants.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                    3. How many engine options are available in the all-new VENUE?
+                </button>
+            </h2>
+            <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#venueAccordion">
+                <div class="accordion-body">
+                    The VENUE is available with three engine options: the 1.2L Kappa Petrol, the 1.0L Turbo Petrol, and the 1.5L CRDi Diesel engine.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">
+                    4. Is there an automatic transmission option for the diesel engine?
+                </button>
+            </h2>
+            <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#venueAccordion">
+                <div class="accordion-body">
+                    Yes, the 1.5L CRDi Diesel engine is offered with both a Manual Transmission (MT) and an Automatic Transmission (AT) on the higher-end DSL HX5 and DSL HX10 variants.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false" aria-controls="a5">
+                    5. Which VENUE variant is the most expensive?
+                </button>
+            </h2>
+            <div id="a5" class="accordion-collapse collapse" aria-labelledby="q5" data-bs-parent="#venueAccordion">
+                <div class="accordion-body">
+                    The most expensive variant is the VENUE 1.5 CRDi Diesel AT DSL HX10 DT (Dual Tone), with an ex-showroom price of ₹15,69,100 in New Delhi.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6" aria-expanded="false" aria-controls="a6">
+                    6. What is the warranty coverage provided by Hyundai for the VENUE?
+                </button>
+            </h2>
+            <div id="a6" class="accordion-collapse collapse" aria-labelledby="q6" data-bs-parent="#venueAccordion">
+                <div class="accordion-body">
+                    Hyundai offers a standard 3 Years / Unlimited Kilometers warranty, which can be extended up to 7 years or 1,40,000 kilometers under the extended warranty package.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a7" aria-expanded="false" aria-controls="a7">
+                    7. Does the VENUE support Over-The-Air (OTA) updates?
+                </button>
+            </h2>
+            <div id="a7" class="accordion-collapse collapse" aria-labelledby="q7" data-bs-parent="#venueAccordion">
+                <div class="accordion-body">
+                    Yes, the Hyundai Bluelink system in the new VENUE supports OTA updates for the infotainment system, ensuring the software and features are always up to date.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a8" aria-expanded="false" aria-controls="a8">
+                    8. What kind of lighting system is used at the front of the VENUE?
+                </button>
+            </h2>
+            <div id="a8" class="accordion-collapse collapse" aria-labelledby="q8" data-bs-parent="#venueAccordion">
+                <div class="accordion-body">
+                    The front features Quad beam LED headlamps, Twin horn LED DRLs, and a Horizon LED positioning lamp, contributing to its distinctive and powerful lighting signature.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q9">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a9" aria-expanded="false" aria-controls="a9">
+                    9. Does the car get a sunroof?
+                </button>
+            </h2>
+            <div id="a9" class="accordion-collapse collapse" aria-labelledby="q9" data-bs-parent="#venueAccordion">
+                <div class="accordion-body">
+                    Yes, the higher-end variants of the VENUE are equipped with an electric sunroof, enhancing the cabin's airy feel.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q10">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a10" aria-expanded="false" aria-controls="a10">
+                    10. What is the function of the Dark Chrome Radiator Grille?
+                </button>
+            </h2>
+            <div id="a10" class="accordion-collapse collapse" aria-labelledby="q10" data-bs-parent="#venueAccordion">
+                <div class="accordion-body">
+                    The Dark Chrome Radiator Grille is a key design element, featuring Hyundai’s new parametric design language, which gives the VENUE a bold, aggressive, and premium look.
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>          
+             
+        
+  
+    @await Html.PartialAsync("_AllViewComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

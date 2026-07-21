@@ -1,0 +1,430 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "OLA Cruiser: Price, Specs, Launch & Rivals";
+}
+@section MetaTags {
+    <meta name="keywords" content="OLA Cruiser, OLA electric motorcycle, OLA Cruiser price, OLA Cruiser launch, electric cruiser India, Royal Enfield rival, upcoming electric bikes, BikeCarHub, OLA electric, cruiser bike, electric highway rider." />
+    <meta name="description" content="OLA Cruiser is set to redefine electric cruising. Get all the details on its expected price, launch date, specifications, and how it compares to its rivals." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">The Electric Highway Rider: Unveiling the OLA Cruiser </h3>
+                <h3 class="subheading">Introduction: Redefining the Long Ride </h3>
+                <p>For years, the Indian two-wheeler market has seen a clear distinction between urban commuters and long-distance tourers. While electric vehicles have revolutionized city commutes with their zippy performance and silent operation, the open highway has remained largely the domain of petrol-powered cruisers. <span class="font-weight-700">OLA Electric</span>, a company known for disrupting the norm, is now gearing up to challenge this status quo. With the introduction of the <span class="font-weight-700">OLA Cruiser,</span> they are not just launching a new motorcycle; they are embarking on a mission to redefine electric mobility for the long haul. This article, brought to you by <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a>, will delve into the details of this groundbreaking electric cruiser, exploring its design, expected specifications, and its potential to become the next big thing on Indian highways. </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/ola cruiser/ola cruiser1.webp"
+                             alt="OLA Cruiser" title="OLA Cruiser" loading="lazy" />
+                    </div>
+                </div>
+                <h3 class="subheading">A Design Blending Classic Form and Futuristic Function </h3>
+                <p>
+                    The <span class="font-weight-700">OLA Cruiser</span>, first revealed as a concept alongside the Diamondhead and Adventure models, has a distinct design that immediately sets it apart. While the Diamondhead is a futuristic sportbike and the Adventure is an off-road beast, the Cruiser embraces the timeless silhouette of a classic cruiser motorcycle. It features a low-slung profile, a relaxed riding position with forward-set footpegs, and an overall design that screams comfort and style. The long sweeping panels, full LED illumination, and minimalist bodywork give it a clean, modern look. The genius of the OLA Cruiser's design is its ability to marry this classic cruiser aesthetic with cutting-edge electric vehicle technology. The large, sweeping bodywork is not just for looks; it likely houses a large battery pack, essential for the long range expected from a cruiser. The design also incorporates a digital console, which will provide all the necessary information, from battery status to navigation, and will be a far cry from the analog dials of traditional cruisers. The OLA Cruiser’s design is a clear signal that electric mobility can be comfortable, stylish, and perfect for the open road.
+                </p>
+                <h3 class="subheading">Expected Price and Launch Timeline: The Road Ahead </h3>
+                <p>
+                    The success of a new two-wheeler, especially in a new segment, hinges on its pricing. The OLA Cruiser is expected to be a premium offering, but OLA is known for its aggressive pricing strategies. While some reports suggest a price range of <span class="font-weight-700">₹1.5 lakh to ₹2 lakh</span>, other sources indicate a higher price of up to ₹2.7 lakh. Based on its targeted segment and expected features, a realistic ex-showroom price is likely to be between <span class="font-weight-700">₹2.0 lakh and ₹2.5 lakh</span>. This would position it competitively against both high-end electric motorcycles and popular petrol-powered cruisers.<br /><br />
+                    As for the launch timeline, the journey for the <span class="font-weight-700">OLA Cruiser</span> has been a bit longer than anticipated. While initially showcased as a concept, OLA has been meticulously working on bringing its electric motorcycle lineup to life. The company has teased the battery packs and has mentioned commencing deliveries in early 2026. Therefore, the OLA Cruiser is expected to make its official debut and launch in the Indian market around <span class="font-weight-700">October 2025</span>. This timeline allows OLA to build on its existing ecosystem and ensure a smooth rollout for a product of this scale and complexity.
+                </p>
+                <h3 class="subheading">Deep Dive into the Expected Specifications</h3>
+                <p>As a cruiser, the OLA Cruiser's specifications will be tailored for long-distance comfort and a smooth, effortless ride. Here's a look at what we can expect:</p>
+                <ul>
+                    <li><span class="font-weight-700">Motor and Performance:</span> The OLA Cruiser will likely be powered by a mid-drive motor, offering a balanced and efficient performance. The power output is expected to be in the range of <span class="font-weight-700">5-8 kW</span>, which would provide a comfortable top speed of around <span class="font-weight-700">100-120 km/h</span>. This is more than sufficient for cruising on highways and provides enough power for quick overtakes. The focus will be on consistent, smooth torque delivery rather than blistering acceleration, in line with the cruiser philosophy. </li>
+                    <li><span class="font-weight-700">Battery and Range:</span> The most crucial aspect of an electric cruiser is its range. The OLA Cruiser is expected to come with a large battery pack, likely in the range of <span class="font-weight-700">6-8 kWh</span>. This is a significant jump from the batteries used in electric scooters and is essential for long rides. The company has teased a range of up to <span class="font-weight-700">200 km on a single charge</span> for its motorcycles, which would be a game-changer for the segment. A claimed IDC (Indian Driving Cycle) range could be even higher. </li>
+                    <li><span class="font-weight-700">Charging:</span> To support its long-distance capabilities, the OLA Cruiser will need fast charging. It is expected to be compatible with OLA's growing network of Hyperchargers, allowing a quick top-up on the go. A full charge at home with a standard charger is likely to take between <span class="font-weight-700">6 to 8 hours</span>.</li>
+                    <li><span class="font-weight-700">Ergonomics and Comfort:</span> A true cruiser is all about the riding experience. The OLA Cruiser is expected to have a well-cushioned, single-piece seat for both rider and pillion, a comfortable handlebar, and forward-set footpegs. The suspension will be tuned for a plush ride over long distances. The chassis will be robust, providing stability at highway speeds.</li>
+                </ul>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/ola cruiser/OLA Cruiser left.webp"
+                             alt="OLA Cruiser left" title="OLA Cruiser left" loading="lazy" />
+                    </div>
+                </div>
+                <h3 class="subheading">The Competition: A Battle of Worlds</h3>
+                <p>The OLA Cruiser will compete in a fascinating space, going up against both established petrol-powered cruisers and a handful of new electric rivals. Its primary competitors will not just be other electric bikes but also the very models it aims to replace. </p>
+                <h3 class="subheading">Competitors Comparison Table</h3>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Model</th>
+                                <th class="font-weight-600 text-center">Expected Price (Ex-showroom)</th>
+                                <th class="font-weight-600 text-center">Key Feature</th>
+                                <th class="font-weight-600 text-center">Advantage Over OLA Cruiser (Expected)</th>
+                                <th class="font-weight-600 text-center">Disadvantage vs. OLA Cruiser (Expected)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OLA Cruiser</td>
+                                <td>₹1.5 - ₹2 lakh</td>
+                                <td>Long range, futuristic design, smart features</td>
+                                <td>Silent operation, low running cost, instant torque</td>
+                                <td>Unproven in the cruiser segment, charging network reliance</td>
+                            </tr>
+                            <tr>
+                                <td>Royal Enfield Meteor 350</td>
+                                <td>₹1,91,233 - ₹2,13,521</td>
+                                <td>Classic design, rich legacy, established service network</td>
+                                <td>Proven reliability, no range anxiety, massive service network</td>
+                                <td>Higher running cost, engine vibrations, less features</td>
+                            </tr>
+                            <tr>
+                                <td>Bajaj Avenger Cruise 220</td>
+                                <td>₹1,36,691</td>
+                                <td>Affordable, classic cruiser design </td>
+                                <td>Highly affordable, lightweight, easy to maintain</td>
+                                <td>Lower power and features, outdated design</td>
+                            </tr>
+                            <tr>
+                                <td>Komaki Ranger</td>
+                                <td>₹1,29,999 – ₹1,34,999</td>
+                                <td>The first electric cruiser in India</td>
+                                <td>Already available, retro design </td>
+                                <td>Smaller battery, lower range, less powerful</td>
+                            </tr>
+                            <tr>
+                                <td>Harley-Davidson X440</td>
+                                <td>₹2,39,500 - ₹2,79,500</td>
+                                <td>Iconic brand name, premium feel</td>
+                                <td>Brand value, better handling, great engine</td>
+                                <td>Much higher running cost, no electric benefits</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">The Soul of a Cruiser </h3>
+                <p>
+                    The <span class="font-weight-700">OLA Cruiser</span> is not just a collection of specs; it is a statement. It is for the rider who loves the open road but also cares about the environment. It’s for the person who wants to embark on a long journey without the constant stops at fuel pumps and the vibration of an internal combustion engine. The silent power and effortless torque of the electric motor will transform the cruising experience, allowing the rider to focus on the journey itself, with nothing but the wind and the road for company. The OLA Cruiser will be a modern-day horse, a silent partner for endless roads and scenic vistas. <br /><br />
+                    At <span class="font-weight-700">BikeCarHub</span>, we are excited to see this new era of electric cruising. The OLA Cruiser, with its blend of style, comfort, and advanced technology, has the potential to become a true disruptor. It's a bike that doesn't just promise a ride; it promises a journey into a cleaner, quieter, and more efficient future. The OLA Cruiser will appeal to a wide range of riders, from the new-age motorcyclist to the seasoned veteran looking for a change.
+                </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/ola cruiser/OLA Cruiser right.webp"
+                             alt="OLA Cruiser right" title="OLA Cruiser right" loading="lazy" />
+                    </div>
+                </div>
+                <h3 class="subheading">Specifications & Features Comparison Table</h3>
+                <p>Here is a more detailed look at the expected features and specifications of the OLA Cruiser compared to its key rivals.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature</th>
+                                <th class="font-weight-600 text-center">OLA Cruiser (Expected)</th>
+                                <th class="font-weight-600 text-center">Royal Enfield Meteor 350</th>
+                                <th class="font-weight-600 text-center">Bajaj Avenger Cruise 220</th>
+                                <th class="font-weight-600 text-center">Komaki Ranger</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Motor/Engine</td>
+                                <td>Electric Motor (5-8 kW)</td>
+                                <td>349.34cc Air-Oil Cooled</td>
+                                <td>220cc Oil Cooled</td>
+                                <td>Electric Motor (4.2 kW)</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>7-10 bhp </td>
+                                <td>20.2 hp</td>
+                                <td>9.03 ps</td>
+                                <td>5.3 bhp</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque</td>
+                                <td>50 Nm</td>
+                                <td>27 Nm</td>
+                                <td>17.55 Nm</td>
+                                <td>25 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Top Speed</td>
+                                <td>110 km/h</td>
+                                <td>114 km/h</td>
+                                <td>105 km/h</td>
+                                <td>80 km/h</td>
+                            </tr>
+                            <tr>
+                                <td>Range/Mileage</td>
+                                <td>200 km (True Range)</td>
+                                <td>35-40 kmpl</td>
+                                <td>40 kmpl</td>
+                                <td>180-200 km (Claimed)</td>
+                            </tr>
+                            <tr>
+                                <td>Battery/Fuel Tank</td>
+                                <td>6-8 kWh</td>
+                                <td>15 litres</td>
+                                <td>13 litres</td>
+                                <td>4.5 kWh</td>
+                            </tr>
+                            <tr>
+                                <td>Charging/Refueling</td>
+                                <td>6-8 hours (Home)</td>
+                                <td>2 minutes</td>
+                                <td>2 minutes</td>
+                                <td>6 hours (Home)</td>
+                            </tr>
+                            <tr>
+                                <td>Front Brake</td>
+                                <td>Disc</td>
+                                <td>Disc</td>
+                                <td>Disc</td>
+                                <td>Disc</td>
+                            </tr>
+                            <tr>
+                                <td>Rear Brake</td>
+                                <td>Disc</td>
+                                <td>Disc</td>
+                                <td>Drum</td>
+                                <td>Drum</td>
+                            </tr>
+                            <tr>
+                                <td>Braking System</td>
+                                <td>Dual Channel ABS (Expected)</td>
+                                <td>Dual Channel ABS</td>
+                                <td>Single Channel ABS</td>
+                                <td>CBS</td>
+                            </tr>
+                            <tr>
+                                <td>Suspension</td>
+                                <td>Telescopic Front, Twin Rear Shocks</td>
+                                <td>Telescopic Front, Twin Rear Shocks</td>
+                                <td>Telescopic Front, Twin Rear Shocks</td>
+                                <td>Telescopic Front, Twin Rear Shocks</td>
+                            </tr>
+                            <tr>
+                                <td>Kerb Weight</td>
+                                <td>160 kg</td>
+                                <td>191 kg</td>
+                                <td>163 kg</td>
+                                <td>175 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Connectivity</td>
+                                <td>Bluetooth, Navigation</td>
+                                <td>Bluetooth, Navigation</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Headlights</td>
+                                <td>Full LED</td>
+                                <td>Halogen with LED DRL</td>
+                                <td>Halogen</td>
+                                <td>Full LED</td>
+                            </tr>
+                            <tr>
+                                <td>Display</td>
+                                <td>Digital TFT Display</td>
+                                <td>Semi-Digital Console</td>
+                                <td>Digital Console</td>
+                                <td>Digital Console</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">Conclusion: Cruising into a New Era</h3>
+                <p>The OLA Cruiser is more than just a new model; it's a statement of intent. It signifies OLA's ambition to move beyond urban scooters and conquer new frontiers in electric mobility. By blending the comfort and style of a classic cruiser with the clean, silent, and efficient power of an electric motor, the OLA Cruiser promises to offer a riding experience that is both familiar and revolutionary. As we look towards a future of sustainable transportation, the <span class="font-weight-700">OLA Cruiser</span> has the potential to become a beloved machine for riders who want to hit the road and experience the world in a new, electric way. </p>
+                <h3 class="subheading">FAQs: Answering Your Top Questions</h3>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                1. When is the OLA Cruiser expected to launch?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The OLA Cruiser is expected to be launched in India in October 2025.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                2. What will be the price of the OLA Cruiser?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The expected ex-showroom price of the OLA Cruiser is between ₹1.5 lakh and ₹2 lakh.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                3. What is the expected riding range of the OLA Cruiser on a single charge?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                It is rumored to have a true riding range of around 200 km, perfect for long-distance travel.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                4. Will it be a good bike for long highway trips?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Yes, with its comfortable riding posture, large battery, and decent top speed, the OLA Cruiser is designed specifically for highway cruising.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                5. How will the OLA Cruiser be charged?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                It will support home charging and is expected to be compatible with OLA's Hypercharger network for fast charging on the go.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                6. What kind of motor will the OLA Cruiser have?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                It is likely to have a mid-drive motor with a power output in the range of 5-8 kW, providing a smooth and powerful ride.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                7. Will the OLA Cruiser have smart features?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Yes, it is expected to come with a fully digital TFT display with features like Bluetooth connectivity, navigation, and other connected vehicle technologies.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                                8. Who are the main competitors of the OLA Cruiser?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Its primary competitors will be traditional petrol-powered cruisers like the Royal Enfield Meteor 350 and Bajaj Avenger Cruise 220, as well as the electric Komaki Ranger.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                                9. What is the top speed of the OLA Cruiser?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The expected top speed of the OLA Cruiser is around 110-120 km/h.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                                10.	Will the OLA Cruiser have a relaxed riding position?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Yes, its design is based on the classic cruiser silhouette, with a comfortable riding posture, forward-set footpegs, and a low seat height.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        }
+        @*
+        <!-- Bike 1 -->
+        <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+        <div class="upcoming-bikes-details-row">
+            @foreach (var allUpbike in ViewBag.allupcomingbike)
+            {
+                <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                    <div class="upcoming-bikes-details-card">
+                        <div class="upcoming-bikes-all-image">
+                            <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                        </div>
+
+                        <div class="upcoming-allbikes-details-content">
+                            <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                            <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                            <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+        *@
+        @await Html.PartialAsync("_AllViewComponent")
+    </div>
+</body>

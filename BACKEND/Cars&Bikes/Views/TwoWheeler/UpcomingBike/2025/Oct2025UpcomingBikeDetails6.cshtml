@@ -1,0 +1,410 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "OLA Adventure: Price, Specs, Launch & Rivals";
+}
+@section MetaTags {
+    <meta name="keywords" content="OLA Adventure, OLA electric motorcycle, OLA Adventure price, OLA Adventure launch, electric adventure bike, Royal Enfield Himalayan rival, upcoming electric bikes, BikeCarHub, OLA electric, adventure bike." />
+    <meta name="description" content="OLA Adventure is set to electrify the ADV segment. Find out its expected price, launch date, specifications, and how it compares to its rivals at BikeCarHub." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">Title: Charging the Wild: A Closer Look at the Upcoming OLA Adventure</h3>
+                <h3 class="subheading">Introduction: The Electric Trailblazer</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/ola adventure/front.webp"
+                             alt=" ola front side " title=" ola front side " loading="lazy" />
+                    </div>
+                </div>
+
+                <p>The Indian two-wheeler market has always had a special place for adventure motorcycles. They represent freedom, the thrill of exploration, and the promise of escaping the mundane. While petrol-powered ADVs have dominated this segment for years, a new player is on the horizon, ready to electrify the genre. OLA Electric, a company synonymous with disrupting the status quo, is poised to launch the OLA Adventure. This isn't just another electric vehicle; it's a bold statement that adventure can be quiet, clean, and exhilarating. This article, brought to you by BikeCarHub, will delve into the details of this groundbreaking electric motorcycle, exploring its design, expected specifications, and its potential to become the first truly successful electric adventure bike in India. </p>
+                <h3 class="subheading">A Rugged Design with a Futuristic Edge</h3>
+                <p>The OLA Adventure, showcased alongside the Diamondhead and Cruiser concepts, immediately stands out with its purpose-built design. It’s a motorcycle that looks ready to take on anything, from city potholes to challenging off-road trails. The design language is a perfect blend of rugged practicality and modern aesthetics. Key elements of its design include: </p>
+                <ul>
+                    <li><span class="font-weight-700">Tall and Upright Stance: </span>The bike will feature a high ground clearance, long-travel suspension, and an upright riding posture, all of which are essential for comfortable long-distance touring and off-road riding. </li>
+                    <li><span class="font-weight-700">Minimalist Bodywork: </span> The body panels are expected to be minimal and functional, designed to protect the internal components while keeping the bike's weight in check. Elements like a raised front beak, knuckle guards, and a high-set windscreen add to its adventure-ready persona. </li>
+                    <li><span class="font-weight-700">Dual-purpose Tyres: </span>The bike is likely to feature wire-spoke wheels with dual-purpose tyres, which offer superior grip and durability on a variety of surfaces, from asphalt to gravel. </li>
+                    <li><span class="font-weight-700">Advanced Lighting: </span> Just like OLA's other products, the Adventure will feature an all-LED lighting setup, which will not only enhance visibility but also give it a distinct, futuristic look. The headlamp will likely be a new, uniquely designed unit that fits the adventure theme. </li>
+                </ul>
+                <p>The design of the OLA Adventure is a clear indicator that it is built for a specific purpose: to explore. It's a machine that promises to be a reliable partner on any journey, regardless of the terrain. </p>
+                <h3 class="subheading">Expected Price and Launch Timeline: The Journey Begins</h3>
+                <p>The pricing of the OLA Adventure is a topic of much speculation. As a premium electric motorcycle, it is expected to be priced higher than most scooters but competitively against its petrol-powered rivals. Various reports suggest a price range, and based on the expected features and OLA's history of aggressive pricing, a realistic ex-showroom price is likely to fall between <span class="font-weight-700">₹1.5 lakh and ₹2 lakh. </span> Some sources even suggest a higher price point of up to <span class="font-weight-700">₹3 lakh</span>, which would place it in direct competition with established premium ADVs. </p>
+                <p>As for the launch timeline, OLA has been a master of generating hype, and the wait for its motorcycles has been considerable. While initial concepts were shown in 2023, the company is now focused on bringing its electric motorcycles to market. The latest information points to an expected launch in<span class="font-weight-700"> October 2025. </span> This gives OLA enough time to refine the product, build out its charging infrastructure, and ensure a smooth rollout for a vehicle that will be a first of its kind in the Indian market. </p>
+                <h3 class="subheading">Diving Deep into the Expected Specifications</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/ola adventure/side.webp"
+                             alt=" ola  side " title=" ola side " loading="lazy" />
+                    </div>
+                </div>
+
+                <p>An adventure motorcycle is only as good as its specifications, and the OLA Adventure is expected to be a powerhouse of electric technology. </p>
+                <ul>
+                    <li><span class="font-weight-700">Motor and Performance: </span>The OLA Adventure will be powered by a high-performance electric motor, likely a mid-drive unit. While exact figures are not available, it is rumored to produce a peak power of around <span class="font-weight-700">10-15 kW</span> (approximately 13-20 bhp). The most exciting part of this setup will be the instantaneous torque delivery, which is a massive advantage for off-road riding. This will allow the rider to navigate challenging terrain with ease, providing quick and precise power delivery without the need for gears or a clutch. </li>
+                    <li><span class="font-weight-700">Battery and Range: </span> Range is the single most important factor for an adventure bike. The OLA Adventure is expected to house a large battery pack, possibly a modular unit, with a capacity of around<span class="font-weight-700"> 7-9 kWh. </span>This would give the bike a true riding range of<span class="font-weight-700"> 150-200 km</span> on a single charge. While this might not match the range of a petrol-powered motorcycle, it's a significant figure for an EV and would be sufficient for a day-long adventure before needing a recharge. </li>
+                    <li><span class="font-weight-700">Charging:</span> To support its long-distance capabilities, the OLA Adventure will be compatible with OLA's Hypercharger network. This will allow for quick top-ups, reducing range anxiety for riders on the go. A full charge at home with a standard charger is likely to take between <span class="font-weight-700">5 to 6 hours. </span></li>
+                    <li><span class="font-weight-700">Chassis and Suspension: </span>The bike will be built on a rugged chassis designed to withstand the rigors of off-road riding. The suspension setup will be a key highlight. It is expected to feature a long-travel USD (Upside-Down) fork at the front and a pre-load adjustable monoshock at the rear. This setup will be tuned to provide a plush ride on bumpy roads and excellent stability on the highway. </li>
+                </ul>
+                <h3 class="subheading">The Competition: A Battle of Generations</h3>
+                <p>The OLA Adventure will be entering a segment that is currently dominated by petrol-powered motorcycles. Its main rivals will be a mix of established players and new-age electric bikes. </p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+                        
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Model</th>
+                                <th class="font-weight-600 text-center">Expected Price (Ex-showroom)</th>
+                                <th class="font-weight-600 text-center">Engine/Motor Type</th>
+                                <th class="font-weight-600 text-center">Max Power</th>
+                                <th class="font-weight-600 text-center">Range/Mileage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">OLA Adventure</td>
+                                <td class="font-weight-600">₹2.0 - ₹2.5 lakh</td>
+                                <td class="font-weight-600">Electric Motor</td>
+                                <td class="font-weight-600">10-15 kW</td>
+                                <td class="font-weight-600">150-200 km (True Range)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Royal Enfield Himalayan 450</td>
+                                <td>₹3,05,736 - ₹3,19,682</td>
+                                <td>452cc Petrol</td>
+                                <td>40.02 bhp</td>
+                                <td>30 kmpl</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Yezdi Adventure</td>
+                                <td>₹1,98,000</td>
+                                <td>334cc Petrol</td>
+                                <td>29.7 bhp</td>
+                                <td>32 kmpl</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Hero Xpulse 200 4V</td>
+                                <td>₹1,40,047 - ₹1,54,797</td>
+                                <td>199.6cc Petrol</td>
+                                <td>18.9 bhp</td>
+                                <td>38 kmpl</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">KTM 250 Adventure</td>
+                                <td>₹2,40,010</td>
+                                <td>249.07cc Petrol</td>
+                                <td>31 bhp</td>
+                                <td>31.5 kmpl</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Ultraviolette F77</td>
+                                <td>₹2,99,000</td>
+                                <td>Electric Motor</td>
+                                <td>27 kW</td>
+                                <td>200-300 km (True Range)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The OLA Adventure will have a clear advantage in terms of running costs and instant torque, which are crucial for off-roading. However, its main challenge will be overcoming range anxiety, as its range is still lower than the fuel tank range of its petrol-powered rivals. The bike will have to prove that its low maintenance and tech-savvy features can compensate for the potential inconvenience of charging on long trips. </p>
+                <h3 class="subheading">A Human Perspective: Riding into the Unknown</h3>
+                <p>The OLA Adventure is a symbol of a new era of motorcycling. It’s for the rider who wants to explore the hidden trails and scenic routes without the roar of a petrol engine. The silent ride will allow the rider to connect with nature, to hear the sounds of the wilderness, and to truly be one with the environment. It is a motorcycle that promises to be a capable and reliable partner on any adventure, big or small. At <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a> we believe this bike will appeal to a new generation of riders who are not only seeking thrills but are also conscious of their environmental footprint. The OLA Adventure is not just a motorcycle; it’s an invitation to a new kind of adventure, one that is clean, quiet, and truly sustainable. </p>
+                <p>The bike's features, from its robust build to its expected high-tech console, will cater to the modern adventurer. It will likely come with a range of riding modes, including an off-road mode, that will optimize the power delivery and traction control for different terrains. This level of sophistication, combined with the bike's raw, purposeful design, makes it a highly anticipated model.</p>
+                <h3 class="subheading">Specifications & Features Comparison Table</h3>
+                <p>Here is a more detailed look at the expected features and specifications of the OLA Adventure compared to its key rivals. </p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature</th>
+                                <th class="font-weight-600 text-center">OLA Adventure (Expected)</th>
+                                <th class="font-weight-600 text-center">Royal Enfield Himalayan 450</th>
+                                <th class="font-weight-600 text-center">Hero Xpulse 200 4V</th>
+                                <th class="font-weight-600 text-center">Yezdi Adventure</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engine/Motor Type</td>
+                                <td>Electric</td>
+                                <td>Liquid-cooled, Single Cylinder</td>
+                                <td>Oil-cooled, Single Cylinder</td>
+                                <td>Liquid-cooled, Single Cylinder</td>
+                            </tr>
+                            <tr>
+                                <td>Displacement</td>
+                                <td>N/A</td>
+                                <td>452cc</td>
+                                <td>199.6cc</td>
+                                <td>334cc</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>~10-15 kW</td>
+                                <td>40.02 bhp</td>
+                                <td>18.9 bhp</td>
+                                <td>29.16 bhp</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque</td>
+                                <td>~50 Nm</td>
+                                <td>40 Nm</td>
+                                <td>17.35 Nm</td>
+                                <td>29.8 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Top Speed</td>
+                                <td>~120 km/h</td>
+                                <td>140 km/h</td>
+                                <td>115 km/h</td>
+                                <td>130 km/h</td>
+                            </tr>
+                            <tr>
+                                <td>Range/Mileage</td>
+                                <td>~180 km (IDC)</td>
+                                <td>30 kmpl</td>
+                                <td>38 kmpl</td>
+                                <td>32 kmpl</td>
+                            </tr>
+                            <tr>
+                                <td>Battery/Fuel Tank</td>
+                                <td>7-9 kWh (Expected)</td>
+                                <td>17 litres</td>
+                                <td>13 litres</td>
+                                <td>15.5 litres</td>
+                            </tr>
+                            <tr>
+                                <td>Suspension (Front)</td>
+                                <td>Long Travel USD Fork</td>
+                                <td>USD Fork</td>
+                                <td>Telescopic Fork</td>
+                                <td>Telescopic Fork</td>
+                            </tr>
+                            <tr>
+                                <td>Suspension (Rear)</td>
+                                <td>Preload Adjustable Monoshock</td>
+                                <td>Monoshock</td>
+                                <td>Monoshock</td>
+                                <td>Monoshock</td>
+                            </tr>
+                            <tr>
+                                <td>Brakes</td>
+                                <td>Disc (Front & Rear)</td>
+                                <td>Disc (Front & Rear)</td>
+                                <td>Disc (Front & Rear)</td>
+                                <td>Disc (Front & Rear)</td>
+                            </tr>
+                            <tr>
+                                <td>ABS</td>
+                                <td>Dual-Channel (Switchable)</td>
+                                <td>Dual-Channel (Switchable)</td>
+                                <td>Single-Channel</td>
+                                <td>Dual-Channel</td>
+                            </tr>
+                            <tr>
+                                <td>Tyres</td>
+                                <td>Dual Purpose</td>
+                                <td>Dual Purpose</td>
+                                <td>Dual Purpose</td>
+                                <td>Dual Purpose</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument Cluster</td>
+                                <td>Digital TFT Display</td>
+                                <td>Digital TFT Display</td>
+                                <td>LCD Display</td>
+                                <td>LCD Display</td>
+                            </tr>
+                            <tr>
+                                <td>Connectivity</td>
+                                <td>Bluetooth, Navigation</td>
+                                <td>Bluetooth, Navigation</td>
+                                <td>Bluetooth</td>
+                                <td>Bluetooth</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">Conclusion: A New Chapter in Adventure</h3>
+                <p>The OLA Adventure is a motorcycle that challenges the conventional wisdom of what an adventure bike should be. It takes the rugged, capable nature of a traditional ADV and combines it with the clean, silent, and efficient power of an electric motor. While it faces the challenge of range anxiety, its low running costs, advanced features, and a unique riding experience give it a distinct advantage. For a market that is increasingly embracing electric mobility, the OLA Adventure has the potential to carve out a brand new segment and become a trendsetter. It's a bike for the future, ready to take on the roads less traveled, one silent kilometer at a time. </p>
+
+                <h3 class="subheading">FAQs: Answering Your Top Questions</h3>
+                <div class="accordion accordion-flush" id="accordionFlushOLA">
+
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="ola-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ola-collapseOne" aria-expanded="false" aria-controls="ola-collapseOne">
+                                1. When is the OLA Adventure expected to launch?
+                            </button>
+                        </h2>
+                        <div id="ola-collapseOne" class="accordion-collapse collapse" aria-labelledby="ola-headingOne" data-bs-parent="#accordionFlushOLA">
+                            <div class="accordion-body">
+                                The OLA Adventure is expected to be launched in India in October 2025.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="ola-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ola-collapseTwo" aria-expanded="false" aria-controls="ola-collapseTwo">
+                                2. What will be the price of the OLA Adventure?
+                            </button>
+                        </h2>
+                        <div id="ola-collapseTwo" class="accordion-collapse collapse" aria-labelledby="ola-headingTwo" data-bs-parent="#accordionFlushOLA">
+                            <div class="accordion-body">
+                                The expected ex-showroom price of the OLA Adventure is between  <span class="font-weight-700">₹2.0 lakh and ₹2.5 lakh.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="ola-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ola-collapseThree" aria-expanded="false" aria-controls="ola-collapseThree">
+                                3. What is the expected riding range of the OLA Adventure on a single charge?
+                            </button>
+                        </h2>
+                        <div id="ola-collapseThree" class="accordion-collapse collapse" aria-labelledby="ola-headingThree" data-bs-parent="#accordionFlushOLA">
+                            <div class="accordion-body">
+                                It is rumored to have a true riding range of around 150-200 km, with a claimed IDC range potentially being higher.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="ola-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ola-collapseFour" aria-expanded="false" aria-controls="ola-collapseFour">
+                                4. Will it be a good bike for off-roading?
+                            </button>
+                        </h2>
+                        <div id="ola-collapseFour" class="accordion-collapse collapse" aria-labelledby="ola-headingFour" data-bs-parent="#accordionFlushOLA">
+                            <div class="accordion-body">
+                                Yes, with its high ground clearance, long-travel suspension, and instant torque delivery from the electric motor, it is designed to be a capable off-road machine.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="ola-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ola-collapseFive" aria-expanded="false" aria-controls="ola-collapseFive">
+                                5. How will the OLA Adventure be charged?
+                            </button>
+                        </h2>
+                        <div id="ola-collapseFive" class="accordion-collapse collapse" aria-labelledby="ola-headingFive" data-bs-parent="#accordionFlushOLA">
+                            <div class="accordion-body">
+                                It will be compatible with OLA's Hypercharger network for fast charging and can also be charged at home with a standard charger.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="ola-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ola-collapseSix" aria-expanded="false" aria-controls="ola-collapseSix">
+                                6. What kind of motor will the OLA Adventure have?
+                            </button>
+                        </h2>
+                        <div id="ola-collapseSix" class="accordion-collapse collapse" aria-labelledby="ola-headingSix" data-bs-parent="#accordionFlushOLA">
+                            <div class="accordion-body">
+                                It is likely to have a mid-drive electric motor with a peak power of around 10-15 kW.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="ola-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ola-collapseSeven" aria-expanded="false" aria-controls="ola-collapseSeven">
+                                7. Who are the main competitors of the OLA Adventure?
+                            </button>
+                        </h2>
+                        <div id="ola-collapseSeven" class="accordion-collapse collapse" aria-labelledby="ola-headingSeven" data-bs-parent="#accordionFlushOLA">
+                            <div class="accordion-body">
+                                Its primary competitors will be petrol-powered adventure motorcycles like the Royal Enfield Himalayan 450, Yezdi Adventure, and Hero Xpulse 200 4V, as well as electric bikes like the Ultraviolette F77.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="ola-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ola-collapseEight" aria-expanded="false" aria-controls="ola-collapseEight">
+                                8. What is the top speed of the OLA Adventure?
+                            </button>
+                        </h2>
+                        <div id="ola-collapseEight" class="accordion-collapse collapse" aria-labelledby="ola-headingEight" data-bs-parent="#accordionFlushOLA">
+                            <div class="accordion-body">
+                                The expected top speed of the OLA Adventure is around 120 km/h.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="ola-headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ola-collapseNine" aria-expanded="false" aria-controls="ola-collapseNine">
+                                9. Will the OLA Adventure have advanced safety features?
+                            </button>
+                        </h2>
+                        <div id="ola-collapseNine" class="accordion-collapse collapse" aria-labelledby="ola-headingNine" data-bs-parent="#accordionFlushOLA">
+                            <div class="accordion-body">
+                                Yes, it is expected to come with a switchable dual-channel ABS system, which is crucial for safety on and off the road.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="ola-headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ola-collapseTen" aria-expanded="false" aria-controls="ola-collapseTen">
+                                10. What are the main advantages of an electric adventure bike?
+                            </button>
+                        </h2>
+                        <div id="ola-collapseTen" class="accordion-collapse collapse" aria-labelledby="ola-headingTen" data-bs-parent="#accordionFlushOLA">
+                            <div class="accordion-body">
+                                The main advantages are low running costs, minimal maintenance, silent operation, and the instant torque delivery of the electric motor, which is highly beneficial for off-road riding.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        
+        @await Html.PartialAsync("_AllViewComponent")
+    </div>
+</body>

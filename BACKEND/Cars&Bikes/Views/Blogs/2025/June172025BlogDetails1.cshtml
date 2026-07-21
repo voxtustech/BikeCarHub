@@ -1,0 +1,432 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Royal Enfield vs Jawa – Best Cruiser Bike Comparison (2025) | BikeCarHub";
+}
+@section MetaTags {
+    <meta name="keywords" content="Royal Enfield vs Jawa, cruiser bike comparison India, Royal Enfield Classic 350 vs Jawa 42, best cruiser bikes in India, Royal Enfield vs Jawa 2025, Jawa vs Meteor 350, Jawa bike comparison, cruiser bikes under 2 lakh"/>
+    <meta name="description" content="Compare Royal Enfield vs Jawa cruiser bikes in 2025. Find the best for long rides, city use, comfort, mileage, features, and pricing with BikeCarHub."/>
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p> *@
+
+
+
+                <p>Written by: BikeCarHub Editorial Team</p>
+                <p>Published on: 17th June 2025</p>
+                <div class="div-line"></div>
+
+                    <h3 class="subheading">Cruiser Bikes - The Indian Biker's New Favourite</h3>
+    <p>Cruiser bikes have captured the hearts of Indian riders who love relaxed, long-distance riding with a strong road presence. Among the top players in this segment are <span class="font-weight-700">Royal Enfield</span> and <span class="font-weight-700">Jawa</span>—two iconic brands with a rich heritage and a passionate following. Both brands offer stylish, powerful, and road-trip-ready motorcycles that attract both young and mature riders.</p>
+                <p>This detailed comparison by<a class="for-link" asp-controller="Home" asp-action="Index"><span class="font-weight-700">BikeCarHub</span></a> aims to help Indian bike enthusiasts choose the right cruiser by analysing Royal Enfield and Jawa's most popular models based on <span class="font-weight-700">performance, comfort, pricing, mileage, and real-world usability.</span></p>
+    
+    <div class="div-line"></div>
+    
+    <h3 class="subheading">Brand Legacy - Royal Enfield vs Jawa</h3>
+
+                <p><span class="font-weight-700"> Royal Enfield: The Timeless Classic</span></p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/revsjawa/royal enfield classic 350.webp" alt="bikecarhubRE350" title="bikecarhubtRE350" /></div>
+                </div>
+
+
+    <p>Royal Enfield has been India's pride for decades, offering motorcycles known for their signature thump and retro charm. Over the years, Royal Enfield has evolved with modern technology while retaining its old-school appeal. The company has built an enormous fan base not just in India but globally.</p>
+
+                <p><span class="font-weight-700">Jawa: The Legendary Comeback</span></p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/revsjawa/jawa standard.webp" alt="bikecarhubjawa" title="bikecarhubtvsjawa" /></div>
+                </div>
+
+
+    <p>Jawa motorcycles made a historic comeback in India with refreshed designs while preserving their classic DNA. Jawa offers bikes that are <span class="font-weight-700">light, stylish, and slightly more modern in feel,</span> catering to those who love performance combined with timeless design.</p>
+    
+    <div class="div-line"></div>
+    
+    <h3 class="subheading">Model Comparison - Top Cruiser Bikes from Both Brands</h3>
+    <p>Here's a quick look at some of the most popular cruiser bikes from Royal Enfield and Jawa:</p>
+      
+    <div style="overflow-x: auto;">
+    <table class="comparison-table-content">
+            <thead>
+        <tr>
+         <th class="text-center">Brand</th>
+         <th class="text-center">Popular Models</th>
+        </tr>
+            </thead>
+         <tr class="compare-head-text">
+            <td>Royal Enfield</td>
+            <td>Classic 350, Meteor 350, Hunter 350</td>
+        </tr>
+        <tr>
+            <td>Jawa</td>
+            <td>Jawa 42, Jawa Standard, Jawa Perak</td>
+        </tr>
+    </table>
+    
+    <div class="div-line"></div>
+    
+    <h3 class="subheading">Detailed Feature Comparison: Royal Enfield vs Jawa (2025)</h3>
+    
+    <h5 class="subheading">1. Engine Performance and Power Delivery</h5>
+    <div style="overflow-x: auto;">
+    <table class="comparison-table-content">
+        <thead>
+            <tr>
+            <th class="text-center">Bike Model</th>
+            <th class="text-center">Engine Capacity</th>
+            <th class="text-center">Power Output</th>
+            <th class="text-center">Torque</th>
+            </tr>
+          </thead>
+     <tr class="compare-head-text">
+            <td>Royal Enfield Classic 350</td>
+            <td>349 cc</td>
+            <td>20.2 bhp@6100 rpm</td>
+            <td>27 Nm@4000 rpm</td>
+        </tr>
+        <tr>
+            <td>Jawa Standard</td>
+            <td>293 cc</td>
+            <td>27.33 bhp@6800 rpm</td>
+            <td>26.84 Nm@5000 rpm</td>
+        </tr>
+     <tr class="compare-head-text">
+            <td>Royal Enfield Meteor 350</td>
+            <td>349 cc</td>
+            <td>20.2 bhp@6100 rpm</td>
+            <td>27 Nm@4000 rpm</td>
+        </tr>
+        <tr>
+            <td>Jawa 42</td>
+            <td>294.72 cc</td>
+            <td>27.32 bhp@6800 rpm</td>
+            <td>26.84 Nm@5000 rpm</td>
+        </tr>
+    </table>
+    </div>
+    <p>Royal Enfield's bikes focus on <span class="font-weight-700">smooth torque delivery</span> and relaxed cruising, whereas Jawa bikes provide <span class="font-weight-700">better peak power</span> with a lighter and sportier feel.</p>
+    
+    <h5 class="subheading">2. Comfort and Ride Quality</h5>
+    <p>Royal Enfield bikes like the Meteor 350 are <span class="font-weight-700">built for long highway rides,</span> offering plush seating and upright handlebars. Jawa bikes provide a <span class="font-weight-700">sporty seating position</span> but can feel slightly stiff over rough roads.</p>
+    <p>Royal Enfield typically wins in long-distance comfort, while Jawa bikes are more suitable for city riders who occasionally go on highway trips.</p>
+    
+    <h5 class="subheading">3. Mileage and Fuel Efficiency</h5>
+    <div style="overflow-x: auto;">
+   <table class="comparison-table-content">
+       <thead>
+        <tr>
+        <th class="text-center">Bike Model</th>
+        <th class="text-center">Mileage (Approx.)</th>
+        </tr>
+        </thead>
+     <tr class="compare-head-text">
+            <td>Royal Enfield Classic 350</td>
+            <td>41.55 kmpl</td>
+        </tr>
+        <tr>
+            <td>Royal Enfield Meteor 350</td>
+            <td>41.88 kmpl</td>
+        </tr>
+     <tr class="compare-head-text">
+            <td>Jawa Standard</td>
+            <td>32 kmpl</td>
+        </tr>
+        <tr>
+            <td>Jawa 42</td>
+            <td>33 kmpl</td>
+        </tr>
+    </table>
+    </div>
+    <p>Royal Enfield offers slightly better fuel efficiency thanks to its relaxed engine setup. Jawa bikes, while more powerful, consume a bit more fuel in city conditions.</p>
+    
+    <h5 class="subheading">4. Design, Looks, and Road Presence</h5>
+    <p>Royal Enfield's Classic 350 offers a <span class="font-weight-700">timeless retro design</span> that turns heads wherever it goes. The Meteor 350 brings a modern cruiser feel, while the Hunter 350 offers a blend of street and cruiser vibes.</p>
+    <p>On the other hand, Jawa impresses with its <span class="font-weight-700">sleek and sporty design</span> combined with classic touches like rounded headlamps and slim fuel tanks. The Jawa Perak, with its factory bobber styling, attracts riders looking for something bold and different.</p>
+    
+    <h5 class="subheading">5. Features and Technology</h5>
+    <div style="overflow-x: auto;">
+    <table class="comparison-table-content">
+        <thead>
+            <tr>
+             <th class="text-center">Feature</th>
+             <th class="text-center">Royal Enfield</th>
+             <th class="text-center">Jawa</th>
+            </tr>
+        </thead>
+                            <tr class="compare-head-text">
+            <td><span class="font-weight-600">Digital Instrumentation</span></td>
+            <td>Available (Meteor 350)</td>
+            <td>Available (Basic)</td>
+        </tr>
+        <tr>
+            <td><span class="font-weight-600">Tripper Navigation</span></td>
+            <td>Available (Meteor 350)</td>
+            <td>Not Available</td>
+        </tr>
+                            <tr class="compare-head-text">
+            <td><span class="font-weight-600">Dual-Channel ABS</span></td>
+            <td>Standard</td>
+            <td>Standard</td>
+        </tr>
+        <tr>
+            <td><span class="font-weight-600">Bluetooth Connectivity</span></td>
+            <td>Optional (Meteor 350)</td>
+            <td>Not Available</td>
+        </tr>
+    </table>
+    </div>
+    <p>Royal Enfield offers <span class="font-weight-700">more advanced tech options</span> like Tripper navigation and Bluetooth connectivity, especially in the Meteor series. Jawa bikes focus more on mechanical simplicity with retro charm.</p>
+    
+    <h5 class="subheading">6. Service Network and Maintenance Costs</h5>
+    <p>Royal Enfield has a <span class="font-weight-700">larger service network</span> across India, making servicing more convenient, even in remote areas. Jawa's service reach has improved but is still catching up.</p>
+    <p>In terms of maintenance costs, both brands are quite similar, but spare parts for Royal Enfield are usually more readily available.</p>
+
+     <h5 class="subheading">7. Pricing and Value for Money</h5>
+         <div style="overflow-x: auto;">
+         <table class="comparison-table-content">
+    <thead>
+        <tr>
+          <th class="text-center">Bike Model</th>
+          <th class="text-center">Ex-Showroom Price</th>
+        </tr>
+        <tr>
+            <td><a class="for-link" asp-controller="RoyalEnfield" asp-action="REClassic350">Royal Enfield Classic 350</a></td>
+            <td>₹1,95,300 - ₹2,32,645</td>
+        </tr>
+        <tr>
+            <td><a class="for-link" asp-controller="RoyalEnfield" asp-action="REMeteor350">Royal Enfield Meteor 350</a></td>
+            <td>₹2,08,270 - ₹2,32,545</td>
+        </tr>
+        <tr>
+            <td><a class="for-link" asp-controller="Jawa" asp-action="JAWA350">Jawa Standard</a></td>
+            <td>₹1,67,433</td>
+        </tr>
+        <tr>
+            <td><a class="for-link" asp-controller="JAWA" asp-action="JAWA42">Jawa 42</a></td>
+            <td>₹1.73 - ₹1.98 lakh</td>
+        </tr>
+    </thead>
+    </table>
+    <p>Both brands offer competitive pricing. Jawa's starting prices are slightly lower, but <span class="font-weight-700">Royal Enfield's premium features</span> and larger service network offer better value for some riders.</p>
+    
+    <div class="div-line"></div>
+    
+    <h3 class="subheading">Pros and Cons - Royal Enfield vs Jawa</h3>
+        <div>
+            <h5 class="subheading">Royal Enfield: Pros and Cons</h5>
+                            <div class="row m-b20">
+                                <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/revsjawa/meteor-350.webp" alt="bikecarhubRE" title="bikecarhubRE" /></div>
+                            </div>
+
+
+            <p><span class="font-weight-700">Pros:</span></p>
+            <ul>
+                <li>Better long-distance comfort</li>
+                <li>Strong road presence</li>
+                <li>Wider service network</li>
+                <li>Tripper navigation and tech options</li>
+            </ul>
+            <p><span class="font-weight-700">Cons:</span></p>
+            <ul>
+                <li>Heavier bikes</li>
+                <li>Slightly lower top-end power</li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="subheading">Jawa: Pros and Cons</h5>
+                            <div class="row m-b20">
+                                <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/june/revsjawa/jawa42.webp" alt="bikecarhubjawa" title="bikecarhubjawa" /></div>
+                            </div>
+
+
+            <p><span class="font-weight-700">Pros:</span></p>
+            <ul>
+                <li>Lighter and sportier feel</li>
+                <li>Sleek, stylish design</li>
+                <li>Good city and highway balance</li>
+            </ul>
+            <p><span class="font-weight-700">Cons:</span></p>
+            <ul>
+                <li>Smaller service network</li>
+                <li>Slightly lower mileage</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="div-line"></div>
+    
+    <h3 class="subheading">Expert Recommendation: Which Cruiser Bike Should You Buy?</h3>
+    <p>For riders who prefer <span class="font-weight-700">long-distance highway rides with premium comfort, Royal Enfield is the better choice.</span> The Meteor 350, with Tripper navigation, offers modern features and a relaxed ride.</p>
+    <p>For city riders and those who prefer a <span class="font-weight-700">sporty cruiser with a lightweight design, Jawa bikes like the Jawa 42</span> are more suitable.</p>
+    <p>Both brands offer excellent options—it ultimately comes down to personal riding style and comfort preferences.</p>
+    
+    <div class="div-line"></div>
+    
+    <h3 class="subheading">Final Verdict by<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></h3>
+    <p>Both <span class="font-weight-700">Royal Enfield and Jawa offer fantastic cruiser bikes</span> that appeal to different types of riders. Royal Enfield focuses on relaxed long-distance touring, while Jawa brings a sporty, city-friendly riding experience.</p>
+    <p>Before making a final decision, it is always a good idea to <span class="font-weight-700">take a test ride, compare comfort, and evaluate the service network in your city.</span> Both bikes bring style, power, and cruiser appeal to Indian roads.</p>
+    
+    <div class="div-line"></div>
+    
+    <h3 class="subheading">FAQs - Royal Enfield vs Jawa Cruiser Bikes (2025)</h3>
+    
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                    Which is better for long rides - Royal Enfield or Jawa?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Royal Enfield offers more comfort and stability for long rides, especially on highways.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    Which cruiser has better mileage?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Royal Enfield bikes generally offer slightly better mileage compared to Jawa cruisers.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    Is Jawa lighter than Royal Enfield?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, Jawa bikes are lighter and more agile, making them easier to handle in city traffic.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    Does Jawa offer Bluetooth and navigation?
+                </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    No, Jawa bikes currently do not offer Bluetooth or built-in navigation options.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                    Which bike is better for city rides?
+                </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Jawa bikes are better suited for city rides due to their lighter weight and sportier feel.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                    Are Royal Enfield bikes hard to maintain?
+                </button>
+            </h2>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    No, Royal Enfield bikes are easy to maintain with widespread service centers across India.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                    Which cruiser bike is more affordable?
+                </button>
+            </h2>
+            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Jawa's base models are slightly more affordable compared to Royal Enfield's entry-level cruisers.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                    Does Royal Enfield offer more variants?
+                </button>
+            </h2>
+            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, Royal Enfield offers a wider range of cruiser bikes with different styles and price points.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                    Which bike has better resale value?
+                </button>
+            </h2>
+            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Royal Enfield bikes generally hold better resale value in the used bike market.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+                    Which cruiser is more suitable for short riders?
+                </button>
+            </h2>
+            <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Jawa bikes are better for shorter riders due to their lower seat height and lighter frame.
+                </div>
+            </div>
+        </div>
+
+
+            </div>
+        </div>
+    </div>
+            @await Html.PartialAsync("_AllBrandComponent")
+    </div>
+    </div>
+
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

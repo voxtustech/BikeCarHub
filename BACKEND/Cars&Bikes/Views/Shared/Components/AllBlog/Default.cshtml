@@ -1,0 +1,68 @@
+﻿@model List<Cars_Bikes.Models.Blogs>
+
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+
+<div class="blogs-section">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 blog-head-box">
+            <div class="blog-head">
+                <h1><a asp-controller="Blogs" asp-action="Index">Blogs</a></h1>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-10 blogs-section">
+            @* <button class="scroll-button left" onclick="scrollLeft()">&#9664;</button> *@
+            <button class="scroll-button left" onclick="scrollContainer('blogsContainer', -1)">&#9664;</button>
+            <div class="blogs-container" id="blogsContainer">
+                @foreach (var blog in Model)
+                {
+                    <div class="blogs-item">
+                        <section>
+                            <a href="/@blog.URL" style="text-decoration:none">
+                                <div class="blog-img">
+                                    <img src="@blog.ImageURL" alt="@blog.BlogHeading" loading="lazy" title="@blog.BlogHeading" />
+                                </div>
+                                <div class="upcoming-bike-name">@Truncate(blog.BlogHeading, 56)</div>
+                            </a>
+                        </section>
+                    </div>
+                }
+            </div>
+            <button class="scroll-button right" onclick="scrollContainer('blogsContainer', 1)">&#9654;</button>
+            @* <button class="scroll-button right" onclick="scrollRight()">&#9654;</button> *@
+        </div>
+    </div>
+</div>
+@*
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById('blogsContainer');
+        const itemWidth = container.querySelector('.blogs-item').offsetWidth;
+        const scrollSpeed = 2; 
+        let scrollPosition = 0;
+        let isManualScrolling = false;
+        let autoScrollTimeout;
+        window.scrollLeft = function() {
+            isManualScrolling = true;
+            container.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+        }
+
+   
+        window.scrollRight = function() {
+            isManualScrolling = true;
+            container.scrollBy({ left: itemWidth, behavior: 'smooth' });
+        }
+
+        // Attach event listeners to manual scroll buttons
+        document.querySelector('.scroll-button.left').addEventListener('click', window.scrollLeft);
+        document.querySelector('.scroll-button.right').addEventListener('click', window.scrollRight);
+    });
+</script>
+*@

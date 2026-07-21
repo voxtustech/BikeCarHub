@@ -1,0 +1,609 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Kia Carens Clavis EV Price, Variants, Features, Specs";
+}
+@section MetaTags {
+    <meta name="keywords" content="Kia Carens Clavis EV, Carens Clavis EV variants, Carens Clavis EV price in India, Kia EV 7-seater SUV, Kia electric SUV features, Clavis EV 490 km range, Kia EV fast charging, V2L electric car Kia, Kia ADAS EV India" />
+    <meta name="description" content="Explore the all-new Kia Carens Clavis EV. Full specs, features, real-world range, prices, and variant comparison. The perfect 7-seater electric SUV is here." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 17th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                
+                <p>In this article, <span class="font-weight-700">BikeCarHub</span> gives you a detailed breakdown of this exciting new electric SUV, including <span class="font-weight-700">all 4 variants, real-world range</span>, detailed <span class="font-weight-700">feature comparisons</span>, and why the <span class="font-weight-700">Carens Clavis EV</span> might be the most complete family EV on the Indian market.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Carens Clavis EV Variants & Pricing</h2>
+                <p>Here's a quick look at the <span class="font-weight-700">4 available variants</span> along with their <span class="font-weight-700">ex-showroom prices</span>:</p>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Variant</th>
+                                <th class="text-center">Battery Pack</th>
+                                <th class="text-center">Driving Range (ARAI)</th>
+                                <th class="text-center">Price (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">HTK+</span></td>
+                                <td>42 kWh</td>
+                                <td>404 km</td>
+                                <td><span class="font-weight-700">₹17,99,000</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">HTX</span></td>
+                                <td>42 kWh</td>
+                                <td>404 km</td>
+                                <td><span class="font-weight-700">₹20,49,000</span></td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">HTX ER</span></td>
+                                <td>51.4 kWh</td>
+                                <td>490 km</td>
+                                <td><span class="font-weight-700">₹22,49,000</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">HTX+ ER</span></td>
+                                <td>51.4 kWh</td>
+                                <td>490 km</td>
+                                <td><span class="font-weight-700">₹24,49,000</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>"ER" stands for <span class="font-weight-700">Extended Range</span> — ideal for long-distance travel without range anxiety.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Specifications Overview</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">42 kWh Models</th>
+                                <th class="text-center">51.4 kWh Models (ER)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">Battery Type</span></td>
+                                <td>Lithium-ion (NMC)</td>
+                                <td>Lithium-ion (NMC)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">Max Power</span></td>
+                                <td>99 kW (134 hp)</td>
+                                <td>126 kW (169 hp)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">Max Torque</span></td>
+                                <td>255 Nm</td>
+                                <td>255 Nm</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">Range (ARAI MIDC)</span></td>
+                                <td>404 km</td>
+                                <td>490 km</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">AC Fast Charging (11 kW)</span></td>
+                                <td>4 hrs</td>
+                                <td>4 hrs 45 mins</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">DC Fast Charging (100 kW)</span></td>
+                                <td>10%–80% in 39 mins</td>
+                                <td>10%–80% in 39 mins</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">Seating</span></td>
+                                <td>7-Seater</td>
+                                <td>7-Seater</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">Tyres</span></td>
+                                <td>215/60 R16</td>
+                                <td>215/55 R17</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">Suspension</span></td>
+                                <td>McPherson Strut / CTBA</td>
+                                <td>McPherson Strut / CTBA</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">Brakes</span></td>
+                                <td>All-Wheel Disc Brakes</td>
+                                <td>All-Wheel Disc Brakes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">What Makes the Carens Clavis EV Special?</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/kia carens clavis/08-d.webp"  alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p>Kia's vision with the Carens Clavis EV is clear — build an <span class="font-weight-700">EV that's not just about green driving</span>, but also <span class="font-weight-700">comfort, safety, technology, and practicality</span> for Indian families.</p>
+
+                <p><span class="font-weight-700">Key Highlights:</span></p>
+                <ul>
+                    <li><span class="font-weight-700">Star Map, LED DRLs and Tail Lamps</span> — Signature Kia lighting</li>
+                    <li> <span class="font-weight-700">Dual Pane Panoramic Sunroof</span> — One of the widest in the segment</li>
+                    <li> <span class="font-weight-700">Frunk (25L)</span> — Bonus storage space up front</li>
+                    <li> <span class="font-weight-700">Digital Tiger Nose Grille</span> — Aerodynamic and futuristic</li>
+                    <li> <span class="font-weight-700">Active Air Flaps (AAF)</span> — For thermal efficiency</li>
+                    <li> <span class="font-weight-700">Vehicle-to-Load (V2L)</span> — Power external devices, inside or out</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Variant-Wise Feature Breakdown</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/kia carens clavis/adas level 2.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+
+                <h3 class="subheading"><span class="variant-name">⭐ HTK+ (Base Variant — ₹17.99 Lakh)</span></h3>
+                <p><span class="font-weight-700">Key Features:</span></p>
+                <ul>
+                    <li>12.25" HD Touchscreen + Digital Instrument Cluster</li>
+                    <li>Regen Braking with i-Pedal & Paddle Shifters</li>
+                    <li>Cruise Control with Manual Speed Limit Assist</li>
+                    <li>Smart Power Outlet, Rear View Camera, USB-C Ports</li>
+                    <li>Premium Fabric & Semi-Leatherette Seats</li>
+                    <li>16" Gloss Black Aero Alloy Wheels</li>
+                    <li>Black & Beige Two-Tone Interior</li>
+                </ul>
+
+                <h3 class="subheading"><span class="variant-name">⭐ HTX (₹20.49 Lakh)</span></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/kia carens clavis/charging image.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p><span class="font-weight-700">Additional Features Over HTK+:</span></p>
+                <ul>
+                    <li>64 Color Ambient Lighting</li>
+                    <li>Dual Tone Leatherette Upholstery (Triton Navy & Beige)</li>
+                    <li>Auto Light Control, Solar Glass</li>
+                    <li>Smart Pure Air Purifier</li>
+                    <li>Level 2 ADAS with 20 Autonomous Features</li>
+                    <li>Dual-Pane Panoramic Sunroof</li>
+                    <li>All Auto Windows with Voice Command</li>
+                    <li>1st & 2nd Row LED Lamps</li>
+                </ul>
+
+                <h3 class="subheading"><span class="variant-name">⭐ HTX ER (Extended Range — ₹22.49 Lakh)</span></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/kia carens clavis/digital tiger face.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p><span class="font-weight-700">Everything in HTX, Plus:</span></p>
+                <ul>
+                    <li>51.4 kWh battery (490 km range)</li>
+                    <li>17" Crystal Cut Aero Alloy Wheels</li>
+                    <li>Electric One-Touch Tumble 2nd Row Seats</li>
+                    <li>Advanced Air Diffusion with Roof-Flushed AC Vents</li>
+                    <li>Smart Key with Motion Sensor</li>
+                    <li>Full 3rd Row Folding & Reclining Seats</li>
+                    <li>Rear Wiper, Washer, Defogger</li>
+                </ul>
+
+                <h3 class="subheading"><span class="variant-name">⭐ HTX+ ER (Top Variant — ₹24.49 Lakh)</span></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/kia carens clavis/dual tone aero alloy wheels.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p><span class="font-weight-700">All Features of HTX ER, Plus:</span></p>
+                <ul>
+                    <li>BOSE Premium Sound System (8 Speakers)</li>
+                    <li>V2L — External & Internal</li>
+                    <li>Front Ventilated Seats</li>
+                    <li>4-Way Power Driver Seat</li>
+                    <li>Rain Sensing Wipers</li>
+                    <li>Rear Door Logo Projection Lamps</li>
+                    <li>Retractable Seat Back Table for 2nd Row</li>
+                    <li>Walk-in Lever for Passenger Seat Slide</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Dimensions of Kia Carens Clavis EV</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/kia carens clavis/Header.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p>The Carens Clavis EV is designed to offer a spacious, comfortable ride with compact urban maneuverability. Here are the official dimensions:</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Parameter</th>
+                                <th class="text-center">Measurement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Length</td>
+                                <td>4,550 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Width</td>
+                                <td>1,800 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Height</td>
+                                <td>1,730 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Wheelbase</td>
+                                <td>2,780 mm</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Seating Capacity</td>
+                                <td>7-Seater</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Height may vary slightly based on variant and optional accessories like roof rails.</p>
+                <p>These dimensions ensure generous cabin space across all three rows while keeping the vehicle agile for Indian traffic conditions.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Available Colour Options</h2>
+                <p>The Carens Clavis EV is offered in <span class="font-weight-700">six attractive body colours</span> that blend style with a bold road presence:</p>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Colour Name</th>
+                                <th class="text-center">Finish</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Glacier White Pearl</td>
+                                <td>Glossy</td>
+                            </tr>
+                            <tr>
+                                <td>Gravity Gray</td>
+                                <td>Glossy</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Aurora Black Pearl</td>
+                                <td>Glossy</td>
+                            </tr>
+                            <tr>
+                                <td>Imperial Blue</td>
+                                <td>Glossy</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Pewter Olive</td>
+                                <td>Glossy</td>
+                            </tr>
+                            <tr>
+                                <td>Ivory Silver Matte</td>
+                                <td>Matte Finish</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>These paint options enhance the premium appeal of the vehicle and allow buyers to match the EV's futuristic vibes with their personal taste.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Safety Comes Standard — Across All Variants</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/kia carens clavis/mfr led headlamps.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p>Kia hasn't skimped on safety. All trims include:</p>
+                <h3 class="subheading">Standard Safety Features</h3>
+                <ul>
+                    <li>6 Airbags</li>
+                    <li>ABS,EBD,ESC,HAC</li>
+                    <li>Vehicle Stability Management</li>
+                    <li>All-Wheel Disc Brakes</li>
+                    <li>Highline TPMS</li>
+                    <li>Rear Parking Sensors</li>
+                    <li>ISOFIX Child Seat Mounts</li>
+                    <li>Rear Occupant Alert</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">ADAS: Autonomous Features (HTX & Above)</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"> <img src="~/images/blogs/2025/july/kia carens clavis/panoramic sunroof.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <p>Kia brings <span class="font-weight-700">Level 2 ADAS</span> to the Carens Clavis EV:</p>
+                <ul>
+                    <li>Forward Collision Avoidance (Car, Pedestrian, Cycle)</li>
+                    <li>Junction Turning Assist</li>
+                    <li>Blind Spot Monitoring & Avoidance</li>
+                    <li>Lane Keep Assist & Lane Departure Warning</li>
+                    <li>High Beam Assist & Smart Cruise Control</li>
+                    <li>360-Degree Camera with Blind View Monitor</li>
+                    <li>Rear Cross Traffic Collision Warning & Avoidance</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Technology & Infotainment</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/kia carens clavis/star map led.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">HTK+</th>
+                                <th class="text-center">HTX</th>
+                                <th class="text-center">HTX ER</th>
+                                <th class="text-center">HTX+ ER</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">12.25" Touchscreen Displa</span></td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">Kia Connect & OTA Updates</span></td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">BOSE Premium Audio</span></td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-weight-700">Ambient Lighting</span></td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td><span class="font-weight-700">Wireless Android Auto / Apple CarPlay</span></td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Comfort & Seating Flexibility</h2>
+                <p>All variants offer:</p>
+                <ul>
+                    <li><span class="font-weight-700">7-Seater Configuration</span></li>
+                    <li>2nd Row Slide, Recline, Tumble Functions</li>
+                    <li>Full Flat Folding 3rd Row</li>
+                    <li>Ventilated Front Seats (HTX+ ER)</li>
+                    <li>Power Adjustable Driver Seat (HTX+ ER)</li>
+                </ul>
+                <p><span class="font-weight-700">BikeCarHub</span> applauds Kia for preserving practicality while adding premium EV sophistication.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">V2L — Power On-the-Go (HTX+ ER)</h2>
+                <p>Imagine plugging your laptop, camping gear, or coffee machine directly into your EV! The <span class="font-weight-700">Vehicle-to-Load</span> feature lets you use the Clavis as a mobile power bank. Perfect for road trips, emergencies, or outdoor adventures.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Maintenance, Warranty & Kia After-Sales</h2>
+                <ul>
+                    <li><span class="font-weight-700">8-Year / 1,60,000 km Battery Warranty</span></li>
+                    <li><span class="font-weight-700">3-Year Unlimited km Vehicle Warranty</span></li>
+                    <li>Optional 5-Year Extended Warranty</li>
+                    <li>24/7 Roadside Assistance for 3 Years</li>
+                    <li>IoT-enabled Workshop Support</li>
+                    <li>Digital e-Manual & Owner App Support</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Connected Car Features — Kia Connect</h2>
+                <p>Kia Connect (3 years free) includes:</p>
+                <ul>
+                    <li>Vehicle Health Monitoring</li>
+                    <li>Remote AC Start</li>
+                    <li>EV Battery Status</li>
+                    <li>Smartwatch App & Alexa Integration</li>
+                    <li>Live Location & Geo-Fencing</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Thoughts by BikeCarHub</h2>
+                <p>Kia has combined futuristic design, robust range, family comfort, and next-gen safety into a well-priced 7-seater EV. Whether it's the spaciousness, feature richness, or the peace of mind from Kia's extensive support — the <span class="font-weight-700">Carens Clavis EV</span> stands out as one of the most practical and premium electric vehicles currently available in India.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs About Kia Carens Clavis EV</h2>
+
+                <div class="accordion" id="faqCarensClavis">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Is the Carens Clavis EV a 7-seater?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqCarensClavis">
+                            <div class="accordion-body">
+                                Yes, all variants come with a spacious 7-seater layout.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. What is the range of the Carens Clavis EV?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqCarensClavis">
+                            <div class="accordion-body">
+                                404 km with 42 kWh battery, 490 km with 51.4 kWh Extended Range.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Which variant of the Carens Clavis EV is best?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqCarensClavis">
+                            <div class="accordion-body">
+                                If range and features are your priority, go for the <span class="font-weight-700">HTX+ ER</span>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Does the Carens Clavis EV support fast charging?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqCarensClavis">
+                            <div class="accordion-body">
+                                Yes, it charges from 10% to 80% in 39 minutes with a 100kW DC charger.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Is Kia Connect free?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqCarensClavis">
+                            <div class="accordion-body">
+                                Yes, Kia Connect comes free for the first 3 years.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Does it have ADAS features?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqCarensClavis">
+                            <div class="accordion-body">
+                                Yes, starting from HTX, all upper variants include Level 2 ADAS.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. What colors are available?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqCarensClavis">
+                            <div class="accordion-body">
+                                6 colors including Glacier White Pearl, Aurora Black Pearl, and Pewter Olive.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Does it have a sunroof?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqCarensClavis">
+                            <div class="accordion-body">
+                                Yes, the HTX variant and above come with a Dual Pane Panoramic Sunroof.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Are there ventilated seats?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqCarensClavis">
+                            <div class="accordion-body">
+                                Yes, available in the top HTX+ ER variant.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Is the Carens Clavis EV good for long drives?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqCarensClavis">
+                            <div class="accordion-body">
+                                With up to 490 km of range, it's excellent for inter-city travel.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-line"></div>
+                <p>For more EV guides and updates, visit <a href="https://www.bikecarhub.com" class="for-link">BikeCarHub.com</a></p>
+       
+
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+              
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

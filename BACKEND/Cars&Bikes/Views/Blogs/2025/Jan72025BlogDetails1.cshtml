@@ -1,0 +1,117 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Honda QC1: Electric Scooter Revolutionizing Urban Rides";
+}
+@section MetaTags{
+        <meta name="keywords" content="Honda QC1 electric, electric scooter, eco-friendly two-wheeler, Honda QC1 launch, urban mobility, green commuting, sustainable ride, zero emissions, electric bike, Honda scooter, QC1 features, lithium-ion battery, electric vehicle, city commuting, smart scooter" />
+    <meta name="description" content="Discover the Honda QC1 electric scooter: zero emissions, 100 km range, quick charge, smart features, and sustainable urban commuting." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+<<<<<<< HEAD
+             <p>The all-new Honda QC1 electric scooter is here to redefine urban commuting. With a focus on sustainability and modern design, the QC1 offers a glimpse into the future of two-wheeled mobility</p>
+=======
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                
+
+            <p>The all-new Honda QC1 electric scooter is here to redefine urban commuting. With a focus on sustainability and modern design, the QC1 offers a glimpse into the future of two-wheeled mobility</p>
+>>>>>>> 58516d0e154e5dbeb24213112ad681b17ae1351a
+            <p>Powered by a robust lithium-ion battery, the Honda QC1 provides a range of up to 100 kilometers on a single charge, making it perfect for daily city commutes. The scooter’s quick-charging capability ensures minimal downtime, allowing riders to power up in just under 3 hours.</p>      
+            <p>The QC1's sleek and ergonomic design enhances both aesthetics and rider comfort. Its lightweight frame makes navigation through busy city streets a breeze. Equipped with advanced features like a digital display, smartphone connectivity, and GPS tracking, the QC1 ensures a seamless and smart riding experience.</p>
+            <p>Safety is a priority with features such as anti-lock braking systems (ABS), LED lights for visibility, and regenerative braking technology to enhance efficiency. Honda has also prioritized affordability with cost-effective maintenance and energy-efficient performance.</p>
+            <p>Whether you're an eco-conscious commuter or looking for a modern, practical ride, the Honda QC1 is set to lead the way in electric mobility. Join the green revolution and experience the joy of riding sustainably.</p>
+<<<<<<< HEAD
+            <div class="row m-b20">
+                <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2025/jan/hondaqc1electricscooterthefutureofgreenmobility/rear.webp" alt="RearView" title="RearView" /></div>
+                <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2025/jan/hondaqc1electricscooterthefutureofgreenmobility/right rear.webp" alt="RightRearView" title="RightRearView" /></div>
+            </div>
+            <h3 class="subheading">Key Specifications of Honda QC1</h3>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table-content">
+                    <thead>
+                       <tr>
+                            <th class="text-center">Feature</th>
+                            <th class="text-center">Details</th>
+                       </tr>
+=======
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2025/jan/hondaqc1electricscooterthefutureofgreenmobility/rear.webp" alt="RearView" title="RearView" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2025/jan/hondaqc1electricscooterthefutureofgreenmobility/right rear.webp" alt="RightRearView" title="RightRearView" /></div>
+                </div>
+            <h3 class="subheading">Key Specifications of Honda QC1</h3>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+
+                            <tr>
+                    <th class="text-center">Feature</th>
+                    <th class="text-center">Details</th>
+                </tr>
+>>>>>>> 58516d0e154e5dbeb24213112ad681b17ae1351a
+                </thead>
+                <tbody>
+                 <tr class="compare-head-text">
+                    <td>Charging Time (0-80%)</td>
+                    <td>4 Hr 30 Min</td>
+                </tr>
+                <tr>
+                    <td>Range</td>
+                    <td>80 km/charge</td>
+                </tr>
+                     <tr class="compare-head-text">
+                    <td>Battery Capacity</td>
+                    <td>1.5 Kwh</td>
+                </tr>
+                <tr>
+                    <td>Kerb Weight</td>
+                    <td>89.5 kg</td>
+                </tr>
+                            <tr class="compare-head-text">
+                    <td>Top Speed</td>
+                    <td>50 km/Hr</td>
+                </tr>
+                <tr>
+                    <td>Battery Warranty</td>
+                    <td>5 Years or 50,000 Km</td>
+                </tr>
+               </tbody>
+            </table>
+
+            
+        </div>
+            
+        </div>
+       </div>
+    </div>
+   
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

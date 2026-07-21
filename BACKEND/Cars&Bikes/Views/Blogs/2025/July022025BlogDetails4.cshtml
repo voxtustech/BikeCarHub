@@ -1,0 +1,635 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Maruti Suzuki vs Tata Motors: Full 2025 Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="Maruti Suzuki vs Tata Motors, Maruti vs Tata comparison 2025, Tata safety rating vs Maruti, Maruti fuel efficiency 2025, Tata EV lineup 2025, Best car brand in India 2025, Maruti service network, Tata electric cars, Maruti hybrid cars, Tata vs Maruti resale value, Maruti Suzuki price range, Tata Motors price range, Which car brand is better Maruti or Tata" />
+    <meta name="description" content="Compare Maruti Suzuki vs Tata Motors in 2025. Check fuel efficiency, safety ratings, EV options, pricing, and decide which brand offers the best value for your needs" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 2th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Brand Overview</h2>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/maruti suzuki vs tata motors/alto k10_688x360_red_new (1).webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Maruti Suzuki</th>
+                                <th class="text-center">Tata Motors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>India's largest carmaker, celebrated for fuel-efficient, budget-friendly vehicles</li>
+                                        <li>Extensive service network through ARENA and NEXA showrooms—quick service and low maintenance</li>
+                                        <li>Strong resale value thanks to reliability and brand trust</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Rising star with focus on safety, design, and EV innovation</li>
+                                        <li>Multiple models rated 4-5 stars by Global NCAP and Bharat NCAP</li>
+                                        <li>Aggressive electric and hybrid lineup under Tata.ev and Ziptron technology</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/maruti suzuki vs tata motors/amaze (1).webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">2025 Comparison Table</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Feature</th>
+                                <th class="text-center">Maruti Suzuki</th>
+                                <th class="text-center">Tata Motors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Price Range</td>
+                                <td>₹4.5–₹26 L ex-showroom (hatchbacks to SUVs) approx.</td>
+                                <td>₹5–₹28 L ex-showroom (hatchbacks to premium EVs/SUVs) approx.</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel Efficiency</td>
+                                <td>Excellent: Swift up to 25.75 km/l, Dzire 25.7 km/l, CNG Swift 32.85 km/kg</td>
+                                <td>Good: 14–20 km/l in ICE; EVs have zero fuel cost</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Safety</td>
+                                <td>Improving—dual airbags, ABS, ESC on top trims</td>
+                                <td>Superior: Nexon, Punch, Curvv EV/ICE all rated 5-star GN / Bharat NCAP</td>
+                            </tr>
+                            <tr>
+                                <td>Build Quality</td>
+                                <td>Lightweight Heartect platform; average crash avoidance potential</td>
+                                <td>Rigid body with 5-star crash architecture across many vehicles</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Design</td>
+                                <td>Practical, no-nonsense</td>
+                                <td>Bold, youthful, futuristic</td>
+                            </tr>
+                            <tr>
+                                <td>Technology</td>
+                                <td>Functional; mild-hybrid, AGS, basic ADAS</td>
+                                <td>Advanced: digital clusters, ventilated seats, 360° cam, connected EV tech</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Service Network</td>
+                                <td>Widest in India—quick turnaround, low spare costs</td>
+                                <td>Growing network—still catching up, varies regionally</td>
+                            </tr>
+                            <tr>
+                                <td>EV/Hybrid Portfolio</td>
+                                <td>Grand Vitara Hybrid, Swift S-CNG, Fronx mild-hybrid</td>
+                                <td>Nexon EV, Punch EV, Tigor EV, Harrier EV, Curvv EV, plus ICE/ICNG versions</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Resale Value</td>
+                                <td>Excellent; long-time leader</td>
+                                <td>Improving quickly, especially EVs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/maruti suzuki vs tata motors/exter.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Safety</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Aspect</th>
+                                <th class="text-center">Tata Motors</th>
+                                <th class="text-center">Maruti Suzuki</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Crash Test Ratings</td>
+                                <td>Multiple 5-star Global NCAP & Bharat NCAP ratings (Nexon, Punch, Curvv ICE/EV)</td>
+                                <td>Most models untested or 3-star; improvements ongoing in newer models</td>
+                            </tr>
+                            <tr>
+                                <td>Child Occupant Safety</td>
+                                <td>Consistently high (4-5 stars in most models)</td>
+                                <td>Varies; some models improving but few top-tier ratings</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Platform Strength</td>
+                                <td>High-strength steel structures with crash-tested platforms</td>
+                                <td>Heartect platform (lightweight, high-tensile steel)</td>
+                            </tr>
+                            <tr>
+                                <td>In-House Crash Facility</td>
+                                <td>Yes (since 1997) — Tata has its own crash-testing infrastructure</td>
+                                <td>Relies on third-party testing (Global NCAP/Bharat NCAP)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Standard Safety Features</td>
+                                <td>ABS, EBD, dual airbags, ESC, ISOFIX, 6 airbags in top trims</td>
+                                <td>ABS, EBD, dual airbags, 6 airbags in some variants, ADAS (new models)</td>
+                            </tr>
+                            <tr>
+                                <td>Advanced Safety Tech</td>
+                                <td>ESC, TPMS, Hill Hold, 360° camera (in Curve, Harrier, Safari)</td>
+                                <td>ADAS (on Grand Vitara, Fronx), ESC, Hill Hold, rear camera</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Safety Philosophy</td>
+                                <td>"Safety First" brand strategy with R&D focused on crashworthiness</td>
+                                <td>Evolving focus on safety alongside efficiency and lightweight build</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/maruti suzuki vs tata motors/grand i10.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Maintenance & After-Sales</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Aspect</th>
+                                <th class="text-center">Maruti Suzuki</th>
+                                <th class="text-center">Tata Motors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Service Network Reach</td>
+                                <td>Widest in India — 4,000+ service centers across urban & rural areas</td>
+                                <td>Expanding steadily — 1,000+ service centers; limited presence in remote areas</td>
+                            </tr>
+                            <tr>
+                                <td>Spare Parts Availability</td>
+                                <td>Excellent — easily available even in tier-2/3 cities</td>
+                                <td>Improving — some delays in rural/semi-urban areas</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Repair Costs</td>
+                                <td>Low — affordable parts and quicker turnaround times</td>
+                                <td>Moderate — slightly higher costs for body repairs & EV components</td>
+                            </tr>
+                            <tr>
+                                <td>Service Channels</td>
+                                <td>ARENA (mainstream) & NEXA (premium) for consistent brand experience</td>
+                                <td>Single brand showrooms with ICE + EV offerings</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Digital/Connected Services</td>
+                                <td>SmartPlay app, Service Booking, NEXA Loyalty Programs</td>
+                                <td>Connected car tech + EV-specific apps for diagnostics & range monitoring</td>
+                            </tr>
+                            <tr>
+                                <td>Customer Satisfaction</td>
+                                <td>High — consistent rankings in JD Power surveys</td>
+                                <td>Improving — better service quality in newer dealerships</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>EV Service Support</td>
+                                <td>Limited EV models, early-stage support (Brezza EV launching soon)</td>
+                                <td>Specialized EV service bays + connected app-based diagnosis</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/maruti suzuki vs tata motors/kwid.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Popular 2025 Models</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Segment</th>
+                                <th class="text-center">Maruti Suzuki</th>
+                                <th class="text-center">Tata Motors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Hatchbacks</td>
+                                <td>Alto K10, Swift, Baleno (Z12 Dual VVT, up to 25.75 km/l)</td>
+                                <td>Tiago (4-star GNCAP), Altroz (5-star GNCAP)</td>
+                            </tr>
+                            <tr>
+                                <td>Compact SUVs</td>
+                                <td>Fronx, Brezza (Hybrid + Brezza EV upcoming)</td>
+                                <td>Punch (5-star GNCAP), Nexon ICE/EV (5-star GNCAP + Bharat NCAP)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>SUVs</td>
+                                <td>Grand Vitara Hybrid, Jimny</td>
+                                <td>Harrier, Safari (ICE + EV coming)</td>
+                            </tr>
+                            <tr>
+                                <td>SUV Coupé</td>
+                                <td>--</td>
+                                <td>Curvv EV/ICE (5-star rated)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Sedans</td>
+                                <td>Dzire, Ciaz</td>
+                                <td>Tigor</td>
+                            </tr>
+                            <tr>
+                                <td>CNG Models</td>
+                                <td>Swift S-CNG (32.85 km/kg)</td>
+                                <td>--</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>EV Models</td>
+                                <td>Grand Vitara Hybrid, Brezza EV (upcoming)</td>
+                                <td>Nexon EV (45 kWh, up to 489 km range), Punch EV, Tigor EV, Harrier EV, Curvv EV</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/maruti suzuki vs tata motors/magnite.webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Hybrid & Electric Vehicle Types Explained</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Aspect</th>
+                                <th class="text-center">Mild-Hybrid (MHEV)</th>
+                                <th class="text-center">Strong/Full Hybrid (HEV)</th>
+                                <th class="text-center">Electric Vehicle (EV)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Main Power Source</td>
+                                <td>Petrol/Diesel engine with small motor assist</td>
+                                <td>Petrol engine + capable electric motor</td>
+                                <td>Fully electric motor powered by battery</td>
+                            </tr>
+                            <tr>
+                                <td>Can Drive on Electric Only?</td>
+                                <td>❌ No</td>
+                                <td>✅ Yes (short distances/speeds)</td>
+                                <td>✅ Yes (always electric)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Battery Size</td>
+                                <td>Small (0.1-1 kWh)</td>
+                                <td>Medium (1-2 kWh)</td>
+                                <td>Large (20-100+ kWh)</td>
+                            </tr>
+                            <tr>
+                                <td>Charging Method</td>
+                                <td>No external charging (charges via braking/engine)</td>
+                                <td>No external charging (self-charging via engine & braking)</td>
+                                <td>Needs external charging (AC/DC charger)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Fuel Efficiency Boost</td>
+                                <td>Slight (5-10%)</td>
+                                <td>Significant (30-50%)</td>
+                                <td>100% electric, no fuel required</td>
+                            </tr>
+                            <tr>
+                                <td>Popular Examples</td>
+                                <td>Maruti Grand Vitara Smart Hybrid, Ciaz, XL6, Ertiga SHVS</td>
+                                <td>Toyota Innova Hycross Hybrid, Honda City e:HEV, Toyota Camry Hybrid</td>
+                                <td>Tata Nexon EV, MG ZS EV, Hyundai Kona EV, BYD Seal</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Running Cost</td>
+                                <td>Low</td>
+                                <td>Very low</td>
+                                <td>Lowest (₹0.9-1.2/km approx.)</td>
+                            </tr>
+                            <tr>
+                                <td>Maintenance</td>
+                                <td>Similar to petrol/diesel</td>
+                                <td>Slightly higher than petrol</td>
+                                <td>Lower (no oil, clutch, gearbox)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Initial Cost</td>
+                                <td>Slightly higher than regular engine</td>
+                                <td>₹1-3L higher than petrol/diesel variants</td>
+                                <td>Highest upfront cost</td>
+                            </tr>
+                            <tr>
+                                <td>Range (Per Fuel/Charge)</td>
+                                <td>600-800 km (fuel tank)</td>
+                                <td>800-1000 km (combined fuel + battery)</td>
+                                <td>250-600+ km depending on battery size</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Ideal For</td>
+                                <td>Budget-conscious buyers who want better mileage</td>
+                                <td>City & highway users who want fuel savings + silent driving</td>
+                                <td>Green mobility adopters, daily city users, future-focused buyers</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/maruti suzuki vs tata motors/punch (1).webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">EV & Hybrid Showdown</h2>
+
+                <h3 class="subheading">Maruti</h3>
+                <ul>
+                    <li>Entered hybrids with Grand Vitara Hybrid; Fronx Hybrid; Swift mild-hybrid and CNG options</li>
+                </ul>
+
+                <h3 class="subheading">Tata</h3>
+                <ul>
+                    <li>Deep EV ecosystem with Ziptron tech: Nexon EV has 45 kWh battery, 106 kW motor, 489 km urban range with fast 1.2C charging</li>
+                    <li>Punch EV, Tigor EV, Harrier EV, Curvv EV—all electric platforms with connected features</li>
+                </ul>
+
+
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/maruti suzuki vs tata motors/swift (1).webp"  alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Verdict</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">If you prefer...</th>
+                                <th class="text-center">Choose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Best fuel economy</td>
+                                <td>Maruti Suzuki</td>
+                            </tr>
+                            <tr>
+                                <td>Top highway safety</td>
+                                <td>Tata Motors</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Strong resale value</td>
+                                <td>Maruti Suzuki</td>
+                            </tr>
+                            <tr>
+                                <td>Futuristic design & features</td>
+                                <td>Tata Motors</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Affordable EV options</td>
+                                <td>Tata Motors</td>
+                            </tr>
+                            <tr>
+                                <td>Easy, affordable maintenance</td>
+                                <td>Maruti Suzuki</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/july/maruti suzuki vs tata motors/tiago (1).webp" alt="bikecarhub Royal Enfield Interceptor 650" title="bikecarhub Royal Enfield Interceptor 650" /></div>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Conclusion</h2>
+
+                <p>In <span class="font-weight-700">2025</span>, <span class="font-weight-700">Maruti Suzuki</span> continues to dominate with cost-effective ownership, high mileage, and reliable value. Meanwhile, <span class="font-weight-700">Tata Motors</span> is emerging strongly with safety leadership, cutting-edge design, and a compelling EV lineup.</p>
+
+                <p><span class="font-weight-700">Maruti Suzuki</span> remains the ideal choice for:</p>
+                <ul>
+                    <li>First-time family car buyers on a tight budget</li>
+                    <li>Those prioritizing low maintenance and strong resale</li>
+                </ul>
+
+                <p><span class="font-weight-700">Tata Motors</span> is the smarter pick if you:</p>
+                <ul>
+                    <li>Want top-level safety for family highway trips</li>
+                    <li>Prefer future-ready EVs with modern tech</li>
+                    <li>Are drawn to bold styling and premium feel</li>
+                </ul>
+
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs: Maruti Suzuki vs Tata Motors</h2>
+
+                <div class="accordion" id="faqMarutiTata">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which brand offers better fuel efficiency?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqMarutiTata">
+                            <div class="accordion-body">
+                                Maruti Suzuki consistently offers better fuel efficiency in their petrol and CNG models, with some vehicles delivering over 25 kmpl.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Which brand has better safety ratings?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqMarutiTata">
+                            <div class="accordion-body">
+                                Tata Motors leads in safety with multiple 5-star rated models from both Global NCAP and Bharat NCAP, while Maruti is improving but has fewer top-rated models.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Which brand has better electric vehicle options?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqMarutiTata">
+                            <div class="accordion-body">
+                                Tata Motors currently has a much stronger EV portfolio with multiple models across segments, while Maruti is just entering the EV space.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Which brand has better service network?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqMarutiTata">
+                            <div class="accordion-body">
+                                Maruti Suzuki has the widest service network in India with over 4,000 service centers, making it more accessible especially in rural areas.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which brand offers better resale value?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqMarutiTata">
+                            <div class="accordion-body">
+                                Maruti Suzuki traditionally has better resale value due to brand trust and reliability, though Tata's resale value is improving especially for their EVs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Which brand is better for first-time car buyers?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqMarutiTata">
+                            <div class="accordion-body">
+                                Maruti Suzuki is often better for first-time buyers due to lower maintenance costs, better fuel efficiency, and easier ownership experience.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which brand has more premium features?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqMarutiTata">
+                            <div class="accordion-body">
+                                Tata Motors offers more premium features like digital clusters, ventilated seats, and advanced connected car technology in their higher-end models.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Which brand is better for highway driving?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqMarutiTata">
+                            <div class="accordion-body">
+                                Tata Motors is generally better for highway driving due to their sturdier build quality and higher safety ratings at highway speeds.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Which brand has better hybrid options?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqMarutiTata">
+                            <div class="accordion-body">
+                                Maruti Suzuki currently has more hybrid options with their mild-hybrid technology in models like Grand Vitara and Fronx.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Which brand is better for city driving?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqMarutiTata">
+                            <div class="accordion-body">
+                                Maruti Suzuki's compact dimensions, light handling, and excellent fuel efficiency make their cars ideal for city driving conditions.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

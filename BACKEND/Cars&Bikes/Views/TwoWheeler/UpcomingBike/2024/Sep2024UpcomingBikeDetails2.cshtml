@@ -1,0 +1,90 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Suzuki GSX-8R: High-Performance, Milage, Price & Specs";
+}
+@section MetaTags{
+    <meta name="keywords" content="Suzuki GSX-8R, GSX-8R specs, Suzuki GSX-8R price, Suzuki sport bike, GSX-8R features, GSX-8R review, Suzuki GSX 776cc" />
+    <meta name="description" content="Discover the Suzuki GSX-8R, a sport bike with advanced tech, 776cc parallel-twin engine, and agile handling. Explore specs, features, and price details." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="overlay-black-middle" style=" background:linear-gradient(#475372, #78829A, #9EA3AD, #fff); margin:0;">
+    <img src="~/images/background/banner.png" />
+</div> *@
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" /></div> *@
+<!-- Breadcrumb row END -->
+@* <div class="car-details-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="nav">
+                    <ul>
+                        <li><a></a></li>
+                        <li class="active"><a href="car-details-overview.html">Overview</a></li>
+                        <li><a href="car-detail-specifications.html">Specifications</a></li>
+                        <li><a href="car-detail-price.html">Price</a></li>
+                        <li><a href="car-detail-compare.html">Compare</a></li>
+                        <li><a href="car-detail-pictures.html">Pictures</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+<body>
+    <div class=" ">
+    <h1 class="latest-bike-head">Upcoming Bikes</h1>
+    <div class="TWupcoming-container">
+        <div class="upcoming-bikes-details-image">
+            <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+            <div class="upcoming-bikes-details-text">
+                <h2>@Model.UpcomingBikeName</h2>
+                <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+            </div>
+        </div>
+
+        <div class="upcoming-bikes-details-content">
+            <h2>About @Model.UpcomingBikeName</h2>
+            @* <p>@Html.Raw(@Upbike.UpcomingBikeDetails.Replace("\n", "<br>"))</p> *@
+            <p>
+                Suzuki GSX-8R is expected to launch in India in September 2024 in the expected price range of ₹ 11,00,000 to ₹ 12,00,000. Currently available bikes which are similar to GSX-8R are Honda XL750 Transalp, Suzuki V-Strom 800DE & Zontes 350X.
+            </p>
+            <p>The GSX-8R is Suzuki’s new middle-weight sportbike that is likely to enter Indian shores soon. It is a representation of the evolution of supersport offerings from aggressive, four-cylinder screamers to more accessible and environment-friendly, twin-cylinder machines.</p>
+            <p>The GSX-8R follows Suzuki’s new design language with a vertically-stacked twin LED headlamp flanked by slash-cut-style air intakes and a short windscreen. The fairing is an angular, geometric-looking unit, which blends with a muscular fuel tank and the bodywork culminates into an upswept, stubby tail section.</p>
+            <p>Clinging onto its steel frame is a 776cc, twin-cylinder, liquid-cooled engine with a 270-degree crank that produces 81.8bhp at 8,500rpm and 78Nm of peak torque at 6,800rpm. It comes mated to a six-speed gearbox with an assist and slipper clutch. To enhance the riding experience, Suzuki has equipped the bike with ride-by-wire, low rpm assist, traction control, bi-directional quickshifter, ride modes, ABS, and easy start. The hardware package includes 17-inch cast aluminium wheels that are shod with Dunlop RoadSport 2 tyres and suspended by Showa SFF-BP forks and a linked rear shock. The stopping power comes from a dual 310mm front and a single 240mm rear disc.</p>
+            <p>In the international markets, the Suzuki GSX-8R competes against the likes of the Yamaha R7, Honda CBR 650R, Triumph Daytona 660, and Aprilia RS 660.</p>
+        </div>
+    </div>
+    }
+    <!-- Bike 1 -->
+    <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allUpbike in ViewBag.allupcomingbike)
+        {
+            <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                <div class="upcoming-bikes-details-card">
+                    <div class="upcoming-bikes-all-image">
+                        <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                    </div>
+
+                    <div class="upcoming-allbikes-details-content">
+                        <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                        <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                        <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+    </div>
+</body>

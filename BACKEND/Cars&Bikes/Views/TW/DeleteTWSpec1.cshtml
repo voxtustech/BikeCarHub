@@ -1,0 +1,36 @@
+﻿@model Cars_Bikes.Models.TWSpec
+
+@{
+    ViewData["Title"] = "Delete TWSpec";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <h2>TWSpec List</h2>
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="col-md-8">
+            <div class="card shadow-lg p-4">
+                <h3>Are you sure you want to delete this specification?</h3>
+
+                <div class="card p-4 shadow-lg">
+                    <dl class="row">
+                        <dt class="col-sm-3">TW Name</dt>
+                        <dd class="col-sm-9">@Model.TWName</dd>
+
+                        <dt class="col-sm-3">Variant</dt>
+                        <dd class="col-sm-9">@Model.Varients</dd>
+
+                        <dt class="col-sm-3">Milage</dt>
+                        <dd class="col-sm-9">@Model.Milage</dd>
+                    </dl>
+
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" asp-for="TWSpecId" />
+                        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

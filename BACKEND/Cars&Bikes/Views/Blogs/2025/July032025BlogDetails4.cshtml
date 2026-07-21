@@ -1,0 +1,653 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Best SUVs Under ₹15 Lakh in India: 2025 Comparison Guide";
+}
+@section MetaTags {
+    <meta name="keywords" content="best SUVs under 15 lakh, top compact SUVs India 2025, Hyundai Venue vs Tata Nexon, Maruti Brezza vs Kia Sonet, Mahindra XUV 3XO review, petrol diesel SUVs India, affordable SUVs 2025, best family SUV India, SUV comparison 2025, budget SUV buying guide" />
+    <meta name="description" content="Compare the best SUVs under ₹15 lakh in India for 2025. Detailed analysis of Hyundai Venue, Tata Nexon, Maruti Brezza, Kia Sonet, and Mahindra XUV 3XO with price, features, mileage and performance" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 3rd July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                <p>In this comprehensive guide by <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span>, we compare the top 5 SUVs under ₹15 lakh to help you find the perfect match for your needs and budget in 2025.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Top 5 SUVs Under ₹15 Lakh (2025)</h2>
+
+                <ol>
+                    <li><span class="font-weight-700">Hyundai Venue</span></li>
+                    <li><span class="font-weight-700">Tata Nexon</span></li>
+                    <li><span class="font-weight-700">Maruti Brezza</span></li>
+                    <li><span class="font-weight-700">Kia Sonet</span></li>
+                    <li><span class="font-weight-700">Mahindra XUV 3XO</span></li>
+                </ol>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">1. Hyundai Venue</h2>
+               
+
+                <h3 class="subheading">Official Highlights ★</h3>
+                <ul>
+                    <li><span class="font-weight-700">Price:</span> ₹7.94--13.62 L (standard trims); N-Line from ₹12.14 L</li>
+                    <li>
+                        <p>  <span class="font-weight-700">Engine Options:</span>(source: Hyundai India specs)</p>
+                        <ul>
+                            <li>1.2L NA petrol: 83 PS / 113.8 Nm</li>
+                            <li>1.0L turbo petrol: 118 PS / 172 Nm</li>
+                            <li>1.5L diesel: 114 PS / 250 Nm</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Fuel Efficiency (ARAI):</span>
+                        <ul>
+                            <li>17.5 kmpl (1.2L)</li>
+                            <li>18.3 kmpl (turbo)</li>
+                            <li>23.4 kmpl (diesel)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">•	Dimensions & Practicality</span>
+                        <ul>
+                            <li>Boot: 350L | Fuel Tank: 45L | Ground Clearance: 195mm</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Key Features:</span>
+                        <ul>
+                            <li>Bluelink with 60+ connected features (H2C Alexa support)</li>
+                            <li>LED lighting, ambient lighting, sunroof, auto AC, air purifier</li>
+                            <li>Dual-cam dash cam (N-Line), Bose audio on higher trims</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> A consistent top-seller, Venue shines with <span class="font-weight-700">excellent connectivity</span>, compact practicality, and refined ride quality—ideal for urban buyers.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">2. Tata Nexon</h2>
+               
+                <h3 class="subheading">Official Highlights ★</h3>
+                <ul>
+                    <li><span class="font-weight-700">Price:</span> ₹7.99--15.60 L across petrol, diesel, CNG, AMT, DCT</li>
+                    <li>
+                        <span class="font-weight-700">Engines & Transmissions</span>
+                        <ul>
+                            <li>1.2L turbo petrol: 118 PS / 170 Nm with 5MT, 6MT, AMT, 7-speed DCT</li>
+                            <li>1.5L diesel: 113 PS / 260 Nm with 6MT, AMT</li>
+                            <li>1.2L CNG: 99 PS / 170 Nm (6MT)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Fuel Efficiency (ARAI):</span>
+                        <ul>
+                            <li>Diesel: 24.08 kmpl</li>
+                            <li>Petrol/Diesel typical: 16-17 kmpl city</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Utility Figures</span>
+                        <ul>
+                            <li>Boot: 382L | Ground Clearance: 208mm</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Features & Safety</span>
+                        <ul>
+                            <li>10.25″ touchscreen/instrument cluster, JBL audio, sunroof</li>
+                            <li>Ventilated seats, 360° camera, air purifier</li>
+                            <li>5-star Global & Bharat NCAP rated</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> The Nexon stands out with its <span class="font-weight-700">rugged build</span>, <span class="font-weight-700">top-tier safety</span>, and <span class="font-weight-700">versatile powertrain lineup</span> — perfect for families needing comfort and confidence.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">3. <a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1">Maruti Brezza</a></h2>
+                
+
+                <h3 class="subheading">Official Highlights ★</h3>
+                <ul>
+                    <li><span class="font-weight-700">Price:</span> ₹8.69 L to ~₹14.14 L</li>
+                    <li>
+                        <span class="font-weight-700">Engine & Gearboxes</span>
+                        <ul>
+                            <li>1.5L petrol (K15C): 102 PS / 137 Nm with manual and 6AT; mild-hybrid available</li>
+                            <li>CNG variant: 87 PS / 121 Nm (5MT)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Fuel Efficiency:</span>
+                        <ul>
+                            <li>Petrol MT: 20.1 kmpl | AT: 19.8 kmpl</li>
+                            <li>CNG: 25.51 km/kg</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Utility & Comfort</span>
+                        <ul>
+                            <li>Boot: 328L | Tank: 48L | GC: ~198mm</li>
+                            <li>HUD, wireless charger, sunroof, 360° camera (higher trims) Mild-hybrid tech</li>
+                            
+                        </ul>
+                    </li>
+                 
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Brezza excels with <span class="font-weight-700">unmatched fuel economy</span>, mild-hybrid convenience, and Maruti's after-sales prowess—ideal for cost-conscious, urban families.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">4. Kia Sonet</h2>
+                
+
+                <h3 class="subheading">Official Highlights ★</h3>
+                <ul>
+                    <li><span class="font-weight-700">Price:</span> ₹7.99--14.89 L across variants and engines</li>
+                    <li>
+                        <span class="font-weight-700">Engine Options:</span>
+                        <ul>
+                            <li>1.2L petrol: ~82 PS / 115 Nm</li>
+                            <li>1.0L turbo petrol: 118 PS / 172 Nm with iMT or 7DCT</li>
+                            <li>1.5L diesel: 114 PS / 250 Nm with MT, iMT, or 6AT</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Fuel Efficiency:</span>
+                        <ul>
+                            <li>Diesel: 19 kmpl</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Dimensions:</span>
+                        <ul>
+                            <li>Boot: 385L | Tank: 45L</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Features:</span>
+                        <ul>
+                            <li>10.25″ touchscreen & cluster, Bose audio, ventilated seats Sunroof, air purifier, traction modes (sand/mud/wet) ADAS L1 in Sonata Wild variant</li>
+                            
+                        
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Sonet offers <span class="font-weight-700">sporty appeal</span>, <span class="font-weight-700">rich tech</span>, and <span class="font-weight-700">driving engagement</span>, making it ideal for buyers valuing performance and features.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">5. Mahindra XUV 3XO</h2>
+              
+
+                <h3 class="subheading">Official Highlights ★</h3>
+                <ul>
+                    <li><span class="font-weight-700">Price:</span> ₹7.99--15.80 L (turbo petrol & diesel)</li>
+                    <li>
+                        <span class="font-weight-700">Fuel Economy:</span>
+                        <ul>
+                            <li>Turbo-petrol: 18.2 kmpl</li>
+                            <li>Diesel: 21.2 kmpl</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Safety:</span>
+                        <ul>
+                            <li>5-star Bharat NCAP rated</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-weight-700">Key Features:</span>
+                        <ul>
+                            <li>Dual screens, panoramic sunroof</li>
+                            <li>Level-2 ADAS class leading value</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> For tech-lovers and safety-driven families, the XUV 3XO offers <span class="font-weight-700">top-tier safety</span>, <span class="font-weight-700">connected experience</span>, and <span class="font-weight-700">panoramic luxury in a compact package</span>.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Quick Comparison Table</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Model</th>
+                                <th class="text-center">Price (₹ L)</th>
+                                <th class="text-center">Petrol/kmpl</th>
+                                <th class="text-center">Diesel/kmpl</th>
+                                <th class="text-center">Boot (L)</th>
+                                <th class="text-center">GC (mm)</th>
+                                <th class="text-center">Safety Rating</th>
+                                <th class="text-center">Highlights</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Hyundai Venue</td>
+                                <td>7.94-13.62</td>
+                                <td>17.5-18.3</td>
+                                <td>23.4</td>
+                                <td>350</td>
+                                <td>195</td>
+                                <td>4★ ANCAP</td>
+                                <td>Bluelink, compact, connected</td>
+                            </tr>
+                            <tr>
+                                <td>Tata Nexon</td>
+                                <td>7.99-15.60</td>
+                                <td>~17</td>
+                                <td>24.1</td>
+                                <td>382</td>
+                                <td>208</td>
+                                <td>5★ Global/BNCAP</td>
+                                <td>Strong safety & rugged build</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Maruti Brezza</td>
+                                <td>8.50-14.14</td>
+                                <td>19.8-20.1</td>
+                                <td>--</td>
+                                <td>328</td>
+                                <td>198</td>
+                                <td>4★ Global NCAP</td>
+                                <td>Best fuel efficiency, mild-hybrid</td>
+                            </tr>
+                            <tr>
+                                <td>Kia Sonet</td>
+                                <td>7.79-14.89</td>
+                                <td>~17-18</td>
+                                <td>~19</td>
+                                <td>385</td>
+                                <td>~205</td>
+                                <td>3★ Global NCAP</td>
+                                <td>Tech-laden, sporty, ADAS</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Mahindra XUV 3XO</td>
+                                <td>7.99-15.56</td>
+                                <td>18.2</td>
+                                <td>21.2</td>
+                                <td>~350</td>
+                                <td>201</td>
+                                <td>5★ BNCAP</td>
+                                <td>ADAS, panoramic, HD infotainment</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Which One Should You Pick?</h2>
+
+                <ul>
+                    <li><span class="font-weight-700">Fuel Efficiency Focus</span> → <span class="font-weight-700">Maruti Brezza</span> with best-in-class petrol and mild-hybrid economy.</li>
+                    <li><span class="font-weight-700">Safety-First Family SUV</span> → <span class="font-weight-700">Tata Nexon</span> offers top crash ratings and versatile engines.</li>
+                    <li><span class="font-weight-700">Connected & Compact City SUV</span> → <span class="font-weight-700">Hyundai Venue</span> excels with Bluelink smart tech.</li>
+                    <li><span class="font-weight-700">Feature Enthusiasts & Drivers</span> → <span class="font-weight-700">Kia Sonet</span> adds flair, performance, and tech.</li>
+                    <li><span class="font-weight-700">Tech-Savvy & Safety-Conscious</span> → <span class="font-weight-700">Mahindra XUV 3XO</span> delivers ADAS, panoramic sunroof, and compact comfort.</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Thoughts</h2>
+
+                <p>Each SUV excels in unique ways:</p>
+                <ul>
+                    <li>Choose <span class="font-weight-700">Brezza</span> for ultra-efficient drives and user-friendly ownership.</li>
+                    <li>Go with <span class="font-weight-700">Nexon</span> for safety, rugged build, and diverse powertrains.</li>
+                    <li>Opt for <span class="font-weight-700">Venue</span> for smart connectivity in a compact footprint.</li>
+                    <li>Pick <span class="font-weight-700">Sonet</span> for premium interiors and dynamic driving.</li>
+                    <li>Select <span class="font-weight-700">XUV 3XO</span> for cutting-edge safety and luxury in compact form.</li>
+                </ul>
+
+                <p>Your ideal SUV will depend on your <span class="font-weight-700">priorities</span>—be it economy, connectivity, safety, tech, or driving thrill.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Here’s a detailed variant-level breakdown of the top SUVs under ₹15 lakh (ex-showroom) in India—based on official 2025 variant listings from Kia, Hyundai, Tata, and Maruti. This will help you identify the trim and powertrain that best fits your needs for features, performance, and value.</h2>
+               
+                <h2><span class="font-weight-700">Kia Sonet 2025 Variants</span></h2>
+                <p>Kia offers <span class="font-weight-700">8 main trims</span> across petrol, turbo-petrol and diesel:</p>
+                <ul>
+                    <li><span class="font-weight-700">HTE / HTE (O)</span> – Entry-level 1.2L petrol MT (₹7.99–8.44 L): basic but includes safety tech like 6-airbags and ESC.</li>
+                    <li><span class="font-weight-700">HTK / HTK (O) / HTK+ (O)</span> – Adds sunroof, LED DRLs, keyless entry, and wireless charging (from HTK(O)).</li>
+                    <li><span class="font-weight-700">HTX / HTX+</span> – Brings prominent alloy wheels, smart key, paddle shifters (HTX+), Bose audio, and traction modes.</li>
+                    <li><span class="font-weight-700">GTX+ / X Line</span> – Top-tier 1.0L turbo, DCT or AT, ADAS suite, panoramic sunroof, 360° camera, ventilated seats, Bose system, dual-tone options.</li>
+                </ul>
+
+                <hr>
+
+                <h2>🚗 <span class="font-weight-700">Hyundai Venue 2025 Variants</span></h2>
+                <p><span class="font-weight-700">Fueltrains:</span> 1.2L petrol MT, 1.0L turbo petrol MT/DCT, 1.5L diesel MT</p>
+                <ul>
+                    <li><span class="font-weight-700">E / E Plus:</span> Base variants (petrol MT from ₹7.94 L) with sunroof only in E Plus.</li>
+                    <li><span class="font-weight-700">S / S Plus:</span> Adds wireless charger, Android Auto/CarPlay, rear camera (S+), priced ~₹9–9.5 L.</li>
+                    <li><span class="font-weight-700">S(O):</span> Smart key, push-button start (~₹9.99 L).</li>
+                    <li><span class="font-weight-700">SX Executive:</span> 8" touchscreen, sunroof, auto AC, wireless mirroring (~₹10.79 L).</li>
+                    <li><span class="font-weight-700">SX / SX Diesel:</span> Adds turbo/diesel options, continues features from SX Executive.</li>
+                    <li><span class="font-weight-700">SX(O) Knight / Adventure:</span> Adds ADAS features and wireless charger.</li>
+                    <li><span class="font-weight-700">SX(O) Turbo DCT diesel:</span> Top turbo/diesel with full sunroof + ADAS (~₹13.2–13.5 L).</li>
+                </ul>
+                <h2><span class="font-weight-700">Tata Nexon 2025 Variants</span></h2>
+                <p><span class="font-weight-700">4 active trims</span> with petrol, diesel, and CNG:</p>
+                <ul>
+                    <li><span class="font-weight-700">Smart</span> (~₹7.99 L start) – Basic; 1.2L turbo petrol / 1.5L diesel + 5MT/6MT/AMT.</li>
+                    <li><span class="font-weight-700">Pure / Pure+ / Pure+ S</span> – Adds touchscreen, wireless mirroring, parking camera, height-adjustable seat, rear AC vents.</li>
+                    <li><span class="font-weight-700">Creative / Creative+ / Creative+ PS</span> – Panoramic sunroof, bi-LED headlights, wireless charger, TPMS, 6-speaker JBL, 360° camera (Creative).</li>
+                    <li><span class="font-weight-700">Fearless / Fearless Plus PS</span> – Digital cluster, ventilated seats, air purifier, JBL audio, rain-sensing wipers, advanced safety.</li>
+                </ul>
+
+                <hr>
+
+                <h2><span class="font-weight-700">Maruti Brezza 2025 Variants</span></h2>
+                <p>Offering <span class="font-weight-700">petrol and CNG</span>, all with mild-hybrid tech and AT options:</p>
+                <ul>
+                    <li><span class="font-weight-700">Base Petrol MT</span> – 1.5L manual; SHVS mild hybrid on AT only.</li>
+                    <li><span class="font-weight-700">Mid Variants (VXi / ZXi)</span> – Adds features incrementally; cooled glove box, HUD, wireless charger, sunroof (higher trims).</li>
+                    <li><span class="font-weight-700">Top AT/CNG Trim</span> – 360° camera, 6 airbags standard, full safety suite.</li>
+                    <li><span class="font-weight-700">CNG Trim</span> – Same strong economy; 5MT only due to CNG.</li>
+                </ul>
+              
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">SUV</th>
+                                <th class="text-center">Entry Trim / Powertrain</th>
+                                <th class="text-center">Mid Trim Highlights</th>
+                                <th class="text-center">Top Trim Features</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Kia Sonet</td>
+                                <td>HTE 1.2L MT (~₹8 L)</td>
+                                <td>HTK / HTK+ — sunroof, LED DRLs, wireless charging</td>
+                                <td>GTX+ X-Line — ADAS, DCT/AT, 360° cam, ventilated seats, Bose audio</td>
+                            </tr>
+                            <tr>
+                                <td>Hyundai Venue</td>
+                                <td>E 1.2L MT (~₹7.94 L)</td>
+                                <td>S / S Plus — wireless charger, rear cam, auto AC, sunroof</td>
+                                <td>SX(O) Turbo DCT — sunroof, ADAS, wireless mirroring, full connectivity</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Tata Nexon</td>
+                                <td>Smart 1.2 turbo MT (~₹7.99 L)</td>
+                                <td>Pure+ / Creative — touchscreen, sunroof, wireless charger</td>
+                                <td>Fearless Plus PS — rain-sensing wipers, ventilated seats, digital cluster, JBL sound, top safety</td>
+                            </tr>
+                            <tr>
+                                <td>Maruti Brezza</td>
+                                <td>Base Petrol MT (~₹8.5 L)</td>
+                                <td>Mid-level — HUD, cooled glovebox, wireless charger, sunroof</td>
+                                <td>Top AT/CNG — 360° cam, mild hybrid AT, 6 airbags</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Picking the Right Variant</h2>
+
+                <h3 class="subheading">If you want best value entry-level:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Venue E</span> or <span class="font-weight-700">Sonet HTE</span> provide essentials like safety belts and basic AC, but consider S/S Plus trims quickly for wireless charging and camera.</li>
+                </ul>
+
+                <h3 class="subheading">For connected & sunroof dreams:</h3>
+                <ul>
+                    <li><span class="font-weight-700">Venue S+ (₹9.5 L)</span> includes sunroof + Bluelink, ideal mid-trim.</li>
+                    <li><span class="font-weight-700">Sonet HTK+</span> delivers sunroof plus wireless charger, LED DRL.</li>
+                </ul>
+
+                <h3 class="subheading">For Advanced tech + ADAS:</h3>
+                <ul>
+                    <li>Go for <span class="font-weight-700">Sonet GTX+</span> with full ADAS, Bose, ventilated seats.</li>
+                    <li>Or pick <span class="font-weight-700">Venue SX(O) Turbo DCT</span>, which adds ADAS and infotainment.</li>
+                </ul>
+
+                <h3 class="subheading">For safety-conscious buyers:</h3>
+                <ul>
+                    <li>Choose <span class="font-weight-700">Nexon Creative+ PS</span> at ~₹12-13 L—for 360° cam, sunroof and ventilated seats.</li>
+                    <li>Go up to <span class="font-weight-700">Fearless Plus PS</span> for higher safety tech.</li>
+                </ul>
+
+                <h3 class="subheading">For fuel economy with hybrid:</h3>
+                <ul>
+                    <li>Choose <span class="font-weight-700">Brezza mid to top AT</span> for the mild-hybrid SHVS advantage.</li>
+                    <li>The <span class="font-weight-700">CNG variant</span> offers unmatched mileage (~25 km/kg).</li>
+                </ul>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Recommendation Snippet</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Priority</th>
+                                <th class="text-center">Recommended Trim & SUV</th>
+                                <th class="text-center">Approx ₹ (ex-showroom)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Basic Reliable SUV</td>
+                                <td>Venue S Plus 1.2L MT</td>
+                                <td>~₹9.5 L</td>
+                            </tr>
+                            <tr>
+                                <td>Feature & Tech-rich</td>
+                                <td>Sonet HTX+ Turbo DCT</td>
+                                <td>~₹12-13 L</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Safety-first Family Ride</td>
+                                <td>Nexon Creative+ PS Petrol/Diesel</td>
+                                <td>~₹12-13 L</td>
+                            </tr>
+                            <tr>
+                                <td>Fuel-Efficiency Enthusiast</td>
+                                <td>Brezza Top Petrol / CNG AT</td>
+                                <td>~₹12-14 L</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Final Tip</h2>
+
+                <p>When choosing a variant:</p>
+                <ol>
+                    <li>Decide your <span class="font-weight-700">key priorities</span>—fuel savings, tech, safety, or after-sales service.</li>
+                    <li><span class="font-weight-700">Test drive</span> your shortlist to get real-world feel on ride comfort, noise, and tech usability.</li>
+                    <li><span class="font-weight-700">Check on-road pricing</span> as premiums, insurance, and state-level charges vary by city.</li>
+                </ol>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs: Best SUVs Under ₹15 Lakh</h2>
+
+                <div class="accordion" id="faqSUVsUnder15L">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which SUV has the best mileage under ₹15 lakh?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqSUVsUnder15L">
+                            <div class="accordion-body">
+                                The Maruti Brezza CNG offers the best mileage at 25.51 km/kg, followed by the Tata Nexon diesel at 24.08 kmpl.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Which is the safest SUV under ₹15 lakh?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqSUVsUnder15L">
+                            <div class="accordion-body">
+                                The Tata Nexon and Mahindra XUV 3XO both have 5-star safety ratings (Global/Bharat NCAP), making them the safest choices.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. Which SUV has the most features under ₹15 lakh?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqSUVsUnder15L">
+                            <div class="accordion-body">
+                                The Kia Sonet GTX+ and Mahindra XUV 3XO offer the most premium features including ADAS, panoramic sunroof, and premium audio systems.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Which is the best automatic SUV under ₹15 lakh?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqSUVsUnder15L">
+                            <div class="accordion-body">
+                                The Hyundai Venue Turbo DCT and Kia Sonet Turbo DCT offer excellent automatic options, while the Maruti Brezza 6AT provides great value.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which SUV has the best resale value?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqSUVsUnder15L">
+                            <div class="accordion-body">
+                                The Maruti Brezza typically has the best resale value, followed by Hyundai Venue and Kia Sonet.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Which is the best SUV for city driving?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqSUVsUnder15L">
+                            <div class="accordion-body">
+                                The Hyundai Venue is ideal for city driving due to its compact size, light steering, and excellent visibility.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which SUV has the biggest boot space?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqSUVsUnder15L">
+                            <div class="accordion-body">
+                                The Kia Sonet offers the largest boot at 385L, followed by Tata Nexon at 382L.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Which is the best diesel SUV under ₹15 lakh?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqSUVsUnder15L">
+                            <div class="accordion-body">
+                                The Tata Nexon diesel offers the best combination of performance, efficiency, and value in the diesel segment.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Which SUV has the best ground clearance?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqSUVsUnder15L">
+                            <div class="accordion-body">
+                                The Tata Nexon leads with 208mm ground clearance, followed by Mahindra XUV 3XO at 201mm.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Which is the best value-for-money SUV under ₹15 lakh?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqSUVsUnder15L">
+                            <div class="accordion-body">
+                                The Maruti Brezza offers the best value considering its fuel efficiency, features, and Maruti's widespread service network.
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <p></p>
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>Royal Enfield Motors<a class="for-link" asp-controller="RoyalEnfield" asp-action="REContinentalGT650"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="Suzuki" asp-action="SuzukiKATANA"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

@@ -1,0 +1,186 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Best Bikes in India Between ₹2-3 Lakh: Top Picks for 2024";
+}
+@section MetaTags{
+    <meta name="keywords" content="Best bikes under 3 lakh, bikes between 2 lakh and 3 lakh, KTM RC 390, Royal Enfield Interceptor 650, Yamaha R15M, Honda CB300F, top bikes India 2024" />
+    <meta name="description" content="Explore the best bikes in India under ₹3 lakh, including top models like KTM RC 390, Interceptor 650, Yamaha R15M, and Honda CB300F. Find specs & prices!" />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <p>For motorcycle enthusiasts looking to buy a bike in the ₹2 lakh to ₹3 lakh price range, 2024 offers an exciting lineup of options. This segment features bikes that balance performance, style, and technology, catering to various riding preferences.</p>
+                <div class="div-line"></div>
+                <h3 class="subheading">KTM RC 390:</h3>
+                <p><span class="font-weight-700">Priced at ₹2.87 lakh (ex-showroom)</span>, the RC 390 is a popular choice for sportbike lovers. Its 373cc single-cylinder engine delivers 43.5 PS and 37 Nm of torque, offering an exhilarating riding experience. The bike also features a TFT display, cornering ABS, and a lightweight trellis frame.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">Specifications & Features</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 373 cc, 1-cylinder, 4-stroke engine
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 43.5 PS
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 37 Nm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - WP APEX 43, Suspension Rear - WP APEX - Monoshock
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 158 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topbikesinindiaunder3lakhbestpicksfor2024/ktm rc 390.webp" alt="KTM RC 390" title="KTM RC 390" /></center></div>
+                </div>
+            <div class="div-line"></div>
+                <h3 class="subheading">Royal Enfield Interceptor 650:</h3>
+                <p><span class="font-weight-700">The Interceptor 650, priced at ₹2.9 lakh</span>, combines classic design with modern performance. Its 647.95cc parallel-twin engine produces 47.4 PS @@ 7250 rpm and 52.3 Nm @@ 5150 rpm, ensuring smooth power delivery. With its comfortable ergonomics and retro charm, it's perfect for long rides.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">Specifications & Features</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 647.95 cc, Inline twin cylinder, 4 stroke / SOHC
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 47.4 PS @@ 7250 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 52.3 Nm @@ 5150 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Telescopic forks, Suspension Rear - Twin gas charged shock-absorbers with adjustable preload
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 174 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topbikesinindiaunder3lakhbestpicksfor2024/royal enfield interceptor 650.webp" alt="Royal Enfield Interceptor 650" title="Royal Enfield Interceptor 650" /></center></div>
+                </div>
+            <div class="div-line"></div>
+                <h3 class="subheading">Yamaha R15M:</h3>
+                <p><span class="font-weight-700">For ₹1.90 lakh, the Yamaha R15M</span> offers a race-inspired design with a 155cc liquid-cooled engine producing 14.2 Nm @@ 7500 rpm. Features include a quick shifter, traction control, and a digital LCD display. It's an excellent choice for riders seeking affordability without compromising on style.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">Specifications & Features</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 155 cc,Liquid-cooled, 4-stroke, SOHC, 4-valve
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 14.2 Nm @@ 7500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Telescopic Upside Down Fork (USD Fork), Suspension Rear - Linked-Type Monocross Suspension
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 170 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topbikesinindiaunder3lakhbestpicksfor2024/yamaha r15m.webp" alt="Yamaha R15M" title="Yamaha R15M" /></center></div>
+                </div>
+            <div class="div-line"></div>
+                <h3 class="subheading">Honda CB300F:</h3>
+                <p><span class="font-weight-700">At ₹1.70 lakh, the CB300F</span> offers a 293.52cc engine producing 24.4 PS @@ 7500 rpm and 25.6 Nm @@ 5500 rpm. Its muscular design, USD forks, and advanced electronics make it a solid urban commuter.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">Specifications & Features</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 293.52cc, 4 Stroke, Sl, Oil Cooled Engine
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Power:</span> 24.4 PS @@ 7500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Torque:</span> 25.6 Nm @@ 5500 rpm
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Suspension:</span> Suspension Front - Telescopic (USD), Suspension Rear - Monoshockr
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Ground Clearance:</span> 177 mm
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topbikesinindiaunder3lakhbestpicksfor2024/honda cb300f.webp" alt="Honda CB300F" title="Honda CB300F" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                <p>Each of these bikes provides a unique blend of performance and value, ensuring there’s something for every rider. Whether you're into sportbikes, cruisers, or commuters, this segment has an option that suits your needs.</p>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @*  <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

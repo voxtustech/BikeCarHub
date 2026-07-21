@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Cars_Bikes.Models.TWEVAppFeatures>
+@{
+    ViewData["Title"] = "List TW EV AppFeatures";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <div class="container mt-4">
+                        <h2 class="text-center mb-4">Add TW EV AppFeatures Details</h2>
+                        <form method="get">
+                            <input type="text" name="search" placeholder="Search..." class="form-control" />
+                        </form>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Two Wheeler</th>
+                                    <th>Variant</th>
+                                    <th>Charging Station Locate</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.TwoWheeler?.TwoWheelerName</td>
+                                        <td>@item.TWVarients?.TWName</td>
+                                        <td>@item.ChargingStationLocate</td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.TWEVAppFeaturesId" class="btn btn-sm btn-primary">Edit</a>
+                                            <a asp-action="Delete" asp-route-id="@item.TWEVAppFeaturesId" class="btn btn-sm btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

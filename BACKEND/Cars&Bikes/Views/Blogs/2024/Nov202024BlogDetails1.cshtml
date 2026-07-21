@@ -1,0 +1,173 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top Affordable Car Variants Under ₹6 Lakhs in India";
+}
+@section MetaTags{
+    <meta name="keywords" content="affordable cars under 6 lakhs, budget cars in India, top cars under ₹6 lakhs, Maruti Suzuki Alto K10, Renault Kwid, Tata Tiago, Hyundai Santro, low-cost cars India, fuel-efficient cars, best car variants under 6 lakhs, value-for-money cars." />
+    <meta name="description" content="Discover the top affordable car variants in India under ₹6 lakhs, offering excellent value for money. Explore models like Maruti Suzuki Alto K10, Renault Kwid, Tata Tiago, and Hyundai Santro with features like fuel efficiency, tech, and safety." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. Maruti Suzuki Alto K10</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price Range:</span> ₹3.99 - ₹5.96 lakhs (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1.0-litre, 3-cylinder petrol engine
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 24 km/l (approx.)
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topaffordablecarvariantsunder6lakhsinindiavalueformoneychoices/maruti suzuki alto k10.webp" alt="Maruti Suzuki Alto K10" title="Maruti Suzuki Alto K10" /></center></div>
+                </div>
+                <p><span class="font-weight-700">Why Choose Alto K10?</span> The Alto K10 remains a top choice for first-time buyers due to its reliability, low maintenance costs, and excellent fuel efficiency. The VXI variant, just under ₹6 lakhs, offers features like a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, central locking, and front power windows. Compact, fuel-efficient, and easy to drive, this car is perfect for city use.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. Renault Kwid</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price Range:</span> ₹4.70 - ₹5.99 lakhs (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 0.8-litre or 1.0-litre petrol engine
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 22 km/l (approx.)
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topaffordablecarvariantsunder6lakhsinindiavalueformoneychoices/renault kwid.webp" alt="Renault Kwid" title="Renault Kwid" /></center></div>
+                </div>
+                <p><span class="font-weight-700">Why Choose Renault Kwid?</span> Known for its SUV-inspired design, the Kwid offers a spacious cabin and high ground clearance, making it great for city drives and rough roads. The RXT variant provides good tech features, including an 8-inch touchscreen with connectivity options, digital instrument cluster, and dual airbags. Kwid also has a reputation for low running costs and affordable parts, making it a great choice for long-term ownership.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">3. Maruti Suzuki S-Presso</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price Range:</span> ₹4.26 - ₹5.99 lakhs (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1.0-litre, 3-cylinder petrol engine
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 21-22 km/l (approx.)
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topaffordablecarvariantsunder6lakhsinindiavalueformoneychoices/maruti suzuki s-presso.webp" alt="Maruti Suzuki S-Presso" title="Maruti Suzuki S-Presso" /></center></div>
+                </div>
+                <p><span class="font-weight-700">Why Choose S-Presso?</span> The S-Presso has a compact SUV-like stance, appealing to buyers looking for a small car with a bold design. It’s easy to maneuver in tight city spaces while offering a surprisingly spacious interior. The VXI Plus variant includes a SmartPlay Studio touchscreen, steering-mounted controls, and good safety features like dual airbags and ABS with EBD. It combines fuel efficiency with a low cost of ownership.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">4. Tata Tiago</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price Range:</span> ₹5.54 - ₹7.49 lakhs (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1.2-litre, 3-cylinder petrol engine
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 20 km/l (approx.)
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topaffordablecarvariantsunder6lakhsinindiavalueformoneychoices/tata tiago.webp" alt="Tata Tiago" title="Tata Tiago" /></center></div>
+                </div>
+                <p><span class="font-weight-700">Why Choose Tata Tiago?</span> Tata’s Tiago is a solid all-rounder, known for its strong build quality, safety (4-star GNCAP rating), and great ride comfort. The XE variant is a bit more basic but within budget. However, if you can stretch a bit, the XT variant includes a Harmon Kardon sound system, touchscreen infotainment, and quality interiors. Its safety rating and refined engine make it a fantastic value-for-money pick in this range.</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">5. Hyundai Santro</h3>
+                        <ol>
+                            <li>
+                                <span class="font-weight-700">Price Range:</span> ₹4.87 - ₹6.45 lakhs (ex-showroom)
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Engine:</span> 1.1-litre, 4-cylinder petrol engine
+                            </li>
+                            <li>
+                                <span class="font-weight-700">Mileage:</span> 20 km/l (approx.)
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/blogs/2024/topaffordablecarvariantsunder6lakhsinindiavalueformoneychoices/hyundai santro.webp" alt="Hyundai Santro" title="Hyundai Santro" /></center></div>
+                </div>
+                <p><span class="font-weight-700">Why Choose Hyundai Santro?</span> The Santro is ideal for those who want a spacious, refined, and easy-to-drive vehicle. Known for its reliability and smooth engine, the Magna variant offers a good mix of features within budget, including a 7-inch infotainment system, rear AC vents, and dual airbags. It’s also a comfortable choice for families needing an affordable car with ample space.</p>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @*  <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

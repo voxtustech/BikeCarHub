@@ -1,0 +1,29 @@
+﻿@model Cars_Bikes.Models.TWEVAppFeatures
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <h2>Are you sure you want to delete this?</h2>
+
+                    <div>
+                        <h4>@Model.TWName - @Model.Varients</h4>
+                        <form asp-action="DeleteConfirmed">
+                            <input type="hidden" asp-for="TWEVAppFeaturesId" />
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

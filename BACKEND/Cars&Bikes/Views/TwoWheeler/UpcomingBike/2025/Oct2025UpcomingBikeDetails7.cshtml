@@ -1,0 +1,400 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "KTM 125 Duke 2025: Specs, Price, Launch";
+}
+@section MetaTags {
+    <meta name="keywords" content="KTM 125 Duke 2025, KTM Duke 125, 2025 KTM Duke, KTM 125 Duke price, KTM 125 Duke launch date, KTM 125 Duke specs, KTM 125 Duke review, KTM new bike, entry-level performance bike, KTM Duke 2025 India, BikeCarHub, KTM 125 Duke rivals, 2025 motorcycle." />
+    <meta name="description" content="Get the full scoop on the 2025 KTM 125 Duke. Find out about its expected price, launch date, new features, and how it stacks up against rivals." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">The Next Generation Unleashed: A Deep Dive into the 2025 KTM 125 Duke</h3>
+                <h3 class="subheading">Introduction: A Legacy Reimagined</h3>
+                <p>For a young rider in India, the name "KTM Duke" is more than just a motorcycle; it's a statement. It represents raw aggression, uncompromised performance, and a rebellious spirit that stands out in a crowd. The KTM 125 Duke, in particular, has carved out a unique niche for itself, becoming the gateway into the world of premium motorcycling for thousands of enthusiasts. Now, as we look ahead, the whispers in the two-wheeler industry are turning into a roar. KTM is on the verge of launching the next generation of its entry-level beast, the 2025 KTM 125 Duke. This isn't just a minor update; it's a complete overhaul designed to solidify its position as the undisputed king of the 125cc segment. This article, brought to you by <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a>, will explore every facet of the new model, from its radical new design to its expected performance, pricing, and how it stacks up against its rivals.</p>
+                <h3 class="subheading">A Design Revolution: Sharper, More Aggressive, and Ready to Pounce</h3>
+                <p>The current KTM 125 Duke, while already a looker, is about to get a major style upgrade. The 2025 model is expected to adopt the latest "Scalpel" design language from its larger siblings, the 390 Duke and 250 Duke. This means sharper lines, more aggressive tank shrouds, and a predatory stance that looks ready to attack the asphalt. The iconic headlamp unit will likely be replaced by a new, more compact LED headlight, flanked by striking daytime running lights (DRLs) that give the bike a distinct and intimidating front fascia.<br /><br />
+                    One of the most noticeable changes will be the revamped chassis and bodywork. The new bike is rumored to feature a redesigned steel trellis frame with a pressure die-cast aluminum subframe, a setup that not only enhances structural rigidity but also contributes to the bike's aggressive and minimalistic rear end. The new bodywork will be a blend of sharp, angular panels that seamlessly integrate with the exposed frame, highlighting the bike's raw, naked streetfighter DNA. From the aggressive fuel tank to the sculpted seat, every element is meticulously crafted to exude a sense of purpose and power. The 2025 KTM 125 Duke will not just be a motorcycle you ride; it will be a statement of style and attitude on the road.
+                </p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/ktm 125 duke/duke-125-2024-right-front-three-quarter-3.webp"
+                             alt="KTM 125 Duke 1" title="KTM 125 Duke 1" loading="lazy" />
+                    </div>
+                </div>
+                <h3 class="subheading">Expected Price and Launch Timeline: What to Expect and When</h3>
+                <p>
+                    The current KTM 125 Duke already commands a premium price tag in its segment, and the 2025 model, with its significant upgrades, is expected to be no different. The additional technology and premium components will undoubtedly lead to an increase in cost. Based on industry speculation and pricing trends of recent KTM launches, the 2025 KTM 125 Duke is likely to have an ex-showroom price in the range of <span class="font-weight-700">₹1.75 lakh to ₹1.80 lakh.</span> This would make it one of the most expensive 125cc motorcycles in the market, but as always with KTM, the price is justified by the premium hardware and performance on offer.<br /><br />
+                    As for the launch timeline, the new-generation Dukes have already made their international debut. In India, we can expect the 2025 KTM 125 Duke to hit the streets sometime in October 2025, with some sources pointing to a tentative launch in <span class="font-weight-700">October 2025</span>. This allows KTM to fine-tune the final product for the Indian market and ensures a seamless transition for the brand's most accessible model. While a specific date is yet to be officially announced, the anticipation among young riders is already at an all-time high.
+                </p>
+                <h3 class="subheading">Unleashing the "Spawns of the Beast": Engine and Performance</h3>
+                <p>The heart of any KTM Duke is its engine, and the 2025 125 Duke is no exception. While it will retain the 125cc displacement, the engine is expected to be an updated version of the existing liquid-cooled, single-cylinder unit. KTM has a reputation for squeezing every last bit of performance out of its engines, and the new 125 Duke will be no different.</p>
+                <ul>
+                    <li><span class="font-weight-700">Engine & Power:</span> The new engine, a reworked LC4c unit, is rumored to produce a peak power of around <span class="font-weight-700">14.5 PS</span> and a torque output of approximately <span class="font-weight-700">12 Nm.</span> While these figures might seem modest on paper, the bike's lightweight nature and a sharp throttle response will make for an exhilarating ride. The linear power delivery and the slick 6-speed gearbox will ensure a fun and engaging riding experience, whether you're navigating city traffic or carving through winding roads.</li>
+                    <li><span class="font-weight-700">Chassis and Handling:</span> The biggest change will come in the form of the new chassis. The revamped steel trellis frame and the lighter aluminum subframe will significantly improve the bike's agility and handling. The suspension duties will be handled by top-of-the-line WP APEX suspension components. We can expect a 43mm USD (Upside-Down) fork at the front and a preload-adjustable monoshock at the rear. This premium suspension setup will not only absorb bumps with ease but also provide exceptional feedback and stability, making the bike feel planted and confidence-inspiring in corners.</li>
+                    <li><span class="font-weight-700">Braking and Safety:</span> Braking will be handled by a high-tech ByBre braking system, with a large disc at the front and a smaller one at the rear. The most significant upgrade here will be the introduction of <span class="font-weight-700">Dual-Channel ABS</span>, a crucial safety feature that will be a massive improvement over the current model's single-channel ABS. This will provide riders with superior stopping power and control in all conditions. There are also rumors of an advanced cornering ABS and a Supermoto ABS mode, features that are unheard of in this segment.</li>
+                </ul>
+                <h3 class="subheading">The Rivals: A Clash of Titans</h3>
+                <p>The 2025 KTM 125 Duke will enter a highly competitive segment, with rivals that offer a compelling mix of performance, features, and price. While the 125 Duke has always been the most premium and feature-rich option, the competition is catching up.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Model</th>
+                                <th class="font-weight-600 text-center">Expected Price (Ex-showroom)</th>
+                                <th class="font-weight-600 text-center">Engine Displacement</th>
+                                <th class="font-weight-600 text-center">Max Power</th>
+                                <th class="font-weight-600 text-center">Key Features</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>KTM 125 Duke (2025)</td>
+                                <td>₹1.75 - ₹1.80 lakh</td>
+                                <td>124.99cc</td>
+                                <td>14.5 PS</td>
+                                <td>Dual-Channel ABS, TFT display, Cornering ABS, new chassis</td>
+                            </tr>
+                            <tr>
+                                <td>Yamaha MT-15 V2</td>
+                                <td>₹1,55,469-₹1,74,250</td>
+                                <td>155cc</td>
+                                <td>18.4 PS</td>
+                                <td>Liquid-cooled, VVA technology, Dual-Channel ABS, Bluetooth connectivity</td>
+                            </tr>
+                            <tr>
+                                <td>TVS Apache RTR 160 4V</td>
+                                <td>₹1,15,852 - ₹1,35,840</td>
+                                <td>159.7cc</td>
+                                <td>17.55 PS</td>
+                                <td>Multiple ride modes, Dual-Channel ABS, GTT technology</td>
+                            </tr>
+                            <tr>
+                                <td>Bajaj Pulsar N160</td>
+                                <td>₹1,16,773</td>
+                                <td>164.82cc</td>
+                                <td>16 PS</td>
+                                <td>Dual-Channel ABS, underbelly exhaust, single-cylinder oil-cooled</td>
+                            </tr>
+                            <tr>
+                                <td>Hero Xtreme 125R</td>
+                                <td>₹91,116 - ₹94,504</td>
+                                <td>125cc</td>
+                                <td>11.4 bhp</td>
+                                <td>Single-Channel ABS, LED lighting, digital console, affordable price</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>While rivals like the Yamaha MT-15 V2 offer a larger and more powerful engine, the new 125 Duke is expected to counter with its premium hardware, superior electronics, and an overall more engaging and sporty riding experience. The TVS Apache and Bajaj Pulsar models, while offering more power for less money, lack the premium feel and high-end components that a KTM offers. The new 125 Duke aims to be a complete package for riders who value a top-tier riding experience above all else.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height">
+                        <img src="~/images/twowheeler/upcomming/2025/ktm 125 duke/duke-125-2024-right-rear-three-quarter-22.webp"
+                             alt="KTM 125 Duke 2" title="KTM 125 Duke 2" loading="lazy" />
+                    </div>
+                </div>
+                <h3 class="subheading">The All-New Features: A Tech-Loaded Beast</h3>
+                <p>The 2025 KTM 125 Duke is not just about raw power; it's also a technological marvel. It is set to inherit a host of features from its bigger siblings, making it the most feature-loaded bike in its class.</p>
+                <ul>
+                    <li><span class="font-weight-700">TFT Display:</span> The most significant upgrade will be a full-color TFT display, replacing the older LCD unit. This new display will not only look stunning but also offer a wealth of information, including real-time mileage, gear position, and a host of other ride statistics.</li>
+                    <li><span class="font-weight-700">Smartphone Connectivity:</span> The new TFT display is expected to come with smartphone connectivity via Bluetooth, allowing riders to manage calls, music, and turn-by-turn navigation directly from the console. This is a premium feature that will set the 125 Duke apart from its rivals.</li>
+                    <li><span class="font-weight-700">Cornering ABS and Supermoto ABS:</span> The introduction of Cornering ABS is a groundbreaking safety feature for this segment. It uses an IMU (Inertial Measurement Unit) to calculate the lean angle and adjust braking force accordingly, preventing the wheels from locking up in a corner. The Supermoto ABS mode, on the other hand, will allow riders to disengage ABS on the rear wheel, allowing for controlled slides and a more aggressive riding style.</li>
+                    <li><span class="font-weight-700">LED Lighting:</span> The bike will feature all-around LED lighting, including a new headlamp, tail lamp, and turn indicators, ensuring excellent visibility and giving the bike a modern, premium feel.</li>
+                </ul>
+                <h3 class="subheading">A Human Perspective: Why the 125 Duke Matters</h3>
+                <p>For many, the KTM 125 Duke is more than a stepping stone; it's a dream. It's the bike that introduces them to the world of performance motorcycling. The 2025 model, with its substantial upgrades, promises to make that dream even sweeter. It’s for the rider who isn’t looking for just a commuter but a machine that excites them every time they swing a leg over it. It’s for the urban warrior who wants to slice through traffic with unparalleled agility and for the weekend rider who wants to take on twisty roads with confidence. The new 125 Duke is a testament to KTM's "Ready to Race" philosophy, bringing race-bred technology and performance to a motorcycle that is accessible to a wider audience. The team at <span class="font-weight-700">BikeCarHub</span> believes this bike will continue to be a runaway success, thanks to its unique combination of premium features, aggressive styling, and exhilarating performance. It’s a small bike with a big attitude, and the 2025 model will only amplify that persona.</p>
+                <h3 class="subheading">Specifications & Features Comparison Table</h3>
+                
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature</th>
+                                <th class="font-weight-600 text-center">KTM 125 Duke (2025) (Expected)</th>
+                                <th class="font-weight-600 text-center">Yamaha MT-15 V2</th>
+                                <th class="font-weight-600 text-center">TVS Apache RTR 160 4V</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engine Type</td>
+                                <td>Liquid-cooled, single-cylinder</td>
+                                <td>Liquid-cooled, single-cylinder</td>
+                                <td>Oil-cooled, single-cylinder</td>
+                            </tr>
+                            <tr>
+                                <td>Displacement</td>
+                                <td>124.99cc</td>
+                                <td>155cc</td>
+                                <td>159.7cc</td>
+                            </tr>
+                            <tr>
+                                <td>Max Power</td>
+                                <td>14.5 PS @@ 9250 rpm</td>
+                                <td>18.4 PS @@ 10,000 rpm</td>
+                                <td>17.55 PS @@ 9,250 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Max Torque</td>
+                                <td>12 Nm @@ 8000 rpm</td>
+                                <td>14.1 Nm @@ 7,500 rpm</td>
+                                <td>14.73 Nm @@ 7,250 rpm</td>
+                            </tr>
+                            <tr>
+                                <td>Gearbox</td>
+                                <td>6-speed</td>
+                                <td>6-speed</td>
+                                <td>6-speed</td>
+                            </tr>
+                            <tr>
+                                <td>Suspension (Front)</td>
+                                <td>WP APEX USD Forks</td>
+                                <td>Telescopic Forks</td>
+                                <td>Telescopic Forks</td>
+                            </tr>
+                            <tr>
+                                <td>Suspension (Rear)</td>
+                                <td>WP APEX Monoshock</td>
+                                <td>Monoshock</td>
+                                <td>TMonoshock</td>
+                            </tr>
+                            <tr>
+                                <td>Brakes</td>
+                                <td>Disc (Front & Rear)</td>
+                                <td>Disc (Front & Rear)</td>
+                                <td>Disc (Front & Rear)</td>
+                            </tr>
+                            <tr>
+                                <td>ABS</td>
+                                <td>Dual-Channel (Cornering & Supermoto ABS)</td>
+                                <td>Dual-Channel ABS</td>
+                                <td>Single-Channel ABS</td>
+                            </tr>
+                            <tr>
+                                <td>Lighting</td>
+                                <td>Full LED</td>
+                                <td>Full LED</td>
+                                <td>Full LED</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument Cluster</td>
+                                <td>Full-color TFT display</td>
+                                <td>Fully digital LCD</td>
+                                <td>Fully digital LCD</td>
+                            </tr>
+                            <tr>
+                                <td>Connectivity</td>
+                                <td>Bluetooth, Navigation</td>
+                                <td>Bluetooth, Y-Connect</td>
+                                <td>Bluetooth, SmartXonnect</td>
+                            </tr>
+                            <tr>
+                                <td>Kerb Weight</td>
+                                <td>154 kg</td>
+                                <td>141 kg</td>
+                                <td>146 kg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">Conclusion: The Future of Entry-Level Performance</h3>
+                <p>The <span class="font-weight-700">2025 KTM 125 Duke</span> is poised to be a game-changer. It represents a bold step by KTM to bring top-tier features and performance to a segment that has long been dominated by commuter motorcycles. With its aggressive new design, premium hardware, and a host of advanced electronics, the new 125 Duke is not just an upgrade; it's a redefinition. For young riders and seasoned enthusiasts alike, this bike promises an exhilarating, safe, and technologically advanced riding experience. It will continue to be the aspirational entry-level motorcycle that sets the benchmark for others to follow.</p>
+                <h3 class="subheading">FAQs: Your Questions Answered</h3>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                1. When is the 2025 KTM 125 Duke launching in India?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The 2025 KTM 125 Duke is expected to launch in India in late 2025, with a tentative timeline around October 2025.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                2. What will be the price of the new KTM 125 Duke?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The expected ex-showroom price is between <strong>₹1.75 lakh and ₹1.80 lakh</strong> due to the premium upgrades and new features.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                3. Will the 2025 model get a new engine?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                While the displacement remains 125cc, the engine is expected to be a significantly updated version of the LC4c unit, offering smoother performance and more power.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                4. Does the new 125 Duke have dual-channel ABS?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Yes, a major upgrade for the 2025 model is the inclusion of dual-channel ABS for enhanced safety.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                5. What are the key new features of the 2025 KTM 125 Duke?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Key new features include a full-color TFT display, dual-channel ABS, smartphone connectivity, and a redesigned chassis and bodywork.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                6. How does the new 125 Duke compare to the Yamaha MT-15?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The new 125 Duke will be more premium with features like a TFT display and Cornering ABS, while the Yamaha MT-15 has a more powerful 155cc engine.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                7. Is the new 125 Duke a good bike for beginners?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Yes, with its powerful yet manageable engine, premium safety features like ABS, and excellent handling, the new 125 Duke is an ideal bike for new riders.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                                8. Will the new model be heavier than the current one?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The new model's kerb weight is expected to be around 154 kg, which is slightly less than the current model's 159 kg, contributing to better handling.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                                9. What is the top speed of the new 125 Duke?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The new 125 Duke is expected to have a top speed of around <strong>110-120 km/h</strong>, making it a capable bike for highway riding.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                                10.	Can I expect good mileage from the new 125 Duke?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Despite its performance-oriented nature, the liquid-cooled engine is designed to be efficient. You can expect a real-world mileage of around 40-45 kmpl.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        }
+        @*
+        <!-- Bike 1 -->
+        <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+        <div class="upcoming-bikes-details-row">
+            @foreach (var allUpbike in ViewBag.allupcomingbike)
+            {
+                <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                    <div class="upcoming-bikes-details-card">
+                        <div class="upcoming-bikes-all-image">
+                            <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                        </div>
+
+                        <div class="upcoming-allbikes-details-content">
+                            <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                            <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                            <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+        *@
+        @await Html.PartialAsync("_AllViewComponent")
+    </div>
+</body>

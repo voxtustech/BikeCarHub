@@ -1,0 +1,608 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Mahindra BE 6 Formula E Edition: Price, Specs & Review | BikeCarHub";
+}
+@section MetaTags {
+    <meta name="keywords" content="Mahindra BE 6 Formula E Edition, BE 6 EV, Mahindra Formula E Price, 683 km Range EV, Mahindra INGLO Platform, Electric SUV India, Mahindra Racing Edition, FE2, FE3, bikecarhub." />
+    <meta name="description" content="Discover the Mahindra BE 6 Formula E Edition: the race-inspired EV with 683 km range, 282 bhp, and exclusive features. Get specs, pricing, and comparison details at bikecarhub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+
+
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <h3 class="subheading">
+                    The Mahindra BE 6 Formula E Edition: Bringing the Racetrack Thrill to the Street
+                </h3>
+                <h5 class="subheading">The Fusion of Motorsport and Mobility</h5>
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                
+                @* <p>The automotive world is witnessing a dramatic shift, driven by the dual forces of electrification and high-octane motorsport excitement. Bridging these two dynamic worlds is a feat few manufacturers can claim, but the Indian automotive giant Mahindra has emphatically stepped forward to redefine the equation. Introducing the highly-anticipated <span class="font-weight-700">Mahindra BE 6 Formula E Edition,</span> the company has rolled out what is proudly proclaimed as the world’s first Formula E-themed special edition SUV. This remarkable electric vehicle (EV) is far more than just a cosmetic upgrade; it is a profound celebration of Mahindra’s deep-rooted and successful involvement in the ABB FIA Formula E World Championship.</p> *@
+                <p>For those who follow the electric motorsport scene, Mahindra Racing has become synonymous with innovation and competitive spirit, being the only Indian team to claim victory on the Formula E grid. This special edition BE 6 captures that pedigree and channels the racing team's technological prowess and design intensity directly into a street-legal machine. The BE 6 is part of Mahindra’s Born Electric (BE) range, built upon the revolutionary INGLO platform, marking the company's "Scream Electric" philosophy. This edition doesn't just whisper 'electric'; it shouts 'performance' with every meticulously crafted detail.</p>
+                <p>The launch of the BE 6 Formula E Edition is a defining moment, particularly for the burgeoning youth audience in India who view racing not just as a sport, but as a lifestyle statement. As R Velusamy, President - Automotive Business, Mahindra & Mahindra Ltd., highlighted, this vehicle was "built by listening to that energy," translating a cultural shift into a machine that is bold, emotional, and proudly made in India. It is designed to be the perfect conduit for the energy, thrill, and uncompromised style of electric racing, making it a must-have for the discerning enthusiast browsing sites like <span class="font-weight-700">BikeCarHub </span>for the latest and greatest in the EV segment.</p>
+                <h3 class="subheading">Design Philosophy: The Race-to-Road Aesthetic</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/mahindra be/left.webp" alt="left" title="left" loading="lazy" /></div>
+                </div>
+                <p>The design language of the BE 6 Formula E Edition is a masterclass in aggressive, aerodynamic styling, expertly integrating motorsport cues without sacrificing everyday functionality. The mandate given to the design team was clear: infuse every element with 'motorsport intensity.' The result is a vehicle that looks like it belongs both on the grid and gliding silently through city streets.</p>
+                <p><span class="font-weight-700">A. Exterior: Aerodynamics, Decals, and the Iconic Orange Accent</span></p>
+                <p>The special edition immediately differentiates itself from the standard BE 6 with a suite of race-inspired modifications. The front fascia undergoes a dramatic transformation, moving towards a more aggressive stance. Notably, the BE 6 Formula E Edition features distinctive <span class="font-weight-700">circular LED projector headlamps, </span>a striking change from the standard version, giving it a unique, focused look.</p>
+                <p>The bumpers, both front and rear, have been significantly reworked. The front bumper is sculpted for superior airflow, while the rear features a new, faux skid plate finished in brushed aluminium, replacing some of the standard model’s diffuser elements with a cleaner, yet pronounced aesthetic. Aerodynamics play a key role, highlighted by the addition of an <span class="font-weight-700">aero wing </span>and a secondary<span class="font-weight-700"> integrated spoiler </span>on the boot lid, elements designed to manage and break airflow effectively, increasing stability at higher speeds—a true nod to its racing heritage.</p>
+                <p>The commitment to the Formula E theme is most visible in the details:</p>
+                <ul>
+                    <li><span class="font-weight-700">Colour Palette: </span>Available in four distinctive colours—Firestorm Orange, Tango Red, Everest White, and Stealth Black—each shade accentuates the vehicle's dynamic lines.</li>
+                    <li><span class="font-weight-700">Formula E Graphics: </span>The bodywork is adorned with bespoke, race-themed graphics and decals on the doors, fenders, and bonnet, making its racing DNA unmistakable.</li>
+                    <li><span class="font-weight-700">Orange Accents:</span> Signature orange highlights—the official colour of Mahindra Racing—are strategically placed on the front grille elements, the orange tow hook, and the<span class="font-weight-700"> red brake calipers </span>visible through the wheels, adding a performance-focused visual flair.</li>
+                    <li><span class="font-weight-700">Wheels:</span> The SUV sits proudly on specially designed <span class="font-weight-700">20-inch alloy wheels</span> with a dark-tinted finish, featuring an aero-focused design inspired by the 2023 Rall-E concept car, further underscoring its performance credentials.</li>
+                    <li><span class="font-weight-700">Lighting: </span>The rear features a sleek, sophisticated LED lightbar connecting the taillights, ensuring a high-tech and premium appearance.</li>
+                </ul>
+                <p><span class="font-weight-700">B. Interior: Cockpit-Inspired Luxury and Racing Spirit</span></p>
+                <p>Step inside the BE 6 Formula E Edition, and the cabin echoes the exterior’s performance narrative while wrapping occupants in luxurious, cutting-edge technology. The standard BE 6 interior is carried over but elevated with subtle yet impactful Formula E-specific detailing.</p>
+                <p>The key aesthetic changes include:</p>
+                <ul>
+                    <li><span class="font-weight-700">Carbon-Fibre Finishes:</span> The dashboard and door trims receive a premium, high-performance touch with carbon-fibre finished elements, providing a tactile sense of motorsport-grade quality.</li>
+                    <li><span class="font-weight-700">Formula E Branding: </span>Exclusive Formula E badging and unique orange stitching are found on the seats and seat belts, continuously reminding the driver and passengers of the vehicle's special status.</li>
+                    <li><span class="font-weight-700">Celebratory Plaque:</span> A unique celebratory plaque is fixed on the centre console, confirming the vehicle's limited-edition nature and connection to Mahindra Racing.</li>
+                    <li><span class="font-weight-700">Unique Roof Pattern: </span>Even the large fixed panoramic sunroof features a distinct pattern—vertical stripes—further customizing the in-cabin experience.</li>
+                </ul>
+                <p>The use of an orange theme throughout the cabin, from the seat accents to the ambient lighting, creates a focused, energetic, and immersive environment that genuinely feels like a bridge between the street and the racing cockpit.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading">The INGLO Platform: Foundation of the Electric Future</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/mahindra be/red.webp" alt="red" title="red" loading="lazy" /></div>
+                </div>
+
+                <p>At the heart of the Mahindra BE 6 Formula E Edition lies the revolutionary <span class="font-weight-700">INGLO (INdia Global) </span>electric origin architecture. This dedicated EV skateboard platform is the backbone of Mahindra’s entire Born Electric range and is crucial to the BE 6’s packaging, performance, and impressive range capabilities.</p>
+                <p>The INGLO platform is a modular, flexible chassis engineered purely for electrification, allowing for better weight distribution, a lower centre of gravity, and maximized interior space—a key advantage over conventional cars adapted for EV use. The 3-in-1 integrated powertrain is optimized for this architecture, providing efficiency and power delivery that can truly rival global benchmarks.</p>
+                <p>The structural integrity of the platform is also a major highlight, engineered to incorporate a robust battery protection frame and safety features that secure the LFP (Lithium Iron Phosphate) battery pack. This grounds-up approach ensures that the BE 6 is not just fast, but fundamentally safe and stable. The high-power steering with Variable Gear Ratio (VGR) built into the INGLO architecture allows for an impressively tight turning circle (10m TCD), making the 4,371mm long SUV surprisingly nimble for its size in city environments.</p>
+                <h3 class="subheading">Power and Performance: An Electrifying Thrill</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/mahindra be/side.webp" alt="side" title="side" loading="lazy" /></div>
+                </div>
+
+                <p>The essence of the Formula E Edition is performance, and Mahindra has ensured that the BE 6 lives up to its race-inspired identity. Unlike the standard BE 6, which offers multiple battery and power options, the Formula E Edition is exclusively powered by the larger, high-performance <span class="font-weight-700">79 kWh battery pack.</span></p>
+                <p><span class="font-weight-700">A. Motor and Torque Delivery</span></p>
+                <p>The electric motor setup is a potent, rear-mounted Permanent Magnet Synchronous Motor (PMSM), driving the rear wheels (RWD).</p>
+                <ul>
+                    <li><span class="font-weight-700">Maximum Power: </span>282 bhp (or 285 PS / 210 kW)</li>
+                    <li><span class="font-weight-700">Peak Torque:</span> 380 Nm</li>
+                </ul>
+                <p>This configuration delivers instantaneous and thrilling acceleration. The claimed <span class="font-weight-700">0-100 km/h sprint is dispatched in a swift 6.7 seconds, </span>firmly placing the BE 6 Formula E Edition in the league of performance SUVs. The top speed is a respectable 202 km/h. Furthermore, the edition features <span class="font-weight-700">Race-mode-inspired torque delivery,</span> ensuring that the driver feels a sharper, more immediate response from the throttle, mirroring the aggressive power delivery expected in a competitive racing environment. The driving modes and multi-step regeneration, controllable via paddle shifters, allow the driver to fine-tune the performance characteristics to suit their mood or the driving conditions.</p>
+                <p><span class="font-weight-700">B. Advanced Dynamics and Braking</span></p>
+                <p>Performance is incomplete without control. The BE 6 Formula E Edition, particularly the top-spec FE3 variant, takes this aspect seriously by offering<span class="font-weight-700"> adaptive suspension. </span>This advanced technology allows the suspension damping characteristics to be continuously adjusted in real-time based on road conditions, speed, and driving input. This translates to an unparalleled combination of a firm, planted feel during aggressive cornering and a plush, comfortable ride on poor road surfaces—a distinct advantage over its rivals.</p>
+                <p>Complementing the power is the sophisticated <span class="font-weight-700">Brake-by-wire technology </span>with an Integrated Electronic Booster (IEB), ensuring precise, consistent, and powerful stopping force. All four wheels are fitted with disc brakes, providing confidence-inspiring control even when attempting high-speed maneuvers.</p>
+                <h3 class="subheading">Range and Efficiency: Going the Distance</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/blogs/2025/nov/mahindra be/black.webp" alt="black" title="black" loading="lazy" /></div>
+                </div>
+
+                <p>While performance is paramount for a special edition, an electric vehicle’s true measure of success in the mainstream market, as often discussed on platforms like <span class="font-weight-700">BikeCarHub, </span>is its range and charging capability. The Mahindra BE 6 Formula E Edition excels here, leveraging the full potential of its 79 kWh battery.</p>
+                <p><span class="font-weight-700">A. Impressive Range Figures</span></p>
+                <p>The BE 6 Formula E Edition boasts a certified range (MIDC P1+P2 combined) of an outstanding <span class="font-weight-700">682 km to 683 km </span>on a single charge. While standardized testing cycles often yield higher numbers, Mahindra has also provided a more realistic claimed<span class="font-weight-700"> real-world range of 500 km. </span>This figure is highly competitive and effectively eliminates range anxiety for daily commutes and even intercity travel, positioning the BE 6 as a leader in its segment for practical, long-distance electric mobility.</p>
+                <p><span class="font-weight-700">B. Charging Technology: Back on Track Quickly</span></p>
+                <p>The INGLO platform is designed for high-speed charging capabilities. The BE 6 Formula E Edition supports impressive DC Fast Charging speeds, making pit stops swift and efficient:</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Charging Specification</th>
+                                <th class="font-weight-600 text-center">Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Battery Capacity</td>
+                                <td>79 kWh (Lithium Ion)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">DC Fast Charging Capacity</td>
+                                <td>Up to 180 kW</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Fast Charging Time (20–80%)</td>
+                                <td>Approximately 20 minutes (with 180 kW charger)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">AC Charging Time (0–100%)</td>
+                                <td>Approximately 8 hours (with 7.2 kW charger)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>This rapid charging capability means drivers spend less time waiting and more time enjoying the drive, a significant selling point that appeals to the modern, time-conscious customer.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading">Features and Technology: The Intelligent Electric Cockpit</h3>
+                <p>The BE 6 Formula E Edition is thoroughly modern, packing a comprehensive suite of features and integrated technology designed for comfort, connectivity, and safety, all powered by Mahindra’s advanced AdrenoX AI interface and MAIA, the "fastest automotive mind in the world."</p>
+                <p><span class="font-weight-700">A. Infotainment and Connectivity</span></p>
+                <p>The vehicle’s digital interface is dominated by a stunning, cohesive display setup:</p>
+                <ul>
+                    <li><span class="font-weight-700">Twin 12.3-inch Screens:</span> The dashboard features dual screens—one for the digital driver's display (instrument cluster) and one for the curved infotainment touchscreen—creating a seamless, high-definition digital cockpit experience.</li>
+                    <li><span class="font-weight-700">Premium Audio:</span> Entertainment is handled by an exceptional<span class="font-weight-700"> 16-speaker Harman Kardon sound system,</span> complete with <span class="font-weight-700">Dolby Atmos</span> spatial audio technology, ensuring a rich, immersive acoustic experience for all passengers.</li>
+                    <li><span class="font-weight-700">Seamless Integration:</span>The system supports wireless Apple CarPlay and Android Auto, ensuring easy smartphone connectivity, alongside voice-activated controls for navigation, climate, and media.</li>
+                    <li><span class="font-weight-700">OTA Updates:</span> The vehicle is future-proofed with Over-The-Air (OTA) updates, allowing Mahindra to continuously enhance the software and introduce new features after purchase.</li>
+                </ul>
+                <p><span class="font-weight-700">B. Comfort and Convenience</span></p>
+                <p>The focus on a premium, comfortable experience is evident in the luxury amenities:</p>
+                <ul>
+                    <li><span class="font-weight-700">Seating:</span> Leatherette seat upholstery, ventilated front seats with 6-way power adjustment, and a practical 60:40 split rear seat enhance passenger comfort and versatility.</li>
+                    <li><span class="font-weight-700">Climate Control: </span>Dual-zone climate control allows the driver and front passenger to set individual temperature preferences, with rear AC vents ensuring comfort for those in the back.</li>
+                    <li><span class="font-weight-700">Storage and Charging: </span>Features like a wireless phone charger, multiple charging ports including a powerful 65W Type-C fast charger, and ample storage solutions cater to the needs of the connected generation.</li>
+                    <li><span class="font-weight-700">Premium Touches: </span>Auto-dimming IRVM (Inside Rear View Mirror), auto headlamps, rain-sensing wipers, and high-quality laminated door glass for enhanced noise reduction all contribute to a refined driving atmosphere.</li>
+                </ul>
+                <h3 class="subheading">Safety and Assistance Systems</h3>
+                <p>Safety is non-negotiable, and the BE 6 Formula E Edition is equipped with a comprehensive safety arsenal, built on the robust INGLO platform's foundation.</p>
+                <ul>
+                    <li><span class="font-weight-700">Passive Safety:</span> The SUV is protected by<span class="font-weight-700"> six airbags</span> (Driver, Front Passenger, 2 Curtain, Driver Side, Front Passenger Side) as standard, along with disc brakes on all four wheels, ABS with EBD, and electronic stability control (ESP).</li>
+                    <li><span class="font-weight-700">Driver Assistance:</span> Key driver assistance features include a<span class="font-weight-700"> 360-degree camera</span> with a Blind Spot Monitor, a Tyre Pressure Monitoring System (TPMS), and Driver Drowsiness Detection.</li>
+                    <li><span class="font-weight-700">ADAS Context: </span>A crucial point for prospective buyers on <span class="font-weight-700">BikeCarHub</span> to note is the variant-specific feature distribution. While the standard BE 6 offers Level 2 ADAS on certain high-end trims, the <span class="font-weight-700">FE2 variant of the Formula E Edition prioritizes features like the 360-degree camera and front parking sensors over the full ADAS suite.</span> The ADAS features (such as Adaptive Cruise Control and Lane Keep Assist) are often considered vital, so buyers must weigh their priorities between the race-themed aesthetics/exclusivity package and the ADAS capability. The optional FE3 trim primarily focuses on enhanced dynamics via the adaptive suspension.</li>
+                </ul>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading">Price, Variants, and Booking Exclusivity</h3>
+                <p>The Mahindra BE 6 Formula E Edition is positioned as a highly desirable, mid-to-high-spec offering within the BE 6 lineup, offering unique features that the standard variants lack.</p>
+                <p><span class="font-weight-700">A. Pricing and Variants (Ex-Showroom, India)</span></p>
+                <p>The special edition is available in two distinct trims, exclusively featuring the 79 kWh battery pack:</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Variant</th>
+                                <th class="font-weight-600 text-center">Key Feature Additions</th>
+                                <th class="font-weight-600 text-center">Price (Ex-showroom, INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">FE2</td>
+                                <td>Formula E Design Pack, 20&quot; Aero Wheels, 360° Camera, Harman Kardon Audio</td>
+                                <td class="font-weight-600">₹23.69 Lakh</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">FE3</td>
+                                <td>Adds Adaptive Suspension, Additional Comfort Features</td>
+                                <td class="font-weight-600">₹24.49 Lakh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><span class="font-weight-700">Booking and Delivery: ,</span>Bookings for this limited-run model are set to open on<span class="font-weight-700"> January 14, 2026,,</span> with deliveries commencing exactly one month later, on <span class="font-weight-700">February 14, 2026.,</span></p>
+                <p><span class="font-weight-700">B. The Exclusivity Package: More Than Just a Car,</span></p>
+                <p>Mahindra has packaged the first 999 units of the Formula E Edition with an unprecedented suite of exclusive benefits, transforming the purchase into a premium ownership experience centered around motorsport fandom.</p>
+                <p><span class="font-weight-700">Benefits for the First 999 Customers:,</span></p>
+                <ol start="1">
+                    <li><span class="font-weight-700">Track Day Experience:,</span> An invitation to a personalized track day at the Mahindra Proving Track in Chennai, potentially alongside renowned racers like brand ambassador Kush Maini.</li>
+                    <li><span class="font-weight-700">Collector’s Box:</span>A bespoke box filled with authentic Mahindra Racing memorabilia and merchandise.</li>
+                    <li><span class="font-weight-700">Special Number Decal: ,</span>The customer receives a choice of a special number decal (0–99) to be placed on the side door of their vehicle.</li>
+                    <li><span class="font-weight-700">Engraved Name:,</span> The buyer's name will be engraved on the brand's actual Formula E race car for the London E-Prix in 2026, and also displayed inside the Mahindra Racing team's headquarters—a truly unique connection to the racing team.</li>
+                    <li><span class="font-weight-700">Mini Replica:,</span> The children of the BE 6 owners will receive a fun, race-themed mini replica of the EV (the Ride-On Edition), priced separately but included for the first 999 customers, ensuring the racing spirit is passed on.</li>
+                </ol>
+                <p><span class="font-weight-700">London E-Prix Dream: ,</span>Three supremely lucky customers will be chosen to receive an all-expenses-paid trip to the prestigious<span class="font-weight-700"> London E-Prix in August 2026,</span> including exclusive paddock access and a meet-and-greet with the Mahindra Racing team. This unprecedented level of engagement highlights Mahindra’s commitment to making the BE 6 Formula E Edition a celebratory and emotional purchase.</p>
+                <h3 class="subheading">Comparison with Key Rivals</h3>
+                <p>The Mahindra BE 6 Formula E Edition operates in a highly competitive electric SUV-coupe segment, often challenging rivals from both domestic and international brands. Its direct competitors are the high-end variants of other upcoming and existing premium EVs.</p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature / Model</th>
+                                <th class="font-weight-600 text-center">Mahindra BE 6 Formula E (79 kWh)</th>
+                                <th class="font-weight-600 text-center">Tata Harrier EV (Estimated Top Spec)</th>
+                                <th class="font-weight-600 text-center">Tata Curvv EV (Top Spec)</th>
+                                <th class="font-weight-600 text-center">MG ZS EV (Top Spec)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Ex-Showroom Price (INR)</td>
+                                <td class="font-weight-600">₹23.69 - ₹24.49 Lakh</td>
+                                <td>₹21.49 - ₹30.23 Lakh</td>
+                                <td>₹17.49 - ₹22.24 Lakh</td>
+                                <td>₹17.99 - ₹20.50 Lakh</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Platform</td>
+                                <td class="font-weight-600">INGLO (Dedicated EV)</td>
+                                <td>OMEGA Arc (Adapted/EV ready)</td>
+                                <td>Acti.EV (Modular EV)</td>
+                                <td>Legacy EV Platform</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Battery Size</td>
+                                <td class="font-weight-600">79 kWh</td>
+                                <td>75 kWh</td>
+                                <td>45 kWh</td>
+                                <td>50.3 kWh</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Claimed Range (ARAI/MIDC)</td>
+                                <td class="font-weight-600">682 - 683 km</td>
+                                <td>622 - 627 km</td>
+                                <td>430 - 502 km</td>
+                                <td>461 km</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Power Output</td>
+                                <td class="font-weight-600">282 bhp (RWD)</td>
+                                <td>390 bhp (AWD option)</td>
+                                <td>148 bhp (FWD)</td>
+                                <td>176 bhp (FWD)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Torque</td>
+                                <td class="font-weight-600">380 Nm</td>
+                                <td>350 Nm (Estimated)</td>
+                                <td>215 Nm</td>
+                                <td>280 Nm</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">0-100 km/h (Claimed)</td>
+                                <td class="font-weight-600">6.7 seconds</td>
+                                <td>7.5 seconds</td>
+                                <td>9.0 seconds</td>
+                                <td>8.5 seconds</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Length (mm)</td>
+                                <td class="font-weight-600">4371 mm</td>
+                                <td>4607 mm</td>
+                                <td>4310 mm</td>
+                                <td>4323 mm</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-600">Key Differentiator</td>
+                                <td class="font-weight-600">Formula E Exclusivity, Class-Leading Range, Adaptive Suspension (FE3)</td>
+                                <td>Dual Motor AWD Option, Rugged SUV Stance</td>
+                                <td>Coupe Design, Highly Value-Oriented Pricing</td>
+                                <td>Established Market Presence, Local Assembly</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>The BE 6 Formula E Edition stands out immediately with its sheer claimed range and powerful RWD motor. The 79 kWh battery pack is notably larger than the competition, providing a clear advantage in distance. While the upcoming Tata Harrier EV might offer an All-Wheel Drive (AWD) option and a larger footprint, the Mahindra counters with superior single-motor performance (6.7s 0-100 km/h), the dynamics of the dedicated INGLO platform, and the added sophistication of the adaptive suspension on the FE3 variant. For the enthusiastic buyer who prioritizes range, style, and exclusivity, the BE 6 Formula E Edition, available to check out on BikeCarHub, presents a compelling, performance-oriented alternative to the more value-conscious Tata Curvv EV and the established MG ZS EV.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading">Specifications and Features Summary</h3>
+                <p>To provide a clear, technical overview, here are the key specifications and features of the Mahindra BE 6 Formula E Edition.</p>
+                <p><span class="font-weight-700">Specifications: Mahindra BE 6 Formula E Edition (79 kWh)</span></p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Category</th>
+                                <th class="font-weight-600 text-center">Specification Details</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr><td class="font-weight-600">Platform</td><td>INGLO Electric Origin Architecture</td></tr>
+                            <tr><td class="font-weight-600">Body Style</td><td>5-door Coupe-SUV</td></tr>
+                            <tr><td class="font-weight-600">Battery Pack</td><td>79 kWh Lithium Ion (LFP)</td></tr>
+                            <tr><td class="font-weight-600">Drivetrain</td><td>Rear-Motor, Rear-Wheel Drive (RWD)</td></tr>
+                            <tr><td class="font-weight-600">Max Power Output</td><td>282 bhp (210 kW / 285 PS)</td></tr>
+                            <tr><td class="font-weight-600">Peak Torque</td><td>380 Nm</td></tr>
+                            <tr><td class="font-weight-600">Acceleration (0-100 km/h)</td><td>6.7 seconds (Claimed)</td></tr>
+                            <tr><td class="font-weight-600">Top Speed</td><td>202 km/h</td></tr>
+                            <tr><td class="font-weight-600">Claimed Range (MIDC)</td><td>682 km - 683 km</td></tr>
+                            <tr><td class="font-weight-600">Real-World Range (Claimed)</td><td>500 km</td></tr>
+                            <tr><td class="font-weight-600">DC Fast Charging (20-80%)</td><td>20 minutes (at 180 kW)</td></tr>
+                            <tr><td class="font-weight-600">AC Charging (0-100%)</td><td>8 hours (at 7.2 kW)</td></tr>
+                            <tr><td class="font-weight-600">Length</td><td>4371 mm</td></tr>
+                            <tr><td class="font-weight-600">Width</td><td>1907 mm</td></tr>
+                            <tr><td class="font-weight-600">Height</td><td>1627 mm</td></tr>
+                            <tr><td class="font-weight-600">Wheelbase</td><td>2775 mm</td></tr>
+                            <tr><td class="font-weight-600">Boot Space</td><td>455 Litres</td></tr>
+                            <tr><td class="font-weight-600">Frunk (Front Trunk) Space</td><td>45 Litres</td></tr>
+                            <tr><td class="font-weight-600">Tyre Size</td><td>R20 Aero Alloy Wheels</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><span class="font-weight-700">Features: Exclusive & Standard Highlights</span></p>
+                <div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature Category</th>
+                                <th class="font-weight-600 text-center">Standard & Exclusive Features</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Exterior Exclusivity</td>
+                                <td>
+                                    Formula E-themed body graphics/decals, Circular LED Projector Headlamps,
+                                    Redesigned Bumpers, Aero Wing & Integrated Spoiler, Unique R20 Aero Wheels,
+                                    Red Brake Calipers, Formula E Badging, Orange Accents/Tow Hook.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Interior Exclusivity</td>
+                                <td>
+                                    Carbon-Fibre Finish on Dash/Door Trims, Formula E Branding on Seats/Belts,
+                                    Special Edition Plaque, Unique Panoramic Sunroof Pattern, Orange Interior Theme.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Technology & Infotainment</td>
+                                <td>
+                                    Dual 12.3-inch Screens (Digital Cockpit + Infotainment),
+                                    16-Speaker Harman Kardon Audio System with Dolby Atmos,
+                                    Wireless Apple CarPlay & Android Auto, AdrenoX AI interface (MAIA),
+                                    OTA Updates.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Comfort & Convenience</td>
+                                <td>
+                                    Dual-Zone Automatic Climate Control, Ventilated Front Seats (6-Way Power Adjust),
+                                    Wireless Charging, 65W Type-C Fast Charger, Laminated Door Glass,
+                                    Auto-Dimming IRVM, Power-folding ORVMs.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Safety & Dynamics</td>
+                                <td>
+                                    6 Airbags, All-Wheel Disc Brakes, ABS with EBD, ESP,
+                                    Tyre Pressure Monitoring System (TPMS), Driver Drowsiness Detection,
+                                    360-degree Camera with Blind Spot Monitor, Adaptive Suspension (FE3 Only),
+                                    Brake-by-Wire Technology.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="subheading">Conclusion: Unlimit Love, Unlimit Performance</h3>
+                <p>The Mahindra BE 6 Formula E Edition is a definitive statement from the brand—a bold declaration of intent in the global electric vehicle arena. It successfully marries the exhilaration of its Formula E racing success with the practicality and technological sophistication required of a modern urban SUV. From its striking, aerodynamically-focused design and motorsport-inspired interior touches to its class-leading 683 km range and potent 282 bhp performance, this vehicle is crafted for those who demand excitement without compromise.</p>
+                <p>The limited-edition status and the genuinely appealing exclusivity package—from track days to a chance to attend the London E-Prix—ensure that the BE 6 Formula E Edition will be a coveted machine, not just a car. It represents Mahindra's vision of 'Unlimit Love' and 'Unlimit India,' challenging global benchmarks and setting new standards for emotional and performance-driven electric mobility. It is a vehicle that truly brings the spirit of the racetrack to the road for the next generation of enthusiasts.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading">Frequently Asked Questions (FAQs) for the Mahindra BE 6 Formula E Edition</h3>
+
+
+                <div class="accordion" id="mahindraAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                                1. What makes the Mahindra BE 6 Formula E Edition different from the standard BE 6?
+                            </button>
+                        </h2>
+                        <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#mahindraAccordion">
+                            <div class="accordion-body">
+                                The Formula E Edition is a limited-run version with exclusive race-themed graphics, circular LED projector lamps, revised bumpers with aero spoiler, carbon-fibre interior trim, 20-inch aero wheels, Formula E branding, and (on FE3) adaptive suspension. It is offered only with the larger 79 kWh battery pack.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                                2. What is the claimed range and real-world range of the BE 6 Formula E Edition?
+                            </button>
+                        </h2>
+                        <div id="a2" class="accordion-collapse collapse" data-bs-parent="#mahindraAccordion">
+                            <div class="accordion-body">
+                                It offers a certified range of 682–683 km (MIDC P1+P2). The realistic real-world range is around 500 km.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+                                3. What are the two variants available and what is the difference?
+                            </button>
+                        </h2>
+                        <div id="a3" class="accordion-collapse collapse" data-bs-parent="#mahindraAccordion">
+                            <div class="accordion-body">
+                                Two variants: FE2 (₹23.69 lakh) and FE3 (₹24.49 lakh).
+                                The FE3 includes Adaptive Suspension for auto-adjusting damping; FE2 does not.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">
+                                4. Does the Formula E Edition come with ADAS?
+                            </button>
+                        </h2>
+                        <div id="a4" class="accordion-collapse collapse" data-bs-parent="#mahindraAccordion">
+                            <div class="accordion-body">
+                                FE2 does not include the full Level 2 ADAS suite. It instead offers 360° camera and Blind Spot Monitoring. Safety features include 6 airbags and Driver Drowsiness Detection.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5">
+                                5. How fast is the BE 6 Formula E Edition?
+                            </button>
+                        </h2>
+                        <div id="a5" class="accordion-collapse collapse" data-bs-parent="#mahindraAccordion">
+                            <div class="accordion-body">
+                                It produces 282 bhp and 380 Nm, accelerating 0–100 km/h in 6.7 seconds, with a top speed of 202 km/h.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6">
+                                6. When do bookings and deliveries start?
+                            </button>
+                        </h2>
+                        <div id="a6" class="accordion-collapse collapse" data-bs-parent="#mahindraAccordion">
+                            <div class="accordion-body">
+                                Bookings start on January 14, 2026. Deliveries begin on February 14, 2026.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a7">
+                                7. What benefits do the first 999 customers receive?
+                            </button>
+                        </h2>
+                        <div id="a7" class="accordion-collapse collapse" data-bs-parent="#mahindraAccordion">
+                            <div class="accordion-body">
+                                Benefits include a track day experience, racing memorabilia box, special number decal (0–99), name engraved on London E-Prix race car, and a mini EV replica for their child.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a8">
+                                8. What is the fast-charging capability?
+                            </button>
+                        </h2>
+                        <div id="a8" class="accordion-collapse collapse" data-bs-parent="#mahindraAccordion">
+                            <div class="accordion-body">
+                                Using a 180 kW DC fast charger, it charges from 20% to 80% in about 20 minutes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a9">
+                                9. What is the audio system like?
+                            </button>
+                        </h2>
+                        <div id="a9" class="accordion-collapse collapse" data-bs-parent="#mahindraAccordion">
+                            <div class="accordion-body">
+                                It features a premium 16-speaker Harman Kardon audio system with Dolby Atmos for immersive sound.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="q10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a10">
+                                10. Which cars compete with the BE 6 Formula E Edition?
+                            </button>
+                        </h2>
+                        <div id="a10" class="accordion-collapse collapse" data-bs-parent="#mahindraAccordion">
+                            <div class="accordion-body">
+                                Key rivals include Tata Harrier EV, Tata Curvv EV, MG ZS EV, and VinFast VF7.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <p></p>
+                <p>Tata Sierra<a class="for-link" asp-controller="Blogs" asp-action="Nov102025BlogDetails2"> Click Here!</a></p>
+
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    @await Html.PartialAsync("_AllViewComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

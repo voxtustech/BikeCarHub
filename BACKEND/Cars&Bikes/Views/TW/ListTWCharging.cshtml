@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Cars_Bikes.Models.TWCharging>
+@{
+    ViewData["Title"] = "List TW Charging";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+<h2 class="text-center mb-4">TW Charging List</h2>
+
+<table class="table table-bordered text-center mx-auto" style="width: 80%;">
+    <thead class="table-dark">
+        <tr>
+            <th>Two Wheeler</th>
+            <th>Varient</th>
+            <th>Charging At Home</th>
+            <th>Charging Station</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TWName</td>
+                <td>@item.Varients</td>
+                <td>@item.ChargingAtHome</td>
+                <td>@item.ChargingAtChargingStation</td>
+                <td>
+                    <a asp-action="EditTWCharging" asp-route-id="@item.TWChargingId" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="DeleteTWCharging" asp-route-id="@item.TWChargingId" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

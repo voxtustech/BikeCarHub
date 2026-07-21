@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Latest News";
+}
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<div class=" m-t10">
+    <h1 class="for-h1 mb-5">Latest News</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allLatestNews in ViewBag.allLatestNews)
+        {
+            <a href="/@allLatestNews.ImageURL" style="text-decoration:none;">
+                <div class="upcoming-bikes-details-card">
+                    <div class="upcoming-bikes-all-image">
+                        <img src="@allLatestNews.ImageFolderURL" alt="@allLatestNews.NewsHeading" title="@allLatestNews.NewsHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                    </div>
+
+                    @* <a href="@Url.Action("TWUpcomingBikeDetails", "Home", new { id = allUpbike.UpcomingBikeId })"style="text-decoration:none;"> *@
+                <div class="upcoming-allbikes-details-content">
+                    @*<h2>@Truncate(@allLatestNews.NewsHeading, 22)</h2>*@
+                    <h2>@allLatestNews.NewsHeading</h2>
+                    <p><i class="fa fa-calendar"></i>  @allLatestNews.Date.ToString("d MMM yyyy")</p>
+                    <a href="/@allLatestNews.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                </div>
+                    @* </a> *@
+                </div>
+            </a>
+        }
+    </div>
+</div>
+

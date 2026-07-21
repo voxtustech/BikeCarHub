@@ -1,0 +1,25 @@
+﻿@model CompareViewModel
+
+@{
+    ViewData["Title"] = "Yamaha R3 vs Pulsar NS200 – Power vs Value ";
+}
+@section MetaTags {
+    <meta name="keywords" content="Yamaha R3 vs Bajaj Pulsar NS200, Pulsar NS200 vs R3 performance, Yamaha R3 top speed 2025, NS200 vs R3 specs comparison, Yamaha R3 vs NS200 mileage, Bajaj Pulsar NS200 review 2025, Yamaha R3 twin-cylinder bike, NS200 vs R3 price difference, R3 vs Pulsar 200cc comparison, Yamaha R3 features India, Best sportbike under 4 lakh, Pulsar NS200 value for money, Yamaha R3 vs NS200 real-world test, R3 vs NS200 which is better, Streetfighter vs sportbike comparison  " />
+    <meta name="description" content="Compare Yamaha R3 and Bajaj Pulsar NS200 on performance, specs, features, and price. Find out which bike suits your riding needs and budget in 2025. " />
+}
+<div class=" ">
+    @* @Html.RenderPartial("_CompareTable", Model) *@
+
+    @await Html.PartialAsync("_CompareTable", Model)
+</div>
+<div class="google-ad">
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:1000px;height:200px"
+         data-ad-client="ca-pub-8720291170595920"
+         data-ad-slot="6204553210">
+    </ins>
+</div>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+@await Html.PartialAsync("_AllViewComponent")  

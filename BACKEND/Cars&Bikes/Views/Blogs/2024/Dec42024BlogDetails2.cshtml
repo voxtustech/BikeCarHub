@@ -1,0 +1,158 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "The All-New Honda Amaze 2024: A Stylish Compact Sedan Redefining Comfort and Performance";
+}
+@section MetaTags{
+    <meta name="keywords" content="Honda Amaze 2024, New Honda Amaze, Honda Amaze launch, Honda Amaze features, compact sedan, Honda Amaze price, Honda Amaze specifications, BS6 car, Honda India, best sedans in India." />
+    <meta name="description" content="Discover the new Honda Amaze, launched today with a refreshed design, luxurious interiors, BS6-compliant engines, and advanced safety features. Perfect for style and performance enthusiasts." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+                <h3 class="subheading">Basic Specifications</h3>
+                <table class="comparison-table-content">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Specification</th>
+                            <th class="text-center">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-head-text">
+                            <td>Type</td>
+                            <td>Water Cooled Inline 4 Cylinder i-VTEC SOHC</td>
+                        </tr>
+                        <tr>
+                            <td>Displacement (cm³)</td>
+                            <td>1,199</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>No. of Valves</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>Power (kW [PS] @@ rpm)</td>
+                            <td>66 [90] @@ 6,000</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Torque (Nm @@ rpm)</td>
+                            <td>110 @@ 4,800</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel Efficiency* (km/l)</td>
+                            <td>19.46 (CVT), 18.65 (MT)</td>
+                        </tr>
+                        <tr class="compare-head-text">
+                            <td>Fuel Type</td>
+                            <td>Compliant with E20 (20% ethanol blended) Petrol</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="subheading">What’s New?</h3>
+                <p><span class="font-weight-700">1.	Modern Design Aesthetics</span> Honda has revamped the Amaze with a sleeker, more premium look. The redesigned grille, sharper LED projector headlamps, and stylish alloy wheels elevate its road presence.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/fornt grill.webp" alt="Fornt Grill" title="Fornt Grill" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/head light.webp" alt="Head Light" title="Head Light" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/aloy.webp" alt="Aloy" title="Aloy" /></div>
+                </div>
+                <p><span class="font-weight-700">2.	Improved Interiors</span> Step inside, and you’ll find a luxurious cabin designed for maximum comfort. The dual-tone interiors, upgraded infotainment system with a larger touchscreen, and ergonomically positioned controls make every drive an experience.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-3 col-md-3 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/interior.webp" alt="Interior" title="Interior" /></div>
+                    <div class="col-lg-3 col-md-3 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/front seat.webp" alt="Front Seat" title="Front Seat" /></div>
+                    <div class="col-lg-3 col-md-3 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/back seat.webp" alt="Back Seat" title="Back Seat" /></div>
+                    <div class="col-lg-3 col-md-3 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/systum.webp" alt="Systum" title="Systum" /></div>
+                </div>
+                <p><span class="font-weight-700">3.	Enhanced Performance</span> The Amaze comes equipped with BS6 Phase II-compliant engines that deliver a perfect balance of power and efficiency. Customers can choose between the smooth 1.2L i-VTEC petrol engine or the robust diesel option, ensuring there’s something for every driving enthusiast.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/engine.webp" alt="Engine" title="Engine" /></div>
+                </div>
+                <p><span class="font-weight-700">4.	Safety First</span> Honda continues its commitment to safety with advanced features such as dual airbags, ABS with EBD, a rear parking camera, and the Honda Sensing Suite in higher variants, making it one of the safest compact sedans in the market.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/adas.webp" alt="ADAS" title="ADAS" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/airbags.webp" alt="Airbags" title="Airbags" /></div>
+                    <div class="col-lg-4 col-md-4 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/structure.webp" alt="Structure" title="Structure" /></div>
+                </div>
+                <p><span class="font-weight-700">5.	Eco-Friendly Efficiency</span> With improved fuel efficiency and lower emissions, the Amaze remains a reliable choice for eco-conscious buyers without compromising performance.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><p class="font-weight-700">For Manual</p><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/manual milage.webp" alt="Manual Milage" title="Manual Milage" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><p class="font-weight-700">For Automatic </p><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/auto milage.webp" alt="Auto Milage" title="Auto Milage" /></div>
+                </div>
+                <h3 class="subheading">Pricing and Variants</h3>
+                <p>The new Amaze is offered in multiple variants to cater to diverse customer needs. Starting at an introductory price of <span class="text-color">₹6.99 lakh (ex-showroom)</span>, it represents outstanding value for money.</p>
+                <h3 class="subheading">Why Choose the Honda Amaze?</h3>
+                <p>Honda has designed the Amaze to appeal to young professionals and families looking for an all-rounder car that blends style, practicality, and affordability. Whether it’s your daily city commute or a weekend getaway, the Amaze promises a comfortable, fuel-efficient ride.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/front.webp" alt="Front" title="Front" /></div>
+                    <div class="col-lg-6 col-md-6 text-center"><img src="~/images/blogs/2024/theallnewhondaamazeaperfectblendofstylecomfortandperformance/additional benefits.webp" alt="Additional Benefits" title="Additional Benefits" /></div>
+                </div>
+            </div>
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        @*  <div class="detail-div latest-bike-container">
+        @foreach (var newsdata in ViewBag.AllNews)
+        {
+        <div class="latest-bike-card">
+        <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+        <a href="/@newsdata.ImageURL">
+        <div class="latest-allbike-image ">
+        <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+        <div class="latest-bikes-details-text">
+        <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+        <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+        </div>
+        </div>
+        </a>
+        </div>
+        }
+        </div> *@
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

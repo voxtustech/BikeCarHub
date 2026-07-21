@@ -1,0 +1,239 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Top 5 Indian Bikes in the 250cc Segment: Prices, Specifications & Features";
+}
+@section MetaTags{
+    <meta name="keywords" content="Indian bikes 250cc, KTM Duke 250, Yamaha FZ25, Bajaj Dominar 250, TVS Apache RTR 200 4V, Honda CB250F, bike specifications, bike prices, best 250cc bikes in India" />
+    <meta name="description" content="Explore the top 5 Indian bikes in the 250cc segment, including prices, specifications, and key features. Discover models like KTM Duke 250, Yamaha FZ25, Bajaj Dominar 250, TVS Apache RTR 200 4V, and Honda CB250F, and find the perfect ride for you!" />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.webp" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">Latest Bike News</h1></div>
+        <div class=" latest-bike-container">
+            <h2>@Model.NewsHeading</h2>
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+                @* <p>@Html.Raw(@Model.NewsDetail.Replace("\n", "<br>"))</p> *@
+                <p>@Model.NewsSummary</p>
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">1. KTM Duke 250</h3>
+                        <ul>
+                            <li><span class="font-weight-700">Price:</span> ₹2,45,115 (Ex-Showroom, Delhi)</li>
+                            <li><span class="font-weight-700">Variants:</span> 1</li>
+                            <li><span class="font-weight-700">Specifications:</span>
+                                <ol>
+                                    <li><span class="font-weight-700">Engine:</span> 248.8 cc, Single-cylinder, Liquid-cooled</li>
+                                    <li><span class="font-weight-700">Power:</span> 31 PS @@ 9,250 rpm</li>
+                                    <li><span class="font-weight-700">Torque:</span> 25 Nm @@ 7,250 rpm</li>
+                                    <li><span class="font-weight-700">Mileage:</span> Approximately 30 kmpl</li>
+                                    <li><span class="font-weight-700">Transmission:</span> 6-speed gearbox</li>
+                                </ol></li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Features:
+                                </span>
+                                <ol>
+                                    <li>Lightweight trellis frame</li>
+                                    <li>WP suspension for enhanced handling</li>
+                                    <li>TFT display with smartphone connectivity</li>
+                                    <li>LED headlights and taillights</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/latestnews/2024/sep/top 5 indian bikes in the 250cc segment prices, specifications & features/ktm duke 250.webp" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">2. Yamaha FZ25</h3>
+                        <ul>
+                            <li><span class="font-weight-700">Price:</span> ₹1,59 Lakh (Ex-Showroom, Delhi)</li>
+                            <li><span class="font-weight-700">Variants:</span> 1</li>
+                            <li><span class="font-weight-700">Specifications:</span>
+                                <ol>
+                                    <li><span class="font-weight-700">Engine:</span> 249 cc, Air-cooled, Single-cylinder</li>
+                                    <li><span class="font-weight-700">Power:</span> 20.8 PS @@ 8,000 rpm</li>
+                                    <li><span class="font-weight-700">Torque:</span> 20.1 Nm @@ 6,000 rpm</li>
+                                    <li><span class="font-weight-700">Mileage:</span> Approximately 40 kmpl</li>
+                                    <li><span class="font-weight-700">Transmission:</span> 5-speed gearbox</li>
+                                </ol></li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Features:
+                                </span>
+                                <ol>
+                                    <li>Aggressive streetfighter design</li>
+                                    <li>Digital instrument cluster</li>
+                                    <li>LED headlights</li>
+                                    <li>Enhanced fuel efficiency with good performance</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/latestnews/2024/sep/top 5 indian bikes in the 250cc segment prices, specifications & features/yamaha fz25.webp" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">3. Bajaj Dominar 250</h3>
+                        <ul>
+                            <li><span class="font-weight-700">Price:</span> ₹1,85,000 (Ex-Showroom, Delhi)</li>
+                            <li><span class="font-weight-700">Variants:</span> 1</li>
+                            <li><span class="font-weight-700">Specifications:</span>
+                                <ol>
+                                    <li><span class="font-weight-700">Engine:</span> 248.77 cc, Single-cylinder, Liquid-cooled</li>
+                                    <li><span class="font-weight-700">Power:</span> 27 PS @@ 8,500 rpm</li>
+                                    <li><span class="font-weight-700">Torque:</span> 23.5 Nm @@ 6,500 rpm</li>
+                                    <li><span class="font-weight-700">Mileage:</span> Approximately 35 kmpl</li>
+                                    <li><span class="font-weight-700">Transmission:</span> 6-speed gearbox</li>
+                                </ol></li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Features:
+                                </span>
+                                <ol>
+                                    <li>Dual-channel ABS</li>
+                                    <li>Full LED lighting</li>
+                                    <li>Comfortable touring ergonomics</li>
+                                    <li>Digital display with navigation assistance</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/latestnews/2024/sep/top 5 indian bikes in the 250cc segment prices, specifications & features/bajaj dominar 250.webp" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">4.TVS Apache RTR 200 4V</h3>
+                        <ul>
+                            <li><span class="font-weight-700">Price:</span> ₹1,48,000 (Ex-Showroom, Delhi)</li>
+                            <li><span class="font-weight-700">Variants:</span> 3 (Race, Carburetor, and Fuel Injection)</li>
+                            <li><span class="font-weight-700">Specifications:</span>
+                                <ol>
+                                    <li><span class="font-weight-700">Engine:</span> 197.75 cc, Single-cylinder, Oil-cooled</li>
+                                    <li><span class="font-weight-700">Power:</span> 20.82 PS @@ 9,000 rpm</li>
+                                    <li><span class="font-weight-700">Torque:</span> 17.25 Nm @@ 7,250 rpm</li>
+                                    <li><span class="font-weight-700">Mileage:</span> Approximately 40 kmpl</li>
+                                    <li><span class="font-weight-700">Transmission:</span> 5-speed gearbox</li>
+                                </ol></li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Features:
+                                </span>
+                                <ol>
+                                    <li>Ride Modes (Urban, Rain, Sport)</li>
+                                    <li>Bluetooth connectivity for smart features</li>
+                                    <li>LED DRLs and a digital instrument cluster</li>
+                                    <li>Aggressive styling and sporty ergonomics</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/latestnews/2024/sep/top 5 indian bikes in the 250cc segment prices, specifications & features/tvs apache rtr 200 4v.webp" /></center></div>
+                </div>
+                <div class="div-line"></div>
+                
+                <div class="row d-flex justify-content-center align-items-center m-b10">
+                    <div class="col-lg-6 col-md-6">
+                        <h3 class="subheading">5. Honda CB250F</h3>
+                        <ul>
+                            <li><span class="font-weight-700">Price:</span> ₹1,79,000 (Ex-Showroom, Delhi)</li>
+                            <li><span class="font-weight-700">Variants:</span> 1</li>
+                            <li><span class="font-weight-700">Specifications:</span>
+                                <ol>
+                                    <li><span class="font-weight-700">Engine:</span> 249 cc, Air-cooled, Single-cylinder</li>
+                                    <li><span class="font-weight-700">Power:</span> 26.5 PS @@ 9,000 rpm</li>
+                                    <li><span class="font-weight-700">Torque:</span> 22.6 Nm @@ 7,500 rpm</li>
+                                    <li><span class="font-weight-700">Mileage:</span> Approximately 38 kmpl</li>
+                                    <li><span class="font-weight-700">Transmission:</span> 6-speed gearbox</li>
+                                </ol></li>
+                            <li>
+                                <span class="font-weight-700">
+                                    Features:
+                                </span>
+                                <ol>
+                                    <li>Comfortable riding position</li>
+                                    <li>Modern design with LED lighting</li>
+                                    <li>Advanced braking system with dual-channel ABS</li>
+                                    <li>Digital-analog instrument cluster</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 justify-content-center align-items-center"><center><img src="~/images/latestnews/2024/sep/top 5 indian bikes in the 250cc segment prices, specifications & features/honda cb250f.webp" /></center></div>
+                </div>
+                <div class="div-line"></div>
+            </div>
+
+        </div>
+        @* <div class="div-row"> *@
+        @* <div class="big-div both-div"> *@
+        <div class="detail-div latest-bike-container">
+            @foreach (var newsdata in ViewBag.AllNews)
+            {
+                <div class="latest-bike-card">
+                    <h2>@Truncate(@newsdata.NewsHeading, 80)</h2>
+                    <a href="/@newsdata.ImageURL">
+                        <div class="latest-allbike-image ">
+                            <img src="@newsdata.ImageFolderURL" alt="Bike Image" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                            <div class="latest-bikes-details-text">
+                                <p><i class="fa fa-calendar"></i> @newsdata.Date?.ToString("d MMM yyyy")</p>
+                                <p>@Truncate(@newsdata.NewsSummary, 170)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        @* </div> *@
+        @*  <div class="small-div both-div latest-bike-container">
+        <h2>Search Latest News by Brand</h2>
+        @foreach (var brand in ViewBag.Brand)
+        {
+        <a href="@Url.Action("TWLatestNewsByBrand", "LatestNews", new { Id = brand.TWBrandId })" style="text-decoration:none;">
+        <div class="side-brand">
+        <div class="side-brand-img">
+        <img src="@brand.BrandLogoURL" alt="Bike Model" onerror="showFallbackIcon(this);" />
+        <i class="bi bi-award fallback-icon"></i>
+        </div>
+        <div class="side-brand-text"><h4>@brand.BrandName </h4></div>
+        </div>
+        </a>
+        }
+        </div> *@
+    </div>
+    @* </div> *@
+    @* </div>
+    </div> *@
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

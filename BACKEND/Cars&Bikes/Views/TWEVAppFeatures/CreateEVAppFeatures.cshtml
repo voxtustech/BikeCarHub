@@ -1,0 +1,60 @@
+﻿@model Cars_Bikes.Models.TWEVAppFeatures
+@{
+    ViewData["Title"] = "Add TW EV AppFeatures";
+}
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+            <!-- only 80% screen height -->
+            <form asp-controller="AdminLogin" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+            <div class="col-md-8 col-lg-6">
+                <!-- middle sized form -->
+                <div class="card shadow-lg p-4">
+                    <div class="container mt-4">
+                        <h2 class="text-center mb-4">Add TW EV AppFeatures Details</h2>
+                        <form asp-action="CreateEVAppFeatures" method="post">
+                            <div class="form-group">
+                                <label>Two Wheeler</label>
+                                <select asp-for="TwoWheelerId" class="form-control" asp-items="ViewBag.TwoWheelers"></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Variant</label>
+                                <select asp-for="TWVarientId" class="form-control" asp-items="ViewBag.TWVarients"></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Charging Station Locate</label>
+                                <input asp-for="ChargingStationLocate" class="form-control" />
+                            </div>
+                             <div class="form-group">
+                                <label>Geofencing</label>
+                                <input asp-for="Geofencing" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>AntiTheftAlarm</label>
+                                <input asp-for="AntiTheftAlarm" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Calls And Messaging</label>
+                                <input asp-for="CallsAndMessaging" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>NavigationAssis</label>
+                                <input asp-for="NavigationAssis" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>LowBatteryAlert</label>
+                                <input asp-for="LowBatteryAlert" class="form-control" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

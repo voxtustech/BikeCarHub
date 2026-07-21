@@ -1,0 +1,490 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Indian FTR 1200 (2025) Specs, Price & Launch Review | BikeCarHub";
+}
+@section MetaTags {
+    <meta name="keywords" content="Indian FTR 1200, FTR 1200 price, FTR 1200 R Carbon, FTR 1203 cc, Flat Track motorcycle, Öhlins suspension, V-Twin 120 hp, Indian motorcycle launch, American roadster, Brembo brakes, FTR 1200 specs, 2025 motorcycle, FTR 1200 review, BikeCarHub, IMU electronics,bikecarhub" />
+    <meta name="description" content="Indian FTR 1200 (2025) deep dive. 120 hp V-Twin, Öhlins suspension, IMU electronics, and price from Rs 18.5 Lakh. Flat Track performance at bikecarhub." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+<body>
+    <div class=" ">
+        <h1 class="latest-bike-head">Upcoming Bikes</h1>
+        <div class="TWupcoming-container">
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+                <div class="upcoming-bikes-details-text">
+                    <h2>@Model.UpcomingBikeName</h2>
+                    <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+                </div>
+            </div>
+
+            <div class="upcoming-bikes-details-content">
+                <h2>About @Model.UpcomingBikeName</h2>
+                <h3 class="subheading">The American Muscle Revival: Indian FTR 1200 (2025) Deep Dive into Specs and Performance</h3>
+                <p>The name Indian Motorcycle carries a legacy stretching back over a century, defining the very essence of American motorcycling. Yet, in a bold move, the brand deviated from its traditional cruiser and bagger blueprint to introduce a machine born from the dirt oval: the <span class="font-weight-700">Indian FTR 1200.</span> This motorcycle is a direct descendant of the legendary FTR 750 race bike that has dominated American Flat Track racing.</p>
+                <p>The highly anticipated 2025 iteration of the Indian FTR 1200, is to make its debut around <span class="font-weight-700">December 2025,</span> is set to reaffirm its position as the ultimate blend of raw V-Twin power and agile street performance. The FTR 1200 doesn't just borrow styling cues from flat track; it embodies the spirit of aggressive, slide-happy riding, adapted for the asphalt. It is the perfect choice for riders who demand modern features, world-class components, and an engine with unmistakable character.</p>
+                <p>This exhaustive deep dive explores the technical specifications, the cutting-edge electronics, the projected multi-variant lineup, and the aggressive pricing strategy that Indian will likely employ to challenge its formidable European and American rivals. We break down every detail, ensuring that enthusiasts who visit platforms like BikeCarHub have the definitive guide to this exceptional performance motorcycle.</p>
+                <h3 class="subheading">Heritage and Design: The Flat Track DNA</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/indian ftr 1200/red.webp" alt="red" title="red" loading="lazy" /></div>
+                </div>
+
+                <p>The FTR 1200 is a masterclass in functional design. Its aesthetic is a faithful, yet modernized, interpretation of the championship-winning FTR 750 race bike.</p>
+                <p><span class="font-weight-700">The Purpose-Built Stance</span></p>
+                <p>Unlike traditional roadsters, the FTR 1200's design priorities are rooted in racing geometry, resulting in a unique visual identity:</p>
+                <ul>
+                    <li><span class="font-weight-700">Fuel Tank Placement: </span>A crucial feature is the unique placement of the 13 Litre <span class="font-weight-700">fuel tank</span> under the seat for centralized mass, enhancing handling and agility. What appears to be the fuel tank above the engine is actually the airbox, minimizing weight high up and improving the bike's center of gravity—a direct transfer from racing knowledge.</li>
+                    <li><span class="font-weight-700">Muscular V-Twin Exposure:</span> The massive 1203 cc V-Twin engine is the visual centerpiece, housed within a striking steel trellis frame. The exposed nature of the engine emphasizes its raw, liquid-cooled power.</li>
+                    <li><span class="font-weight-700">Signature Lighting: </span>The front features a futuristic <span class="font-weight-700">full-LED headlamp unit </span>set within a classic round housing, often incorporating a unique strip DRL. The exhaust is typically a tidy 2−in−1−in−2 or 2−in−1−in−1 setup, often finished in titanium or high-quality stainless steel, ensuring a race-bred rumble.</li>
+                </ul>
+                <p><span class="font-weight-700">Multi-Variant Lineup</span></p>
+                <p>Indian traditionally launches the FTR in multiple tiers, catering to different performance and budget requirements. We expect the 2025 lineup to maintain this strategy:</p>
+                <ol start="1">
+                    <li><span class="font-weight-700">FTR 1200 (Base Model): </span>The entry point. Features non-adjustable or basic adjustable suspension (Sachs or similar) and a standard LCD/analogue display.</li>
+                    <li><span class="font-weight-700">FTR 1200 S: </span>The performance mid-tier. This variant adds fully adjustable <span class="font-weight-700">suspension (often from Sachs), specialized Riding Modes,</span> Lean-Sensitive ABS, and a premium <span class="font-weight-700">4-inch TFT touchscreen display.</span></li>
+                    <li><span class="font-weight-700">FTR 1200 R Carbon: </span>The flagship model. Features exclusive carbon fibre components (tank covers, fenders), <span class="font-weight-700">fully adjustable Öhlins </span>suspension front and rear, and premium Akrapovič exhaust components for weight reduction and enhanced acoustics.</li>
+                </ol>
+                <p><span class="font-weight-700">Projected Colour Variants</span></p>
+                <p>Indian uses classic, deep colours that emphasize quality. For 2025, expect sophisticated finishes:</p>
+                <ol start="1">
+                    <li><span class="font-weight-700">Black Smoke: </span>A deep, matte black finish that emphasizes the bike's raw, muscular lines (Standard/S).</li>
+                    <li><span class="font-weight-700">Maroon Metallic / Patriot Red:</span> A rich, glossy red or maroon, a traditional Indian colour (Standard/S).</li>
+                    <li><span class="font-weight-700">Carbon Fibre Finish: </span>Unique clear-coated carbon weave for the R Carbon variant, contrasting with the metallic frame.</li>
+                    <li><span class="font-weight-700">Limited Edition Schemes: </span>Special race replica liveries (e.g., Red and White with black wheels) for the S or R Carbon models.</li>
+                </ol>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading">Engine and Raw Performance: The 1203 cc V-Twin</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/indian ftr 1200/black.webp" alt="black" title="black" loading="lazy" /></div>
+                </div>
+                <p>The heart of the FTR 1200 is the high-revving, 1203 cc liquid-cooled V-Twin engine, distinct from the brand's low-revving cruiser motors. This engine is built for aggressive street riding and track days.</p>
+                <p><span class="font-weight-700">Power, Torque, and Street Tuning</span></p>
+                <p>The 60-degree V-Twin is compact and punchy, delivering its power higher in the rev range than typically from an American motorcycle.</p>
+                <ul>
+                    <li><span class="font-weight-700">Engine Capacity:  </span>1203 cc (Liquid-cooled, 60-degree V-Twin, DOHC, 4 valves per cylinder).</li>
+                    <li><span class="font-weight-700">Peak Power Projection:  </span>The FTR 1200 is renowned for its thrilling power, projected to be around 120 hp@8250 rpm.</li>
+                    <li><span class="font-weight-700">Peak Torque Projection: </span> A massive torque figure that defines its V-Twin character, at approximately 120 Nm@6000 rpm. This ensures explosive acceleration out of corners.</li>
+                    <li><span class="font-weight-700">Performance Metrics: </span> With its powerful engine and relatively light chassis, the FTR 1200 is capable of a 0-100 km/h <span class="font-weight-700">time of under 3.5 seconds </span>and a top speed exceeding 200 km/h.</li>
+                </ul>
+                <p><span class="font-weight-700">V-Twin Sound and Character</span></p>
+                <p>Unlike the relaxed thump of a traditional cruiser, the FTR's engine note is sharp, loud, and aggressive, echoing its racing roots. The high-performance nature of the engine is managed by a smooth<span class="font-weight-700"> 6-speed transmission  </span>and a robust <span class="font-weight-700">Slipper and Assist Clutch (SAC), </span>which is essential for managing the high torque during aggressive deceleration.</p>
+                <h3 class="subheading">Chassis, Dynamics, and Agility</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center image-height"><img src="~/images/twowheeler/upcomming/2025/indian ftr 1200/side.webp" alt="side" title="side" loading="lazy" /></div>
+                </div>
+                <p>The FTR 1200 is engineered for precise handling, not just straight-line comfort. The chassis geometry is key to its street tracker agility.</p>
+                <p> <span class="font-weight-700">Suspension Excellence (S and R Carbon)</span></p>
+                <p>The distinction between the variants is most pronounced in the suspension setup, showcasing Indian's commitment to high-performance components:</p>
+                <ul>
+                    <li><span class="font-weight-700">Base FTR:</span> 43 mm Upside Down (USD) telescopic front forks and a single monoshock rear, often with limited or basic preload adjustment.</li>
+                    <li><span class="font-weight-700">FTR S / R Carbon:</span> These models feature fully adjustable suspension. The R Carbon typically boasts<span class="font-weight-700"> premium 43 mm fully adjustable Öhlins </span>USD forks and a rear Öhlins monoshock. This level of componentry is benchmark, offering world-class damping control for track and aggressive street use.</li>
+                    <li><span class="font-weight-700">Chassis: </span>Lightweight and rigid Steel Trellis Frame, designed to keep the weight centralized and low.</li>
+                    <li><span class="font-weight-700">Lean Angle:</span> The FTR is built for deep lean angles, with a geometry that allows for aggressive cornering unlike many other American-made motorcycles.</li>
+                </ul>
+                <p><span class="font-weight-700">Braking Power and Safety</span></p>
+                <p>Controlling 120 hp requires absolute confidence in braking, which is why Indian fits premium components.</p>
+                <ul>
+                    <li><span class="font-weight-700">Front Brakes:</span> Dual 320 mm floating discs, gripped by high-specification Brembo Monobloc (radial-mount) calipers.</li>
+                    <li><span class="font-weight-700">Rear Brakes:</span> Single 260 mm disc, also with a Brembo caliper.</li>
+                    <li><span class="font-weight-700">ABS: </span>Standard <span class="font-weight-700">Dual-Channel ABS </span>across all variants, with cornering/lean-sensitive functionality on the S and R Carbon models.</li>
+                </ul>
+                <p><span class="font-weight-700">Wheels and Street Focus</span></p>
+                <p>Early FTR models used 19′′ front and 18′′ rear wheels, but the current production models are often standardized to 17 inch <span class="font-weight-700">cast alloy wheels</span> front and rear, fitted with premium<span class="font-weight-700"> Metzeler Sportec </span>or similar performance street tires. This shift firmly roots the FTR 1200 as a high-performance roadster, optimizing handling and lean angle on asphalt.</p>
+                <h3 class="subheading">Technology and Rider Aids: Smart Power Management</h3>
+                <p>The Indian FTR 1200 features a sophisticated electronics suite, particularly in its premium variants, designed to safely harness the enormous power of the V-Twin.</p>
+                <p><span class="font-weight-700">Connectivity and Display</span></p>
+                <ul>
+                    <li><span class="font-weight-700">FTR S/R Carbon: </span>Features a crisp 4-inch<span class="font-weight-700">, full-colour TFT touchscreen display </span>powered by Indian's Ride Command technology. This screen provides superior visibility and intuitive control over the electronics.</li>
+                    <li><span class="font-weight-700">Standard FTR: </span>Often features a circular 4-inch analogue/LCD combination gauge.</li>
+                    <li><span class="font-weight-700">Connectivity: </span>Full Bluetooth connectivity for phone calls, music, and turn-by-turn navigation via the Ride Command system.</li>
+                </ul>
+                <p><span class="font-weight-700">Advanced Rider Safety and Control</span><p>
+                <p>The premium variants of the 2025 FTR 1200 are to feature a full <span class="font-weight-700">Inertial Measurement Unit (IMU)</span>-based electronics package:</p>
+                <ul>
+                    <li><span class="font-weight-700">Lean-Sensitive Stability Control:</span> This system manages traction control and stability based on the bike’s lean angle.</li>
+                    <li><span class="font-weight-700">Cornering ABS: </span>Adjusts braking force based on lean angle, drastically improving safety mid-corner.</li>
+                    <li><span class="font-weight-700">Wheelie Mitigation:</span> Helps keep the front wheel planted under hard acceleration while still allowing for spirited riding.</li>
+                    <li><span class="font-weight-700">Multiple Riding Modes: </span>To include <span class="font-weight-700">Rain, Standard, and Sport</span> (with further custom modes on the R Carbon), adjusting throttle response, power delivery, and ABS/Traction Control intervention levels.</li>
+                </ul>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <h3 class="subheading">Specifications & Features Comparison Table (Projected)</h3>
+                <p>This table contrasts the specifications of the base 2025 Indian FTR 1200 with the flagship R Carbon model, highlighting the differences that justify the price gap.</p><div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+
+                            <tr>
+                                <th class="font-weight-600 text-center">Feature / Component</th>
+                                <th class="font-weight-600 text-center">FTR 1200 (2025 Base)</th>
+                                <th class="font-weight-600 text-center">FTR 1200 R Carbon (2025)</th>
+                                <th class="font-weight-600 text-center">Performance Advantage</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-600">Engine Capacity</td>
+                                <td>1203 cc V-Twin</td>
+                                <td>1203 cc V-Twin</td>
+                                <td>Consistent High Power</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Peak Power (Approx.)</td>
+                                <td>120 hp</td>
+                                <td>120 hp</td>
+                                <td>Class-leading performance</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Peak Torque (Approx.)</td>
+                                <td>120 Nm</td>
+                                <td>120 Nm</td>
+                                <td>Massive torque figure</td>
+                            </tr>
+
+                            <tr>
+                                <td>Front Suspension</td>
+                                <td>43 mm USD (Sachs/Similar)</td>
+                                <td>43 mm Fully Adjustable Öhlins</td>
+                                <td>Superior Damping & Customization</td>
+                            </tr>
+
+                            <tr>
+                                <td>Rear Suspension</td>
+                                <td>Monoshock (Limited Adj.)</td>
+                                <td>Fully Adjustable Öhlins Monoshock</td>
+                                <td>High-End Racing Components</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Instrumentation</td>
+                                <td>Analogue/LCD Display</td>
+                                <td>4-inch TFT Touchscreen (Ride Command)</td>
+                                <td>Superior Clarity and Functionality</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Rider Aids</td>
+                                <td>Dual-Channel ABS, Cruise Control</td>
+                                <td>IMU-based Cornering ABS/TC, Modes</td>
+                                <td>Enhanced Safety and Control</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Exhaust System</td>
+                                <td>Standard 2−in−1−in−1</td>
+                                <td>Akrapovič Titanium Slip-on</td>
+                                <td>Weight reduction and acoustics</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Bodywork</td>
+                                <td>Standard Panels</td>
+                                <td>Carbon Fibre Components</td>
+                                <td>Reduced Weight, Exclusive Look</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="subheading">Pricing and Market Positioning</h3>
+                <p>The Indian FTR 1200 is imported and features top-shelf components, placing it firmly in the premium performance lifestyle segment. Its pricing must reflect its unique heritage and high-spec hardware.</p>
+                <p><span class="font-weight-700">Estimated Pricing Strategy</span></p>
+                <p>The pricing is speculative but based on the current market positioning of high-displacement, specialized imports.</p>
+                <ul>
+                    <li><span class="font-weight-700">FTR 1200 (Base Model):</span> Estimated Ex-Showroom Price  <span class="font-weight-700">Rs 15.99 Lakh to Rs 17.99 Lakh.</span></li>
+                    <li><span class="font-weight-700">FTR 1200 S: </span>Estimated Ex-Showroom Price<span class="font-weight-700"> Rs 17.99 Lakh.</span></li>
+                    <li><span class="font-weight-700">FTR 1200 R Carbon: </span>Estimated Ex-Showroom Price <span class="font-weight-700">Rs 23.00 Lakh to Rs 25.03 Lakh.</span></li>
+                </ul>
+                <p>This premium positioning ensures the<span class="font-weight-700"> FTR 1200 </span>competes directly with high-end European roadsters, emphasizing its exclusivity and performance pedigree.</p>
+                <div class="google-ad">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:1000px;height:200px"
+                         data-ad-client="ca-pub-8720291170595920"
+                         data-ad-slot="6204553210">
+                    </ins>
+                </div>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                /
+                <h3 class="subheading">The Competitive Landscape: Indian FTR 1200 vs. Rivals</h3>
+                <p>The FTR 1200 competes in the fiercely contested high-performance naked/roadster segment, often overlapping with neo-retro, muscle, and even advanced adventure-touring machines. Its direct rivals are performance V-Twins and high-torque European parallel-twins.</p>
+                <p>This analysis, which is vital for informed buying decisions, is regularly tracked by enthusiasts on platforms like <a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a> .</p>
+                <p><span class="font-weight-700">Competitors Comparison Table</span></p><div style="overflow-x: auto;">
+
+                    <table class="comparison-table-content">
+
+                        <thead>
+                            <tr>
+                                <th class="font-weight-600 text-center">Specification</th>
+                                <th class="font-weight-600 text-center">Indian FTR 1200</th>
+                                <th class="font-weight-600 text-center">Ducati Monster 1200</th>
+                                <th class="font-weight-600 text-center">Triumph Speed Triple 1200 RS</th>
+                                <th class="font-weight-600 text-center">BMW R 1250 R</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td class="font-weight-600">Engine Type</td>
+                                <td>1203 cc V-Twin</td>
+                                <td>1198 cc V-Twin (Desmo)</td>
+                                <td>1160 cc Triple</td>
+                                <td>1254 cc Boxer-Twin</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Power</td>
+                                <td>120 hp</td>
+                                <td>147 hp</td>
+                                <td>180.5 hp</td>
+                                <td>136 hp</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Torque</td>
+                                <td>120 Nm</td>
+                                <td>124 Nm</td>
+                                <td>128 Nm</td>
+                                <td>143 Nm</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Key Advantage</td>
+                                <td>Flat Track Styling, V-Twin Rumble, Premium Suspension (R Carbon)</td>
+                                <td>High Technology, Italian Handling, Low Weight</td>
+                                <td>Supreme Power, Lightweight Chassis, Advanced Electronics</td>
+                                <td>ShiftCam Technology, Comfort, Massive Low-End Torque</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Rider Aids (Base)</td>
+                                <td>ABS, Cruise Control</td>
+                                <td>ABS, Modes, Traction Control</td>
+                                <td>Full IMU suite, Modes</td>
+                                <td>Full IMU suite, Modes</td>
+                            </tr>
+
+                            <tr>
+                                <td class="font-weight-600">Price (Ex-S. Approx.)</td>
+                                <td>Rs 15.99 Lakh+</td>
+                                <td>Rs 7.99 Lakh - Rs 11.99 Lakh</td>
+                                <td>Rs 20.39 Lakh+</td>
+                                <td>Rs 17 Lakh+</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <p>
+                    <span class="font-weight-700">Strategic Edge Analysis</span></p>
+                        <p>The FTR 1200 occupies a unique intersection:</p>
+                        <ol start="1">
+                            <li><span class="font-weight-700">Versus Ducati Monster 1200: </span>The FTR offers a more powerful engine and significantly more torque, coupled with the unique American Flat Track aesthetic. The Ducati focuses on lightness and high-speed precision; the FTR focuses on raw, visceral muscle.</li>
+                            <li><span class="font-weight-700">Versus Triumph/BMW: </span>The European naked bikes offer higher peak horsepower (Triumph) or more sophisticated ergonomics (BMW). However, the FTR provides a raw <span class="font-weight-700">V-Twin character and sound </span>that is unmatched in this class, appealing directly to the rider who wants an aggressive, distinctive alternative to the European inline engines. The FTR's edge is its unique blend of race heritage, muscle, and premium, Öhlins-equipped handling on the top-tier models.</li>
+                        </ol>
+
+                        <h3 class="subheading">Conclusion: The Definitive American Performance Roadster</h3>
+                        <p>The<span class="font-weight-700"> 2025 Indian FTR 1200</span> is to stand as a unique and visceral proposition in the global motorcycle market. It successfully marries the raw, thundering power and characteristic sound of a large American V-Twin with the cutting-edge chassis technology and electronics of a modern European naked bike.</p>
+                        <p>With its 120 hp engine, fully adjustable Öhlins suspension on the R Carbon model, and distinctive flat-track racing aesthetic, the FTR 1200 offers an exhilarating alternative to the conventional inline-four or triple-cylinder rivals. This is a motorcycle built for the enthusiast who demands exclusivity, heritage, and genuine performance, proving that American muscle can be agile, refined, and aggressively competitive on the world stage.</p>
+                        <div class="google-ad">
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block;width:1000px;height:200px"
+                                 data-ad-client="ca-pub-8720291170595920"
+                                 data-ad-slot="6204553210">
+                            </ins>
+                        </div>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+
+                        <h3 class="subheading">Frequently Asked Questions (FAQs)</h3>
+                        <div class="accordion" id="ftrAccordion">
+
+                            <!-- Q1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true">
+                                        Q1: When is the Indian FTR 1200 expected to launch in India?
+                                    </button>
+                                </h2>
+                                <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#ftrAccordion">
+                                    <div class="accordion-body">
+                                        The Indian FTR 1200 (MY2025) is currently expected to be officially launched and available for booking around December 2025, with deliveries commencing in early 2026.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                                        Q2: Is the FTR 1200 a cruiser like other Indian motorcycles?
+                                    </button>
+                                </h2>
+                                <div id="a2" class="accordion-collapse collapse" data-bs-parent="#ftrAccordion">
+                                    <div class="accordion-body">
+                                        Absolutely not. The FTR 1200 is a high-performance roadster/street tracker built for agility, power, and aggressive handling, unlike traditional cruisers.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+                                        Q3: What is the primary difference between the FTR 1200 and the FTR R Carbon?
+                                    </button>
+                                </h2>
+                                <div id="a3" class="accordion-collapse collapse" data-bs-parent="#ftrAccordion">
+                                    <div class="accordion-body">
+                                        The R Carbon features fully adjustable Öhlins suspension, carbon fibre bodywork, and a premium 4-inch TFT touchscreen with IMU-based electronics, while the base FTR uses standard components and a simpler gauge.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">
+                                        Q4: What is the horsepower of the FTR 1200?
+                                    </button>
+                                </h2>
+                                <div id="a4" class="accordion-collapse collapse" data-bs-parent="#ftrAccordion">
+                                    <div class="accordion-body">
+                                        The 1203 cc V-Twin engine produces approximately 120 hp, making it a serious performance motorcycle.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q5 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5">
+                                        Q5: What is the expected ex-showroom starting price?
+                                    </button>
+                                </h2>
+                                <div id="a5" class="accordion-collapse collapse" data-bs-parent="#ftrAccordion">
+                                    <div class="accordion-body">
+                                        The base model is expected to start at around Rs 15.99 Lakh, with the R Carbon priced significantly higher.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q6 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6">
+                                        Q6: Does the FTR 1200 have a full suite of electronic aids?
+                                    </button>
+                                </h2>
+                                <div id="a6" class="accordion-collapse collapse" data-bs-parent="#ftrAccordion">
+                                    <div class="accordion-body">
+                                        Yes, the FTR 1200 S and R Carbon variants feature IMU-based electronics: Lean-Sensitive ABS, stability control, wheelie mitigation, and multiple riding modes.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q7 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q7">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a7">
+                                        Q7: Why is the fuel tank positioned under the seat?
+                                    </button>
+                                </h2>
+                                <div id="a7" class="accordion-collapse collapse" data-bs-parent="#ftrAccordion">
+                                    <div class="accordion-body">
+                                        The under-seat fuel tank centralizes mass, lowering the center of gravity to improve handling, responsiveness, and agility.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q8 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q8">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a8">
+                                        Q8: What kind of brakes does the FTR 1200 use?
+                                    </button>
+                                </h2>
+                                <div id="a8" class="accordion-collapse collapse" data-bs-parent="#ftrAccordion">
+                                    <div class="accordion-body">
+                                        The FTR 1200 uses Brembo dual 320 mm front discs with radial-mount calipers for exceptional braking performance.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q9 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q9">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a9">
+                                        Q9: Does the FTR 1200 use spoke wheels or alloy wheels?
+                                    </button>
+                                </h2>
+                                <div id="a9" class="accordion-collapse collapse" data-bs-parent="#ftrAccordion">
+                                    <div class="accordion-body">
+                                        The current FTR 1200 uses 17-inch cast alloy wheels with road-performance tires.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q10 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q10">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a10">
+                                        Q10: Is the suspension on the R Carbon variant adjustable?
+                                    </button>
+                                </h2>
+                                <div id="a10" class="accordion-collapse collapse" data-bs-parent="#ftrAccordion">
+                                    <div class="accordion-body">
+                                        Yes, the FTR 1200 R Carbon comes with fully adjustable 43 mm Öhlins suspension (front and rear) with preload, compression, and rebound adjustments.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+            </div>
+        </div>
+        @await Html.PartialAsync("_AllViewComponent")
+
+    </div>
+</body>

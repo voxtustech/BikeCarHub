@@ -1,0 +1,427 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Yezdi Adventure vs Royal Enfield Himalayan 450: Full 2025 Comparison";
+}
+@section MetaTags {
+    <meta name="keywords" content="Yezdi Adventure vs Himalayan 450, Himalayan 450 review India 2025, Yezdi Adventure mileage and specs, Best ADV bikes in India 2025, Royal Enfield Himalayan vs Yezdi, Off-road bikes under 3 lakh, ADV motorcycle comparison 2025, Himalayan 450 ride modes, Yezdi Adventure features 2025, Long distance touring bikes India, Adventure bike comparison 2025, Budget off-road bikes in India, Royal Enfield Himalayan seat height, Best adventure tourer India 2025" />
+    <meta name="description" content="Compare Yezdi Adventure and Royal Enfield Himalayan 450 in 2025. Check design, performance, features, price, and decide which adventure bike is best for your riding needs" />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 1th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <div class="div-line"></div>
+                       <p>In this detailed comparison by <span class="font-weight-700"><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a></span>, we will break down every important aspect like design, performance, features, pricing, and more to help you decide which adventure bike suits you best in 2025.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Brand Legacy and Philosophy</h2>
+
+                <h3 class="subheading">Yezdi Adventure</h3>
+                <p>The iconic Yezdi brand, revived by Classic Legends, brings a dose of nostalgia wrapped in modern engineering. The Yezdi Adventure is built with serious trekking DNA, aiming at riders who want an affordable but capable adventure tourer with retro appeal.</p>
+
+                <h3 class="subheading">Royal Enfield Himalayan 450</h3>
+                <p>Royal Enfield's legacy needs no introduction. The Himalayan 450 is the successor to the widely appreciated Himalayan 411. It elevates the game with a more powerful liquid-cooled engine, premium components, and better highway manners, making it a serious ADV tool.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Design & Aesthetics</h2>
+
+                <h3 class="subheading">Yezdi Adventure</h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/yezdi adventure vs royal enfield 450/yezdi adventure.webp" alt="Yezdi Adventure" title="Yezdi Adventure" /></div>
+                </div>
+                <p>The Yezdi Adventure comes with a purposeful stance — tall, rugged, and ready for dirt. It gets:</p>
+                <ul>
+                    <li>High-mounted mudguard</li>
+                    <li>Integrated crash guard</li>
+                    <li>Functional pannier mounts</li>
+                    <li>Simple yet muscular design language</li>
+                </ul>
+
+                <h3 class="subheading"><a class="for-link" asp-controller="RoyalEnfield" asp-action="REHimalyan">Himalayan 450</a></h3>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/yezdi adventure vs royal enfield 450/royal enfield himalayan 450.webp" alt="Himalayan 450" title="Himalayan 450" /></div>
+                </div>
+                <p>The new Himalayan 450 is a big leap from its predecessor in terms of design. It's more refined and modern while retaining the utilitarian charm. Features include:</p>
+                <ul>
+                    <li>Split seat</li>
+                    <li>Tall windscreen</li>
+                    <li>Well-integrated TFT display</li>
+                    <li>Premium fit and finish</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Yezdi offers rugged simplicity while Himalayan brings premium refinement.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Engine and Performance</h2>
+
+                <h3 class="subheading"><a class="for-link" asp-controller="Yezdi" asp-action="YezdiAdventure">Yezdi Adventure</a></h3>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 334cc, single-cylinder, 4-stroke, liquid-cooled, DOHC engine</li>
+                    <li><span class="font-weight-700">Power:</span> 29.6 PS</li>
+                    <li><span class="font-weight-700">Torque:</span> 29.8 Nm</li>
+                </ul>
+                <p>The engine is torquey but feels a bit raw at higher RPMs. Great for slow trails and occasional touring.</p>
+
+                <h3 class="subheading">Himalayan 450</h3>
+                <ul>
+                    <li><span class="font-weight-700">Engine:</span> 452cc, liquid-cooled, single-cylinder, four-stroke, DOHC engine</li>
+                    <li><span class="font-weight-700">Power:</span> 40.2 PS@8000 rpm</li>
+                    <li><span class="font-weight-700">Torque:</span> 40 Nm@5500 rpm</li>
+                </ul>
+                <p>A massive upgrade, this engine is smooth, rev-happy, and highway-friendly. Easily handles both tarmac and trails.</p>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Himalayan 450 takes the lead in highway performance, while Yezdi Adventure feels more accessible for new ADV riders.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Specifications & Features Comparison Table</h2>
+                <div style="overflow-x: auto;">
+                    <table class="comparison-table-content">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Specification</th>
+                                <th class="text-center">Yezdi Adventure</th>
+                                <th class="text-center">Himalayan 450</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="compare-head-text">
+                                <td>Engine Capacity</td>
+                                <td>334cc</td>
+                                <td>452cc</td>
+                            </tr>
+                            <tr>
+                                <td>Power</td>
+                                <td>29.6 PS</td>
+                                <td>40.2 PS</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Torque</td>
+                                <td>29.8 Nm</td>
+                                <td>40 Nm</td>
+                            </tr>
+                            <tr>
+                                <td>Mileage</td>
+                                <td>36 kmpl</td>
+                                <td>30 kmpl</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Front Suspension</td>
+                                <td>Telescopic</td>
+                                <td>USD forks</td>
+                            </tr>
+                            <tr>
+                                <td>Seat Height</td>
+                                <td>815 mm</td>
+                                <td>825 mm (adjustable)</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Weight</td>
+                                <td>187 kg</td>
+                                <td>196 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Brakes</td>
+                                <td>Dual-channel ABS</td>
+                                <td>Dual-channel ABS</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Display</td>
+                                <td>LCD with navigation</td>
+                                <td>TFT with smartphone connect</td>
+                            </tr>
+                            <tr>
+                                <td>Tank Capacity</td>
+                                <td>15.5 litres</td>
+                                <td>17 litres</td>
+                            </tr>
+                            <tr class="compare-head-text">
+                                <td>Price (Ex-showroom)</td>
+                                <td>₹2,14,900 -- ₹2,26,900</td>
+                                <td>₹2,85,000-- ₹2,98,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Chassis, Suspension & Handling</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/yezdi adventure vs royal enfield 450/royal enfield himalayan 450-1.webp" alt="Chassis Comparison" title="Chassis Comparison" /></div>
+                </div>
+                <ul>
+                    <li><span class="font-weight-700">Yezdi Adventure:</span> Double cradle frame, telescopic forks, mono-shock</li>
+                    <li><span class="font-weight-700">Himalayan 450:</span> Steel twin-spar frame, USD forks (43mm), linked mono-shock</li>
+                </ul>
+                <p>The Himalayan 450 offers more premium underpinnings, especially the USD forks and a more advanced chassis, making it feel more planted in all conditions.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Features and Technology</h2>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/yezdi adventure vs royal enfield 450/yezdi adventure-1.webp"  alt="Chassis Comparison" title="Chassis Comparison" /></div>
+                </div>
+
+
+
+                <h3 class="subheading">Yezdi Adventure Features:</h3>
+                <ul>
+                    <li>Digital instrument cluster with navigation</li>
+                    <li>Dual-channel ABS</li>
+                    <li>USB charging port</li>
+                    <li>LED headlamp</li>
+                </ul>
+
+                <h3 class="subheading">Himalayan 450 Features:</h3>
+                <ul>
+                    <li>Full-color TFT dash with smartphone connectivity</li>
+                    <li>Ride-by-wire throttle</li>
+                    <li>Switchable ABS</li>
+                    <li>Riding modes (Eco & Performance)</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Himalayan 450 wins hands down on tech and rider aids.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Ergonomics and Rider Comfort</h2>
+               
+                <ul>
+                    <li><span class="font-weight-700">Yezdi Adventure:</span> 815mm seat height, 187kg weight, adequate pillion comfort</li>
+                    <li><span class="font-weight-700">Himalayan 450:</span> 825mm adjustable seat height, 196kg weight, better padded seating</li>
+                </ul>
+                <p>Himalayan 450 offers a slightly more premium and comfortable feel. Adjustable seat height is a welcome bonus.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Fuel Efficiency and Tank Range</h2>
+                <ul>
+                    <li><span class="font-weight-700">Yezdi Adventure:</span> 36 km/l, 15.5L tank (~450-500km range)</li>
+                    <li><span class="font-weight-700">Himalayan 450:</span> 30 km/l, 17L tank (~500km range)</li>
+                </ul>
+                <p>Though the Himalayan 450 is thirstier due to its bigger engine, its larger tank ensures similar touring range.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Maintenance and Reliability</h2>
+                <h3 class="subheading">Yezdi Adventure</h3>
+                <ul>
+                    <li>Decent service coverage via Classic Legends network</li>
+                    <li>Spare part availability is improving</li>
+                    <li>Slightly higher maintenance intervals</li>
+                </ul>
+
+                <h3 class="subheading">Himalayan 450</h3>
+                <ul>
+                    <li>Royal Enfield's expansive service network</li>
+                    <li>Proven reliability from previous Himalayan</li>
+                    <li>Better availability of accessories and touring parts</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Verdict:</span> Himalayan 450 edges ahead in long-term peace of mind and resale value.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Price Comparison</h2>
+                <ul>
+                    <li><span class="font-weight-700">Yezdi Adventure:</span> ₹2,14,900 -- ₹2,26,900</li>
+                    <li><span class="font-weight-700">Himalayan 450:</span> ₹2,85,000-- ₹2,98,000</li>
+                </ul>
+                <p>While the Himalayan 450 is more premium, the Yezdi Adventure is a solid value-for-money alternative.</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Which One Should You Buy?</h2>
+                <p><span class="font-weight-700">Choose Yezdi Adventure if:</span></p>
+                <ul>
+                    <li>You want a rugged, budget-friendly adventure bike</li>
+                    <li>You're a beginner looking for an accessible ADV</li>
+                    <li>You prefer mechanical simplicity with essential features</li>
+                </ul>
+
+                <p><span class="font-weight-700">Choose Himalayan 450 if:</span></p>
+                <ul>
+                    <li>You crave top-notch performance, comfort, and tech</li>
+                    <li>You want to do serious touring & occasional off-roading</li>
+                    <li>You are okay spending more for premium quality and experience</li>
+                </ul>
+
+                <p><span class="font-weight-700">BikeCarHub Final Verdict:</span></p>
+                <p>"If budget is tight, the Yezdi Adventure delivers excellent value. But if you want the best overall ADV experience in 2025, the Himalayan 450 is worth the extra spend."</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">FAQs: Yezdi Adventure vs Himalayan 450</h2>
+
+                <div class="accordion" id="faqYezdiHimalayan">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                                1. Which bike is better for off-roading?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqYezdiHimalayan">
+                            <div class="accordion-body">
+                                The Himalayan 450 has better suspension and power delivery, making it more capable off-road.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                                2. Is the Yezdi Adventure suitable for long-distance touring?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqYezdiHimalayan">
+                            <div class="accordion-body">
+                                Yes, with its torquey engine and sturdy chassis, it's a good budget touring option.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                                3. What's the seat height of Himalayan 450?
+                            </button>
+                        </h2>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqYezdiHimalayan">
+                            <div class="accordion-body">
+                                It's 825 mm but adjustable by a few millimeters using factory settings.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                                4. Which bike offers better features?
+                            </button>
+                        </h2>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqYezdiHimalayan">
+                            <div class="accordion-body">
+                                Himalayan 450 offers more modern tech like ride modes, TFT display, and smartphone connectivity.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                                5. Which one is more beginner-friendly?
+                            </button>
+                        </h2>
+                        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqYezdiHimalayan">
+                            <div class="accordion-body">
+                                Yezdi Adventure, due to its lower power and simpler dynamics.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                                6. Do both bikes have dual-channel ABS?
+                            </button>
+                        </h2>
+                        <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqYezdiHimalayan">
+                            <div class="accordion-body">
+                                Yes, both come with standard dual-channel ABS.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                                7. Which bike has better mileage?
+                            </button>
+                        </h2>
+                        <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqYezdiHimalayan">
+                            <div class="accordion-body">
+                                Yezdi Adventure offers slightly better fuel efficiency.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                                8. Which one has better service and support?
+                            </button>
+                        </h2>
+                        <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqYezdiHimalayan">
+                            <div class="accordion-body">
+                                Himalayan 450 wins here, thanks to Royal Enfield's wide service network.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                                9. Is Yezdi Adventure suitable for city rides?
+                            </button>
+                        </h2>
+                        <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqYezdiHimalayan">
+                            <div class="accordion-body">
+                                Yes, though its size and weight can feel bulky in tight traffic.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                                10. Which one is more value for money?
+                            </button>
+                        </h2>
+                        <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqYezdiHimalayan">
+                            <div class="accordion-body">
+                                Yezdi Adventure offers better VFM, but Himalayan 450 gives a more refined and premium experience.
+                            </div>
+                        </div>
+                    </div>
+    </div>
+                  <p></p> 
+                <p><span class="font-weight-700">BikeCarHub</span> always recommends taking a test drive of both vehicles to feel the difference yourself before making a purchase.</p>
+                <h3 class="heading">Check other brands here</h3>
+                <p>For Skoda Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="SkodaKylaq1"> Click Here!</a></p>
+                <p>For Suzuki Motors<a class="for-link" asp-controller="ValueForMoney" asp-action="MarutiSuzukiBrezza_1"> Click Here!</a></p>
+                <p>Check other Vehicles on<a class="for-link" asp-controller="Home" asp-action="Index"> BikeCarHub</a></p>
+
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

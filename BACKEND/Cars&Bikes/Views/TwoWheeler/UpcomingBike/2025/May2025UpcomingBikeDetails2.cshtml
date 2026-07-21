@@ -1,0 +1,108 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Yezdi Adventure 2025 Launch on 4th June in India";
+}
+@section MetaTags {
+    <meta name="keywords" content="Yezdi Adventure 2025, Yezdi Adventure launch date, Upcoming adventure bikes in India, Yezdi Adventure features, Yezdi Adventure specifications, Yezdi Adventure price in India, OBD-2B compliant bikes, Best adventure bikes 2025, Yezdi motorcycle updates, Yezdi Adventure LED headlamp, Yezdi Adventure riding modes" />
+    <meta name="description" content="Yezdi Adventure 2025 launching on 4th June with LED headlamp, OBD-2B engine, touring features, and rugged design. Get all specs, price & details." />
+}
+<!--For truncate-->
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+@* <div class="header-img"> <img src="~/images/main-slider/header.png" /></div> *@
+<body>
+    <div class=" ">
+    <h1 class="latest-bike-head">Upcoming Bikes</h1>
+    <div class="TWupcoming-container">
+        <div class="upcoming-bikes-details-image">
+            <img src="@Model.ImageFolderURL" alt="@Model.UpcomingBikeName" title="@Model.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.webp")';" />
+            <div class="upcoming-bikes-details-text">
+                <h2>@Model.UpcomingBikeName</h2>
+                <p><i class="fa fa-calendar"></i>  @Model.ExpectedLaunchDate</p>
+            </div>
+        </div>
+
+        <div class="upcoming-bikes-details-content">
+            <h2>About @Model.UpcomingBikeName</h2>
+            @* <p>@Html.Raw(@Upbike.UpcomingBikeDetails.Replace("\n", "<br>"))</p> *@
+            <h3 class="subheading">Yezdi Adventure 2025: New Model Launching on 4th June</h3>
+            <p>Motorcycle enthusiasts in India have a reason to get excited as <span class="font-weight-700">Yezdi</span> prepares to unveil the <span class="font-weight-700">2025 Yezdi Adventure</span> on<span class="font-weight-700"> 4th June 2025. </span>Known for its rugged design and touring capabilities, the updated model aims to bring a refreshing twist to the adventure bike segment with aesthetic upgrades, enhanced features, and compliance with the latest emission norms.</p>
+            <p>Let’s take a closer look at what’s expected from this highly anticipated two-wheeler.</p>
+            <div class="row m-b20">
+                <div class="col-lg-12 col-md-12 text-center"><img src="~/images/twowheeler/upcomming/2025/yezdiadventure11.webp" alt="yezdiadventure11" title="yezdiadventure11" /></div>
+            </div>
+            <div class="div-line"></div>
+            <h3 class="subheading">Updated Design and Styling</h3>
+            <p>The 2025 Yezdi Adventure gets a visual makeover while staying true to its off-road DNA. The most noticeable update is the <span class="font-weight-700"> new asymmetrical LED headlamp, </span>offering better illumination and lending the bike a more modern and aggressive appearance. This feature aligns it with global adventure bikes like the BMW G310 GS, giving it a premium edge.</p>
+            <p>Other design tweaks may include refreshed color schemes, improved paint quality, and minor body enhancements that enhance both aesthetics and aerodynamics.</p>
+            <div class="row m-b20">
+                <div class="col-lg-12 col-md-12 text-center"><img src="~/images/twowheeler/upcomming/2025/adventurerightsideview.webp" alt="adventurerightsideview" title="adventurerightsideview.webp" /></div>
+            </div>
+            <div class="div-line"></div>
+            <h3 class="subheading">Engine and Emission Compliance</h3>
+            <p>Yezdi is expected to retain the same <span class="font-weight-700"> 334cc, single-cylinder, liquid-cooled engine </span>that powered the outgoing model. This powerplant produces around <span class="font-weight-700"> 29.2 bhp </span>and <span class="font-weight-700">29.84 Nm of torque, </span>paired with a <span class="font-weight-700">6-speed transmission.</span> However, the key update for 2025 is the engine's compliance with the <span class="font-weight-700">OBD-2B emission norms,</span> making it greener and more efficient in line with the government’s latest environmental mandates.</p>
+            <p>Riders can expect the same reliable performance on highways, hills, and rough terrains, making it suitable for both city commuting and long-distance adventures.</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">Feature-Rich and Adventure-Ready</h3>
+            <p>The upcoming Yezdi Adventure isn’t just about looks. It will continue offering a range of features that are essential for modern-day touring and off-road biking, including:</p>
+            <ul>
+                <li><span class="font-weight-700">Fully digital LCD instrument cluster </span>with Bluetooth connectivity</li>
+                <li><span class="font-weight-700">Turn-by-turn navigation</span></li>
+                <li><span class="font-weight-700">USB charging port</span></li>
+                <li><span class="font-weight-700">Dual-channel ABS </span>with<span class="font-weight-700">three riding modes </span>– Road, Off-road, and Rain</li>
+                <li><span class="font-weight-700">Long-travel front forks and rear monoshock suspension</span></li>
+                <li><span class="font-weight-700">Split seating for enhanced comfort on long rides</span></li>
+            </ul>
+            <p>These features aim to strike the right balance between utility and comfort for both solo riders and pillion passengers.</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">Price Expectations</h3>
+            <p>The current model of the Yezdi Adventure is priced between <span class="font-weight-700">₹2.16 lakh to ₹2.20 lakh </span>(ex-showroom). With the new upgrades, it is expected that the 2025 variant may see a marginal price increase, potentially starting at <span class="font-weight-700">₹2.30 lakh. </span>However, the brand seems to be committed to keeping it competitive, especially against rivals in the segment.</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">Expected Competition</h3>
+            <p>The Yezdi Adventure will continue to battle with some popular names in the adventure segment:</p>
+            <ul>
+                <li><span class="font-weight-700">Royal Enfield Himalayan 411</span></li>
+                <li><span class="font-weight-700">KTM 250 Adventure</span></li>
+                <li><span class="font-weight-700">Hero Xpulse 421 (also expected to launch in 2025)</span></li>
+            </ul>
+            <p>With its retro styling, solid hardware, and competitive pricing, the Yezdi Adventure stands its ground as a value-for-money offering</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">Launch Timeline and Availability</h3>
+            <p>The official launch is scheduled for <span class="font-weight-700">4th June 2025,</span> and bookings are likely to open on the same day or soon after. Test rides and showroom availability are expected to follow by mid-June, with deliveries beginning shortly thereafter.</p>
+            <div class="div-line"></div>
+            <h3 class="subheading">Final Thoughts</h3>
+            <p>The <span class="font-weight-700">2025 Yezdi Adventure</span> seems all set to carry forward the brand’s legacy in the adventure segment. With practical enhancements, modern features, and adherence to stricter emission standards, it’s a motorcycle designed for the modern Indian rider who loves to explore beyond city limits.</p>
+            <p>Whether it’s weekend getaways, challenging terrains, or daily commutes, the new Yezdi Adventure promises to be a reliable and exciting companion on every journey.</p>
+        </div>
+    </div>
+    }
+    <!-- Bike 1 -->
+    <h1 class="for-h1">Explore Latest & Upcoming Bikes</h1>
+    <div class="upcoming-bikes-details-row">
+        @foreach (var allUpbike in ViewBag.allupcomingbike)
+        {
+            <a href="/@allUpbike.ImageURL" style="text-decoration:none;">
+                <div class="upcoming-bikes-details-card">
+                    <div class="upcoming-bikes-all-image">
+                        <img src="@allUpbike.ImageFolderURL" alt="@allUpbike.UpcomingBikeName" title="@allUpbike.UpcomingBikeName" onerror="this.onerror=null; this.src='@Url.Content("~/images/twowheeler/default.jpg")';" />
+                    </div>
+
+                    <div class="upcoming-allbikes-details-content">
+                        <h2>@Truncate(@allUpbike.UpcomingBikeName, 22)</h2>
+                        <p><i class="fa fa-calendar"></i>  @allUpbike.ExpectedLaunchDate</p>
+                        <a href="/@allUpbike.ImageURL" class="details-button" style="text-decoration:none;">View Details</a>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+    </div>
+</body>

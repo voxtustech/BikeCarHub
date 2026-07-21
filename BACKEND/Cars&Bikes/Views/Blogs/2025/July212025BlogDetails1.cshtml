@@ -1,0 +1,443 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Best Bikes Under ₹1.5 Lakh for Students in India 2025";
+}
+@section MetaTags {
+    <meta name="keywords" content="Best bikes for students under 1.5 lakh, bikes under ₹1.5 lakh India 2025, college student bikes India, TVS Raider vs Apache RTR, best commuter bikes 2025, mileage bikes for students" />
+    <meta name="description" content="Explore the top 5 best bikes for college students under ₹1.5 lakh in India. Compare mileage, specs & features. Updated list for 2025 – BikeCarHub." />
+}
+
+@functions {
+    public string Truncate(string input, int length)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length <= length)
+            return input;
+        return input.Substring(0, length) + "...";
+    }
+}
+<body id="bg">
+    @* <div class="header-img"><img src="~/images/main-slider/header.png" alt="bikecarhubheaderimage" title="bikecarhubheaderimage" /></div> *@
+    <div class=" ">
+        <div><h1 class="latest-bike-head">@Model.BlogHeading</h1></div>
+        <div class=" latest-bike-container">
+            @* <div style="background-image:url(@ViewBag.TWNews.ImageURL);background-repeat:no-repeat;background-position: center;background-size:contain ;height: 400px;box-shadow: 5px 10px 8px #888888;border-radius:10px;background-color:#ebecee;padding:60px;"></div> *@
+            <div class="upcoming-bikes-details-image">
+                <img src="@Model.ImageURL" alt="@Model.BlogHeading" title="@Model.BlogHeading" onerror="this.onerror=null; this.src='@Url.Content("~/images/default.jpg")';" />
+                <div class="upcoming-bikes-details-text">
+                    <p><i class="fa fa-calendar"></i> @Model.Date?.ToString("d MMM yyyy")</p>
+                    @* <p>@ViewBag.TWNews.NewsSummary</p> *@
+                </div>
+            </div>
+            <div class="latest-bikes-details-content">
+
+                <p><span class="font-weight-700">Written by:</span> BikeCarHub Editorial Team</p>
+                <p><span class="font-weight-700">Published on:</span> 18th July 2025</p>
+
+                <div class="div-line"></div>
+                <h2 class="subheading">Introduction</h2>
+
+                <p>@Html.Raw(@Model.BlogSummary.Replace("\n", "<br>"))</p>
+
+                <p><a class="for-link" asp-controller="Home" asp-action="Index">BikeCarHub</a> has put together a list of the top 5 best bikes under ₹1.5 lakh tailored especially for college students — blending style, fuel economy, and modern features that'll make heads turn on campus and handle daily commutes like a champ.</p>
+             
+    <h2 class="subheading">What College Students Should Look for in a Bike</h2>
+    <p>Before jumping into the list, here are a few important factors students should keep in mind:</p>
+    <ul>
+        <li><span class="font-weight-700">Fuel Efficiency</span>: Your monthly pocket money will thank you.</li>
+        <li><span class="font-weight-700">Maintenance</span>: A reliable, low-maintenance bike saves long-term expenses.</li>
+        <li><span class="font-weight-700">Ride Comfort</span>: Smooth suspensions and upright seating are a must for city rides.</li>
+        <li><span class="font-weight-700">Style & Presence</span>: A good-looking bike? Always a bonus on campus!</li>
+        <li><span class="font-weight-700">Resale Value & Brand Trust</span>: Useful when you upgrade or move on.</li>
+    </ul>
+    
+    <p>With those essentials covered, let's dive into the bikes themselves.</p>
+    
+    <h2 class="subheading">Best 5 Bikes for College Students Under ₹1.5 Lakh in 2025</h2>
+    <p>These are the five best bikes we've selected — all priced under ₹1.5 lakh (ex-showroom) and perfect for students.</p>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/best bikes under 15 lakh for students/bajaj pulsar 150.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+    <h3 class="subheading">1. Bajaj Pulsar 150</h3>
+                <p>
+                    <span class="font-weight-700">Ex-Showroom Price: ₹ 1,13,734 (Pulsar 150 SD), ₹ 1,20,819 (Pulsar 150 TD)</span><br>
+    <span class="font-weight-700">Engine</span>: 149.5cc, air-cooled, single-cylinder<br>
+    <span class="font-weight-700">Power</span>: 14 PS@8500 rpm<br>
+    <span class="font-weight-700">Torque</span>: 13.25 Nm@6500 rpm<br>
+    <span class="font-weight-700">Mileage</span>: 47.5 km/l<br>
+    <span class="font-weight-700">Kerb Weight</span>: 148 kg<br>
+    <span class="font-weight-700">Fuel Tank</span>: 15 litres</p>
+    
+    <p>The Pulsar 150 is practically a college legend. Known for its macho looks and refined DTS-i engine, it blends everyday usability with sporty styling. Great for daily use and occasional highway runs, it's ideal for students who want something time-tested.</p>
+    
+    <div class="pros-cons">
+        <p class="pros"><span class="font-weight-700">Pros</span>:</p>
+        <ul class="pros">
+            <li>Reliable and long-lasting engine</li>
+            <li>Good balance of power and fuel efficiency</li>
+            <li>Wide service network</li>
+        </ul>
+        
+        <p class="cons"><span class="font-weight-700">Cons</span>:</p>
+        <ul class="cons">
+            <li>Outdated instrument cluster</li>
+            <li>Lacks modern electronics</li>
+        </ul>
+    </div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/best bikes under 15 lakh for students/tvs apache rtr 160 2v.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+    <h3 class="subheading">2. TVS Apache RTR 160 2V</h3>
+                <p>
+                    <span class="font-weight-700">Ex-Showroom Price: ₹ 1,21,420 (RM Drum Black Edition), ₹ 1,22,220 (RM Drum), ₹ 1,25,720 (RM Disc), ₹ 1,29,020 (RM Disc BT), ₹ 1,30,520 (Racing Edition), ₹ 1,34,320 (Dual Channel ABS)</span><br>
+    <span class="font-weight-700">Engine</span>: 159.7cc, air-cooled, fuel-injected<br>
+    <span class="font-weight-700">Power</span>: 16.04 PS@8750 rpm<br>
+    <span class="font-weight-700">Torque</span>: 13.85 Nm@7000 rpm<br>
+    <span class="font-weight-700">Mileage</span>: 61 km/l<br>
+    <span class="font-weight-700">Kerb Weight</span>: 137 kg<br>
+    <span class="font-weight-700">Fuel Tank</span>: 12 litres</p>
+    
+    <p>The Apache RTR 160 2V is a pure street machine. With its aggressive stance and first-in-class <span class="font-weight-700">ride modes</span> (Sport, Urban, Rain), this bike brings race DNA to college life. The LED headlamp, digital display, and connected tech make it a head-turner on campus.</p>
+    
+    <div class="pros-cons">
+        <p class="pros"><span class="font-weight-700">Pros</span>:</p>
+        <ul class="pros">
+            <li>Segment-first riding modes</li>
+            <li>Bluetooth connectivity and race telemetry</li>
+            <li>Strong performance and sound</li>
+        </ul>
+        
+        <p class="cons"><span class="font-weight-700">Cons</span>:</p>
+        <ul class="cons">
+            <li>Smaller fuel tank</li>
+            <li>Slightly stiff suspension for pillion comfort</li>
+        </ul>
+    </div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/best bikes under 15 lakh for students/hero xtreme 160r.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+    <h3 class="subheading">3. Hero Xtreme 160R</h3>
+                <p>
+                    <span class="font-weight-700">Ex-Showroom Price: ₹ 1,13,211 (XTREME 160R SINGLE DISC OBD2B)</span><br>
+    <span class="font-weight-700">Engine</span>: 163cc, air-cooled, fuel-injected<br>
+    <span class="font-weight-700">Power</span>: 15.2 PS@8500 rpm<br>
+    <span class="font-weight-700">Torque</span>: 14 Nm@6500 rpm<br>
+    <span class="font-weight-700">Mileage</span>: 47 km/l<br>
+    <span class="font-weight-700">Kerb Weight</span>: 139.5 kg<br>
+    <span class="font-weight-700">Fuel Tank</span>: 12 litres</p>
+    
+    <p>Modern, lightweight, and quick off the line — that's the Xtreme 160R. It's one of the most responsive bikes in the 160cc category and offers excellent low-end torque for city riding. It's also equipped with LED lighting and a fully digital console.</p>
+    
+    <div class="pros-cons">
+        <p class="pros"><span class="font-weight-700">Pros</span>:</p>
+        <ul class="pros">
+            <li>Very lightweight — easy to handle for new riders</li>
+            <li>Best-in-class acceleration</li>
+            <li>Sporty and aggressive looks</li>
+        </ul>
+        
+        <p class="cons"><span class="font-weight-700">Cons</span>:</p>
+        <ul class="cons">
+            <li>Basic instrumentation</li>
+            <li>Rear suspension could be more refined</li>
+        </ul>
+    </div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/best bikes under 15 lakh for students/honda unicorn cbf 160.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+    <h3 class="subheading">4. Honda Unicorn CBF 160</h3>
+                <p>
+                    <span class="font-weight-700">Ex-Showroom Price: ₹ 1,19,000</span><br>
+    <span class="font-weight-700">Engine</span>: 162.7cc, air-cooled, single-cylinder<br>
+    <span class="font-weight-700">Power</span>: 13.8 hp@8000 rpm<br>
+    <span class="font-weight-700">Torque</span>: 13.92 Nm@6000 rpm<br>
+    <span class="font-weight-700">Mileage</span>: 60 km/l<br>
+    <span class="font-weight-700">Kerb Weight</span>: 135 kg<br>
+    <span class="font-weight-700">Fuel Tank</span>: 12 litres</p>
+    
+    <p>Comfort is where the Unicorn CBF 160 shines. With a long seat, smooth engine, and premium Honda build quality, this bike is perfect for those looking for a no-nonsense commuter that glides through traffic effortlessly.</p>
+    
+    <div class="pros-cons">
+        <p class="pros"><span class="font-weight-700">Pros</span>:</p>
+        <ul class="pros">
+            <li>Most comfortable ride in the segment</li>
+            <li>Excellent fuel economy</li>
+            <li>Honda's reliable after-sales service</li>
+        </ul>
+        
+        <p class="cons"><span class="font-weight-700">Cons</span>:</p>
+        <ul class="cons">
+            <li>Very conservative design</li>
+            <li>Misses out on modern features</li>
+        </ul>
+    </div>
+                <div class="row m-b20">
+                    <div class="col-lg-12 col-md-12 text-center"><img src="~/images/blogs/2025/july/best bikes under 15 lakh for students/tvs raider 125.webp" alt="bikecarhubtvsapache" title="bikecarhubtvsapache" /></div>
+                </div>
+    <h3 class="subheading">5. TVS Raider 125</h3>
+                <p>
+                    <span class="font-weight-700">Ex-Showroom Price: ₹ 87,010 (TVS Raider 125 Drum), ₹ 93,500 (TVS Raider 125 Single Seat), ₹ 97,850 (TVS Raider 125 Split Seat), ₹ 97,850 (TVS Raider 125 IGO), ₹ 99,100 (TVS Raider 125 SSE), ₹ 1,02,300 (TVS Raider 125 SX)</span><br>
+    <span class="font-weight-700">Engine</span>: 124.8cc, air-cooled, 3-valve<br>
+    <span class="font-weight-700">Power</span>: 11.38 PS@7500 rpm<br>
+    <span class="font-weight-700">Torque</span>: 11.2 Nm@6000 rpm<br>
+    <span class="font-weight-700">Mileage</span>: 56.7 km/l<br>
+    <span class="font-weight-700">Kerb Weight</span>: 123 kg<br>
+    <span class="font-weight-700">Fuel Tank</span>: 10 litres</p>
+    
+    <p>Don't let the 125cc badge fool you. The <span class="font-weight-700">TVS Raider 125</span> punches above its weight with aggressive styling, a digital display, riding modes, and Bluetooth-enabled cluster. It's aimed at Gen-Z and fits the modern student lifestyle perfectly.</p>
+    
+    <div class="pros-cons">
+        <p class="pros"><span class="font-weight-700">Pros</span>:</p>
+        <ul class="pros">
+            <li>Fantastic fuel economy</li>
+            <li>Loaded with features and tech</li>
+            <li>Lightweight and nimble</li>
+        </ul>
+        
+        <p class="cons"><span class="font-weight-700">Cons</span>:</p>
+        <ul class="cons">
+            <li>Limited power for highway use</li>
+            <li>Slightly smaller fuel tank</li>
+        </ul>
+    </div>
+    
+    <h2>Specifications & Features Comparison Table</h2>
+    <div style="overflow-x: auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th class="text-center">Bike</th>
+                                <th class="text-center">Engine</th>
+                                <th class="text-center">Power</th>
+                                <th class="text-center">Torque</th>
+                                <th class="text-center">Mileage (km/l)</th>
+                                <th class="text-center">Weight</th>
+                                <th class="text-center">Price (₹)</th>
+                                <th class="text-center">Key Features</th>
+                </tr>
+            </thead>
+            <tbody>
+                            <tr class="compare-head-text">
+                                <td><a class="for-link" asp-controller="Bajaj" asp-action="BajajPulsar150">Bajaj Pulsar 150</a></td>
+                    <td>149.5cc</td>
+                    <td>14 PS</td>
+                    <td>13.25 Nm</td>
+                    <td>47.5</td>
+                    <td>148kg</td>
+                    <td>₹1,13,734-₹1,20,819</td>
+                    <td>DTS-i Engine, Wide Service Network</td>
+                </tr>
+                <tr>
+                                <td><a class="for-link" asp-controller="TVS" asp-action="TVSApacheRTR160">TVS Apache RTR 160 2V</a></td>
+                    <td>159.7cc</td>
+                    <td>16.04 PS</td>
+                    <td>13.85 Nm</td>
+                    <td>61</td>
+                    <td>137kg</td>
+                    <td>₹1,21,420-₹1,34,320</td>
+                    <td>Ride Modes, LED Lights, SmartXonnect</td>
+                </tr>
+                            <tr class="compare-head-text">
+                                <td><a class="for-link" asp-controller="Hero" asp-action="HeroXtreme160R">Hero Xtreme 160R</a></td>
+                    <td>163cc</td>
+                    <td>15.2 PS</td>
+                    <td>14 Nm</td>
+                    <td>47</td>
+                    <td>139kg</td>
+                    <td>₹1,13,211</td>
+                    <td>LED Headlamp, Fast Acceleration</td>
+                </tr>
+                <tr>
+                                <td>Honda Unicorn CBF 160</td>
+                    <td>162.7cc</td>
+                    <td>13.8 hp</td>
+                    <td>13.92 Nm</td>
+                    <td>60</td>
+                    <td>135kg</td>
+                    <td>₹1,19,000</td>
+                    <td>Long Seat, Smooth Engine</td>
+                </tr>
+                            <tr class="compare-head-text">
+                                <td><a class="for-link" asp-controller="TVS" asp-action="TVSRaider125">TVS Raider 125</a></td>
+                    <td>124.8cc</td>
+                    <td>11.38 PS</td>
+                    <td>11.2 Nm</td>
+                    <td>56.7</td>
+                    <td>123kg</td>
+                    <td>₹87,010-₹1,02,300</td>
+                    <td>Digital Display, Sporty Design</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <h2 class="subheading">Ownership & Maintenance Tips for College Riders</h2>
+    <ul>
+        <li>Stick to <span class="font-weight-700">regular service intervals</span> to maintain fuel efficiency.</li>
+        <li>Always keep tyre pressure optimal.</li>
+        <li>Check the chain tension monthly.</li>
+        <li>Invest in a <span class="font-weight-700">good helmet and lock system</span>.</li>
+        <li>Use engine kill switch properly — it's there for a reason.</li>
+    </ul>
+    
+    <h2 class="subheading">Which One Should You Buy?</h2>
+    <p>Still confused? Here's a quick breakdown:</p>
+    <ul>
+        <li><span class="font-weight-700">For Style & Tech</span>: TVS Raider 125 / Apache RTR 160 2V</li>
+        <li><span class="font-weight-700">For Comfort</span>: Honda Unicorn CBF 160</li>
+        <li><span class="font-weight-700">For Balanced Performance</span>: Bajaj Pulsar 150</li>
+        <li><span class="font-weight-700">For Lightweight Ride</span>: TVS Raider 125</li>
+        <li><span class="font-weight-700">For Maximum Mileage</span>: TVS Apache RTR 160 2V</li>
+    </ul>
+    
+    <h2 class="subheading">Final Thoughts from BikeCarHub</h2>
+    <p>All five bikes in this list deliver real value under ₹1.5 lakh. Whether you prioritize tech, style, mileage, or comfort, there's a perfect ride waiting for you. From the <span class="font-weight-700">ever-reliable Pulsar</span> to the <span class="font-weight-700">futuristic Raider 125</span>, college students are spoiled for choice in 2025.</p>
+    
+    <p>Take a test ride, compare EMI options, and don't forget — <span class="font-weight-700">always ride safe, with a helmet</span>. You'll thank yourself later.</p>
+    
+    <h2 class="subheading">FAQs About College Bikes Under ₹1.5 Lakh</h2>
+    
+    <div class="accordion" id="faqBikes">
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">
+                    1. Which is the best bike under ₹1.5 lakh for college students?
+                </button>
+            </h3>
+            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqBikes">
+                <div class="accordion-body">
+                    TVS Apache RTR 160 2V and TVS Raider 125 offer excellent balance of performance and features.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                    2. Which bike offers the best mileage in this range?
+                </button>
+            </h3>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqBikes">
+                <div class="accordion-body">
+                    TVS Apache RTR 160 2V and Honda Unicorn CBF 160 deliver between 55-65 km/l.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                    3. Is the Apache RTR 160 2V suitable for beginners?
+                </button>
+            </h3>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqBikes">
+                <div class="accordion-body">
+                    Yes, especially in Urban or Rain mode which softens throttle and braking.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                    4. Which bike has the most modern features?
+                </button>
+            </h3>
+            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqBikes">
+                <div class="accordion-body">
+                    TVS Raider 125 and Apache RTR 160 2V offer Bluetooth and digital consoles.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                    5. Are 160cc bikes good for daily commuting?
+                </button>
+            </h3>
+            <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqBikes">
+                <div class="accordion-body">
+                    Absolutely. They balance power and economy well for city use.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                    6. Which is the most comfortable bike for city traffic?
+                </button>
+            </h3>
+            <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqBikes">
+                <div class="accordion-body">
+                    Honda Unicorn 160 with its plush seat and soft suspension.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                    7. Does the Pulsar 150 still hold up in 2025?
+                </button>
+            </h3>
+            <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqBikes">
+                <div class="accordion-body">
+                    Yes. It's reliable, affordable, and easy to maintain.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                    8. Which bike is best for short riders?
+                </button>
+            </h3>
+            <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqBikes">
+                <div class="accordion-body">
+                    TVS Raider 125 with its lower seat height is very accommodating.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                    9. Which bike has the lowest maintenance costs?
+                </button>
+            </h3>
+            <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqBikes">
+                <div class="accordion-body">
+                    Hero Xtreme 160R and Pulsar 150 are very affordable to maintain.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                    10. What is the best budget tech-savvy bike for students?
+                </button>
+            </h3>
+            <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqBikes">
+                <div class="accordion-body">
+                    TVS Raider 125 — you get riding modes, digital cluster, and SmartXonnect tech.
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AllBlog")
+    @await Html.PartialAsync("_AllBrandComponent")
+</body>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>

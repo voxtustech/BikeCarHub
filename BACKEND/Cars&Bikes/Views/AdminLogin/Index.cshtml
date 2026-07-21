@@ -1,0 +1,206 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+
+<body>
+    <div class="header-img"> <img src="~/images/main-slider/header.png" /></div>
+    <div class="container mt-5 text-center">
+        <h2>Welcome to Admin Dashboard</h2>
+        <hr />
+        <!-- Buttons -->
+        <div class="text-center mb-3">
+            <button id="createBtn" class="btn btn-success">Create Features</button>
+            <button id="updateBtn" class="btn btn-primary">Update Features</button>
+        </div>
+
+        <!-- Create Section -->
+        <div id="createSection" style="display:none;">
+            <div class="container-fluid">
+
+   
+                                 <div class="row gx-3 gy-3">
+                                        <!-- Adds spacing between columns (gx) and rows (gy) -->
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("Create", "TW")" class="btn btn-success w-100">Two-Wheeler Brand</a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("Create", "TWBrands")" class="btn btn-primary w-100">Two-Wheeler Details</a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("CreateTWVarient", "TW")" class="btn btn-info w-100">Two-Wheeler Varient</a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("CreateTWSpec", "TW")" class="btn btn-success w-100">Add TW Specification</a>
+                                        </div>
+                                   
+                                   
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("CreateTWSafety", "TW")" class="btn btn-primary px-4">Add TW Safety</a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("CreateTWUnderpinning", "TW")" class="btn btn-success px-4">Create TW Underpinning</a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("CreateTWEngineAndTransmission", "TW")" class="btn btn-secondary">Add Engine & Transmission</a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("CreateTWCharging", "TW")" class="btn btn-outline-success">Add Charging Details</a>
+                                        </div>
+
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("ListTWUnderpinning", "TW")" class="btn btn-primary">Add TW Dimensions</a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("ListTWCharging", "TW")" class="btn btn-secondary">Add TW Electricals</a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("CreateTWFeatures", "TW")" class="btn btn-outline-success">Add TW Features</a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("CreateTWImageColorPrice", "TW")" class="btn btn-primary">Add TW Image Color Price</a>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("CreateTWMileageAndPerformances", "TW")" class="btn btn-secondary">Add TW Mileage and Performances</a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <a href="@Url.Action("CreateTWMotorAndBattery", "TW")" class="btn btn-primary">Create TW Motor And Battery</a>
+                                        </div>
+                                   
+                                </div>
+                                        <h3>Update EV Table</h3>
+                                        <div class="row g-3">
+                                            <div class="col-lg-4 mb-3">
+                                                <a href="@Url.Action("CreateEVAppFeatures", "TWEVAppFeatures")" class="btn btn-primary">Create EV  Features</a>
+                                            </div>
+                                            <div class="col-lg-4 mb-3">
+                                                <a href="@Url.Action("CreateTWEVCharging", "TWEVAppFeatures")" class="btn btn-primary">Create EV  Features</a>
+                                            </div>
+                                            <div class="col-lg-4 mb-3">
+                                                <a href="@Url.Action("CreateTWEVChasisandSuspension", "TWEVAppFeatures")" class="btn btn-primary">Create EV  Features</a>
+                                            </div>
+            
+                                        </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Update Section -->
+                            <div class="d-grid gap-3 col-6 mx-auto">
+                                    <div id="updateSection" style="display:none;">
+                                        <div class="form-group">
+                                            <label for="variantDropdown">Select Variant</label>
+                                            <select id="variantDropdown" class="form-control">
+                                                <option value="">-- Select Variant --</option>
+                                                @foreach (var variant in ViewBag.TWVarients as List<SelectListItem>)
+                                                {
+                                                    <option value="@variant.Value">@variant.Text</option>
+                                                }
+                                            </select>
+                                        </div>
+
+                                        <div id="updateLinks" style="display:none;" class="row mt-3">
+                                                <div class="col-lg-3 mb-3">
+                                                    <a id="updateSpecLink" class="btn btn-info px-4">Update TW Specification</a>
+                                                </div>
+                                                <div class="col-lg-3 mb-3">
+                                                        <a id="updateSafetyLink" class="btn btn-info px-4">Update Safety</a>
+                                                </div>
+                                                <div class="col-lg-3 mb-3">
+                                                        <a id="updateUnderpinningLink" class="btn btn-info px-4">Update Underpinning</a>
+                                                </div>
+                                                <div class="col-lg-3 mb-3">
+                                                     <a id="updateEngineandTransmissionLink" class="btn btn-info px-4">Update Engine and Transmission</a>
+                                                </div>
+
+                                                <div class="col-lg-3 mb-3">
+                                                    <a id="updateChargingLink" class="btn btn-info px-4">Update TW Charging Details</a>
+                                                </div>
+                                                <div class="col-lg-3 mb-3">
+                                                    <a id="updateChargingLink" class="btn btn-info px-4">Update TW Charging Details</a>
+                                                 </div>
+                                                <div class="col-lg-3 mb-3">
+                                                    <a id="updateDimensionsLink" class="btn btn-info px-4">Update TW Dimensions</a>
+                                                </div>
+                                                <div class="col-lg-3 mb-3">
+                                                    <a id="updateElectricalsLink" class="btn btn-info px-4">Update TW Electricals</a>
+                                                </div>
+
+                                                        <div class="col-lg-3 mb-3">
+                                                            <a id="updateFeaturesLink" class="btn btn-info px-4">Update TW Features</a>
+                                                        </div>
+                                                            <div class="col-lg-3 mb-3">
+                                                            <a id="updateImageColorPriceLink" class="btn btn-info px-4">Update TW Image Color Price</a>
+                                                        </div>
+                                                            <div class="col-lg-3 mb-3">
+                                                            <a id="updateMileageAndPerformancesLink" class="btn btn-info px-4">Update TW Mileage And Performances</a>
+                                                        </div>
+                                                            <div class="col-lg-3 mb-3">
+                                                            <a id="updateMotorAndBatteryLink" class="btn btn-info px-4">Update TW Motor And Battery</a>
+                                                        </div> 
+                                        </div>
+                                                                    <h3>Update EV Table</h3>
+                                                                    <div class="col-lg-4 mb-3">
+                                                                        <a id="updateListEVAppFeaturesLink" class="btn btn-info px-4">Update EV App Features</a>
+                                                                    </div>
+                                                                    <div class="col-lg-4 mb-3">
+                                                                        <a id="updateListEVAppChargingLink" class="btn btn-info px-4">Update EV App Charging</a>
+                                                                    </div>
+                                                                    <div class="col-lg-4 mb-3">
+                                                                        <a id="updateListEVChasisLink" class="btn btn-info px-4">Update EV App Chasis</a>
+                                                                    </div>
+                                </div>
+                            </div>
+    <div id="dynamicFormSection">
+        
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#createBtn').click(function () {
+                $('#createSection').show();
+                $('#updateSection').hide();
+            });
+
+            $('#updateBtn').click(function () {
+                $('#updateSection').show();
+                $('#createSection').hide();
+            });
+
+            $('#variantDropdown').change(function () {
+                var variantId = $(this).val();
+                if (variantId) {
+                    $('#updateLinks').show();
+                    // $('#updateSpecLink').attr('href', '/TW/EditTWSpec/' + variantId);
+                    $('#updateSpecLink').attr('href', '/TW/EditTWSpec/');
+                    $('#updateSafetyLink').attr('href', '/TW/EditTWSafety/');
+                    $('#updateUnderpinningLink').attr('href', '/TW/ListTWUnderpinning/');
+                    $('#updateUnderpinningLink').attr('href', '/TW/ListTWEngineandTransmission');
+                    $('#updateChargingLink').attr('href', '/TW/ListTWCharging');
+                    $('#updateDimensionsLink').attr('href', '/TW/ListTWDimensions');
+                    $('#updateElectricalsLink').attr('href', '/TW/ListTWElectricals');
+                    $('#updateFeaturesLink').attr('href', '/TW/ListTWFeatures');
+                    $('#updateImageColorPriceLink').attr('href', '/TW/ListTWImageColorPrice');
+                    $('#updateMileageAndPerformancesLink').attr('href', '/TW/ListTWMileageAndPerformances');
+                    $('#updateMotorAndBatteryLink').attr('href', '/TW/ListTWMotorAndBattery');
+                    $('#updateEVAppFeaturesLink').attr('href', '/TWEVAppFeatures/ListEVAppFeatures');
+                    $('#updateEVAppChargingLink').attr('href', '/TWEVAppFeatures/ListTWEVCharging');
+                    $('#updateListEVChasisLink').attr('href', '/TWEVAppFeatures/ListTWEVChasisandSuspension');
+
+                } else {
+                    $('#updateLinks').hide();
+                }
+            });
+
+        });
+    </script>
+}

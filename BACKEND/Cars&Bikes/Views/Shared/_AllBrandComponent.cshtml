@@ -1,0 +1,49 @@
+﻿@* @model TwoWheelerBrand *@
+<div class="latest-bike-container m-a10">
+    <h3 class="for-h1 text-left">Popular Brands</h3>
+    <div class="all-brand-grid-wrapper">
+        <div class="all-brand-grid" id="brandGrid">
+        @foreach (var brand in ViewBag.AllBrand)
+        {
+            <div class="All-brand-container">
+                <a href="/@brand.BrandName.Replace(" ", "-").ToLower()" style="text-decoration:none;">
+                    <div class="All-brand">
+                        <div class="side-brand-img">
+                            <img src="@brand.BrandLogoURL" alt="@brand.BrandName" title="@brand.BrandName" loading="lazy" onerror="showFallbackIcon(this);" />
+                            <i class="bi bi-award fallback-icon"></i>
+                        </div>
+                        <div class="side-all-brand-text"><h4>@brand.BrandName</h4></div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        </div>
+        <div class="view-more-container">
+            <span id="viewMoreText" class="view-more-text">View More <i class="fa fa-angle-right" id="viewMoreIcon"></i></span>
+        </div>
+    </div>
+</div>
+<script>
+    function showFallbackIcon(imgElement) {
+        imgElement.style.display = 'none'; // Hide the broken image
+        imgElement.nextElementSibling.style.display = 'block'; // Show the fallback icon
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const wrapper = document.querySelector('.all-brand-grid-wrapper');
+        const toggleText = document.getElementById('viewMoreText');
+        const icon = document.getElementById('viewMoreIcon');
+
+        wrapper.classList.add('collapsed'); // Collapse by default
+
+        toggleText.addEventListener('click', function () {
+            wrapper.classList.toggle('collapsed');
+            const isCollapsed = wrapper.classList.contains('collapsed');
+
+            toggleText.firstChild.textContent = isCollapsed ? 'View More ' : 'View Less ';
+            icon.className = isCollapsed ? 'fa fa-angle-right' : 'fa fa-angle-up';
+        });
+    });
+</script>
