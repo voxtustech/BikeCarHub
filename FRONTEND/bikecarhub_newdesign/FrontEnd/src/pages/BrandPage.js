@@ -21,7 +21,7 @@ import { AdPlaceholder } from "../components/AdPlaceholder";
 
 export default function BrandPage() {
 
-    const { brandId } = useParams();
+    const { brandName } = useParams();
 
     const [brand, setBrand] = useState(null);
 
@@ -37,7 +37,7 @@ export default function BrandPage() {
 
         loadPage();
 
-    }, [brandId]);
+    }, [brandName]);
 
     async function loadPage() {
 
@@ -55,9 +55,9 @@ export default function BrandPage() {
 
             ] = await Promise.all([
 
-                getBrand(brandId),
+                getBrand(brandName),
 
-                getBrandBikes(brandId),
+                getBrandBikes(brandName),
 
                 getPopularBrands()
 
@@ -152,7 +152,7 @@ export default function BrandPage() {
 
                         <BrandSidebar
                             brands={brands}
-                            currentBrandId={Number(brandId)}
+                            currentBrandId={brand?.id}
                         />
 
                     </div>

@@ -19,15 +19,13 @@ export async function getBrands() {
    Brand Details
 -------------------------------------------- */
 
-export async function getBrand(brandId) {
-
+export async function getBrand(brandName) {
     const response = await fetch(
-        `${API_BASE}/brands/${brandId}`
+        `${API_BASE}/brands/${brandName}`
     );
 
-    if (!response.ok) {
+    if (!response.ok)
         throw new Error("Failed to fetch brand.");
-    }
 
     return response.json();
 }
@@ -36,15 +34,13 @@ export async function getBrand(brandId) {
    Bikes By Brand
 -------------------------------------------- */
 
-export async function getBrandBikes(brandId) {
-
+export async function getBrandBikes(brandName) {
     const response = await fetch(
-        `${API_BASE}/brands/${brandId}/bikes`
+        `${API_BASE}/brands/${brandName}/bikes`
     );
 
-    if (!response.ok) {
-        throw new Error("Failed to fetch brand bikes.");
-    }
+    if (!response.ok)
+        throw new Error("Failed to fetch bikes.");
 
     return response.json();
 }

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { getBrands } from "../api/brandApi";
 import { getVehicleDetails } from "../api/searchApi";
 import { useNavigate } from "react-router-dom";
+import { slugify } from "../utils/slugify";
 
 const heroSlides = [
   {
@@ -156,7 +157,7 @@ export function HeroSection() {
 
                 if (selectedBrand) {
 
-                    navigate(`/brand/${selectedBrand.id}`);
+                    navigate(`/${selectedBrand.name.toLowerCase().replace(/\s+/g, "-")}`);
 
                     return;
 
@@ -169,7 +170,9 @@ export function HeroSection() {
 
                 const details = await getVehicleDetails(model);
 
-                navigate(`/bike/${details.modelId}`);
+                navigate(
+                    `/${details.brandName}/${details.bikeName}`
+                );
 
             }
 

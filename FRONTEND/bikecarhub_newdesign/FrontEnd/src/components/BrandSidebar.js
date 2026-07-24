@@ -95,6 +95,7 @@ export default function BrandSidebar({
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BACKEND_URL } from "../config";
+import { slugify } from "../utils/slugify";
 
 export default function BrandSidebar({
 
@@ -132,7 +133,7 @@ export default function BrandSidebar({
                                 key={brand.id}
 
                                 onClick={() =>
-                                    navigate(`/brand/${brand.id}`)
+                                    navigate(`/${slugify(brand.name)}`)
                                 }
 
                                 className={`rounded-2xl border p-4 flex flex-col items-center justify-center transition-all hover:shadow-md

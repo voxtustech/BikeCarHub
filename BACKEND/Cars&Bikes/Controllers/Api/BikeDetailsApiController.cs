@@ -485,5 +485,28 @@ namespace Cars_Bikes.Controllers.Api
             });
 
         }
+
+        [HttpGet("details/{brandName}/{bikeName}")]
+        public async Task<IActionResult> GetBikeDetails(
+    string brandName,
+    string bikeName)
+        {
+            var bike = await _context.Twowheelers
+    .FirstOrDefaultAsync(x =>
+        x.Brand
+            .ToLower()
+            .Trim()
+            .Replace(" ", "-") == brandName.ToLower()
+        &&
+        x.TwoWheelerName
+            .ToLower()
+            .Trim()
+            .Replace(" ", "-") == bikeName.ToLower());
+
+            if (bike == null)
+                return NotFound();
+
+            return await GetBikeDetails(bike.TwoWheelerId);
+        }
     }
 }

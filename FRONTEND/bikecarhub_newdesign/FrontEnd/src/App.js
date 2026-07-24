@@ -23,6 +23,14 @@ import UpcomingBikeListing from "./pages/UpcomingBikeListing";
 import UpcomingBikeDetails from "./pages/UpcomingBikeDetails";
 import LatestNewsListing from "./pages/LatestNewsListing";
 import LatestNewsDetails from "./pages/LatestNewsDetails";
+import { AskQuestionPage } from "./pages/AskQuestionPage";
+import { PopularBrandsPage } from "./pages/PopularBrandsPage";
+import { RegisterPage } from "./pages/RegisterPage";
+import { ForgotPasswordPage } from "./pages/ForgotPasswordPage";
+import { ResetPasswordPage } from "./pages/ResetPasswordPage";
+import { TermsAndConditionsPage } from "./pages/TermsAndConditionsPage";
+import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
+import { DisclaimerPage } from "./pages/DisclaimerPage";
 
 function App() {
     return (
@@ -35,13 +43,6 @@ function App() {
                 <Route path="/" element={<HomePage />} />
 
                 <Route path="/blogs" element={<BlogsPage />} />
-
-                <Route
-                    path="/emi-calculator"
-                    element={<EMICalculatorPage />}
-                />
-
-                <Route path="/login" element={<LoginPage />} />
 
                 <Route path="/moto-ai" element={<MotoAIPage />} />
 
@@ -56,13 +57,18 @@ function App() {
                 <Route path="/blogs/:slug" element={<BlogDetailsPage />} />
 
                 <Route
-                    path="/bike/:id"
-                    element={<BikeDetailsPage />}
+                    path="/brands"
+                    element={<PopularBrandsPage />}
                 />
 
                 <Route
-                    path="/brand/:brandId"
+                    path="/:brandName"
                     element={<BrandPage />}
+                />
+
+                <Route
+                    path="/:brandName/:bikeName"
+                    element={<BikeDetailsPage />}
                 />
 
                 <Route
@@ -105,6 +111,43 @@ function App() {
                 <Route
                     path="/latest-news/:slug"
                     element={<LatestNewsDetails />}
+                />
+
+                <Route path="/ask-question" element={<AskQuestionPage />} />
+
+                <Route
+                    path="/login"
+                    element={<LoginPage />}
+                />
+
+                <Route
+                    path="/register"
+                    element={<RegisterPage />}
+                />
+
+                <Route
+                    path="/forgot-password"
+                    element={<ForgotPasswordPage />}
+                />
+
+                <Route
+                    path="/reset-password"
+                    element={<ResetPasswordPage />}
+                />
+
+                <Route
+                    path="/terms-and-conditions"
+                    element={<TermsAndConditionsPage />}
+                />
+
+                <Route
+                    path="/privacy-policy"
+                    element={<PrivacyPolicyPage />}
+                />
+
+                <Route
+                    path="/disclaimer"
+                    element={<DisclaimerPage />}
                 />
 
             </Routes>

@@ -553,3 +553,4 @@
 /Users/rohityadav/BikeCarHub-git/BACKEND/Cars&Bikes/obj/Debug/net8.0/Cars&Bikes.pdb
 /Users/rohityadav/BikeCarHub-git/BACKEND/Cars&Bikes/obj/Debug/net8.0/Cars&Bikes.genruntimeconfig.cache
 /Users/rohityadav/BikeCarHub-git/BACKEND/Cars&Bikes/obj/Debug/net8.0/ref/Cars&Bikes.dll
+/Users/rohityadav/BikeCarHub-git/BACKEND/Cars&Bikes/obj/Debug/net8.0/Cars&Bikes.sourcelink.json

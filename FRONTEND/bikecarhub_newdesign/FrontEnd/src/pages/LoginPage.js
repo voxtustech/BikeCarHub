@@ -1,5 +1,63 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
+
 export function LoginPage() {
-  return (
+    const navigate = useNavigate();
+
+    const { login } = useAuth();
+
+    const [emailOrPhone, setEmailOrPhone] = useState("");
+
+    const [password, setPassword] = useState("");
+
+    const [rememberMe, setRememberMe] = useState(false);
+
+    const [error, setError] = useState("");
+
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (e) => {
+
+        e.preventDefault();
+
+        setError("");
+
+        setLoading(true);
+
+        try {
+
+            await login({
+
+                emailOrPhone,
+
+                password,
+
+                rememberMe
+
+            });
+
+            navigate("/");
+
+        }
+
+        catch (err) {
+
+            setError(err.message);
+
+        }
+
+        finally {
+
+            setLoading(false);
+
+        }
+
+    };
+
+
+    return (
     <div className="min-h-screen bg-slate-50">
       {/* Page Banner - Same style as Blogs page */}
       <div
@@ -56,17 +114,24 @@ export function LoginPage() {
             Login to continue to BikeCarHub
           </p>
 
-          <form className="space-y-5">
+            <form
+                className="space-y-5"
+                onSubmit={handleSubmit}
+            >
             <div>
               <label className="block mb-2 font-semibold">
                 Email or Username
               </label>
 
-              <input
-                type="text"
-                placeholder="Enter Email or Username"
-                className="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500"
-              />
+                            <input
+                                type="text"
+                                placeholder="Enter Email or Username"
+                                className="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500"
+                                value={emailOrPhone}
+                                onChange={(e) =>
+                                    setEmailOrPhone(e.target.value)
+                                }
+                            />
             </div>
 
             <div>
@@ -74,45 +139,76 @@ export function LoginPage() {
                 Password
               </label>
 
-              <input
-                type="password"
-                placeholder="Enter Password"
-                className="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500"
-              />
+                            <input
+                                type="password"
+                                placeholder="Enter Password"
+                                className="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500"
+                                value={password}
+                                onChange={(e) =>
+                                    setPassword(e.target.value)
+                                }
+                            />
             </div>
 
             <div className="flex items-center gap-2">
-              <input type="checkbox" />
+                            <input
+                                type="checkbox"
+                                checked={rememberMe}
+                                onChange={(e) =>
+                                    setRememberMe(e.target.checked)
+                                }
+                            />
               <span>Remember Me</span>
             </div>
 
-            <button
-              type="submit"
-              className="w-full py-3 rounded-xl text-white font-semibold transition-opacity hover:opacity-90"
-              style={{
-                background: "#2563EB",
-              }}
-            >
-              Login
-            </button>
+                        {
+                            error && (
+
+                                <div
+                                    className="rounded-lg p-3 text-sm"
+                                    style={{
+                                        background: "#FEE2E2",
+                                        color: "#B91C1C"
+                                    }}
+                                >
+                                    {error}
+                                </div>
+
+                            )
+                        }
+
+                        <button
+                            type="submit"
+                            disabled={loading}
+                            className="w-full py-3 rounded-xl text-white font-semibold transition-opacity hover:opacity-90"
+                            style={{
+                                background: "#2563EB",
+                            }}
+                        >
+                            {
+                                loading
+                                    ? "Signing In..."
+                                    : "Login"
+                            }
+                        </button>
 
             <div className="text-center">
-              <a
-                href="#"
+              <Link
+                to="/forgot-password"
                 className="text-blue-600 font-medium"
               >
                 Forgot Password?
-              </a>
+              </Link>
             </div>
 
             <div className="text-center text-slate-500">
               Don't have an account?{" "}
-              <a
-                href="#"
+              <Link
+                to="/register"
                 className="text-blue-600 font-semibold"
               >
                 Register
-              </a>
+              </Link>
             </div>
           </form>
         </div>

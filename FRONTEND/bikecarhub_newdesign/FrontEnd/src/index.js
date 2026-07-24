@@ -3,13 +3,17 @@ import './index.css';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import { AuthProvider } from "./context/AuthContext";
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-  <BrowserRouter basename={baseUrl}>
-    <App />
-  </BrowserRouter>);
+    <BrowserRouter>
+        <AuthProvider>
+            <App />
+        </AuthProvider>
+    </BrowserRouter>
+);
 

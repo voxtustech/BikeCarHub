@@ -42,6 +42,11 @@
     <None Remove="FrontEnd\src\data\latestNews\" />
     <None Remove="FrontEnd\src\components\blogs\" />
     <None Remove="FrontEnd\src\data\blogs\" />
+    <None Remove="FrontEnd\src\utils\" />
+    <None Remove="FrontEnd\src\context\" />
+    <None Remove="FrontEnd\src\data\latestNews\2024\" />
+    <None Remove="FrontEnd\src\data\latestNews\2025\" />
+    <None Remove="FrontEnd\src\data\latestNews\2025\Jan\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,6 +63,11 @@
     <Folder Include="FrontEnd\src\data\latestNews\" />
     <Folder Include="FrontEnd\src\components\blogs\" />
     <Folder Include="FrontEnd\src\data\blogs\" />
+    <Folder Include="FrontEnd\src\utils\" />
+    <Folder Include="FrontEnd\src\context\" />
+    <Folder Include="FrontEnd\src\data\latestNews\2024\" />
+    <Folder Include="FrontEnd\src\data\latestNews\2025\" />
+    <Folder Include="FrontEnd\src\data\latestNews\2025\Jan\" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->

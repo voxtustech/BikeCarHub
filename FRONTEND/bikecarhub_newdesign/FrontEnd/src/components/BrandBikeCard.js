@@ -1,6 +1,7 @@
 ﻿import React from "react";
 import { useNavigate } from "react-router-dom";
 import { VehicleCard } from "./VehicleCard";
+import { slugify } from "../utils/slugify";
 
 export default function BrandBikeCard({ bike }) {
 
@@ -28,7 +29,9 @@ export default function BrandBikeCard({ bike }) {
     return (
 
         <div
-            onClick={() => navigate(`/bike/${bike.id}`)}
+            onClick={() => navigate(
+                `/${slugify(bike.brand)}/${slugify(bike.name)}`
+            )}
             className="cursor-pointer"
         >
 

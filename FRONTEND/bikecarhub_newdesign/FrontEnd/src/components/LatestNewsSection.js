@@ -5,12 +5,14 @@ import { SectionTitle } from "./SectionTitle";
 import { HScrollCarousel } from "./HScrollCarousel";
 import { getLatestNews } from "../api/newsApi";
 import { BACKEND_URL } from "../config";
+import { useNavigate } from "react-router-dom";
 
 export function LatestNewsSection() {
 
     const [news, setNews] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -71,7 +73,14 @@ export function LatestNewsSection() {
 
                 <div className="max-w-7xl mx-auto px-6">
 
-                    <SectionTitle>Latest News</SectionTitle>
+                    <SectionTitle>
+                        <span
+                            onClick={() => navigate("/latest-news")}
+                            className="cursor-pointer hover:text-blue-600 transition-colors duration-200"
+                        >
+                            Latest News →
+                        </span>
+                     </SectionTitle>
 
                     <p className="text-red-500">
                         {error}
@@ -93,7 +102,12 @@ export function LatestNewsSection() {
 
                 <SectionTitle>
 
-                    Latest News
+                    <span
+                        onClick={() => navigate("/latest-news")}
+                        className="cursor-pointer hover:text-blue-600 transition-colors duration-200"
+                    >
+                        Latest News
+                    </span>
 
                 </SectionTitle>
 

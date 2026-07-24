@@ -8,10 +8,12 @@ import { LatestNewsSection } from "../components/LatestNewsSection";
 import { CompareBikesSection } from "../components/CompareBikesSection";
 import { EcosystemSection } from "../components/EcosystemSection";
 import { AdPlaceholder } from "../components/AdPlaceholder";
-import TVSJupiterCNG from "../data/latestNews/TVSJupiterCNG";
+import Jan212025NewsDetails1 from "../data/latestNews/2025/Jan/Jan212025NewsDetails1";
+import Jan62025NewsDetails1 from "../data/latestNews/2025/Jan/Jan62025NewsDetails1";
 
 const articles = {
-    tvsjupitercng: TVSJupiterCNG
+    [Jan62025NewsDetails1.slug]: Jan62025NewsDetails1,
+    [Jan212025NewsDetails1.slug]: Jan212025NewsDetails1,
 };
 
 export default function LatestNewsDetails() {

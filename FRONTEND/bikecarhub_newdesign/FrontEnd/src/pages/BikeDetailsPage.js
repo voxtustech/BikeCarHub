@@ -30,7 +30,7 @@ import BikeBlogsSection from "../components/bike/BikeBlogsSection";
 
 export default function BikeDetailsPage() {
 
-    const { id } = useParams();
+    const { brandName, bikeName } = useParams();
 
     const [bikeData, setBikeData] = useState(null);
 
@@ -44,7 +44,7 @@ export default function BikeDetailsPage() {
 
             try {
 
-                const data = await getBikeDetails(id);
+                const data = await getBikeDetails(brandName, bikeName);;
 
                 setBikeData(data);
 
@@ -69,7 +69,7 @@ export default function BikeDetailsPage() {
 
         loadBike();
 
-    }, [id]);
+    }, [brandName, bikeName]);
 
     const currentSpec = useMemo(() =>
         bikeData?.specs?.find(

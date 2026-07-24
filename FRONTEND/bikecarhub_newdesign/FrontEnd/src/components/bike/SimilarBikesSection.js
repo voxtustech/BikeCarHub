@@ -1,5 +1,6 @@
 ﻿import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { slugify } from "../../utils/slugify";
 
 const API = "http://localhost:5030";
 
@@ -30,7 +31,11 @@ export default function SimilarBikesSection({ bikes = [] }) {
                     <div
                         key={bike.id}
                         className="border rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer"
-                        onClick={() => navigate(`/bike/${bike.id}`)}
+                        onClick={() =>
+                            navigate(
+                                `/${slugify(bike.brand)}/${slugify(bike.name)}`
+                            )
+                        }
                     >
 
                         <img

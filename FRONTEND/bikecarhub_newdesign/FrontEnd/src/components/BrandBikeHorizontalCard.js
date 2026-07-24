@@ -1,6 +1,7 @@
 ﻿import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BACKEND_URL } from "../config";
+import { slugify } from "../utils/slugify";
 
 export default function BrandBikeHorizontalCard({ bike }) {
 
@@ -16,7 +17,11 @@ export default function BrandBikeHorizontalCard({ bike }) {
     return (
 
         <div
-            onClick={() => navigate(`/bike/${bike.id}`)}
+            onClick={() =>
+                navigate(
+                    `/${slugify(bike.brand)}/${slugify(bike.name)}`
+                )
+            }
             className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition cursor-pointer overflow-hidden"
         >
 
@@ -80,7 +85,9 @@ export default function BrandBikeHorizontalCard({ bike }) {
 
                                 e.stopPropagation();
 
-                                navigate(`/bike/${bike.id}`);
+                                navigate(
+                                    `/${slugify(bike.brand)}/${slugify(bike.name)}`
+                                );
 
                             }}
                         >

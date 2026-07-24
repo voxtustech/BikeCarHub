@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import { SectionTitle } from "./SectionTitle";
 import { getBrands } from "../api/brandApi";
 import { BACKEND_URL } from "../config";
+import { useNavigate } from "react-router-dom";
+import { slugify } from "../utils/slugify";
 
 export function PopularBrandsSection() {
 
     const [brands, setBrands] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -96,9 +99,12 @@ export function PopularBrandsSection() {
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-5">
 
-                    {brands.map((brand) => (
+                    {brands.slice(0, 18).map((brand) => (
 
                         <div
+                            onClick={() =>
+                                navigate(`/${slugify(brand.name)}`)
+                            }
                             key={brand.id}
                             className="group
                             bg-white
@@ -127,6 +133,7 @@ export function PopularBrandsSection() {
                                 />
 
                             </div>
+
 
                             <h3
                                 className="text-center text-sm font-semibold text-slate-800 line-clamp-2"
@@ -161,6 +168,17 @@ export function PopularBrandsSection() {
                         </div>
 
                     ))}
+
+                </div>
+
+                <div className="mt-10 flex justify-center">
+
+                    <button
+                        onClick={() => navigate("/brands")}
+                        className="bg-[#0A0A2B] hover:bg-[#06061A] text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200"
+                    >
+                        View All Brands →
+                    </button>
 
                 </div>
 

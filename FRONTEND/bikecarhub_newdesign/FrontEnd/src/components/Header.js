@@ -1,16 +1,18 @@
 ﻿import { useState, useRef, useEffect } from "react";
+import { useAuth } from "../context/AuthContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import { MapPin, User, Bell, Menu, X, Search } from "lucide-react";
 //import { ImageWithFallback } from "./figma/ImageWithFallback"
-import { AskQuestionModal } from "./AskQuestionModal";
+//import { AskQuestionModal } from "./AskQuestionModal";
 import bchLogo from "../imports/bchlogo.jpeg";
 import { searchVehicles, getVehicleDetails } from "../api/searchApi";
+import { slugify } from "../utils/slugify";
 
 const navItems = ["Home", "Compare", "Blogs", "EMI Calculator", "Ask a Question"];
 
 export function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [askOpen, setAskOpen] = useState(false);
+    //const [askOpen, setAskOpen] = useState(false);
     const [showHeader, setShowHeader] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -18,6 +20,8 @@ export function Header() {
     const [loadingSuggestions, setLoadingSuggestions] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
+    const { user, logout, isAuthenticated } = useAuth();
+    const [showProfileMenu, setShowProfileMenu] = useState(false);
     const routeMap = {
         "/": "Home",
         "/compare": "Compare",
@@ -49,7 +53,7 @@ export function Header() {
                 break;
 
             case "Ask a Question":
-                setAskOpen(true);
+                navigate("/ask-question");
                 break;
 
             default:
@@ -321,7 +325,7 @@ export function Header() {
 
                                                         if (item.type === "Brand") {
 
-                                                            navigate(`/brand/${item.id}`);
+                                                            navigate(`/${item.label.toLowerCase().replace(/\s+/g, "-")}`);
 
                                                             return;
 
@@ -329,7 +333,7 @@ export function Header() {
 
                                                         const details = await getVehicleDetails(item.label);
 
-                                                        navigate(`/bike/${details.modelId}`);
+                                                        navigate(`/${details.brandName}/${details.bikeName}`);
 
                                                     }
 
@@ -417,22 +421,107 @@ export function Header() {
                     </button>
 
                     {/* Login */}
-                    <button
-                        onClick={() => navigate("/login")}
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm shrink-0 transition-all"
-                        style={{
-                            background: "rgba(255,255,255,0.18)",
-                            border: "1px solid rgba(255,255,255,0.4)",
-                            color: "white",
-                            fontWeight: 600,
-                            backdropFilter: "blur(4px)",
-                        }}
-                        onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.28)"; }}
-                        onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.18)"; }}
-                    >
-                        <User size={15} />
-                        <span className="hidden sm:inline">Sign In</span>
-                    </button>
+                    {
+
+                        isAuthenticated ?
+
+                            (
+
+                                <div className="relative">
+
+                                    <button
+
+                                        onClick={() =>
+                                            setShowProfileMenu(!showProfileMenu)
+                                        }
+
+                                        className="flex items-center gap-2 px-4 py-2 rounded-lg"
+
+                                        style={{
+                                            background: "rgba(255,255,255,0.18)",
+                                            color: "white"
+                                        }}
+
+                                    >
+
+                                        <User size={15} />
+
+                                        <span className="hidden sm:inline">
+
+                                            {user.fullName}
+
+                                        </span>
+
+                                    </button>
+
+                                    {
+
+                                        showProfileMenu &&
+
+                                        <div
+
+                                            className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg"
+
+                                        >
+
+                                            <button
+
+                                                className="w-full text-left px-4 py-3 hover:bg-gray-100"
+
+                                                onClick={async () => {
+
+                                                    await logout();
+
+                                                    setShowProfileMenu(false);
+
+                                                    navigate("/");
+
+                                                }}
+
+                                            >
+
+                                                Logout
+
+                                            </button>
+
+                                        </div>
+
+                                    }
+
+                                </div>
+
+                            )
+
+                            :
+
+                            (
+
+                                <button
+
+                                    onClick={() => navigate("/login")}
+
+                                    className="flex items-center gap-2 px-4 py-2 rounded-lg"
+
+                                    style={{
+                                        background: "rgba(255,255,255,0.18)",
+                                        color: "white"
+                                    }}
+
+                                >
+
+                                    <User size={15} />
+
+                                    <span className="hidden sm:inline">
+
+                                        Sign In
+
+                                    </span>
+
+                                </button>
+
+                            )
+
+                    }
 
                     {/* Hamburger — mobile only, beside Sign In */}
                     <button
@@ -481,7 +570,14 @@ export function Header() {
                             {navItems.map((item, i) => (
                                 <button
                                     key={item}
-                                    onClick={() => { if (item === "Ask a Question") { setMobileOpen(false); setAskOpen(true); } else { handleNavigation(item); setMobileOpen(false); } }}
+                                    onClick={() => {
+                                        if (item === "Ask a Question") {
+                                            setMobileOpen(false);
+                                            navigate("/ask-question");
+                                        }
+                                        else
+                                            { handleNavigation(item); setMobileOpen(false); }
+                                    }}
                                     className="w-full text-left transition-all duration-200"
                                     style={{
                                         flex: 1,
@@ -507,7 +603,7 @@ export function Header() {
                 </div>
             )}
            
-            {askOpen && <AskQuestionModal onClose={() => setAskOpen(false)} />}
+            {/* {askOpen && <AskQuestionModal onClose={() => setAskOpen(false)} />} */}
           
 
             {/* Navigation bar — desktop only */}

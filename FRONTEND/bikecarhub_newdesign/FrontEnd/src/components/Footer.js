@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const usefulLinks = [
   "Contact BikeCarHub",
@@ -185,9 +186,18 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-6 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-slate-500 text-sm">
-              © 2026 BikeCarHub. All rights reserved.
-            </p>
+                      <p className="text-slate-500 text-sm">
+                          ©{" "}
+                          <a
+                              href="https://www.voxtus.com"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:text-white hover:underline transition-colors"
+                          >
+                              Voxtus Technologies Pvt. Ltd.
+                          </a>{" "}
+                          All rights reserved.
+                      </p>
 
             <div className="flex items-center gap-4 text-slate-400 text-sm">
               <a href="#" className="hover:text-white transition-colors">

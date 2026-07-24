@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 import { SectionTitle } from "./SectionTitle";
 import { HScrollCarousel } from "./HScrollCarousel";
 import { getBlogs } from "../api/blogApi";
 import { BACKEND_URL } from "../config";
+import { useNavigate } from "react-router-dom";
 
 export function BlogsSection() {
 
@@ -99,9 +100,12 @@ export function BlogsSection() {
             <div className="max-w-7xl mx-auto px-6">
 
                 <SectionTitle>
-
-                    Blogs
-
+                    <span
+                        onClick={() => navigate("/blogs")}
+                        className="cursor-pointer hover:text-blue-600 transition-colors duration-200"
+                    >
+                        Blogs
+                    </span>
                 </SectionTitle>
 
                 <HScrollCarousel itemWidth={340}>
