@@ -136,7 +136,10 @@ export default function BikeComparePage() {
                 )}
 
                 {!comparison && !error && (
-                    <CompareSelector onCompare={handleCompare} />
+                    <CompareSelector
+                        bike1Id={bike1Id}
+                        onCompare={handleCompare}
+                    />
                 )}
 
                 {comparison && (

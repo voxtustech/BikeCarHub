@@ -30,10 +30,10 @@ export function AuthProvider({ children }) {
                 setUser(data.user);
 
             }
-            catch {
+            catch (error) {
 
+                console.error(error);
                 setUser(null);
-                return data.user;
             }
             finally {
 

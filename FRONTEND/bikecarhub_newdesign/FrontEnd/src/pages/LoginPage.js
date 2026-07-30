@@ -2,9 +2,15 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export function LoginPage() {
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const params = new URLSearchParams(location.search);
+
+    const returnUrl = params.get("returnUrl");
 
     const { login } = useAuth();
 
@@ -38,7 +44,7 @@ export function LoginPage() {
 
             });
 
-            navigate("/");
+            navigate(returnUrl || "/");
 
         }
 

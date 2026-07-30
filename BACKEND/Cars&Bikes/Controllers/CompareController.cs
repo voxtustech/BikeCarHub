@@ -60,6 +60,43 @@ namespace Cars_Bikes.Controllers
             return Json(variants);
         }
 
+        [HttpGet("bike/{bikeId}")]
+        public async Task<IActionResult> GetBikeForCompare(int bikeId)
+        {
+            var bike = await _context.Twowheelers
+                .Where(x => x.TwoWheelerId == bikeId)
+                .Select(x => new
+                {
+                    bikeId = x.TwoWheelerId,
+                    brandName = x.Brand,
+                    modelId = x.TwoWheelerId,
+                    modelName = x.TwoWheelerName
+                })
+                .FirstOrDefaultAsync();
+
+            if (bike == null)
+                return NotFound();
+
+            var variant = await _context.TWVarients
+                .Where(x => x.TwoWheelerId == bikeId)
+                .Select(x => new
+                {
+                    variantId = x.TWVarientId,
+                    variantName = x.Varients
+                })
+                .FirstOrDefaultAsync();
+
+            return Ok(new
+            {
+                bikeId = bike.bikeId,
+                brandName = bike.brandName,
+                modelId = bike.modelId,
+                modelName = bike.modelName,
+                variantId = variant?.variantId,
+                variantName = variant?.variantName
+            });
+        }
+
         [HttpGet]
         [Route("Compare/GetTWSpecData")]
         public JsonResult GetTWSpecData(int variantId)

@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import { slugify } from "../../utils/slugify";
 
-const API = "http://localhost:5030";
+const API = "https://localhost:7135";
 
 export default function SimilarBikesSection({ bikes = [] }) {
 

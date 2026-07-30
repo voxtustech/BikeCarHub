@@ -1,9 +1,16 @@
 ﻿import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {
+    fetchBrands,
+    fetchModels,
+    fetchVariants,
+    fetchBikeForCompare
+} from "../api/compareSelectorApi";
 
-import { fetchBrands, fetchModels, fetchVariants } from "../api/compareSelectorApi";
-
-export default function CompareSelector({ onCompare }) {
+export default function CompareSelector({
+    bike1Id,
+    onCompare
+}) {
     console.log("✅ CompareSelector mounted");
 
     const navigate = useNavigate();
@@ -61,6 +68,46 @@ export default function CompareSelector({ onCompare }) {
         loadBrands();
 
     }, []);
+
+    useEffect(() => {
+
+        if (!bike1Id)
+            return;
+
+        async function loadBike() {
+
+            const bike = await fetchBikeForCompare(bike1Id);
+
+            setBrand1(bike.brandName);
+
+            const models = await fetchModels(bike.brandName);
+
+            setModels1(models);
+
+            const selectedModel =
+                models.find(
+                    x => x.id === bike.modelId
+                );
+
+            setModel1(selectedModel);
+
+            const variants =
+                await fetchVariants(bike.modelId);
+
+            setVariants1(variants);
+
+            const selectedVariant =
+                variants.find(
+                    x => x.id === bike.variantId
+                );
+
+            setVariant1(selectedVariant);
+
+        }
+
+        loadBike();
+
+    }, [bike1Id]);
 
 
     /* -------------------------------------------------- */
@@ -195,8 +242,8 @@ export default function CompareSelector({ onCompare }) {
 
         if (onCompare) {
             onCompare(
-                model1.id,
-                variant1.id,
+                bike1Id || model1.id,
+                variant1.Id,
                 model2.id,
                 variant2.id
             );
@@ -234,6 +281,7 @@ export default function CompareSelector({ onCompare }) {
 
                     <select
                         value={brand1}
+                        disabled={!!bike1Id}
                         onChange={(e) => setBrand1(e.target.value)}
                         className="w-full border rounded-xl p-3"
                     >
@@ -249,7 +297,7 @@ export default function CompareSelector({ onCompare }) {
 
                     <select
                         value={model1?.value || ""}
-                        disabled={!brand1}
+                        disabled={!brand1 || !!bike1Id}
                         onChange={(e) => {
 
                             const selected =
@@ -281,7 +329,7 @@ export default function CompareSelector({ onCompare }) {
 
                     <select
                         value={variant1?.id || ""}
-                        disabled={!model1}
+                        disabled={!model1 || !!bike1Id}
                         onChange={(e) => {
 
                             const selected =

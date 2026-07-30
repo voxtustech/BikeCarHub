@@ -37,6 +37,22 @@ export async function fetchVariants(bikeId) {
     return await response.json();
 }
 
+export async function fetchBikeForCompare(bikeId) {
+
+    const response = await fetch(
+        `${API_BASE}/compare/bike/${bikeId}`,
+        {
+            credentials: "include",
+        }
+    );
+
+    if (!response.ok) {
+        throw new Error("Failed to load bike details.");
+    }
+
+    return await response.json();
+
+}
 /**
  * Loads everything required for the selector.
  */

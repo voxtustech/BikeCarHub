@@ -31,6 +31,8 @@ import { ResetPasswordPage } from "./pages/ResetPasswordPage";
 import { TermsAndConditionsPage } from "./pages/TermsAndConditionsPage";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { DisclaimerPage } from "./pages/DisclaimerPage";
+import { ContactUsPage } from "./pages/ContactUsPage";
+import AboutUsPage from "./pages/AboutUsPage";
 
 function App() {
     return (
@@ -148,6 +150,16 @@ function App() {
                 <Route
                     path="/disclaimer"
                     element={<DisclaimerPage />}
+                />
+
+                <Route
+                    path="/contact-us"
+                    element={<ContactUsPage />}
+                />
+
+                <Route
+                    path="/about"
+                    element={<AboutUsPage />}
                 />
 
             </Routes>

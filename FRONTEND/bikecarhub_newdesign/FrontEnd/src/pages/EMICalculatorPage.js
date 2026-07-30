@@ -1,12 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function formatINR(n) {
   return n.toLocaleString("en-IN");
 }
 
 export function EMICalculatorPage() {
-  const [principal, setPrincipal] = useState(100000);
-  const [principalInput, setPrincipalInput] = useState("100000");
+    const location = useLocation();
+
+    const initialPrice =
+        Number(location.state?.bikePrice) || 100000;
+
+    const bikeName =
+        location.state?.bikeName || "";
+
+    const [principal, setPrincipal] = useState(initialPrice);
+
+    const [principalInput, setPrincipalInput] =
+        useState(String(initialPrice));
   const [rate, setRate] = useState(10);
   const [period, setPeriod] = useState(3);
 
@@ -48,7 +59,15 @@ export function EMICalculatorPage() {
           }}
         >
           EMI Calculator
-        </h1>
+              </h1>
+              {bikeName && (
+                  <p
+                      className="text-center text-slate-500 mt-2"
+                      style={{ fontWeight: 600 }}
+                  >
+                      {bikeName}
+                  </p>
+              )}
         <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "14px", marginTop: "0px" }}>
           Calculate your monthly vehicle loan EMI instantly
         </p>

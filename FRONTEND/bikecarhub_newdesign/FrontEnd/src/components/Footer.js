@@ -1,20 +1,47 @@
 import { useState } from "react";
 import { Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { subscribeNewsletter } from "../api/newsletterApi";
 
 const usefulLinks = [
-  "Contact BikeCarHub",
-  "About BikeCarHub",
-  "Upcoming Bikes & Cars",
-  "Compare",
-  "Privacy Policy",
-  "Terms and Conditions",
-  "Disclaimer",
-  "Admin Login",
+    {
+        name: "Contact BikeCarHub",
+        path: "/contact-us",
+    },
+    {
+        name: "About BikeCarHub",
+        path: "/about",
+    },
+    {
+        name: "Upcoming Bikes & Cars",
+        path: "/upcoming-bikes",
+    },
+    {
+        name: "Compare",
+        path: "/compare",
+    },
+    {
+        name: "Privacy Policy",
+        path: "/privacy-policy",
+    },
+    {
+        name: "Terms and Conditions",
+        path: "/terms-and-conditions",
+    },
+    {
+        name: "Disclaimer",
+        path: "/disclaimer",
+    },
+    {
+        name: "Admin Login",
+        path: "/login",
+    },
 ];
 
 export function Footer() {
   const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState("");
 
   return (
     <footer
@@ -45,19 +72,19 @@ export function Footer() {
               style={{ background: "#2563EB" }}
             />
 
-            <ul className="space-y-4">
-              {usefulLinks.map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
-                    className="text-slate-300 hover:text-white transition-colors flex items-center gap-3"
-                  >
-                    <span className="text-slate-500">›</span>
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
+                      <ul className="space-y-4">
+                          {usefulLinks.map((link) => (
+                              <li key={link.path}>
+                                  <Link
+                                      to={link.path}
+                                      className="text-slate-300 hover:text-white transition-colors flex items-center gap-3"
+                                  >
+                                      <span className="text-slate-500">›</span>
+                                      {link.name}
+                                  </Link>
+                              </li>
+                          ))}
+                      </ul>
           </div>
 
           {/* Newsletter */}
@@ -96,14 +123,65 @@ export function Footer() {
               }}
             />
 
-            <button
-              className="w-full py-4 rounded-xl text-white font-semibold transition-all hover:opacity-90"
-              style={{
-                background: "#292f6dff",
-              }}
-            >
-              SUBSCRIBE TO BIKECARHUB
-            </button>
+                      <button
+                          disabled={loading}
+                          onClick={async () => {
+
+                              try {
+
+                                  setLoading(true);
+
+                                  setMessage("");
+
+                                  const result =
+                                      await subscribeNewsletter(email);
+
+                                  setMessage(result.message);
+
+                                  setEmail("");
+
+                              }
+
+                              catch (err) {
+
+                                  setMessage(err.message);
+
+                              }
+
+                              finally {
+
+                                  setLoading(false);
+
+                              }
+
+                          }}
+                          className="w-full py-4 rounded-xl text-white font-semibold transition-all hover:opacity-90"
+                          style={{
+                              background: "#292f6dff",
+                          }}
+                      >
+                          {
+                              loading
+                                  ? "SUBSCRIBING..."
+                                  : "SUBSCRIBE TO BIKECARHUB"
+                          }
+                      </button>
+
+                      {
+                          message && (
+
+                              <p
+                                  className="
+                mt-4
+                text-sm
+                text-green-400
+            "
+                              >
+                                  {message}
+                              </p>
+
+                          )
+                      }
           </div>
 
           {/* About + Contact */}
@@ -200,15 +278,21 @@ export function Footer() {
                       </p>
 
             <div className="flex items-center gap-4 text-slate-400 text-sm">
-              <a href="#" className="hover:text-white transition-colors">
-                About BikeCarHub
-              </a>
+                          <Link
+                              to="/about"
+                              className="hover:text-white transition-colors"
+                          >
+                              About BikeCarHub
+                          </Link>
 
-              <span>|</span>
+                          <span>|</span>
 
-              <a href="#" className="hover:text-white transition-colors">
-                Contact BikeCarHub
-              </a>
+                          <Link
+                              to="/contact-us"
+                              className="hover:text-white transition-colors"
+                          >
+                              Contact BikeCarHub
+                          </Link>
             </div>
           </div>
         </div>
