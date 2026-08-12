@@ -36,7 +36,7 @@ export async function fetchVariants(bikeId) {
 
     return await response.json();
 }
-
+/*
 export async function fetchBikeForCompare(bikeId) {
 
     const response = await fetch(
@@ -47,11 +47,49 @@ export async function fetchBikeForCompare(bikeId) {
     );
 
     if (!response.ok) {
-        throw new Error("Failed to load bike details.");
+        //throw new Error("Failed to load bike details.");
+        const errorText = await response.text();
+
+        console.error(
+            "fetchBikeForCompare API error:",
+            response.status,
+            errorText
+        );
+
+        throw new Error(
+            `Failed to load bike details. Status: ${response.status}`
+        );
     }
 
     return await response.json();
 
+}
+*/
+export async function fetchBikeForCompare(variantId) {
+
+    const response = await fetch(
+        `${API_BASE}/api/compare/bike/${variantId}`,
+        {
+            credentials: "include"
+        }
+    );
+
+    if (!response.ok) {
+
+        const errorText = await response.text();
+
+        console.error(
+            "fetchBikeForCompare API error:",
+            response.status,
+            errorText
+        );
+
+        throw new Error(
+            `Failed to load bike details. Status: ${response.status}`
+        );
+    }
+
+    return await response.json();
 }
 /**
  * Loads everything required for the selector.

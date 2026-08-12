@@ -9,6 +9,7 @@ import {
 
 export default function CompareSelector({
     bike1Id,
+    variant1Id,
     onCompare
 }) {
     console.log("✅ CompareSelector mounted");
@@ -68,7 +69,7 @@ export default function CompareSelector({
         loadBrands();
 
     }, []);
-
+/*
     useEffect(() => {
 
         if (!bike1Id)
@@ -108,6 +109,59 @@ export default function CompareSelector({
         loadBike();
 
     }, [bike1Id]);
+*/
+    useEffect(() => {
+
+        if (!variant1Id) {
+            return;
+        }
+
+        const loadBike = async () => {
+
+            try {
+
+                console.log(
+                    "Loading Bike 1 from variant:",
+                    variant1Id
+                );
+
+                const bike = await fetchBikeForCompare(variant1Id);
+
+                console.log("Bike returned from API:", bike);
+
+                setBrand1(bike.brandName);
+
+                const models = await fetchModels(bike.brandName);
+
+                setModels1(models);
+
+                const selectedModel = models.find(
+                    x => x.id === bike.modelId
+                );
+
+                setModel1(selectedModel);
+
+                const variants = await fetchVariants(bike.modelId);
+
+                setVariants1(variants);
+
+                const selectedVariant = variants.find(
+                    x => x.id === bike.variantId
+                );
+
+                setVariant1(selectedVariant);
+
+            } catch (error) {
+
+                console.error("Error loading bike for compare:", error);
+
+            }
+
+        };
+
+        loadBike();
+
+    }, [variant1Id]);
 
 
     /* -------------------------------------------------- */
@@ -243,7 +297,7 @@ export default function CompareSelector({
         if (onCompare) {
             onCompare(
                 bike1Id || model1.id,
-                variant1.Id,
+                variant1.id,
                 model2.id,
                 variant2.id
             );

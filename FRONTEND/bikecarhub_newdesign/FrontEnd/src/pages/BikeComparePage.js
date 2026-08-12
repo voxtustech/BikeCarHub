@@ -50,6 +50,8 @@ export default function BikeComparePage() {
 
     }, [bike1Id, variant1Id, bike2Id, variant2Id]);
 
+
+    /*   11/08/2026
     async function loadComparison() {
 
         try {
@@ -85,7 +87,62 @@ export default function BikeComparePage() {
         }
 
     }
+    */
+    const loadComparison = async () => {
 
+        try {
+
+            console.log("Comparison IDs:", {
+                bike1Id,
+                variant1Id,
+                bike2Id,
+                variant2Id
+            });
+
+            if (
+                !bike1Id ||
+                !variant1Id ||
+                !bike2Id ||
+                !variant2Id
+            ) {
+                console.error(
+                    "All four IDs are required for comparison."
+                );
+
+                return;
+            }
+
+            setLoading(true);
+
+            const data = await getBikeComparison(
+                bike1Id,
+                variant1Id,
+                bike2Id,
+                variant2Id
+            );
+
+            console.log(
+                "Comparison result:",
+                data
+            );
+
+            setComparison(data);
+
+        } catch (error) {
+
+            console.error(
+                "Comparison API Error:",
+                error
+            );
+
+            setError("Unable to load comparison.");
+
+        } finally {
+
+            setLoading(false);
+
+        }
+    };
     function handleCompare(
         firstBikeId,
         firstVariantId,
@@ -95,6 +152,7 @@ export default function BikeComparePage() {
 
         navigate(
             `/compare?bike1=${firstBikeId}&variant1=${firstVariantId}&bike2=${secondBikeId}&variant2=${secondVariantId}`
+            
         );
 
     }
@@ -138,6 +196,7 @@ export default function BikeComparePage() {
                 {!comparison && !error && (
                     <CompareSelector
                         bike1Id={bike1Id}
+                        variant1Id={variant1Id}
                         onCompare={handleCompare}
                     />
                 )}
@@ -145,7 +204,11 @@ export default function BikeComparePage() {
                 {comparison && (
                     <>
                       
-
+                        <CompareSelector
+                            bike1Id={bike1Id}
+                            variant1Id={variant1Id}
+                            onCompare={handleCompare}
+                        />
                         <CompareOverview comparison={comparison} />
                         <CompareEngine comparison={comparison} />
                         <ComparePerformance comparison={comparison} />

@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿
+using System.Runtime.InteropServices;
 using Cars_Bikes.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -98,43 +99,6 @@ namespace Cars_Bikes.Controllers.Api
             return Ok(brands);
         }
 
-        /*
-        [HttpGet("{brandName}")]
-        public async Task<IActionResult> GetBrand(string brandName)
-        {
-            var brand = await _context.TwowheelerBrands
-                .Where(x => x.BrandName.ToLower() == brandName.ToLower())
-                .Select(x => new
-                {
-                    id = x.TWBrandId,
-                    name = x.BrandName,
-                    logo = x.BrandLogoURL,
-                    petrol = x.IsPetrol,
-                    ev = x.IsEV
-                })
-                .FirstOrDefaultAsync();
-
-            if (brand == null)
-                return NotFound();
-
-            return Ok(brand);
-        }
-        */
-
-        /*
-        [HttpGet("{brandName}/bikes")]
-        public async Task<IActionResult> GetBrandBikes(string brandName)
-        {
-            var brand = await _context.TwowheelerBrands
-                .FirstOrDefaultAsync(x =>
-                    x.BrandName.ToLower() == brandName.ToLower());
-
-            if (brand == null)
-                return NotFound();
-
-            return await GetBrandBikes(brand.TWBrandId);
-        }
-        */
 
         [HttpGet("{brandName}")]
         public async Task<IActionResult> GetBrandBySlug(string brandName)
@@ -195,3 +159,119 @@ namespace Cars_Bikes.Controllers.Api
 
     }
 }
+/*
+using Cars_Bikes.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace Cars_Bikes.Controllers.Api
+{
+    [ApiController]
+    [Route("api/brands")]
+    public class BrandApiController : ControllerBase
+    {
+        private readonly TwoWheelerDB _context;
+
+        public BrandApiController(TwoWheelerDB context)
+        {
+            _context = context;
+        }
+
+        // GET: /api/compare/bike/312
+        [HttpGet("bike/{variantId:int}")]
+        public async Task<IActionResult> GetBikeForCompare(int variantId)
+        {
+            var bike = await _context.TWVarients
+                .Where(v => v.TWVarientId == variantId)
+                .Select(v => new
+                {
+                    variantId = v.TWVarientId,
+
+                    modelId = v.TwoWheelerId,
+
+                    modelName = v.TwoWheeler.TwoWheelerName,
+
+                    brandId = v.TwoWheeler.TwoWBrandId,
+
+                    brandName = v.TwoWheeler.TwoWheelerBrands.BrandName,
+
+                    variantName = v.Varients
+                })
+                .FirstOrDefaultAsync();
+
+            if (bike == null)
+            {
+                return NotFound(new
+                {
+                    message = "Variant not found."
+                });
+            }
+
+            return Ok(bike);
+        }
+        [HttpGet]
+        public async Task<IActionResult> Compare(
+    [FromQuery] int variant1,
+    [FromQuery] int variant2)
+        {
+            var v1 = await _context.TWVarients
+                .Where(v => v.TWVarientId == variant1)
+                .Select(v => new
+                {
+                    variantId = v.TWVarientId,
+                    variantName = v.Varients,
+
+                    modelId = v.TwoWheelerId,
+                    modelName = v.TwoWheeler.TwoWheelerName,
+
+                    brandId = v.TwoWheeler.TwoWBrandId,
+                    brandName = v.TwoWheeler.TwoWheelerBrands.BrandName,
+
+                    // Add your specifications here
+                    //price = v.,
+                    //engine = v.Engine,
+                    //mileage = v.Mileage,
+                    //power = v.Power
+                })
+                .FirstOrDefaultAsync();
+
+
+            var v2 = await _context.TWVarients
+                .Where(v => v.TWVarientId == variant2)
+                .Select(v => new
+                {
+                    variantId = v.TWVarientId,
+                    variantName = v.Varients,
+
+                    modelId = v.TwoWheelerId,
+                    modelName = v.TwoWheeler.TwoWheelerName,
+
+                    brandId = v.TwoWheeler.TwoWBrandId,
+                    brandName = v.TwoWheeler.TwoWheelerBrands.BrandName,
+
+                    //price = v.Price,
+                    //engine = v.Engine,
+                    //mileage = v.Mileage,
+                    //power = v.Power
+                })
+                .FirstOrDefaultAsync();
+
+
+            if (v1 == null || v2 == null)
+            {
+                return NotFound(new
+                {
+                    message = "One or both variants were not found."
+                });
+            }
+
+
+            return Ok(new
+            {
+                variant1 = v1,
+                variant2 = v2
+            });
+        }
+    }
+}
+*/
