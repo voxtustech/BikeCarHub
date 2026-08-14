@@ -12,9 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cars&Bikes")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36da39963f3802ae5d6c7ac11739b93cbb8d7744")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a3225420dd989bce1b935b3917d27aec6e5e403")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cars&Bikes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cars&Bikes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

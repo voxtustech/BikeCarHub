@@ -453,39 +453,70 @@ export function Header() {
                                         </span>
 
                                     </button>
+                                    {/*LOGIN PROFILE MENU OPTION DROPDOWN*/}
 
                                     {
-
                                         showProfileMenu &&
-
                                         <div
-
-                                            className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg"
-
+                                            className="absolute right-0 mt-2 w-52 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-[9999]"
                                         >
 
+                                            {/* My Reviews */}
                                             <button
+                                                className="w-full text-left px-4 py-3 hover:bg-gray-100 text-gray-700 text-sm transition-colors"
+                                                onClick={() => {
+                                                    setShowProfileMenu(false);
+                                                    navigate("/my-reviews");
+                                                }}
+                                            >
+                                                ⭐ My Reviews
+                                            </button>
 
-                                                className="w-full text-left px-4 py-3 hover:bg-gray-100"
 
+                                            {/* My Wishlist */}
+                                            <button
+                                                className="w-full text-left px-4 py-3 hover:bg-gray-100 text-gray-700 text-sm transition-colors"
+                                                onClick={() => {
+                                                    setShowProfileMenu(false);
+                                                    navigate("/wishlist");
+                                                }}
+                                            >
+                                                ❤️ My Wishlist
+                                            </button>
+
+
+                                            {/* Divider */}
+                                            <div className="border-t border-gray-100" />
+
+
+                                            {/* Logout */}
+                                            <button
+                                                className="w-full text-left px-4 py-3 hover:bg-red-50 text-red-600 text-sm transition-colors"
                                                 onClick={async () => {
 
-                                                    await logout();
+                                                    try {
 
-                                                    setShowProfileMenu(false);
+                                                        await logout();
 
-                                                    navigate("/");
+                                                        setShowProfileMenu(false);
+
+                                                        navigate("/");
+
+                                                    } catch (error) {
+
+                                                        console.error(
+                                                            "Logout failed:",
+                                                            error
+                                                        );
+
+                                                    }
 
                                                 }}
-
                                             >
-
-                                                Logout
-
+                                                🚪 Logout
                                             </button>
 
                                         </div>
-
                                     }
 
                                 </div>

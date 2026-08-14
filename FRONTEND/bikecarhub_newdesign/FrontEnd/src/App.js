@@ -11,7 +11,6 @@ import { EMICalculatorPage } from "./pages/EMICalculatorPage";
 import { LoginPage } from "./pages/LoginPage";
 import { MotoAIPage } from "./pages/MotoAIPage";
 import { PriceAlertsPage } from "./pages/PriceAlertsPage";
-import { WishlistPage } from "./pages/WishlistPage";
 import { LaunchTrackerPage } from "./pages/LaunchTrackerPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import BikeDetailsPage from "./pages/BikeDetailsPage";
@@ -33,6 +32,8 @@ import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { DisclaimerPage } from "./pages/DisclaimerPage";
 import { ContactUsPage } from "./pages/ContactUsPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import WishlistPage from "./pages/WishlistPage";
+import MyReviewsPage from "./pages/MyReviewsPage";
 
 function App() {
     return (
@@ -52,7 +53,7 @@ function App() {
 
                 <Route path="/price-alerts" element={<div>Price Alerts Coming Soon</div>} />
 
-                <Route path="/wishlist" element={<div>Wishlist Coming Soon</div>} />
+        
 
                 <Route path="/launch-tracker" element={<div>Launch Tracker Coming Soon</div>} />
 
@@ -160,6 +161,15 @@ function App() {
                 <Route
                     path="/about"
                     element={<AboutUsPage />}
+                />
+
+                <Route
+                    path="/wishlist"
+                    element={<WishlistPage />}
+                />
+                <Route
+                    path="/my-reviews"
+                    element={<MyReviewsPage />}
                 />
 
             </Routes>

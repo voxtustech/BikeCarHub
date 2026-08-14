@@ -1,0 +1,506 @@
+[
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.AuthApiController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/auth/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Cars_Bikes.ViewModels.ForgotPasswordViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.AuthApiController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Cars_Bikes.ViewModels.LoginViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.AuthApiController",
+    "Method": "Logout",
+    "RelativePath": "api/auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.AuthApiController",
+    "Method": "Me",
+    "RelativePath": "api/auth/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.AuthApiController",
+    "Method": "Register",
+    "RelativePath": "api/auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Cars_Bikes.ViewModels.RegisterViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.AuthApiController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Cars_Bikes.ViewModels.ResetPasswordViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BikeCompareApiController",
+    "Method": "GetCompare",
+    "RelativePath": "api/BikeCompareApi/{bike1Id}/{variant1Id}/{bike2Id}/{variant2Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bike1Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "variant1Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "bike2Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "variant2Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BikeDetailsApiController",
+    "Method": "GetBikeDetails",
+    "RelativePath": "api/bikes/details/{brandName}/{bikeName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "bikeName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BikeDetailsApiController",
+    "Method": "GetBikeDetails",
+    "RelativePath": "api/bikes/details/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BlogApiController",
+    "Method": "GetBlogs",
+    "RelativePath": "api/blogs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BlogApiController",
+    "Method": "GetBlog",
+    "RelativePath": "api/blogs/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BlogApiController",
+    "Method": "GetBlog",
+    "RelativePath": "api/blogs/slug/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BrandApiController",
+    "Method": "GetBrands",
+    "RelativePath": "api/brands",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BrandApiController",
+    "Method": "GetBrand",
+    "RelativePath": "api/brands/{brandId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BrandApiController",
+    "Method": "GetBrandBikes",
+    "RelativePath": "api/brands/{brandId}/bikes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BrandApiController",
+    "Method": "GetBrandBySlug",
+    "RelativePath": "api/brands/{brandName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BrandApiController",
+    "Method": "GetBrandBikesBySlug",
+    "RelativePath": "api/brands/{brandName}/bikes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BrandApiController",
+    "Method": "PopularBrands",
+    "RelativePath": "api/brands/popular",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.CompareApiController",
+    "Method": "GetCompareCards",
+    "RelativePath": "api/compare",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.ContactApiController",
+    "Method": "SendMessage",
+    "RelativePath": "api/contact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Cars_Bikes.Models.TWOrFWContactUs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.NewsApiController",
+    "Method": "GetNews",
+    "RelativePath": "api/latest-news",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.ModelApiController",
+    "Method": "GetModels",
+    "RelativePath": "api/models/{brand}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brand",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.NewsletterApiController",
+    "Method": "Subscribe",
+    "RelativePath": "api/newsletter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Cars_Bikes.Controllers.Api.NewsletterApiController\u002BNewsletterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.SearchApiController",
+    "Method": "Search",
+    "RelativePath": "api/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "term",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.SearchApiController",
+    "Method": "GetDetails",
+    "RelativePath": "api/search/details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.SearchApiController",
+    "Method": "GetVariants",
+    "RelativePath": "api/search/variants/{bikeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bikeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.UpcomingBikeApiController",
+    "Method": "GetUpcomingBikes",
+    "RelativePath": "api/upcoming-bikes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.ValueForMoneyApiController",
+    "Method": "GetArticles",
+    "RelativePath": "api/valueformoney",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.ValueForMoneyApiController",
+    "Method": "GetArticle",
+    "RelativePath": "api/valueformoney/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.ValueForMoneyApiController",
+    "Method": "GetRelated",
+    "RelativePath": "api/valueformoney/related/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.WishlistApiController",
+    "Method": "GetWishlist",
+    "RelativePath": "api/wishlist",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.WishlistApiController",
+    "Method": "Add",
+    "RelativePath": "api/wishlist/{bikeId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bikeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.WishlistApiController",
+    "Method": "Remove",
+    "RelativePath": "api/wishlist/{bikeId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bikeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.WishlistApiController",
+    "Method": "Check",
+    "RelativePath": "api/wishlist/check/{bikeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bikeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
