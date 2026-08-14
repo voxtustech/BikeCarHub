@@ -5448,24 +5448,31 @@
     ]
   },
   "packageFolders": {
-    "/Users/rohityadav/.nuget/packages/": {}
+    "C:\\Users\\dell\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rohityadav/BikeCarHub-git/BACKEND/Cars&Bikes/Cars&Bikes.csproj",
+      "projectUniqueName": "C:\\Users\\dell\\Desktop\\New BikeCarHub\\BACKEND\\Cars&Bikes\\Cars&Bikes.csproj",
       "projectName": "Cars&Bikes",
-      "projectPath": "/Users/rohityadav/BikeCarHub-git/BACKEND/Cars&Bikes/Cars&Bikes.csproj",
-      "packagesPath": "/Users/rohityadav/.nuget/packages/",
-      "outputPath": "/Users/rohityadav/BikeCarHub-git/BACKEND/Cars&Bikes/obj/",
+      "projectPath": "C:\\Users\\dell\\Desktop\\New BikeCarHub\\BACKEND\\Cars&Bikes\\Cars&Bikes.csproj",
+      "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dell\\Desktop\\New BikeCarHub\\BACKEND\\Cars&Bikes\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/rohityadav/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5483,7 +5490,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -5535,7 +5543,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.421/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
