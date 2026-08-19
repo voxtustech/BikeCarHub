@@ -26,7 +26,6 @@
     <Folder Include="Services\" />
     <Folder Include="Views\Wishlist\" />
     <Folder Include="Views\Review\" />
-    <Folder Include="Controllers\Api\" />
     <Folder Include="Views\LatestNews\" />
   </ItemGroup>
   <ItemGroup>

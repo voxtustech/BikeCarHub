@@ -9,10 +9,12 @@ export default function BrandBikeHorizontalCard({ bike }) {
 
     if (!bike) return null;
 
-    const image =
-        bike.image
-            ? `${BACKEND_URL}${bike.image}`
-            : "/placeholder-bike.png";
+    const image = bike.image
+        ? bike.image.startsWith("http")
+            ? bike.image
+            : `${BACKEND_URL}${bike.image}`
+        : "/placeholder-bike.png";
+
 
     return (
 
@@ -35,44 +37,47 @@ export default function BrandBikeHorizontalCard({ bike }) {
                         src={image}
                         alt={bike.name}
                         className="max-w-full max-h-full object-contain p-4"
+                        onError={(e) => {
+
+                            console.error(
+                                "Failed to load bike image:",
+                                image
+                            );
+
+                            e.currentTarget.onerror = null;
+
+                            e.currentTarget.src =
+                                "/placeholder-bike.png";
+                        }}
                     />
 
                 </div>
+
 
                 {/* Bike Details */}
 
                 <div className="flex-1 p-6 flex flex-col justify-center">
 
                     <p className="uppercase tracking-wider text-slate-400 text-sm font-semibold">
-
                         {bike.brand}
-
                     </p>
 
                     <h2 className="text-3xl font-bold text-slate-800 mt-2">
-
                         {bike.name}
-
                     </h2>
 
                     <p className="text-2xl font-bold text-blue-700 mt-4">
-
                         ₹ {bike.price}
-
                     </p>
 
                     <div className="mt-5 flex items-center gap-5 text-slate-500">
 
                         <span>
-
                             {bike.isEV ? "Electric" : "Petrol"}
-
                         </span>
 
                         <span>
-
                             ★ {bike.rating ?? "4.5"}
-
                         </span>
 
                     </div>
@@ -91,9 +96,7 @@ export default function BrandBikeHorizontalCard({ bike }) {
 
                             }}
                         >
-
                             View Details
-
                         </button>
 
                     </div>
@@ -105,5 +108,4 @@ export default function BrandBikeHorizontalCard({ bike }) {
         </div>
 
     );
-
 }

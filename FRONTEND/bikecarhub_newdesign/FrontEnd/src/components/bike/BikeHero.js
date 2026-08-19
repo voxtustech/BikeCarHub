@@ -17,7 +17,10 @@ import {
     removeFromWishlist,
     checkWishlist
 } from "../../api/wishlistApi";
-
+import {
+    submitReview,
+    getBikeReviews
+} from "../../api/reviewApi";
 export default function BikeHero({ bike }) {
 
     const navigate = useNavigate();
@@ -26,6 +29,12 @@ export default function BikeHero({ bike }) {
     const [isWishlisted, setIsWishlisted] = useState(false);
     const [loadingWishlist, setLoadingWishlist] = useState(false);
     const [showLoginModal, setShowLoginModal] = useState(false);
+    const [showReviewModal, setShowReviewModal] = useState(false);
+    const [reviewRating, setReviewRating] = useState(0);
+    const [reviewText, setReviewText] = useState("");
+    const [submittingReview, setSubmittingReview] = useState(false);
+    const [averageRating, setAverageRating] = useState(0);
+    const [reviewCount, setReviewCount] = useState(0);
 
     const handleCompare = () => {
 
@@ -85,6 +94,46 @@ export default function BikeHero({ bike }) {
         loadWishlist();
 
     }, [bike]);
+    useEffect(() => {
+
+        if (!bike?.id) {
+            return;
+        }
+
+
+        async function loadReviews() {
+
+            try {
+
+                const data =
+                    await getBikeReviews(bike.id);
+
+
+                setAverageRating(
+                    data.averageRating || 0
+                );
+
+
+                setReviewCount(
+                    data.reviewCount || 0
+                );
+
+            }
+            catch (err) {
+
+                console.error(
+                    "Failed to load reviews:",
+                    err
+                );
+
+            }
+
+        }
+
+
+        loadReviews();
+
+    }, [bike?.id]);
 
     async function toggleWishlist() {
 
@@ -134,6 +183,100 @@ export default function BikeHero({ bike }) {
         }
 
     }
+    async function handleSubmitReview() {
+
+        if (reviewRating === 0) {
+
+            alert("Please select a rating.");
+
+            return;
+        }
+
+
+        if (
+            !reviewText.trim() ||
+            reviewText.trim().length < 10
+        ) {
+
+            alert(
+                "Review must be at least 10 characters."
+            );
+
+            return;
+        }
+
+
+        try {
+
+            setSubmittingReview(true);
+
+
+            const result =
+                await submitReview(
+                    bike.id,
+                    reviewRating,
+                    reviewText
+                );
+
+
+            alert(result.message);
+
+
+            // Close modal
+            setShowReviewModal(false);
+
+
+            // Reset form
+            setReviewRating(0);
+
+            setReviewText("");
+
+
+            // Reload rating
+            const updatedReviews =
+                await getBikeReviews(bike.id);
+
+
+            setAverageRating(
+                updatedReviews.averageRating || 0
+            );
+
+
+            setReviewCount(
+                updatedReviews.reviewCount || 0
+            );
+
+        }
+        catch (err) {
+
+            console.error(
+                "Review submission failed:",
+                err
+            );
+
+
+            if (err.status === 401) {
+
+                setShowReviewModal(false);
+
+                setShowLoginModal(true);
+
+                return;
+            }
+
+
+            alert(
+                err.message ||
+                "Unable to submit review."
+            );
+
+        }
+        finally {
+
+            setSubmittingReview(false);
+
+        }
+    }
 
     if (!bike) return null;
 
@@ -172,9 +315,9 @@ export default function BikeHero({ bike }) {
             </h1>
 
             {/* Rating */}
+            <div className="flex items-center gap-3 mt-4 flex-wrap">
 
-            <div className="flex items-center gap-3 mt-4">
-
+                {/* Rating */}
                 <div className="flex items-center gap-1">
 
                     {[1, 2, 3, 4, 5].map(i => (
@@ -190,19 +333,23 @@ export default function BikeHero({ bike }) {
                 </div>
 
                 <span className="font-semibold">
-
-                    4.4
-
+                    {averageRating.toFixed(1)}
                 </span>
 
                 <span className="text-slate-500">
-
-                    (136 Reviews)
-
+                    ({reviewCount} Reviews)
                 </span>
 
-            </div>
+                {/* Write Review */}
+                <button
+                    onClick={() => setShowReviewModal(true)}
+                    className="ml-2 text-blue-700 font-semibold hover:text-blue-800 hover:underline"
+                >
+                    Write a Review
+                </button>
 
+            </div>
+            
             {/* Price */}
 
             <div className="mt-6">
@@ -378,6 +525,168 @@ export default function BikeHero({ bike }) {
                 </div>
 
             </div>
+
+            {
+                showReviewModal && (
+
+                    <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center px-4">
+
+                        <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6">
+
+                            {/* Header */}
+
+                            <div className="flex justify-between items-center">
+
+                                <h2 className="text-xl font-bold text-slate-900">
+                                    Write a Review
+                                </h2>
+
+                                <button
+                                    onClick={() => {
+                                        setShowReviewModal(false);
+                                        setReviewRating(0);
+                                        setReviewText("");
+                                    }}
+                                    className="text-slate-500 hover:text-slate-800"
+                                >
+                                    <X size={22} />
+                                </button>
+
+                            </div>
+
+
+                            {/* Bike name */}
+
+                            <p className="text-slate-500 mt-2">
+                                Review for {bike.name}
+                            </p>
+
+
+                            {/* Rating */}
+
+                            <div className="mt-6">
+
+                                <p className="font-semibold text-slate-800 mb-3">
+                                    Your Rating
+                                </p>
+
+                                <div className="flex gap-2">
+
+                                    {[1, 2, 3, 4, 5].map((star) => (
+
+                                        <button
+                                            key={star}
+                                            type="button"
+                                            onClick={() =>
+                                                setReviewRating(star)
+                                            }
+                                            className="transition-transform hover:scale-110"
+                                        >
+
+                                            <Star
+                                                size={32}
+                                                className={
+                                                    star <= reviewRating
+                                                        ? "fill-yellow-400 text-yellow-400"
+                                                        : "text-slate-300"
+                                                }
+                                            />
+
+                                        </button>
+
+                                    ))}
+
+                                </div>
+
+                                {reviewRating > 0 && (
+
+                                    <p className="text-sm text-slate-500 mt-2">
+
+                                        {reviewRating === 1 && "Poor"}
+
+                                        {reviewRating === 2 && "Below Average"}
+
+                                        {reviewRating === 3 && "Average"}
+
+                                        {reviewRating === 4 && "Good"}
+
+                                        {reviewRating === 5 && "Excellent"}
+
+                                    </p>
+
+                                )}
+
+                            </div>
+
+
+                            {/* Review textbox */}
+
+                            <div className="mt-6">
+
+                                <label
+                                    className="block font-semibold text-slate-800 mb-2"
+                                >
+                                    Write your review
+                                </label>
+
+                                <textarea
+                                    value={reviewText}
+                                    onChange={(e) =>
+                                        setReviewText(e.target.value)
+                                    }
+                                    placeholder="Tell us about your experience with this bike..."
+                                    rows={5}
+                                    maxLength={1000}
+                                    className="w-full border border-slate-300 rounded-xl p-3 outline-none resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+
+                                <div className="text-right text-sm text-slate-400 mt-1">
+
+                                    {reviewText.length}/1000
+
+                                </div>
+
+                            </div>
+
+
+                            {/* Buttons */}
+
+                            <div className="flex justify-end gap-3 mt-6">
+
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        setShowReviewModal(false);
+                                        setReviewRating(0);
+                                        setReviewText("");
+                                    }}
+                                    className="px-5 py-2.5 rounded-lg border border-slate-300 hover:bg-slate-50"
+                                >
+                                    Cancel
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    onClick={handleSubmitReview}
+                                    disabled={submittingReview}
+                                    className="px-5 py-2.5 rounded-lg bg-blue-700 text-white hover:bg-blue-800 disabled:opacity-50"
+                                >
+
+                                    {submittingReview
+                                        ? "Submitting..."
+                                        : "Submit Review"}
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                )
+            }
 
             {
                 showLoginModal && (

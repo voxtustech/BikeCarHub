@@ -1,8 +1,9 @@
 ﻿
-using System.Runtime.InteropServices;
 using Cars_Bikes.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.InteropServices;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Cars_Bikes.Controllers.Api
 {
@@ -61,21 +62,24 @@ namespace Cars_Bikes.Controllers.Api
         {
             var bikes = await _context.Twowheelers
                 .Include(x => x.TwoWheelerBrands)
-                .Where(x => x.TwoWBrandId == brandId && x.IsActive == true)
+                .Where(x =>
+                    x.TwoWBrandId == brandId &&
+                    x.IsActive == true)
                 .OrderBy(x => x.BasePrice)
                 .Select(x => new
                 {
                     id = x.TwoWheelerId,
+
                     name = x.TwoWheelerName,
-                    //image = x.TWImage,
-                    image = _context.TWImageColorPrices
-                        .Where(i => i.TwoWheelerId == x.TwoWheelerId)
-                        .OrderBy(i => i.TWImageColorPriceId)
-                        .Select(i => i.ImageURL)
-                        .FirstOrDefault(),
+
+                    image = x.TWImage,
+
                     price = x.Price,
+
                     launchDate = x.LaunchDate,
+
                     brand = x.Brand,
+
                     brandId = x.TwoWBrandId
                 })
                 .ToListAsync();
@@ -95,7 +99,7 @@ namespace Cars_Bikes.Controllers.Api
                     logo = x.BrandLogoURL
                 })
                 .ToListAsync();
-
+        
             return Ok(brands);
         }
 
@@ -141,15 +145,18 @@ namespace Cars_Bikes.Controllers.Api
                 .Select(x => new
                 {
                     id = x.TwoWheelerId,
+
                     name = x.TwoWheelerName,
-                    image = _context.TWImageColorPrices
-                        .Where(i => i.TwoWheelerId == x.TwoWheelerId)
-                        .OrderBy(i => i.TWImageColorPriceId)
-                        .Select(i => i.ImageURL)
-                        .FirstOrDefault(),
+
+                    // Get image directly from TwoWheeler table
+                    image = x.TWImage,
+
                     price = x.Price,
+
                     launchDate = x.LaunchDate,
+
                     brand = x.Brand,
+
                     brandId = x.TwoWBrandId
                 })
                 .ToListAsync();

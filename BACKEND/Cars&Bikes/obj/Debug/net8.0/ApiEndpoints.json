@@ -346,6 +346,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Cars_Bikes.Controllers.Api.ReviewApiController",
+    "Method": "AddReview",
+    "RelativePath": "api/reviews",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Cars_Bikes.Controllers.Api.ReviewRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.ReviewApiController",
+    "Method": "EditReview",
+    "RelativePath": "api/reviews/{reviewId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reviewId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Cars_Bikes.Controllers.Api.ReviewRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.ReviewApiController",
+    "Method": "DeleteReview",
+    "RelativePath": "api/reviews/{reviewId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reviewId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.ReviewApiController",
+    "Method": "GetBikeReviews",
+    "RelativePath": "api/reviews/bike/{twoWheelerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "twoWheelerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.Api.ReviewApiController",
+    "Method": "GetMyReviews",
+    "RelativePath": "api/reviews/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Cars_Bikes.Controllers.Api.SearchApiController",
     "Method": "Search",
     "RelativePath": "api/search",

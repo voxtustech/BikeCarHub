@@ -1,0 +1,486 @@
+﻿.my-reviews-page {
+    min-height: 100vh;
+    background: #f8fafc;
+    padding: 40px 20px;
+}
+
+.my-reviews-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* Header */
+
+.my-reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+    .my-reviews-header h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 700;
+        color: #0f172a;
+    }
+
+    .my-reviews-header p {
+        margin: 8px 0 0;
+        color: #64748b;
+        font-size: 15px;
+    }
+
+
+/* Review count */
+
+.review-count {
+    min-width: 75px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+    .review-count span {
+        font-size: 12px;
+        font-weight: 500;
+        color: #64748b;
+    }
+
+
+/* Review list */
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+/* Review card */
+
+.review-card {
+    display: flex;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .review-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    }
+
+
+/* Bike image */
+
+.review-bike-image {
+    width: 190px;
+    height: 140px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+    .review-bike-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+.no-image {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+
+/* Review content */
+
+.review-content {
+    flex: 1;
+    padding-left: 24px;
+}
+
+
+/* Top section */
+
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.review-brand {
+    margin: 0 0 3px;
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.review-bike-name {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.review-date {
+    color: #94a3b8;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+
+/* Stars */
+
+.review-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-top: 12px;
+}
+
+.star {
+    font-size: 19px;
+    color: #cbd5e1;
+}
+
+    .star.active {
+        color: #facc15;
+    }
+
+.rating-number {
+    margin-left: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+}
+
+
+/* Review text */
+
+.review-text {
+    margin: 13px 0 0;
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* Empty state */
+
+.no-reviews {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.no-reviews-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fef3c7;
+    color: #f59e0b;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.no-reviews h2 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 21px;
+}
+
+.no-reviews p {
+    margin-top: 8px;
+    color: #64748b;
+}
+
+
+/* Loading */
+
+.reviews-loading {
+    max-width: 1100px;
+    margin: 100px auto;
+    text-align: center;
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* Error */
+
+.reviews-error {
+    max-width: 700px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+    color: #b91c1c;
+    text-align: center;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .my-reviews-page {
+        padding: 25px 15px;
+    }
+
+    .my-reviews-header {
+        align-items: flex-start;
+    }
+
+        .my-reviews-header h1 {
+            font-size: 26px;
+        }
+
+    .review-card {
+        flex-direction: column;
+    }
+
+    .review-bike-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .review-content {
+        padding-left: 0;
+        padding-top: 18px;
+    }
+
+    .review-top {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .review-date {
+        font-size: 12px;
+    }
+}
+
+.review-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.edit-review-btn,
+.delete-review-btn {
+    border: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.edit-review-btn {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+    .edit-review-btn:hover {
+        background: #dbeafe;
+    }
+
+.delete-review-btn {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+    .delete-review-btn:hover {
+        background: #fee2e2;
+    }
+
+    .delete-review-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+.review-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.review-edit-modal {
+    width: 100%;
+    max-width: 560px;
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+}
+
+.review-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+    .review-modal-header h2 {
+        margin: 0;
+        font-size: 23px;
+        color: #0f172a;
+    }
+
+    .review-modal-header p {
+        margin: 5px 0 0;
+        color: #64748b;
+        font-size: 14px;
+    }
+
+.review-modal-close {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+    .review-modal-close:hover {
+        background: #e2e8f0;
+    }
+
+.edit-rating-section {
+    margin-bottom: 22px;
+}
+
+    .edit-rating-section label,
+    .edit-review-field label {
+        display: block;
+        margin-bottom: 9px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #334155;
+    }
+
+.edit-stars {
+    display: flex;
+    gap: 5px;
+}
+
+    .edit-stars button {
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+.edit-star {
+    font-size: 34px;
+    color: #cbd5e1;
+}
+
+    .edit-star.active {
+        color: #facc15;
+    }
+
+.edit-review-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+    .edit-review-field textarea {
+        width: 100%;
+        box-sizing: border-box;
+        resize: vertical;
+        min-height: 140px;
+        padding: 13px;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        outline: none;
+        font-family: inherit;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+        .edit-review-field textarea:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+.character-count {
+    text-align: right;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.edit-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cancel-edit-btn,
+.save-edit-btn {
+    border: none;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-edit-btn {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+    .cancel-edit-btn:hover {
+        background: #e2e8f0;
+    }
+
+.save-edit-btn {
+    background: #2563eb;
+    color: white;
+}
+
+    .save-edit-btn:hover {
+        background: #1d4ed8;
+    }
+
+    .save-edit-btn:disabled,
+    .cancel-edit-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
