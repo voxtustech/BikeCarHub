@@ -10,7 +10,7 @@ namespace Cars_Bikes.Controllers.Api
     public class BikeDetailsApiController : ControllerBase
     {
         private readonly TwoWheelerDB _context;
-
+       
         public BikeDetailsApiController(TwoWheelerDB context)
         {
             _context = context;
@@ -305,7 +305,7 @@ namespace Cars_Bikes.Controllers.Api
                 .Where(x => x.TwoWheelerId == id)
                 .Select(x => new
                 {
-                    image = x.ImageURL,
+                    imageURL = x.ImageURL,
                     color = x.Color,
                     price = x.Price,
                     variantId = x.TWVarientId,
@@ -427,7 +427,59 @@ namespace Cars_Bikes.Controllers.Api
             // -----------------------------
             // Return Result
             // -----------------------------
+            Console.WriteLine($"Bike ID: {id}");
 
+            Console.WriteLine(
+                $"Variants: {variants.Count}"
+            );
+
+            Console.WriteLine(
+                $"Specs: {specs.Count}"
+            );
+
+            Console.WriteLine(
+                $"Engine: {engine.Count}"
+            );
+
+            Console.WriteLine(
+                $"Features: {features.Count}"
+            );
+
+            Console.WriteLine(
+                $"Safety: {safety.Count}"
+            );
+
+            Console.WriteLine(
+                $"Performance: {performance.Count}"
+            );
+
+            Console.WriteLine(
+                $"Dimensions: {dimensions.Count}"
+            );
+
+            Console.WriteLine(
+                $"Electricals: {electricals.Count}"
+            );
+
+            Console.WriteLine(
+                $"Tyres: {tyres.Count}"
+            );
+
+            Console.WriteLine(
+                $"MotorBattery: {motorBattery.Count}"
+            );
+
+            Console.WriteLine(
+                $"Charging: {charging.Count}"
+            );
+
+            Console.WriteLine(
+                $"Underpinnings: {underpinnings.Count}"
+            );
+
+            Console.WriteLine(
+                $"Images: {images.Count}"
+            );
             return Ok(new
             {
                 bike = new

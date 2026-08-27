@@ -4,6 +4,10 @@ import { useParams } from "react-router-dom";
 import BlogArticleLayout from "../components/blogs/BlogArticleLayout";
 
 // Import every hard-coded blog article here
+import NissanTekton from "../data/blogs/NissanTekton";
+import ScorpioNFacelift from "../data/blogs/ScorpioNFacelift";
+import ToyotaHilux2026 from "../data/blogs/ToyotaHilux2026";
+import MarutiSuzukiBrezza2026 from "../data/blogs/MarutiSuzukiBrezza2026"; 
 import BMWF450GS from "../data/blogs/BMWF450GS";
 // import MGMajestor from "../data/blogs/MGMajestor";
 // import RenaultDuster from "../data/blogs/RenaultDuster";
@@ -13,6 +17,10 @@ import BMWF450GS from "../data/blogs/BMWF450GS";
 const articles = {
 
     [BMWF450GS.slug]: BMWF450GS,
+    [MarutiSuzukiBrezza2026.slug]: MarutiSuzukiBrezza2026,
+    [ToyotaHilux2026.slug]: ToyotaHilux2026,
+    [ScorpioNFacelift.slug]: ScorpioNFacelift,
+    [NissanTekton.slug]: NissanTekton,
 
     // [MGMajestor.slug]: MGMajestor,
 

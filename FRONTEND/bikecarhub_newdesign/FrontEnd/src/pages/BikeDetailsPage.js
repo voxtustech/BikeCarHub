@@ -44,7 +44,7 @@ export default function BikeDetailsPage() {
 
             try {
 
-                const data = await getBikeDetails(brandName, bikeName);;
+                const data = await getBikeDetails(brandName, bikeName);
 
                 setBikeData(data);
 
@@ -161,6 +161,9 @@ export default function BikeDetailsPage() {
                 Bike not found.
             </div>
         );
+    console.log("========== BIKE DETAILS DEBUG ==========");
+
+    console.log("Bike:", bikeData.bike);
 
     console.log("Variants:", bikeData.variants);
     console.log("Selected:", selectedVariant);
@@ -173,6 +176,20 @@ export default function BikeDetailsPage() {
 
     console.log("Images:", bikeData.images);
 
+    console.log(
+        "Selected variant:",
+        selectedVariant,
+        typeof selectedVariant
+    );
+
+    console.log(
+        "Spec variant IDs:",
+        bikeData.specs?.map(x => ({
+            variantId: x.variantId,
+            type: typeof x.variantId
+        }))
+    );
+    console.log("========================================");
     return (
 
         <div className="bg-slate-50">
@@ -200,7 +217,17 @@ export default function BikeDetailsPage() {
                 <div className="grid lg:grid-cols-2 gap-10">
 
                     <BikeImageGallery
-                        images={bikeData.images}
+                        images={
+                            bikeData.images?.length > 0
+                                ? bikeData.images
+                                : bikeData.bike?.image
+                                    ? [
+                                        {
+                                            imageURL: bikeData.bike.image
+                                        }
+                                    ]
+                                    : []
+                        }
                     />
 
                     <BikeHero

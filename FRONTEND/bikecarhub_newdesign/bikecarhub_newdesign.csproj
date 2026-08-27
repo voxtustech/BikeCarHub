@@ -54,14 +54,11 @@
   <ItemGroup>
     <Folder Include="FrontEnd\src\imports\" />
     <Folder Include="FrontEnd\src\components\valueForMoney\" />
-    <Folder Include="FrontEnd\src\data\" />
     <Folder Include="FrontEnd\src\data\valueForMoney\" />
     <Folder Include="FrontEnd\src\components\upcomingBikes\" />
-    <Folder Include="FrontEnd\src\data\upcomingBikes\" />
     <Folder Include="FrontEnd\src\components\latestNews\" />
     <Folder Include="FrontEnd\src\data\latestNews\" />
     <Folder Include="FrontEnd\src\components\blogs\" />
-    <Folder Include="FrontEnd\src\data\blogs\" />
     <Folder Include="FrontEnd\src\utils\" />
     <Folder Include="FrontEnd\src\context\" />
     <Folder Include="FrontEnd\src\data\latestNews\2024\" />

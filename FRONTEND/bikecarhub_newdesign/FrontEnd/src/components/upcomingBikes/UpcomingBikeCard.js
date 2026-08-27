@@ -7,32 +7,52 @@ export default function UpcomingBikesCard({ article }) {
 
     const navigate = useNavigate();
 
-    console.log(article.title, article.slug);
+    console.log("UPCOMING BIKE CARD RENDERED:", article);
+
+    if (!article) {
+        console.log("No article received");
+        return null;
+    }
+
+    const imageUrl = article.image
+        ? `${BACKEND_URL}${article.image}`
+        : "/placeholder-bike.png";
 
     function openArticle() {
+
+        console.log("UPCOMING BIKE CARD CLICKED");
+
+        console.log("Article:", article);
+
+        console.log("Slug:", article.slug);
+
         navigate(`/upcoming-bike/${article.slug}`);
     }
 
     return (
 
         <div
-
             onClick={openArticle}
-
             className="group cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-
         >
+
+            {/* IMAGE */}
 
             <div className="relative h-60 overflow-hidden bg-slate-100">
 
                 <img
-
-                    src={article.heroImage}
-
+                    src={imageUrl}
                     alt={article.title}
-
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                        console.error(
+                            "Upcoming bike image failed:",
+                            imageUrl
+                        );
 
+                        e.currentTarget.src =
+                            "/placeholder-bike.png";
+                    }}
                 />
 
                 <div className="absolute top-4 left-4">
@@ -46,6 +66,8 @@ export default function UpcomingBikesCard({ article }) {
                 </div>
 
             </div>
+
+            {/* CONTENT */}
 
             <div className="p-6">
 
@@ -79,7 +101,7 @@ export default function UpcomingBikesCard({ article }) {
 
                     </div>
 
-                    <div className="flex items-center gap-2 font-semibold text-blue-600 group-hover:gap-4 transition-all">
+                    <div className="flex items-center gap-2 font-semibold text-blue-600">
 
                         Read More
 
@@ -92,7 +114,5 @@ export default function UpcomingBikesCard({ article }) {
             </div>
 
         </div>
-
     );
-
 }

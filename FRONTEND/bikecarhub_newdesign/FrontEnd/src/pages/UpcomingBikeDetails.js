@@ -1,27 +1,101 @@
-﻿import UpcomingBikeArticleLayout from "../components/upcomingBikes/UpcomingBikeArticleLayout";
+﻿import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
+import UpcomingBikeArticleLayout
+    from "../components/upcomingBikes/UpcomingBikeArticleLayout";
 
 import { BlogsSection } from "../components/BlogsSection";
 import { LatestNewsSection } from "../components/LatestNewsSection";
 import { CompareBikesSection } from "../components/CompareBikesSection";
 import { EcosystemSection } from "../components/EcosystemSection";
 import { AdPlaceholder } from "../components/AdPlaceholder";
-import { useParams } from "react-router-dom";
 
-import TriumphTigerSport800 from "../data/upcomingBikes/TriumphTigerSport800";
-
-const articles = {
-
-    triumphtigersport800: TriumphTigerSport800
-
-};
+import {
+    getUpcomingBikeDetails
+} from "../api/upcomingBikeApi";
 
 export default function UpcomingBikeDetails() {
 
     const { slug } = useParams();
 
-    const article = articles[slug];
+    const [article, setArticle] = useState(null);
 
-    if (!article) {
+    const [loading, setLoading] = useState(true);
+
+    const [error, setError] = useState("");
+
+    useEffect(() => {
+
+        console.log("UPCOMING BIKE DETAILS PAGE");
+
+        console.log("Slug from URL:", slug);
+
+        async function loadArticle() {
+
+            try {
+
+                setLoading(true);
+
+                setError("");
+
+                const data =
+                    await getUpcomingBikeDetails(slug);
+
+                console.log(
+                    "Upcoming bike API response:",
+                    data
+                );
+
+                setArticle(data);
+
+            }
+            catch (err) {
+
+                console.error(
+                    "Upcoming bike loading error:",
+                    err
+                );
+
+                setError(
+                    "Unable to load upcoming bike article."
+                );
+
+            }
+            finally {
+
+                setLoading(false);
+
+            }
+
+        }
+
+        if (slug) {
+            loadArticle();
+        }
+
+    }, [slug]);
+
+
+    if (loading) {
+
+        return (
+
+            <div className="max-w-7xl mx-auto px-6 py-20">
+
+                <div className="text-center text-slate-500 text-xl">
+
+                    Loading article...
+
+                </div>
+
+            </div>
+
+        );
+
+    }
+
+
+    if (error || !article) {
 
         return (
 
@@ -37,7 +111,7 @@ export default function UpcomingBikeDetails() {
 
                     <p className="mt-3 text-slate-600">
 
-                        The Upcoming Bike article you are looking for does not exist.
+                        {error}
 
                     </p>
 
@@ -49,20 +123,20 @@ export default function UpcomingBikeDetails() {
 
     }
 
+
     return (
 
         <main className="bg-slate-50 min-h-screen">
 
-            <UpcomingBikeArticleLayout article={article} />
+            <UpcomingBikeArticleLayout
+                article={article}
+            />
 
             <div className="max-w-7xl mx-auto px-6 py-4">
 
                 <AdPlaceholder
-
                     label="Advertisement"
-
                     height="h-20"
-
                 />
 
             </div>
@@ -78,5 +152,4 @@ export default function UpcomingBikeDetails() {
         </main>
 
     );
-
 }

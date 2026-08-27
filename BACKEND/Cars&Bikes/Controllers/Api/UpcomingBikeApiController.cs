@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using Cars_Bikes.Data;
+﻿using Cars_Bikes.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +15,28 @@ namespace Cars_Bikes.Controllers.Api
             _context = context;
         }
 
+        //[HttpGet]
+        //public async Task<IActionResult> GetUpcomingBikes()
+        //{
+        //    var bikes = await _context.UpcomingBikes
+        //        .OrderBy(x => x.FilterLaunchDate)
+        //        .Take(100)
+        //        .Select(x => new
+        //        {
+        //            id = x.UpcomingBikeId,
+        //            title = x.UpcomingBikeName,
+
+
+        //           slug = x.ImageURL,
+
+        //            image = x.ImageFolderURL,
+        //            date = x.ExpectedLaunchDate,
+        //            brand = x.BrandName
+        //        })
+        //        .ToListAsync();
+
+        //    return Ok(bikes);
+        //}
         [HttpGet]
         public async Task<IActionResult> GetUpcomingBikes()
         {
@@ -25,15 +46,62 @@ namespace Cars_Bikes.Controllers.Api
                 .Select(x => new
                 {
                     id = x.UpcomingBikeId,
+
                     title = x.UpcomingBikeName,
-                    slug = "triumphtigersport800",
-                    image = x.ImageURL,
+
+                    slug = x.UpcomingBikeName
+                        .ToLower()
+                        .Replace(" ", "-"),
+
+                    image = x.ImageFolderURL,
+
                     date = x.ExpectedLaunchDate,
+
                     brand = x.BrandName
                 })
                 .ToListAsync();
 
             return Ok(bikes);
+        }
+
+        [HttpGet("{slug}")]
+        public async Task<IActionResult> GetUpcomingBike(string slug)
+        {
+            slug = slug.ToLower();
+
+            var bike = await _context.UpcomingBikes
+                .FirstOrDefaultAsync(x =>
+                    x.UpcomingBikeName
+                        .ToLower()
+                        .Replace(" ", "-") == slug
+                );
+
+            if (bike == null)
+            {
+                return NotFound(new
+                {
+                    message = "Upcoming bike article not found."
+                });
+            }
+
+            return Ok(new
+            {
+                id = bike.UpcomingBikeId,
+
+                title = bike.UpcomingBikeName,
+
+                slug = bike.UpcomingBikeName
+                    .ToLower()
+                    .Replace(" ", "-"),
+
+                image = bike.ImageFolderURL,
+
+                date = bike.ExpectedLaunchDate,
+
+                brand = bike.BrandName,
+
+                details = bike.UpcomingBikeDetails
+            });
         }
     }
 }

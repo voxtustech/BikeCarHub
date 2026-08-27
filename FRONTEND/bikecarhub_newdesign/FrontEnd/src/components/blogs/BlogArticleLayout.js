@@ -84,7 +84,7 @@ export default function BlogArticleLayout({ article }) {
 
                     alt={article.title}
 
-                    className="w-full rounded-3xl mt-12 shadow-xl"
+                    className="w-full max-h-[500px] object-contain rounded-2xl shadow-lg"
 
                 />
 
@@ -227,7 +227,7 @@ export default function BlogArticleLayout({ article }) {
                 }
 
             </section>
-            {/* TABLES */}
+             {/*TABLES */}
 
             {
 
@@ -375,7 +375,111 @@ export default function BlogArticleLayout({ article }) {
 
                 )
 
+
             }
+
+            {/* ADDITIONAL SECTIONS AFTER TABLES */}
+            
+            {article.afterTableSections?.length > 0 && (
+
+                <section className="max-w-6xl mx-auto px-6 py-8">
+
+                    {article.afterTableSections.map((section, index) => (
+
+                        <div
+                            key={index}
+                            className="mb-16"
+                        >
+
+                            {/* Section Heading */}
+
+                            {section.heading && (
+
+                                <h2 className="text-3xl font-bold mb-6">
+
+                                    {section.heading}
+
+                                </h2>
+
+                            )}
+
+            {/*                */}{/* Section Image */}
+
+                            {/*{section.image && (*/}
+
+                            {/*    <img*/}
+                            {/*        src={section.image}*/}
+                            {/*        alt={section.heading || article.title}*/}
+                            {/*        className="rounded-2xl mb-8 w-full"*/}
+                            {/*    />*/}
+
+                            {/*)}*/}
+                            {section.images?.length > 0 && (
+
+                                <div
+                                    className={`grid gap-6 mb-8 ${section.images.length === 1
+                                            ? "grid-cols-1"
+                                            : "grid-cols-2"
+                                        }`}
+                                >
+
+                                    {section.images.map((image, i) => (
+
+                                        <img
+                                            key={i}
+                                            src={image}
+                                            alt={`${section.heading || article.title} ${i + 1}`}
+                                            className="w-full h-auto rounded-2xl shadow-md object-cover"
+                                        />
+
+                                    ))}
+
+                                </div>
+
+                            )}
+
+
+            {/*                */}{/* Paragraphs */}
+
+                            {section.paragraphs?.map((paragraph, i) => (
+
+                                <p
+                                    key={i}
+                                    className="text-lg leading-9 text-slate-700 mb-6"
+                                >
+
+                                    {paragraph}
+
+                                </p>
+
+                            ))}
+
+            {/*                */}{/* Bullets */}
+
+                            {section.bullets?.length > 0 && (
+
+                                <ul className="list-disc ml-8 text-lg leading-9 space-y-3">
+
+                                    {section.bullets.map((bullet, i) => (
+
+                                        <li key={i}>
+                                            {bullet}
+                                        </li>
+
+                                    ))}
+
+                                </ul>
+
+                            )}
+
+                        </div>
+
+                    ))}
+
+                </section>
+
+            )}
+
             {/* FAQ */}
 
             {article.faqs?.length > 0 && (
@@ -456,9 +560,9 @@ export default function BlogArticleLayout({ article }) {
                 </section>
 
             )}
-                )
+     )
 
-            }
+            
 
         </div>
 

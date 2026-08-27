@@ -101,7 +101,7 @@ export function UpcomingBikesSection() {
         );
 
     }
-
+    /*
     const slugMap = {
 
         "upcoming-bikes/triumph-tiger-sport-800": "triumphtigersport800",
@@ -109,6 +109,7 @@ export function UpcomingBikesSection() {
         // add remaining bikes here
 
     };
+    */
 
     return (
 
@@ -125,22 +126,32 @@ export function UpcomingBikesSection() {
                 </SectionTitle>
 
                 <HScrollCarousel itemWidth={300}>
-
+                
                     {bikes.map((bike) => (
 
                         <div
                             key={bike.id}
-                            onClick={() => {
+                            //onClick={() => {
 
-                                const route = slugMap[bike.slug];
+                            //    const route = slugMap[bike.slug];
 
-                                if (route) {
+                            //    if (route) {
 
-                                    navigate(`/upcoming-bike/${route}`);
+                            //        navigate(`/upcoming-bike/${route}`);
+
+                             onClick = {() => {
+
+                                console.log("UPCOMING BIKE CARD CLICKED");
+                                console.log("Bike:", bike);
+                                console.log("Slug:", bike.slug);
+
+                                const slug = bike.slug.split("/").pop();
+
+                                navigate(`/upcoming-bike/${slug}`);
 
                                 }
 
-                            }}
+                            }
                             className="group
                             w-72
                             bg-white
@@ -183,7 +194,8 @@ export function UpcomingBikesSection() {
                                     }}
                                 >
 
-                                    {bike.name}
+                                    {/*{bike.name}*/}
+                                    {bike.title }
 
                                 </p>
 
@@ -201,7 +213,8 @@ export function UpcomingBikesSection() {
 
                                     <span>
 
-                                        {bike.launchDate}
+                                        {/*{bike.launchDate}*/}
+                                        {bike.date }
 
                                     </span>
 

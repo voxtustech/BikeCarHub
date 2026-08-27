@@ -483,6 +483,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Cars_Bikes.Controllers.Api.UpcomingBikeApiController",
+    "Method": "GetUpcomingBike",
+    "RelativePath": "api/upcoming-bikes/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Cars_Bikes.Controllers.Api.ValueForMoneyApiController",
     "Method": "GetArticles",
     "RelativePath": "api/valueformoney",
