@@ -8,6 +8,7 @@
 import {
     login as loginApi,
     logout as logoutApi,
+    register as registerApi,
     currentUser
 } from "../api/authApi";
 
@@ -33,7 +34,9 @@ export function AuthProvider({ children }) {
             catch (error) {
 
                 console.error(error);
+
                 setUser(null);
+
             }
             finally {
 
@@ -57,6 +60,16 @@ export function AuthProvider({ children }) {
 
     }
 
+    async function registerUser(data) {
+
+        const result = await registerApi(data);
+
+        setUser(result.user);
+
+        return result.user;
+
+    }
+
     async function logout() {
 
         await logoutApi();
@@ -68,21 +81,14 @@ export function AuthProvider({ children }) {
     return (
 
         <AuthContext.Provider
-
             value={{
-
                 user,
-
                 loading,
-
                 login,
-
+                register: registerUser,
                 logout,
-
                 isAuthenticated: !!user
-
             }}
-
         >
 
             {children}

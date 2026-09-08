@@ -92,19 +92,35 @@ namespace Cars_Bikes.Controllers.Api
         [HttpGet("me")]
         public async Task<IActionResult> Me()
         {
-            if (!User.Identity!.IsAuthenticated)
+            if (User.Identity == null || !User.Identity.IsAuthenticated)
             {
-                return Unauthorized();
+                return Unauthorized(new
+                {
+                    success = false,
+                    message = "Not authenticated."
+                });
             }
 
-            var user =
-                await _userManager.GetUserAsync(User);
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null)
+            {
+                return Unauthorized(new
+                {
+                    success = false,
+                    message = "User not found."
+                });
+            }
 
             return Ok(new
             {
-                fullName = user!.FullName,
-                userName = user.UserName,
-                email = user.Email
+                success = true,
+                user = new
+                {
+                    fullName = user.FullName,
+                    userName = user.UserName,
+                    email = user.Email
+                }
             });
         }
 

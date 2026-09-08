@@ -93,7 +93,10 @@ export function HeroSection() {
 
     const [brands, setBrands] = useState([]);
     const [models, setModels] = useState([]);
-
+    const [brandsLoading, setBrandsLoading] = useState(true);
+    const [modelsLoading, setModelsLoading] = useState(false);
+    const [modelCache, setModelCache] = useState({});
+    /*
     useEffect(() => {
 
         async function loadBrands() {
@@ -115,9 +118,27 @@ export function HeroSection() {
         loadBrands();
 
     }, []);
+    */
+    useEffect(() => {
+        async function loadBrands() {
+            try {
+                setBrandsLoading(true);
+
+                const data = await getBrands();
+
+                setBrands(data);
+            } catch (err) {
+                console.error("Failed to load brands:", err);
+            } finally {
+                setBrandsLoading(false);
+            }
+        }
+
+        loadBrands();
+    }, []);
 
   const slide = heroSlides[activeSlide];
-
+  /*
     const handleBrandChange = async (value) => {
 
         setBrand(value);
@@ -140,6 +161,42 @@ export function HeroSection() {
 
         }
 
+    };
+    */
+    const handleBrandChange = async (value) => {
+        setBrand(value);
+        setModel("");
+        setModels([]);
+
+        if (!value) {
+            return;
+        }
+
+        // Check cache first
+        if (modelCache[value]) {
+            setModels(modelCache[value]);
+            return;
+        }
+
+        try {
+            setModelsLoading(true);
+
+            const data = await modelApi.getModels(value);
+
+            // Store models in cache
+            setModelCache(prev => ({
+                ...prev,
+                [value]: data
+            }));
+
+            setModels(data);
+
+        } catch (err) {
+            console.error("Failed to load models:", err);
+            setModels([]);
+        } finally {
+            setModelsLoading(false);
+        }
     };
 
     const canSearch = brand !== "";
@@ -270,7 +327,7 @@ export function HeroSection() {
               {/* Form body */}
               <div className="p-5 flex flex-col gap-4 flex-1 justify-center">
                 {/* Brand */}
-                {console.log(models)}
+                {/*{console.log(models)}*/}
                 <SelectField
                   label="Select Brand"
                   value={brand}

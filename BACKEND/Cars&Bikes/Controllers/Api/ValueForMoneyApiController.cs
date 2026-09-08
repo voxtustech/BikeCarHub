@@ -203,6 +203,7 @@ namespace Cars_Bikes.Controllers.Api
         {
             var articles = await _context.ValueForMoney
                 .OrderByDescending(x => x.Date)
+                .Take(5)
                 .Select(x => new
                 {
                     id = x.VFMId,

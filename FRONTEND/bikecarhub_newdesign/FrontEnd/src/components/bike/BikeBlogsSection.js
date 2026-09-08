@@ -1,6 +1,6 @@
 ﻿import { ArrowRight } from "lucide-react";
-
-const API = "http://localhost:5030";
+import { getImageUrl, BACKEND_URL } from "../../config";
+//const API = "http://localhost:5030";
 
 export default function BikeBlogsSection({ blogs = [] }) {
 
@@ -30,11 +30,14 @@ export default function BikeBlogsSection({ blogs = [] }) {
                     >
 
                         <img
-                            src={`${API}${blog.image}`}
+                            src={`${BACKEND_URL}${blog.image}`}
                             className="w-full h-56 object-cover"
                             alt=""
                         />
-
+                        {/*<img src={getImageUrl(image)}*/}
+                        {/*    className="w-full h-56 object-cover"*/}
+                        {/*    alt=""*/}
+                        {/*/>*/}
                         <div className="p-6">
 
                             <h3 className="font-semibold leading-7">

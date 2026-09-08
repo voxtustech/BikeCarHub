@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
-
+import { Calendar } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 import { SectionTitle } from "./SectionTitle";
 import { HScrollCarousel } from "./HScrollCarousel";
 import { getBlogs } from "../api/blogApi";
 import { BACKEND_URL } from "../config";
-import { useNavigate } from "react-router-dom";
 
 export function BlogsSection() {
-
-    const navigate = useNavigate();
 
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+
+    const navigate = useNavigate();
+
 
     useEffect(() => {
 
@@ -23,12 +24,17 @@ export function BlogsSection() {
 
                 const data = await getBlogs();
 
-                setBlogs(data);
+                console.log("HOME BLOGS API RESPONSE:", data);
+
+                setBlogs(Array.isArray(data) ? data : []);
 
             }
             catch (err) {
 
-                console.error(err);
+                console.error(
+                    "HOME BLOGS ERROR:",
+                    err
+                );
 
                 setError("Unable to load blogs.");
 
@@ -45,6 +51,13 @@ export function BlogsSection() {
 
     }, []);
 
+
+    /*
+     * -----------------------------------------
+     * Loading
+     * -----------------------------------------
+     */
+
     if (loading) {
 
         return (
@@ -53,12 +66,14 @@ export function BlogsSection() {
 
                 <div className="max-w-7xl mx-auto px-6">
 
-                    <SectionTitle>Blogs</SectionTitle>
+                    <SectionTitle
+                        onClick={() => navigate("/blogs")}
+                    >
+                        Blogs
+                    </SectionTitle>
 
                     <p className="text-slate-500">
-
                         Loading blogs...
-
                     </p>
 
                 </div>
@@ -68,6 +83,13 @@ export function BlogsSection() {
         );
 
     }
+
+
+    /*
+     * -----------------------------------------
+     * Error
+     * -----------------------------------------
+     */
 
     if (error) {
 
@@ -77,12 +99,14 @@ export function BlogsSection() {
 
                 <div className="max-w-7xl mx-auto px-6">
 
-                    <SectionTitle>Blogs</SectionTitle>
+                    <SectionTitle
+                        onClick={() => navigate("/blogs")}
+                    >
+                        Blogs
+                    </SectionTitle>
 
                     <p className="text-red-500">
-
                         {error}
-
                     </p>
 
                 </div>
@@ -93,161 +117,297 @@ export function BlogsSection() {
 
     }
 
+
     return (
 
-        <section className="py-12 bg-white border-t border-slate-100">
+        <section className="py-10 bg-white border-t border-slate-100">
 
             <div className="max-w-7xl mx-auto px-6">
 
-                <SectionTitle>
-                    <span
-                        onClick={() => navigate("/blogs")}
-                        className="cursor-pointer hover:text-blue-600 transition-colors duration-200"
-                    >
-                        Blogs
-                    </span>
+
+                {/* ========================================= */}
+                {/* SECTION TITLE */}
+                {/* ========================================= */}
+
+                <SectionTitle
+                    onClick={() => navigate("/blogs")}
+                >
+                    Blogs
                 </SectionTitle>
 
-                <HScrollCarousel itemWidth={340}>
+
+                <HScrollCarousel itemWidth={320}>
 
                     {blogs.map((blog) => {
 
-                        const slug = blog.url.split("/").pop();
+
+                        /*
+                         * =========================================
+                         * IMPORTANT:
+                         * Backend slug is:
+                         *
+                         * blogs/mahindra-scorpio-n-facelift
+                         *
+                         * We only need:
+                         *
+                         * mahindra-scorpio-n-facelift
+                         * =========================================
+                         */
+
+                        const rawSlug = blog.slug || blog.url || "";
+
+                        const slug = rawSlug
+                            .replace(/^blogs\//, "")
+                            .replace(/^\/+|\/+$/g, "");
+
+
+                        /*
+                         * =========================================
+                         * IMAGE
+                         * =========================================
+                         */
+
+                        const imageUrl = blog.image
+                            ? (
+                                blog.image.startsWith("http")
+                                    ? blog.image
+                                    : `${BACKEND_URL}${blog.image.startsWith("/") ? "" : "/"}${blog.image}`
+                            )
+                            : "";
+
 
                         return (
 
                             <div
+                                key={blog.id}
+                                onClick={() => {
 
-                                key={blog.blogId}
+                                    console.log(
+                                        "BLOG CARD CLICKED:",
+                                        blog
+                                    );
 
-                                onClick={() => navigate(`/blogs/${slug}`)}
+                                    console.log(
+                                        "BLOG SLUG:",
+                                        slug
+                                    );
 
-                                className="group
-                                w-80
-                                bg-white
-                                rounded-2xl
-                                overflow-hidden
-                                shadow-sm
-                                hover:shadow-xl
-                                transition-all
-                                duration-300
-                                cursor-pointer
-                                border
-                                border-slate-100
-                                hover:-translate-y-2"
+                                    if (!slug) {
 
+                                        console.error(
+                                            "Blog slug is missing:",
+                                            blog
+                                        );
+
+                                        return;
+
+                                    }
+
+                                    navigate(`/blogs/${slug}`);
+
+                                }}
+                                className="
+                                    group
+                                    w-80
+                                    bg-white
+                                    rounded-xl
+                                    overflow-hidden
+                                    shadow-sm
+                                    hover:shadow-xl
+                                    transition-all
+                                    duration-300
+                                    cursor-pointer
+                                    border
+                                    border-slate-100
+                                    hover:-translate-y-1
+                                "
                             >
 
+
+                                {/* ========================================= */}
                                 {/* IMAGE */}
+                                {/* ========================================= */}
 
-                                <div className="relative h-48 overflow-hidden bg-slate-100">
+                                <div className="
+                                    h-44
+                                    overflow-hidden
+                                    bg-slate-100
+                                ">
 
-                                    <img
+                                    {imageUrl ? (
 
-                                        src={`${BACKEND_URL}${blog.imageURL}`}
+                                        <img
+                                            src={imageUrl}
+                                            alt={blog.title || "BikeCarHub Blog"}
+                                            className="
+                                                w-full
+                                                h-full
+                                                object-cover
+                                                group-hover:scale-105
+                                                transition-transform
+                                                duration-500
+                                            "
+                                            onError={(e) => {
 
-                                        alt={blog.blogHeading}
+                                                console.error(
+                                                    "BLOG IMAGE FAILED:",
+                                                    imageUrl
+                                                );
 
-                                        className="w-full
-                                        h-full
-                                        object-cover
-                                        group-hover:scale-110
-                                        transition-transform
-                                        duration-700"
+                                                e.currentTarget.style.display =
+                                                    "none";
 
-                                    />
+                                            }}
+                                        />
 
-                                    <div
-                                        className="absolute inset-0"
-                                        style={{
-                                            background:
-                                                "linear-gradient(to top, rgba(15,23,42,.45), transparent)"
-                                        }}
-                                    />
+                                    ) : (
 
-                                    <span
-                                        className="absolute
-                                        top-4
-                                        left-4
-                                        bg-[#2563EB]
-                                        text-white
-                                        px-3
-                                        py-1
-                                        rounded-full
-                                        text-xs
-                                        font-semibold"
-                                    >
-                                        BLOG
-                                    </span>
+                                        <div className="
+                                            w-full
+                                            h-full
+                                            flex
+                                            items-center
+                                            justify-center
+                                            bg-slate-100
+                                            text-slate-400
+                                            text-sm
+                                        ">
+
+                                            No Image
+
+                                        </div>
+
+                                    )}
 
                                 </div>
 
+
+                                {/* ========================================= */}
                                 {/* CONTENT */}
+                                {/* ========================================= */}
 
-                                <div className="p-5">
+                                <div className="p-4">
 
-                                    <h3
-                                        className="text-slate-900
-                                        font-semibold
-                                        text-[16px]
-                                        leading-7
-                                        line-clamp-2
-                                        mb-3"
+
+                                    {/* TITLE */}
+
+                                    <p
+                                        className="
+                                            text-slate-800
+                                            leading-snug
+                                            mb-2
+                                            line-clamp-2
+                                        "
                                         style={{
-                                            fontFamily: "var(--font-display)"
+                                            fontFamily:
+                                                "var(--font-display)",
+
+                                            fontWeight: 600,
+
+                                            fontSize: "14px"
                                         }}
                                     >
 
-                                        {blog.blogHeading}
-
-                                    </h3>
-
-                                    <p
-                                        className="text-slate-500
-                                        text-sm
-                                        leading-7
-                                        line-clamp-3"
-                                    >
-
-                                        {blog.blogSummary}
+                                        {blog.title}
 
                                     </p>
 
-                                    <div
-                                        className="mt-5
+
+                                    {/* DATE */}
+
+                                    <div className="
                                         flex
                                         items-center
-                                        justify-between"
-                                    >
+                                        gap-1.5
+                                        text-slate-400
+                                        text-xs
+                                        mb-3
+                                    ">
 
-                                        <span
-                                            className="text-xs
-                                            text-slate-400"
-                                        >
+                                        <Calendar size={11} />
 
-                                            {new Date(blog.date).toLocaleDateString(
-                                                "en-IN",
-                                                {
-                                                    day: "numeric",
-                                                    month: "short",
-                                                    year: "numeric",
-                                                }
-                                            )}
+                                        <span>
 
-                                        </span>
-
-                                        <span
-                                            className="text-[#2563EB]
-                                            font-semibold
-                                            group-hover:translate-x-2
-                                            transition-transform"
-                                        >
-
-                                            Read More →
+                                            {blog.date
+                                                ? new Date(
+                                                    blog.date
+                                                ).toLocaleDateString(
+                                                    "en-IN",
+                                                    {
+                                                        day: "numeric",
+                                                        month: "short",
+                                                        year: "numeric"
+                                                    }
+                                                )
+                                                : ""
+                                            }
 
                                         </span>
 
                                     </div>
+
+
+                                    {/* SUMMARY */}
+
+                                    {blog.summary && (
+
+                                        <p className="
+                                            text-sm
+                                            text-slate-500
+                                            line-clamp-2
+                                            mb-4
+                                        ">
+
+                                            {blog.summary}
+
+                                        </p>
+
+                                    )}
+
+
+                                    {/* BUTTON */}
+
+                                    <button
+                                        type="button"
+                                        onClick={(e) => {
+
+                                            /*
+                                             * Prevent the button click
+                                             * from causing any duplicate
+                                             * event.
+                                             */
+
+                                            e.stopPropagation();
+
+                                            console.log(
+                                                "BLOG READ MORE CLICKED:",
+                                                slug
+                                            );
+
+                                            if (slug) {
+
+                                                navigate(
+                                                    `/blogs/${slug}`
+                                                );
+
+                                            }
+
+                                        }}
+                                        className="
+                                            text-xs
+                                            hover:underline
+                                            transition-colors
+                                        "
+                                        style={{
+                                            color: "#0A0A2B",
+                                            fontWeight: 600
+                                        }}
+                                    >
+
+                                        Read More →
+
+                                    </button>
+
 
                                 </div>
 

@@ -1,8 +1,8 @@
 ﻿import { BACKEND_URL } from "../../config";
 
-const article = {
+const IndianFTR1200 = {
 
-    slug: "indianftr1200",
+    slug: "indian-ftr-1200",
 
     title: "Indian FTR 1200 Expected Launch in December 2025 – Price, Specs, Features & Full Details",
 
@@ -694,4 +694,4 @@ const article = {
 
 };
 
-export default article;
+export default IndianFTR1200;

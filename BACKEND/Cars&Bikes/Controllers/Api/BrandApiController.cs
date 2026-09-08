@@ -22,6 +22,7 @@ namespace Cars_Bikes.Controllers.Api
         public async Task<IActionResult> GetBrands()
         {
             var brands = await _context.TwowheelerBrands
+                 .AsNoTracking()
                 .OrderBy(x => x.BrandName)
                 .Select(x => new
                 {
@@ -40,6 +41,7 @@ namespace Cars_Bikes.Controllers.Api
         public async Task<IActionResult> GetBrand(int brandId)
         {
             var brand = await _context.TwowheelerBrands
+                 .AsNoTracking()
                 .Where(x => x.TWBrandId == brandId)
                 .Select(x => new
                 {

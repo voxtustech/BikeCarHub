@@ -77,16 +77,19 @@ export default function BlogArticleLayout({ article }) {
                     </div>
 
                 </div>
-
+                
+                <div className="flex justify-center w-full mb-6 mt-6">
                 <img
 
                     src={article.heroImage}
 
                     alt={article.title}
 
-                    className="w-full max-h-[500px] object-contain rounded-2xl shadow-lg"
+                    
+                        className="max-h-[60vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-md"
 
-                />
+                    />
+                </div>
 
             </section>
 
@@ -133,17 +136,18 @@ export default function BlogArticleLayout({ article }) {
                                 {
 
                                     section.image && (
-
+                                        <div className="flex justify-center w-full mb-8">
                                         <img
 
                                             src={section.image}
 
                                             alt={section.heading}
 
-                                            className="rounded-2xl mb-8 w-full"
-
+                                            //className="rounded-2xl mb-8 w-full"
+                                            className="max-h-[60vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-md"
                                         />
 
+                                        </div>
                                     )
 
                                 }
@@ -424,13 +428,15 @@ export default function BlogArticleLayout({ article }) {
                                 >
 
                                     {section.images.map((image, i) => (
-
+                                        <div className="flex justify-center w-full mb-8">
                                         <img
                                             key={i}
                                             src={image}
                                             alt={`${section.heading || article.title} ${i + 1}`}
-                                            className="w-full h-auto rounded-2xl shadow-md object-cover"
-                                        />
+                                            //className="w-full h-auto rounded-2xl shadow-md object-cover"
+                                            className="max-h-[60vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-md"
+                                            />
+                                        </div>
 
                                     ))}
 

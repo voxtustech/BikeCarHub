@@ -39,16 +39,16 @@ const cards = [
         cta: "Start Comparing",
         page: "/compare",
     },
-    {
-        icon: Bell,
-        title: "Price Alerts",
-        description:
-            "Get instant notifications when your shortlisted vehicle drops in price.",
-        color: "#D97706",
-        bg: "#FFFBEB",
-        cta: "Set Alert",
-        page: "/price-alerts",
-    },
+    //{
+    //    icon: Bell,
+    //    title: "Price Alerts",
+    //    description:
+    //        "Get instant notifications when your shortlisted vehicle drops in price.",
+    //    color: "#D97706",
+    //    bg: "#FFFBEB",
+    //    cta: "Set Alert",
+    //    page: "/price-alerts",
+    //},
     {
         icon: Heart,
         title: "Wishlist",
@@ -59,16 +59,16 @@ const cards = [
         cta: "My Wishlist",
         page: "/wishlist",
     },
-    {
-        icon: Rocket,
-        title: "Launch Tracker",
-        description:
-            "Track upcoming vehicles and get notified on launch day with pricing and specs.",
-        color: "#0891B2",
-        bg: "#ECFEFF",
-        cta: "Track Launches",
-        page: "/launch-tracker",
-    },
+    //{
+    //    icon: Rocket,
+    //    title: "Launch Tracker",
+    //    description:
+    //        "Track upcoming vehicles and get notified on launch day with pricing and specs.",
+    //    color: "#0891B2",
+    //    bg: "#ECFEFF",
+    //    cta: "Track Launches",
+    //    page: "/launch-tracker",
+    //},
 ];
 
 export function EcosystemSection() {
@@ -102,7 +102,7 @@ export function EcosystemSection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
                     {cards.map((card) => {
                         const Icon = card.icon;
 

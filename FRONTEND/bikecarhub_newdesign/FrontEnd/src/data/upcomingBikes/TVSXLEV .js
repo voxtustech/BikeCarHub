@@ -1,7 +1,7 @@
 ﻿import { BACKEND_URL } from "../../config";
 
-const article = {
-    slug: "tvsxlev",
+const TVSXLEV = {
+    slug: "tvs-xl-ev",
 
     title: "TVS XL EV Expected Launch in December 2025 – Price, Specs, Features & Full Details",
 
@@ -667,4 +667,4 @@ const article = {
     ]
 };
 
-export default article;
+export default TVSXLEV;

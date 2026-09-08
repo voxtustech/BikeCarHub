@@ -1,8 +1,8 @@
 ﻿import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { slugify } from "../../utils/slugify";
-
-const API = "https://localhost:7135";
+import { getImageUrl, BACKEND_URL } from "../../config";
+//const API = "https://localhost:7135";
 
 export default function SimilarBikesSection({ bikes = [] }) {
 
@@ -39,10 +39,14 @@ export default function SimilarBikesSection({ bikes = [] }) {
                     >
 
                         <img
-                            src={`${API}${bike.image}`}
+                            src={`${BACKEND_URL}${bike.image}`}
                             className="w-full h-52 object-contain bg-slate-50"
                             alt=""
                         />
+                        {/*<img src={getImageUrl(image)}*/}
+                        {/*    className="w-full h-52 object-contain bg-slate-50"*/}
+                        {/*    alt=""*/}
+                        {/*/>*/}
 
                         <div className="p-5">
 

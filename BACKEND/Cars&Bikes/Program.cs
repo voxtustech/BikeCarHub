@@ -16,7 +16,9 @@ builder.Services.AddCors(options =>
             .WithOrigins(
                 "https://localhost:44473",
                 "http://localhost:3000",
-                "http://localhost:5173"
+                "http://localhost:5173",
+                "https://www.bikecarhub.com",
+                "https://bikecarhub.com"
             )
             .AllowAnyHeader()
             .AllowAnyMethod()

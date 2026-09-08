@@ -1,22 +1,65 @@
 ﻿import { API_BASE } from "../config";
 
+
+// =========================================================
+// GET ALL BLOGS
+// =========================================================
+
 export async function getBlogs() {
-    const response = await fetch(`${API_BASE}/blogs`);
+
+    const response = await fetch(
+        `${API_BASE}/blogs`
+    );
+
 
     if (!response.ok) {
-        throw new Error("Failed to fetch blogs");
+
+        throw new Error(
+            "Failed to load blogs."
+        );
+
     }
 
-    return response.json();
+
+    return await response.json();
 }
+
+
+
+// =========================================================
+// GET BLOG BY SLUG
+// =========================================================
 
 export async function getBlogBySlug(slug) {
 
-    const response = await fetch(`${API_BASE}/blogs/slug/${slug}`);
+    if (!slug) {
 
-    if (!response.ok)
-        throw new Error("Blog not found");
+        throw new Error(
+            "Blog slug is required."
+        );
 
-    return response.json();
+    }
 
+
+    console.log(
+        "Fetching blog:",
+        slug
+    );
+
+
+    const response = await fetch(
+        `${API_BASE}/blogs/${encodeURIComponent(slug)}`
+    );
+
+
+    if (!response.ok) {
+
+        throw new Error(
+            `Failed to load blog article. Status: ${response.status}`
+        );
+
+    }
+
+
+    return await response.json();
 }

@@ -41,8 +41,8 @@ namespace Cars_Bikes.Controllers.Api
         public async Task<IActionResult> GetUpcomingBikes()
         {
             var bikes = await _context.UpcomingBikes
-                .OrderBy(x => x.FilterLaunchDate)
-                .Take(10)
+                .OrderByDescending(x => x.FilterLaunchDate)
+                .Take(5)
                 .Select(x => new
                 {
                     id = x.UpcomingBikeId,
@@ -63,7 +63,7 @@ namespace Cars_Bikes.Controllers.Api
 
             return Ok(bikes);
         }
-
+        
         [HttpGet("{slug}")]
         public async Task<IActionResult> GetUpcomingBike(string slug)
         {
@@ -103,5 +103,42 @@ namespace Cars_Bikes.Controllers.Api
                 details = bike.UpcomingBikeDetails
             });
         }
+        /*
+        [HttpGet("{slug}")]
+        public async Task<IActionResult> GetUpcomingBikeDetails(string slug)
+        {
+            var bike = await _context.UpcomingBikes
+                .Where(x =>
+                    x.UpcomingBikeName
+                        .ToLower()
+                        .Replace(" ", "-")
+                    == slug.ToLower()
+                )
+                .Select(x => new
+                {
+                    id = x.UpcomingBikeId,
+                    title = x.UpcomingBikeName,
+                    slug = x.UpcomingBikeName
+                        .ToLower()
+                        .Replace(" ", "-"),
+                    description = x.UpcomingBikeDetails,
+                    image = x.ImageURL,
+                    imageFolder = x.ImageFolderURL,
+                    date = x.ExpectedLaunchDate,
+                    brand = x.BrandName
+                })
+                .FirstOrDefaultAsync();
+
+            if (bike == null)
+            {
+                return NotFound(new
+                {
+                    message = "Upcoming bike article not found."
+                });
+            }
+
+            return Ok(bike);
+        }
+        */
     }
 }

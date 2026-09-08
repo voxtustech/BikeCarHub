@@ -6,37 +6,26 @@ import { useAuth } from "../context/AuthContext";
 export function RegisterPage() {
 
     const navigate = useNavigate();
-
-    const { login } = useAuth();
+    const { register } = useAuth();
 
     const [loading, setLoading] = useState(false);
 
     const [error, setError] = useState("");
 
     const [form, setForm] = useState({
-
         fullName: "",
-
         userName: "",
-
         email: "",
-
         phoneNumber: "",
-
         password: "",
-
         confirmPassword: ""
-
     });
 
     function change(e) {
 
         setForm({
-
             ...form,
-
             [e.target.name]: e.target.value
-
         });
 
     }
@@ -59,28 +48,25 @@ export function RegisterPage() {
 
             setError("");
 
-            await register(form);
-
-            await login({
-
-                emailOrPhone: form.email,
-
+            await register({
+                fullName: form.fullName,
+                userName: form.userName,
+                email: form.email,
+                phoneNumber: form.phoneNumber,
                 password: form.password,
-
-                rememberMe: false
-
+                confirmPassword: form.confirmPassword
             });
 
             navigate("/");
 
         }
-
         catch (err) {
 
-            setError(err.message);
+            setError(
+                err.message || "Something went wrong."
+            );
 
         }
-
         finally {
 
             setLoading(false);
@@ -117,6 +103,7 @@ export function RegisterPage() {
                         <input
                             name="fullName"
                             placeholder="Full Name"
+                            value={form.fullName}
                             onChange={change}
                             className="w-full border rounded-xl p-3"
                         />
@@ -124,13 +111,16 @@ export function RegisterPage() {
                         <input
                             name="userName"
                             placeholder="Username"
+                            value={form.userName}
                             onChange={change}
                             className="w-full border rounded-xl p-3"
                         />
 
                         <input
+                            type="email"
                             name="email"
                             placeholder="Email"
+                            value={form.email}
                             onChange={change}
                             className="w-full border rounded-xl p-3"
                         />
@@ -138,6 +128,7 @@ export function RegisterPage() {
                         <input
                             name="phoneNumber"
                             placeholder="Phone Number"
+                            value={form.phoneNumber}
                             onChange={change}
                             className="w-full border rounded-xl p-3"
                         />
@@ -146,6 +137,7 @@ export function RegisterPage() {
                             type="password"
                             name="password"
                             placeholder="Password"
+                            value={form.password}
                             onChange={change}
                             className="w-full border rounded-xl p-3"
                         />
@@ -154,13 +146,12 @@ export function RegisterPage() {
                             type="password"
                             name="confirmPassword"
                             placeholder="Confirm Password"
+                            value={form.confirmPassword}
                             onChange={change}
                             className="w-full border rounded-xl p-3"
                         />
 
-                        {
-
-                            error &&
+                        {error && (
 
                             <div className="text-red-600 text-sm">
 
@@ -168,20 +159,17 @@ export function RegisterPage() {
 
                             </div>
 
-                        }
+                        )}
 
                         <button
-                            className="w-full py-3 rounded-xl bg-blue-600 text-white"
+                            type="submit"
+                            disabled={loading}
+                            className="w-full py-3 rounded-xl bg-blue-600 text-white disabled:opacity-50"
                         >
 
-                            {
-
-                                loading
-
-                                    ? "Creating Account..."
-
-                                    : "Register"
-
+                            {loading
+                                ? "Creating Account..."
+                                : "Register"
                             }
 
                         </button>
@@ -210,5 +198,4 @@ export function RegisterPage() {
         </div>
 
     );
-
 }

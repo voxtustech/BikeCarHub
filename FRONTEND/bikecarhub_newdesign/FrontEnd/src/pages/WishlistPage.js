@@ -219,6 +219,19 @@ export default function WishlistPage() {
                                         src={getImageUrl(bike?.twImage)}
                                         alt={bike?.twoWheelerName || "Bike"}
                                         className="wishlist-image"
+                                        onError={(e) => {
+                                            console.error("Wishlist image failed:", {
+                                                bikeId: bike?.twoWheelerID,
+                                                imagePath: bike?.twImage,
+                                                finalUrl: getImageUrl(bike?.twImage)
+                                            });
+                                        }}
+                                        onLoad={() => {
+                                            console.log(
+                                                "Wishlist image loaded:",
+                                                getImageUrl(bike?.twImage)
+                                            );
+                                        }}
                                     />
 
                                 </div>

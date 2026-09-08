@@ -59,3 +59,4 @@ export async function getRelatedLatestNewsArticles(slug) {
     return await response.json();
 
 }
+

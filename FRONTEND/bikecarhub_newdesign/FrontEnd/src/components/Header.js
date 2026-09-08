@@ -227,15 +227,17 @@ export function Header() {
             >
                 <div className="max-w-7xl w-full mx-auto flex items-center gap-4">
                     {/* Logo — generous container, no clipping */}
-                    <div className="flex items-center shrink-0 py-1">
-                        {/*
-                        <ImageWithFallback
-                            src={bchLogo}
-                            alt="BikeCarHub logo"
-                            className="w-auto object-contain"
-                            style={{ height: "clamp(34px, 5vw, 48px)", maxWidth: "200px", display: "block" }}
-                        />
-                        */}
+                    <div
+                        className="flex items-center shrink-0 py-1 cursor-pointer"
+                        onClick={() => navigate("/")}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                                navigate("/");
+                            }
+                        }}
+                    >
                         <img
                             src={bchLogo}
                             alt="BikeCarHub logo"

@@ -6,8 +6,9 @@ import {
     X
 } from "lucide-react";
 
-const API = "http://localhost:5030";
-const DEFAULT_IMAGE = `${API}/images/TwoWheeler/default.webp`;
+import { getImageUrl } from "../../config";
+
+const DEFAULT_IMAGE = "/images/TwoWheeler/default.webp";
 
 export default function BikeImageGallery({ images = [] }) {
 
@@ -32,15 +33,12 @@ export default function BikeImageGallery({ images = [] }) {
     const current = galleryImages[selected];
 
     const getImageSrc = (image) => {
-        if (!image?.imageURL) return DEFAULT_IMAGE;
 
-        // Absolute URL (Google, CDN, etc.)
-        if (image.imageURL.startsWith("http")) {
-            return image.imageURL;
+        if (!image?.imageURL) {
+            return getImageUrl(DEFAULT_IMAGE);
         }
 
-        // Relative path from backend
-        return `${API}${image.imageURL}`;
+        return getImageUrl(image.imageURL);
     };
 
     const next = () =>
@@ -66,7 +64,7 @@ export default function BikeImageGallery({ images = [] }) {
                         decoding="async"
                         onError={(e) => {
                             e.target.onerror = null;
-                            e.target.src = DEFAULT_IMAGE;
+                            e.target.src = getImageUrl(DEFAULT_IMAGE);
                         }}
                         className="w-full h-full object-contain p-6 transition-all duration-300"
                     />
@@ -127,7 +125,7 @@ export default function BikeImageGallery({ images = [] }) {
                                 decoding="async"
                                 onError={(e) => {
                                     e.target.onerror = null;
-                                    e.target.src = DEFAULT_IMAGE;
+                                    e.target.src = getImageUrl(DEFAULT_IMAGE);
                                 }}
                                 className="w-24 h-20 object-cover"
                             />
@@ -167,7 +165,7 @@ export default function BikeImageGallery({ images = [] }) {
                         alt={current?.color || "Bike"}
                         onError={(e) => {
                             e.target.onerror = null;
-                            e.target.src = DEFAULT_IMAGE;
+                            e.target.src = getImageUrl(DEFAULT_IMAGE);
                         }}
                         className="max-h-[90vh] max-w-[90vw] object-contain"
                     />

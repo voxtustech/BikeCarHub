@@ -44,7 +44,7 @@ export default function UserMenu() {
 
         try {
 
-            // Use your actual logout API endpoint here
+            
             const response = await fetch(
                 "https://localhost:7135/api/auth/logout",
                 {

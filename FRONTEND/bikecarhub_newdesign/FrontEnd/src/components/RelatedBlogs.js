@@ -1,8 +1,8 @@
 ﻿import { useNavigate } from "react-router-dom";
 import { SectionTitle } from "./SectionTitle";
 import { HScrollCarousel } from "./HScrollCarousel";
-
-const BACKEND_URL = "https://localhost:5030"; // Change if needed
+import { getImageUrl } from "../config";
+//const BACKEND_URL = "https://localhost:5030"; // Change if needed
 
 export function RelatedBlogs({ blogs }) {
 
@@ -55,19 +55,23 @@ export function RelatedBlogs({ blogs }) {
 
                                 <div className="relative overflow-hidden h-56">
 
-                                    <img
+                                    {/*<img*/}
 
-                                        src={`${BACKEND_URL}${blog.imageURL}`}
+                                    {/*    src={`${BACKEND_URL}${blog.imageURL}`}*/}
 
-                                        alt={blog.blogHeading}
+                                    {/*    alt={blog.blogHeading}*/}
 
-                                        className="w-full
-                                        h-full
-                                        object-cover
-                                        group-hover:scale-110
-                                        transition-transform
-                                        duration-700"
+                                    {/*    className="w-full*/}
+                                    {/*    h-full*/}
+                                    {/*    object-cover*/}
+                                    {/*    group-hover:scale-110*/}
+                                    {/*    transition-transform*/}
+                                    {/*    duration-700"*/}
 
+                                    {/*/>*/}
+                                    <img src={getImageUrl(image)}
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                        alt=""
                                     />
 
                                     <div

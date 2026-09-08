@@ -70,7 +70,7 @@ export default function BikeDetailsPage() {
         loadBike();
 
     }, [brandName, bikeName]);
-
+    /*
     const currentSpec = useMemo(() =>
         bikeData?.specs?.find(
             x => x.variantId === selectedVariant
@@ -147,7 +147,83 @@ export default function BikeDetailsPage() {
         ),
         [bikeData, selectedVariant]
     );
+    */
+    const currentSpec = useMemo(() =>
+        bikeData?.specs?.find(
+            x => Number(x.variantId) === Number(selectedVariant)
+        ),
+        [bikeData, selectedVariant]
+    );
 
+    const currentEngine = useMemo(() =>
+        bikeData?.engine?.find(
+            x => Number(x.variantId) === Number(selectedVariant)
+        ),
+        [bikeData, selectedVariant]
+    );
+
+    const currentFeatures = useMemo(() =>
+        bikeData?.features?.find(
+            x => Number(x.variantId) === Number(selectedVariant)
+        ),
+        [bikeData, selectedVariant]
+    );
+
+    const currentSafety = useMemo(() =>
+        bikeData?.safety?.find(
+            x => Number(x.variantId) === Number(selectedVariant)
+        ),
+        [bikeData, selectedVariant]
+    );
+
+    const currentPerformance = useMemo(() =>
+        bikeData?.performance?.find(
+            x => Number(x.variantId) === Number(selectedVariant)
+        ),
+        [bikeData, selectedVariant]
+    );
+
+    const currentDimensions = useMemo(() =>
+        bikeData?.dimensions?.find(
+            x => Number(x.variantId) === Number(selectedVariant)
+        ),
+        [bikeData, selectedVariant]
+    );
+
+    const currentElectricals = useMemo(() =>
+        bikeData?.electricals?.find(
+            x => Number(x.variantId) === Number(selectedVariant)
+        ),
+        [bikeData, selectedVariant]
+    );
+
+    const currentTyres = useMemo(() =>
+        bikeData?.tyres?.find(
+            x => Number(x.variantId) === Number(selectedVariant)
+        ),
+        [bikeData, selectedVariant]
+    );
+
+    const currentMotorBattery = useMemo(() =>
+        bikeData?.motorBattery?.find(
+            x => Number(x.variantId) === Number(selectedVariant)
+        ),
+        [bikeData, selectedVariant]
+    );
+
+    const currentCharging = useMemo(() =>
+        bikeData?.charging?.find(
+            x => Number(x.variantId) === Number(selectedVariant)
+        ),
+        [bikeData, selectedVariant]
+    );
+
+    const currentUnderpinnings = useMemo(() =>
+        bikeData?.underpinnings?.find(
+            x => Number(x.variantId) === Number(selectedVariant)
+        ),
+        [bikeData, selectedVariant]
+    );
     if (loading)
         return (
             <div className="max-w-7xl mx-auto py-20 text-center">

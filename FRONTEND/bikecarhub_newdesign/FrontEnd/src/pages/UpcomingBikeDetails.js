@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from "react";
+﻿import React from "react";
 import { useParams } from "react-router-dom";
 
 import UpcomingBikeArticleLayout
@@ -10,92 +10,52 @@ import { CompareBikesSection } from "../components/CompareBikesSection";
 import { EcosystemSection } from "../components/EcosystemSection";
 import { AdPlaceholder } from "../components/AdPlaceholder";
 
-import {
-    getUpcomingBikeDetails
-} from "../api/upcomingBikeApi";
+// Import your complete React article
+import TVSXLEV from "../data/upcomingBikes/TVSXLEV ";
+import IndianFTR1200 from "../data/upcomingBikes/IndianFTR1200";
+import TriumphTigerSport800 from "../data/upcomingBikes/TriumphTigerSport800";
+import YamahaYZFR7 from "../data/upcomingBikes/YamahaYZFR7";
+import RoyalEnfieldHimalayan750 from "../data/upcomingBikes/RoyalEnfieldHimalayan750";
+
+// ======================================================
+// FULL UPCOMING BIKE ARTICLES
+// ======================================================
+
+const articles = {
+
+    "tvs-xl-ev": TVSXLEV,
+
+    "triumph-tiger-sport-800": TriumphTigerSport800,
+    "yamaha-yzf-r7": YamahaYZFR7,
+    "royal-enfield-himalayan-750": RoyalEnfieldHimalayan750,
+    "indian-ftr-1200": IndianFTR1200
+
+};
+
 
 export default function UpcomingBikeDetails() {
 
     const { slug } = useParams();
 
-    const [article, setArticle] = useState(null);
-
-    const [loading, setLoading] = useState(true);
-
-    const [error, setError] = useState("");
-
-    useEffect(() => {
-
-        console.log("UPCOMING BIKE DETAILS PAGE");
-
-        console.log("Slug from URL:", slug);
-
-        async function loadArticle() {
-
-            try {
-
-                setLoading(true);
-
-                setError("");
-
-                const data =
-                    await getUpcomingBikeDetails(slug);
-
-                console.log(
-                    "Upcoming bike API response:",
-                    data
-                );
-
-                setArticle(data);
-
-            }
-            catch (err) {
-
-                console.error(
-                    "Upcoming bike loading error:",
-                    err
-                );
-
-                setError(
-                    "Unable to load upcoming bike article."
-                );
-
-            }
-            finally {
-
-                setLoading(false);
-
-            }
-
-        }
-
-        if (slug) {
-            loadArticle();
-        }
-
-    }, [slug]);
+    console.log("=================================");
+    console.log("UPCOMING BIKE DETAILS PAGE");
+    console.log("Slug from URL:", slug);
+    console.log("Available articles:", Object.keys(articles));
+    console.log("=================================");
 
 
-    if (loading) {
-
-        return (
-
-            <div className="max-w-7xl mx-auto px-6 py-20">
-
-                <div className="text-center text-slate-500 text-xl">
-
-                    Loading article...
-
-                </div>
-
-            </div>
-
-        );
-
-    }
+    // Get the complete article from React data
+    const article = articles[slug];
 
 
-    if (error || !article) {
+    console.log("Selected article:", article);
+
+
+    // ======================================================
+    // ARTICLE NOT FOUND
+    // ======================================================
+
+    if (!article) {
 
         return (
 
@@ -111,7 +71,14 @@ export default function UpcomingBikeDetails() {
 
                     <p className="mt-3 text-slate-600">
 
-                        {error}
+                        The Upcoming Bike article you are looking for
+                        does not exist.
+
+                    </p>
+
+                    <p className="mt-3 text-sm text-slate-500">
+
+                        Requested slug: {slug}
 
                     </p>
 
@@ -124,13 +91,22 @@ export default function UpcomingBikeDetails() {
     }
 
 
+    // ======================================================
+    // PAGE
+    // ======================================================
+
     return (
 
         <main className="bg-slate-50 min-h-screen">
 
+            {/* COMPLETE ARTICLE */}
+
             <UpcomingBikeArticleLayout
                 article={article}
             />
+
+
+            {/* ADVERTISEMENT */}
 
             <div className="max-w-7xl mx-auto px-6 py-4">
 
@@ -140,6 +116,9 @@ export default function UpcomingBikeDetails() {
                 />
 
             </div>
+
+
+            {/* OTHER SECTIONS */}
 
             <BlogsSection />
 
@@ -152,4 +131,5 @@ export default function UpcomingBikeDetails() {
         </main>
 
     );
+
 }

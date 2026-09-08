@@ -1,6 +1,6 @@
 ﻿import { Calendar } from "lucide-react";
-
-const API = "https://localhost:7135";
+import { getImageUrl, BACKEND_URL } from "../../config";
+//const API = "https://localhost:7135";
 
 export default function BikeNewsSection({ news = [] }) {
 
@@ -26,10 +26,14 @@ export default function BikeNewsSection({ news = [] }) {
                     >
 
                         <img
-                            src={`${API}${item.image}`}
+                            src={`${BACKEND_URL}${item.image}`}
                             className="w-full h-52 object-cover"
                             alt=""
                         />
+                        {/*<img src={getImageUrl(image)}*/}
+                        {/*    className="w-full h-52 object-cover"*/}
+                        {/*    alt=""*/}
+                        {/*/>*/}
 
                         <div className="p-5">
 

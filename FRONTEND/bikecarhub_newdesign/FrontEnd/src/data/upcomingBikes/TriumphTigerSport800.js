@@ -1,8 +1,8 @@
 ﻿import { BACKEND_URL } from "../../config";
 
-const article = {
+const TriumphTigerSport800 = {
 
-    slug: "triumphtigersport800",
+    slug: "triumph-tiger-sport-800",
 
     title: "Triumph Tiger Sport 800 Expected Launch in December 2025 – Price, Specs, Features & Full Details",
 
@@ -895,4 +895,4 @@ faqs: [
 
 };
 
-export default article;
+export default TriumphTigerSport800;
