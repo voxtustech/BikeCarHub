@@ -9,6 +9,7 @@ import ScorpioNFacelift from "../data/blogs/ScorpioNFacelift";
 import ToyotaHilux2026 from "../data/blogs/ToyotaHilux2026";
 import MarutiSuzukiBrezza2026 from "../data/blogs/MarutiSuzukiBrezza2026"; 
 import BMWF450GS from "../data/blogs/BMWF450GS";
+import KiaSorento from "../data/blogs/KiaSorento";
 // import MGMajestor from "../data/blogs/MGMajestor";
 // import RenaultDuster from "../data/blogs/RenaultDuster";
 // import NissanGravite from "../data/blogs/NissanGravite";
@@ -21,6 +22,7 @@ const articles = {
     [ToyotaHilux2026.slug]: ToyotaHilux2026,
     [ScorpioNFacelift.slug]: ScorpioNFacelift,
     [NissanTekton.slug]: NissanTekton,
+    [KiaSorento.slug]: KiaSorento,
 
     // [MGMajestor.slug]: MGMajestor,
 

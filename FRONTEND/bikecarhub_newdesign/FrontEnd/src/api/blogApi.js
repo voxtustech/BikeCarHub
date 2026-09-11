@@ -24,6 +24,15 @@ export async function getBlogs() {
     return await response.json();
 }
 
+export async function getLatestBlogs() {
+    const response = await fetch(`${API_BASE}/blogs/latest`);
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch latest blogs");
+    }
+
+    return await response.json();
+}
 
 
 // =========================================================

@@ -8,11 +8,11 @@ const KiaSorento = {
     author: "BikeCarHub",
     date: "08 Sep 2026",
     readTime: "18 min read",
-    heroImage: `${BACKEND_URL}/images/blogs/2026/sep/kia-sorento/header.webp`,
+    heroImage: `${BACKEND_URL}/images/blogs/2026/sept/kia sorento/header image.webp`,
     sections: [
         {
             heading: "Introduction: A Global Icon, Reimagined for India",
-            image: `${BACKEND_URL}/images/blogs/2026/sep/kia-sorento/overview.webp`,
+            image: `${BACKEND_URL}/images/blogs/2026/sept/kia sorento/1.webp`,
             paragraphs: [
                 "Kia has built a reputation for bringing genuinely global products to India rather than watered-down versions built just for the price-conscious buyer, and the new Kia Sorento is easily one of the strongest examples of that philosophy yet. Marketed as a \"Global Icon, Reimagined for India,\" the Sorento arrives as a full-size three-row SUV that brings together sophisticated design, hybrid and diesel powertrain choices, confident All-Wheel Drive capability, an advanced ADAS Level 2+ suite, and the kind of AI-powered connected technology that most buyers would associate with cars costing significantly more.",
                 "For readers of BikeCarHub who have been waiting for a proper premium three-row SUV from Kia in India, the Sorento is worth serious consideration. In this article, we're breaking down everything Kia has revealed about the new Sorento — its design language, cabin experience, engine and transmission choices, safety and ADAS technology, connected car features, variants, colours, and where it's priced in the Indian market. Whether you're comparing full-size SUVs for a large family or simply curious about what Kia's flagship SUV brings to the table, this guide aims to give you the complete picture.",
@@ -21,7 +21,7 @@ const KiaSorento = {
         },
         {
             heading: "Exterior Design: Iconic Presence Needs No Introduction",
-            image: `${BACKEND_URL}/images/blogs/2026/sep/kia-sorento/exterior.webp`,
+            image: `${BACKEND_URL}/images/blogs/2026/sept/kia sorento/2.webp`,
             paragraphs: [
                 "Kia's design philosophy for the new Sorento centres on a presence that feels effortless rather than try-hard. From its bold stance and signature lighting to its sculpted silhouette, every exterior detail has clearly been considered, and nothing about the design feels overstated. The face is dominated by Kia's Digital Tiger Face design language, paired with Crystal Cube LED Projection headlamps that feature auto light control, ensuring both a striking visual identity and genuinely useful illumination after dark.",
                 "The signature lighting continues at the rear with Starmap LED tail lamps, a design touch that instantly sets the Sorento apart from other SUVs on Indian roads. An integrated rear spoiler with a hidden wiper adds a clean, uncluttered look to the tailgate, while high-glossy bridge-type roof rails and up to 19-inch (48.2 cm) premium crystal-cut alloy wheels round off a stance that looks planted and substantial without feeling bulky.",
@@ -30,7 +30,7 @@ const KiaSorento = {
         },
         {
             heading: "Interior & Cabin Comfort: Indulgent Comfort Makes the Long Way Tempting",
-            image: `${BACKEND_URL}/images/blogs/2026/sep/kia-sorento/interior.webp`,
+            image: `${BACKEND_URL}/images/blogs/2026/sept/kia sorento/3.webp`,
             paragraphs: [
                 "Step inside the Sorento, and Kia's tagline for the cabin — \"take your time\" — genuinely makes sense. The cabin brings together generous space, premium finishes, and technology that feels right at home, whether you're on a short city commute or a long highway drive. Every detail, from the comfort of the 12-way Ergo Motion driver's seat to the 64-colour ambient lighting that runs across the dashboard, has been designed to make settling in effortless.",
                 "Depending on variant, buyers can choose between a Smoky Black & Grey two-tone interior with leatherette seats (HTE, HTE(O), HTK, HTK(A) and HTK(A) Black Line), or a more premium Black & Olive Brown two-tone interior with embossed leatherette seats on the range-topping HTX and HTX(A) AWD variants. Front Row Relaxation Comfort Seats, available on the top trims, add an extra layer of indulgence for those long highway journeys the Sorento is clearly built for.",
@@ -44,7 +44,7 @@ const KiaSorento = {
         },
         {
             heading: "Technology & Infotainment: Adaptive Intelligence That Makes Itself Useful",
-            image: `${BACKEND_URL}/images/blogs/2026/sep/kia-sorento/technology.webp`,
+            image: `${BACKEND_URL}/images/blogs/2026/sept/kia sorento/3.webp`,
             paragraphs: [
                 "This is an area where the Sorento genuinely punches above its segment. At the centre of the experience is the Kia AI Assistant, a real-time Generative AI feature (intelligence powered by Perplexity, with voice AI powered by SoundHound AI, and CCNC acceleration by NVIDIA) that makes interacting with the car feel far more natural than a typical voice command system — helping occupants find information, get answers, and make the most of their drive through natural conversation.",
                 "The Sorento is built around a Panoramic Curved Display Panel on higher trims, combining a 31.24 cm (12.3-inch) HD touchscreen navigation cockpit with a matching 31.24 cm (12.3-inch) HD digital instrument cluster, and a Head-up Display windshield projection on the range-topping HTX(A) AWD variant. Kia Connect 2.0 brings over 85 connected car features to the table, covering everything from remote engine start to vehicle status checks, all accessible via the Kia Connect app — and it comes with a 3-year free subscription.",
@@ -70,7 +70,7 @@ const KiaSorento = {
         },
         {
             heading: "Engine, Performance & Transmission Options",
-            image: `${BACKEND_URL}/images/blogs/2026/sep/kia-sorento/engine.webp`,
+            image: `${BACKEND_URL}/images/blogs/2026/sept/kia sorento/4.webp`,
             paragraphs: [
                 "The Sorento offers two distinct expressions of performance, giving buyers real choice depending on how they intend to use the SUV. There's more than one way to enjoy the drive here, and sporty paddle shifters on both powertrains let drivers take a more active role whenever they choose to.",
             ],
@@ -102,7 +102,7 @@ const KiaSorento = {
         },
         {
             heading: "Safety: Advanced Safety Thinks Beyond the Obvious",
-            image: `${BACKEND_URL}/images/blogs/2026/sep/kia-sorento/safety.webp`,
+            image: `${BACKEND_URL}/images/blogs/2026/sept/kia sorento/5.webp`,
             paragraphs: [
                 "Kia has built the Sorento to give occupants confidence beyond what they can visually perceive themselves — up to 10 airbags provide comprehensive protection on the top trims, while the 360-degree camera system gives a clearer view of the SUV's surroundings, helping drivers stay aware in moments that demand a little extra attention.",
             ],
@@ -133,7 +133,7 @@ const KiaSorento = {
         },
         {
             heading: "Variants, Trims & Feature Packages",
-            image: `${BACKEND_URL}/images/blogs/2026/sep/kia-sorento/variants.webp`,
+            image: `${BACKEND_URL}/images/blogs/2026/sept/kia sorento/6.webp`,
             paragraphs: [
                 "The Kia Sorento line-up is structured around three core trims — HTE, HTK, and HTX — with several optional packages layered on top, giving buyers a genuinely wide spread of configurations to choose from.",
             ],
@@ -158,8 +158,9 @@ const KiaSorento = {
         },
         {
             heading: "Colour Options",
-            image: `${BACKEND_URL}/images/blogs/2026/sep/kia-sorento/colours.webp`,
-            paragraphs: [
+            image: `${BACKEND_URL}/images/blogs/2026/sept/kia sorento/7.webp`,
+            paragraphs: [],
+            bullets: [
                 "Buyers can choose the Kia Sorento in eight distinctive shades:",
                 "Dark Gun Metal (Matte) – exclusive from the HTX trim onward",
                 "Aurora Black Pearl",
@@ -180,7 +181,7 @@ const KiaSorento = {
         },
         {
             heading: "Warranty & After-Sales Support",
-            image: `${BACKEND_URL}/images/blogs/2026/sep/kia-sorento/warranty.webp`,
+            image: `${BACKEND_URL}/images/blogs/2026/sept/kia sorento/8.webp`,
             paragraphs: [
                 "Kia backs the Sorento with a reassuring ownership package. The vehicle comes with a standard 3-year unlimited-kilometre warranty, extendable up to 5 years (a 3+2 structure), giving buyers real peace of mind over a long ownership period. The high-voltage battery on hybrid variants is separately covered for 8 years or 1,60,000 km. Ownership is further supported by 24x7 Nationwide Roadside Assistance, the My Convenience Plus programme, the Kia Care Network, access to Kia Genuine Spare Parts, Smart Services, and a 360-degree Digital Experience for managing service and support needs.",
             ],
@@ -192,6 +193,7 @@ const KiaSorento = {
                 "As the table suggests, the Sorento's strongest differentiators are its genuine choice between diesel and hybrid powertrains, its class-leading ADAS suite on the top trim, and connected technology like the Kia AI Assistant that few rivals currently offer. Buyers focused purely on outright value or brand familiarity may still want to cross-shop other large SUVs, but those who value technology depth and powertrain flexibility will find the Sorento's proposition hard to match.",
             ],
         },
+        /*
         {
             heading: "Kia Sorento: Full Specifications",
             paragraphs: [
@@ -217,9 +219,11 @@ const KiaSorento = {
             paragraphs: [
             ],
         },
+        */
         {
             heading: "Exterior Highlights",
-            paragraphs: [
+            paragraphs:[],
+            bullets: [
                 "Crystal Cube LED Projection Headlamps with Auto Light Control",
                 "Star Map LED DRLs with Integrated Turn Signals & Star Map LED Tail Lamps",
                 "Kia Digital Tiger Face front design",
@@ -232,7 +236,8 @@ const KiaSorento = {
         },
         {
             heading: "Interior & Comfort",
-            paragraphs: [
+            paragraphs: [],
+            bullets: [
                 "12-way Ergo Motion power driver's seat with lumbar adjust (top trims)",
                 "8-way power passenger seat (higher trims)",
                 "Front Row Relaxation Comfort Seats (HTX AWD onward)",
@@ -245,7 +250,8 @@ const KiaSorento = {
         },
         {
             heading: "Technology & Connectivity",
-            paragraphs: [
+            paragraphs: [],
+            bullets: [
                 "31.24 cm (12.3-inch) HD Touchscreen Navigation Cockpit",
                 "31.24 cm (12.3-inch) HD Digital Instrument Cluster with Head-up Display (top trim)",
                 "Kia AI Assistant with Real-Time Generative AI (HTX AWD onward)",
@@ -257,7 +263,8 @@ const KiaSorento = {
         },
         {
             heading: "Safety & ADAS",
-            paragraphs: [
+            paragraphs: [],
+            bullets: [
                 "Up to 10 Airbags (Front, Side, Curtain, Rear Side, Center & Driver Knee)",
                 "Robust 26 Hi-Safety Package standard across all variants",
                 "360 Degree Camera with Blind View Monitor in Cluster",
@@ -274,7 +281,8 @@ const KiaSorento = {
         },
         {
             heading: "What Works in the Sorento's Favour",
-            paragraphs: [
+            paragraphs: [],
+            bullets: [
                 "Genuine choice between a punchy diesel and an India-tuned hybrid powertrain",
                 "Class-leading ADAS Level 2+ suite with 29 autonomous features on the top trim",
                 "Kia AI Assistant and Kia Connect 2.0 bring genuinely advanced connected technology",
@@ -285,7 +293,8 @@ const KiaSorento = {
         },
         {
             heading: "Where Buyers Should Do Their Homework",
-            paragraphs: [
+            paragraphs: [],
+            bullets: [
                 "Starting price of ₹27,99,000 places it firmly in the premium SUV bracket",
                 "AWD and the full ADAS Level 2+ suite are reserved for the top HTX(A) AWD variant",
                 "Buyers should compare on-road pricing and real-world mileage of diesel vs hybrid before deciding",
@@ -293,7 +302,7 @@ const KiaSorento = {
         },
         {
             heading: "Final Verdict: Is the Kia Sorento Worth Considering?",
-            image: `${BACKEND_URL}/images/blogs/2026/sep/kia-sorento/final-verdict.webp`,
+            image: `${BACKEND_URL}/images/blogs/2026/sept/kia sorento/9.webp`,
             paragraphs: [
                 "The Kia Sorento makes a genuinely strong case for itself as one of the most technologically advanced three-row SUVs available in India today. Its dual powertrain strategy — a strong, torquey diesel alongside an India-tuned hybrid with clever V2L capability — means it can suit very different kinds of buyers under one nameplate, while its ADAS Level 2+ suite and Kia AI Assistant push the segment's technology bar higher than most rivals currently manage. Add to that a genuinely premium cabin, flexible 6/7-seater configurations, and a comprehensive standard safety package, and the Sorento looks like a thoughtfully complete package rather than a car chasing a single headline feature.",
                 "At a starting price of ₹27,99,000 going up to ₹38,49,000 (ex-showroom), the Sorento is clearly positioned as a premium purchase — and for buyers who value technology depth, powertrain choice, and comprehensive safety over outright value pricing, that positioning makes sense. As always, the team at BikeCarHub recommends a test drive across both the diesel and hybrid variants before finalising your decision, so you can experience the difference in character firsthand. We'll continue to update this article as more real-world reviews, ownership feedback, and pricing details on the Kia Sorento become available — so keep checking back on BikeCarHub for the latest.",
@@ -301,6 +310,67 @@ const KiaSorento = {
         },
     ],
     tables: [
+        {
+            title: "Engine and Transmission Specifications",
+            paragraphs: [
+                "A detailed technical specification breakdown comparing the Smartstream D2.2 Diesel and Smartstream 1.6 Turbo GDI Hybrid engines."
+            ],
+
+            headers: [
+                "Specification",
+                "Smartstream D2.2 Diesel",
+                "Smartstream 1.6 Turbo GDI Hybrid"
+            ],
+
+            rows: [
+                ["Fuel System", "MPi", "T-GDi"],
+                ["Displacement", "2,151 cc", "1,598 cc"],
+                ["Max Power", "142 kW @ 3,800 rpm", "132.4 kW (Engine) & 47.7 kW (Motor) @ 5,500 rpm"],
+                ["Max Torque", "442 Nm @ 1,750–2,750 rpm", "265 Nm (Engine) & 264 Nm (Motor) @ 1,500–4,500 rpm"],
+                ["Transmission", "8-Speed DCT", "6-Speed AT"],
+                ["Drive System", "2WD / AWD (select variants)", "2WD / AWD (select variants)"]
+            ]
+        },
+        {
+            title: "Suspension, Brakes & Tyres",
+            paragraphs: [
+                "Key technical details on the suspension setup, braking system, and tire specifications across model variants."
+            ],
+
+            headers: [
+                "Specification",
+                "Detail"
+            ],
+
+            rows: [
+                ["Front Suspension", "McPherson Strut & Stabilizer"],
+                ["Rear Suspension", "Independent Multi-link"],
+                ["Brakes", "Disc – All Wheels"],
+                ["Tyre Size (Vehicle)", "235/55 R19 (HTK–HTX(A)) / 235/60 R18 (HTE & HTE(O))"],
+                ["Spare Tyre", "135/80 D18 (Steel)"]
+            ]
+        },
+        {
+            title: "Dimensions, Fuel & Practicality",
+            paragraphs: [
+                "Key vehicle measurements, seating capacity, fuel tank size, and available boot space parameters."
+            ],
+
+            headers: [
+                "Specification",
+                "Detail"
+            ],
+
+            rows: [
+                ["Overall Length", "4,815 mm"],
+                ["Overall Width", "1,900 mm"],
+                ["Overall Height", "1,785 mm (with bridge-type roof rack)"],
+                ["Wheelbase", "2,815 mm"],
+                ["Fuel Tank Capacity", "67 litres"],
+                ["Seating Capacity", "6 or 7 persons"],
+                ["Boot Space", "813 litres (with 2nd row) / 179 litres (with 3rd row)"]
+            ]
+        },
         {
             title: "Kia Sorento vs Rivals",
             headers: [

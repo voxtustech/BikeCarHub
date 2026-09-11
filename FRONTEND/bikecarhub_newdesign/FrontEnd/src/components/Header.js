@@ -28,6 +28,7 @@ export function Header() {
         "/blogs": "Blogs",
         "/emi-calculator": "EMI Calculator",
         "/login": "Login",
+        "/ask-question": "Ask a Question",
     };
 
     const handleNavigation = (item) => {

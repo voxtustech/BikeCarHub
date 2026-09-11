@@ -25,8 +25,8 @@ namespace Cars_Bikes.Controllers.Api
         public async Task<IActionResult> GetBlogs()
         {
             var blogs = await _context.Blogs
+                .AsNoTracking()
                 .OrderByDescending(x => x.Date)
-                .Take(5)
                 .Select(x => new
                 {
                     id = x.BlogId,
@@ -44,6 +44,31 @@ namespace Cars_Bikes.Controllers.Api
                         ? x.URL.Substring(6)
                         : x.URL,
 
+                    isTwoWheeler = x.IsTwoWheeler
+                })
+                .ToListAsync();
+
+            return Ok(blogs);
+        }
+
+
+        [HttpGet("latest")]
+        public async Task<IActionResult> GetLatestBlogs()
+        {
+            var blogs = await _context.Blogs
+                .AsNoTracking()
+                .OrderByDescending(x => x.Date)
+                .Take(5)
+                .Select(x => new
+                {
+                    id = x.BlogId,
+                    title = x.BlogHeading,
+                    summary = x.BlogSummary,
+                    date = x.Date,
+                    image = x.ImageURL,
+                    slug = x.URL.StartsWith("blogs/")
+                        ? x.URL.Substring(6)
+                        : x.URL,
                     isTwoWheeler = x.IsTwoWheeler
                 })
                 .ToListAsync();

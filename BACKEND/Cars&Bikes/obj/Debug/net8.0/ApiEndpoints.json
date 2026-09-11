@@ -178,6 +178,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BlogApiController",
+    "Method": "GetLatestBlogs",
+    "RelativePath": "api/blogs/latest",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Cars_Bikes.Controllers.Api.BrandApiController",
     "Method": "GetBrands",
     "RelativePath": "api/brands",

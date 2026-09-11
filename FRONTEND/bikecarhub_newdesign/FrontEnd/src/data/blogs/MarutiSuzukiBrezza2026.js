@@ -221,6 +221,7 @@ const MarutiSuzukiBrezza2026 = {
     ],
 
     tables: [
+        
         {
 
             title: "Full Specifications: New Maruti Suzuki Brezza",

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { SectionTitle } from "./SectionTitle";
 import { HScrollCarousel } from "./HScrollCarousel";
-import { getBlogs } from "../api/blogApi";
+import { getLatestBlogs } from "../api/blogApi";
 import { BACKEND_URL } from "../config";
 
 export function BlogsSection() {
@@ -22,7 +22,7 @@ export function BlogsSection() {
 
             try {
 
-                const data = await getBlogs();
+                const data = await getLatestBlogs();
 
                 console.log("HOME BLOGS API RESPONSE:", data);
 
