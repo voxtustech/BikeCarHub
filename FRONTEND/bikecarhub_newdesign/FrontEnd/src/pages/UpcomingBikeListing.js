@@ -234,7 +234,7 @@ export default function UpcomingBikeListing() {
                     height="h-20"
                 />
             </div>
-
+           
             <BlogsSection />
             <LatestNewsSection />
             <CompareBikesSection />

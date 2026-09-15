@@ -72,3 +72,21 @@ export async function getBlogBySlug(slug) {
 
     return await response.json();
 }
+
+export async function getRelatedBlogArticles(slug) {
+
+    const response = await fetch(
+
+        `${API_BASE}/valueformoney/related/${slug}`
+
+    );
+
+    if (!response.ok) {
+
+        throw new Error("Failed to load related articles.");
+
+    }
+
+    return await response.json();
+
+}

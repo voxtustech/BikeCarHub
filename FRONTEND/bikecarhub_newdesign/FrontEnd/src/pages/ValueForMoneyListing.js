@@ -130,7 +130,7 @@ export default function ValueForMoneyListing() {
                 />
 
             </div>
-
+            
             <BlogsSection />
 
             <LatestNewsSection />
@@ -138,7 +138,7 @@ export default function ValueForMoneyListing() {
             <CompareBikesSection />
 
             <EcosystemSection />
-
+            
         </main>
 
     );

@@ -9,7 +9,7 @@ import { LatestNewsSection } from "../components/LatestNewsSection";
 import { CompareBikesSection } from "../components/CompareBikesSection";
 import { EcosystemSection } from "../components/EcosystemSection";
 import { AdPlaceholder } from "../components/AdPlaceholder";
-
+import ArticleRelatedSections from "../components/common/ArticleRelatedSections";
 // Import your complete React article
 import TVSXLEV from "../data/upcomingBikes/TVSXLEV ";
 import IndianFTR1200 from "../data/upcomingBikes/IndianFTR1200";
@@ -119,7 +119,8 @@ export default function UpcomingBikeDetails() {
 
 
             {/* OTHER SECTIONS */}
-
+            <ArticleRelatedSections />
+            {/*
             <BlogsSection />
 
             <LatestNewsSection />
@@ -127,6 +128,7 @@ export default function UpcomingBikeDetails() {
             <CompareBikesSection />
 
             <EcosystemSection />
+            */}
 
         </main>
 

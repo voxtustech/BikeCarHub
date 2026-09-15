@@ -10,15 +10,26 @@ namespace Cars_Bikes.Models
     {
         [Key]
         public int Id { get; set; }
+
         [Required]
-        [Column(TypeName ="varchar(60)")]
+        [Column(TypeName = "varchar(60)")]
         public string Name { get; set; }
-        [Required, NotNull]
+
         [DisplayName("Phone No.")]
-        public string PhoneNo { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        public string? PhoneNo { get; set; }
+
         [Required]
+        [Column(TypeName = "varchar(150)")]
         public string Email { get; set; }
+
+        [Required]
         public string Message { get; set; }
+
+        [Required]
+        [Column(TypeName = "varchar(30)")]
+        public string FormType { get; set; }
+
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }
 }

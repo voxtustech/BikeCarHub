@@ -8,6 +8,7 @@ import { LatestNewsSection } from "../components/LatestNewsSection";
 import { CompareBikesSection } from "../components/CompareBikesSection";
 import { EcosystemSection } from "../components/EcosystemSection";
 import { AdPlaceholder } from "../components/AdPlaceholder";
+import ArticleRelatedSections from "../components/common/ArticleRelatedSections";
 
 import tataPunch from "../data/valueForMoney/tataPunch";
 import AltoK10 from "../data/valueForMoney/AltoK10";
@@ -107,7 +108,8 @@ export default function ValueForMoneyDetails() {
                 />
 
             </div>
-
+            <ArticleRelatedSections />
+            {/* }
             <BlogsSection />
 
             <LatestNewsSection />
@@ -115,7 +117,7 @@ export default function ValueForMoneyDetails() {
             <CompareBikesSection />
 
             <EcosystemSection />
-
+            */}
         </main>
 
     );

@@ -1,5 +1,6 @@
 ﻿import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { submitQuestion } from "../api/contactApi";
 
 export function AskQuestionPage() {
 
@@ -11,63 +12,88 @@ export function AskQuestionPage() {
         message: ""
     });
 
-    const handleChange = (e) => {
+    const [loading, setLoading] = useState(false);
 
+    const handleChange = (e) => {
         setForm({
             ...form,
             [e.target.name]: e.target.value
         });
-
     };
+
 
     const handleSubmit = async (e) => {
 
         e.preventDefault();
 
+        if (loading) return;
+
         try {
 
-            // TODO
-            // await submitQuestion(form);
+            setLoading(true);
 
-            alert("Your question has been submitted.");
+            const result = await submitQuestion({
+                name: form.name,
+                email: form.email,
+                question: form.message
+            });
+
+            alert(
+                result.message ||
+                "Your question has been submitted successfully."
+            );
+
+            setForm({
+                name: "",
+                email: "",
+                message: ""
+            });
 
             navigate("/");
 
+        } catch (error) {
+
+            console.error("Question submission error:", error);
+
+            alert(
+                error.message ||
+                "Unable to submit your question."
+            );
+
+        } finally {
+
+            setLoading(false);
+
         }
-
-        catch {
-
-            alert("Unable to submit your question.");
-
-        }
-
     };
+
 
     return (
 
         <div className="max-w-3xl mx-auto px-6 py-16">
 
             <h1 className="text-4xl font-bold mb-3">
-
                 Ask a Question
-
             </h1>
 
             <p className="text-slate-600 mb-8">
-
                 Have a question about any vehicle?
                 Fill out the form below and our experts will get back to you.
-
             </p>
+
 
             <form
                 onSubmit={handleSubmit}
                 className="bg-white rounded-2xl shadow border p-8 space-y-6"
             >
 
+                {/* Name */}
+
                 <div>
 
-                    <label>Name</label>
+                    <label>
+                        Name
+                    </label>
 
                     <input
                         className="w-full border rounded-xl p-3 mt-2"
@@ -79,9 +105,14 @@ export function AskQuestionPage() {
 
                 </div>
 
+
+                {/* Email */}
+
                 <div>
 
-                    <label>Email</label>
+                    <label>
+                        Email
+                    </label>
 
                     <input
                         className="w-full border rounded-xl p-3 mt-2"
@@ -94,9 +125,14 @@ export function AskQuestionPage() {
 
                 </div>
 
+
+                {/* Question */}
+
                 <div>
 
-                    <label>Question</label>
+                    <label>
+                        Question
+                    </label>
 
                     <textarea
                         rows={6}
@@ -109,18 +145,24 @@ export function AskQuestionPage() {
 
                 </div>
 
+
+                {/* Buttons */}
+
                 <div className="flex gap-4">
 
                     <button
                         type="submit"
-                        className="bg-[#0A0A2B] text-white px-8 py-3 rounded-xl"
+                        disabled={loading}
+                        className="bg-[#0A0A2B] text-white px-8 py-3 rounded-xl disabled:opacity-50"
                     >
-                        Submit
+                        {loading ? "Submitting..." : "Submit"}
                     </button>
+
 
                     <button
                         type="button"
                         onClick={() => navigate("/")}
+                        disabled={loading}
                         className="border px-8 py-3 rounded-xl"
                     >
                         Cancel
@@ -133,5 +175,4 @@ export function AskQuestionPage() {
         </div>
 
     );
-
 }

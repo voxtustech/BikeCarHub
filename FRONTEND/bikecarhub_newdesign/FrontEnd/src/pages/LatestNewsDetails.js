@@ -33,7 +33,7 @@ import UpcomingBikeTable
 
 import UpcomingBikeFAQ
     from "../components/upcomingBikes/UpcomingBikeFAQ";
-
+import ArticleRelatedSections from "../components/common/ArticleRelatedSections";
 
 export default function LatestNewsDetails() {
 
@@ -595,7 +595,7 @@ export default function LatestNewsDetails() {
                 )}
 
             </article>
-
+            <ArticleRelatedSections />
         </main>
 
     );

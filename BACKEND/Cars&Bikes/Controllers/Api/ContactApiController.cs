@@ -1,9 +1,8 @@
-﻿using System.Runtime.InteropServices;
-using Cars_Bikes.Data;
+﻿using Cars_Bikes.Data;
 using Cars_Bikes.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Cars_Bikes.Controllers.Api
+namespace Cars_Bikes.Controllers
 {
     [ApiController]
     [Route("api/contact")]
@@ -16,40 +15,101 @@ namespace Cars_Bikes.Controllers.Api
             _context = context;
         }
 
+        // POST: api/contact
+        // Contact Us form
         [HttpPost]
-        public async Task<IActionResult> SendMessage([FromBody] TWOrFWContactUs model)
+        public async Task<IActionResult> SendContactMessage(
+            [FromBody] ContactRequest request)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(new
                 {
                     success = false,
-                    message = "Please fill all required fields."
+                    message = "Please provide valid information."
                 });
             }
 
-            try
+            var contact = new TWOrFWContactUs
             {
-                model.CreatedDateTime = DateTime.Now;
+                Name = request.Name.Trim(),
+                PhoneNo = request.PhoneNo?.Trim(),
+                Email = request.Email.Trim(),
+                Message = request.Message.Trim(),
+                FormType = "ContactUs",
+                CreatedDateTime = DateTime.Now
+            };
 
-                _context.TWOrFWContactUs.Add(model);
+            _context.TWOrFWContactUs.Add(contact);
 
-                await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
-                return Ok(new
-                {
-                    success = true,
-                    message = "Your message has been sent successfully."
-                });
-            }
-            catch (Exception)
+            return Ok(new
             {
-                return StatusCode(500, new
+                success = true,
+                message = "Your message has been submitted successfully."
+            });
+        }
+
+
+        // POST: api/contact/question
+        // Ask a Question form
+        [HttpPost("question")]
+        public async Task<IActionResult> SubmitQuestion(
+            [FromBody] QuestionRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new
                 {
                     success = false,
-                    message = "Something went wrong. Please try again."
+                    message = "Please provide valid information."
                 });
             }
+
+            var question = new TWOrFWContactUs
+            {
+                Name = request.Name.Trim(),
+                PhoneNo = null,
+                Email = request.Email.Trim(),
+                Message = request.Question.Trim(),
+                FormType = "AskQuestion",
+                CreatedDateTime = DateTime.Now
+            };
+
+            _context.TWOrFWContactUs.Add(question);
+
+            await _context.SaveChangesAsync();
+
+            return Ok(new
+            {
+                success = true,
+                message = "Your question has been submitted successfully."
+            });
         }
+    }
+
+
+    // Contact Us request
+    public class ContactRequest
+    {
+        public string Name { get; set; }
+
+        public string? PhoneNo { get; set; }
+
+        public string Email { get; set; }
+
+        public string Message { get; set; }
+    }
+
+
+    // Ask Question request
+    public class QuestionRequest
+    {
+        public string Name { get; set; }
+
+        public string Email { get; set; }
+
+        public string Question { get; set; }
     }
 }

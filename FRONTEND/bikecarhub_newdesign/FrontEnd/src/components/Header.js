@@ -412,16 +412,22 @@ export function Header() {
                     {/*
         <div className="flex-1" />
 */}
-
+                   
                     {/* Location */}
+                    {/* 
                     <button className="w-9 h-9 rounded-lg border border-white/30 flex items-center justify-center text-white/80 hover:border-white hover:text-white hover:bg-white/10 transition-all shrink-0">
                         <MapPin size={16} />
                     </button>
+                    */}
 
                     {/* Notification */}
+                    {/*
                     <button className="w-9 h-9 rounded-lg border border-white/30 flex items-center justify-center text-white/80 hover:border-white hover:text-white hover:bg-white/10 transition-all shrink-0">
                         <Bell size={16} />
                     </button>
+                    */}
+                    
+
 
                     {/* Login */}
                     {

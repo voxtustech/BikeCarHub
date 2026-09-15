@@ -57,7 +57,6 @@
     <Folder Include="FrontEnd\src\data\valueForMoney\" />
     <Folder Include="FrontEnd\src\components\upcomingBikes\" />
     <Folder Include="FrontEnd\src\components\latestNews\" />
-    <Folder Include="FrontEnd\src\components\blogs\" />
     <Folder Include="FrontEnd\src\utils\" />
     <Folder Include="FrontEnd\src\context\" />
     <Folder Include="FrontEnd\src\components\about\" />

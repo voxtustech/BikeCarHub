@@ -217,7 +217,12 @@ export function Footer() {
 
               <p className="text-slate-300">
                 <span className="font-bold text-white">Email:</span>{" "}
-                info@voxtus.com
+                              <a
+                                  href="mailto:info@voxtus.com"
+                                  className="hover:underline hover:text-white transition-colors"
+                              >
+                                  info@voxtus.com
+                              </a>
               </p>
             </div>
 

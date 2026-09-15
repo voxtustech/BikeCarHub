@@ -27,7 +27,7 @@ import SimilarBikesSection from "../components/bike/SimilarBikesSection";
 import BikeCompareSection from "../components/bike/BikeCompareSection";
 import BikeNewsSection from "../components/bike/BikeNewsSection";
 import BikeBlogsSection from "../components/bike/BikeBlogsSection";
-
+import ArticleRelatedSections from "../components/common/ArticleRelatedSections";
 export default function BikeDetailsPage() {
 
     const { brandName, bikeName } = useParams();
@@ -419,11 +419,12 @@ export default function BikeDetailsPage() {
                     <BikeNewsSection
                         news={bikeData.news}
                     />
-
+                    {/* 
                     <BikeBlogsSection
                         blogs={bikeData.blogs}
                     />
-
+                    */}
+                    <ArticleRelatedSections />
                 </div>
 
             </div>

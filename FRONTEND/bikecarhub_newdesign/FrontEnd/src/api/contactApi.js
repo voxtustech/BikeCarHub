@@ -1,30 +1,43 @@
 ﻿import { API_BASE } from "../config";
 
 export async function sendContactMessage(data) {
-
     const response = await fetch(`${API_BASE}/contact`, {
         method: "POST",
-        credentials: "include",
         headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-            name: data.name,
-            phoneNo: data.phoneNo,
-            email: data.email,
-            message: data.message,
-        }),
+        credentials: "include",
+        body: JSON.stringify(data)
     });
 
-    const text = await response.text();
-
-    console.log("Status:", response.status);
-    console.log("Response:", text);
-
-    const result = text ? JSON.parse(text) : {};
+    const result = await response.json();
 
     if (!response.ok) {
-        throw new Error(result.message || "Request failed.");
+        throw new Error(
+            result.message || "Unable to submit your message."
+        );
+    }
+
+    return result;
+}
+
+
+export async function submitQuestion(data) {
+    const response = await fetch(`${API_BASE}/contact/question`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+        throw new Error(
+            result.message || "Unable to submit your question."
+        );
     }
 
     return result;

@@ -5,7 +5,7 @@ import {
     Clock,
     ChevronRight
 } from "lucide-react";
-
+import ArticleRelatedSections from "../common/ArticleRelatedSections";
 export default function BlogArticleLayout({ article }) {
     const [openFAQ, setOpenFAQ] = useState(null);
 
@@ -566,6 +566,7 @@ export default function BlogArticleLayout({ article }) {
                 </section>
 
             )}
+            <ArticleRelatedSections />
      )
 
             

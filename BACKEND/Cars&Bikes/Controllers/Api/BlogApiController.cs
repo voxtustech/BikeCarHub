@@ -145,5 +145,30 @@ namespace Cars_Bikes.Controllers.Api
                 isTwoWheeler = blog.IsTwoWheeler
             });
         }
+
+        // ============================================================
+        // GET : api/blogs/related/{slug}
+        // ============================================================
+
+        [HttpGet("related/{slug}")]
+        public async Task<IActionResult> GetRelated(string slug)
+        {
+            var articles = await _context.Blogs
+                .Where(x => x.URL != slug)
+                .OrderByDescending(x => x.Date)
+                .Take(3)
+                .Select(x => new
+                {
+                    id = x.BlogId,
+                    title = x.BlogHeading,
+                    slug = x.URL,
+                    image = x.ImageURL,
+                    date = x.Date,
+                    isTwoWheeler = x.IsTwoWheeler
+                })
+                .ToListAsync();
+
+            return Ok(articles);
+        }
     }
 }

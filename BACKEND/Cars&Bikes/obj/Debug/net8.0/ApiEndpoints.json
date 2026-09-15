@@ -188,6 +188,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Cars_Bikes.Controllers.Api.BlogApiController",
+    "Method": "GetRelated",
+    "RelativePath": "api/blogs/related/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Cars_Bikes.Controllers.Api.BrandApiController",
     "Method": "GetBrands",
     "RelativePath": "api/brands",
@@ -282,16 +298,32 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Cars_Bikes.Controllers.Api.ContactApiController",
-    "Method": "SendMessage",
+    "ContainingType": "Cars_Bikes.Controllers.ContactApiController",
+    "Method": "SendContactMessage",
     "RelativePath": "api/contact",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "Cars_Bikes.Models.TWOrFWContactUs",
+        "Name": "request",
+        "Type": "Cars_Bikes.Controllers.ContactRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cars_Bikes.Controllers.ContactApiController",
+    "Method": "SubmitQuestion",
+    "RelativePath": "api/contact/question",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Cars_Bikes.Controllers.QuestionRequest",
         "IsRequired": true
       }
     ],

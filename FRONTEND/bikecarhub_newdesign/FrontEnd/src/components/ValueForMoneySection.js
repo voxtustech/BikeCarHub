@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Calendar } from "lucide-react";
 import { SectionTitle } from "./SectionTitle";
 import { HScrollCarousel } from "./HScrollCarousel";
 import { BACKEND_URL } from "../config";
@@ -148,14 +149,14 @@ export function ValueForMoneySection() {
                                     }}
                                 >
 
-                                    {article.heading}
+                                    {article.title}
 
                                 </p>
-
+                                {/* 
                                 <div className="flex items-center justify-between mt-4">
 
                                     <span className="text-xs text-slate-400">
-
+                                        <Calendar size={11} />
                                         {new Date(article.date).toLocaleDateString("en-IN", {
                                             day: "numeric",
                                             month: "short",
@@ -164,6 +165,43 @@ export function ValueForMoneySection() {
 
                                     </span>
 
+                                    <span className="text-[#2563EB] text-sm font-semibold">
+
+                                        Read More →
+
+                                    </span>
+
+                                </div>
+                                */}
+                                <div className="
+                                                flex
+                                                items-center
+                                                
+                                                text-slate-400
+                                                text-xs
+                                                mb-3
+                                                justify-between
+                                            ">
+
+                                    
+                                    {/*<Calendar size={11} />*/}
+                                    <span>
+                                       
+                                        {article.date
+                                            ? new Date(
+                                                article.date
+                                            ).toLocaleDateString(
+                                                "en-IN",
+                                                {
+                                                    day: "numeric",
+                                                    month: "short",
+                                                    year: "numeric"
+                                                }
+                                            )
+                                            : ""
+                                        }
+
+                                    </span>
                                     <span className="text-[#2563EB] text-sm font-semibold">
 
                                         Read More →

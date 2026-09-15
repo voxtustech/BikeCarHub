@@ -165,67 +165,7 @@ const TriumphTigerSport800 = {
 
 },
 
-{
 
-    heading: "Expected Suspension Specifications",
-
-        headers: [
-
-            "Component",
-
-            "Specification",
-
-            "Benefit"
-
-        ],
-
-            rows: [
-
-                {
-
-                    columns: [
-
-                        "Front Suspension",
-
-                        "43 mm USD Forks",
-
-                        "High rigidity and precise steering"
-
-                    ]
-
-                },
-
-                {
-
-                    columns: [
-
-                        "Rear Suspension",
-
-                        "Monoshock with Remote Hydraulic Preload Adjustment",
-
-                        "Easy adjustment for luggage and pillion"
-
-                    ]
-
-                },
-
-                {
-
-                    columns: [
-
-                        "Suspension Travel",
-
-                        "150 mm / 150 mm",
-
-                        "Comfort without sacrificing handling"
-
-                    ]
-
-                }
-
-            ]
-
-},
 
 {
 
@@ -291,81 +231,6 @@ const TriumphTigerSport800 = {
 
 },
 
-{
-
-    heading: "Expected Electronic Rider Aids",
-
-        headers: [
-
-            "Feature",
-
-            "Function",
-
-            "Availability"
-
-        ],
-
-            rows: [
-
-                {
-
-                    columns: [
-
-                        "Cornering ABS",
-
-                        "Lean-sensitive braking assistance",
-
-                        "Standard"
-
-                    ]
-
-                },
-
-                {
-
-                    columns: [
-
-                        "Cornering Traction Control",
-
-                        "Lean-sensitive traction management",
-
-                        "Standard"
-
-                    ]
-
-                },
-
-                {
-
-                    columns: [
-
-                        "Riding Modes",
-
-                        "Rain, Road, Sport, Rider",
-
-                        "Standard"
-
-                    ]
-
-                },
-
-                {
-
-                    columns: [
-
-                        "Tyre Pressure Monitoring System",
-
-                        "Real-time tyre pressure display",
-
-                        "Pro Variant"
-
-                    ]
-
-                }
-
-            ]
-
-},
 
 {
 
@@ -403,59 +268,7 @@ const TriumphTigerSport800 = {
 
 },
 
-{
 
-    heading: "Expected Colour Options",
-
-        headers: [
-
-            "Colour",
-
-            "Theme"
-
-        ],
-
-            rows: [
-
-                {
-
-                    columns: [
-
-                        "Jet Black / Graphite",
-
-                        "Classic sporty appearance"
-
-                    ]
-
-                },
-
-                {
-
-                    columns: [
-
-                        "Korosi Red / Black",
-
-                        "Aggressive premium styling"
-
-                    ]
-
-                },
-
-                {
-
-                    columns: [
-
-                        "Silver / Blue",
-
-                        "Touring-inspired metallic finish"
-
-                    ]
-
-                }
-
-            ]
-
-},
 
 {
 
@@ -471,23 +284,42 @@ const TriumphTigerSport800 = {
 
 },
 
+
+
 {
 
-    heading: "Expected Rival Comparison",
+    title: "Conclusion",
 
-        headers: [
+        paragraphs: [
 
-            "Feature",
+            "The Triumph Tiger Sport 800 is shaping up to be one of the most exciting middleweight sport-touring motorcycles expected in late 2025. By combining an all-new 800cc inline-three engine with premium electronics, refined ergonomics and excellent long-distance capability, Triumph appears ready to challenge some of the segment's strongest competitors.",
 
-            "Tiger Sport 800",
+            "If the expected specifications become reality, the Tiger Sport 800 will appeal equally to enthusiastic weekend riders and serious touring enthusiasts looking for a refined, comfortable and technologically advanced motorcycle."
 
-            "Yamaha Tracer 9 GT",
+        ]
 
-            "BMW F 900 XR",
+}
 
-            "Kawasaki Versys 1000"
+    ],
 
-        ],
+    tables: [
+        {
+
+            heading: "Expected Rival Comparison",
+
+            headers: [
+
+                "Feature",
+
+                "Tiger Sport 800",
+
+                "Yamaha Tracer 9 GT",
+
+                "BMW F 900 XR",
+
+                "Kawasaki Versys 1000"
+
+            ],
 
             rows: [
 
@@ -583,25 +415,197 @@ const TriumphTigerSport800 = {
 
             ]
 
-},
+        },
+        {
 
-{
+            heading: "Expected Colour Options",
 
-    title: "Conclusion",
+            headers: [
 
-        paragraphs: [
+                "Colour",
 
-            "The Triumph Tiger Sport 800 is shaping up to be one of the most exciting middleweight sport-touring motorcycles expected in late 2025. By combining an all-new 800cc inline-three engine with premium electronics, refined ergonomics and excellent long-distance capability, Triumph appears ready to challenge some of the segment's strongest competitors.",
+                "Theme"
 
-            "If the expected specifications become reality, the Tiger Sport 800 will appeal equally to enthusiastic weekend riders and serious touring enthusiasts looking for a refined, comfortable and technologically advanced motorcycle."
+            ],
 
-        ]
+            rows: [
 
-}
+                {
 
-    ],
+                    columns: [
 
-    tables: [
+                        "Jet Black / Graphite",
+
+                        "Classic sporty appearance"
+
+                    ]
+
+                },
+
+                {
+
+                    columns: [
+
+                        "Korosi Red / Black",
+
+                        "Aggressive premium styling"
+
+                    ]
+
+                },
+
+                {
+
+                    columns: [
+
+                        "Silver / Blue",
+
+                        "Touring-inspired metallic finish"
+
+                    ]
+
+                }
+
+            ]
+
+        },
+
+        {
+
+            heading: "Expected Electronic Rider Aids",
+
+            headers: [
+
+                "Feature",
+
+                "Function",
+
+                "Availability"
+
+            ],
+
+            rows: [
+
+                {
+
+                    columns: [
+
+                        "Cornering ABS",
+
+                        "Lean-sensitive braking assistance",
+
+                        "Standard"
+
+                    ]
+
+                },
+
+                {
+
+                    columns: [
+
+                        "Cornering Traction Control",
+
+                        "Lean-sensitive traction management",
+
+                        "Standard"
+
+                    ]
+
+                },
+
+                {
+
+                    columns: [
+
+                        "Riding Modes",
+
+                        "Rain, Road, Sport, Rider",
+
+                        "Standard"
+
+                    ]
+
+                },
+
+                {
+
+                    columns: [
+
+                        "Tyre Pressure Monitoring System",
+
+                        "Real-time tyre pressure display",
+
+                        "Pro Variant"
+
+                    ]
+
+                }
+
+            ]
+
+        },
+        {
+
+            heading: "Expected Suspension Specifications",
+
+            headers: [
+
+                "Component",
+
+                "Specification",
+
+                "Benefit"
+
+            ],
+
+            rows: [
+
+                {
+
+                    columns: [
+
+                        "Front Suspension",
+
+                        "43 mm USD Forks",
+
+                        "High rigidity and precise steering"
+
+                    ]
+
+                },
+
+                {
+
+                    columns: [
+
+                        "Rear Suspension",
+
+                        "Monoshock with Remote Hydraulic Preload Adjustment",
+
+                        "Easy adjustment for luggage and pillion"
+
+                    ]
+
+                },
+
+                {
+
+                    columns: [
+
+                        "Suspension Travel",
+
+                        "150 mm / 150 mm",
+
+                        "Comfort without sacrificing handling"
+
+                    ]
+
+                }
+
+            ]
+
+        },
 
         {
             heading: "Expected Engine Specifications",
@@ -680,6 +684,7 @@ const TriumphTigerSport800 = {
                 }
             ]
         },
+
 
         {
             heading: "Expected Electronic Rider Aids",
