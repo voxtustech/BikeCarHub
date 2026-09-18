@@ -1,12 +1,18 @@
 import { Bike } from "lucide-react";
 import { useState } from "react";
-
+import SEO from "../components/SEO/SEO";
 export function ComparePage() {
   const [bike1, setBike1] = useState("");
   const [bike2, setBike2] = useState("");
 
   return (
-    <>
+      <>
+          <SEO
+              title="Compare your two wheeler here"
+              description="Here you can compare your two wheeler and find the best bike for you. Get the detailed comparison with bikecarhub."
+              keywords="bike comparison, two wheeler comparison, comparison between bikes, scooter comparison, electric vehicle comparison, ev comparison, comparison blogs, comparison bikes"
+              canonical="/"
+          />
       {/* Hero Banner */}
       <div
         className="w-full py-2 px-6 flex flex-col items-center justify-center"

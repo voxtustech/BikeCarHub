@@ -112,7 +112,7 @@ const ToyotaHilux2026 = {
               "VX 4x4 AT — the flagship trim, adding the 12.3-inch infotainment display, 8-speaker audio, wireless Android Auto/Apple CarPlay, wireless charger, smart entry with push-button start, TPMS, a Panoramic View Monitor, retractable upper glovebox lid, and exclusive colour options such as Sulphur Metallic and Attitude Black."
                     ],
                        
-                            image: `${BACKEND_URL}/images/blogs/2026/aug/new toyota hilux/12.webp`,
+                            image: `${BACKEND_URL}/images/blogs/2026/aug/new toyota hilux/16.webp`,
         },
 
         {

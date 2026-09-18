@@ -5,20 +5,35 @@ import {
     Bell,
     Heart,
     Rocket,
+    CircleQuestionMark
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const cards = [
+   
+    //{
+    //    icon: Bot,
+    //    title: "MotoAI",
+    //    description:
+    //        "Get AI-powered vehicle recommendations based on your lifestyle, budget, and needs.",
+    //    color: "#0A0A2B",
+    //    bg: "#E8E8F0",
+    //    cta: "Chat with MotoAI",
+    //    page: "/moto-ai",
+    //},
+    
     {
-        icon: Bot,
-        title: "MotoAI",
+        icon: CircleQuestionMark,
+        title: "Ask a Question",
         description:
-            "Get AI-powered vehicle recommendations based on your lifestyle, budget, and needs.",
+            "Have any Questions??",
         color: "#0A0A2B",
         bg: "#E8E8F0",
-        cta: "Chat with MotoAI",
-        page: "/moto-ai",
+        cta: "Submit Here",
+        page: "/ask-question",
     },
+
+
     {
         icon: Calculator,
         title: "EMI Calculator",

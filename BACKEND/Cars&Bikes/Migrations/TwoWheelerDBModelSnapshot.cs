@@ -150,6 +150,49 @@ namespace Cars_Bikes.Migrations
                     b.ToTable("CompareItems");
                 });
 
+            modelBuilder.Entity("Cars_Bikes.Models.HeroSlide", b =>
+                {
+                    b.Property<int>("HeroSlideId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HeroSlideId"));
+
+                    b.Property<string>("Badge")
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<DateTime>("CreatedDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Featured")
+                        .HasColumnType("varchar(200)");
+
+                    b.Property<string>("ImageURL")
+                        .IsRequired()
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Price")
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Subtitle")
+                        .IsRequired()
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("varchar(200)");
+
+                    b.HasKey("HeroSlideId");
+
+                    b.ToTable("HeroSlides");
+                });
+
             modelBuilder.Entity("Cars_Bikes.Models.LoginModel", b =>
                 {
                     b.Property<int>("LoginId")

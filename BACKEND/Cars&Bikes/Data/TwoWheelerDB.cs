@@ -53,7 +53,7 @@ namespace Cars_Bikes.Data
         public DbSet<Wishlist> Wishlist { get; set; }
         public DbSet<Review> Reviews { get; set; }
 
-       
+        public DbSet<HeroSlide> HeroSlides { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

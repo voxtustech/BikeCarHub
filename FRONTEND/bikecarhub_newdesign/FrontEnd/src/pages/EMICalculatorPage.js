@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-
+import SEO from "../components/SEO/SEO";
 function formatINR(n) {
   return n.toLocaleString("en-IN");
 }
@@ -42,7 +42,14 @@ export function EMICalculatorPage() {
     setPrincipalInput(String(v));
   };
 
-  return (
+    return (
+        <main>
+            <SEO
+                title="EMI Calculator:-Choose your EMI options for your Vehicle."
+                description="Explore detailed price breakdowns and the best EMI options for all variants. Calculate and compare EMIs easily to find the perfect plan for your needs."
+                keywords="EMI calculator, EMI options, Price breakdown, Loan calculator, Monthly installments, EMI comparison, Affordable EMI plans, Finance calculator, Vehicle loan calculator, Budget-friendly EMIs "
+                canonical="/"
+            />
     <div className="min-h-screen bg-white" style={{ fontFamily: "var(--font-body)" }}>
       {/* Page header */}
     <div
@@ -324,6 +331,7 @@ export function EMICalculatorPage() {
           cursor: pointer;
         }
       `}</style>
-    </div>
+            </div>
+        </main>
   );
 }

@@ -827,6 +827,9 @@ wwwroot\images\CompareBikes\Suzuki Gixxer vs TVS Apache RTR 160.webp
 wwwroot\images\CompareBikes\TVS Radeon vs Hero Splendor Plus.webp
 wwwroot\images\CompareBikes\yamahavspulsar.webp
 wwwroot\images\favicon.webp
+wwwroot\images\heroslides\image1.avif
+wwwroot\images\heroslides\image2.avif
+wwwroot\images\heroslides\image3.avif
 wwwroot\images\LatestNews\2024\Aug\Bajaj Freedom 125 CNG.webp
 wwwroot\images\LatestNews\2024\Aug\Honda Unveils Affordable Shine 125.webp
 wwwroot\images\LatestNews\2024\Aug\Maserati GranTurismo.webp

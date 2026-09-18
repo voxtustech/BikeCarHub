@@ -7,33 +7,35 @@ import { getBrands } from "../api/brandApi";
 import { getVehicleDetails } from "../api/searchApi";
 import { useNavigate } from "react-router-dom";
 import { slugify } from "../utils/slugify";
+import { getHeroSlides } from "../api/heroApi";
+import { getImageUrl } from "../config";
 
-const heroSlides = [
-  {
-    title: "Drive Your\nDream Vehicle",
-    subtitle: "Discover 50,000+ cars, bikes, and EVs with expert reviews and AI-powered recommendations.",
-    image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1400&h=800&fit=crop&auto=format",
-    badge: "New Launch",
-    featured: "Tata Curvv EV",
-    price: "₹17.49 Lakh onwards",
-  },
-  {
-    title: "India's Fastest\nGrowing EVs",
-    subtitle: "Explore the complete electric vehicle ecosystem — cars, bikes, and scooters for a greener drive.",
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1400&h=800&fit=crop&auto=format",
-    badge: "Electric Era",
-    featured: "MG ZS EV 2024",
-    price: "₹18.98 Lakh onwards",
-  },
-  {
-    title: "Born to\nConquer Roads",
-    subtitle: "From everyday commuters to adventure tourers — find the perfect bike that matches your spirit.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&h=800&fit=crop&auto=format",
-    badge: "Top Rated",
-    featured: "Royal Enfield Himalayan",
-    price: "₹2.69 Lakh onwards",
-  },
-];
+//const heroSlides = [
+//  {
+//    title: "Drive Your\nDream Vehicle",
+//    subtitle: "Discover 50,000+ cars, bikes, and EVs with expert reviews and AI-powered recommendations.",
+//    image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1400&h=800&fit=crop&auto=format",
+//    badge: "New Launch",
+//    featured: "Tata Curvv EV",
+//    price: "₹17.49 Lakh onwards",
+//  },
+//  {
+//    title: "India's Fastest\nGrowing EVs",
+//    subtitle: "Explore the complete electric vehicle ecosystem — cars, bikes, and scooters for a greener drive.",
+//    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1400&h=800&fit=crop&auto=format",
+//    badge: "Electric Era",
+//    featured: "MG ZS EV 2024",
+//    price: "₹18.98 Lakh onwards",
+//  },
+//  {
+//    title: "Born to\nConquer Roads",
+//    subtitle: "From everyday commuters to adventure tourers — find the perfect bike that matches your spirit.",
+//    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&h=800&fit=crop&auto=format",
+//    badge: "Top Rated",
+//    featured: "Royal Enfield Himalayan",
+//    price: "₹2.69 Lakh onwards",
+//  },
+//];
 
 
 const budgetOptions = [
@@ -96,6 +98,8 @@ export function HeroSection() {
     const [brandsLoading, setBrandsLoading] = useState(true);
     const [modelsLoading, setModelsLoading] = useState(false);
     const [modelCache, setModelCache] = useState({});
+    const [heroSlides, setHeroSlides] = useState([]);
+    const [heroLoading, setHeroLoading] = useState(true);
     /*
     useEffect(() => {
 
@@ -120,6 +124,38 @@ export function HeroSection() {
     }, []);
     */
     useEffect(() => {
+        async function loadHeroSlides() {
+            try {
+                setHeroLoading(true);
+
+                const data = await getHeroSlides();
+
+                setHeroSlides(data);
+                setActiveSlide(0);
+            } catch (err) {
+                console.error("Failed to load hero slides:", err);
+                setHeroSlides([]);
+            } finally {
+                setHeroLoading(false);
+            }
+        }
+
+        loadHeroSlides();
+    }, []);
+    useEffect(() => {
+        if (heroSlides.length <= 1) {
+            return;
+        }
+
+        const interval = setInterval(() => {
+            setActiveSlide((current) =>
+                (current + 1) % heroSlides.length
+            );
+        }, 10000);
+
+        return () => clearInterval(interval);
+    }, [heroSlides.length]);
+    useEffect(() => {
         async function loadBrands() {
             try {
                 setBrandsLoading(true);
@@ -137,7 +173,7 @@ export function HeroSection() {
         loadBrands();
     }, []);
 
-  const slide = heroSlides[activeSlide];
+    const slide = heroSlides[activeSlide];
   /*
     const handleBrandChange = async (value) => {
 
@@ -242,6 +278,22 @@ export function HeroSection() {
         }
 
     };
+    if (heroLoading) {
+        return (
+            <section className="relative">
+                <div className="max-w-7xl mx-auto px-4 py-6">
+                    <div
+                        className="rounded-2xl bg-slate-100 animate-pulse"
+                        style={{ minHeight: "480px" }}
+                    />
+                </div>
+            </section>
+        );
+    }
+
+    if (!heroSlides.length) {
+        return null;
+    }
 
   return (
     <section className="relative">
@@ -250,11 +302,16 @@ export function HeroSection() {
 
           {/* Hero main banner */}
           <div className="relative rounded-2xl overflow-hidden" style={{ minHeight: "480px" }}>
-            <img
-              src={slide.image}
-              alt={slide.featured}
-              className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
-            />
+            {/*<img*/}
+            {/*  src={slide.image}*/}
+            {/*  alt={slide.featured}*/}
+            {/*  className="absolute inset-0 w-full h-full object-cover transition-all duration-700"*/}
+                      {/*/>*/}
+                      <img
+                          src={getImageUrl(slide.image)}
+                          alt={slide.featured || slide.title}
+                          className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
+                      />
             <div className="absolute inset-0 bg-gradient-to-r from-[#1F2937]/80 via-[#1F2937]/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1F2937]/60 via-transparent to-transparent" />
 
@@ -264,17 +321,18 @@ export function HeroSection() {
                 <span className="inline-block px-3 py-1 rounded-full text-xs bg-[#0A0A2B] text-white mb-4" style={{ fontWeight: 600 }}>
                   {slide.badge}
                 </span>
-                <h1
-                  className="text-white mb-3 leading-tight"
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontWeight: 800,
-                    fontSize: "clamp(2rem, 4vw, 3rem)",
-                    whiteSpace: "pre-line",
-                  }}
-                >
-                  {slide.title}
-                </h1>
+                              <h1
+                                  className="text-white mb-3 leading-tight"
+                                  style={{
+                                      fontFamily: "var(--font-display)",
+                                      fontWeight: 800,
+                                      fontSize: "clamp(2rem, 4vw, 3rem)",
+                                  }}
+                              >
+                                  {slide.title}
+                              </h1>
+                  
+                
                 <p className="text-slate-300 max-w-sm leading-relaxed" style={{ fontSize: "15px" }}>
                   {slide.subtitle}
                 </p>

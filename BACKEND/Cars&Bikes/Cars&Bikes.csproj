@@ -27,6 +27,7 @@
     <Folder Include="Views\Wishlist\" />
     <Folder Include="Views\Review\" />
     <Folder Include="Views\LatestNews\" />
+    <Folder Include="wwwroot\images\heroslides\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Services\" />

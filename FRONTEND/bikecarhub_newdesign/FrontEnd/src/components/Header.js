@@ -430,219 +430,233 @@ export function Header() {
 
 
                     {/* Login */}
-                    {
+                    {/* Right side: Sign In/Profile + Hamburger */}
+                    <div className="ml-auto flex items-center gap-2 shrink-0">
 
-                        isAuthenticated ?
-
-                            (
-
-                                <div className="relative">
-
-                                    <button
-
-                                        onClick={() =>
-                                            setShowProfileMenu(!showProfileMenu)
-                                        }
-
-                                        className="flex items-center gap-2 px-4 py-2 rounded-lg"
-
-                                        style={{
-                                            background: "rgba(255,255,255,0.18)",
-                                            color: "white"
-                                        }}
-
-                                    >
-
-                                        <User size={15} />
-
-                                        <span className="hidden sm:inline">
-
-                                            {user.fullName}
-
-                                        </span>
-
-                                    </button>
-                                    {/*LOGIN PROFILE MENU OPTION DROPDOWN*/}
-
-                                    {
-                                        showProfileMenu &&
-                                        <div
-                                            className="absolute right-0 mt-2 w-52 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-[9999]"
-                                        >
-
-                                            {/* My Reviews */}
-                                            <button
-                                                className="w-full text-left px-4 py-3 hover:bg-gray-100 text-gray-700 text-sm transition-colors"
-                                                onClick={() => {
-                                                    setShowProfileMenu(false);
-                                                    navigate("/my-reviews");
-                                                }}
-                                            >
-                                                ⭐ My Reviews
-                                            </button>
-
-
-                                            {/* My Wishlist */}
-                                            <button
-                                                className="w-full text-left px-4 py-3 hover:bg-gray-100 text-gray-700 text-sm transition-colors"
-                                                onClick={() => {
-                                                    setShowProfileMenu(false);
-                                                    navigate("/wishlist");
-                                                }}
-                                            >
-                                                ❤️ My Wishlist
-                                            </button>
-
-
-                                            {/* Divider */}
-                                            <div className="border-t border-gray-100" />
-
-
-                                            {/* Logout */}
-                                            <button
-                                                className="w-full text-left px-4 py-3 hover:bg-red-50 text-red-600 text-sm transition-colors"
-                                                onClick={async () => {
-
-                                                    try {
-
-                                                        await logout();
-
-                                                        setShowProfileMenu(false);
-
-                                                        navigate("/");
-
-                                                    } catch (error) {
-
-                                                        console.error(
-                                                            "Logout failed:",
-                                                            error
-                                                        );
-
-                                                    }
-
-                                                }}
-                                            >
-                                                🚪 Logout
-                                            </button>
-
-                                        </div>
-                                    }
-
-                                </div>
-
-                            )
-
-                            :
-
-                            (
+                        {/* Sign In / Profile */}
+                        {isAuthenticated ? (
+                            <div className="relative">
 
                                 <button
-
-                                    onClick={() => navigate("/login")}
-
+                                    onClick={() =>
+                                        setShowProfileMenu(!showProfileMenu)
+                                    }
                                     className="flex items-center gap-2 px-4 py-2 rounded-lg"
-
                                     style={{
                                         background: "rgba(255,255,255,0.18)",
                                         color: "white"
                                     }}
-
                                 >
-
                                     <User size={15} />
 
                                     <span className="hidden sm:inline">
-
-                                        Sign In
-
+                                        {user.fullName}
                                     </span>
-
                                 </button>
 
-                            )
+                                {/* Profile Menu */}
+                                {showProfileMenu && (
+                                    <div
+                                        className="absolute right-0 mt-2 w-52 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-[9999]"
+                                    >
 
-                    }
+                                        {/* My Reviews */}
+                                        <button
+                                            className="w-full text-left px-4 py-3 hover:bg-gray-100 text-gray-700 text-sm transition-colors"
+                                            onClick={() => {
+                                                setShowProfileMenu(false);
+                                                navigate("/my-reviews");
+                                            }}
+                                        >
+                                            ⭐ My Reviews
+                                        </button>
 
-                    {/* Hamburger — mobile only, beside Sign In */}
-                    <button
-                        className="md:hidden w-9 h-9 rounded-lg border border-white/30 flex items-center justify-center text-white/80 hover:border-white hover:text-white hover:bg-white/10 transition-all shrink-0"
-                        onClick={() => setMobileOpen((v) => !v)}
-                        aria-label="Toggle menu"
-                    >
-                        {mobileOpen ? <X size={18} /> : <Menu size={18} />}
-                    </button>
+                                        {/* My Wishlist */}
+                                        <button
+                                            className="w-full text-left px-4 py-3 hover:bg-gray-100 text-gray-700 text-sm transition-colors"
+                                            onClick={() => {
+                                                setShowProfileMenu(false);
+                                                navigate("/wishlist");
+                                            }}
+                                        >
+                                            ❤️ My Wishlist
+                                        </button>
+
+                                        {/* Divider */}
+                                        <div className="border-t border-gray-100" />
+
+                                        {/* Logout */}
+                                        <button
+                                            className="w-full text-left px-4 py-3 hover:bg-red-50 text-red-600 text-sm transition-colors"
+                                            onClick={async () => {
+                                                try {
+                                                    await logout();
+                                                    setShowProfileMenu(false);
+                                                    navigate("/");
+                                                } catch (error) {
+                                                    console.error(
+                                                        "Logout failed:",
+                                                        error
+                                                    );
+                                                }
+                                            }}
+                                        >
+                                            🚪 Logout
+                                        </button>
+
+                                    </div>
+                                )}
+
+                            </div>
+                        ) : (
+                            <button
+                                onClick={() => navigate("/login")}
+                                className="flex items-center gap-2 px-4 py-2 rounded-lg"
+                                style={{
+                                    background: "rgba(255,255,255,0.18)",
+                                    color: "white"
+                                }}
+                            >
+                                <User size={15} />
+
+                                <span className="hidden sm:inline">
+                                    Sign In
+                                </span>
+                            </button>
+                        )}
+
+                        {/* Hamburger — mobile only */}
+                        <button
+                            type="button"
+                            className="lg:hidden w-9 h-9 rounded-lg border border-white/30 flex items-center justify-center text-white/80 hover:border-white hover:text-white hover:bg-white/10 transition-all shrink-0"
+                            onClick={() => setMobileOpen((v) => !v)}
+                            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+                            aria-expanded={mobileOpen}
+                        >
+                            {mobileOpen ? (
+                                <X size={18} />
+                            ) : (
+                                <Menu size={18} />
+                            )}
+                        </button>
+
+                    </div>
+
+                   
+                    
                 </div>
             </div>
 
             {/* Mobile slide-in menu */}
             {mobileOpen && (
-                <div className="md:hidden fixed inset-0 z-[100] flex overflow-hidden">
-                    {/* Left half — blurred transparent overlay, click to close */}
+                <div className="lg:hidden fixed inset-0 z-[9999] flex">
+
+                    {/* Dark transparent overlay */}
                     <div
-                        className="flex-1"
-                        style={{ background: "rgba(10, 10, 43, 0.45)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)" }}
+                        className="absolute inset-0"
+                        style={{
+                            backgroundColor: "rgba(0, 0, 0, 0.50)",
+                            backdropFilter: "blur(4px)",
+                            WebkitBackdropFilter: "blur(4px)"
+                        }}
                         onClick={() => setMobileOpen(false)}
                     />
 
-                    {/* Right half — solid dark panel */}
+                    {/* Right-side navigation panel */}
                     <div
-                        //className="w-[50vw] max-w-[280px] h-full flex flex-col"
-                        className="w-[55vw] h-full flex flex-col relative z-[101]"
+                        className="relative ml-auto h-full flex flex-col"
                         style={{
-                            background: "rgba(10, 10, 43, 0.97)",
-                            borderTopLeftRadius: "32px",
-                            borderBottomLeftRadius: "32px",
+                            width: "80vw",
+                            maxWidth: "320px",
+                            backgroundColor: "#0A0A2B",
+                            color: "#FFFFFF",
+                            boxShadow: "-10px 0 30px rgba(0, 0, 0, 0.35)",
+                            borderTopLeftRadius: "24px",
+                            borderBottomLeftRadius: "24px",
+                            zIndex: 10000
                         }}
                     >
+
                         {/* Close button */}
-                        <div className="flex justify-end px-4 pt-5 pb-4">
+                        <div className="flex justify-end px-5 pt-5 pb-4">
+
                             <button
+                                type="button"
                                 onClick={() => setMobileOpen(false)}
-                                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-all"
+                                className="w-10 h-10 rounded-full flex items-center justify-center transition-all"
+                                style={{
+                                    color: "#FFFFFF",
+                                    backgroundColor: "rgba(255,255,255,0.10)",
+                                    border: "1px solid rgba(255,255,255,0.20)"
+                                }}
                                 aria-label="Close menu"
                             >
-                                <X size={18} />
+                                <X size={20} />
                             </button>
+
                         </div>
 
-                        {/* Nav items — top half of panel, evenly spaced */}
-                        <nav className="flex flex-col px-5" style={{ height: "50%" }}>
-                            {navItems.map((item, i) => (
+                        {/* Navigation items */}
+                        <nav className="flex flex-col px-5">
+
+                            {navItems.map((item) => (
+
                                 <button
                                     key={item}
+                                    type="button"
                                     onClick={() => {
-                                        if (item === "Ask a Question") {
-                                            setMobileOpen(false);
-                                            navigate("/ask-question");
-                                        }
-                                        else
-                                            { handleNavigation(item); setMobileOpen(false); }
+                                        handleNavigation(item);
+                                        setMobileOpen(false);
                                     }}
-                                    className="w-full text-left transition-all duration-200"
+                                    className="w-full text-left py-4 transition-all"
                                     style={{
-                                        flex: 1,
-                                        color: activeItem === item ? "#ffffff" : "rgba(255,255,255,0.65)",
+                                        color: activeItem === item
+                                            ? "#FFFFFF"
+                                            : "rgba(255,255,255,0.75)",
+
+                                        backgroundColor: "#000",
+
+                                        borderBottom:
+                                            "1px solid rgba(255,255,255,0.10)",
+
                                         fontFamily: "var(--font-display)",
-                                        fontWeight: activeItem === item ? 700 : 500,
-                                        fontSize: "14px",
-                                        borderBottom: i < navItems.length - 1 ? "1px solid rgba(255,255,255,0.08)" : "none",
-                                        letterSpacing: "0.01em",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        gap: "8px",
+                                        fontWeight:
+                                            activeItem === item ? 700 : 500,
+                                        fontSize: "16px"
                                     }}
                                 >
-                                    {activeItem === item && (
-                                        <span style={{ width: "3px", height: "16px", background: "#2563EB", borderRadius: "2px", flexShrink: 0 }} />
-                                    )}
-                                    {item}
+
+                                    <div className="flex items-center gap-3">
+
+                                        {/* Active item indicator */}
+                                        {activeItem === item && (
+                                            <span
+                                                style={{
+                                                    width: "4px",
+                                                    height: "20px",
+                                                    backgroundColor: "#2563EB",
+                                                    borderRadius: "2px",
+                                                    flexShrink: 0
+                                                }}
+                                            />
+                                        )}
+
+                                        <span>
+                                            {item}
+                                        </span>
+
+                                    </div>
+
                                 </button>
+
                             ))}
+
                         </nav>
+
                     </div>
+
                 </div>
-            )}
-           
+            )}           
             {/* {askOpen && <AskQuestionModal onClose={() => setAskOpen(false)} />} */}
           
 

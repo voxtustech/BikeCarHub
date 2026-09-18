@@ -4,12 +4,18 @@ import MissionSection from "../components/about/MissionSection";
 import FeaturesSection from "../components/about/FeaturesSection";
 import WhyChooseSection from "../components/about/WhyChooseSection";
 import ContactForm from "../components/contact/ContactForm";
-
+import SEO from "../components/SEO/SEO";
 export default function AboutUsPage() {
 
     return (
 
         <main className="bg-slate-50">
+            <SEO
+                title="Get the details about BikeCarHub"
+                description="If you want to know about the BikeCarHub contact us."
+                keywords="about bikecarhub, about bike,about new bikes,about bike comparison,about bikes prices"
+                canonical="/"
+            />
 
             <Hero />
 

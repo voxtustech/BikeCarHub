@@ -1,7 +1,7 @@
 ﻿import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { submitQuestion } from "../api/contactApi";
-
+import SEO from "../components/SEO/SEO";
 export function AskQuestionPage() {
 
     const navigate = useNavigate();
@@ -69,7 +69,14 @@ export function AskQuestionPage() {
 
 
     return (
-
+                    
+        <main>
+            <SEO
+                title=" "
+                description=" "
+                keywords=" "
+                canonical="/"
+            />
         <div className="max-w-3xl mx-auto px-6 py-16">
 
             <h1 className="text-4xl font-bold mb-3">
@@ -173,6 +180,6 @@ export function AskQuestionPage() {
             </form>
 
         </div>
-
+       </main>
     );
 }

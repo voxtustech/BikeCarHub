@@ -330,6 +330,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Cars_Bikes.Controllers.HeroApiController",
+    "Method": "GetHeroSlides",
+    "RelativePath": "api/hero",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Cars_Bikes.Controllers.Api.NewsApiController",
     "Method": "GetNews",
     "RelativePath": "api/latest-news",

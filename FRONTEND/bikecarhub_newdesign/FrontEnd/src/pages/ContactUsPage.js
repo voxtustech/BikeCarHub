@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { sendContactMessage } from "../api/contactApi";
 import ContactForm from "../components/contact/ContactForm";
-
+import SEO from "../components/SEO/SEO";
 export function ContactUsPage() {
 
     const [formData, setFormData] = useState({
@@ -116,6 +116,12 @@ export function ContactUsPage() {
     return (
 
         <main className="bg-gradient-to-b from-[#F8FAFC] to-[#EEF4F8] min-h-screen">
+            <SEO
+                title="Contact BikeCarHub"
+                description="If you want to know about the  latest bikes and cars  contact BikeCarHub."
+                keywords="Contact bikecarhub, Contact for bike,Contact for  new bikes,Contact for  bike comparison,Contact for bikes prices"
+                canonical="/"
+            />
 
             {/* Hero */}
 

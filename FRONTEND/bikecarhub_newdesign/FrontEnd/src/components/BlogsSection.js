@@ -208,7 +208,9 @@ export function BlogsSection() {
                                 }}
                                 className="
                                     group
-                                    w-80
+                                    w-[calc(100vw-32px)]
+                                    max-w-80
+                                    flex-shrink-0
                                     bg-white
                                     rounded-xl
                                     overflow-hidden

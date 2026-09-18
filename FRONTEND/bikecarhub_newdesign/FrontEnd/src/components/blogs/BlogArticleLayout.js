@@ -16,25 +16,26 @@ export default function BlogArticleLayout({ article }) {
             {/* HERO */}
 
             <section className="max-w-7xl mx-auto px-6 pt-12">
+                <section className="hidden md:block">
+                    <div className="mb-4 text-sm text-slate-500 flex items-center gap-2">
 
-                <div className="mb-4 text-sm text-slate-500 flex items-center gap-2">
+                        <Link
+                            to="/blogs"
+                            className="hover:text-blue-700"
+                        >
+                            Blogs
+                        </Link>
 
-                    <Link
-                        to="/blogs"
-                        className="hover:text-blue-700"
-                    >
-                        Blogs
-                    </Link>
+                        <ChevronRight size={14} />
 
-                    <ChevronRight size={14} />
+                        <span>
 
-                    <span>
+                            {article.title}
 
-                        {article.title}
+                        </span>
 
-                    </span>
-
-                </div>
+                    </div>
+                </section>
 
                 <h1
                     className="text-5xl font-bold leading-tight"
@@ -265,9 +266,9 @@ export default function BlogArticleLayout({ article }) {
 
                                         </h2>
 
-                                        <div className="rounded-2xl overflow-hidden border shadow-md">
+                                        <div className="rounded-2xl border shadow-md overflow-x-auto">
 
-                                            <table className="w-full overflow-hidden rounded-2xl shadow-md">
+                                            <table className="w-full min-w-max rounded-2xl shadow-md">
 
                                                 <thead>
 
@@ -289,7 +290,7 @@ export default function BlogArticleLayout({ article }) {
 
                                                                         key={i}
 
-                                                                        className="border bg-slate-100 p-4"
+                                                                        className="border bg-slate-100 p-4 whitespace-nowrap"
 
                                                                     >
 
