@@ -5,18 +5,68 @@ import {
     Clock,
     ChevronRight
 } from "lucide-react";
+
 import ArticleRelatedSections from "../common/ArticleRelatedSections";
+import SEO from "../SEO/SEO";
+
+/*
+ * Reusable rich-text renderer
+ *
+ * Supported HTML:
+ * <strong>Bold</strong>
+ * <b>Bold</b>
+ * <em>Italic</em>
+ * <i>Italic</i>
+ * <u>Underline</u>
+ * <mark>Highlight</mark>
+ * <span class="highlight">Custom highlight</span>
+ * <span class="text-orange-600">Colored text</span>
+ */
+function RichText({ children, className = "" }) {
+
+    if (children === null || children === undefined) {
+        return null;
+    }
+
+    return (
+        <span
+            className={className}
+            dangerouslySetInnerHTML={{
+                __html: String(children)
+            }}
+        />
+    );
+}
+
+
 export default function BlogArticleLayout({ article }) {
+
     const [openFAQ, setOpenFAQ] = useState(null);
+
+    if (!article) {
+        return null;
+    }
 
     return (
 
         <div className="bg-white">
+            <SEO
+                title={article.title}
+                description={article.description}
+                keywords={article.keywords}
+                canonical={`/blogs/${article.slug || article.url}`}
+            />
 
-            {/* HERO */}
+            {/* =====================================================
+                HERO
+            ===================================================== */}
 
             <section className="max-w-7xl mx-auto px-6 pt-12">
+
+                {/* Breadcrumb */}
+
                 <section className="hidden md:block">
+
                     <div className="mb-4 text-sm text-slate-500 flex items-center gap-2">
 
                         <Link
@@ -29,37 +79,45 @@ export default function BlogArticleLayout({ article }) {
                         <ChevronRight size={14} />
 
                         <span>
-
-                            {article.title}
-
+                            <RichText>
+                                {article.title}
+                            </RichText>
                         </span>
 
                     </div>
+
                 </section>
+
+
+                {/* Blog Title */}
 
                 <h1
                     className="text-5xl font-bold leading-tight"
                 >
-
-                    {article.title}
-
+                    <RichText>
+                        {article.title}
+                    </RichText>
                 </h1>
+
+
+                {/* Blog Description */}
 
                 <p
                     className="text-lg text-slate-600 mt-5 max-w-5xl"
                 >
-
-                    {article.description}
-
+                    <RichText>
+                        {article.description}
+                    </RichText>
                 </p>
+
+
+                {/* Date + Read Time */}
 
                 <div
                     className="flex gap-8 mt-6 text-slate-500"
                 >
 
-                    <div
-                        className="flex items-center gap-2"
-                    >
+                    <div className="flex items-center gap-2">
 
                         <Calendar size={18} />
 
@@ -67,9 +125,8 @@ export default function BlogArticleLayout({ article }) {
 
                     </div>
 
-                    <div
-                        className="flex items-center gap-2"
-                    >
+
+                    <div className="flex items-center gap-2">
 
                         <Clock size={18} />
 
@@ -78,313 +135,222 @@ export default function BlogArticleLayout({ article }) {
                     </div>
 
                 </div>
-                
+
+
+                {/* Hero Image */}
+
                 <div className="flex justify-center w-full mb-6 mt-6">
-                <img
 
-                    src={article.heroImage}
-
-                    alt={article.title}
-
-                    
+                    <img
+                        src={article.heroImage}
+                        alt={article.title}
                         className="max-h-[60vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-md"
-
                     />
+
                 </div>
 
             </section>
 
-            {/* CONTENT */}
 
-            <section
+            {/* =====================================================
+                MAIN CONTENT
+            ===================================================== */}
 
-                className="max-w-6xl mx-auto px-6 py-16"
+            <section className="max-w-6xl mx-auto px-6 py-16">
 
-            >
+                {article.sections?.map((section, index) => (
 
-                {
+                    <div
+                        key={index}
+                        className="mb-16"
+                    >
 
-                    article.sections.map(
+                        {/* Section Heading */}
 
-                        (section, index) => (
+                        {section.heading && (
 
-                            <div
+                            <h2 className="text-3xl font-bold mb-6">
 
-                                key={index}
+                                <RichText>
+                                    {section.heading}
+                                </RichText>
 
-                                className="mb-16"
+                            </h2>
 
-                            >
+                        )}
 
-                                {
 
-                                    section.heading && (
+                        {/* Section Image */}
 
-                                        <h2
+                        {section.image && (
 
-                                            className="text-3xl font-bold mb-6"
+                            <div className="flex justify-center w-full mb-8">
 
-                                        >
-
-                                            {section.heading}
-
-                                        </h2>
-
-                                    )
-
-                                }
-
-                                {
-
-                                    section.image && (
-                                        <div className="flex justify-center w-full mb-8">
-                                        <img
-
-                                            src={section.image}
-
-                                            alt={section.heading}
-
-                                            //className="rounded-2xl mb-8 w-full"
-                                            className="max-h-[60vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-md"
-                                        />
-
-                                        </div>
-                                    )
-
-                                }
-
-                                {
-
-                                    section.paragraphs.map(
-
-                                        (paragraph, i) => (
-
-                                            <p
-
-                                                key={i}
-
-                                                className="text-lg leading-9 text-slate-700 mb-6"
-
-                                            >
-
-                                                {paragraph}
-
-                                            </p>
-
-                                        )
-
-                                    )
-
-                                }
-
-                                {
-
-                                    section.bullets && (
-
-                                        <ul
-
-                                            className="list-disc ml-8 text-xl leading-10 space-y-4"
-
-                                        >
-
-                                            {
-
-                                                section.bullets.map(
-
-                                                    (
-
-                                                        bullet,
-
-                                                        i
-
-                                                    ) => (
-
-                                                        <li
-
-                                                            key={i}
-
-                                                            className="text-lg"
-
-                                                        >
-
-                                                            {bullet}
-
-                                                        </li>
-
-                                                    )
-
-                                                )
-
-                                            }
-
-                                        </ul>
-
-                                    )
-
-                                }
+                                <img
+                                    src={section.image}
+                                    alt={section.heading}
+                                    className="max-h-[60vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-md"
+                                />
 
                             </div>
 
-                        )
+                        )}
 
-                    )
 
-                }
+                        {/* Paragraphs */}
 
-            </section>
-             {/*TABLES */}
+                        {section.paragraphs?.map((paragraph, i) => (
 
-            {
+                            <p
+                                key={i}
+                                className="text-lg leading-9 text-slate-700 mb-6"
+                            >
 
-                article.tables.length > 0 && (
+                                <RichText>
+                                    {paragraph}
+                                </RichText>
 
-                    <section className="max-w-6xl mx-auto px-6">
+                            </p>
 
-                        {
+                        ))}
 
-                            article.tables.map(
 
-                                (
+                        {/* Bullets */}
 
-                                    table,
+                        {section.bullets?.length > 0 && (
 
-                                    index
+                            <ul className="list-disc ml-8 text-xl leading-10 space-y-4">
 
-                                ) => (
+                                {section.bullets.map((bullet, i) => (
 
-                                    <div
-
-                                        key={index}
-
-                                        className="mb-16"
-
+                                    <li
+                                        key={i}
+                                        className="text-lg"
                                     >
 
-                                        <h2 className="text-3xl font-bold mb-6">
+                                        <RichText>
+                                            {bullet}
+                                        </RichText>
 
-                                            {table.title}
+                                    </li>
 
-                                        </h2>
+                                ))}
 
-                                        <div className="rounded-2xl border shadow-md overflow-x-auto">
+                            </ul>
 
-                                            <table className="w-full min-w-max rounded-2xl shadow-md">
+                        )}
 
-                                                <thead>
+                    </div>
 
-                                                    <tr>
+                ))}
 
-                                                        {
-
-                                                            table.headers.map(
-
-                                                                (
-
-                                                                    header,
-
-                                                                    i
-
-                                                                ) => (
-
-                                                                    <th
-
-                                                                        key={i}
-
-                                                                        className="border bg-slate-100 p-4 whitespace-nowrap"
-
-                                                                    >
-
-                                                                        {header}
-
-                                                                    </th>
-
-                                                                )
-
-                                                            )
-
-                                                        }
-
-                                                    </tr>
-
-                                                </thead>
-
-                                                <tbody>
-
-                                                    {
-
-                                                        table.rows.map(
-
-                                                            (
-
-                                                                row,
-
-                                                                r
-
-                                                            ) => (
-
-                                                                <tr key={r}>
-
-                                                                    {
-
-                                                                        row.map(
-
-                                                                            (
-
-                                                                                cell,
-
-                                                                                c
-
-                                                                            ) => (
-
-                                                                                <td
-
-                                                                                    key={c}
-
-                                                                                    className="border p-4"
-
-                                                                                >
-
-                                                                                    {cell}
-
-                                                                                </td>
-
-                                                                            )
-
-                                                                        )
-
-                                                                    }
-
-                                                                </tr>
-
-                                                            )
-
-                                                        )
-
-                                                    }
-
-                                                </tbody>
-
-                                            </table>
-
-                                        </div>
-
-                                    </div>
-
-                                )
-
-                            )
-
-                        }
-
-                    </section>
-
-                )
+            </section>
 
 
-            }
+            {/* =====================================================
+                TABLES
+            ===================================================== */}
 
-            {/* ADDITIONAL SECTIONS AFTER TABLES */}
-            
+            {article.tables?.length > 0 && (
+
+                <section className="max-w-6xl mx-auto px-6">
+
+                    {article.tables.map((table, index) => (
+
+                        <div
+                            key={index}
+                            className="mb-16"
+                        >
+
+                            {/* Table Title */}
+
+                            <h2 className="text-3xl font-bold mb-6">
+
+                                <RichText>
+                                    {table.title}
+                                </RichText>
+
+                            </h2>
+
+
+                            {/* Table */}
+
+                            <div className="rounded-2xl border shadow-md overflow-x-auto">
+
+                                <table className="w-full min-w-max rounded-2xl shadow-md">
+
+                                    {/* Header */}
+
+                                    <thead>
+
+                                        <tr>
+
+                                            {table.headers?.map((header, i) => (
+
+                                                <th
+                                                    key={i}
+                                                    className="border bg-slate-100 p-4 whitespace-nowrap"
+                                                >
+
+                                                    <RichText>
+                                                        {header}
+                                                    </RichText>
+
+                                                </th>
+
+                                            ))}
+
+                                        </tr>
+
+                                    </thead>
+
+
+                                    {/* Body */}
+
+                                    <tbody>
+
+                                        {table.rows?.map((row, r) => (
+
+                                            <tr key={r}>
+
+                                                {row.map((cell, c) => (
+
+                                                    <td
+                                                        key={c}
+                                                        className="border p-4"
+                                                    >
+
+                                                        <RichText>
+                                                            {cell}
+                                                        </RichText>
+
+                                                    </td>
+
+                                                ))}
+
+                                            </tr>
+
+                                        ))}
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    ))}
+
+                </section>
+
+            )}
+
+
+            {/* =====================================================
+                ADDITIONAL SECTIONS AFTER TABLES
+            ===================================================== */}
+
             {article.afterTableSections?.length > 0 && (
 
                 <section className="max-w-6xl mx-auto px-6 py-8">
@@ -402,23 +368,17 @@ export default function BlogArticleLayout({ article }) {
 
                                 <h2 className="text-3xl font-bold mb-6">
 
-                                    {section.heading}
+                                    <RichText>
+                                        {section.heading}
+                                    </RichText>
 
                                 </h2>
 
                             )}
 
-            {/*                */}{/* Section Image */}
 
-                            {/*{section.image && (*/}
+                            {/* Section Images */}
 
-                            {/*    <img*/}
-                            {/*        src={section.image}*/}
-                            {/*        alt={section.heading || article.title}*/}
-                            {/*        className="rounded-2xl mb-8 w-full"*/}
-                            {/*    />*/}
-
-                            {/*)}*/}
                             {section.images?.length > 0 && (
 
                                 <div
@@ -429,14 +389,18 @@ export default function BlogArticleLayout({ article }) {
                                 >
 
                                     {section.images.map((image, i) => (
-                                        <div className="flex justify-center w-full mb-8">
-                                        <img
+
+                                        <div
                                             key={i}
-                                            src={image}
-                                            alt={`${section.heading || article.title} ${i + 1}`}
-                                            //className="w-full h-auto rounded-2xl shadow-md object-cover"
-                                            className="max-h-[60vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-md"
+                                            className="flex justify-center w-full mb-8"
+                                        >
+
+                                            <img
+                                                src={image}
+                                                alt={`${section.heading || article.title} ${i + 1}`}
+                                                className="max-h-[60vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-md"
                                             />
+
                                         </div>
 
                                     ))}
@@ -446,7 +410,7 @@ export default function BlogArticleLayout({ article }) {
                             )}
 
 
-            {/*                */}{/* Paragraphs */}
+                            {/* Paragraphs */}
 
                             {section.paragraphs?.map((paragraph, i) => (
 
@@ -455,13 +419,16 @@ export default function BlogArticleLayout({ article }) {
                                     className="text-lg leading-9 text-slate-700 mb-6"
                                 >
 
-                                    {paragraph}
+                                    <RichText>
+                                        {paragraph}
+                                    </RichText>
 
                                 </p>
 
                             ))}
 
-            {/*                */}{/* Bullets */}
+
+                            {/* Bullets */}
 
                             {section.bullets?.length > 0 && (
 
@@ -470,7 +437,11 @@ export default function BlogArticleLayout({ article }) {
                                     {section.bullets.map((bullet, i) => (
 
                                         <li key={i}>
-                                            {bullet}
+
+                                            <RichText>
+                                                {bullet}
+                                            </RichText>
+
                                         </li>
 
                                     ))}
@@ -487,17 +458,19 @@ export default function BlogArticleLayout({ article }) {
 
             )}
 
-            {/* FAQ */}
+
+            {/* =====================================================
+                FAQ
+            ===================================================== */}
 
             {article.faqs?.length > 0 && (
 
                 <section className="max-w-6xl mx-auto px-6 pb-24">
 
                     <h2 className="text-4xl font-bold mb-10">
-
                         Frequently Asked Questions
-
                     </h2>
+
 
                     <div className="space-y-4">
 
@@ -512,34 +485,39 @@ export default function BlogArticleLayout({ article }) {
                                     className="border border-slate-200 rounded-xl overflow-hidden"
                                 >
 
-                                    <button
+                                    {/* FAQ Question */}
 
+                                    <button
                                         onClick={() =>
                                             setOpenFAQ(
                                                 isOpen ? null : index
                                             )
                                         }
-
                                         className="w-full flex items-center justify-between px-6 py-5 bg-white hover:bg-slate-50 transition"
-
                                     >
 
                                         <span className="text-left font-semibold text-lg">
 
-                                            {faq.question}
+                                            <RichText>
+                                                {faq.question}
+                                            </RichText>
 
                                         </span>
 
+
                                         <span
-                                            className={`text-2xl transition-transform duration-300 ${isOpen ? "rotate-45" : ""
+                                            className={`text-2xl transition-transform duration-300 ${isOpen
+                                                    ? "rotate-45"
+                                                    : ""
                                                 }`}
                                         >
-
                                             +
-
                                         </span>
 
                                     </button>
+
+
+                                    {/* FAQ Answer */}
 
                                     <div
                                         className={`transition-all duration-300 overflow-hidden ${isOpen
@@ -550,7 +528,9 @@ export default function BlogArticleLayout({ article }) {
 
                                         <div className="px-6 pb-6 pt-2 text-slate-700 text-lg leading-8">
 
-                                            {faq.answer}
+                                            <RichText>
+                                                {faq.answer}
+                                            </RichText>
 
                                         </div>
 
@@ -567,10 +547,11 @@ export default function BlogArticleLayout({ article }) {
                 </section>
 
             )}
-            <ArticleRelatedSections />
-     )
 
-            
+
+          
+
+            <ArticleRelatedSections />
 
         </div>
 

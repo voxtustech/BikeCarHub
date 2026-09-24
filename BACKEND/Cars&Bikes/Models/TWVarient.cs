@@ -14,5 +14,10 @@ namespace Cars_Bikes.Models
         [ValidateNever]
         public virtual TwoWheeler TwoWheeler { get; set; }
         public DateTime? CreatedDateTime { get; set; } = DateTime.Now;
+        public string? SEO_Title { get; set; }
+
+        public string? SEO_Description { get; set; }
+
+        public string? SEO_Keywords { get; set; }
     }
 }

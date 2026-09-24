@@ -30,7 +30,10 @@ namespace Cars_Bikes.Controllers.Api
                     name = x.BrandName,
                     logo = x.BrandLogoURL,
                     petrol = x.IsPetrol,
-                    ev = x.IsEV
+                    ev = x.IsEV,
+                    seoTitle = x.TitleTag,
+                    seoDescription = x.MetaDescription,
+                    seoKeywords = x.MetaKeywords
                 })
                 .ToListAsync();
 
@@ -49,7 +52,10 @@ namespace Cars_Bikes.Controllers.Api
                     name = x.BrandName,
                     logo = x.BrandLogoURL,
                     petrol = x.IsPetrol,
-                    ev = x.IsEV
+                    ev = x.IsEV,
+                    seoTitle = x.TitleTag,
+                    seoDescription = x.MetaDescription,
+                    seoKeywords = x.MetaKeywords
                 })
                 .FirstOrDefaultAsync();
 
@@ -82,7 +88,9 @@ namespace Cars_Bikes.Controllers.Api
 
                     brand = x.Brand,
 
-                    brandId = x.TwoWBrandId
+                    brandId = x.TwoWBrandId,
+                    basePrice = x.BasePrice,
+                    topPrice = x.TopPrice
                 })
                 .ToListAsync();
 
@@ -159,7 +167,9 @@ namespace Cars_Bikes.Controllers.Api
 
                     brand = x.Brand,
 
-                    brandId = x.TwoWBrandId
+                    brandId = x.TwoWBrandId,
+                    basePrice = x.BasePrice,
+                    topPrice = x.TopPrice
                 })
                 .ToListAsync();
 

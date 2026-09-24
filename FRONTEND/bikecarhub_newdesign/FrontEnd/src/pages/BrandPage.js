@@ -1,5 +1,5 @@
 ﻿import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 
 import {
     getBrand,
@@ -18,6 +18,7 @@ import { LatestNewsSection } from "../components/LatestNewsSection";
 import { CompareBikesSection } from "../components/CompareBikesSection";
 import { EcosystemSection } from "../components/EcosystemSection";
 import { AdPlaceholder } from "../components/AdPlaceholder";
+import SEO from "../components/SEO/SEO";
 
 export default function BrandPage() {
 
@@ -32,6 +33,68 @@ export default function BrandPage() {
     const [loading, setLoading] = useState(true);
 
     const [error, setError] = useState("");
+
+    const [searchParams] = useSearchParams();
+
+    const budget = searchParams.get("budget");
+
+    const getPriceNumber = (price) => {
+        if (price === null || price === undefined || price === "") {
+            return 0;
+        }
+
+        // If API returns a number
+        if (typeof price === "number") {
+            return price;
+        }
+
+        const value = price
+            .toString()
+            .replace(/₹/g, "")
+            .replace(/Rs\.?/gi, "")
+            .replace(/,/g, "")
+            .trim()
+            .toLowerCase();
+
+        if (value.includes("crore")) {
+            return parseFloat(value.replace("crore", "").trim()) * 10000000;
+        }
+
+        if (value.includes("lakh")) {
+            return parseFloat(value.replace("lakh", "").trim()) * 100000;
+        }
+
+        return parseFloat(value.replace(/[^\d.]/g, "")) || 0;
+    };
+
+    const filteredBikes = bikes.filter((bike) => {
+
+        if (!budget) {
+            return true;
+        }
+
+        const price = getPriceNumber(
+            bike.basePrice ?? bike.BasePrice ?? bike.price ?? bike.Price
+        );
+
+        switch (budget) {
+
+            case "under-1l":
+                return price < 100000;
+
+            case "under-2l":
+                return price < 200000;
+
+            case "under-3l":
+                return price < 300000;
+
+            case "above-3l":
+                return price >= 300000;
+
+            default:
+                return true;
+        }
+    });
 
     useEffect(() => {
 
@@ -126,25 +189,34 @@ export default function BrandPage() {
     return (
 
         <main>
+            <SEO
+                title={brand?.seoTitle || brand?.titleTag || `${brand?.name} Bikes in India`}
+                description={
+                    brand?.seoDescription || brand?.metaDescription ||
+                    `Explore ${brand?.name} bikes in India with prices, specifications, features and reviews.`
+                }
+                keywords={brand?.seoKeywords || brand?.metaKeywords}
+                canonical={`/${brandName}`}
+            />
 
             <div className="max-w-7xl mx-auto px-6 py-10">
 
+                
+
                 <BrandHero
-
                     brand={brand}
-
-                    bikeCount={bikes.length}
-
+                    bikeCount={filteredBikes.length}
                 />
 
                 <div className="grid lg:grid-cols-[60%_40%] gap-8 items-start">
 
                     <div>
-
                         <BrandBikeGrid
-                            bikes={bikes}
+                            bikes={filteredBikes}
                             loading={loading}
                         />
+
+                        
 
                     </div>
 

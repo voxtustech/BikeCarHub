@@ -1742,6 +1742,15 @@ namespace Cars_Bikes.Migrations
                     b.Property<DateTime?>("CreatedDateTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("SEO_Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SEO_Keywords")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SEO_Title")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TWName")
                         .HasColumnType("nvarchar(max)");
 

@@ -602,72 +602,6 @@ wwwroot\images\Blogs\2026\April\Renault Duster\interior.webp
 wwwroot\images\Blogs\2026\April\Renault Duster\side.webp
 wwwroot\images\Blogs\2026\April\Renault Duster\speaker.webp
 wwwroot\images\Blogs\2026\April\Renault Duster\wheel.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\1.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\10.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\11.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\12.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\13.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\14.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\15.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\2.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\3.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\4.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\5.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\6.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\7.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\8.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\9.webp
-wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\Header Image.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\1.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\10.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\11.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\13.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\14.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\15.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\16.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\17.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\2.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\3.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\4.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\5.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\6.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\7.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\8.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\9.webp
-wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\Header.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\1.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\10.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\11.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\12.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\13.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\14.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\15.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\16.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\2.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\3.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\4.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\5.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\6.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\7.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\8.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\9.webp
-wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\header.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\1.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\10.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\11.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\12.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\13.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\14.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\15.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\2.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\3.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\4.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\5.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\6.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\7.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\8.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\9.webp
-wwwroot\images\Blogs\2026\Aug\scorpio n facelift\Header.webp
 wwwroot\images\Blogs\2026\Feb\Nissan Gravite Blog\air.webp
 wwwroot\images\Blogs\2026\Feb\Nissan Gravite Blog\camera.webp
 wwwroot\images\Blogs\2026\Feb\Nissan Gravite Blog\display.webp
@@ -780,30 +714,6 @@ wwwroot\images\Blogs\2026\May\BMW F 450 GS\ride.webp
 wwwroot\images\Blogs\2026\May\BMW F 450 GS\screen.webp
 wwwroot\images\Blogs\2026\May\BMW F 450 GS\side.webp
 wwwroot\images\Blogs\2026\May\BMW F 450 GS\two.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\1.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\10.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\11.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\12.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\13.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\14.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\15.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\16.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\17.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\18.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\19.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\2.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\20.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\21.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\22.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\23.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\3.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\4.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\5.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\6.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\7.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\8.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\9.webp
-wwwroot\images\Blogs\2026\Sept\Kia Sorento\Header Image.webp
 wwwroot\images\Blogs\Your paragraph text (11).png
 wwwroot\images\Blogs\Your paragraph text (12).png
 wwwroot\images\Blogs\Your paragraph text (13).png
@@ -827,9 +737,6 @@ wwwroot\images\CompareBikes\Suzuki Gixxer vs TVS Apache RTR 160.webp
 wwwroot\images\CompareBikes\TVS Radeon vs Hero Splendor Plus.webp
 wwwroot\images\CompareBikes\yamahavspulsar.webp
 wwwroot\images\favicon.webp
-wwwroot\images\heroslides\image1.avif
-wwwroot\images\heroslides\image2.avif
-wwwroot\images\heroslides\image3.avif
 wwwroot\images\LatestNews\2024\Aug\Bajaj Freedom 125 CNG.webp
 wwwroot\images\LatestNews\2024\Aug\Honda Unveils Affordable Shine 125.webp
 wwwroot\images\LatestNews\2024\Aug\Maserati GranTurismo.webp
@@ -3050,3 +2957,96 @@ wwwroot\js\site.js
 wwwroot\robots.txt
 wwwroot\sitemap.xml
 wwwroot\.well-known\pki-validation\C891209143806D4D6EF44BCEB76B3394.txt
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\Header Image.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\9.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\8.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\7.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\6.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\5.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\4.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\3.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\2.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\15.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\14.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\13.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\12.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\11.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\10.webp
+wwwroot\images\Blogs\2026\Aug\MarutiSuzukiBrezza\1.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\1.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\10.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\11.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\13.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\14.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\15.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\16.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\17.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\2.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\3.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\4.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\5.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\6.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\7.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\8.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\9.webp
+wwwroot\images\Blogs\2026\Aug\New Toyota Hilux\Header.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\1.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\10.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\11.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\12.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\13.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\14.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\15.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\16.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\2.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\3.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\4.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\5.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\6.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\7.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\8.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\9.webp
+wwwroot\images\Blogs\2026\Aug\Nissan TEKTON\header.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\Header.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\9.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\8.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\7.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\6.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\5.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\4.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\3.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\2.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\15.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\14.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\13.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\12.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\11.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\10.webp
+wwwroot\images\Blogs\2026\Aug\scorpio n facelift\1.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\1.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\10.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\11.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\12.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\13.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\14.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\15.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\16.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\17.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\18.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\19.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\2.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\20.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\21.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\22.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\23.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\3.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\4.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\5.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\6.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\7.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\8.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\9.webp
+wwwroot\images\Blogs\2026\Sept\Kia Sorento\Header Image.webp
+wwwroot\images\heroslides\image1.avif
+wwwroot\images\heroslides\image2.avif
+wwwroot\images\heroslides\image3.avif

@@ -9,6 +9,41 @@ const NissanTekton = {
     description:
         "Nissan celebrates 75 years of SUV heritage with the all-new TEKTON — a Patrol-inspired mid-size SUV that blends bold design, twin turbo-petrol engines, a premium tri-tone cabin, Google built-in connectivity, and a segment-leading ADAS suite.",
 
+    keywords: [
+
+        "Nissan TEKTON",
+
+        "Nissan TEKTON price",
+
+        "Nissan TEKTON review",
+
+        "Nissan TEKTON specifications",
+
+        "Nissan TEKTON features",
+
+        "Nissan TEKTON variants",
+
+        "Nissan TEKTON mileage",
+
+        "Nissan TEKTON interior",
+
+        "Nissan TEKTON engine",
+
+        "Nissan TEKTON safety rating",
+
+        "Nissan TEKTON colours",
+
+        "Nissan TEKTON on-road price",
+
+        "Nissan SUV 2026",
+
+        "Nissan TEKTON vs competitors",
+
+        "Nissan TEKTON Tekna+",
+
+        "BikeCarHub Nissan TEKTON"
+
+    ],
     category: "Blogs",
 
     author: "BikeCarHub",
@@ -43,9 +78,9 @@ const NissanTekton = {
 
             paragraphs: [
 
-                "The Nissan TEKTON is a premium mid-size SUV that has been engineered to \"disrupt\" the segment, quite literally. Nissan describes it as a vehicle designed to make soul-stirring impressions, and after going through the brochure in detail, it's easy to see why. The design pays homage to the Nissan Patrol — one of the most iconic SUV nameplates in automotive history — while still feeling thoroughly modern with its sculpted body lines, muscular wheel arches, and aero-tuned details.",
+                "The <strong>Nissan TEKTON </strong>is a premium mid-size SUV that has been engineered to \"disrupt\" the segment, quite literally. Nissan describes it as a vehicle designed to make soul-stirring impressions, and after going through the brochure in detail, it's easy to see why. The design pays homage to the Nissan Patrol — one of the most iconic SUV nameplates in automotive history — while still feeling thoroughly modern with its sculpted body lines, muscular wheel arches, and aero-tuned details.",
 
-                "At BikeCarHub, we believe TEKTON is positioned to compete strongly in the crowded mid-size SUV segment, thanks to its combination of powerful turbo-petrol engines, a genuinely premium cabin, and a long list of advanced driver assistance features that were once reserved for much more expensive vehicles."
+                "At <strong>BikeCarHub,</strong> we believe TEKTON is positioned to compete strongly in the crowded mid-size SUV segment, thanks to its combination of powerful turbo-petrol engines, a genuinely premium cabin, and a long list of advanced driver assistance features that were once reserved for much more expensive vehicles."
 
             ]
 
@@ -56,7 +91,7 @@ const NissanTekton = {
 
             paragraphs: [
 
-                "Let's get straight to the number most readers want to know first. The Nissan TEKTON is priced from ₹10.49 lakh to ₹18.59 lakh (ex-showroom), depending on the variant, engine, and transmission you choose. This pricing places TEKTON right in the middle of the competitive mid-size SUV segment, offering buyers a wide spread of choices — from a value-focused base variant to a fully loaded flagship trim packed with luxury and technology.",
+                "Let's get straight to the number most readers want to know first. The Nissan TEKTON  is priced from <strong> ₹10.49 lakh to ₹18.59 lakh (ex-showroom), </strong>depending on the variant, engine, and transmission you choose. This pricing places TEKTON right in the middle of the competitive mid-size SUV segment, offering buyers a wide spread of choices — from a value-focused base variant to a fully loaded flagship trim packed with luxury and technology.",
 
                 "Given the amount of equipment on offer, especially in the higher trims, TEKTON appears to offer strong value for money. We'll break down what each variant brings to the table a little later in this article."
 
@@ -113,7 +148,7 @@ const NissanTekton = {
 
             paragraphs: [
 
-                "Up front, TEKTON gets a full-width, Patrol-inspired chrome accent grille paired with a Double-C contrast skid plate. The signature C-Shaped 5-chamber LED connecting headlamps give the SUV a distinctive lighting signature that's hard to miss, day or night."
+                "Up front, TEKTON gets a full-width, Patrol-inspired chrome accent grille paired with a Double-C contrast skid plate. The <strong>signature C-Shaped 5-chamber LED</strong> connecting headlamps give the SUV a distinctive lighting signature that's hard to miss, day or night."
 
             ]
 
@@ -181,9 +216,9 @@ const NissanTekton = {
 
             bullets: [
 
-                "Active Comfort Seats: Powered, ventilated, and lumbar-adjustable, with an adjustable boomerang-profile headrest for extra support on long drives.",
+                "<strong>Active Comfort Seats:</strong> Powered, ventilated, and lumbar-adjustable, with an adjustable boomerang-profile headrest for extra support on long drives.",
 
-                "Lounge Seating: The rear bench features waterfall-inspired bespoke stitching along with independently adjustable headrests, letting rear passengers travel in comfort."
+                "<strong>Lounge Seating:</strong> The rear bench features waterfall-inspired bespoke stitching along with independently adjustable headrests, letting rear passengers travel in comfort."
 
             ]
 
@@ -248,7 +283,7 @@ const NissanTekton = {
 
             paragraphs: [
 
-                "TEKTON comes with a 25.65cm (10.1-inch) Tek-Link HD infotainment system with Google built-in, allowing owners to simply say \"Hey Google\" to control navigation, music, climate, and more. The system supports up to 5 individual driver profiles, so the car recognises who's behind the wheel and adjusts settings accordingly."
+                "TEKTON comes with a <strong>25.65cm (10.1-inch) </strong>Tek-Link HD infotainment system with Google built-in, allowing owners to simply say \"Hey Google\" to control navigation, music, climate, and more. The system supports up to 5 individual driver profiles, so the car recognises who's behind the wheel and adjusts settings accordingly."
 
             ]
 
@@ -259,7 +294,7 @@ const NissanTekton = {
 
             paragraphs: [
 
-                "A 26.03cm (10.25-inch) HD digital cockpit with immersive Google Map view is available on higher trims, projecting turn-by-turn navigation directly in the driver's line of sight."
+                "A<strong> 26.03cm (10.25-inch) </strong>HD digital cockpit with immersive Google Map view is available on higher trims, projecting turn-by-turn navigation directly in the driver's line of sight."
 
             ]
 
@@ -274,13 +309,13 @@ const NissanTekton = {
 
             bullets: [
 
-                "Google Maps – navigate confidently, even without a smartphone",
+                "<strong>Google Maps</strong> – navigate confidently, even without a smartphone",
 
-                "Google Assistant – voice control for AC, music, navigation, and more",
+                "<strong>Google Assistant </strong>– voice control for AC, music, navigation, and more",
 
-                "Google Play – access to 200+ Android apps for entertainment",
+                "<strong>Google Play </strong>– access to 200+ Android apps for entertainment",
 
-                "OTA Updates – the car keeps getting smarter with automatic software updates"
+                "<strong>OTA Updates </strong>– the car keeps getting smarter with automatic software updates"
 
             ]
 
@@ -339,13 +374,13 @@ const NissanTekton = {
 
             bullets: [
 
-                "Max Power: 100PS @ 5000rpm",
+                "<strong>Max Power:</strong> 100PS @ 5000rpm",
 
-                "Max Torque: 166Nm @ 2000-3750rpm",
+                "<strong>Max Torque: </strong>166Nm @ 2000-3750rpm",
 
-                "0-100 km/h: 12.46 seconds",
+                "<strong>0-100 km/h:</strong> 12.46 seconds",
 
-                "Fuel Efficiency: 19.4 km/l"
+                "<strong>Fuel Efficiency:</strong> 19.4 km/l"
 
             ]
 
@@ -956,49 +991,7 @@ const NissanTekton = {
 
     ],
 
-    seo: {
-
-        titleTag: "Nissan TEKTON Price, Specs & Features | BikeCarHub",
-
-        metaDescription: "Explore Nissan TEKTON price, specs, variants, engine options, safety features & more. Read the complete review on BikeCarHub before you buy.",
-
-        keywords: [
-
-            "Nissan TEKTON",
-
-            "Nissan TEKTON price",
-
-            "Nissan TEKTON review",
-
-            "Nissan TEKTON specifications",
-
-            "Nissan TEKTON features",
-
-            "Nissan TEKTON variants",
-
-            "Nissan TEKTON mileage",
-
-            "Nissan TEKTON interior",
-
-            "Nissan TEKTON engine",
-
-            "Nissan TEKTON safety rating",
-
-            "Nissan TEKTON colours",
-
-            "Nissan TEKTON on-road price",
-
-            "Nissan SUV 2026",
-
-            "Nissan TEKTON vs competitors",
-
-            "Nissan TEKTON Tekna+",
-
-            "BikeCarHub Nissan TEKTON"
-
-        ]
-
-    },
+    
 
     relatedArticles: [
 

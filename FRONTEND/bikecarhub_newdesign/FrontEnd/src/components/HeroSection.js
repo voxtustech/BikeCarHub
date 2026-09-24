@@ -201,7 +201,10 @@ export function HeroSection() {
     */
     const handleBrandChange = async (value) => {
         setBrand(value);
+
+        // Reset both dependent selections
         setModel("");
+        setBudget("");
         setModels([]);
 
         if (!value) {
@@ -230,53 +233,78 @@ export function HeroSection() {
         } catch (err) {
             console.error("Failed to load models:", err);
             setModels([]);
+
         } finally {
             setModelsLoading(false);
         }
     };
 
     const canSearch = brand !== "";
+    const handleModelChange = (value) => {
+        setModel(value);
+
+        // Model and Budget are mutually exclusive
+        if (value) {
+            setBudget("");
+        }
+    };
+    const handleBudgetChange = (value) => {
+        setBudget(value);
+
+        // Model and Budget are mutually exclusive
+        if (value) {
+            setModel("");
+        }
+    };
 
     const handleSearch = async () => {
-
         try {
 
-            // Brand selected but no model selected
-            if (brand && !model) {
-
-                const selectedBrand = brands.find(
-                    b => b.name === brand
-                );
-
-                if (selectedBrand) {
-
-                    navigate(`/${selectedBrand.name.toLowerCase().replace(/\s+/g, "-")}`);
-
-                    return;
-
-                }
-
-            }
-
-            // Brand + Model selected
+            // -------------------------------
+            // 1. BRAND + MODEL
+            // -------------------------------
             if (brand && model) {
 
                 const details = await getVehicleDetails(model);
 
                 navigate(
-                    `/${details.brandName}/${details.bikeName}`
+                    `/${slugify(details.brandName)}/${slugify(details.bikeName)}`
                 );
 
+                return;
             }
 
+
+            // -------------------------------
+            // 2. BRAND + BUDGET
+            // -------------------------------
+            if (brand && budget) {
+
+                navigate(
+                    `/${slugify(brand)}?budget=${encodeURIComponent(budget)}`
+                );
+
+                return;
+            }
+
+
+            // -------------------------------
+            // 3. BRAND ONLY
+            // -------------------------------
+            if (brand) {
+
+                navigate(
+                    `/${slugify(brand)}`
+                );
+
+                return;
+            }
+
+        } catch (err) {
+
+            console.error("Search failed:", err);
+
         }
-
-        catch (err) {
-
-            console.error(err);
-
-        }
-
     };
     if (heroLoading) {
         return (
@@ -386,50 +414,71 @@ export function HeroSection() {
               <div className="p-5 flex flex-col gap-4 flex-1 justify-center">
                 {/* Brand */}
                 {/*{console.log(models)}*/}
-                <SelectField
-                  label="Select Brand"
-                  value={brand}
-                  onChange={handleBrandChange}
-                  options={brands.map((b) => ({
-                    label: b.name,
-                    value: b.name
-                  }))}
-                  placeholder="Select Brand"
-                />
+                              {/* Brand */}
+                              <SelectField
+                                  label="Select Brand"
+                                  value={brand}
+                                  onChange={handleBrandChange}
+                                  options={brands.map((b) => ({
+                                      label: b.name,
+                                      value: b.name
+                                  }))}
+                                  placeholder="Select Brand"
+                              />
 
-                {/* Model */}
-                <SelectField
-                  label="Select Model"
-                  value={model}
-                  onChange={setModel}
-                  options={models}
-                  disabled={!brand}
-                  placeholder={brand ? "Select Model" : "Select a brand first"}
-                />
 
-                {/* Budget */}
-                <SelectField
-                  label="Select Budget"
-                  value={budget}
-                  onChange={setBudget}
-                  options={budgetOptions}
-                  placeholder="Select Budget"
-                />
+                              {/* Model */}
+                              <SelectField
+                                  label="Select Model"
+                                  value={model}
+                                  onChange={handleModelChange}
+                                  options={models}
+                                  disabled={!brand || !!budget}
+                                  placeholder={
+                                      !brand
+                                          ? "Select a brand first"
+                                          : budget
+                                              ? "Clear budget to select model"
+                                              : "Select Model"
+                                  }
+                              />
 
-                {/* Search button */}
-                <button
-                  onClick={handleSearch}
-                  disabled={!canSearch}
-                  className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-xl text-sm transition-all mt-1
-                    ${canSearch
-                      ? "bg-[#0A0A2B] hover:bg-[#06061A] text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0"
-                      : "bg-slate-100 text-slate-400 cursor-not-allowed"
-                    }`}
-                  style={{ fontFamily: "var(--font-display)", fontWeight: 700, letterSpacing: "0.06em" }}
-                >
-                  <Search size={15} />
-                  SEARCH
-                </button>
+
+                              {/* Budget */}
+                              <SelectField
+                                  label="Select Budget"
+                                  value={budget}
+                                  onChange={handleBudgetChange}
+                                  options={budgetOptions}
+                                  disabled={!brand || !!model}
+                                  placeholder={
+                                      !brand
+                                          ? "Select a brand first"
+                                          : model
+                                              ? "Clear model to select budget"
+                                              : "Select Budget"
+                                  }
+                              />
+
+
+                              {/* Search button */}
+                              <button
+                                  onClick={handleSearch}
+                                  disabled={!canSearch}
+                                  className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-xl text-sm transition-all mt-1
+                                ${canSearch
+                                          ? "bg-[#0A0A2B] hover:bg-[#06061A] text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0"
+                                          : "bg-slate-100 text-slate-400 cursor-not-allowed"
+                                      }`}
+                                  style={{
+                                      fontFamily: "var(--font-display)",
+                                      fontWeight: 700,
+                                      letterSpacing: "0.06em"
+                                  }}
+                              >
+                                  <Search size={15} />
+                                  SEARCH
+                              </button>
 
                 {!canSearch && (
                   <p className="text-xs text-slate-400 text-center -mt-2">

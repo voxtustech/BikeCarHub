@@ -267,30 +267,33 @@ export default function BikeDetailsPage() {
     );
     console.log("========================================");
     return (
+        <div className="bg-slate-50 w-full overflow-x-hidden">
 
-        <div className="bg-slate-50">
+            {/* Breadcrumb */}
+            <div className="border-b bg-white overflow-hidden">
 
-            <div className="border-b bg-white">
+                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-slate-500 break-words">
 
-                <div className="max-w-7xl mx-auto px-6 py-4 text-sm text-slate-500">
+                    <span>Home</span>
 
-                    Home
+                    <span className="mx-1 sm:mx-2">/</span>
 
-                    <span className="mx-2">/</span>
+                    <span>{bikeData.bike.brand}</span>
 
-                    {bikeData.bike.brand}
+                    <span className="mx-1 sm:mx-2">/</span>
 
-                    <span className="mx-2">/</span>
-
-                    {bikeData.bike.name}
+                    <span>{bikeData.bike.name}</span>
 
                 </div>
 
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 py-8">
 
-                <div className="grid lg:grid-cols-2 gap-10">
+            {/* Main Container */}
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 overflow-hidden">
+
+                {/* Image + Hero */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 w-full">
 
                     <BikeImageGallery
                         images={
@@ -312,7 +315,9 @@ export default function BikeDetailsPage() {
 
                 </div>
 
-                <div className="mt-8">
+
+                {/* Info Cards */}
+                <div className="mt-6 sm:mt-8 w-full min-w-0 overflow-hidden">
 
                     <BikeInfoCards
                         bike={bikeData.bike}
@@ -324,7 +329,9 @@ export default function BikeDetailsPage() {
 
                 </div>
 
-                <div className="mt-8">
+
+                {/* Variant Selector */}
+                <div className="mt-6 sm:mt-8 w-full min-w-0 overflow-hidden">
 
                     <BikeVariantSelector
                         variants={bikeData.variants}
@@ -334,21 +341,20 @@ export default function BikeDetailsPage() {
 
                 </div>
 
-                <div className="grid grid-cols-12 gap-8 mt-10">
 
-                    <aside className="col-span-3">
+                {/* Specs + Sticky Menu */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 mt-8 lg:mt-10 w-full">
+
+                    {/* Desktop Sidebar */}
+                    <aside className="hidden lg:block lg:col-span-3 min-w-0">
 
                         <BikeStickyMenu />
 
                     </aside>
 
-                    <main className="col-span-9 space-y-10">
 
-                        {/*
-                        <BikeDescription
-                            bike={bikeData.bike}
-                        />
-                        */}
+                    {/* Specifications */}
+                    <main className="col-span-1 lg:col-span-9 min-w-0 w-full space-y-8 lg:space-y-10">
 
                         <BikeSpecs
                             spec={currentSpec}
@@ -383,19 +389,15 @@ export default function BikeDetailsPage() {
                         />
 
                         {bikeData.bike.isEV && (
-
                             <BikeMotorBattery
                                 motorBattery={currentMotorBattery}
                             />
-
                         )}
 
                         {bikeData.bike.isEV && (
-
                             <BikeCharging
                                 charging={currentCharging}
                             />
-
                         )}
 
                         <BikeUnderpinnings
@@ -406,7 +408,9 @@ export default function BikeDetailsPage() {
 
                 </div>
 
-                <div className="space-y-10 mt-16">
+
+                {/* Related Sections */}
+                <div className="w-full min-w-0 space-y-8 lg:space-y-10 mt-10 lg:mt-16 overflow-hidden">
 
                     <SimilarBikesSection
                         bikes={bikeData.similarBikes}
@@ -419,18 +423,14 @@ export default function BikeDetailsPage() {
                     <BikeNewsSection
                         news={bikeData.news}
                     />
-                    {/* 
-                    <BikeBlogsSection
-                        blogs={bikeData.blogs}
-                    />
-                    */}
+
                     <ArticleRelatedSections />
+
                 </div>
 
             </div>
 
         </div>
-
     );
 
 }

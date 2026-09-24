@@ -17,7 +17,7 @@ export default function HomePage() {
 
         <main>
             <SEO
-                title="New Bikes, Cars, Scooters & New Electric Vehicle | BikeCarHub"
+                title="New Bikes, Cars, Scooters & New Electric Vehicle"
                 description="Discover your ideal bike or scooter at BikeCarHub. Check on-road prices, colors, reviews, comparisons, latest news, and upcoming bikes & cars in one place at BikeCarHub."
                 keywords="bikecarhub, bike, new bikes, bike comparison, bikes prices, reviews, Images, news, compare bikes, Instant Bike On-Road Price, Upcoming bikes, Latest News, Ask a Question"
                 canonical="/"

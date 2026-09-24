@@ -3047,3 +3047,6 @@ wwwroot\images\Blogs\2026\Sept\Kia Sorento\7.webp
 wwwroot\images\Blogs\2026\Sept\Kia Sorento\8.webp
 wwwroot\images\Blogs\2026\Sept\Kia Sorento\9.webp
 wwwroot\images\Blogs\2026\Sept\Kia Sorento\Header Image.webp
+wwwroot\images\heroslides\image1.avif
+wwwroot\images\heroslides\image2.avif
+wwwroot\images\heroslides\image3.avif
